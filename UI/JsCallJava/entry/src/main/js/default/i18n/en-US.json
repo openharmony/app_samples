@@ -1,0 +1,10 @@
+{
+  "Strings": {
+    "getBatteryLevelEvent": "Click the button to get current battery Level",
+    "batteryLevel": "Get Battery Level",
+    "batterySubscribeEvent": "Click the button to subscribe for battery Level changes",
+    "batterySubscribe": "Subscribe Battery Event",
+    "batteryUnSubscribeEvent": "Click the button to unSubscribe for battery Level changes",
+    "batteryUnSubscribe": "UnSubscribe Battery Event"
+  }
+}

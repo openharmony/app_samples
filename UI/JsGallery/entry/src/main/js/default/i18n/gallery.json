@@ -1,0 +1,9 @@
+{
+  "itemCount": 200,
+  "shrink": false,
+  "numColumns": {
+    "orderedByDays": 8,
+    "orderedByMonths": 4,
+    "orderedByYears": 10
+  }
+}

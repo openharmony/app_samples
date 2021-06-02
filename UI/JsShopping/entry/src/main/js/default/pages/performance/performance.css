@@ -1,0 +1,183 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.container{
+    width:100%;
+    flex-direction:column;
+}
+text{
+    font-size:25px;
+}
+.text1{
+    margin:0 2px;
+    text-align:center;
+    border:1px solid #808080;
+    border-radius:50px;
+    padding:3px 10px;
+}
+.text2{
+    text-align:center;
+    border:1px solid #FF6100;
+    color:#DB7093;
+    padding:5px 5px;
+    background-color:#808080;
+    border-color:#4169E1;
+}
+.listdivs{
+    flex-direction:column;
+}
+.div1{
+    margin:5px 0;
+    justify-content:flex-start;
+}
+.div2{
+    margin:5px 0;
+    justify-content:flex-end;
+}
+.div3{
+    margin:5px 0;
+    justify-content:space-between;
+}
+.div4{
+    margin:5px 0;
+    justify-content:space-around;
+}
+.div5{
+    margin:5px 0;
+    justify-content:center;
+}
+.span1{
+    color:greenyellow;
+}
+.span2{
+    color:yellowgreen;
+}
+.span3{
+    color:red;
+}
+.span4{
+    font-style:italic;
+}
+.span5{
+    font-weight:bolder;
+}
+.span6{
+   text-decoration:underline;
+}
+.span7{
+    text-decoration:line-through;
+}
+
+.list{
+    width:100%;
+    columns: 1;
+}
+.listitems{
+    margin-top:20px;
+    width:100%;
+}
+.comment{
+    flex-direction:column;
+}
+.comment-alone{
+    flex-direction:column;
+    width:100%;
+}
+.userinfo{
+    flex-direction:row;
+    width:100%;
+    height:80px;
+}
+.userinfo-div{
+    flex-direction:column;
+}
+.userinfo-text1{
+    font-weight:bolder;
+    color:black;
+}
+.userinfo-text2{
+    font-style:italic;
+    color:gray;
+}
+.userinfo-text3{
+    margin-left:5px;
+}
+
+.images{
+    border-radius:50px;
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-right:10px;
+    margin-left:20px;
+}
+.image{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+    margin:5px;
+}
+.commenttip{
+    width:100%;
+    padding:20px 0;
+}
+.commenttips{
+    width:100%;
+    flex-direction:column;
+}
+.commenttips-images{
+    flex-direction:row;
+    justify-content:space-around;
+}
+.commenttips-image{
+    width:30%;
+    object-fit:contain;
+}
+.commenttip-text{
+    margin-left:30px;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.userinfo-image1{
+    width:150px;
+    height:30px;
+    object-fit:contain;
+}
+.comment-great{
+    height:80px;
+    width:100%;
+    justify-content:space-between;
+    flex-direction:row;
+    margin:5px 20px;
+}
+.browse{
+    align-items:center;
+    flex:1;
+}
+.comment-specific{
+    width:60%;
+    height:80px;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction:row;
+    margin-left:60px;
+}
+.comment-specific-text{
+    margin-right:15px;
+    margin-left:20px;
+}
+.listitems{
+    flex-direction:column;
+    width:100%;
+}

@@ -1,0 +1,16 @@
+{
+  "color": [
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "red",
+      "value": "#DC143C"
+    },
+    {
+      "name": "green",
+      "value": "#00CED1"
+    }
+  ]
+}

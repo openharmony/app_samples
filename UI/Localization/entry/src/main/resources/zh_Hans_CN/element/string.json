@@ -1,0 +1,27 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "时区"
+    },
+    {
+      "name": "mainability_description",
+      "value": "空白页"
+    },
+    {
+      "name": "country_title",
+      "value": "国家"
+    },
+    {
+      "name": "language_title",
+      "value": "语言"
+    },
+    {
+      "name": "time_title",
+      "value": "时间和日期"
+    },{
+      "name": "timezone_title",
+      "value": "时区"
+    }
+  ]
+}

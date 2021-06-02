@@ -1,0 +1,110 @@
+<!--
+  Copyright (c) 2021 Huawei Device Co., Ltd.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ -->
+<div class="container">
+    <list class="list" cachedcount="5" onrequestitem="buildItem" beginindex="{{this.beginIndex}}"
+            endindex="{{this.endIndex}}" repeatedlength="100">
+        <list-item type="listitem" class="listitems comment" for="{{tempList}}">
+            <div class="comment-alone" for="{{$item.comment1}}">
+                <div class="userinfo">
+                    <div class="userinfo-div">
+                        <image class="images" src="{{$item.avator}}"></image>
+                    </div>
+                    <div class="userinfo-div">
+                        <div>
+                            <text class="userinfo-text1">{{$item.name}}
+                            </text>
+                            <image class="userinfo-image1" src="{{$item.evaluation}}"></image>
+                        </div>
+                        <div>
+                            <text class="userinfo-text2">{{$item.size}}
+                            </text>
+                            <text class="userinfo-text2 userinfo-text3">
+                                1小时以前
+                            </text>
+                        </div>
+                    </div>
+                </div>
+                <div class="commenttip">
+                    <text class="commenttip-text">{{$item.texts}}
+                    </text>
+                </div>
+                <div class="comment-great">
+                    <div class="browse">
+                        <text>
+                            浏览0次
+                        </text>
+                    </div>
+                    <div class="comment-specific">
+                        <image class="image" src="/common/Icon/comment.png"></image>
+                        <text class="comment-specific-text">
+                            评论
+                        </text>
+                        <image class="image" src="/common/Icon/insert-top.png"></image>
+                        <text class="comment-specific-text">
+                            有用
+                        </text>
+                        <image class="image" src="/common/Icon/more.png"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-alone">
+                <div class="userinfo">
+                    <div class="userinfo-div">
+                        <image class="images" src="{{$item.comment2.avator}}"></image>
+                    </div>
+                    <div class="userinfo-div">
+                        <div>
+                            <text class="userinfo-text1">{{$item.comment2.name}}
+                            </text>
+                            <image class="userinfo-image1" src="{{$item.comment2.evaluation}}"></image>
+                        </div>
+                        <div>
+                            <text class="userinfo-text2">{{$item.comment2.size}}
+                            </text>
+                            <text class="userinfo-text2 userinfo-text3">
+                                1小时以前
+                            </text>
+                        </div>
+                    </div>
+                </div>
+                <div class="commenttips">
+                    <text class="commenttip-text">{{$item.comment2.texts}}
+                    </text>
+                    <div class="commenttips-images">
+                        <image class="commenttips-image" for="{{$item.comment2.images}}" src="{{$item.url}}"></image>
+                    </div>
+                </div>
+                <div class="comment-great">
+                    <div class="browse">
+                        <text>
+                            浏览0次
+                        </text>
+                    </div>
+                    <div class="comment-specific">
+                        <image class="image" src="/common/Icon/comment.png"></image>
+                        <text class="comment-specific-text">
+                            评论
+                        </text>
+                        <image class="image" src="/common/Icon/insert-top.png"></image>
+                        <text class="comment-specific-text">
+                            有用
+                        </text>
+                        <image class="image" src="/common/Icon/more.png"></image>
+                    </div>
+                </div>
+            </div>
+        </list-item>
+    </list>
+</div>

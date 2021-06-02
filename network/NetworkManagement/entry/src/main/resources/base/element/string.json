@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "IntentAgent"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "client_tips",
+      "value": "Tips: \n 1. Connect the two phones to the same Wi-Fi or Wi-Fi hotspot. \n 2. On the server device, click 'Start Server' button to start the server. \n 3. On the client device, click 'Send Message' button to send message."
+    },
+    {
+      "name": "image_net_url",
+      "value": "https://img-blog.csdn.net/20160121201510406?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"
+    }
+  ]
+}

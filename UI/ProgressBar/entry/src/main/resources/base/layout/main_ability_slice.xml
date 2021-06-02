@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+                   ohos:width="match_parent"
+                   ohos:height="match_parent"
+                   ohos:orientation="vertical">
+
+    <Text
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:text="Input Current Value:"
+        ohos:top_margin="30vp"
+        ohos:text_size="15fp"
+        ohos:padding="5vp"
+        ohos:left_margin="10vp"/>
+
+    <DirectionalLayout
+        ohos:orientation="horizontal"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:top_margin="30vp">
+
+        <Slider
+            ohos:id="$+id:current_value_slider"
+            ohos:width="0vp"
+            ohos:weight="1"
+            ohos:height="match_content"
+            ohos:left_padding="10vp"
+            ohos:right_padding="10vp"
+            ohos:progress="0"
+            ohos:layout_alignment="vertical_center"/>
+
+        <Text
+            ohos:id="$+id:current_value_text"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text="0"
+            ohos:text_size="15fp"
+            ohos:padding="5vp"
+            ohos:right_margin="10vp"/>
+    </DirectionalLayout>
+
+    <Text
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:text="Input Max Value:"
+        ohos:top_margin="30vp"
+        ohos:text_size="15fp"
+        ohos:padding="5vp"
+        ohos:left_margin="10vp"/>
+
+    <DirectionalLayout
+        ohos:orientation="horizontal"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:top_margin="30fp">
+
+        <Slider
+            ohos:id="$+id:max_value_slider"
+            ohos:width="0vp"
+            ohos:weight="1"
+            ohos:height="match_content"
+            ohos:max="100"
+            ohos:progress="100"
+            ohos:left_padding="10vp"
+            ohos:right_padding="10vp"
+            ohos:layout_alignment="vertical_center"/>
+
+        <Text
+            ohos:id="$+id:max_value_text"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text="100"
+            ohos:text_size="15fp"
+            ohos:padding="5vp"
+            ohos:right_margin="10vp"/>
+    </DirectionalLayout>
+
+    <Text
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:text="Input Progress Speed(Max:10s Min:1s):"
+        ohos:top_margin="30vp"
+        ohos:text_size="15fp"
+        ohos:padding="5vp"
+        ohos:left_margin="10f\vp"/>
+
+    <DirectionalLayout
+        ohos:orientation="horizontal"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:top_margin="30vp">
+
+        <Slider
+            ohos:id="$+id:speed_value_slider"
+            ohos:width="0vp"
+            ohos:weight="1"
+            ohos:height="match_content"
+            ohos:max="10"
+            ohos:min="1"
+            ohos:progress="10"
+            ohos:left_padding="10vp"
+            ohos:right_padding="10vp"
+            ohos:layout_alignment="vertical_center"/>
+
+        <Text
+            ohos:id="$+id:speed_value_text"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text="10"
+            ohos:text_size="15fp"
+            ohos:padding="5vp"
+            ohos:right_margin="10vp"/>
+    </DirectionalLayout>
+
+    <Button
+        ohos:text="Start Progress"
+        ohos:id="$+id:start_progress_button"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:padding="5vp"
+        ohos:left_margin="20vp"
+        ohos:top_margin="20vp"
+        ohos:right_margin="20vp"
+        ohos:background_element="#4169E1"
+        ohos:text_size="20fp"/>
+
+    <ProgressBar
+        ohos:id="$+id:progressbar"
+        ohos:top_margin="20vp"
+        ohos:width="match_parent"
+        ohos:progress="0"
+        ohos:height="15vp"/>
+</DirectionalLayout>

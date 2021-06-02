@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "JsTransparent"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "button_tips",
+      "value": "Tip: Select the following modal types:"
+    },
+    {
+      "name": "modal_default",
+      "value": "Normal Full-screen Mode"
+    },
+    {
+      "name": "modal_second",
+      "value": "Half Mode Full Screen"
+    },
+    {
+      "name": "modal_third",
+      "value": "Popup Window Mode"
+    },
+    {
+      "name": "modal_first",
+      "value": "Semi-mode Popup Window"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<element name='comp' src='../comp/comp.hml'></element>
+<list class="container" style="margin-left: 24px; margin-right: 24px;">
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 1：Build Layout
+            </text>
+        </div>
+    </list-item>
+    <list-item class="header">
+        <div class="left-container">
+            <text class="title-text">{{headTitle}}
+            </text>
+            <text class="paragraph-text">{{paragraphFirst}}
+            </text>
+            <text class="paragraph-text">{{paragraphSecond}}
+            </text>
+            <text class="comment-title">
+                Comment
+            </text>
+            <div if="{{!commentText}}">
+                <input class="comment" value="{{inputValue}}" onchange="updateValue()"></input>
+                <text class="comment-key" onclick="update" focusable="true">
+                    Done
+                </text>
+            </div>
+            <div if="{{commentText}}">
+                <text class="comment-text" focusable="true">{{inputValue}}
+                </text>
+                <text class="comment-key" onclick="update" focusable="true">
+                    Delete
+                </text>
+            </div>
+        </div>
+        <div class="right-container">
+            <image class="img" src="{{middleImage}}"></image>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 2：Add Interaction
+            </text>
+        </div>
+    </list-item>
+    <list-item class="image-click">
+        <div class="like" onclick="likeClick">
+            <image class="like-img" src="{{likeImage}}" focusable="true"></image>
+            <text class="like-num" focusable="true">{{total}}
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 3：Add an External Container
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="container">
+            <div>
+                <tabs class="tab-container">
+                    <tab-bar class="tab-bar">
+                        <text style="color: #000000">
+                            Image Show
+                        </text>
+                    </tab-bar>
+                    <tab-content class="tab-image">
+                        <image class="tab-image" src="{{tabImage}}"></image>
+                    </tab-content>
+                </tabs>
+            </div>
+            <div>
+                <list class="list">
+                    <list-item type="listItem" for="{{textList}}">
+                        <text class="desc-text">{{$item.value0}}
+                        </text>
+                    </list-item>
+                    <list-item type="listItem" for="{{textList}}">
+                        <text class="desc-text">{{$item.value1}}
+                        </text>
+                    </list-item>
+                    <list-item type="listItem" for="{{textList}}">
+                        <text class="desc-text">{{$item.value2}}
+                        </text>
+                    </list-item>
+                    <list-item type="listItem" for="{{textList}}">
+                        <text class="desc-text">{{$item.value3}}
+                        </text>
+                    </list-item>
+                </list>
+            </div>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 4：Add Static Animation
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="static-animation-container">
+            <text class="translate">
+                hello
+            </text>
+            <text class="rotate">
+                hello
+            </text>
+            <text class="scale">
+                hello
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 5：Add Continuous Animation
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="item-container">
+            <text class="animation-header">
+                continuous animation
+            </text>
+            <div class="animation-item {{colorParam}}">
+                <text class="animation-txt">
+                    color
+                </text>
+            </div>
+            <div class="animation-item {{opacityParam}}">
+                <text class="animation-txt">
+                    opacity
+                </text>
+            </div>
+            <input class="animation-button" type="button" name="" value="show" onclick="showAnimation"/>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 6：Add Gesture Event
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="gesture-container">
+            <div class="gesture-text-container" onclick="click">
+                <text class="gesture-text-style">{{onClick}}
+                </text>
+            </div>
+            <div class="gesture-text-container" ontouchstart="touchStart">
+                <text class="gesture-text-style">{{touchstart}}
+                </text>
+            </div>
+            <div class="gesture-text-container" ontouchmove="touchMove">
+                <text class="gesture-text-style">{{touchmove}}
+                </text>
+            </div>
+            <div class="gesture-text-container" ontouchend="touchEnd">
+                <text class="gesture-text-style">{{touchend}}
+                </text>
+            </div>
+            <div class="gesture-text-container" ontouchcancel="touchCancel">
+                <text class="gesture-text-style">{{touchcancel}}
+                </text>
+            </div>
+            <div class="gesture-text-container" onlongpress="longPress">
+                <text class="gesture-text-style">{{onLongPress}}
+                </text>
+            </div>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 7：Add Page Routing
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="routing-container">
+            <text class="routing-title">
+                This is the index page.
+            </text>
+            <button style="margin-bottom: 20px;" type="capsule" value="Go to the second page" class="button"
+                    onclick="launch"></button>
+        </div>
+    </list-item>
+    <list-item>
+        <div>
+            <text class="comment-title">
+                Case 8：Add Custom Component
+            </text>
+        </div>
+    </list-item>
+    <list-item>
+        <div class="custom-container">
+            <text>
+                Parent Component：{{text}}
+            </text>
+            <comp title="Custom Component" show-object="{{show}}" @event-type1="textClicked"></comp>
+        </div>
+    </list-item>
+</list>

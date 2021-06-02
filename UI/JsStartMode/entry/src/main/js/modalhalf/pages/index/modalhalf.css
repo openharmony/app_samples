@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    background-color: #F7F7F7;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+}
+
+.downText {
+    font-size: 35px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.list1 {
+    height: 120px;
+}
+
+.list-item1{
+    background-color: white;
+    border-radius: 15px;
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item3{
+    background-color: white;
+    border-radius: 15px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+text {
+    text-align: center;
+    font-size: 30px;
+    align-items: center;
+}
+
+.good {
+    color: #289428;
+    font-size: 32px;
+}
+
+.more{
+    color: #067DC9;
+    margin-top: 40px;
+}

@@ -1,0 +1,63 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class ="container">
+    <div class ="page-title-wrap">
+        <text class ="page-title">{{ $t('Strings.componentName') }}
+        </text>
+    </div>
+
+    <!-- username -->
+    <div class ="item-container">
+        <text class="item-title">{{ $t('Strings.userName') }}</text>
+        <div class="item-content">
+             <input class="input-text" placeholder="{{$t('Strings.userNamePromt')}}" onchange="getName"></input>
+        </div>
+    </div>
+
+    <!-- date -->
+    <div class="item-container">
+        <text class="item-title">{{ $t('Strings.date') }}</text>
+        <div class="item-content">
+            <picker type="date" end="2020-01-01" selected="1990-01-01" value="{{date}}" onchange="getDate"></picker>
+        </div>
+    </div>
+
+    <!-- gender -->
+    <div class ="item-container">
+        <text class="item-title">{{ $t('Strings.gender') }}</text>
+        <div class="item-content">
+            <label target="radio1">{{ $t('Strings.male') }}:</label>
+            <input id="radio1" type="radio" name="radio" value="{{ $t('Strings.male') }}" onchange="getMaleGender" checked="true"></input>
+            <label target="radio2">{{ $t('Strings.female') }}:</label>
+            <input id="radio2" type="radio" name="radio" value="{{ $t('Strings.female') }}" onchange="getFemaleGender"></input>
+        </div>
+    </div>
+
+    <!-- education -->
+    <div class ="item-container">
+        <text class="item-title">{{ $t('Strings.education') }}</text>
+        <select class="select" onchange="getEducation">
+            <option value="{{$t('Strings.graduated')}}" selected="true">{{$t('Strings.graduated')}}</option>
+            <option value="{{$t('Strings.bachelor')}}">{{$t('Strings.bachelor')}}</option>
+            <option value="{{$t('Strings.master')}}">{{$t('Strings.master')}}</option>
+            <option value="{{$t('Strings.doctor')}}">{{$t('Strings.doctor')}}</option>
+        </select>
+    </div>
+
+    <div class ="button-container">
+        <input type="button" class="btn" onclick="onRegiste" value="{{ $t('Strings.register') }}"/>
+    </div>
+</div>

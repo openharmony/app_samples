@@ -1,39 +1,30 @@
-# app_samples
+# App Samples<a name="EN-US_TOPIC_0000001115464207"></a>
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+-   [Introduction](#section1470103520301)
+-   [Usage](#section17988202503116)
+-   [Limitations](#section18841871178)
+-   [Repositories Involved](#section741114082513)
+-   [Licensing](#section5315468537)
 
-#### 软件架构
-软件架构说明
+## Introduction<a name="section1470103520301"></a>
 
+OpenHarmony provides a series of app samples to help you quickly get familiar with the APIs and app development process of the OpenHarmony SDK. Each app sample is an independent project in DevEco Studio. You can import a project into DevEco Studio to learn how to use APIs in the sample by browsing code, building the project, and installing and running the app.
 
-#### 安装教程
+## Usage<a name="section17988202503116"></a>
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  Import an independent app sample project into DevEco Studio for compilation, building, running, and debugging. For details, see  [HUAWEI DevEco Studio User Guide](https://developer.harmonyos.com/en/docs/documentation/doc-guides/tools_overview-0000001053582387).
+2.  Some samples contain multiple modules. You can compile and build a single module to generate a HAP file or compile and build the entire project to generate multiple HAP files.
+3.  After HAP installation and execution, you can view the execution effect of the sample on the device and then conduct debugging.
 
-#### 使用说明
+## Limitations<a name="section18841871178"></a>
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  Before installing and running the sample, check the  **deviceType**  field in the  **config.json**  file to obtain the device types supported by the sample. You can modify this field to enable the sample to run on your target device. \(The  **config.json**  file is generally stored in the  **entry/src/main**  directory, which may be different depending on the samples.\)
+2.  App samples in the following directories can run on the standard system \(reference memory ≥ 128 MiB\). Other app examples can run only on the large system \(reference memory ≥ 1 GiB\):
+    -   common/Clock
+    -   common/JsHelloWorld
 
 
-#### 特技
+## Repositories Involved<a name="section741114082513"></a>
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  [applications\_sample\_camera](https://gitee.com/openharmony/applications_sample_camera/blob/master/README.md)
+2.  [applications\_sample\_wifi\_iot](https://gitee.com/openharmony/applications_sample_wifi_iot/blob/master/README.md)

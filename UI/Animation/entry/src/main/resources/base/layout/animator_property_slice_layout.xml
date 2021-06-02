@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:orientation="vertical">
+
+    <Component
+        ohos:id="$+id:property_animation_image"
+        ohos:height="70vp"
+        ohos:width="70vp"
+        ohos:background_element="#00ffff"
+        ohos:top_margin="20vp"/>
+
+    <Button
+        ohos:id="$+id:animator_scale_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Scale"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:animator_rotate_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Rotate"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:animator_alpha_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Alpha"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:animator_translate_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Translate"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+</DirectionalLayout>

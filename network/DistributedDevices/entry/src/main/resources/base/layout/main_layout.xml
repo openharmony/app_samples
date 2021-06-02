@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:height="match_parent">
+
+    <DirectionalLayout
+        ohos:orientation="horizontal"
+        ohos:width="match_parent"
+        ohos:background_element="#000000"
+        ohos:height="60vp">
+
+        <Text
+            ohos:text="Type"
+            ohos:width="0vp"
+            ohos:text_size="20fp"
+            ohos:text_color="#ffffff"
+            ohos:text_alignment="center"
+            ohos:weight="1"
+            ohos:height="match_parent"/>
+
+        <Text
+            ohos:text="Name"
+            ohos:width="0vp"
+            ohos:text_size="20fp"
+            ohos:text_color="#ffffff"
+            ohos:text_alignment="center"
+            ohos:weight="2"
+            ohos:height="match_parent"/>
+
+        <Text
+            ohos:text="Status"
+            ohos:width="0vp"
+            ohos:text_size="20fp"
+            ohos:weight="1"
+            ohos:text_color="#ffffff"
+            ohos:text_alignment="center"
+            ohos:height="match_parent"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:list_parent"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:height="match_parent">
+
+        <Text
+            ohos:id="$+id:empty_text"
+            ohos:width="match_parent"
+            ohos:padding="5dp"
+            ohos:height="40vp"
+            ohos:text_size="18fp"
+            ohos:top_margin="2vp"
+            ohos:text="No remote device found"
+            ohos:background_element="#aaaaaa"
+            ohos:text_alignment="center"/>
+
+        <ListContainer
+            ohos:id="$+id:container_list"
+            ohos:width="match_parent"
+            ohos:height="match_content"/>
+    </DirectionalLayout>
+</DirectionalLayout>

@@ -1,0 +1,163 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.container {
+    flex-direction: column;
+    flex: 1;
+}
+.comments-content {
+    flex-direction: column;
+    width: 100%;
+}
+.more-img {
+    align-items: center;
+}
+.comments-header-image {
+    width: 25px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.comments-header {
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comments-title {
+    font-size: 31.3px;
+    color: #1A1A1A;
+}
+
+.comments-more {
+    font-size: 27.1px;
+    color: #D2691E;
+    margin-right: 10px;
+}
+
+.comments-person-title {
+    justify-content: flex-start;
+    color: #1A1A1A;
+    font-size: 27.1px;
+    margin-top: 5px;
+}
+.comments-detail-box {
+    flex-direction: column;
+    border-radius: 8.3px;
+}
+
+.comments-detail-person {
+    align-items: center;
+    margin: 36px 0px 18px 33.3px;
+}
+
+.comments-person-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.comments-name {
+    margin: 0px 0px 0px 16.7px;
+    color: #1A1A1A;
+    font-size: 31.3px;
+}
+
+.comments-detail-wrap {
+    margin: 0px 33.3px 33.3px 33.3px;
+}
+
+.comments-detail {
+    flex: 1;
+    margin-right: 16.7px;
+    color: #1A1A1A;
+    font-size: 27.1px;
+}
+.comments-buyersShow {
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+}
+.buyersShow {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.buyersShow-img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+}
+.comments-ask {
+    flex-direction: column;
+}
+.comments-ask1-left {
+    align-items: center;
+}
+.comments-ask1 {
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+.asking {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.comments-content4-top {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.top1 {
+    width: 45%;
+    align-items: center;
+}
+.icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.flagship {
+    flex-direction: column;
+    margin-left: 20px;
+}
+.flagship-img1 {
+    width: 50px;
+    object-fit: contain;
+}
+.flagship-img2 {
+    width: 160px;
+    object-fit: contain;
+}
+.top2 {
+    width: 45%;
+    justify-content: space-between;
+}
+.top2-img {
+    width: 50%;
+    margin: 0px 5px;
+    object-fit: contain;
+}
+.comments-content4-bottom {
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottoms {
+    margin: 0px 8px;
+}
+.bottoms-text {
+    font-size: 25px;
+    margin: 0px 5px;
+}

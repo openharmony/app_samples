@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import "../../common/css/common.css";
+
+.image-style {
+    justify-content: center;
+    align-content: center;
+}
+.image-size {
+    width: 500px;
+    height: 500px;
+}
+.btn{
+    width: 500px;
+    height: 200px;
+}
+.txt {
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.scaleX {
+    animation-name: scaleX;
+    animation-duration: 5000ms;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 5000ms;
+    transform-origin: 300px 300px;
+}
+
+.rotateX {
+    animation-name: rotateX;
+    animation-duration: 5000ms;
+}
+
+.rotateY {
+    animation-name: rotateY;
+    animation-duration: 5000ms;
+}
+
+@keyframes scaleX {
+    from {
+        transform: scaleX(0.5);
+    }
+    to {
+        transform: scaleX(2);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateX {
+    from {
+        transform: rotateX(10deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes rotateY {
+    from {
+        transform: rotateY(10deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+

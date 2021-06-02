@@ -1,0 +1,360 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.containone {
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+}
+.containone-texts1 {
+    height: 70px;
+    margin-top: 10px;
+}
+.containone-text1 {
+    color: #D2691E;
+}
+.containone-texts {
+    justify-content: space-between;
+}
+.containone-text2 {
+    background-color: #800000;
+    color: white;
+    padding: 0px 5px;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.containone-text3 {
+    color: #D2691E;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.containone-text4 {
+    color: #D2691E;
+    font-size: 25px;
+}
+.containone-img {
+    align-items: center;
+    justify-content: center;
+}
+.containone-img1 {
+    width: 25px;
+    height: 20px;
+    object-fit: contain;
+}
+.containtwo {
+    width: 100%;
+    flex-direction: column;
+}
+.containtwo-one {
+    width: 100%;
+    justify-content: space-between;
+}
+.containtwo-one-1 {
+    width: 85%;
+}
+.containtwo-one-intro {
+    max-lines: 2;
+    width: 80%;
+    text-overflow: ellipsis;
+}
+.containtwo-one-2 {
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.like {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.icon {
+    width: 80px;
+    height: 40px;
+    object-fit: contain;
+}
+.share {
+    width: 25px;
+    height: 20px;
+    object-fit: contain;
+}
+.containtwo-two {
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+.containtwo-two>div {
+    align-items: center;;
+}
+.containthree {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.containthree-one {
+    height: 100px;
+    background-color: rgba(250, 240, 230, 0.5);
+    align-items: center;
+}
+.containthree-one-img {
+    width: 80px;
+    height: 40px;
+    margin-right: 30px;
+    object-fit: contain;
+}
+.containthree-one-text {
+    flex: 1;
+    color: #C71585;
+}
+.containthree-two {
+    height: 100px;
+    align-items: center;
+    margin-top: 10px;
+}
+.containthree-text {
+    width: 15%;
+    text-align: left;
+}
+.containthree-three-div {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.containthree-right-img {
+    align-items: center;
+}
+.containthree-right {
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+}
+.containthree-right>text {
+    width: 60%;
+    max-lines: 1;
+    text-overflow: ellipsis;
+}
+.containthree-rights {
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+.containthree-right1-left {
+    align-items: center;
+}
+.containthree-two-img {
+    width: 30px;
+    height: 40px;
+    margin-right: 20px;
+}
+.containthree-two-1 {
+    margin-right: 50px;
+}
+.containthree-three {
+    width: 100%;
+    flex-direction: column;
+}
+.containthree-three-img1 {
+    width: 150px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.containthree-three-rights {
+    height: 150px;
+    flex-direction: column;
+}
+.containthree-three-comimg {
+    width: 25px;
+    height: 20px;
+    object-fit: contain;
+}
+.containthree-four {
+    margin: 5px 0;
+    height: 80px;
+    align-items: center;
+}
+.containthree-five {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+    align-items: center;
+}
+.containthree-five-text {
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+.text-ell {
+    width: 80%;
+    max-lines: 1;
+    text-overflow: ellipsis;
+}
+.containthree-five-choose {
+    height: 70px;
+    align-items: center;
+}
+.containthree-six {
+    margin: 5px 0px;
+    height: 70px;
+    align-items: center;
+}
+.containthree-right-bottom {
+    align-items: center;
+}
+.phonetypes {
+    margin-left: 100px;
+    width: 45%;
+    justify-content: space-between;
+}
+.containthree-right-type {
+    width: 70px;
+    height: 80px;
+    object-fit: contain;
+    margin: 10px 0px;
+}
+.containthree-right-text {
+    margin-left: 50px;
+    background-color: rgba(250, 240, 230, 0.5);
+    border-radius: 30px;
+    font-size: 25px;
+    padding: 5px 10px;
+}
+.dialog-div {
+    flex-direction: column;
+    height: 1200px;
+}
+.dialog-head {
+    width: 100%;
+    height: 25%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.dialog-head-img {
+    width: 25%;
+    object-fit: contain;
+}
+.dialog-head-div {
+    width: 72%;
+    justify-content: center;
+    flex-direction: column;
+}
+.dialog-head-text1 {
+    color: #FF0000;
+    font-size: 40px;
+}
+.dialog-head-text2 {
+    color: #808080;
+    font-size: 20px;
+}
+.dialog-head-text3 {
+    font-size: 30px;
+    max-lines: 1;
+    text-overflow: ellipsis;
+}
+.list {
+    width: 100%;
+}
+.list-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.list-common {
+    border-top: 1px solid #808080;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+.good-num {
+    justify-content: space-around;
+}
+.shopnum {
+    padding-left: 30px;
+    align-items: center;
+}
+.goodnum {
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    text-align: center;
+    background-color: #30808080;
+}
+.list-content {
+    justify-content: space-between;
+}
+.location {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+.dialog-more {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.capacity {
+    margin-right: 100px;
+}
+.phone-colors {
+    width: 70%;
+    flex-wrap: wrap;
+}
+.phone-color {
+    width: 33%;
+    height: 60px;
+    align-items: center;
+    margin: 10px 0px;
+    object-fit: contain;
+}
+.text-border {
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.list-common-div {
+    flex-direction: column;
+}
+.cart {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.shopcat {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #FFB700;
+    padding: 0px 30px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.buynow {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #FF7500;
+    padding: 0px 30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}

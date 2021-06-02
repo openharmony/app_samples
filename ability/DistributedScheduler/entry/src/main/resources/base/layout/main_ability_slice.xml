@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:start_fa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Start Remote FA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:start_pa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Start Remote PA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:stop_pa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Stop Remote PA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:connect_pa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Connect Remote PA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:disconnect_pa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Disconnect Remote PA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:continue_fa_button"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Continue FA"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+
+    <TextField
+        ohos:id="$+id:text"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:textfield_bg"
+        ohos:hint="Please input text"
+        ohos:left_margin="15vp"
+        ohos:multiple_lines="true"
+        ohos:right_margin="15vp"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="20vp"/>
+</DirectionalLayout>

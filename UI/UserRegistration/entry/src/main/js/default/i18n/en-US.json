@@ -1,0 +1,29 @@
+{
+  "Strings": {
+    "componentName": "User Registration",
+    "gender": "gender",
+    "male": "male",
+    "female": "female",
+    "secret": "secret",
+    "userName": "user name",
+    "userNamePrompt": "6 or more letters and arrays",
+    "date": "date",
+    "education": "education",
+    "graduated": "graduated",
+    "bachelor": "bachelor",
+    "master": "master",
+    "doctor": "doctor",
+    "register": "register",
+
+    "name_null": "user name is null",
+    "name_short": "length of user name less than 6",
+    "gender_null": "gender is null",
+    "date_null": "date is null",
+    "education_null": "education is null",
+
+    "back": "back",
+    "success": "success"
+  },
+  "Files": {
+  }
+}

@@ -1,0 +1,277 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.left-container {
+    flex-direction: column;
+    margin-left: 48px;
+    width: 50%;
+}
+.title-text {
+    color: #1a1a1a;
+    font-size: 36px;
+    height: 90px;
+    width: 400px;
+}
+.paragraph-text {
+    color: #000000;
+    margin-top: 12px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.comment-title {
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-key {
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+.comment-key:focus {
+    color: #007dff;
+}
+.comment-text {
+    width: 386px;
+    height: 50px;
+    text-align: left;
+    line-height: 35px;
+    font-size: 20px;
+    color: #000000;
+    border-bottom-color: #bcbcbc;
+    border-bottom-width: 0.5px;
+}
+.comment {
+    width: 386px;
+    height: 50px;
+    background-color: lightgrey;
+}
+.right-container {
+    width: 50%;
+    justify-content: center;
+}
+.img {
+    margin-top: 50px;
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+}
+.desc-text {
+    width: 683.3px;
+    font-size: 35.4px;
+}
+.tab-bar {
+    background-color: #F1F1F1;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100px;
+}
+.image-click {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    margin-top: 10px;
+    height: 100px;
+}
+.like {
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+    border: 2px solid #bcbcbc;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+.like-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 14px;
+}
+.tab-image {
+    width: 50px;
+    height: 50px;
+    margin-left: 14px;
+}
+.like-num {
+    color: #bcbcbc;
+    font-size: 20px;
+    margin-right: 17px;
+}
+.tab-container {
+    background-color: #F1F1F1;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.list {
+    background-color: #F1F1F1;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.listItem {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.static-animation-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.translate {
+    height: 150px;
+    width: 300px;
+    font-size: 50px;
+    background-color: #008000;
+    transform: translate(200px);
+}
+.rotate {
+    height: 150px;
+    width: 300px;
+    font-size: 50px;
+    background-color: #008000;
+    transform-origin: 200px 100px;
+    transform: rotateY(45deg);
+}
+.scale {
+    height: 150px;
+    width: 300px;
+    font-size: 50px;
+    background-color: #008000;
+    transform: scaleX(-1.5);
+}
+
+.item-container {
+    flex-direction: column;
+}
+.animation-header {
+    margin-bottom: 20px;
+}
+.animation-item {
+    background-color: #f76160;
+}
+.animation-txt {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+.animation-button {
+    width: 200px;
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: #09ba07;
+}
+.animation-color {
+    animation-name: Color;
+    animation-duration: 8000ms;
+}
+.animation-opacity {
+    animation-name: Opacity;
+    animation-duration: 8000ms;
+}
+.gesture-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.gesture-text-container {
+    margin-top: 10px;
+    flex-direction: column;
+    width: 750px;
+    height: 50px;
+    background-color: #09ba07;
+}
+.gesture-text-style {
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+.key-card-box {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.key-content-box {
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.key-content-text {
+    font-size: 40px;
+    text-align: center;
+}
+.routing-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.routing-title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.custom-container {
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+}
+@keyframes Color {
+    from {
+        background-color: #f76160;
+    }
+    to {
+        background-color: #09ba07;
+    }
+}
+@keyframes Opacity {
+    from {
+        opacity: 0.9;
+    }
+    to {
+        opacity: 0.1;
+    }
+}
