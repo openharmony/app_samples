@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "btn_start_discovery",
+      "value": "Start Discovery"
+    },
+    {
+      "name": "title_paired_devices",
+      "value": "Paired Devices"
+    },
+    {
+      "name": "title_available_devices",
+      "value": "Available Devices"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "bluetooth",
+      "value": "Bluetooth"
+    },
+    {
+      "name": "bluetooth_status",
+      "value": "Bluetooth Status"
+    }
+  ]
+}

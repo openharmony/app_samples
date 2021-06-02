@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Resources"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "select_timezone_text",
+      "value": "Resource file display"
+    }
+  ]
+}

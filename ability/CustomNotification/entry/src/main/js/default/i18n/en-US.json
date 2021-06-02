@@ -1,0 +1,13 @@
+{
+  "Strings": {
+    "title": "AutoReplyNotificationSample",
+    "startInputNotification": "startInputNotification",
+    "cancelNotification": "cancelNotification",
+    "startButtonNotification": "startButtonNotification",
+    "cancelButtonNotification": "cancelButtonNotification",
+    "subscribeCommonEvent": "subscribeCommonEvent",
+    "unsubscribeCommonEvent": "unsubscribeCommonEvent"
+  },
+  "Files": {
+  }
+}

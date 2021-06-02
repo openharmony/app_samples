@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:height="match_parent"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:launch_button"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:text="Launch Another Ability"
+        ohos:text_size="15fp"
+        ohos:padding="8vp"
+        ohos:background_element="$graphic:button_background"
+        ohos:text_alignment="center"
+        ohos:left_margin="30vp"
+        ohos:right_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:start_button"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:text="Start Service"
+        ohos:text_size="15fp"
+        ohos:padding="8vp"
+        ohos:background_element="$graphic:button_background"
+        ohos:text_alignment="center"
+        ohos:left_margin="30vp"
+        ohos:top_margin="30vp"
+        ohos:right_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:stop_button"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:text="Stop Service"
+        ohos:text_size="15fp"
+        ohos:padding="8vp"
+        ohos:background_element="$graphic:button_background"
+        ohos:text_alignment="center"
+        ohos:left_margin="30vp"
+        ohos:right_margin="30vp"
+        ohos:top_margin="30vp"/>
+
+    <Button
+        ohos:id="$+id:new_task_button"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:text="Start Task"
+        ohos:left_margin="30vp"
+        ohos:right_margin="30vp"
+        ohos:top_margin="50vp"
+        ohos:text_size="15fp"
+        ohos:padding="8vp"
+        ohos:background_element="#add8e6"
+        ohos:text_alignment="center"/>
+
+    <Button
+        ohos:id="$+id:cancel_task_button"
+        ohos:width="match_parent"
+        ohos:right_margin="30vp"
+        ohos:height="match_content"
+        ohos:text="Cancel Task"
+        ohos:text_size="15fp"
+        ohos:top_margin="30vp"
+        ohos:padding="8vp"
+        ohos:left_margin="30vp"
+        ohos:background_element="#add8e6"
+        ohos:text_alignment="center"/>
+
+    <Text
+        ohos:id="$+id:state_text"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="--"
+        ohos:text_alignment="center"
+        ohos:text_size="15fp"
+        ohos:top_margin="50vp"/>
+</DirectionalLayout>

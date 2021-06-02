@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:log_text"
+        ohos:height="150vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:text_background"
+        ohos:left_margin="24vp"
+        ohos:multiple_lines="true"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:scrollable="true"
+        ohos:text_alignment="top"
+        ohos:text_size="14vp"
+        ohos:top_margin="24vp"/>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_margin="24vp"
+        ohos:orientation="horizontal"
+        ohos:right_margin="24vp"
+        ohos:top_margin="20vp">
+
+        <Button
+            ohos:id="$+id:insert_button"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:background_element="$graphic:button_background"
+            ohos:padding="10vp"
+            ohos:text="Insert"
+            ohos:text_size="16fp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:delete_button"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:background_element="$graphic:button_background"
+            ohos:left_margin="10vp"
+            ohos:padding="10vp"
+            ohos:text="Delete"
+            ohos:text_size="16fp"
+            ohos:weight="1"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:left_margin="24vp"
+        ohos:orientation="horizontal"
+        ohos:right_margin="24vp"
+        ohos:top_margin="20vp">
+
+        <Button
+            ohos:id="$+id:update_button"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:background_element="$graphic:button_background"
+            ohos:padding="10vp"
+            ohos:text="Update"
+            ohos:text_size="16fp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:query_button"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:background_element="$graphic:button_background"
+            ohos:left_margin="10vp"
+            ohos:padding="10vp"
+            ohos:text="Query"
+            ohos:text_size="16fp"
+            ohos:weight="1"/>
+    </DirectionalLayout>
+
+    <Button
+        ohos:id="$+id:batch_insert_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Batch Insert"
+        ohos:text_size="16fp"
+        ohos:top_margin="20vp"/>
+
+    <Button
+        ohos:id="$+id:batch_execute_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Batch Execute"
+        ohos:text_size="16fp"
+        ohos:top_margin="20vp"/>
+
+    <Component
+        ohos:height="1vp"
+        ohos:width="match_parent"
+        ohos:background_element="#696969"
+        ohos:left_margin="24vp"
+        ohos:right_margin="24vp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:read_file_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="Read Text File"
+        ohos:text_size="16fp"
+        ohos:top_margin="10vp"/>
+</DirectionalLayout>

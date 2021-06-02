@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:height="match_content">
+
+    <DirectionalLayout
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:padding="2vp"
+        ohos:height="match_content">
+
+        <Image
+            ohos:width="match_content"
+            ohos:image_src="$media:icon"
+            ohos:height="match_content"/>
+
+        <Text
+            ohos:id="$+id:name"
+            ohos:left_margin="15vp"
+            ohos:width="0dp"
+            ohos:layout_alignment="vertical_center"
+            ohos:weight="1"
+            ohos:height="match_content"
+            ohos:text_size="18fp"/>
+
+        <Text
+            ohos:id="$+id:tel"
+            ohos:width="0dp"
+            ohos:weight="2"
+            ohos:layout_alignment="vertical_center"
+            ohos:height="match_content"
+            ohos:text_size="18fp"
+            ohos:margin="5vp"/>
+
+        <Button
+            ohos:id="$+id:btn_edit"
+            ohos:text="Edit"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:layout_alignment="vertical_center"
+            ohos:background_element="$graphic:bg_common"
+            ohos:text_size="16fp"
+            ohos:padding="5vp"/>
+    </DirectionalLayout>
+
+    <Text
+        ohos:width="match_parent"
+        ohos:height="1vp"
+        ohos:text_size="18fp"
+        ohos:margin="2vp"
+        ohos:background_element="#220000ff"/>
+</DirectionalLayout>

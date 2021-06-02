@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<PositionLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+                   ohos:width="match_parent"
+                   ohos:height="match_parent">
+        <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_parent"
+                ohos:top_margin="0vp">
+            <Text
+                    ohos:width="330vp"
+                    ohos:height="35vp"
+                    ohos:left_margin="10vp"
+                    ohos:text="$string:text_0"
+                    ohos:text_alignment="center"
+                    ohos:text_size="20fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="#cccccccc"/>
+            <Text
+                    ohos:width="330vp"
+                    ohos:height="35vp"
+                    ohos:left_margin="10vp"
+                    ohos:top_margin="14vp"
+                    ohos:text="$string:text_1"
+                    ohos:text_alignment="center"
+                    ohos:text_size="20fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="#cccccccc"/>
+            <Text
+                    ohos:width="330vp"
+                    ohos:height="35vp"
+                    ohos:left_margin="10vp"
+                    ohos:top_margin="14vp"
+                    ohos:text="$string:text_2"
+                    ohos:text_alignment="center"
+                    ohos:text_size="20fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="#cccccccc"/>
+            <Text
+                    ohos:width="330vp"
+                    ohos:height="35vp"
+                    ohos:left_margin="10vp"
+                    ohos:top_margin="14vp"
+                    ohos:bottom_margin="50vp"
+                    ohos:text="$string:text_3"
+                    ohos:text_alignment="center"
+                    ohos:text_size="20fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="#cccccccc"/>
+
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:left_margin="0vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:right_margin="50vp"
+                    ohos:text="$string:btn_0"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="36vp"
+                    ohos:text="$string:btn_1"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="72vp"
+                    ohos:text="$string:btn_2"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="108vp"
+                    ohos:text="$string:btn_3"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="144vp"
+                    ohos:text="$string:btn_4"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="178vp"
+                    ohos:text="$string:btn_5"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="216vp"
+                    ohos:text="$string:btn_6"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="252vp"
+                    ohos:text="$string:btn_7"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="288vp"
+                    ohos:text="$string:btn_8"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+            <Button
+                    ohos:width="85vp"
+                    ohos:height="43vp"
+                    ohos:bottom_margin="7vp"
+                    ohos:left_margin="324vp"
+                    ohos:text="$string:btn_9"
+                    ohos:text_size="17fp"
+                    ohos:text_color="#ff000000"
+                    ohos:background_element="$graphic:button_bg"/>
+        </DirectionalLayout>
+</PositionLayout>

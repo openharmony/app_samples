@@ -1,0 +1,1 @@
+this is from text resource file

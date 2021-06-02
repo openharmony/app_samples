@@ -1,0 +1,362 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.container {
+    flex-direction: column;
+    align-items: center;
+}
+.top {
+    background-color: rgba(30, 144, 255, 0.7);
+    padding: 0px 20px;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+}
+.icons_div1 {
+    width: 15%;
+}
+.icon1 {
+    height: 50px;
+    width: 20px;
+    object-fit: contain;
+}
+image {
+    object-fit: contain;
+}
+.content {
+    width: 100%;
+    height: 92%;
+}
+stack {
+    width: 100%;
+    height: 100%;
+}
+.video1_1 {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    animation-name: bigVideo1;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video1_2 {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    animation-name: bigVideo2;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video1_3 {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    animation-name: bigVideo3;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.text1 {
+    font-family: Sans-serif;
+    margin-top: 250px;
+    color: blue;
+    font-weight: bold;
+    font-size: 26px;
+    animation-name: Text1;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.text2 {
+    font-family: Monospace;
+    margin-top: 250px;
+    color: red;
+    font-style: italic;
+    font-size: 18px;
+    animation-name: Text2;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.videosmall {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.video_center1 {
+    animation-name: videocenter1;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video_center2 {
+    animation-name: videocenter2;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video2_1 {
+    animation-name: smallVideo1;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video2_2 {
+    animation-name: smallVideo2;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video3_1 {
+    animation-name: smallVideo3;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.video3_2 {
+    animation-name: smallVideo4;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    animation-duration: 5000ms;
+    animation-iteration-count: -1;
+}
+.img0_1 {
+    animation-name: img1;
+    animation-timing-function: linear;
+}
+.img0_2 {
+    animation-name: img2;
+    animation-timing-function: linear;
+}
+.img1_1 {
+    animation-name: img1;
+    animation-timing-function: ease-in;
+}
+.img1_2 {
+    animation-name: img2;
+    animation-timing-function: ease-in;
+}
+.img2_1 {
+    animation-name: img1;
+    animation-timing-function: ease-in-out;
+}
+.img2_2 {
+    animation-name: img2;
+    animation-timing-function: ease-in-out;
+}
+.img3_1 {
+    animation-name: img3;
+    animation-timing-function: linear;
+}
+.img3_2 {
+    animation-name: img4;
+    animation-timing-function: linear;
+}
+.img4_1 {
+    animation-name: img3;
+    animation-timing-function: ease-in;
+}
+.img4_2 {
+    animation-name: img4;
+    animation-timing-function: ease-in;
+}
+.img5_1 {
+    animation-name: img5;
+    animation-timing-function: ease-in-out;
+}
+.img5_2 {
+    animation-name: img6;
+    animation-timing-function: ease-in-out;
+}
+.img6_1 {
+    animation-name: img5;
+    animation-timing-function: linear;
+}
+.img6_2 {
+    animation-name: img6;
+    animation-timing-function: linear;
+}
+.img7_1 {
+    animation-name: img7;
+    animation-timing-function: ease-in;
+}
+.img7_2 {
+    animation-name: img8;
+    animation-timing-function: ease-in;
+}
+.img8_1 {
+    animation-name: img7;
+    animation-timing-function: ease-in-out;
+}
+.img8_2 {
+    animation-name: img8;
+    animation-timing-function: ease-in-out;
+}
+.img9_1 {
+    animation-name: img7;
+    animation-timing-function: ease-out;
+}
+.img9_2 {
+    animation-name: img8;
+    animation-timing-function: ease-out;
+}
+@keyframes bigVideo1 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes bigVideo2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes bigVideo3 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes Text1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360);
+    }
+}
+@keyframes Text2 {
+    from {
+        transform: rotate(360);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+@keyframes videocenter1 {
+    from {
+        transform: translate(130px, 0px) rotate(0);
+    }
+    to {
+        transform: translate(130px, 560px) rotate(360);
+    }
+}
+@keyframes videocenter2 {
+    from {
+        transform: translate(130px, 560px) rotate(360);
+    }
+    to {
+        transform: translate(130px, 0px) rotate(0);
+    }
+}
+@keyframes smallVideo1 {
+    from {
+        transform: translate(0px, 0px) rotate(0);
+    }
+    to {
+        transform: translate(260px, 560px) rotate(360);
+    }
+}
+@keyframes smallVideo2 {
+    from {
+        transform: translate(260px, 560px) rotate(360);
+    }
+    to {
+        transform: translate(0px, 0px) rotate(0);
+    }
+}
+@keyframes smallVideo3 {
+    from {
+        transform: translate(260px, 0px) rotate(0);
+    }
+    to {
+        transform: translate(0px, 560px) rotate(360);
+    }
+}
+@keyframes smallVideo4 {
+    from {
+        transform: translate(0px, 560px) rotate(360);
+    }
+    to {
+        transform: translate(260px, 0px) rotate(0);
+    }
+}
+@keyframes img1 {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(0px, 560px);
+    }
+}
+@keyframes img2 {
+    from {
+        transform: translate(0px, 560px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes img3 {
+    from {
+        transform: translate(130px, 0px);
+    }
+    to {
+        transform: translate(130px, 560px);
+    }
+}
+@keyframes img4 {
+    from {
+        transform: translate(130px, 560px);
+    }
+    to {
+        transform: translate(130px, 0px);
+    }
+}
+@keyframes img5 {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(260px, 560px);
+    }
+}
+@keyframes img6 {
+    from {
+        transform: translate(260px, 560px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes img7 {
+    from {
+        transform: translate(260px, 0px);
+    }
+    to {
+        transform: translate(260px, 560px);
+    }
+}
+@keyframes img8 {
+    from {
+        transform: translate(260px, 560px);
+    }
+    to {
+        transform: translate(260px, 0px);
+    }
+}

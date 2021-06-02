@@ -1,0 +1,27 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Zona horaria"
+    },
+    {
+      "name": "mainability_description",
+      "value": "página vacía de muestra hap"
+    },
+    {
+      "name": "country_title",
+      "value": "País:"
+    },
+    {
+      "name": "language_title",
+      "value": "Idioma"
+    },
+    {
+      "name": "time_title",
+      "value": "Fecha y hora"
+    },{
+      "name": "timezone_title",
+      "value": "Zona horaria"
+    }
+  ]
+}

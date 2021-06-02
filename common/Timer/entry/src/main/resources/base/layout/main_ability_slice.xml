@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+                   ohos:width="match_parent"
+                   ohos:height="match_parent">
+
+    <ScrollView
+        ohos:height="match_content"
+        ohos:width="match_content">
+
+        <DependentLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent">
+
+            <DirectionalLayout
+                ohos:visibility="visible"
+                ohos:id="$+id:container_timer"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:top_margin="150vp">
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="center"
+                    ohos:alignment="center"
+                    ohos:orientation="hoziontal">
+
+                    <Text
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:text="$string:title_hour"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+
+                    <Text
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:text="$string:title_minute"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"
+                        ohos:text_alignment="center"/>
+
+                    <Text
+                        ohos:id="$+id:text_second"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:text="$string:title_second"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"
+                        ohos:text_alignment="center"/>
+                </DirectionalLayout>
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="center"
+                    ohos:orientation="hoziontal">
+
+                    <TextField
+                        ohos:id="$+id:tf_hour"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:hint="$string:default_time"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+
+                    <TextField
+                        ohos:id="$+id:tf_minute"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:hint="$string:default_time"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+
+                    <TextField
+                        ohos:id="$+id:tf_second"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:hint="$string:default_time"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+                </DirectionalLayout>
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:top_margin="40vp"
+                    ohos:bottom_margin="40vp">
+
+                    <Button
+                        ohos:id="$+id:btn_start_timer"
+                        ohos:width="250vp"
+                        ohos:height="50vp"
+                        ohos:text="$string:btn_start_timer"
+                        ohos:text_size="20fp"
+                        ohos:text_color="#FFFFFF"
+                        ohos:margin="20vp"
+                        ohos:padding="15vp"
+                        ohos:layout_alignment="center"
+                        ohos:background_element="#2B3FD2"/>
+                </DirectionalLayout>
+
+                <Text
+                    ohos:id="$+id:text_remaining_time"
+                    ohos:width="match_content"
+                    ohos:height="match_content"
+                    ohos:text_style="bold"
+                    ohos:text="$string:default_remaining_time"
+                    ohos:layout_alignment="center"
+                    ohos:text_size="18fp"
+                    ohos:text_color="#FF000000"
+                    ohos:left_padding="20vp"/>
+            </DirectionalLayout>
+
+            <DirectionalLayout
+                ohos:id="$+id:container_repeat_timer"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:alignment="center"
+                ohos:top_margin="80vp"
+                ohos:visibility="invisible">
+
+                <Text
+                    ohos:width="match_parent"
+                    ohos:height="40vp"
+                    ohos:text="$string:title_water_reminder"
+                    ohos:text_alignment="center"
+                    ohos:text_size="24fp"
+                    ohos:text_color="#FF000000"
+                    ohos:bottom_margin="50vp"/>
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="center"
+                    ohos:alignment="center"
+                    ohos:orientation="hoziontal">
+
+                    <Text
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:text="$string:title_hour"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+
+                    <Text
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:text="$string:title_minute"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"
+                        ohos:text_alignment="center"/>
+                </DirectionalLayout>
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="center"
+                    ohos:orientation="hoziontal">
+
+                    <TextField
+                        ohos:id="$+id:tf_hour_repeat"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:hint="$string:default_time"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+
+                    <TextField
+                        ohos:id="$+id:tf_minute_repeat"
+                        ohos:width="80vp"
+                        ohos:height="40vp"
+                        ohos:hint="$string:default_time"
+                        ohos:text_alignment="center"
+                        ohos:text_size="18fp"
+                        ohos:text_color="#FF000000"/>
+                </DirectionalLayout>
+
+                <DirectionalLayout
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:top_margin="40vp"
+                    ohos:bottom_margin="40vp">
+
+                    <Button
+                        ohos:id="$+id:btn_start_repeat_timer"
+                        ohos:width="250vp"
+                        ohos:height="50vp"
+                        ohos:text="$string:btn_start_repeat_timer"
+                        ohos:text_size="20fp"
+                        ohos:text_color="#FFFFFF"
+                        ohos:margin="20vp"
+                        ohos:padding="15vp"
+                        ohos:layout_alignment="center"
+                        ohos:background_element="#2B3FD2"
+                        ohos:visibility="visible"/>
+
+                    <Button
+                        ohos:id="$+id:btn_stop_repeat_timer"
+                        ohos:width="250vp"
+                        ohos:height="50vp"
+                        ohos:text="$string:btn_stop_repeat_timer"
+                        ohos:visibility="invisible"
+                        ohos:text_size="20fp"
+                        ohos:text_color="#FFFFFF"
+                        ohos:margin="20vp"
+                        ohos:padding="15vp"
+                        ohos:layout_alignment="center"
+                        ohos:background_element="#2B3FD2"/>
+                </DirectionalLayout>
+            </DirectionalLayout>
+
+            <DirectionalLayout
+                ohos:height="80vp"
+                ohos:width="match_parent"
+                ohos:align_parent_bottom="true"
+                ohos:orientation="horizontal"
+                ohos:background_element="#f2f2f2">
+
+                <Text
+                    ohos:id="$+id:text_timer"
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:weight="1"
+                    ohos:text="Timer"
+                    ohos:text_size="18fp"
+                    ohos:text_color="#ff007dff"
+                    ohos:layout_alignment="center"
+                    ohos:text_alignment="center"/>
+
+                <Text
+                    ohos:id="$+id:text_repeat_timer"
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:weight="1"
+                    ohos:text="Repeat Timer"
+                    ohos:text_size="18fp"
+                    ohos:layout_alignment="center"
+                    ohos:text_alignment="center"/>
+            </DirectionalLayout>
+        </DependentLayout>
+    </ScrollView>
+</DirectionalLayout>

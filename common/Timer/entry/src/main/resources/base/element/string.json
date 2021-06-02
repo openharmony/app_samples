@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "title_hour",
+      "value": "HH"
+    },
+    {
+      "name": "title_minute",
+      "value": "MM"
+    },
+    {
+      "name": "title_second",
+      "value": "SS"
+    },
+    {
+      "name": "default_time",
+      "value": "00"
+    },
+    {
+      "name": "default_remaining_time",
+      "value": "00:00:00"
+    },
+    {
+      "name": "btn_start_timer",
+      "value": "Start Timer"
+    },
+    {
+      "name": "title_water_reminder",
+      "value": "Water Reminder"
+    },
+    {
+      "name": "btn_start_repeat_timer",
+      "value": "Set Reminder"
+    },
+    {
+      "name": "btn_stop_repeat_timer",
+      "value": "Cancel Reminder"
+    },
+    {
+      "name": "app_name",
+      "value": "timer"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    }
+  ]
+}

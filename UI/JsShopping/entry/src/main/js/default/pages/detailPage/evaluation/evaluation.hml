@@ -1,0 +1,153 @@
+<!--
+  Copyright (c) 2021 Huawei Device Co., Ltd.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ -->
+<div class="container">
+    <div class="comments-content">
+        <div class="comments-header">
+            <text class="comments-title">
+                宝贝评价(48088)
+            </text>
+            <div class="more-img" onclick="redirect">
+                <text class="comments-more">
+                    查看全部
+                </text>
+                <image class="comments-header-image" src="{{commonImg[0].url}}"></image>
+            </div>
+        </div>
+        <text class="comments-person-title">
+            购买过该商品的用户评价
+        </text>
+        <div class="comments-detail-box">
+            <div class="comments-detail-person">
+                <image class="comments-person-img" src="{{evaluation.detail.userIcon}}"></image>
+                <text class="comments-name">{{evaluation.detail.userName}}
+                </text>
+            </div>
+            <div class="comments-detail-wrap">
+                <text class="comments-detail">{{evaluation.detail.commentsText}}
+                </text>
+            </div>
+        </div>
+    </div>
+    <div class="comments-content">
+        <div class="comments-header">
+            <text class="comments-title">
+                XX手机买家秀(91)
+            </text>
+            <div class="more-img">
+                <text onclick="redirect" class="comments-more">
+                    查看全部
+                </text>
+                <image class="comments-header-image" onclick="redirect" src="{{commonImg[0].url}}"></image>
+            </div>
+        </div>
+        <div class="comments-buyersShow">
+            <div class="buyersShow" for="{{evaluation.showImg}}">
+                <image class="buyersShow-img" src="{{$item.url}}"></image>
+            </div>
+        </div>
+    </div>
+    <div class="comments-content">
+        <div class="comments-header">
+            <text class="comments-title">
+                购机回访(1643)
+            </text>
+            <div class="more-img">
+                <text onclick="redirect" class="comments-more">
+                    查看全部
+                </text>
+                <image class="comments-header-image" onclick="redirect" src="{{commonImg[0].url}}"></image>
+            </div>
+        </div>
+        <div class="comments-ask">
+            <div class="comments-ask1">
+                <div class="comments-ask1-left">
+                    <image class="asking" src="{{commonImg[7].url}}"></image>
+                    <text>
+                        5G手机是双卡吗，5G手机可以用一张...
+                    </text>
+                </div>
+                <text>
+                    3个回答
+                </text>
+            </div>
+            <div class="comments-ask1">
+                <div class="comments-ask1-left">
+                    <image class="asking" src="{{commonImg[7].url}}"></image>
+                    <text>
+                        有没有用5G套餐的 一个月最低...
+                    </text>
+                </div>
+                <text>
+                    1个回答
+                </text>
+            </div>
+        </div>
+    </div>
+    <div class="comments-content">
+        <div class="comments-content4-top">
+            <div class="top1">
+                <image class="icon" src="{{evaluation.icon[0].url}}"></image>
+                <div class="flagship">
+                    <text>
+                        XX官方旗舰店
+                    </text>
+                    <div>
+                        <image class="flagship-img1" src="{{evaluation.icon[1].url}}"></image>
+                        <image class="flagship-img2" src="{{evaluation.icon[2].url}}"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="top2">
+                <image class="top2-img" src="{{evaluation.icon[3].url}}"></image>
+                <image class="top2-img" src="{{evaluation.icon[3].url}}"></image>
+            </div>
+        </div>
+        <div class="comments-content4-bottom">
+            <div class="bottoms">
+                <text class="bottoms-text">
+                    产品描述
+                </text>
+                <text class="bottoms-text">
+                    4.8
+                </text>
+                <text class="bottoms-text">
+                    高
+                </text>
+            </div>
+            <div class="bottoms">
+                <text class="bottoms-text">
+                    卖家描述
+                </text>
+                <text class="bottoms-text">
+                    4.8
+                </text>
+                <text class="bottoms-text">
+                    高
+                </text>
+            </div>
+            <div class="bottoms">
+                <text class="bottoms-text">
+                    物流描述
+                </text>
+                <text class="bottoms-text">
+                    4.8
+                </text>
+                <text class="bottoms-text">
+                    高
+                </text>
+            </div>
+        </div>
+    </div>
+</div>

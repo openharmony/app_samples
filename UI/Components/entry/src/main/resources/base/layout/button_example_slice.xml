@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="$graphic:color_light_gray_element"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:txt_num"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:green_text_element"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="0123456789"
+        ohos:text_alignment="center"
+        ohos:text_size="20fp"/>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:bottom_margin="5vp"
+        ohos:orientation="horizontal"
+        ohos:top_margin="5vp">
+
+        <Button
+            ohos:id="$+id:btn_one"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="1"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_two"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:left_margin="5vp"
+            ohos:right_margin="5vp"
+            ohos:text="2"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_three"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="3"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:bottom_margin="5vp"
+        ohos:orientation="horizontal">
+
+        <Button
+            ohos:id="$+id:btn_four"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="4"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_five"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:left_margin="5vp"
+            ohos:right_margin="5vp"
+            ohos:text="5"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_six"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="6"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:bottom_margin="5vp"
+        ohos:orientation="horizontal">
+
+        <Button
+            ohos:id="$+id:btn_seven"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="7"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_eight"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:left_margin="5vp"
+            ohos:right_margin="5vp"
+            ohos:text="8"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_nine"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="9"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:bottom_margin="5vp"
+        ohos:orientation="horizontal">
+
+        <Button
+            ohos:id="$+id:btn_star"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="*"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn0"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:left_margin="5vp"
+            ohos:right_margin="5vp"
+            ohos:text="0"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+
+        <Button
+            ohos:id="$+id:btn_pound"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:background_element="$graphic:green_circle_button_element"
+            ohos:text="#"
+            ohos:text_alignment="center"
+            ohos:text_size="15fp"/>
+    </DirectionalLayout>
+
+    <Button
+        ohos:id="$+id:btn_call"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:green_capsule_button_element"
+        ohos:bottom_margin="5vp"
+        ohos:bottom_padding="2vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_padding="10vp"
+        ohos:right_padding="10vp"
+        ohos:text="CALL"
+        ohos:text_alignment="center"
+        ohos:text_size="15fp"
+        ohos:top_padding="2vp"/>
+</DirectionalLayout>

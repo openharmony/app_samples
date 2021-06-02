@@ -1,0 +1,55 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.secondapp",
+    "version": {
+      "code": 2000000,
+      "name": "2.0"
+    },
+    "apiVersion": {
+      "compatible": 3,
+      "target": 3,
+      "releaseType": "Release"
+    },
+    "type": "normal"
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.secondapp",
+    "name": ".SecondApp",
+    "reqCapabilities": [
+      "video_support"
+    ],
+    "deviceType": [
+      "default"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "secondapp",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home",
+              "ability.intent.START"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "formsEnabled": false,
+        "name": "ohos.samples.secondapp.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

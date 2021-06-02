@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:id="$+id:root_layout"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+
+    <DependentLayout
+        ohos:id="$+id:net_layout"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:left_padding="20vp"
+        ohos:right_padding="10vp"
+        ohos:top_margin="20vp">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:text="Network Request"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#ff000000"
+            ohos:text_size="16fp"/>
+
+        <Text
+            ohos:height="24vp"
+            ohos:width="24vp"
+            ohos:align_parent_bottom="$+id:net_layout"
+            ohos:align_parent_right="$+id:net_layout"
+            ohos:background_element="$media:ic_arrow_right"
+            ohos:padding="5vp"/>
+    </DependentLayout>
+
+    <DependentLayout
+        ohos:id="$+id:socket_client_layout"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:left_padding="20vp"
+        ohos:right_padding="10vp">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:text="Socket Client"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#ff000000"
+            ohos:text_size="16fp"/>
+
+        <Text
+            ohos:height="24vp"
+            ohos:width="24vp"
+            ohos:align_parent_bottom="$id:socket_client_layout"
+            ohos:align_parent_right="$id:socket_client_layout"
+            ohos:background_element="$media:ic_arrow_right"
+            ohos:padding="5vp"/>
+    </DependentLayout>
+
+    <DependentLayout
+        ohos:id="$+id:socket_server_layout"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:left_padding="20vp"
+        ohos:right_padding="10vp">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:text="Socket Server"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#ff000000"
+            ohos:text_size="16fp"/>
+
+        <Text
+            ohos:height="24vp"
+            ohos:width="24vp"
+            ohos:align_parent_bottom="$id:socket_server_layout"
+            ohos:align_parent_right="$id:socket_server_layout"
+            ohos:background_element="$media:ic_arrow_right"
+            ohos:padding="5vp"/>
+    </DependentLayout>
+
+    <DependentLayout
+        ohos:id="$+id:cache_layout"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:left_padding="20vp"
+        ohos:right_padding="10vp">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:text="HTTP Cache"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#ff000000"
+            ohos:text_size="16fp"/>
+
+        <Text
+            ohos:height="24vp"
+            ohos:width="24vp"
+            ohos:align_parent_bottom="$id:cache_layout"
+            ohos:align_parent_right="$id:cache_layout"
+            ohos:background_element="$media:ic_arrow_right"
+            ohos:padding="5vp"/>
+    </DependentLayout>
+</DirectionalLayout>

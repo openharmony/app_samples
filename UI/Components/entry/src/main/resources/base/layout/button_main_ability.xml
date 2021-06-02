@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:btn_base"
+        ohos:height="50vp"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:color_blue_element"
+        ohos:bottom_margin="15vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_margin="15vp"
+        ohos:left_padding="8vp"
+        ohos:right_padding="8vp"
+        ohos:text="button"
+        ohos:text_size="18fp"
+        ohos:top_margin="10vp"/>
+
+    <Button
+        ohos:id="$+id:btn_oval"
+        ohos:height="50vp"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:oval_button_element"
+        ohos:bottom_margin="15vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_margin="15vp"
+        ohos:left_padding="8vp"
+        ohos:right_padding="8vp"
+        ohos:text="button"
+        ohos:text_size="18fp"/>
+
+    <Button
+        ohos:id="$+id:btn_capsule"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:capsule_button_element"
+        ohos:bottom_margin="15vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_margin="15vp"
+        ohos:left_padding="15vp"
+        ohos:right_padding="15vp"
+        ohos:text="button"
+        ohos:text_size="18fp"/>
+
+    <Button
+        ohos:id="$+id:btn_circle"
+        ohos:height="50vp"
+        ohos:width="50vp"
+        ohos:background_element="$graphic:circle_button_element"
+        ohos:bottom_margin="15vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_margin="15vp"
+        ohos:left_padding="15vp"
+        ohos:right_padding="15vp"
+        ohos:text="+"
+        ohos:text_size="18fp"/>
+
+    <Button
+        ohos:id="$+id:start_btn_example"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:element_right="$media:ic_arrow_right"
+        ohos:layout_alignment="horizontal_center"
+        ohos:left_padding="24vp"
+        ohos:padding="10vp"
+        ohos:text="Button Example Ability"
+        ohos:text_alignment="left"
+        ohos:text_size="18fp"/>
+</DirectionalLayout>
