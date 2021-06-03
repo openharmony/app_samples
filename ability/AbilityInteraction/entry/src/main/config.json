@@ -4,13 +4,7 @@
     "version": {
       "code": 2000000,
       "name": "2.0"
-    },
-    "apiVersion": {
-      "compatible": 4,
-      "target": 5,
-      "releaseType": "Release"
-    },
-    "type": "normal"
+    }
   },
   "deviceConfig": {},
   "module": {
