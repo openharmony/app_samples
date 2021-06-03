@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<Button xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<Button xmlns:ohos="http://schemas.huawei.com/res/ohos"
         ohos:width="85vp"
         ohos:height="43vp"
         ohos:text_size="17fp"

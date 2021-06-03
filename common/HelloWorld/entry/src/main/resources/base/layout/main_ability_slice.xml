@@ -15,7 +15,7 @@
  -->
 
 <DependentLayout
-    xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:width="match_parent"
     ohos:height="match_parent">
     <Text
