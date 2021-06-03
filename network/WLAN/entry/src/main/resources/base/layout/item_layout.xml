@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<Text xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<Text xmlns:ohos="http://schemas.huawei.com/res/ohos"
       ohos:width="match_parent"
       ohos:height="match_content"
       ohos:text_size="14fp"

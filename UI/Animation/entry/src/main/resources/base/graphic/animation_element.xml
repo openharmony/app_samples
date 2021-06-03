@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<animation-list xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<animation-list xmlns:ohos="http://schemas.huawei.com/res/ohos"
                 ohos:oneshot="false">
     <item ohos:duration="100" ohos:element="$media:01"/>
     <item ohos:duration="100" ohos:element="$media:02"/>
