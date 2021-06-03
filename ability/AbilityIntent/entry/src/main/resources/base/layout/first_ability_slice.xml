@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<DependentLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<DependentLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                  ohos:id="$+id:root_layout"
                  ohos:width="match_parent"
                  ohos:height="match_parent">

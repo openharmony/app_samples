@@ -13,11 +13,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                    ohos:width="match_parent"
                    ohos:height="match_parent"
                    ohos:orientation="vertical">
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">
@@ -63,7 +63,7 @@
 
     </DirectionalLayout>
 
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">
@@ -101,7 +101,7 @@
             ohos:height="35vp"/>
     </DirectionalLayout>
 
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">
@@ -139,7 +139,7 @@
             ohos:height="35vp"/>
     </DirectionalLayout>
 
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">
@@ -177,7 +177,7 @@
             ohos:height="35vp"/>
     </DirectionalLayout>
 
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">
@@ -215,7 +215,7 @@
             ohos:height="35vp"/>
     </DirectionalLayout>
 
-    <DirectionalLayout xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+    <DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
                        ohos:width="match_parent"
                        ohos:height="match_content"
                        ohos:orientation="horizontal">

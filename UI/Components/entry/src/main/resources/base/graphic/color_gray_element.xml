@@ -14,7 +14,7 @@
  limitations under the License.
  -->
 
-<shape xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<shape xmlns:ohos="http://schemas.huawei.com/res/ohos"
        ohos:shape="rectangle">
     <solid
         ohos:color="#ff888888"/>

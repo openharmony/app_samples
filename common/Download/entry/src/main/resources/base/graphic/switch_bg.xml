@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<shape xmlns:ohos="http://schemas.openharmony.com/res/ohos"
+<shape xmlns:ohos="http://schemas.huawei.com/res/ohos"
        ohos:shape="rectangle">
     <corners
             ohos:radius="25"/>
