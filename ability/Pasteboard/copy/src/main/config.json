@@ -19,7 +19,8 @@
     "distro": {
       "deliveryWithInstall": true,
       "moduleName": "copy",
-      "moduleType": "entry"
+      "moduleType": "entry",
+      "installationFree": false
     },
     "abilities": [
       {
