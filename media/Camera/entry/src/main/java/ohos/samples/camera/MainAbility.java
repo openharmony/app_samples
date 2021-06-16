@@ -15,8 +15,6 @@
 
 package ohos.samples.camera;
 
-import static ohos.bundle.IBundleManager.PERMISSION_GRANTED;
-
 import ohos.samples.camera.slice.MainAbilitySlice;
 
 import ohos.aafwk.ability.Ability;
@@ -56,7 +54,7 @@ public class MainAbility extends Ability {
             return;
         }
         for (int grantResult : grantResults) {
-            if (grantResult != PERMISSION_GRANTED) {
+            if (grantResult != IBundleManager.PERMISSION_GRANTED) {
                 terminateAbility();
                 break;
             }
