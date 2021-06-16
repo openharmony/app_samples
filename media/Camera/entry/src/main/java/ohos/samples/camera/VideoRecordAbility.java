@@ -160,6 +160,9 @@ public class VideoRecordAbility extends Ability {
 
     private void switchCamera(Component component) {
         isFrontCamera = !isFrontCamera;
+        if (cameraDevice != null) {
+            cameraDevice.release();
+        }
         updateComponentVisible(false);
         openCamera();
     }

@@ -151,16 +151,18 @@ public class MainAbilitySlice extends AbilitySlice {
         try {
             ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
                 predicates);
-            if (resultSet.getRowCount() == 0) {
+            if (!resultSet.goToFirstRow()) {
                 HiLog.info(LABEL_LOG, "%{public}s", "query:No result found");
                 return;
             }
-            resultSet.goToFirstRow();
             logText.setText("");
+            int nameIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME);
+            int ageIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE);
+            int userIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID);
             do {
-                String name = resultSet.getString(resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME));
-                int age = resultSet.getInt(resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE));
-                int userId = resultSet.getInt(resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID));
+                String name = resultSet.getString(nameIndex);
+                int age = resultSet.getInt(ageIndex);
+                int userId = resultSet.getInt(userIndex);
                 logText.append(userId + "   " + name + "   " + age + System.lineSeparator());
             } while (resultSet.goToNextRow());
         } catch (DataAbilityRemoteException | IllegalStateException exception) {
