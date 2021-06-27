@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.dataability",
-    "name": ".DataAbility",
+    "name": ".UserDataAbility",
     "reqCapabilities": [
       "video_support"
     ],

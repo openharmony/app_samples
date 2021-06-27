@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.distributedscheduler",
-    "name": ".DistributedScheduler",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -45,15 +45,15 @@
         "launchType": "standard"
       },
       {
-        "name": "ohos.sample.distributedscheduler.RemoteAbility",
+        "name": "ohos.samples.distributedscheduler.RemoteAbility",
         "type": "service",
         "visible": true
       },
       {
-        "name": "ohos.sample.distributedscheduler.PageAbility",
+        "name": "ohos.samples.distributedscheduler.PageAbility",
         "icon": "$media:icon",
-        "description": "$string:pageability_description",
-        "label": "PageAbility",
+        "description": "$string:mainability_description",
+        "label": "$string:PageAbility",
         "type": "page"
       }
     ],
