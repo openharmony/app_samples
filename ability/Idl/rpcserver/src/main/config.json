@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.rpcserver",
-    "name": ".RpcServer",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -35,7 +35,6 @@
           }
         ],
         "orientation": "portrait",
-        "visible": true,
         "formsEnabled": false,
         "name": "ohos.samples.rpcserver.MainAbility",
         "icon": "$media:icon",
@@ -47,8 +46,7 @@
       {
         "name": "ohos.samples.rpcserver.ServiceAbility",
         "type": "service",
-        "visible": true,
-        "module-name": "entry"
+        "visible": true
       }
     ]
   }

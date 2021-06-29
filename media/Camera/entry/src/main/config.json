@@ -35,7 +35,6 @@
           }
         ],
         "orientation": "unspecified",
-        "visible": true,
         "formsEnabled": false,
         "name": "ohos.samples.camera.MainAbility",
         "icon": "$media:icon",

@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.rpcclient",
-    "name": ".RpcClient",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -35,7 +35,6 @@
           }
         ],
         "orientation": "portrait",
-        "visible": true,
         "formsEnabled": false,
         "name": "ohos.samples.rpcclient.MainAbility",
         "icon": "$media:icon",

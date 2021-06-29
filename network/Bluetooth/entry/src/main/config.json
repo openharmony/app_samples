@@ -49,7 +49,7 @@
       {
         "reason": "get right",
         "name": "ohos.permission.LOCATION",
-        "used-scene": {
+        "usedScene": {
           "ability": [
             "ohos.samples.bluetooth.MainAbility"
           ],
@@ -59,7 +59,7 @@
       {
         "reason": "get right",
         "name": "ohos.permission.DISCOVER_BLUETOOTH",
-        "used-scene": {
+        "usedScene": {
           "ability": [
             "ohos.samples.bluetooth.MainAbility"
           ],
@@ -69,7 +69,7 @@
       {
         "reason": "get right",
         "name": "ohos.permission.USE_BLUETOOTH",
-        "used-scene": {
+        "usedScene": {
           "ability": [
             "ohos.samples.bluetooth.MainAbility"
           ],
@@ -79,7 +79,7 @@
       {
         "reason": "get right",
         "name": "ohos.permission.MANAGE_BLUETOOTH",
-        "used-scene": {
+        "usedScene": {
           "ability": [
             "ohos.samples.bluetooth.MainAbility"
           ],

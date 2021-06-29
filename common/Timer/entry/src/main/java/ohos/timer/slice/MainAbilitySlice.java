@@ -232,7 +232,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     }
 
     private void showToast(String message) {
-        new ToastDialog(this).setContentText(message).show();
+        new ToastDialog(this).setText(message).show();
     }
 
     @Override
