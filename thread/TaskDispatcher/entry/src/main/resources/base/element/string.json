@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "app_name",
-      "value": "TaskManager"
+      "value": "TaskDispatcher"
     },
     {
       "name": "mainability_description",

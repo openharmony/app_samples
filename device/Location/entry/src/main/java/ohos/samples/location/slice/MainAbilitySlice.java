@@ -184,7 +184,7 @@ public class MainAbilitySlice extends AbilitySlice {
             gaList.clear();
         } else {
             HiLog.info(LABEL_LOG, "%{public}s", "EventNotifier or Location response is null");
-            new ToastDialog(context).setTitleText("EventNotifier or Location response is null").show();
+            new ToastDialog(context).setText("EventNotifier or Location response is null").show();
         }
     }
 

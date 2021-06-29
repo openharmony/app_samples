@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.location",
-    "name": ".Location",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -35,7 +35,6 @@
           }
         ],
         "orientation": "unspecified",
-        "visible": true,
         "formsEnabled": false,
         "name": "ohos.samples.location.MainAbility",
         "icon": "$media:icon",

@@ -55,6 +55,6 @@ public class MainAbility extends Ability {
     }
 
     private void showTips(Context context, String message) {
-        new ToastDialog(context).setContentText(message).show();
+        new ToastDialog(context).setText(message).show();
     }
 }
