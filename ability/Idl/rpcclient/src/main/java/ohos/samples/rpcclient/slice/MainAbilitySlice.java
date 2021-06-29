@@ -130,7 +130,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void showTip(String msg) {
         toastDialog = new ToastDialog(getApplicationContext());
-        toastDialog.setContentText(msg);
+        toastDialog.setText(msg);
         toastDialog.setAutoClosable(false);
         toastDialog.setDuration(TOAST_DURATION);
         toastDialog.show();

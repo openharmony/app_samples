@@ -10,7 +10,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.timer",
-    "name": ".Timer",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -36,7 +36,6 @@
           }
         ],
         "orientation": "unspecified",
-        "visible": true,
         "formsEnabled": false,
         "name": "ohos.timer.MainAbility",
         "icon": "$media:icon",
