@@ -158,6 +158,6 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     }
 
     private void showTips(Context context, String message) {
-        new ToastDialog(context).setContentText(message).show();
+        new ToastDialog(context).setText(message).show();
     }
 }

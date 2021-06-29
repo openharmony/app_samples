@@ -13,6 +13,10 @@
       "value": "Available Devices"
     },
     {
+      "name": "app_name",
+      "value": "Bluetooth"
+    },
+    {
       "name": "mainability_description",
       "value": "hap sample empty page"
     },

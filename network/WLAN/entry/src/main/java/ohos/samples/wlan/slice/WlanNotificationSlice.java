@@ -98,7 +98,7 @@ public class WlanNotificationSlice extends AbilitySlice {
                 return;
             }
             IntentParams params = commonEventData.getIntent().getParams();
-            if (params == null) {
+            if (params == null || params.getParam(WifiEvents.PARAM_ACTIVE_STATE) == null) {
                 return;
             }
 

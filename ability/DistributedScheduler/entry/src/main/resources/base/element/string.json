@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "app_name",
-      "value": "DistributedDevices"
+      "value": "DistributedScheduler"
     },
     {
       "name": "mainability_description",
