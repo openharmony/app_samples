@@ -34,6 +34,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.media.camera.CameraKit;
 import ohos.media.camera.device.Camera;
 import ohos.media.camera.device.CameraConfig;
+import ohos.media.camera.device.CameraInfo;
 import ohos.media.camera.device.CameraStateCallback;
 import ohos.media.camera.device.FrameConfig;
 import ohos.media.common.AudioProperty;
@@ -52,6 +53,10 @@ public class VideoRecordAbility extends Ability {
     private static final String TAG = VideoRecordAbility.class.getSimpleName();
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
+
+    private static final int SCREEN_WIDTH = 1080;
+
+    private static final int SCREEN_HEIGHT = 1920;
 
     private SurfaceProvider surfaceProvider;
 
@@ -153,9 +158,29 @@ public class VideoRecordAbility extends Ability {
     private void openCamera() {
         CameraKit cameraKit = CameraKit.getInstance(getApplicationContext());
         String[] cameraList = cameraKit.getCameraIds();
-        String cameraId = cameraList.length > 1 && isFrontCamera ? cameraList[1] : cameraList[0];
-        CameraStateCallbackImpl cameraStateCallback = new CameraStateCallbackImpl();
-        cameraKit.createCamera(cameraId, cameraStateCallback, eventHandler);
+        String cameraId = "";
+        for (String logicalCameraId : cameraList) {
+            int faceType = cameraKit.getCameraInfo(logicalCameraId).getFacingType();
+            switch (faceType){
+                case CameraInfo.FacingType.CAMERA_FACING_FRONT:
+                    if (isFrontCamera) {
+                        cameraId = logicalCameraId;
+                    }
+                    break;
+                case CameraInfo.FacingType.CAMERA_FACING_BACK:
+                    if (!isFrontCamera) {
+                        cameraId = logicalCameraId;
+                    }
+                    break;
+                case CameraInfo.FacingType.CAMERA_FACING_OTHERS:
+                default:
+                    break;
+            }
+        }
+        if (cameraId != null && !cameraId.equals("")) {
+            CameraStateCallbackImpl cameraStateCallback = new CameraStateCallbackImpl();
+            cameraKit.createCamera(cameraId, cameraStateCallback, eventHandler);
+        }
     }
 
     private void switchCamera(Component component) {
@@ -247,7 +272,16 @@ public class VideoRecordAbility extends Ability {
     private class SurfaceCallBack implements SurfaceOps.Callback {
         @Override
         public void surfaceCreated(SurfaceOps callbackSurfaceOps) {
-            openCamera();
+            if (callbackSurfaceOps != null) {
+                callbackSurfaceOps.setFixedSize(SCREEN_HEIGHT,SCREEN_WIDTH);
+            }
+            eventHandler.postTask(new Runnable() {
+                @Override
+                public void run() {
+                    openCamera();
+                }
+            },200);
+
         }
 
         @Override
