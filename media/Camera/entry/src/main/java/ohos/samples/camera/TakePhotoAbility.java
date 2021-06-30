@@ -29,7 +29,6 @@ import ohos.agp.graphics.Surface;
 import ohos.agp.graphics.SurfaceOps;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.Context;
-import ohos.app.Environment;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import ohos.hiviewdfx.HiLog;
@@ -37,6 +36,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.media.camera.CameraKit;
 import ohos.media.camera.device.Camera;
 import ohos.media.camera.device.CameraConfig;
+import ohos.media.camera.device.CameraInfo;
 import ohos.media.camera.device.CameraStateCallback;
 import ohos.media.camera.device.FrameConfig;
 import ohos.media.image.ImageReceiver;
@@ -66,7 +66,7 @@ public class TakePhotoAbility extends Ability {
 
     private ImageReceiver imageReceiver;
 
-    private boolean isCameraFront;
+    private boolean isFrontCamera;
 
     private Surface previewSurface;
 
@@ -115,9 +115,29 @@ public class TakePhotoAbility extends Ability {
         imageReceiver.setImageArrivalListener(this::saveImage);
         CameraKit cameraKit = CameraKit.getInstance(getApplicationContext());
         String[] cameraList = cameraKit.getCameraIds();
-        String cameraId = cameraList.length > 1 && isCameraFront ? cameraList[1] : cameraList[0];
-        CameraStateCallbackImpl cameraStateCallback = new CameraStateCallbackImpl();
-        cameraKit.createCamera(cameraId, cameraStateCallback, eventHandler);
+        String cameraId = "";
+        for (String logicalCameraId : cameraList) {
+            int faceType = cameraKit.getCameraInfo(logicalCameraId).getFacingType();
+            switch (faceType){
+                case CameraInfo.FacingType.CAMERA_FACING_FRONT:
+                    if (isFrontCamera) {
+                        cameraId = logicalCameraId;
+                    }
+                    break;
+                case CameraInfo.FacingType.CAMERA_FACING_BACK:
+                    if (!isFrontCamera) {
+                        cameraId = logicalCameraId;
+                    }
+                    break;
+                case CameraInfo.FacingType.CAMERA_FACING_OTHERS:
+                default:
+                    break;
+            }
+        }
+        if (cameraId != null && !cameraId.equals("")) {
+            CameraStateCallbackImpl cameraStateCallback = new CameraStateCallbackImpl();
+            cameraKit.createCamera(cameraId, cameraStateCallback, eventHandler);
+        }
     }
 
     private void saveImage(ImageReceiver receiver) {
@@ -157,7 +177,10 @@ public class TakePhotoAbility extends Ability {
     }
 
     private void switchCamera(Component component) {
-        isCameraFront = !isCameraFront;
+        isFrontCamera = !isFrontCamera;
+        if (cameraDevice != null) {
+            cameraDevice.release();
+        }
         updateComponentVisible(false);
         openCamera();
     }
@@ -196,7 +219,15 @@ public class TakePhotoAbility extends Ability {
     private class SurfaceCallBack implements SurfaceOps.Callback {
         @Override
         public void surfaceCreated(SurfaceOps callbackSurfaceOps) {
-            openCamera();
+            if (callbackSurfaceOps != null) {
+                callbackSurfaceOps.setFixedSize(SCREEN_HEIGHT,SCREEN_WIDTH);
+            }
+            eventHandler.postTask(new Runnable() {
+                @Override
+                public void run() {
+                    openCamera();
+                }
+            },200);
         }
 
         @Override
