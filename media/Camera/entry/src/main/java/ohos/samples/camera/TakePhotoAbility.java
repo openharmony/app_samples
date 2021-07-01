@@ -134,7 +134,7 @@ public class TakePhotoAbility extends Ability {
                     break;
             }
         }
-        if (cameraId != null && !cameraId.equals("")) {
+        if (cameraId != null && !cameraId.isEmpty()) {
             CameraStateCallbackImpl cameraStateCallback = new CameraStateCallbackImpl();
             cameraKit.createCamera(cameraId, cameraStateCallback, eventHandler);
         }
