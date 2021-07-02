@@ -159,13 +159,13 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         @Override
         public void onInitSuccess(String deviceId) {
             HiLog.info(LABEL_LOG, "device id success: " + deviceId);
-            eventHandler.postTask(()->showTips(getContext(), "device id onInitSuccess"));
+            showTips(getContext(), "device id onInitSuccess");
         }
 
         @Override
         public void onInitFailure(String deviceId, int errorCode) {
             HiLog.info(LABEL_LOG, "device id failed: " + deviceId + "errorCode: " + errorCode);
-            eventHandler.postTask(()->showTips(getContext(), "device id failed,errorCode="+errorCode));
+            showTips(getContext(), "device id failed,errorCode="+errorCode);
         }
     };
 
@@ -234,8 +234,10 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         }
     };
 
-    private void showTips(Context context, String msg) {
-        new ToastDialog(context).setText(msg).show();
+    public void showTips(Context context, String msg) {
+        getUITaskDispatcher().asyncDispatch(()->{
+            new ToastDialog(context).setText(msg).show();
+        });
     }
 
     @Override

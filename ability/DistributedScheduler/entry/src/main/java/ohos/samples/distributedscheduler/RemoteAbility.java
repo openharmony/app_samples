@@ -40,7 +40,7 @@ public class RemoteAbility extends Ability {
     RemoteAgentStub remoteAgentStub = new RemoteAgentStub(DESCRIPTOR) {
         @Override
         public void setRemoteObject(String param) throws RemoteException {
-            new EventHandler(EventRunner.getMainEventRunner()).postTask(()->showTips(RemoteAbility.this, param));
+            showTips(RemoteAbility.this, param);
         }
     };
 
@@ -76,6 +76,8 @@ public class RemoteAbility extends Ability {
     }
 
     private void showTips(Context context, String msg) {
-        new ToastDialog(context).setText(msg).show();
+        getUITaskDispatcher().asyncDispatch(()->{
+            new ToastDialog(context).setText(msg).show();
+        });
     }
 }
