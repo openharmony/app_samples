@@ -21,6 +21,19 @@
     ohos:orientation="vertical">
 
     <Button
+        ohos:id="$+id:choice_device"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:button_background"
+        ohos:left_margin="24vp"
+        ohos:padding="10vp"
+        ohos:right_margin="24vp"
+        ohos:text="choiceDevice"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:top_margin="30vp"/>
+
+    <Button
         ohos:id="$+id:start_fa_button"
         ohos:height="40vp"
         ohos:width="match_parent"
