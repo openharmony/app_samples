@@ -15,6 +15,9 @@
 
 package ohos.samples.distributedscheduler.slice;
 
+import ohos.agp.window.dialog.IDialog;
+import ohos.agp.window.dialog.ListDialog;
+import ohos.distributedschedule.interwork.IInitCallback;
 import ohos.samples.distributedscheduler.MainAbility;
 import ohos.samples.distributedscheduler.RemoteAgentProxy;
 import ohos.samples.distributedscheduler.ResourceTable;
@@ -40,13 +43,15 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
 import ohos.rpc.RemoteException;
 
-import java.security.SecureRandom;
 import java.util.List;
+
+import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 /**
  * MainAbilitySlice
  */
 public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuation {
+    private static final int DIALOG_WIDTH = 900;
     private static final String TAG = MainAbility.class.getSimpleName();
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
@@ -57,13 +62,17 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private static final String REMOTE_BUNDLE = "ohos.samples.distributedscheduler";
 
-    private static final String REMOTE_SERVICE = "RemoteAbility";
+    private static final String REMOTE_SERVICE = "ohos.samples.distributedscheduler.RemoteAbility";
 
-    private static final String REMOTE_SERVICE_FA = "PageAbility";
+    private static final String REMOTE_SERVICE_FA = "ohos.samples.distributedscheduler.PageAbility";
 
     private Text text;
 
     private String param;
+
+    private  String selectDeviceId;
+
+    private  RemoteAgentProxy remoteAgentProxy = null;
 
     private EventHandler eventHandler = new EventHandler(EventRunner.current()) {
         @Override
@@ -85,11 +94,13 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ohos.samples.distributedscheduler.ResourceTable.Layout_main_ability_slice);
-
         initComponents();
     }
 
     private void initComponents() {
+        Component choiceDeviceButton = findComponentById(ResourceTable.Id_choice_device);
+        choiceDeviceButton.setClickedListener(component -> choiceDevice());
+
         Component startRemoteFAButton = findComponentById(ResourceTable.Id_start_fa_button);
         startRemoteFAButton.setClickedListener(component -> startRemoteFA());
 
@@ -102,16 +113,65 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         Component disconnectRemotePAButton = findComponentById(ResourceTable.Id_disconnect_pa_button);
         Component continueFAButton = findComponentById(ResourceTable.Id_continue_fa_button);
         connectRemotePAButton.setClickedListener(component -> connectService());
-        disconnectRemotePAButton.setClickedListener(component -> disconnectAbility(connection));
-        continueFAButton.setClickedListener(component -> continueAbility(getRemoteDeviceId()));
+        disconnectRemotePAButton.setClickedListener(component -> disConnectAbility());
+        continueFAButton.setClickedListener(component -> continueAbility(selectDeviceId));
 
         text = (Text) findComponentById(ResourceTable.Id_text);
         text.setText(param);
+
     }
+
+    private void disConnectAbility() {
+        disconnectAbility(connection);
+        remoteAgentProxy = null;
+    }
+
+    private void choiceDevice() {
+        List<DeviceInfo> infoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
+        if ((infoList == null) || (infoList.size() == 0)) {
+            selectDeviceId = null;
+        }
+        String[] items = new String[infoList.size()];
+        int i = 0;
+        for (DeviceInfo info:infoList) {
+            items[i] = info.getDeviceName();
+        }
+        ListDialog listDialog = new ListDialog(getContext());
+        listDialog.setItems(items);
+        listDialog.setTitleText("Choice a device");
+        listDialog.setSize(DIALOG_WIDTH,MATCH_CONTENT);
+        listDialog.setAutoClosable(true);
+        listDialog.setOnSingleSelectListener((IDialog dailog, int position)->{
+            selectDeviceId = infoList.get(position).getDeviceId();
+            try {
+                HiLog.info(LABEL_LOG, "initDistributedEnvironmentClick begin ");
+                DeviceManager.initDistributedEnvironment(selectDeviceId,iInitCallback);
+                dailog.destroy();
+            } catch (RemoteException e) {
+                HiLog.info(LABEL_LOG, "RemoteException happen");
+                e.printStackTrace();
+            }
+        });
+        listDialog.show();
+    }
+
+    private IInitCallback iInitCallback = new IInitCallback() {
+        @Override
+        public void onInitSuccess(String deviceId) {
+            HiLog.info(LABEL_LOG, "device id success: " + deviceId);
+            eventHandler.postTask(()->showTips(getContext(), "device id onInitSuccess"));
+        }
+
+        @Override
+        public void onInitFailure(String deviceId, int errorCode) {
+            HiLog.info(LABEL_LOG, "device id failed: " + deviceId + "errorCode: " + errorCode);
+            eventHandler.postTask(()->showTips(getContext(), "device id failed,errorCode="+errorCode));
+        }
+    };
 
     private Intent getRemotePageIntent(String bundleName, String serviceName) {
         Operation operation = new Intent.OperationBuilder()
-            .withDeviceId(getRemoteDeviceId())
+            .withDeviceId(selectDeviceId)
             .withBundleName(bundleName)
             .withAbilityName(serviceName)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
@@ -128,7 +188,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private Intent getRemoteServiceIntent(String bundleName, String serviceName) {
         Operation operation = new Intent.OperationBuilder()
-            .withDeviceId(getRemoteDeviceId())
+            .withDeviceId(selectDeviceId)
             .withBundleName(bundleName)
             .withAbilityName(serviceName)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
@@ -153,21 +213,12 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         connectAbility(intent, connection);
     }
 
-    private String getRemoteDeviceId() {
-        List<DeviceInfo> infoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
-        if ((infoList == null) || (infoList.size() == 0)) {
-            return "";
-        }
-        int random = new SecureRandom().nextInt(infoList.size());
-        return infoList.get(random).getDeviceId();
-    }
-
     private IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject iRemoteObject, int resultCode) {
             HiLog.info(LABEL_LOG, "%{public}s", "onAbilityConnectDone resultCode : " + resultCode);
             eventHandler.sendEvent(EVENT_ABILITY_CONNECT_DONE);
-            RemoteAgentProxy remoteAgentProxy = new RemoteAgentProxy(iRemoteObject);
+            remoteAgentProxy = new RemoteAgentProxy(iRemoteObject);
             try {
                 remoteAgentProxy.setRemoteObject("This param from client");
             } catch (RemoteException e) {
@@ -179,6 +230,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         public void onAbilityDisconnectDone(ElementName elementName, int resultCode) {
             HiLog.info(LABEL_LOG, "%{public}s", "onAbilityDisconnectDone resultCode : " + resultCode);
             eventHandler.sendEvent(EVENT_ABILITY_DISCONNECT_DONE);
+            remoteAgentProxy = null;
         }
     };
 
@@ -211,5 +263,11 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     @Override
     public void onCompleteContinuation(int code) {
         terminate();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        remoteAgentProxy = null;
     }
 }

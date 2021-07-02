@@ -19,6 +19,8 @@ import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.Context;
+import ohos.eventhandler.EventHandler;
+import ohos.eventhandler.EventRunner;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
@@ -34,10 +36,11 @@ public class RemoteAbility extends Ability {
 
     private static final String DESCRIPTOR = "ohos.samples.distributedscheduler.RemoteAbility";
 
+
     RemoteAgentStub remoteAgentStub = new RemoteAgentStub(DESCRIPTOR) {
         @Override
         public void setRemoteObject(String param) throws RemoteException {
-            showTips(RemoteAbility.this, param);
+            new EventHandler(EventRunner.getMainEventRunner()).postTask(()->showTips(RemoteAbility.this, param));
         }
     };
 
