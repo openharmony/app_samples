@@ -133,19 +133,19 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         }
         String[] items = new String[infoList.size()];
         int i = 0;
-        for (DeviceInfo info:infoList) {
-            items[i] = info.getDeviceName();
+        for (DeviceInfo info : infoList) {
+            items[i] = info.getDeviceType() + ", " + info.getDeviceName();
         }
         ListDialog listDialog = new ListDialog(getContext());
         listDialog.setItems(items);
         listDialog.setTitleText("Choice a device");
-        listDialog.setSize(DIALOG_WIDTH,MATCH_CONTENT);
+        listDialog.setSize(DIALOG_WIDTH, MATCH_CONTENT);
         listDialog.setAutoClosable(true);
-        listDialog.setOnSingleSelectListener((IDialog dailog, int position)->{
+        listDialog.setOnSingleSelectListener((IDialog dailog, int position) -> {
             selectDeviceId = infoList.get(position).getDeviceId();
             try {
                 HiLog.info(LABEL_LOG, "initDistributedEnvironmentClick begin ");
-                DeviceManager.initDistributedEnvironment(selectDeviceId,iInitCallback);
+                DeviceManager.initDistributedEnvironment(selectDeviceId, iInitCallback);
                 dailog.destroy();
             } catch (RemoteException e) {
                 HiLog.info(LABEL_LOG, "RemoteException happen");
