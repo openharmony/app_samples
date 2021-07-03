@@ -123,6 +123,11 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private void disConnectAbility() {
         disconnectAbility(connection);
+        try {
+            DeviceManager.unInitDistributedEnvironment(selectDeviceId,iInitCallback);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         remoteAgentProxy = null;
     }
 
@@ -135,6 +140,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         int i = 0;
         for (DeviceInfo info : infoList) {
             items[i] = info.getDeviceType() + ", " + info.getDeviceName();
+            i++;
         }
         ListDialog listDialog = new ListDialog(getContext());
         listDialog.setItems(items);
