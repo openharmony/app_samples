@@ -114,11 +114,19 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         Component continueFAButton = findComponentById(ResourceTable.Id_continue_fa_button);
         connectRemotePAButton.setClickedListener(component -> connectService());
         disconnectRemotePAButton.setClickedListener(component -> disConnectAbility());
-        continueFAButton.setClickedListener(component -> continueAbility(selectDeviceId));
+        continueFAButton.setClickedListener(component -> continueFA());
 
         text = (Text) findComponentById(ResourceTable.Id_text);
         text.setText(param);
 
+    }
+
+    private void continueFA() {
+        try {
+            continueAbility(selectDeviceId);
+        } catch (IllegalArgumentException e) {
+            HiLog.info(LABEL_LOG, e.getMessage());
+        }
     }
 
     private void disConnectAbility() {
@@ -127,6 +135,8 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
             DeviceManager.unInitDistributedEnvironment(selectDeviceId,iInitCallback);
         } catch (RemoteException e) {
             e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            HiLog.info(LABEL_LOG, e.getMessage());
         }
         remoteAgentProxy = null;
     }

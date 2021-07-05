@@ -40,10 +40,13 @@ public class RemoteAbility extends Ability {
     RemoteAgentStub remoteAgentStub = new RemoteAgentStub(DESCRIPTOR) {
         @Override
         public void setRemoteObject(String param) throws RemoteException {
-            showTips(RemoteAbility.this, param);
+            if(isConnected) {
+                showTips(RemoteAbility.this, param);
+            }
         }
     };
 
+    private boolean isConnected = false;
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
@@ -60,12 +63,14 @@ public class RemoteAbility extends Ability {
     @Override
     protected IRemoteObject onConnect(Intent intent) {
         showTips(RemoteAbility.this, "RemoteService onConnect");
+        isConnected = true;
         return remoteAgentStub;
     }
 
     @Override
     protected void onDisconnect(Intent intent) {
         super.onDisconnect(intent);
+        isConnected = false;
         showTips(RemoteAbility.this, "RemoteService onDisconnect");
     }
 
