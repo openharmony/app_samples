@@ -163,7 +163,6 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
                 dailog.destroy();
             } catch (RemoteException e) {
                 HiLog.info(LABEL_LOG, "RemoteException happen");
-                e.printStackTrace();
             }
         });
         listDialog.show();
