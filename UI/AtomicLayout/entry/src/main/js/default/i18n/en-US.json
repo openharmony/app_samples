@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "hide_capabilities": "Hidden capabilities",
+    "percentage": "Proportion capability",
+    "fixed_scale": "Fixed scale",
+
+    "displaystyle": "display",
+    "hidestyle": "hide",
+
+    "refresh": "refresh",
+    "return": "reset"
+  }
+}
