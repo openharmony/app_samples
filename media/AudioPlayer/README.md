@@ -5,6 +5,3 @@
     This sample shows how to use the provided APIs to develop music playback functions, including playing, pausing, jumping to the previous or next item, showing the progress, and switching among items in the playback list. The playback list allows your users to select the item to play.
 
 
--   Licensing
-
-
