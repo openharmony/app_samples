@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "ForegroundService"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "serviceability_description",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "start_play",
+      "value": "Start Play"
+    },
+    {
+      "name": "pause_play",
+      "value": "Pause Play"
+    },
+    {
+      "name": "stop_play",
+      "value": "Stop Play"
+    },
+    {
+      "name": "resume_play",
+      "value": "Resume Play"
+    }
+  ]
+}
