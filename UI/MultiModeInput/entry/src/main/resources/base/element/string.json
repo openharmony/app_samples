@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "MultiModeInput"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "key_text",
+      "value": "Please Press Key"
+    },
+    {
+      "name": "touch_event",
+      "value": "touchEvent"
+    },
+    {
+      "name": "key_event",
+      "value": "keyEvent"
+    },
+    {
+      "name": "mouse_event",
+      "value": "mouseEvent"
+    },
+    {
+      "name": "speech_event",
+      "value": "speechEvent"
+    },
+    {
+      "name": "touch_button",
+      "value": "button"
+    },
+    {
+      "name": "mouse_button",
+      "value": "Left mouse click"
+    },
+    {
+      "name": "speech_button",
+      "value": "button"
+    }
+  ]
+}
