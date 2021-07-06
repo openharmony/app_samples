@@ -1,0 +1,64 @@
+{
+  "color": [
+    {
+      "name": "color_button_blue_empty",
+      "value": "#0000FF"
+    },
+    {
+      "name": "color_button_blue_pressed",
+      "value": "#0000CC"
+    },
+    {
+      "name": "color_button_blue_text",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "color_button_gray_empty",
+      "value": "#E5E5E5"
+    },
+    {
+      "name": "color_button_gray_pressed",
+      "value": "#D0D0D0"
+    },
+    {
+      "name": "color_button_gray_text",
+      "value": "#0F0F0F"
+    },
+    {
+      "name": "color_button_white_empty",
+      "value": "#FAFAFA"
+    },
+    {
+      "name": "color_button_white_pressed",
+      "value": "#E5E5E5"
+    },
+    {
+      "name": "color_button_white_text",
+      "value": "#0F0F0F"
+    },
+    {
+      "name": "color_transparent",
+      "value": "#00000000"
+    },
+    {
+      "name": "color_white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "color_dialog_title_text",
+      "value": "#000000"
+    },
+    {
+      "name": "color_dialog_content_text",
+      "value": "#5F5F5F"
+    },
+    {
+      "name": "color_dialog_button_text_blue",
+      "value": "#0044FF"
+    },
+    {
+      "name": "color_dialog_button_line",
+      "value": "#9F9F9F"
+    }
+  ]
+}
