@@ -1,0 +1,62 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.delegator",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.delegator",
+    "name": ".MyApplication",
+    "deviceType": [
+      "default"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "ohos.samples.delegator.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "ohos.samples.delegator.FirstAbility",
+        "icon": "$media:icon",
+        "description": "$string:firstability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "ohos.samples.delegator.SecondAbility",
+        "icon": "$media:icon",
+        "description": "$string:secondability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
