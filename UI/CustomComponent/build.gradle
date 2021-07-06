@@ -10,7 +10,7 @@ ohos {
 buildscript {
     repositories {
         maven {
-            url 'https://mirrors.huaweicloud.com/repository/maven/'
+            url 'https://repo.huaweicloud.com/repository/maven/'
         }
         maven {
             url 'https://developer.huawei.com/repo/'
@@ -24,7 +24,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url 'https://mirrors.huaweicloud.com/repository/maven/'
+            url 'https://repo.huaweicloud.com/repository/maven/'
         }
         maven {
             url 'https://developer.huawei.com/repo/'
