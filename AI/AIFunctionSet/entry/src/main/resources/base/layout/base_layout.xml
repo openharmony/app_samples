@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:root_layout"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:id="$+id:toolbar"
+        ohos:height="50vp"
+        ohos:width="match_parent"
+        ohos:padding="10vp">
+
+        <Button
+            ohos:id="$+id:back"
+            ohos:height="20vp"
+            ohos:width="20vp"
+            ohos:background_element="$media:ic_back"
+            ohos:vertical_center="$id:toolbar"/>
+
+        <Text
+            ohos:id="$+id:title"
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:left_margin="15vp"
+            ohos:left_padding="15vp"
+            ohos:multiple_lines="false"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#ff000000"
+            ohos:text_size="18fp"/>
+    </DependentLayout>
+
+    <Text
+        ohos:id="$+id:desc"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:margin="10vp"
+        ohos:multiple_lines="true"
+        ohos:text_size="16fp"
+        ohos:visibility="hide"/>
+
+    <Text
+        ohos:height="1vp"
+        ohos:width="match_parent"
+        ohos:background_element="#220000ff"
+        ohos:bottom_margin="20vp"/>
+
+</DirectionalLayout>
