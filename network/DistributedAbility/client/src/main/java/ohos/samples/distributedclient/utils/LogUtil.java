@@ -33,9 +33,7 @@ public class LogUtil {
     private static final String LOG_FORMAT = "%s: %s";
 
     private LogUtil() {
-        /* Do nothing */
     }
-
     /**
      * Print info log
      *
