@@ -70,7 +70,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private String param;
 
-    private  String selectDeviceId;
+    private  String selectedDeviceId;
 
     private  RemoteAgentProxy remoteAgentProxy = null;
 
@@ -123,7 +123,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private void continueFA() {
         try {
-            continueAbility(selectDeviceId);
+            continueAbility(selectedDeviceId);
         } catch (IllegalArgumentException e) {
             HiLog.info(LABEL_LOG, e.getMessage());
         }
@@ -132,7 +132,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     private void disConnectAbility() {
         disconnectAbility(connection);
         try {
-            DeviceManager.unInitDistributedEnvironment(selectDeviceId, iInitCallback);
+            DeviceManager.unInitDistributedEnvironment(selectedDeviceId, iInitCallback);
         } catch (RemoteException | IllegalArgumentException e) {
             HiLog.info(LABEL_LOG, e.getMessage());
         }
@@ -142,7 +142,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     private void selectDevice() {
         List<DeviceInfo> infoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
         if ((infoList == null) || (infoList.size() == 0)) {
-            selectDeviceId = null;
+            selectedDeviceId = null;
         }
         String[] items = new String[infoList.size()];
         int i = 0;
@@ -156,10 +156,10 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         listDialog.setSize(DIALOG_WIDTH, MATCH_CONTENT);
         listDialog.setAutoClosable(true);
         listDialog.setOnSingleSelectListener((IDialog dailog, int position) -> {
-            selectDeviceId = infoList.get(position).getDeviceId();
+            selectedDeviceId = infoList.get(position).getDeviceId();
             try {
                 HiLog.info(LABEL_LOG, "initDistributedEnvironmentClick begin ");
-                DeviceManager.initDistributedEnvironment(selectDeviceId, iInitCallback);
+                DeviceManager.initDistributedEnvironment(selectedDeviceId, iInitCallback);
                 dailog.destroy();
             } catch (RemoteException e) {
                 HiLog.info(LABEL_LOG, "RemoteException happen");
@@ -185,7 +185,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private Intent getRemotePageIntent(String bundleName, String serviceName) {
         Operation operation = new Intent.OperationBuilder()
-            .withDeviceId(selectDeviceId)
+            .withDeviceId(selectedDeviceId)
             .withBundleName(bundleName)
             .withAbilityName(serviceName)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
@@ -202,7 +202,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private Intent getRemoteServiceIntent(String bundleName, String serviceName) {
         Operation operation = new Intent.OperationBuilder()
-            .withDeviceId(selectDeviceId)
+            .withDeviceId(selectedDeviceId)
             .withBundleName(bundleName)
             .withAbilityName(serviceName)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
