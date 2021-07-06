@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:width="match_parent"
+    ohos:height="match_parent">
+
+    <Button
+        ohos:id="$+id:get_battery_level"
+        ohos:width="250vp"
+        ohos:height="40vp"
+        ohos:top_margin="50vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Get Battery Level"
+        ohos:text_size="20vp"
+        ohos:text_color="#ffffffff"
+        ohos:background_element="$graphic:bg"/>
+
+    <Button
+        ohos:id="$+id:subscribe_battery_level_change"
+        ohos:width="250vp"
+        ohos:height="40vp"
+        ohos:top_margin="50vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Subscribe Battery Level"
+        ohos:text_size="20vp"
+        ohos:text_color="#ffffffff"
+        ohos:background_element="$graphic:bg"/>
+
+    <Text
+        ohos:id="$+id:battery_level_result"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:top_margin="50vp"
+        ohos:left_margin="10vp"
+        ohos:right_margin="10vp"
+        ohos:multiple_lines="true"
+        ohos:text_size="18fp"
+        ohos:text_color="#FF000000"
+        ohos:text_alignment="horizontal_center"/>
+</DirectionalLayout>
