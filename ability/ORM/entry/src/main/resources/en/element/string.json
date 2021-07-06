@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "ORM"
+    },
+    {
+      "name": "mainability_description",
+      "value": "ORM Ability"
+    },
+    {
+      "name": "insert",
+      "value": "insert"
+    },
+    {
+      "name": "update",
+      "value": "update"
+    },
+    {
+      "name": "delete",
+      "value": "delete"
+    },
+    {
+      "name": "query",
+      "value": "query"
+    },
+    {
+      "name": "upgrade",
+      "value": "upgrade"
+    },
+    {
+      "name": "backupDB",
+      "value": "backup"
+    },
+    {
+      "name": "deleteDB",
+      "value": "deleteDB"
+    },
+    {
+      "name": "restoreDB",
+      "value": "restore"
+    }
+  ]
+}

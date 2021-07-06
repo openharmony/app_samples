@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "ORM"
+    },
+    {
+      "name": "mainability_description",
+      "value": "ORM Ability"
+    },
+    {
+      "name": "insert",
+      "value": "插入"
+    },
+    {
+      "name": "update",
+      "value": "更新"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "query",
+      "value": "查询"
+    },
+    {
+      "name": "upgrade",
+      "value": "更新"
+    },
+    {
+      "name": "backupDB",
+      "value": "备份"
+    },
+    {
+      "name": "deleteDB",
+      "value": "删除DB"
+    },
+    {
+      "name": "restoreDB",
+      "value": "恢复"
+    }
+  ]
+}
