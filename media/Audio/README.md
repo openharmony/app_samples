@@ -10,4 +10,4 @@
 
     To play sounds, your application needs invoke the APIs to manage audio resource loading and playback, tone creation and playback, and system sound playback.
 
--   Licensing
+
