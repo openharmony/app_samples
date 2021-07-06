@@ -14,7 +14,6 @@
 
 1.  在DevEco Studio配置并选择模拟器（[配置链接](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/run_simulator-0000001053303709)）或真机设备（[配置链接](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/run_phone_tablat-0000001064774652)）。
 2.  在DevEco Studio中选择ohosTest目录下的MainAbilitySliceTest.java文件，运行当前文件。
-3.  在run窗口会出现test passed：2。
 
 ##### 约束与限制<a name="section1651164910564"></a>
 
