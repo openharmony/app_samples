@@ -15,6 +15,7 @@
 
 package ohos.samples.dataability.slice;
 
+import ohos.app.dispatcher.task.TaskPriority;
 import ohos.samples.dataability.ResourceTable;
 import ohos.samples.dataability.utils.Const;
 
@@ -142,32 +143,53 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void query(boolean queryAll) {
-        String[] columns = new String[] {Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
-        DataAbilityPredicates predicates = new DataAbilityPredicates();
-        if (!queryAll) {
-            // test data
-            predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
-        }
-        try {
-            ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
-                predicates);
-            if (!resultSet.goToFirstRow()) {
-                HiLog.info(LABEL_LOG, "%{public}s", "query:No result found");
-                return;
+        getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(new Runnable() {
+            @Override
+            public void run() {
+                String[] columns = new String[]{Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
+                DataAbilityPredicates predicates = new DataAbilityPredicates();
+                if (!queryAll) {
+                    // test data
+                    predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
+                }
+                try {
+                    ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
+                            predicates);
+                    appendText(resultSet);
+                } catch (DataAbilityRemoteException | IllegalStateException exception) {
+                    HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
+                }
             }
-            logText.setText("");
-            int nameIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME);
-            int ageIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE);
-            int userIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID);
-            do {
-                String name = resultSet.getString(nameIndex);
-                int age = resultSet.getInt(ageIndex);
-                int userId = resultSet.getInt(userIndex);
-                logText.append(userId + "   " + name + "   " + age + System.lineSeparator());
-            } while (resultSet.goToNextRow());
-        } catch (DataAbilityRemoteException | IllegalStateException exception) {
-            HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
+        });
+    }
+
+    private void appendText(ResultSet resultSet) {
+        if (!resultSet.goToFirstRow()) {
+            HiLog.info(LABEL_LOG, "%{public}s", "query:No result found");
+            return;
         }
+        int queryCount = 0;
+        int allowQueryMaxCount = 100;
+        StringBuilder appendStr = new StringBuilder();
+        int nameIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME);
+        int ageIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE);
+        int userIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID);
+        do {
+            queryCount++;
+            String name = resultSet.getString(nameIndex);
+            int age = resultSet.getInt(ageIndex);
+            int userId = resultSet.getInt(userIndex);
+            appendStr.append(userId + "   " + name + "   " + age + System.lineSeparator());
+        } while (resultSet.goToNextRow() && queryCount < allowQueryMaxCount);
+        HiLog.info(LABEL_LOG, " queryCount : " + queryCount);
+        HiLog.info(LABEL_LOG, " appendStr : " + appendStr.toString());
+        getUITaskDispatcher().asyncDispatch(new Runnable() {
+            @Override
+            public void run() {
+                logText.setText("");
+                logText.setText(appendStr.toString());
+            }
+        });
     }
 
     private void update(Component component) {
