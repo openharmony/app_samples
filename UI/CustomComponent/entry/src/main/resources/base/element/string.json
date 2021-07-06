@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "CustomComponent"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "annulus_button",
+      "value": "ColorChangingRing"
+    },
+    {
+      "name": "controllers_button",
+      "value": "RingProgressBar"
+    }
+  ]
+}
