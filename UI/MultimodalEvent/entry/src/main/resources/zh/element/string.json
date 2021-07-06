@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "多模输入事件标准化"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "key_text",
+      "value": "请按音量键"
+    },
+    {
+      "name": "media_text",
+      "value": "请按播放键"
+    },
+    {
+      "name": "system_text",
+      "value": "退出当前页面"
+    },
+    {
+      "name": "common_enter_text",
+      "value": "请按Enter键"
+    },
+    {
+      "name": "sound_player",
+      "value": "音乐"
+    },
+    {
+      "name": "please_play",
+      "value": "请按播放键"
+    },
+    {
+      "name": "touch_event_handle",
+      "value": "触摸类标准化事件"
+    },
+    {
+      "name": "key_event_handle",
+      "value": "按键类标准化事件"
+    },
+    {
+      "name": "common_event_handle",
+      "value": "通用类标准化事件"
+    },
+    {
+      "name": "media_event_handle",
+      "value": "媒体类标准化事件"
+    },
+    {
+      "name": "system_event_handle",
+      "value": "系统类标准化事件"
+    },
+    {
+      "name": "telephone_event_handle",
+      "value": "通话类标准化事件"
+    },
+    {
+      "name": "touch_event",
+      "value": "触摸事件"
+    }
+  ]
+}
