@@ -15,6 +15,11 @@
 
 package ohos.samples.dataability.slice;
 
+import ohos.app.dispatcher.TaskDispatcher;
+import ohos.app.dispatcher.task.TaskPriority;
+import ohos.data.rdb.DataObserverAsyncWrapper;
+import ohos.eventhandler.EventHandler;
+import ohos.eventhandler.EventRunner;
 import ohos.samples.dataability.ResourceTable;
 import ohos.samples.dataability.utils.Const;
 
@@ -43,6 +48,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * MainAbilitySlice
@@ -56,7 +62,13 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private DataAbilityHelper databaseHelper;
 
-    private IDataAbilityObserver dataAbilityObserver = () -> {
+    private ResultSet resultSet;
+
+    private final DataObserverAsyncWrapper dataObserverAsyncWrapper = new DataObserverAsyncWrapper(() ->
+            getUITaskDispatcher().syncDispatch(() ->
+                    HiLog.info(LABEL_LOG, "resultSet change")), new EventHandler(EventRunner.create()));
+
+    private final IDataAbilityObserver dataAbilityObserver = () -> {
         HiLog.info(LABEL_LOG, "%{public}s", "database change");
         query(true);
     };
@@ -67,6 +79,15 @@ public class MainAbilitySlice extends AbilitySlice {
         super.setUIContent(ResourceTable.Layout_main_ability_slice);
         initComponents();
         initDatabaseHelper();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        databaseHelper.unregisterObserver(Uri.parse(Const.BASE_URI), dataAbilityObserver);
+        if (resultSet != null) {
+            resultSet.unregisterObserver(dataObserverAsyncWrapper);
+        }
     }
 
     private void initComponents() {
@@ -142,32 +163,61 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void query(boolean queryAll) {
-        String[] columns = new String[] {Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
-        DataAbilityPredicates predicates = new DataAbilityPredicates();
-        if (!queryAll) {
-            // test data
-            predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
-        }
-        try {
-            ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
-                predicates);
-            if (!resultSet.goToFirstRow()) {
-                HiLog.info(LABEL_LOG, "%{public}s", "query:No result found");
-                return;
+        getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(new Runnable() {
+            @Override
+            public void run() {
+                String[] columns = new String[]{Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
+                DataAbilityPredicates predicates = new DataAbilityPredicates();
+                if (!queryAll) {
+                    // test data
+                    predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
+                }
+                try {
+                    resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
+                            predicates);
+                    appendText(resultSet);
+                } catch (DataAbilityRemoteException | IllegalStateException exception) {
+                    HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
+                }
             }
-            logText.setText("");
-            int nameIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME);
-            int ageIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE);
-            int userIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID);
-            do {
-                String name = resultSet.getString(nameIndex);
-                int age = resultSet.getInt(ageIndex);
-                int userId = resultSet.getInt(userIndex);
-                logText.append(userId + "   " + name + "   " + age + System.lineSeparator());
-            } while (resultSet.goToNextRow());
-        } catch (DataAbilityRemoteException | IllegalStateException exception) {
-            HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
+        });
+    }
+
+    private void appendText(ResultSet resultSet) {
+        if (!resultSet.goToFirstRow()) {
+            HiLog.info(LABEL_LOG, "%{public}s", "query:No result found");
+            return;
         }
+        int queryCount = 0;
+        int allowQueryMaxCount = 100;
+        StringBuilder appendStr = new StringBuilder();
+        int nameIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_NAME);
+        int ageIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_AGE);
+        int userIndex = resultSet.getColumnIndexForName(Const.DB_COLUMN_USER_ID);
+        do {
+            queryCount++;
+            String name = resultSet.getString(nameIndex);
+            int age = resultSet.getInt(ageIndex);
+            int userId = resultSet.getInt(userIndex);
+            appendStr.append(userId + "   " + name + "   " + age + System.lineSeparator());
+        } while (resultSet.goToNextRow() && queryCount < allowQueryMaxCount);
+        HiLog.info(LABEL_LOG, " queryCount : " + queryCount);
+        HiLog.info(LABEL_LOG, " appendStr : " + appendStr.toString());
+        getUITaskDispatcher().asyncDispatch(new Runnable() {
+            @Override
+            public void run() {
+                logText.setText("");
+                logText.setText(appendStr.toString());
+                registerResultSetObserver();
+            }
+        });
+    }
+
+    private void registerResultSetObserver() {
+        resultSet.registerObserver(dataObserverAsyncWrapper);
+        List<Uri> uris = new ArrayList<>();
+        uris.add(Uri.parse((Const.BASE_URI + Const.DATA_PATH)));
+        resultSet.setAffectedByUris(this, uris);
     }
 
     private void update(Component component) {
