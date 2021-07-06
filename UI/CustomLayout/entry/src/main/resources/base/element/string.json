@@ -1,0 +1,72 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "CustomLayout"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Custom Layout Example"
+    },
+    {
+      "name": "size01",
+      "value": "1080 * 200"
+    },
+    {
+      "name": "size02",
+      "value": "500 * 100"
+    },
+    {
+      "name": "size03",
+      "value": "600 * 600"
+    },
+    {
+      "name": "item2",
+      "value": "Item2"
+    },
+    {
+      "name": "item3",
+      "value": "Item3"
+    },
+    {
+      "name": "item4",
+      "value": "Item4"
+    },
+    {
+      "name": "item5",
+      "value": "Item5"
+    },
+    {
+      "name": "item7",
+      "value": "Item7"
+    },
+    {
+      "name": "item9",
+      "value": "Item9"
+    },
+    {
+      "name": "item10",
+      "value": "Item10"
+    },
+    {
+      "name": "item11",
+      "value": "Item11"
+    },
+    {
+      "name": "item12",
+      "value": "Item12"
+    },
+    {
+      "name": "item13",
+      "value": "Item13"
+    },
+    {
+      "name": "item14",
+      "value": "Item14"
+    },
+    {
+      "name": "item15",
+      "value": "Item15"
+    }
+  ]
+}

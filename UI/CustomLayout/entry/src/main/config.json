@@ -1,0 +1,46 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.customlayout",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.customlayout",
+    "name": ".MyApplication",
+    "reqCapabilities": [
+      "video_support"
+    ],
+    "deviceType": [
+      "default"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "ohos.samples.customlayout.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
