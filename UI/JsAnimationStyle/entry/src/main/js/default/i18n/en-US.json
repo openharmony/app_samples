@@ -1,0 +1,35 @@
+{
+  "strings": {
+    "animationstyle": "Animation style",
+    "translate": "Translate",
+    "rotate": "Rotate",
+    "scale": "Scale",
+    "compositeAnimation": "CompositeAnimation",
+
+    "gradientstyle": "Gradient style",
+    "default": "The default gradient direction is from top to bottom",
+    "angle": "45 degree angle gradient",
+    "right": "Set the direction to right to gradient from left to right",
+    "repeat":"Gradient from left to right, repeat the gradient",
+
+    "transitionstyle": "Transition style",
+    "element": "Shared Element",
+    "card": "Card transition",
+    "customtransition": "Custom transition",
+    "customtarget": "customtarget",
+    "remove": "MAIN TITLE",
+    "detail": "this is detail",
+    "sharedjump": "Jump to shared target page",
+    "sharedpaget": "This is shared target page",
+
+    "customfontstyle": "Custom font style",
+    "txt_default": "txt_default",
+    "txt_bold": "txt_bold",
+    "txt_extraLight": "txt_extraLight",
+    "txt_heavy": "txt_Heavy",
+    "txt_medium": "txt_Medium",
+    "txt_normal": "txt_Normal",
+    "txt_regular": "txt_Regular",
+    "clickback": "click back"
+  }
+}
