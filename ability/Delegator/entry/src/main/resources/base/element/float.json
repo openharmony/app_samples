@@ -1,0 +1,20 @@
+{
+  "float": [
+    {
+      "name": "top_margin",
+      "value": "20vp"
+    },
+    {
+      "name": "text_size",
+      "value": "20fp"
+    },
+    {
+      "name": "right_padding",
+      "value": "15vp"
+    },
+    {
+      "name": "left_padding",
+      "value": "15vp"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Delegator"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "firstability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "secondability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "hint_message",
+      "value": "Input Your Message"
+    },
+    {
+      "name": "start_ability",
+      "value": "startAbility"
+    },
+    {
+      "name": "start_ability_for_result",
+      "value": "startAbilityForResult"
+    },
+    {
+      "name": "set_result",
+      "value": "setResult"
+    },
+    {
+      "name": "first_text",
+      "value": "This is FirstAbilitySlice"
+    },
+    {
+      "name": "second_text",
+      "value": "This is SecondAbilitySlice"
+    }
+  ]
+}
