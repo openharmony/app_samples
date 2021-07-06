@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Compass"
+    },
+    {
+      "name": "ability_description",
+      "value": "hap sample empty page"
+    }
+  ]
+}
