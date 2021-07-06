@@ -1,0 +1,25 @@
+{
+  "pattern": [
+    {
+      "name": "button_base",
+      "value": [
+        {
+          "name": "left_padding",
+          "value": "24vp"
+        },
+        {
+          "name": "padding",
+          "value": "10vp"
+        },
+        {
+          "name": "top_margin",
+          "value": "10vp"
+        },
+        {
+          "name": "text_size",
+          "value": "18fp"
+        }
+      ]
+    }
+  ]
+}
