@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "前台服务"
+    },
+    {
+      "name": "start_play",
+      "value": "开始播放"
+    },
+    {
+      "name": "pause_play",
+      "value": "暂停播放"
+    },
+    {
+      "name": "stop_play",
+      "value": "停止播放"
+    },
+    {
+      "name": "resume_play",
+      "value": "恢复播放"
+    }
+  ]
+}
