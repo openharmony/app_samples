@@ -2,4 +2,3 @@
 
 -   This sample demonstrates how to obtain the battery information of a device, including the battery level, health status, charger type, and charging status.
 -   Licensing
-
