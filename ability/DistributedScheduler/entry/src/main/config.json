@@ -14,7 +14,8 @@
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "default",
+      "tablet"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -46,7 +47,10 @@
       {
         "name": ".RemoteAbility",
         "type": "service",
-        "visible": true
+        "visible": true,
+        "permissions": [
+          "ohos.permission.DISTRIBUTED_SCHEDULER_REMOTE_SERVICE"
+        ]
       },
       {
         "name": ".PageAbility",
@@ -71,6 +75,14 @@
       },
       {
         "name": "ohos.permission.DISTRIBUTED_DEVICE_STATE_CHANGE"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_SCHEDULER_REMOTE_SERVICE"
+      }
+    ],
+    "defPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_SCHEDULER_REMOTE_SERVICE"
       }
     ]
   }
