@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "CustomLayout"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Custom Layout Example"
+    }
+  ]
+}
