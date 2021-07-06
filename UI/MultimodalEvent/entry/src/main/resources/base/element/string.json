@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "MultimodalEvent"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "key_text",
+      "value": "Please Press Key"
+    },
+    {
+      "name": "media_text",
+      "value": "Sound Player"
+    },
+    {
+      "name": "system_text",
+      "value": "Please Close Page"
+    },
+    {
+      "name": "common_enter_text",
+      "value": "Please Press Enter Key"
+    },
+    {
+      "name": "sound_player",
+      "value": "Sound Player"
+    },
+    {
+      "name": "please_play",
+      "value": "Please Play"
+    },
+    {
+      "name": "touch_event_handle",
+      "value": "TouchEventHandle"
+    },
+    {
+      "name": "key_event_handle",
+      "value": "KeyEventHandle"
+    },
+    {
+      "name": "common_event_handle",
+      "value": "CommonEventHandle"
+    },
+    {
+      "name": "media_event_handle",
+      "value": "MediaEventHandle"
+    },
+    {
+      "name": "system_event_handle",
+      "value": "SystemEventHandle"
+    },
+    {
+      "name": "telephone_event_handle",
+      "value": "TelephoneEventHandle"
+    },
+    {
+      "name": "touch_event",
+      "value": "TouchEvent"
+    }
+  ]
+}
