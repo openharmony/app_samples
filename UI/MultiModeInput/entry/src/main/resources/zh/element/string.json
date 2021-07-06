@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "多模输入"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "key_text",
+      "value": "请按音量键"
+    },
+    {
+      "name": "touch_event",
+      "value": "触摸事件"
+    },
+    {
+      "name": "key_event",
+      "value": "按键事件"
+    },
+    {
+      "name": "mouse_event",
+      "value": "鼠标事件"
+    },
+    {
+      "name": "speech_event",
+      "value": "语音事件"
+    },
+    {
+      "name": "touch_button",
+      "value": "按钮"
+    },
+    {
+      "name": "mouse_button",
+      "value": "鼠标左键点击"
+    },
+    {
+      "name": "speech_button",
+      "value": "按钮"
+    }
+  ]
+}
