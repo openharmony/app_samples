@@ -1,0 +1,51 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.fraction",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.fraction",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.fraction.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "ohos.samples.fraction.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "icon": "$media:icon",
+        "name": "ohos.samples.fraction.NextAbility",
+        "description": "",
+        "type": "page"
+      }
+    ]
+  }
+}

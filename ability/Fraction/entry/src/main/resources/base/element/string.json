@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Fraction"
+    },
+    {
+      "name": "mainability_description",
+      "value": "FractionAbility"
+    },
+    {
+      "name": "push_into_stack",
+      "value": "Push into Stack"
+    },
+    {
+      "name": "pop_from_stack",
+      "value": "Pop from Stack"
+    },
+    {
+      "name": "hide_fraction",
+      "value": "Hide Fraction"
+    },
+    {
+      "name": "show_fraction",
+      "value": "Show Fraction"
+    },
+    {
+      "name": "replace_fraction",
+      "value": "Replace Fraction"
+    },
+    {
+      "name": "next_page",
+      "value": "Next Page"
+    }
+  ]
+}

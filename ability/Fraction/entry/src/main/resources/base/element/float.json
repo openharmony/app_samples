@@ -1,0 +1,44 @@
+{
+  "float": [
+    {
+      "name": "button_height",
+      "value": "40vp"
+    },
+    {
+      "name": "button_width",
+      "value": "280vp"
+    },
+    {
+      "name": "button_margin",
+      "value": "10vp"
+    },
+    {
+      "name": "button_text_size",
+      "value": "18fp"
+    },
+    {
+      "name": "dialog_padding",
+      "value": "20vp"
+    },
+    {
+      "name": "dialog_content_padding",
+      "value": "10vp"
+    },
+    {
+      "name": "title_text_size",
+      "value": "18fp"
+    },
+    {
+      "name": "content_text_size",
+      "value": "16fp"
+    },
+    {
+      "name": "dialog_button_height",
+      "value": "40vp"
+    },
+    {
+      "name": "dialog_check_box_size",
+      "value": "20vp"
+    }
+  ]
+}
