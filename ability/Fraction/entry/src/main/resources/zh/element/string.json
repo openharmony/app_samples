@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Fraction"
+    },
+    {
+      "name": "mainability_description",
+      "value": "FractionAbility"
+    },
+    {
+      "name": "push_into_stack",
+      "value": "入栈Fraction"
+    },
+    {
+      "name": "pop_from_stack",
+      "value": "出栈Fraction"
+    },
+    {
+      "name": "hide_fraction",
+      "value": "隐藏Fraction"
+    },
+    {
+      "name": "show_fraction",
+      "value": "显示Fraction"
+    },
+    {
+      "name": "replace_fraction",
+      "value": "替换Fraction"
+    },
+    {
+      "name": "next_page",
+      "value": "下一页"
+    }
+  ]
+}
