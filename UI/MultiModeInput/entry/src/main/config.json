@@ -1,0 +1,65 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.multimodeinput",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.multimodeinput",
+    "name": ".MyApplication",
+    "deviceType": [
+      "default"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "ohos.samples.multimodeinput.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.MULTIMODAL_INTERACTIVE",
+        "reason": "",
+        "usedScene": {
+          "ability": [
+            ".MainAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_EXTERNAL_STORAGE",
+        "reason": "",
+        "usedScene": {
+          "ability": [
+            ".MainAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]
+  }
+}
