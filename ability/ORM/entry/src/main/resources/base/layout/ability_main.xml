@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:log_text"
+        ohos:height="300vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:text_background"
+        ohos:multiple_lines="true"
+        ohos:padding="10vp"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        ohos:top_margin="20vp"
+        ohos:bottom_margin="10vp"
+        ohos:scrollable="true"
+        ohos:text_alignment="top"
+        ohos:text_size="20fp"
+        />
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        >
+
+        <Button
+            ohos:id="$+id:insert_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:text="$string:insert"
+            ohos:weight="1"
+            />
+
+        <Button
+            ohos:id="$+id:update_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:left_margin="20vp"
+            ohos:text="$string:update"
+            ohos:weight="1"
+            />
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        >
+
+        <Button
+            ohos:id="$+id:delete_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:text="$string:delete"
+            ohos:weight="1"
+            />
+
+        <Button
+            ohos:id="$+id:query_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:left_margin="20vp"
+            ohos:text="$string:query"
+            ohos:weight="1"
+            />
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        >
+
+    <Button
+        ohos:id="$+id:upgrade_button"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:upgrade"
+        />
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        >
+
+        <Button
+            ohos:id="$+id:backupDB_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:text="$string:backupDB"
+            ohos:weight="1"
+            />
+
+        <Button
+            ohos:id="$+id:deleteDB_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:left_margin="20vp"
+            ohos:text="$string:deleteDB"
+            ohos:weight="1"
+            />
+
+        <Button
+            ohos:id="$+id:restoreDB_button"
+            ohos:height="$float:button_height"
+            ohos:width="0"
+            ohos:theme="$pattern:button_blue"
+            ohos:left_margin="20vp"
+            ohos:text="$string:restoreDB"
+            ohos:weight="1"
+            />
+    </DirectionalLayout>
+
+</DirectionalLayout>

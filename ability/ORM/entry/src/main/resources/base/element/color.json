@@ -1,0 +1,16 @@
+{
+  "color": [
+    {
+      "name": "color_button_blue_empty",
+      "value": "#0000FF"
+    },
+    {
+      "name": "color_button_blue_pressed",
+      "value": "#0000CC"
+    },
+    {
+      "name": "color_button_blue_text",
+      "value": "#FFFFFF"
+    }
+    ]
+}
