@@ -10,9 +10,8 @@ This sample shows how to use the AbilityDelegator to perform operations on the U
 
 The procedure for using this sample is as follows:
 
-1.  Open this project in DevEco Studio.
-2.  Select an emulator \([instructions](https://developer.harmonyos.com/en/docs/documentation/doc-guides/run_simulator-0000001053303709)\) or connect to a real device \([instructions](https://developer.harmonyos.com/en/docs/documentation/doc-guides/run_phone_tablat-0000001064774652)\).
-3.  Select the  **MainAbilitySliceTest.java**  file in the  **ohosTest**  directory and run the file.
+1.  Select an emulator \([instructions](https://developer.harmonyos.com/en/docs/documentation/doc-guides/run_simulator-0000001053303709)\) or connect to a real device \([instructions](https://developer.harmonyos.com/en/docs/documentation/doc-guides/run_phone_tablat-0000001064774652)\).
+2.  Select the  **MainAbilitySliceTest.java**  file in the  **ohosTest**  directory and run the file.
 
 ##### Constraints<a name="section1651164910564"></a>
 
