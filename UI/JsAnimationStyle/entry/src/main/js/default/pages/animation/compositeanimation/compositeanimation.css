@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.composite_style {
+    font-size: 20px;
+    text-align: center;
+    text-color: black;
+    background-color: #f76160;
+    width: 100px;
+    height: 100px;
+    animation-name:compositeAnimation ;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes compositeAnimation
+{
+    from {
+        background-color: #f76160;
+        transform:translate(100px,100px) rotate(0deg) scale(1.0);
+    }
+    to {
+        background-color: #09ba07;
+        transform:translate(200px,200px) rotate(180deg) scale(1.5);
+    }
+}

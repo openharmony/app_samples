@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.demo-default{
+    font-size: 20px;
+}
+
+.demo-bold {
+    font-family: font_bold;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_bold;
+    src: url("/common/style/SourceHanSansSC-Bold.otf");
+}
+
+.demo-extraLight {
+    font-family: font_extraLight;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_extraLight;
+    src: url("/common/style/SourceHanSansSC-ExtraLight.otf");
+}
+
+.demo-heavy {
+    font-family: font_heavy;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_heavy;
+    src: url("/common/style/SourceHanSansSC-Heavy.otf");
+}
+
+.demo-medium {
+    font-family: font_medium;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_medium;
+    src: url("/common/style/SourceHanSansSC-Medium.otf");
+}
+
+.demo-normal {
+    font-family: font_normal;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_normal;
+    src: url("/common/style/SourceHanSansSC-Normal.otf");
+}
+
+.demo-regular {
+    font-family: font_regular;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@font-face{
+    font-family: font_regular;
+    src: url("/common/style/SourceHanSansSC-Regular.otf");
+}
