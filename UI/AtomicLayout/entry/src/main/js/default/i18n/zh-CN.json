@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "hide_capabilities": "隐藏能力",
+    "percentage": "占比能力",
+    "fixed_scale": "固定比例",
+
+    "displaystyle": "显示",
+    "hidestyle": "隐藏",
+
+    "refresh": "刷新",
+    "return": "重置"
+  }
+}

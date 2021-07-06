@@ -1,0 +1,61 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.atomiclayout",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.atomiclayout",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.atomiclayout.MainAbility",
+    "deviceType": [
+      "phone",
+      "tv",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": ".MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/hide/index",
+          "pages/percentage/index",
+          "pages/fixed/index"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}
