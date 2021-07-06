@@ -99,7 +99,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private void initComponents() {
         Component choiceDeviceButton = findComponentById(ResourceTable.Id_choice_device);
-        choiceDeviceButton.setClickedListener(component -> choiceDevice());
+        choiceDeviceButton.setClickedListener(component -> selectDevice());
 
         Component startRemoteFAButton = findComponentById(ResourceTable.Id_start_fa_button);
         startRemoteFAButton.setClickedListener(component -> startRemoteFA());
@@ -132,16 +132,14 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     private void disConnectAbility() {
         disconnectAbility(connection);
         try {
-            DeviceManager.unInitDistributedEnvironment(selectDeviceId,iInitCallback);
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
+            DeviceManager.unInitDistributedEnvironment(selectDeviceId, iInitCallback);
+        } catch (RemoteException | IllegalArgumentException e) {
             HiLog.info(LABEL_LOG, e.getMessage());
         }
         remoteAgentProxy = null;
     }
 
-    private void choiceDevice() {
+    private void selectDevice() {
         List<DeviceInfo> infoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
         if ((infoList == null) || (infoList.size() == 0)) {
             selectDeviceId = null;

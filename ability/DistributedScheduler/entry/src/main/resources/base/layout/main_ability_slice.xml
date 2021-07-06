@@ -28,7 +28,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="choiceDevice"
+        ohos:text="selectDevice"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
