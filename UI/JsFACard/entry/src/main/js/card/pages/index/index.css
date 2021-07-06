@@ -1,0 +1,79 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-div {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 8% 15px;
+    min-height: 126px;
+    max-height: 150px;
+    display-index: 2;
+}
+
+.main-image {
+    width: 126px;
+    aspect-ratio: 1;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display-index: 2;
+}
+
+.right-div {
+    flex-direction: column;
+    margin: 13% 0px 0px;
+    display-index: 1;
+    width: 154px;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.bottom-div {
+    flex-direction: column;
+    display-index: 1;
+    height: 100px;
+    padding-start: 12px;
+    padding-end: 12px;
+}
+
+.image-div {
+    justify-content: space-between;
+}
+
+.check-image {
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+.music-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.singer-text {
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: normal;
+    margin-bottom: 24px;
+}

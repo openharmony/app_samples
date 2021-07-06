@@ -1,0 +1,13 @@
+{
+  "data": {},
+  "actions": {
+    "activeEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.jsfacard",
+      "abilityName": "ohos.samples.jsfacard.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}
