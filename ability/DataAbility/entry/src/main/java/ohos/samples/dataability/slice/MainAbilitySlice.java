@@ -15,11 +15,7 @@
 
 package ohos.samples.dataability.slice;
 
-import ohos.app.dispatcher.TaskDispatcher;
 import ohos.app.dispatcher.task.TaskPriority;
-import ohos.data.rdb.DataObserverAsyncWrapper;
-import ohos.eventhandler.EventHandler;
-import ohos.eventhandler.EventRunner;
 import ohos.samples.dataability.ResourceTable;
 import ohos.samples.dataability.utils.Const;
 
@@ -48,7 +44,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * MainAbilitySlice
@@ -62,13 +57,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private DataAbilityHelper databaseHelper;
 
-    private ResultSet resultSet;
-
-    private final DataObserverAsyncWrapper dataObserverAsyncWrapper = new DataObserverAsyncWrapper(() ->
-            getUITaskDispatcher().syncDispatch(() ->
-                    HiLog.info(LABEL_LOG, "resultSet change")), new EventHandler(EventRunner.create()));
-
-    private final IDataAbilityObserver dataAbilityObserver = () -> {
+    private IDataAbilityObserver dataAbilityObserver = () -> {
         HiLog.info(LABEL_LOG, "%{public}s", "database change");
         query(true);
     };
@@ -79,15 +68,6 @@ public class MainAbilitySlice extends AbilitySlice {
         super.setUIContent(ResourceTable.Layout_main_ability_slice);
         initComponents();
         initDatabaseHelper();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        databaseHelper.unregisterObserver(Uri.parse(Const.BASE_URI), dataAbilityObserver);
-        if (resultSet != null) {
-            resultSet.unregisterObserver(dataObserverAsyncWrapper);
-        }
     }
 
     private void initComponents() {
@@ -173,7 +153,7 @@ public class MainAbilitySlice extends AbilitySlice {
                     predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
                 }
                 try {
-                    resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
+                    ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
                             predicates);
                     appendText(resultSet);
                 } catch (DataAbilityRemoteException | IllegalStateException exception) {
@@ -208,16 +188,8 @@ public class MainAbilitySlice extends AbilitySlice {
             public void run() {
                 logText.setText("");
                 logText.setText(appendStr.toString());
-                registerResultSetObserver();
             }
         });
-    }
-
-    private void registerResultSetObserver() {
-        resultSet.registerObserver(dataObserverAsyncWrapper);
-        List<Uri> uris = new ArrayList<>();
-        uris.add(Uri.parse((Const.BASE_URI + Const.DATA_PATH)));
-        resultSet.setAffectedByUris(this, uris);
     }
 
     private void update(Component component) {
