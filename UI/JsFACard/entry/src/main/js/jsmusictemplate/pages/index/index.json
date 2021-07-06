@@ -1,0 +1,13 @@
+{
+  "data": {
+    "status": "play"
+  },
+  "actions": {
+    "messageEvent": {
+      "action": "message",
+      "params": {
+        "message": "music change status"
+      }
+    }
+  }
+}
