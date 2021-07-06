@@ -1,0 +1,140 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.jsfacard",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.jsfacard",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.jsfacard.MainAbility",
+    "deviceType": [
+      "default"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "ohos.samples.jsfacard.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "formsEnabled": true,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "forms": [
+          {
+            "jsComponentName": "jsmusictemplate",
+            "isDefault": true,
+            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*4",
+            "name": "jsmusictemplate",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*4"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          },
+          {
+            "jsComponentName": "card",
+            "isDefault": false,
+            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*4",
+            "name": "card",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*4"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          },
+          {
+            "jsComponentName": "jscardtemplate",
+            "isDefault": false,
+            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "4*4",
+            "name": "jscardtemplate",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "4*4"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ],
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      },
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "card",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        },
+        "type": "form"
+      },
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "jscardtemplate",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        },
+        "type": "form"
+      },
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "jsmusictemplate",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        },
+        "type": "form"
+      }
+    ]
+  }
+}
