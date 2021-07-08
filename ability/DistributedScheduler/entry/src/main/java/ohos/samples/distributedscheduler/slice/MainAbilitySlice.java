@@ -35,7 +35,6 @@ import ohos.agp.components.Text;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.Context;
 import ohos.bundle.ElementName;
-import ohos.distributedschedule.interwork.DeviceManager;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import ohos.eventhandler.InnerEvent;
@@ -145,11 +144,6 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private void disConnectAbility() {
         disconnectAbility(connection);
-        try {
-            DeviceManager.unInitDistributedEnvironment(selectedDeviceId, iInitCallback);
-        } catch (RemoteException | IllegalArgumentException e) {
-            HiLog.info(LABEL_LOG, e.getMessage());
-        }
         remoteAgentProxy = null;
     }
 
@@ -166,22 +160,12 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
         @Override
-        public void onDeviceConnectDone(String s, String s1) {
+        public void onDeviceConnectDone(String deviceId, String message) {
             selectedDeviceId = s;
-            try {
-                DeviceManager.initDistributedEnvironment(selectedDeviceId, iInitCallback);
-            } catch (RemoteException e) {
-                HiLog.info(LABEL_LOG, "RemoteException happen");
-            }
         }
 
         @Override
         public void onDeviceDisconnectDone(String s) {
-            try {
-                DeviceManager.unInitDistributedEnvironment(selectedDeviceId, iInitCallback);
-            } catch (RemoteException | IllegalArgumentException e) {
-                HiLog.info(LABEL_LOG, e.getMessage());
-            }
         }
     };
 
