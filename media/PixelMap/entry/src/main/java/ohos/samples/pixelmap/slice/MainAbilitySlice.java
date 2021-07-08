@@ -114,6 +114,8 @@ public class MainAbilitySlice extends AbilitySlice {
         decodingOpts.desiredRegion = new Rect(0, 0, 300, 150);
         PixelMap pixelMap = imageSource.createPixelmap(decodingOpts);
         showSecondImage.setPixelMap(pixelMap);
+        imageSource.release();
+        pixelMapNoOptions.release();
     }
 
     private void regionDecode(Component component) {
@@ -136,12 +138,14 @@ public class MainAbilitySlice extends AbilitySlice {
                     ImageSource.DecodingOptions decodingOpts2 = new ImageSource.DecodingOptions();
                     PixelMap pixelmap = imageSource.createPixelmap(decodingOpts2);
                     showSecondImage.setPixelMap(pixelmap);
+                    pixelmap.release();
                 }
                 len = resource.read(cache);
             }
         } catch (IOException e) {
             HiLog.info(LABEL_LOG, "%{public}s", "regionDecode IOException ");
         }
+        imageSource.release();
     }
 
     private void encode(Component component) {
@@ -156,9 +160,12 @@ public class MainAbilitySlice extends AbilitySlice {
             boolean result = imagePacker.addImage(pixelMap);
             showResultText.setText(
                 "Encode result : " + result + System.lineSeparator() + "OutputFilePath：" + encodeOutPath);
+            imageSource.release();
+            pixelMap.release();
         } catch (IOException e) {
             HiLog.info(LABEL_LOG, "%{public}s", "encode IOException ");
         }
+        imagePacker.release();
     }
 
     private void attribute(Component component) {
@@ -174,6 +181,8 @@ public class MainAbilitySlice extends AbilitySlice {
         HiLog.info(LABEL_LOG, "%{public}s", "imageExif location : " + location);
         showResultText.setText("ImageSource attribute : createThumbnailPixelMap");
         showSecondImage.setPixelMap(thumbnailPixelMap);
+        imageSource.release();
+        thumbnailPixelMap.release();
     }
 
     private void edit(Component component) {
@@ -212,6 +221,8 @@ public class MainAbilitySlice extends AbilitySlice {
             "This pixelMap detail info :" + System.lineSeparator() + "capacity = " + capacity + System.lineSeparator()
                 + "bytesNumber = " + bytesNumber + System.lineSeparator() + "rowBytes = " + rowBytes
                 + System.lineSeparator() + "ninePatchData = " + ninePatchData + System.lineSeparator());
+        pixelMap.release();
+        pixelMap2.release();
     }
 
     private void cleanComponents() {
