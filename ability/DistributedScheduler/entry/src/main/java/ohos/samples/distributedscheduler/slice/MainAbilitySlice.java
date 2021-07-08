@@ -161,7 +161,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
         @Override
         public void onDeviceConnectDone(String deviceId, String message) {
-            selectedDeviceId = s;
+            selectedDeviceId = deviceId;
         }
 
         @Override
