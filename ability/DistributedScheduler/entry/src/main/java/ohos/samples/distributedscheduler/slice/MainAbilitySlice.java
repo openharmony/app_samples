@@ -15,8 +15,11 @@
 
 package ohos.samples.distributedscheduler.slice;
 
-import ohos.agp.window.dialog.IDialog;
-import ohos.agp.window.dialog.ListDialog;
+import ohos.aafwk.ability.continuation.ExtraParams;
+import ohos.aafwk.ability.continuation.ContinuationDeviceInfo;
+import ohos.aafwk.ability.continuation.IContinuationDeviceCallback;
+import ohos.aafwk.ability.continuation.IContinuationRegisterManager;
+import ohos.aafwk.ability.continuation.RequestCallback;
 import ohos.distributedschedule.interwork.IInitCallback;
 import ohos.samples.distributedscheduler.MainAbility;
 import ohos.samples.distributedscheduler.RemoteAgentProxy;
@@ -33,8 +36,6 @@ import ohos.agp.components.Text;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.Context;
 import ohos.bundle.ElementName;
-import ohos.distributedschedule.interwork.DeviceInfo;
-import ohos.distributedschedule.interwork.DeviceManager;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import ohos.eventhandler.InnerEvent;
@@ -42,10 +43,6 @@ import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
 import ohos.rpc.RemoteException;
-
-import java.util.List;
-
-import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 /**
  * MainAbilitySlice
@@ -66,13 +63,17 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private static final String REMOTE_SERVICE_FA = "ohos.samples.distributedscheduler.PageAbility";
 
+    private IContinuationRegisterManager continuationRegisterManager;
+
+    private int abilityToken;
+
     private Text text;
 
     private String param;
 
-    private  String selectedDeviceId;
+    private String selectedDeviceId;
 
-    private  RemoteAgentProxy remoteAgentProxy = null;
+    private RemoteAgentProxy remoteAgentProxy = null;
 
     private EventHandler eventHandler = new EventHandler(EventRunner.current()) {
         @Override
@@ -94,7 +95,20 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ohos.samples.distributedscheduler.ResourceTable.Layout_main_ability_slice);
+        initContinuationRegisterManager();
         initComponents();
+    }
+
+    private void initContinuationRegisterManager() {
+        continuationRegisterManager = getContinuationRegisterManager();
+        ExtraParams params = new ExtraParams();
+        String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
+        params.setDevType(devTypes);
+        params.setTargetBundleName(REMOTE_BUNDLE);
+        String jsonParams = "{\"filter\":{\"commonFilter\":{\"groupType\":\"1|256\"}}," +
+        "\"isTurnOffRecommend\":true,\"transferScene\":0}";
+        params.setJsonParams(jsonParams);
+        continuationRegisterManager.register(REMOTE_BUNDLE, params, callback, requestCallback);
     }
 
     private void initComponents() {
@@ -131,42 +145,45 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private void disConnectAbility() {
         disconnectAbility(connection);
-        try {
-            DeviceManager.unInitDistributedEnvironment(selectedDeviceId, iInitCallback);
-        } catch (RemoteException | IllegalArgumentException e) {
-            HiLog.info(LABEL_LOG, e.getMessage());
-        }
         remoteAgentProxy = null;
     }
 
     private void selectDevice() {
-        List<DeviceInfo> infoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
-        if ((infoList == null) || (infoList.size() == 0)) {
-            selectedDeviceId = null;
-        }
-        String[] items = new String[infoList.size()];
-        int i = 0;
-        for (DeviceInfo info : infoList) {
-            items[i] = info.getDeviceType() + ", " + info.getDeviceName();
-            i++;
-        }
-        ListDialog listDialog = new ListDialog(getContext());
-        listDialog.setItems(items);
-        listDialog.setTitleText("Choice a device");
-        listDialog.setSize(DIALOG_WIDTH, MATCH_CONTENT);
-        listDialog.setAutoClosable(true);
-        listDialog.setOnSingleSelectListener((IDialog dailog, int position) -> {
-            selectedDeviceId = infoList.get(position).getDeviceId();
-            try {
-                HiLog.info(LABEL_LOG, "initDistributedEnvironmentClick begin ");
-                DeviceManager.initDistributedEnvironment(selectedDeviceId, iInitCallback);
-                dailog.destroy();
-            } catch (RemoteException e) {
-                HiLog.info(LABEL_LOG, "RemoteException happen");
-            }
-        });
-        listDialog.show();
+        ExtraParams params = new ExtraParams();
+        String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
+        params.setDevType(devTypes);
+        params.setTargetBundleName(REMOTE_BUNDLE);
+        String jsonParams = "{\"filter\":{\"commonFilter\":{\"groupType\":\"1|256\"}}," +
+        "\"isTurnOffRecommend\":true,\"transferScene\":0}";
+        params.setJsonParams(jsonParams);
+        continuationRegisterManager.showDeviceList(abilityToken, params, null);
     }
+
+    private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
+        @Override
+        public void onConnected(ContinuationDeviceInfo deviceInfo) {
+            selectedDeviceId = deviceInfo.getDeviceId();
+        }
+        @Override
+        public void onDisconnected(String deviceId) {
+            selectedDeviceId = "";
+        }
+
+        @Override
+        public void onDeviceConnectDone(String deviceId, String deviceType) {
+        }
+
+        @Override
+        public void onDeviceDisconnectDone(String deviceId) {
+        }
+    };
+
+    private RequestCallback requestCallback = new RequestCallback() {
+        @Override
+        public void onResult(int result) {
+            abilityToken = result;
+        }
+    };
 
     private IInitCallback iInitCallback = new IInitCallback() {
         @Override
@@ -284,5 +301,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     public void onStop() {
         super.onStop();
         remoteAgentProxy = null;
+        continuationRegisterManager.unregister(abilityToken, null);
+        continuationRegisterManager.disconnect();
     }
 }
