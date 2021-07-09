@@ -16,6 +16,7 @@
 package ohos.samples.distributedscheduler.slice;
 
 import ohos.aafwk.ability.continuation.ExtraParams;
+import ohos.aafwk.ability.continuation.ContinuationDeviceInfo;
 import ohos.aafwk.ability.continuation.IContinuationDeviceCallback;
 import ohos.aafwk.ability.continuation.IContinuationRegisterManager;
 import ohos.aafwk.ability.continuation.RequestCallback;
@@ -160,12 +161,20 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
         @Override
-        public void onDeviceConnectDone(String deviceId, String message) {
-            selectedDeviceId = deviceId;
+        public void onConnected(ContinuationDeviceInfo deviceInfo) {
+            selectedDeviceId = deviceInfo.getDeviceId();
+        }
+        @Override
+        public void onDisconnected(String deviceId) {
+            selectedDeviceId = "";
         }
 
         @Override
-        public void onDeviceDisconnectDone(String s) {
+        public void onDeviceConnectDone(String deviceId, String deviceType) {
+        }
+
+        @Override
+        public void onDeviceDisconnectDone(String deviceId) {
         }
     };
 
