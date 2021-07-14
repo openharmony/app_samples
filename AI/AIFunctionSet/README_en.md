@@ -25,8 +25,3 @@
     \* Entity recognition: Extracts entities with specific meanings from natural languages and performs related operations \(such as searching\) based on the extracted entities.
 
     \* Automatic speech recognition \(ASR\): Converts audio files and real-time audio data streams into Chinese character sequences at a recognition accuracy of over 90% \(95% for local recognition\).
-
--   Licensing
-
-For details, see the LICENSE.
-
