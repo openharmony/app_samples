@@ -53,7 +53,6 @@ public class MainAbility extends Ability {
 
     private void startByName() {
         Intent intent = new Intent();
-        intent.setAction(ACTION_START);
         Operation operation = new Intent.OperationBuilder().withDeviceId("")
             .withBundleName("ohos.samples.secondapp")
             .withAbilityName("ohos.samples.secondapp.MainAbility")
