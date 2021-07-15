@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "弹出窗口"
+    },
+    {
+      "name": "mainability_description",
+      "value": "JS_Empty Ability"
+    }
+  ]
+}
