@@ -83,9 +83,9 @@ public class PreferencesInternalAbility extends AceInternalAbility {
     /**
      * Business execution
      *
-     * @param code   Request Code.
-     * @param data   Receives MessageParcel object.
-     * @param reply  The MessageParcel object is returned.
+     * @param code Request Code.
+     * @param data Receives MessageParcel object.
+     * @param reply The MessageParcel object is returned.
      * @param option Indicates whether the operation is synchronous or asynchronous.
      * @return If the operation is successful, true is returned. Otherwise, false is returned.
      */
