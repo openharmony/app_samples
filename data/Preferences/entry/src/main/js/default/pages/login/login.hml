@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <image class="img" src="/common/login.png"></image>
+    <input class="input-text" placeholder="{{ $t('Strings.user_name') }}" maxlength="10" onchange="updateUserID">
+    </input>
+    <input type="password" class="input-text" placeholder="{{ $t('Strings.password') }}" maxlength="10"
+           onchange="updatePassword"></input>
+    <button class="btn" value="{{ $t('Strings.login') }}" onclick="login"></button>
+</div>
