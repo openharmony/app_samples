@@ -1,0 +1,34 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container" style="backgroundColor : {{ appliedColor }}">
+
+    <div class="list-container">
+        <list class="list">
+            <list-item type="listItem" for="{{ colorsList }}" class="list-item"
+                       onclick="selectColor({{ $item.backgroundcolor }})">
+                <text style="color : {{ $item.textColor }}">{{ $item.colorName }}</text>
+            </list-item>
+        </list>
+    </div>
+
+    <div class="btn-container">
+        <text class="btn" onclick="applyBackgroundColor">{{ $t('Strings.apply_background_color') }}</text>
+    </div>
+    <div class="btn-container">
+        <text class="btn" onclick="clearPreferences">{{ $t('Strings.clear_preferences') }}</text>
+    </div>
+
+</div>
