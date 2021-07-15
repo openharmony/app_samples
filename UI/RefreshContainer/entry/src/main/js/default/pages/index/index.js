@@ -15,7 +15,7 @@
 
 export default {
     data: {
-        list_item: [
+        listItem: [
             {
                 title: " "
             },
@@ -37,16 +37,16 @@ export default {
         if ("end" == refreshing.state) {
             for (var index = 0; index < 2; index++) {
                 var item = {
-                    title: this.$t('strings.title') + (this.list_item.length + 1)
+                    title: this.$t('strings.title') + (this.listItem.length + 1)
                 }
-                this.list_item.splice(0, 0, item)
+                this.listItem.splice(0, 0, item)
             }
         }
     },
     initData: function (params) {
-        var index = this.list_item.length
-        for (let todolistKey in this.list_item) {
-            this.list_item[todolistKey].title = this.$t('strings.title') + index
+        var index = this.listItem.length
+        for (let todolistKey in this.listItem) {
+            this.listItem[todolistKey].title = this.$t('strings.title') + index
             index--
         }
     }
