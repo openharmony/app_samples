@@ -1,0 +1,17 @@
+{
+  "Strings": {
+    "login_screen_uri": "pages/login/login",
+    "main_screen_uri": "pages/main/main",
+    "no_show_again": "Don't show again",
+    "user_name": "User Name",
+    "password": "Password",
+    "login": "Login",
+    "apply_background_color": "Apply Background Color",
+    "clear_preferences": "Clear Preferences",
+    "red": "Red",
+    "green": "Green",
+    "blue": "Blue",
+    "pink": "Pink",
+    "orange": "Orange"
+  }
+}

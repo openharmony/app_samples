@@ -1,8 +1,0 @@
-{
-  "Strings": {
-    "login_screen_uri" : "pages/login/login",
-    "main_screen_uri" : "pages/main/main"
-  },
-  "Files": {
-  }
-}
