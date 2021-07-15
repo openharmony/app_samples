@@ -14,11 +14,11 @@
  -->
 
 <div class="container">
- <refresh offset="20px" type="pulldown" friction="66" @pulldown="refreshData" class="loading">
-  <list scrolleffect="no">
-   <list-item for="{{ list_item }}" class="todo-item">
-    <text class="todo-title">{{ $item.title }}</text>
-   </list-item>
-  </list>
- </refresh>
+    <refresh offset="20px" type="pulldown" friction="66" @pulldown="refreshData" class="loading">
+        <list scrolleffect="no">
+            <list-item for="{{ list_item }}" class="todo-item">
+                <text class="todo-title">{{ $item.title }}</text>
+            </list-item>
+        </list>
+    </refresh>
 </div>
