@@ -1,0 +1,17 @@
+{
+  "Strings": {
+    "login_screen_uri": "pages/login/login",
+    "main_screen_uri": "pages/main/main",
+    "no_show_again": "不再显示",
+    "user_name": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "apply_background_color": "应用背景色",
+    "clear_preferences": "清除偏好设置",
+    "red": "红色",
+    "green": "绿色",
+    "blue": "蓝色",
+    "pink": "粉红色",
+    "orange": "橙色"
+  }
+}
