@@ -46,9 +46,9 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
 
     private static final String KEY_PLAY_STATE = "main_ability_slice_play_state";
 
-    private static final String URI1 = "resources/rawfile/Technology.mp3";
+    private static final String URI1 = "resources/rawfile/Technology.wav";
 
-    private static final String URI2 = "resources/rawfile/Homey.mp3";
+    private static final String URI2 = "resources/rawfile/Homey.wav";
 
     private String[] musics = {URI1, URI2};
 
