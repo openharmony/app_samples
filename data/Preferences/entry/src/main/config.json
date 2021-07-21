@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.preferences",
-    "name": ".Preferences",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -36,7 +36,7 @@
         ],
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.preferences.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

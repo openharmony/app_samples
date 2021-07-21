@@ -14,7 +14,7 @@
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -24,7 +24,7 @@
     },
     "abilities": [
       {
-        "name": "ohos.samples.permissionapp.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "label": "$string:app_name",
         "orientation": "portrait",

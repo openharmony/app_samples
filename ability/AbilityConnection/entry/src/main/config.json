@@ -9,12 +9,12 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.backgrounddownload",
-    "name": ".BackgroundDownload",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -37,7 +37,7 @@
         "orientation": "portrait",
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.backgrounddownload.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
@@ -45,7 +45,7 @@
         "launchType": "standard"
       },
       {
-        "name": "ohos.samples.backgrounddownload.DownloadServiceAbility",
+        "name": ".DownloadServiceAbility",
         "type": "service",
         "visible": true,
         "backgroundModes": [
@@ -57,7 +57,7 @@
         "orientation": "portrait",
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.backgrounddownload.AnotherAbility",
+        "name": ".AnotherAbility",
         "icon": "$media:icon",
         "description": "$string:anotherability_description",
         "type": "page",
