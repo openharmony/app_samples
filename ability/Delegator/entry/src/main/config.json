@@ -11,7 +11,7 @@
     "package": "ohos.samples.delegator",
     "name": ".MyApplication",
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -32,7 +32,7 @@
           }
         ],
         "orientation": "unspecified",
-        "name": "ohos.samples.delegator.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
@@ -41,7 +41,7 @@
       },
       {
         "orientation": "unspecified",
-        "name": "ohos.samples.delegator.FirstAbility",
+        "name": ".FirstAbility",
         "icon": "$media:icon",
         "description": "$string:firstability_description",
         "label": "$string:app_name",
@@ -50,7 +50,7 @@
       },
       {
         "orientation": "unspecified",
-        "name": "ohos.samples.delegator.SecondAbility",
+        "name": ".SecondAbility",
         "icon": "$media:icon",
         "description": "$string:secondability_description",
         "label": "$string:app_name",
