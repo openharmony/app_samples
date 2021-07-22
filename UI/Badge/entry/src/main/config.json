@@ -9,10 +9,10 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.badge",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "mainAbility": "ohos.samples.badge.MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -32,7 +32,7 @@
             ]
           }
         ],
-        "name": "ohos.samples.badge.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

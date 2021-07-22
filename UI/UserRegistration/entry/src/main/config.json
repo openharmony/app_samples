@@ -9,12 +9,12 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.userregistration",
-    "name": ".UserRegistration",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -36,7 +36,7 @@
         ],
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.userregistration.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

@@ -9,12 +9,12 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.customlayout",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -34,7 +34,7 @@
             ]
           }
         ],
-        "name": "ohos.samples.customlayout.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:entry_MainAbility",
