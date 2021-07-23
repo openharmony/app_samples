@@ -9,13 +9,13 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.audioplayer",
-    "name": ".AudioPlayer",
+    "name": ".AVPlayClient",
     "reqCapabilities": [
       "video_support"
     ],
     "metaData": {},
     "deviceType": [
-      "default",
+      "phone",
       "tv"
     ],
     "distro": {

@@ -11,12 +11,13 @@
     "package": "ohos.samples.foregroundservice",
     "name": ".MyApplication",
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
       "moduleName": "entry",
-      "moduleType": "entry"
+      "moduleType": "entry",
+      "installationFree": false
     },
     "abilities": [
       {
@@ -31,7 +32,7 @@
           }
         ],
         "orientation": "portrait",
-        "name": "ohos.samples.foregroundservice.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
@@ -39,7 +40,7 @@
         "launchType": "standard"
       },
       {
-        "name": "ohos.samples.foregroundservice.ServiceAbility",
+        "name": ".ServiceAbility",
         "icon": "$media:icon",
         "description": "$string:serviceability_description",
         "type": "service",

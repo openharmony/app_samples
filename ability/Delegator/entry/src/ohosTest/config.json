@@ -11,7 +11,7 @@
     "package": "ohos.samples.delegator",
     "name": "testModule",
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -21,7 +21,7 @@
     },
     "abilities": [
       {
-        "name": "decc.testkit.runner.EntryAbility",
+        "name": ".EntryAbility",
         "description": "Test Entry Ability",
         "icon": "$media:icon",
         "label": "$string:app_name",

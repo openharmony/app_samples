@@ -9,7 +9,7 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.pasteboard.paste",
-    "name": ".paste",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
@@ -37,7 +37,7 @@
         "orientation": "portrait",
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.pasteboard.paste.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

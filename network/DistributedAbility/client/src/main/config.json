@@ -14,7 +14,7 @@
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
