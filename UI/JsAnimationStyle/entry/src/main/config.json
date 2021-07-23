@@ -9,10 +9,10 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.jsanimationstyle",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "mainAbility": "ohos.samples.jsanimationstyle.MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -32,7 +32,7 @@
             ]
           }
         ],
-        "name": "ohos.samples.jsanimationstyle.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

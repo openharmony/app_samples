@@ -40,7 +40,6 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 3;
-    display: flex;
     justify-content: space-between;
     align-content: flex-start;
 }
