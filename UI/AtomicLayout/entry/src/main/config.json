@@ -9,12 +9,10 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.atomiclayout",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "mainAbility": "ohos.samples.atomiclayout.MainAbility",
     "deviceType": [
-      "phone",
-      "tv",
-      "wearable"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,

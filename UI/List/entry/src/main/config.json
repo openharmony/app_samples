@@ -9,12 +9,12 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.listcontainer",
-    "name": ".ListContainerSample",
+    "name": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -37,7 +37,7 @@
         "orientation": "portrait",
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.listcontainer.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

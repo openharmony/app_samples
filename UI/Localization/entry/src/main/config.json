@@ -9,12 +9,12 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.timezone",
-    "name": ".TimeZone",
+    "name": ".TimeZoneAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -37,7 +37,7 @@
         "orientation": "portrait",
         "visible": true,
         "formsEnabled": false,
-        "name": "ohos.samples.timezone.TimeZoneAbility",
+        "name": ".TimeZoneAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",

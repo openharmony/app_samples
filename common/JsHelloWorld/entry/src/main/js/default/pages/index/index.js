@@ -14,7 +14,6 @@
  */
 
 import router from '@system.router'
-import app from '@system.app'
 
 export default {
     data: {
@@ -27,14 +26,6 @@ export default {
         router.replace({
             uri: "pages/second/second"
         })
-    },
-    touchMove(e) {
-        if (e.direction == "right") {
-            this.appExit();
-        }
-    },
-    appExit() {
-        app.terminate()
     }
 }
 

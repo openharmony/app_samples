@@ -9,10 +9,10 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.jsfacard",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "mainAbility": "ohos.samples.jsfacard.MainAbility",
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -32,7 +32,7 @@
             ]
           }
         ],
-        "name": "ohos.samples.jsfacard.MainAbility",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "formsEnabled": true,
