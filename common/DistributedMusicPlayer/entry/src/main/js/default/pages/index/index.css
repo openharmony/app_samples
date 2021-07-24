@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url('common/media/bg_blurry.png');
+    background-image: url(common/media/bg_blurry.png);
     background-size: cover;
     background-position: center center;
     padding-start: 64px;
