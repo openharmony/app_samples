@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt';
 import deviceManager from '@ohos.distributedHardware.deviceManager';
 
 var SUBSCRIBE_ID = 100;
@@ -103,10 +102,6 @@ export default class RemoteDeviceModel {
         });
         this.#deviceManager.on('deviceFound', (data) => {
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound data=' + JSON.stringify(data));
-            prompt.showToast({
-                message: 'deviceFound device=' + JSON.stringify(data.device),
-                duration: 3000,
-            });
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound self.deviceList=' + self.deviceList);
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound self.deviceList.length=' + self.deviceList.length);
             for (var i = 0; i < self.deviceList.length; i++) {
@@ -120,24 +115,12 @@ export default class RemoteDeviceModel {
             self.#deviceManager.authenticateDevice(data.device);
         });
         this.#deviceManager.on('discoverFail', (data) => {
-            prompt.showToast({
-                message: 'discoverFail reason=' + data.reason,
-                duration: 3000,
-            });
             console.info('MusicPlayer[RemoteDeviceModel] discoverFail data=' + JSON.stringify(data));
         });
         this.#deviceManager.on('authResult', (data) => {
-            prompt.showToast({
-                message: 'authResult data=' + JSON.stringify(data),
-                duration: 3000,
-            });
             console.info('MusicPlayer[RemoteDeviceModel] authResult data=' + JSON.stringify(data));
         });
         this.#deviceManager.on('serviceDie', () => {
-            prompt.showToast({
-                message: 'serviceDie',
-                duration: 3000,
-            });
             console.error('MusicPlayer[RemoteDeviceModel] serviceDie');
         });
 
