@@ -48,6 +48,7 @@ export default {
         playerModel: new PlayerModel(),
         kvStoreModel: new KvStoreModel(),
         isDialogShowing: false,
+        isSwitching: false,
     },
     onInit() {
         console.info('MusicPlayer[IndexPage] onInit');
@@ -144,31 +145,48 @@ export default {
         }
     },
     onPreviousClick() {
+        if (this.isSwitching) {
+            console.info('MusicPlayer[IndexPage] onPreviousClick ignored, isSwitching');
+            return;
+        }
         console.info('MusicPlayer[IndexPage] onPreviousClick');
         this.playerModel.index--;
         if (this.playerModel.index < 0 && this.playerModel.playlist.audioFiles.length >= 1) {
             this.playerModel.index = this.playerModel.playlist.audioFiles.length - 1;
         }
         this.currentProgress = 0;
+        this.isSwitching = true;
         let self = this;
         this.playerModel.preLoad(this.playerModel.index, () => {
-            self.refreshSongInfo(this.playerModel.index);
+            self.refreshSongInfo(self.playerModel.index);
             self.playerModel.play(0, true);
+            self.isSwitching = false;
         });
     },
     onNextClick() {
+        if (this.isSwitching) {
+            console.info('MusicPlayer[IndexPage] onNextClick ignored, isSwitching');
+            return;
+        }
         console.info('MusicPlayer[IndexPage] onNextClick');
         this.playerModel.index++;
         if (this.playerModel.index >= this.playerModel.playlist.audioFiles.length) {
             this.playerModel.index = 0;
         }
         this.currentProgress = 0;
+        this.isSwitching = true;
+        let self = this;
         this.playerModel.preLoad(this.playerModel.index, () => {
-            this.refreshSongInfo(this.playerModel.index);
-            this.playerModel.play(0, true);
+            self.refreshSongInfo(self.playerModel.index);
+            self.playerModel.play(0, true);
+            self.isSwitching = false;
         });
     },
     onPlayClick() {
+        if (this.isSwitching) {
+            console.info('MusicPlayer[IndexPage] onPlayClick ignored, isSwitching');
+            return;
+        }
         console.info('MusicPlayer[IndexPage] onPlayClick, isPlaying=' + this.playerModel.isPlaying);
         if (this.playerModel.isPlaying) {
             this.playerModel.pause();

@@ -107,6 +107,10 @@ export default class PlayerModel {
         };
         let self = this;
         console.info('MusicPlayer[PlayerModel] getAudioAssets begin');
+        self.playlist = new Playlist();
+        self.playlist.audioFiles = [];
+        self.playlist.audioFiles[0] = new Song('dynamic.wav', 'file://system/etc/dynamic.wav', 0);
+        self.playlist.audioFiles[1] = new Song('demo.wav', 'file://system/etc/demo.wav', 0);
         helper.getAudioAssets(args, (error, value) => {
             console.info('MusicPlayer[PlayerModel] getAudioAssets callback entered');
             if (error) {
@@ -116,13 +120,12 @@ export default class PlayerModel {
                 console.info('MusicPlayer[PlayerModel] getAudioAssets, There are no images in ' + args.selections + ' folder');
             } else if (value != undefined) {
                 console.info('MusicPlayer[PlayerModel] getAudioAssets result.length = ' + value.length);
-                self.playlist = new Playlist();
-                self.playlist.audioFiles = [];
+                var beginIndex = self.playlist.audioFiles.length;
                 for (var i = 0; i < value.length; i++) {
-                    self.playlist.audioFiles[i] = new Song();
-                    self.playlist.audioFiles[i].name = value[i].name;
-                    self.playlist.audioFiles[i].fileUri = 'file:/' + value[i].URI;
-                    self.playlist.audioFiles[i].duration = 0;
+                    self.playlist.audioFiles[beginIndex + i] = new Song();
+                    self.playlist.audioFiles[beginIndex + i].name = value[i].name;
+                    self.playlist.audioFiles[beginIndex + i].fileUri = 'file:/' + value[i].URI;
+                    self.playlist.audioFiles[beginIndex + i].duration = 0;
                     console.info('MusicPlayer[PlayerModel] getAudioAssets result ' + i + ', name=' + self.playlist.audioFiles[i].name + ',URI=' + self.playlist.audioFiles[i].fileUri);
                 }
             }
