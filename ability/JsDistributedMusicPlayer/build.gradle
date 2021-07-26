@@ -17,26 +17,6 @@
 apply plugin: 'com.huawei.ohos.app'
 
 ohos {
-    signingConfigs {
-        debug {
-            storeFile file('D:\\SDK\\keystore\\l2_music\\music.p12')
-            storePassword '0000001A01D1E7BF4767A571A1E709D9AF7791BEF626627B3CEC8183FCA371B75351D34A02C658223AC9'
-            keyAlias = 'music'
-            keyPassword '0000001A5596D33D438EF1D689C81AE223A719D88CFC1BD33710C8673502D01681230A5EBE7DFE207C91'
-            signAlg = 'SHA256withECDSA'
-            profile file('D:\\SDK\\keystore\\l2_music\\SgnedReleasedProfileTemplate.p7b')
-            certpath file('D:\\SDK\\keystore\\l2_music\\IDE.cer')
-        }
-        release {
-            storeFile file('D:\\SDK\\keystore\\l2_music\\music.p12')
-            storePassword '0000001A7907E5881CD2287A3B3C9E14BD78AEE6C6C421DC0EC6A83EC3D406C5F2D5048343E6402E934B'
-            keyAlias = 'music'
-            keyPassword '0000001A0BC5C8284B8243EB4A9C77BD1C7556E80BB215F65B2E46797C7665E0CBBBDCB1DA7F5EA6016C'
-            signAlg = 'SHA256withECDSA'
-            profile file('D:\\SDK\\keystore\\l2_music\\SgnedReleasedProfileTemplate.p7b')
-            certpath file('D:\\SDK\\keystore\\l2_music\\IDE.cer')
-        }
-    }
     compileSdkVersion 6
     defaultConfig {
         compatibleSdkVersion 6
