@@ -22,6 +22,7 @@ We provide a series of app samples to help you quickly get familiar with the API
 3.  The following app samples can run on OpenHarmony, and other app samples can run only on HarmonyOS:
     -   common/Clock
     -   common/JsHelloWorld
+    -   ability/JsDistributedMusicPlayer
 
 
 ## Repositories Involved<a name="section741114082513"></a>

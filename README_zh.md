@@ -22,6 +22,7 @@
 3.  以下路径下的应用示例支持在OpenHarmony上运行，其余应用示例仅支持在HarmonyOS上运行。
     -   common/Clock
     -   common/JsHelloWorld
+    -   ability/JsDistributedMusicPlayer
 
 
 ## 相关仓<a name="section741114082513"></a>
