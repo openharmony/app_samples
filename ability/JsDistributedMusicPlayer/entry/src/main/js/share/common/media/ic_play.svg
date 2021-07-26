@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 193 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_play</title>
+    <g id="music" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="music1" transform="translate(-790.000000, -2628.000000)">
+            <g id="icon_play" transform="translate(790.000000, 2628.000000)">
+                <circle id="椭圆形" fill="#123430" opacity="0.601531982" transform="translate(96.500000, 96.500000) scale(-1, 1) translate(-96.500000, -96.500000) " cx="96.5" cy="96.5" r="96.5"></circle>
+                <path d="M111.384451,74.241922 L132.867221,111.345063 C135.209728,115.390834 133.802251,120.554216 129.723534,122.8778 C128.432856,123.61308 126.970447,124 125.48205,124 L82.51651,124 C77.8129714,124 74,120.217829 74,115.552285 C74,114.07591 74.3900708,112.625315 75.1313384,111.345063 L96.6141086,74.241922 C98.956615,70.1961514 104.162046,68.8000437 108.240764,71.1236282 C109.548516,71.868635 110.633378,72.9447336 111.384451,74.241922 Z" fill="#FFFFFF" fill-rule="nonzero" transform="translate(104.000000, 97.000000) rotate(90.000000) translate(-104.000000, -97.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
