@@ -25,6 +25,7 @@ import ohos.data.orm.OrmContext;
 import ohos.data.orm.OrmMigration;
 import ohos.data.orm.OrmObjectObserver;
 import ohos.data.orm.OrmPredicates;
+import ohos.data.preferences.Preferences;
 import ohos.data.rdb.RdbStore;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
@@ -35,6 +36,7 @@ import ohos.samples.orm.model.User;
 import ohos.samples.orm.model.UserUpgrade;
 import ohos.samples.orm.model.BookUpgrade;
 
+import java.io.File;
 import java.security.SecureRandom;
 import java.util.List;
 
@@ -51,6 +53,8 @@ public class OrmContextSlice extends AbilitySlice {
     private DatabaseHelper helper;
 
     private Component upgradeButton;
+
+    private Preferences preferences;
 
     @Override
     protected void onStart(Intent intent) {
@@ -175,6 +179,11 @@ public class OrmContextSlice extends AbilitySlice {
 
     private void restore(Component component) {
         OrmContext ormContext = helper.getOrmContext("OrmTestDB", "OrmTestDB.db", BookStore.class);
+        File file = new File(getDatabaseDir() + "/backup/OrmTestDBBackup.db");
+        if (!file.exists()) {
+            logText.setText("restore the database first");
+            return;
+        }
         if (ormContext.restore("OrmTestDBBackup.db")) {
             logText.setText("restoreDB success");
         } else {
@@ -204,9 +213,22 @@ public class OrmContextSlice extends AbilitySlice {
         ormContext.close();
     }
 
+    private Preferences getPreferences() {
+        if (preferences == null) {
+            DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+            preferences = databaseHelper.getPreferences("app_preference.xml");
+        }
+        return preferences;
+    }
+
     private void upgrade(Component component) {
         logText.setText("");
-        testOrmMigration();
+        String isUpgrade = getPreferences().getString("upgrade", "fail");
+        if (isUpgrade.equals("success")) {
+            logText.setText("upgraded");
+        } else {
+            testOrmMigration();
+        }
     }
 
     /**
@@ -223,21 +245,21 @@ public class OrmContextSlice extends AbilitySlice {
         userUpgrade.setAge(41);
         userUpgrade.setBalance(3.44);
         boolean isSuccess = context.insert(userUpgrade);
-        HiLog.info(LABEL_LOG,"UserUpgrade insert " + isSuccess);
+        HiLog.info(LABEL_LOG, "UserUpgrade insert " + isSuccess);
         BookUpgrade bookUpgrade = new BookUpgrade();
         bookUpgrade.setId(101);
         bookUpgrade.setAddColumn12(8);
         bookUpgrade.setName("OrmTestDBBook");
         isSuccess = context.insert(bookUpgrade);
-        HiLog.info(LABEL_LOG,"BookUpgrade insert " + isSuccess);
+        HiLog.info(LABEL_LOG, "BookUpgrade insert " + isSuccess);
         context.flush();
         OrmPredicates predicates = context.where(BookUpgrade.class).equalTo("name", "OrmTestDBBook");
         List<BookUpgrade> bookUpgradeList = context.query(predicates);
         int id = bookUpgradeList.get(0).getId();
-        HiLog.info(LABEL_LOG,"bookUpgradeList.get(0).getId() =" + id);
+        HiLog.info(LABEL_LOG, "bookUpgradeList.get(0).getId() =" + id);
         context.close();
-        upgradeButton.setClickable(false);
         logText.setText("upgrade success");
+        getPreferences().putString("upgrade", "success");
     }
 
     private static class TestOrmMigration12 extends OrmMigration {
@@ -276,7 +298,6 @@ public class OrmContextSlice extends AbilitySlice {
         @Override
         public void onMigrate(RdbStore store) {
             HiLog.info(LABEL_LOG, "DataBase Version 2->3 onMigrate called");
-            store.executeSql("ALTER TABLE `Book` RENAME TO `BookUpgrade`");
         }
     }
 
