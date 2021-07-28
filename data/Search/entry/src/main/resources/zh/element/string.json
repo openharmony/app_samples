@@ -1,0 +1,72 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "搜索"
+    },
+    {
+      "name": "mainability_description",
+      "value": "搜索界面"
+    },
+    {
+      "name": "result",
+      "value": "结果:"
+    },
+    {
+      "name": "btn_build_index_forms",
+      "value": "构造定位索引"
+    },
+    {
+      "name": "btn_read_index_forms",
+      "value": "读取索引"
+    },
+    {
+      "name": "btn_insert_index_data",
+      "value": "插入定位数据"
+    },
+    {
+      "name": "btn_update_index_data",
+      "value": "更新定位数据"
+    },
+    {
+      "name": "btn_delete_indexdata",
+      "value": "删除索引数据"
+    },
+    {
+      "name": "btn_delete_indexdata_by_query",
+      "value": "通过查询语句删除索引数据"
+    },
+    {
+      "name": "btn_get_search_hint_count",
+      "value": "获取查询索引条数"
+    },
+    {
+      "name": "btn_search_by_group",
+      "value": "分组搜索"
+    },
+    {
+      "name": "btn_search_by_page",
+      "value": "分页搜索"
+    },
+    {
+      "name": "connect_service_succeed",
+      "value": "连接服务成功"
+    },
+    {
+      "name": "connect_service_failed",
+      "value": "连接服务失败"
+    },
+    {
+      "name": "succeed",
+      "value": "成功"
+    },
+    {
+      "name": "failed",
+      "value": "失败"
+    },
+    {
+      "name": "doing",
+      "value": "正在进行..."
+    }
+  ]
+}
