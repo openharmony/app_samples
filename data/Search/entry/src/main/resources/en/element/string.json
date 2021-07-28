@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "search"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Search Ability"
+    },
+    {
+      "name": "result",
+      "value": "result:"
+    },
+    {
+      "name": "btn_build_index_forms",
+      "value": "build location indexForm"
+    },
+    {
+      "name": "btn_read_index_forms",
+      "value": "read indexForm"
+    },
+    {
+      "name": "btn_insert_index_data",
+      "value": "insert indexData"
+    },
+    {
+      "name": "btn_update_index_data",
+      "value": "update indexData"
+    },
+    {
+      "name": "btn_delete_indexdata",
+      "value": "delete indexData"
+    },
+    {
+      "name": "btn_delete_indexdata_by_query",
+      "value": "delete indexData by query"
+    },
+    {
+      "name": "btn_get_search_hint_count",
+      "value": "get search hint count"
+    },
+    {
+      "name": "btn_search_by_group",
+      "value": "search by group"
+    },
+    {
+      "name": "btn_search_by_page",
+      "value": "search by page"
+    },
+    {
+      "name": "connect_service_succeed",
+      "value": "connect service succeed"
+    },
+    {
+      "name": "connect_service_failed",
+      "value": "connect service failed"
+    },
+    {
+      "name": "succeed",
+      "value": "succeed"
+    },
+    {
+      "name": "failed",
+      "value": "failed"
+    }
+  ]
+}

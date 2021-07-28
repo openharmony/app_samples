@@ -1,0 +1,58 @@
+{
+  "pattern": [
+    {
+      "name": "button_blue",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "18fp"
+        },
+        {
+          "name": "margin",
+          "value": "5vp"
+        },
+        {
+          "name": "background_element",
+          "value": "$graphic:button_blue"
+        },
+        {
+          "name": "text_color",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "name": "content_text",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "17fp"
+        },
+        {
+          "name": "text_color",
+          "value": "#000000"
+        },
+        {
+          "name": "background_element",
+          "value": "#F0F0F0"
+        },
+        {
+          "name": "multiple_lines",
+          "value": "true"
+        },
+        {
+          "name": "padding",
+          "value": "5vp"
+        },
+        {
+          "name": "margin",
+          "value": "5vp"
+        },
+        {
+          "name": "text_alignment",
+          "value": "start"
+        }
+      ]
+    }
+  ]
+}

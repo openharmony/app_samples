@@ -1,0 +1,12 @@
+{
+  "float": [
+    {
+      "name": "layout_padding",
+      "value": "10vp"
+    },
+    {
+      "name": "button_height",
+      "value": "40vp"
+    }
+  ]
+}
