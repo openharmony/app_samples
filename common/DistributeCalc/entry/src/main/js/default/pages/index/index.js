@@ -148,16 +148,7 @@ export default {
     },
 
     stopDataListener(){
-        console.log("Calc[IndexPage] stopDataListener start");
-//        if(kvStore == null) {
-//            console.log("Calc[IndexPage] stopDataListener kvStore is null");
-//            return;
-//        }
-          //TODO:need function off
-//        kvStore.off('dataChange', function(){
-//            console.log("Calc[IndexPage] stopDataListener success");
-//        });
-        console.log("Calc[IndexPage] stopDataListener end");
+        console.log("Calc[IndexPage] stopDataListener");
     },
     onDestroy(){
         this.remoteDeviceModel.unregisterDeviceListCallback();
