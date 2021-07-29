@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:padding="$float:layout_padding">
+    <Button
+        ohos:id="$+id:btnBuildIndexForms"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_build_index_forms"/>
+    <Button
+        ohos:id="$+id:btnReadIndexForms"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_read_index_forms"/>
+    <Button
+        ohos:id="$+id:btnInsertIndexData"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_insert_index_data"/>
+    <Button
+        ohos:id="$+id:btnUpdateIndexData"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_update_index_data"/>
+    <Button
+        ohos:id="$+id:btnDeleteIndexData"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_delete_indexdata"/>
+    <Button
+        ohos:id="$+id:btnDeleteIndexDataByQuery"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_delete_indexdata_by_query"/>
+    <Button
+        ohos:id="$+id:btnGetHitCount"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_get_search_hint_count"/>
+    <Button
+        ohos:id="$+id:btnSearchByGroup"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_search_by_group"/>
+    <Button
+        ohos:id="$+id:btnSearchByPage"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:btn_search_by_page"/>
+    <Text
+        ohos:id="$+id:searchResult"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:content_text"
+        ohos:text="$string:result"
+        ohos:scrollable="true"
+        ohos:text_alignment="start"/>
+</DirectionalLayout>

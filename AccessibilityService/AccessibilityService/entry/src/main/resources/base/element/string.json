@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "AccessibleAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "AccessibleAbility"
+    },
+    {
+      "name": "accessibility_service_description",
+      "value": "accessibleService"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "string_button_perform_click",
+      "value": "Click,back to home"
+    },
+    {
+      "name": "string_button_accessibility_settings_click",
+      "value": "goto AccessibilitySettings"
+    },
+    {
+      "name": "Tips1",
+      "value": "Go Settings-Accessibility features-Accessbility-Installed services,enable AccessibleAbility,then back to this application."
+    },
+    {
+      "name": "Tips2",
+      "value": "After turning on the accessibility service switch:\n1. There will be a prompt when you listen to the application interface\n2. Click the button to perform the home button operation\n3. The volume key operation of the system key event interface will execute the text scroll up and down to select"
+    },
+    {
+      "name": "string_button_key_press_event",
+      "value": "KeyPressEventPage"
+    },
+    {
+      "name": "key_event_tips",
+      "value": "Press the volume up button to scroll up, press the volume down button to scroll down."
+    },
+    {
+      "name": "text_content",
+      "value": "This is a text content."
+    }
+  ]
+}

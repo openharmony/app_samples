@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical"
+    ohos:background_element="$graphic:background_ability_main"
+    ohos:padding="$float:layout_padding">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text_size="18fp"
+        ohos:text_color="#FF0000"
+        ohos:text="$string:Tips1"
+        ohos:multiple_lines="true"/>
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text_size="18fp"
+        ohos:text_color="#0000FF"
+        ohos:text="$string:Tips2"
+        ohos:multiple_lines="true"
+        ohos:top_margin="20vp"/>
+
+    <Button
+        ohos:id="$+id:perform_button"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:text="$string:string_button_perform_click"
+        ohos:theme="$pattern:button_blue"/>
+
+    <Button
+        ohos:id="$+id:keyPressEvent_button"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:text="$string:string_button_key_press_event"
+        ohos:theme="$pattern:button_blue"/>
+</DirectionalLayout>

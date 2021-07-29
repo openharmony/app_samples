@@ -1,0 +1,28 @@
+{
+  "float": [
+    {
+      "name": "layout_padding",
+      "value": "20vp"
+    },
+    {
+      "name": "button_height",
+      "value": "40vp"
+    },
+    {
+      "name": "button_text_size",
+      "value": "18fp"
+    },
+    {
+      "name": "tips_text_size",
+      "value": "17fp"
+    },
+    {
+      "name": "content_text_size",
+      "value": "18fp"
+    },
+    {
+      "name": "layout_margin",
+      "value": "20vp"
+    }
+  ]
+}
