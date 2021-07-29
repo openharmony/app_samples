@@ -117,7 +117,7 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
     private void continueAbility(Component component) {
         try {
             continueAbility();
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalStateException e) {
             LogUtil.info(TAG, e.getMessage());
         }
     }
