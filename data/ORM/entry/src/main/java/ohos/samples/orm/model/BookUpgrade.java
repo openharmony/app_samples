@@ -28,9 +28,8 @@ import static ohos.data.orm.annotation.ForeignKey.CASCADE;
  *
  * @since 2021-06-15
  */
-@Entity(tableName = "BookUpgrade", foreignKeys = {
-        @ForeignKey(name = "BookUser", parentEntity = UserUpgrade.class,
-                parentColumns = "userId", childColumns = "user_id",
+@Entity(tableName = "Book", foreignKeys = {
+        @ForeignKey(name = "BookUser", parentEntity = UserUpgrade.class, parentColumns = "userId", childColumns = "user_id",
                 onDelete = CASCADE)})
 public class BookUpgrade extends OrmObject {
     @PrimaryKey(autoGenerate = true)
