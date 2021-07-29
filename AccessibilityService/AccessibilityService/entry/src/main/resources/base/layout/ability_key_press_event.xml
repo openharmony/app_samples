@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:padding="$float:layout_padding">
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text_color="$ohos:color:id_color_alert_dark"
+        ohos:text_size="$float:tips_text_size"
+        ohos:multiple_lines="true"
+        ohos:text="$string:key_event_tips"/>
+    <TabList
+        ohos:id="$+id:tabList"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$ohos:color:fa_sub_background"
+        ohos:padding="$float:layout_padding"
+        ohos:top_margin="$float:layout_margin"
+        ohos:selected_text_color="$ohos:color:id_color_alert"
+        ohos:normal_text_color="$ohos:color:id_color_text_primary"
+        ohos:text_size="$float:content_text_size"
+        ohos:orientation="vertical"/>
+</DirectionalLayout>
