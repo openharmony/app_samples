@@ -12,6 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ 
 import {calc, isOperator} from '../../common/calculator.js';
 import app from '@system.app';
 import distributedDataKit from '@ohos.data.distributedData';
@@ -116,14 +117,7 @@ export default {
         console.log('Calc[CalcPage] get kv manager end');
     },
     stopDataListener(){
-        console.log("Calc[CalcPage] stopDataListener start");
-//        if(kvStore == null) {
-//            return;
-//        }
-//        kvStore.off('dataChange', function(){
-//            console.log("Calc[CalcPage] stopDataListener success");
-//        });
-        console.log("Calc[CalcPage] stopDataListener end");
+        console.log("Calc[CalcPage] stopDataListener");
     },
     onShow(){
         console.log("Calc[CalcPage] on show");
