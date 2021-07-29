@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "chat": "Chat",
+    "contacts": "Contacts",
+    "dynamic": "Dynamic",
+    "message": "Message content",
+    "signature": "Individuality signature",
+    "search": "Search",
+    "found": "Found",
+    "event": "Hot Event",
+    "scan": "Scan",
+    "game": "Game"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "chat": "聊天",
+    "contacts": "联系人",
+    "dynamic": "动态",
+    "message": "消息内容",
+    "signature": "个性签名",
+    "search": "搜索...",
+    "found": "发现",
+    "event": "热点",
+    "scan": "扫一扫",
+    "game": "游戏"
+  }
+}
