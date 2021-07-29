@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "one": "This is the first step",
+    "two": "This is the second step ",
+    "three": "This is the three step ",
+    "four": "This is the last step",
+    "hello": "Welcome to my world",
+    "skip": "Skip subsequent steps",
+    "skipping": "SKIP",
+    "reset": "RESET"
+  }
+}
