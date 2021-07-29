@@ -27,28 +27,28 @@
     justify-content: center;
 }
 
-.box_green {
+.box-green {
     width: 55%;
     height: 300px;
     margin-top: 75px;
     background-color: #DAF7A6;
 }
 
-.box_yellow {
+.box-yellow {
     width: 70%;
     height: 350px;
     margin-top: 50px;
     background-color:  #FFC300;
 }
 
-.box_origin {
+.box-origin {
     width: 85%;
     height: 400px;
     margin-top: 25px;
     background-color: #FF5733;
 }
 
-.box_red {
+.box-red {
     width: 100%;
     height: 450px;
     background-color: #C70039;
