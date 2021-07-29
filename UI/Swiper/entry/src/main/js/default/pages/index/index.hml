@@ -16,13 +16,13 @@
 <div class="container">
     <swiper class="swiper" id="swiper" index="0" duration="2000" autoplay="false" loop="true" indicator="true">
         <div class="swiperContent">
-            <image src="common/images/5.jpg" class="image"></image>
+            <image src="common/images/1.jpg" class="image"></image>
         </div>
         <div class="swiperContent">
-            <image src="common/images/6.jpg" class="image"></image>
+            <image src="common/images/2.jpg" class="image"></image>
         </div>
         <div class="swiperContent">
-            <image src="common/images/10.jpg" class="image"></image>
+            <image src="common/images/3.jpg" class="image"></image>
         </div>
     </swiper>
     <div class="divbutton">
