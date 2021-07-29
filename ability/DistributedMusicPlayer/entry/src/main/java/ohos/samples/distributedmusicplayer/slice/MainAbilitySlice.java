@@ -15,6 +15,7 @@
 
 package ohos.samples.distributedmusicplayer.slice;
 
+import ohos.hiviewdfx.HiLog;
 import ohos.samples.distributedmusicplayer.ResourceTable;
 import ohos.samples.distributedmusicplayer.utils.LogUtil;
 import ohos.samples.distributedmusicplayer.utils.PlayerManager;
@@ -105,12 +106,20 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
         musicPosters = (Image) findComponentById(ResourceTable.Id_music_posters);
 
         musicPlayButton = (Image) findComponentById(ResourceTable.Id_music_play_btn);
-        findComponentById(ResourceTable.Id_remote_play).setClickedListener(component -> continueAbility());
+        findComponentById(ResourceTable.Id_remote_play).setClickedListener(this::continueAbility);
         findComponentById(ResourceTable.Id_music_play_prev_btn).setClickedListener(this::prevMusic);
         findComponentById(ResourceTable.Id_music_play_next_btn).setClickedListener(this::nextMusic);
 
         musicPlayButton.setClickedListener(this::playOrPauseMusic);
         slider.setValueChangedListener(new ValueChangedListenerImpl());
+    }
+
+    private void continueAbility(Component component) {
+        try {
+            continueAbility();
+        } catch (IllegalArgumentException e) {
+            LogUtil.info(TAG, e.getMessage());
+        }
     }
 
     private void updateUI() {
