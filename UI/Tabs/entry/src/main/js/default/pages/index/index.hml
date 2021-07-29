@@ -1,0 +1,109 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+  <tabs class = "tabs" index="0" vertical="false" onchange="change">
+    <tab-content class="tab-content" scrollable="true">
+      <div class="item-content" >
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image1.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title" >{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.message') }}</text>
+          </div>
+        </div>
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image2.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title">{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.message') }}</text>
+          </div>
+        </div>
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image3.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title">{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.message') }}</text>
+          </div>
+        </div>
+      </div>
+      <div class="item-content" >
+        <div class="search">
+          <search hint="{{$t('strings.search')}}"></search>
+        </div>
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image1.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title">{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.signature') }}</text>
+          </div>
+        </div>
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image2.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title">{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.signature') }}</text>
+          </div>
+        </div>
+        <div class="chat-item">
+          <image class="img" src="/common/images/Image3.jpg"/>
+          <div class="chat-content">
+            <text class="chat-title">{{$t('strings.contacts')}}</text>
+            <text class="chat-text" >{{ $t('strings.signature') }}</text>
+          </div>
+        </div>
+      </div>
+      <div class="item-content" >
+        <div class="dynamic-item">
+          <image class="dynamic-icons" src="/common/images/ic_shortcut_discover.png"/>
+          <text class="dynamic-text">{{$t('strings.found')}}</text>
+        </div>
+        <div class="dynamic-item">
+          <image class="dynamic-icons" src="/common/images/ic_hot.png"/>
+          <text class="dynamic-text">{{$t('strings.event')}}</text>
+        </div>
+        <div class="dynamic-item">
+          <image class="dynamic-icons" src="/common/images/ic_scan.png"/>
+          <text class="dynamic-text">{{$t('strings.scan')}}</text>
+
+        </div>
+        <div class="dynamic-item">
+          <image class="dynamic-icons" src="/common/images/ic_game.png"/>
+          <text class="dynamic-text">{{$t('strings.game')}}</text>
+        </div>
+      </div>
+    </tab-content>
+    <tab-bar class="tab-bar" mode="fixed">
+      <div class="menu">
+        <div class="icons">
+          <image src="{{chat}}" class="icon"></image>
+        </div>
+        <text class="tab-text">{{$t('strings.chat')}}</text>
+      </div>
+      <div class="menu">
+        <div class="icons">
+          <image src="{{contacts}}" class="icon"></image>
+        </div>
+        <text class="tab-text">{{$t('strings.contacts')}}</text>
+      </div>
+      <div class="menu">
+        <div class="icons">
+          <image src="{{dynamic}}" class="icon"></image>
+        </div>
+        <text class="tab-text">{{ $t('strings.dynamic') }}</text>
+      </div>
+    </tab-bar>
+  </tabs>
+</div>
