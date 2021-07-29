@@ -1,0 +1,215 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.calc-container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.calc-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.calc-titlebar {
+    width: 100%;
+    height: 10%;
+}
+
+.calc-back-btn {
+    left: 39px;
+    top: 10px;
+}
+
+.calc-select-device-btn {
+    left:90%;
+    top: 10px;
+}
+
+.calc-select-device-dialog {
+    width: 90%;
+    height: 33%;
+}
+
+.calc-select-device-wrapper {
+    width: 95%;
+    margin-left: 5%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.calc-select-device-item {
+    width: 100%;
+    height: 50%;
+}
+
+.calc-select-device-item-cancel-btn {
+    text-align: center;
+    color: #0000ff;
+}
+
+.calc-select-device-item-title {
+    text-align: left;
+    font-size: 40px;
+}
+
+.calc-select-device-item-left {
+    width: 90%;
+    height: 100%;
+    text-align: left;
+    font-size: 32px;
+}
+
+.calc-select-device-item-right {
+    width: 10%;
+    height: 100%;
+}
+
+.calc-title {
+    left: 96px;
+    font-size: 30px;
+    top: 10px;
+}
+
+.calc-expr, .calc-rsl {
+    padding: 0 3%;
+}
+
+.calc-expr {
+    font-size: 72px;
+    color: #000000;
+    width: 100%;
+    height: 10%;
+}
+
+.calc-rsl {
+    color: #999;
+    font-size: 38px;
+    width: 100%;
+    height: 8%;
+}
+
+.input-area {
+    width: 100%;
+    height: 65%;
+    margin-top: 25%;
+}
+
+.calc-text-btn, .calc-op-btn, .calc-equals-btn {
+    border-radius: 16px;
+    height: 106px;
+    width: 18%;
+    font-size: 38px;
+}
+
+.calc-text-btn {
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+.calc-text-btn:active {
+    background-color: rgb(72, 72, 72);
+}
+
+.calc-op-btn {
+    background-color: #4D3F97E9;
+    color: #FF3F97E9;
+}
+
+.calc-op-btn:active {
+    background-color: rgb(54, 76, 97);
+}
+
+.calc-equals-btn {
+    background-color: #FF006CDE;
+    color: #fff;
+}
+
+.calc-equals-btn:active {
+    background-color: rgb(38, 129, 226);
+}
+
+.calc-btn-row-1 {
+    top: 112px;
+}
+
+.calc-btn-row-2 {
+    top: 226px;
+}
+
+.calc-btn-row-3 {
+    top: 340px;
+}
+
+.calc-btn-row-4 {
+    top: 454px;
+}
+
+.calc-btn-col-1 {
+    left: 3%;
+}
+
+.calc-btn-col-2 {
+    left: 22%;
+}
+
+.calc-btn-col-3 {
+    left: 41%;
+}
+
+.calc-btn-col-4 {
+    left: 60%;
+}
+
+.calc-btn-col-5 {
+    left: 79%;
+}
+
+.calc-btn-row-span-2 {
+    width: 37%;
+}
+
+.calc-btn-col-span-2 {
+    height: 220px;
+}
+
+.calc-icon-row-1 {
+    top: 152px;
+}
+
+.calc-icon-row-2 {
+    top: 266px;
+}
+
+.calc-icon-row-3 {
+    top: 380px;
+}
+
+.calc-icon-row-4 {
+    top: 484px;
+}
+
+.calc-icon-col-1 {
+    left: 69%;
+    transform: translateX(-50%);
+}
+
+.calc-icon-col-2 {
+    left: 88%;
+    transform: translateX(-50%);
+}
+
+
