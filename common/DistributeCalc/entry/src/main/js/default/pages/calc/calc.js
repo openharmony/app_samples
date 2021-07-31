@@ -12,7 +12,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
 import {calc, isOperator} from '../../common/calculator.js';
 import app from '@system.app';
 import distributedDataKit from '@ohos.data.distributedData';
@@ -101,7 +100,16 @@ export default {
                                     that.expression = '';
                                     that.result = '';
                                     continue;
+                                } else if(entry.value.value == "equal") {
+                                    if (that.result !== '') {
+                                        console.log("Calc[CalcPage] data expression:equal");
+                                        that.expression = that.result;
+                                        that.result = '';
+                                        //pressedEqual = true;
+                                    }
+                                    continue;
                                 }
+                                pressedEqual = false;
                                 that.expression = entry.value.value;
                                 console.log("Calc[CalcPage] data changed:"+entry.value.value);
                             }
@@ -134,6 +142,8 @@ export default {
         }
     },
     handleInput(value) {
+        console.log('Calc[CalcPage] handleInput:'+value);
+        this.isPush = false;
         if (isOperator(value)) {
             if (pressedEqual) {
                 pressedEqual = false;
@@ -155,28 +165,43 @@ export default {
                 this.expression = value;
                 pressedEqual = false;
             } else {
+                console.log("Calc[CalcPage] handleinput value:"+value)
                 this.expression += value;
             }
         }
-        this.isPush = false;
+
     },
     handleBackspace() {
         if(pressedEqual) {
             this.expression = '';
             this.result = '';
             pressedEqual = false;
+            if(kvStore != null) {
+                console.log('Calc[CalcPage] handleBackspace1');
+                this.dataChange('expression','clear');
+            }
         } else {
+            this.isPush = false;
             this.expression = this.expression.slice(0, -1);
             if (!this.expression.length) {
                 this.result = '';
+                if(kvStore != null) {
+                    console.log('Calc[CalcPage] handleBackspace2');
+                    this.dataChange('expression','clear');
+                }
             }
         }
     },
     handleEqual() {
         if (this.result !== '') {
+            this.isPush = true;
             this.expression = this.result;
             this.result = '';
             pressedEqual = true;
+            if(kvStore != null) {
+                console.log('Calc[CalcPage] handleEqual');
+                this.dataChange('expression','equal');
+            }
         }
     },
     handleTerminate(e) {
