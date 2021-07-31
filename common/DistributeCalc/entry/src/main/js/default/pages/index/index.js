@@ -40,7 +40,7 @@ export default {
             if (value !== '') {
                 this.result = calc(value).toString();
                 if(this.isDistributed && kvStore != null && !this.isPush) {
-                    console.log('Calc[IndexPage] data changed');
+                    console.log('Calc[IndexPage] put key start');
                     this.dataChange('expression',value);
                 }
             }
@@ -137,8 +137,17 @@ export default {
                             that.expression = '';
                             that.result = '';
                             continue;
+                        }else if(entry.value.value == "equal") {
+                            if (that.result !== '') {
+                                console.log("Calc[IndexPage] data expression:equal");
+                                that.expression = that.result;
+                                that.result = '';
+                                //pressedEqual = true;
+                            }
+                            continue;
                         }
                         that.expression = entry.value.value;
+                        pressedEqual = false;
                         console.log("Calc[IndexPage] data expression:" + that.expression);
                         console.log("Calc[IndexPage] data changed:" + entry.value.value);
                     }
@@ -225,12 +234,13 @@ export default {
         this.expression = '';
         this.result = '';
         if(this.isDistributed && kvStore != null) {
-            console.log('Calc[IndexPage] data changed');
+            console.log('Calc[IndexPage] handleClear');
             this.dataChange('expression','clear');
         }
     },
     handleInput(value) {
-        console.log("Calc[IndexPage] handle input value:"+value)
+        console.log("Calc[IndexPage] handle input value:"+value);
+        this.isPush = false;
         if (isOperator(value)) {
             if (pressedEqual) {
                 pressedEqual = false;
@@ -256,25 +266,39 @@ export default {
                 this.expression += value;
             }
         }
-        this.isPush = false;
+
     },
     handleBackspace() {
         if(pressedEqual) {
             this.expression = '';
             this.result = '';
             pressedEqual = false;
+            if(this.isDistributed && kvStore != null) {
+                console.log('Calc[IndexPage] handleBackspace1');
+                this.dataChange('expression','clear');
+            }
         } else {
+            this.isPush = false;
             this.expression = this.expression.slice(0, -1);
             if (!this.expression.length) {
                 this.result = '';
+                if(this.isDistributed && kvStore != null) {
+                    console.log('Calc[IndexPage] handleBackspace2');
+                    this.dataChange('expression','clear');
+                }
             }
         }
     },
     handleEqual() {
         if (this.result !== '') {
+            this.isPush = true;
             this.expression = this.result;
             this.result = '';
             pressedEqual = true;
+            if(this.isDistributed && kvStore != null) {
+                console.log('Calc[IndexPage] handleEqual');
+                this.dataChange('expression','equal');
+            }
         }
     },
     handleTerminate(e) {
