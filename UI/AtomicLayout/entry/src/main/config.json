@@ -12,7 +12,7 @@
     "name": ".MainAbility",
     "mainAbility": "ohos.samples.atomiclayout.MainAbility",
     "deviceType": [
-      "default"
+      "phone"
     ],
     "distro": {
       "deliveryWithInstall": true,
