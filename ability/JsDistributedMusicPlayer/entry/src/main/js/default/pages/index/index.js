@@ -51,7 +51,7 @@ export default {
         isSwitching: false,
     },
     onInit() {
-        console.info('MusicPlayer[IndexPage] onInit');
+        console.info('MusicPlayer[IndexPage] onInit begin');
         DEVICE_LIST_LOCALHOST = {
             name: this.$t('strings.localhost'),
             id: 'localhost',
@@ -96,6 +96,7 @@ export default {
                 }
             });
         });
+        console.info('MusicPlayer[IndexPage] onInit end');
     },
     onBackPress() {
         console.info('MusicPlayer[IndexPage] onBackPress isDialogShowing=' + this.isDialogShowing);
@@ -106,8 +107,10 @@ export default {
         return false;
     },
     onDestroy() {
+        console.info('MusicPlayer[IndexPage] onDestroy begin');
         this.playerModel.release();
         this.remoteDeviceModel.unregisterDeviceListCallback();
+        console.info('MusicPlayer[IndexPage] onDestroy end');
     },
     refreshSongInfo(index) {
         console.info('MusicPlayer[IndexPage] refreshSongInfo ' + index + '/'
@@ -243,6 +246,15 @@ export default {
             deviceId: deviceId,
             parameters: params
         };
+        var timerId = setTimeout(() => {
+            console.info('MusicPlayer[IndexPage] onMessageReceiveTimeout, terminateAbility');
+            featureAbility.terminateAbility();
+        }, 3000);
+        this.kvStoreModel.setOnMessageReceivedListener(REMOTE_ABILITY_STARTED, () => {
+            console.info('MusicPlayer[IndexPage] OnMessageReceived, terminateAbility');
+            clearTimeout(timerId);
+            featureAbility.terminateAbility();
+        });
         featureAbility.startAbility({
             want: wantValue
         }).then((data) => {
@@ -250,10 +262,6 @@ export default {
         });
         console.info('MusicPlayer[IndexPage] featureAbility.startAbility want=' + JSON.stringify(wantValue));
         console.info('MusicPlayer[IndexPage] featureAbility.startAbility end');
-        this.kvStoreModel.setOnMessageReceivedListener(REMOTE_ABILITY_STARTED, () => {
-            console.info('MusicPlayer[IndexPage] OnMessageReceived, terminateAbility');
-            featureAbility.terminateAbility();
-        });
     },
     onRadioChange(inputValue, e) {
         console.info('MusicPlayer[IndexPage] onRadioChange ' + inputValue + ', ' + e.value);
