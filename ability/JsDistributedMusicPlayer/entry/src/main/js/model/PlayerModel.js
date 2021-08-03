@@ -74,8 +74,9 @@ export default class PlayerModel {
 
     release() {
         if (typeof (this.#player) != 'undefined') {
-            console.info('MusicPlayer[PlayerModel] player.release');
+            console.info('MusicPlayer[PlayerModel] player.release begin');
             this.#player.release();
+            console.info('MusicPlayer[PlayerModel] player.release end');
             this.#player = undefined;
         }
     }
