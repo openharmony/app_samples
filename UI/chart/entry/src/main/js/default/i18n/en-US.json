@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "line": "Line chart",
+    "bar": " Histogram",
+    "guage": "Gauge figure",
+    "progress": "Progress class circle chart",
+    "loading": "Load class circular chart",
+    "rainbow": "Proportion type circular chart",
+    "accounted": "Accounted for"
+  }
+}

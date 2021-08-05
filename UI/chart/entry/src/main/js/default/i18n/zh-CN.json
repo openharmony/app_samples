@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "line": "线形图",
+    "bar": "柱形图",
+    "guage": "量规图",
+    "progress": "进度类圆形图表",
+    "loading": "加载类圆形图表",
+    "rainbow": "占比类圆形图表",
+    "accounted": "占比"
+  }
+}
