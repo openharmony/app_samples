@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "picker-text": "文本 :",
+    "date-text": "日期 :",
+    "time-text": "时间 :",
+    "datetime-text": "日期时间 :",
+    "multi-text": "多文本 :"
+  }
+}
