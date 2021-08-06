@@ -81,7 +81,7 @@
                 ohos:id="$+id:container_lists"
                 ohos:height="match_content"
                 ohos:width="match_parent"
-                ohos:visibility="gone">
+                ohos:visibility="hide">
 
                 <DirectionalLayout
                     ohos:height="match_content"
@@ -126,7 +126,7 @@
                             ohos:id="$+id:progressbar"
                             ohos:height="24vp"
                             ohos:width="24vp"
-                            ohos:visibility="gone"
+                            ohos:visibility="hide"
                             ohos:layout_alignment="right|vertical_center"
                             ohos:right_margin="20vp"
                             ohos:progress_color="#2B3FD2"

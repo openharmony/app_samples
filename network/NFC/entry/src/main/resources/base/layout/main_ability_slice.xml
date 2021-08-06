@@ -25,7 +25,7 @@
             ohos:top_margin="20vp">
 
         <Text
-                ohos:text="NFC State:"
+                ohos:text="$string:nfc_state"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:text_size="20fp"/>

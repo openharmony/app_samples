@@ -26,7 +26,7 @@
         ohos:width="match_content"
         ohos:margin="20vp"
         ohos:multiple_lines="true"
-        ohos:text="Align the face with the front camera and press start button to unlock the face."
+        ohos:text="$string:camera_tips"
         ohos:text_size="16fp"/>
 
     <Button
@@ -35,7 +35,7 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="10vp"
-        ohos:text="Start Face Unlock"
+        ohos:text="$string:face_unlock"
         ohos:text_size="16fp"/>
 
     <Button
@@ -44,7 +44,7 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="10vp"
-        ohos:text="Cancel Authentication"
+        ohos:text="$string:cancel_auth"
         ohos:text_size="16fp"/>
 
     <Text

@@ -7,6 +7,22 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "camera_tips",
+      "value": "Align the face with the front camera and press start button to unlock the face."
+    },
+    {
+      "name": "face_unlock",
+      "value": "Start Face Unlock"
+    },
+    {
+      "name": "cancel_auth",
+      "value": "Cancel Authentication"
+    },
+    {
+      "name": "text_ok",
+      "value": "O K"
     }
   ]
 }

@@ -44,7 +44,7 @@ public class TextToSpeechSlice extends BaseSlice {
 
     private TextField inputText;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             initTTSEngine();
@@ -91,7 +91,7 @@ public class TextToSpeechSlice extends BaseSlice {
         }
     }
 
-    private TtsListener ttsListener = new TtsListener() {
+    private final TtsListener ttsListener = new TtsListener() {
         @Override
         public void onEvent(int eventType, PacMap pacMap) {
             if (eventType == TtsEvent.CREATE_TTS_CLIENT_SUCCESS) {

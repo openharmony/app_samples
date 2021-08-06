@@ -69,13 +69,9 @@ public class SpeechRecognitionSlice extends BaseSlice {
 
     private String result;
 
-    private AsrIntent asrIntent;
-
     private String wavCachePath;
 
-    private String pcmCachePath;
-
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {
@@ -107,7 +103,7 @@ public class SpeechRecognitionSlice extends BaseSlice {
 
     private void initData() {
         wavCachePath = new File(getFilesDir(), "asr_test.wav").getPath();
-        pcmCachePath = new File(getFilesDir(), "asr_date_conversion.pcm").getPath();
+        String pcmCachePath = new File(getFilesDir(), "asr_date_conversion.pcm").getPath();
         writeToDisk(RAW_AUDIO_WAV, wavCachePath);
         writeToDisk(RAW_AUDIO_PCM, pcmCachePath);
     }
@@ -147,7 +143,7 @@ public class SpeechRecognitionSlice extends BaseSlice {
     private void initAIEngine() {
         asrClient = AsrClient.createAsrClient(this).orElse(null);
         if (asrClient != null) {
-            asrIntent = new AsrIntent();
+            AsrIntent asrIntent = new AsrIntent();
             useDefaultAsrIntent(asrIntent);
             asrIntent.setAudioSourceType(AsrIntent.AsrAudioSrcType.ASR_SRC_TYPE_PCM);
             asrClient.init(asrIntent, asrListener);
@@ -183,7 +179,7 @@ public class SpeechRecognitionSlice extends BaseSlice {
         }
     }
 
-    private AsrListener asrListener = new AsrListener() {
+    private final AsrListener asrListener = new AsrListener() {
         @Override
         public void onInit(PacMap pacMap) {
             result = pacMap.getString(AsrResultKey.RESULTS_RECOGNITION);
@@ -202,7 +198,7 @@ public class SpeechRecognitionSlice extends BaseSlice {
 
         @Override
         public void onBufferReceived(byte[] bytes) {
-            LogUtil.info(TAG, "onRmsChanged :" + bytes.toString());
+            LogUtil.info(TAG, "onRmsChanged :" + new String(bytes));
         }
 
         @Override

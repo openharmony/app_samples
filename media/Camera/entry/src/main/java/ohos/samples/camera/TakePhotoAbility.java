@@ -76,7 +76,8 @@ public class TakePhotoAbility extends Ability {
 
     private ComponentContainer surfaceContainer;
 
-    private EventHandler eventHandler = new EventHandler(EventRunner.current()) { };
+    private final EventHandler eventHandler = new EventHandler(EventRunner.current()) {
+    };
 
     @Override
     public void onStart(Intent intent) {
@@ -90,11 +91,13 @@ public class TakePhotoAbility extends Ability {
     private void initSurface() {
         getWindow().setTransparent(true);
         DirectionalLayout.LayoutConfig params = new DirectionalLayout.LayoutConfig(
-            ComponentContainer.LayoutConfig.MATCH_PARENT, ComponentContainer.LayoutConfig.MATCH_PARENT);
+                ComponentContainer.LayoutConfig.MATCH_PARENT, ComponentContainer.LayoutConfig.MATCH_PARENT);
         surfaceProvider = new SurfaceProvider(this);
         surfaceProvider.setLayoutConfig(params);
         surfaceProvider.pinToZTop(false);
-        surfaceProvider.getSurfaceOps().get().addCallback(new SurfaceCallBack());
+        if (surfaceProvider.getSurfaceOps().isPresent()) {
+            surfaceProvider.getSurfaceOps().get().addCallback(new SurfaceCallBack());
+        }
         surfaceContainer.addComponent(surfaceProvider);
     }
 
@@ -118,7 +121,7 @@ public class TakePhotoAbility extends Ability {
         String cameraId = "";
         for (String logicalCameraId : cameraList) {
             int faceType = cameraKit.getCameraInfo(logicalCameraId).getFacingType();
-            switch (faceType){
+            switch (faceType) {
                 case CameraInfo.FacingType.CAMERA_FACING_FRONT:
                     if (isFrontCamera) {
                         cameraId = logicalCameraId;
@@ -149,7 +152,8 @@ public class TakePhotoAbility extends Ability {
         try (FileOutputStream output = new FileOutputStream(saveFile)) {
             output.write(bytes);
             output.flush();
-            showTips(this, "Take photo succeed");
+            String msg = "Take photo succeed";
+            showTips(this, msg);
         } catch (IOException e) {
             HiLog.error(LABEL_LOG, "%{public}s", "saveImage IOException");
         }
@@ -191,7 +195,9 @@ public class TakePhotoAbility extends Ability {
 
         @Override
         public void onCreated(Camera camera) {
-            previewSurface = surfaceProvider.getSurfaceOps().get().getSurface();
+            if (surfaceProvider.getSurfaceOps().isPresent()) {
+                previewSurface = surfaceProvider.getSurfaceOps().get().getSurface();
+            }
             if (previewSurface == null) {
                 HiLog.error(LABEL_LOG, "%{public}s", "Create camera filed, preview surface is null");
                 return;
@@ -220,14 +226,9 @@ public class TakePhotoAbility extends Ability {
         @Override
         public void surfaceCreated(SurfaceOps callbackSurfaceOps) {
             if (callbackSurfaceOps != null) {
-                callbackSurfaceOps.setFixedSize(SCREEN_HEIGHT,SCREEN_WIDTH);
+                callbackSurfaceOps.setFixedSize(SCREEN_HEIGHT, SCREEN_WIDTH);
             }
-            eventHandler.postTask(new Runnable() {
-                @Override
-                public void run() {
-                    openCamera();
-                }
-            },200);
+            eventHandler.postTask(TakePhotoAbility.this::openCamera, 200);
         }
 
         @Override

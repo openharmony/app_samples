@@ -44,7 +44,7 @@ public class KeyPressEventSlice extends AbilitySlice {
     /**
      * scrollUp
      */
-    public void scrollUp() {
+    public static void scrollUp() {
         LogUtils.info(TAG, "scrollUp");
         if (tabList != null && tabList.getSelectedTabIndex() > 0) {
             tabList.selectTabAt(tabList.getSelectedTabIndex() - 1);
@@ -54,7 +54,7 @@ public class KeyPressEventSlice extends AbilitySlice {
     /**
      * scrollDown
      */
-    public void scrollDown() {
+    public static void scrollDown() {
         LogUtils.info(TAG, "scrollDown");
         if (tabList != null && tabList.getSelectedTabIndex() < tabList.getTabCount() - 1) {
             tabList.selectTabAt(tabList.getSelectedTabIndex() + 1);

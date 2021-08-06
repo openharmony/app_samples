@@ -27,7 +27,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Send InnerEvent"
+        ohos:text="$string:send_inner_event"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="50vp"/>
@@ -38,7 +38,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Post Runnable Task"
+        ohos:text="$string:post_runnable_task"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>
@@ -49,7 +49,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Send Event To OriginalThread"
+        ohos:text="$string:send_event"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>

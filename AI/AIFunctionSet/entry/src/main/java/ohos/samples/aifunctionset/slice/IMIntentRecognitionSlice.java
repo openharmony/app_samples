@@ -34,8 +34,6 @@ import java.util.Map;
 public class IMIntentRecognitionSlice extends BaseSlice {
     private TextField inputText;
 
-    private Component startParse;
-
     private TextField outText;
 
     private boolean initEngineResult;

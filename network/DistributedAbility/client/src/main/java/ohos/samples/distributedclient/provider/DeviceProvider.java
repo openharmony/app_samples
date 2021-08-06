@@ -15,15 +15,11 @@
 
 package ohos.samples.distributedclient.provider;
 
+import ohos.agp.components.*;
 import ohos.samples.distributedclient.DevicePlugin;
 import ohos.samples.distributedclient.ResourceTable;
 import ohos.samples.distributedclient.slice.MainAbilitySlice;
 
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.RecycleItemProvider;
-import ohos.agp.components.Text;
 import ohos.app.Context;
 import ohos.distributedschedule.interwork.DeviceInfo;
 
@@ -32,12 +28,12 @@ import java.util.List;
 /**
  * DeviceProvider
  */
-public class DeviceProvider extends RecycleItemProvider {
-    private Context context;
+public class DeviceProvider extends BaseItemProvider {
+    private final Context context;
 
     private List<DeviceInfo> deviceInfoList;
 
-    private DevicePlugin devicePlugin;
+    private final DevicePlugin devicePlugin;
 
     public DeviceProvider(MainAbilitySlice mainAbilitySlice, List<DeviceInfo> deviceInfoList,
         DevicePlugin devicePlugin) {

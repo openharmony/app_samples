@@ -26,7 +26,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Basic Features"
+        ohos:text="$string:basic_features"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -38,7 +38,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Untrusted Config"
+        ohos:text="$string:untrusted_config"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -50,7 +50,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="P2P"
+        ohos:text="$string:p2p"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -62,7 +62,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Wlan Notification"
+        ohos:text="$string:wlan_notification"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>

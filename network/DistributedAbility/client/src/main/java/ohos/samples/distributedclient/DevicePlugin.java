@@ -18,7 +18,6 @@ package ohos.samples.distributedclient;
 import ohos.samples.distributedclient.interfaces.DeviceListener;
 import ohos.samples.distributedclient.utils.LogUtil;
 import ohos.samples.distributedserver.RemoteAgentProxy;
-import ohos.samples.distributedserver.RemoteAgentStub;
 
 import ohos.aafwk.ability.IAbilityConnection;
 import ohos.aafwk.content.Intent;
@@ -45,15 +44,11 @@ public class DevicePlugin {
 
     private static volatile DevicePlugin instance = null;
 
-    private List<DeviceInfo> deviceInfoList;
-
     private Context context;
-
-    private String remoteDeviceId;
 
     private DeviceListener listener;
 
-    private IAbilityConnection connection = new IAbilityConnection() {
+    private final IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject iRemoteObject, int resultCode) {
             LogUtil.info(TAG, "onAbilityConnectDone resultCode:" + resultCode);
@@ -73,7 +68,7 @@ public class DevicePlugin {
         }
     };
 
-    private IDeviceStateCallback iDeviceStateCallback = new IDeviceStateCallback() {
+    private final IDeviceStateCallback iDeviceStateCallback = new IDeviceStateCallback() {
         @Override
         public void onDeviceOffline(String deviceId, int deviceType) {
             LogUtil.info(TAG, "onDeviceOffline , deviceId: " + deviceId);
@@ -95,8 +90,7 @@ public class DevicePlugin {
      * @return current distribute net device list
      */
     public List<DeviceInfo> scanRemoteAbility() {
-        deviceInfoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
-        return deviceInfoList;
+        return DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ALL_DEVICE);
     }
 
     /**
@@ -106,9 +100,8 @@ public class DevicePlugin {
      * @param context context.
      */
     public void connectAbility(Context context, DeviceInfo deviceInfo) {
-        remoteDeviceId = deviceInfo.getDeviceId();
         Intent intent = new Intent();
-        Operation operation = new Intent.OperationBuilder().withDeviceId(remoteDeviceId)
+        Operation operation = new Intent.OperationBuilder().withDeviceId(deviceInfo.getDeviceId())
             .withBundleName(REMOTE_BUNDLE_NAME)
             .withAbilityName(REMOTE_ABILITY_NAME)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
@@ -120,15 +113,10 @@ public class DevicePlugin {
 
     /**
      * disconnect remote ability
-     *
-     * @return connect result
      */
-    public boolean stopRemoteConnectedAbility() {
-        if (connection != null) {
-            context.disconnectAbility(connection);
-            LogUtil.info(TAG, "stopRemoteConnectAbility");
-        }
-        return true;
+    public void stopRemoteConnectedAbility() {
+        context.disconnectAbility(connection);
+        LogUtil.info(TAG, "stopRemoteConnectAbility");
     }
 
     /**

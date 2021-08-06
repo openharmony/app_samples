@@ -32,7 +32,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Take Photo"
+            ohos:text="$string:take_photo"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>
@@ -56,7 +56,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Video Record"
+            ohos:text="$string:video_record"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>

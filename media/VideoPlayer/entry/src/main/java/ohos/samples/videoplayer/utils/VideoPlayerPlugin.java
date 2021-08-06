@@ -29,9 +29,9 @@ public class VideoPlayerPlugin {
 
     private static final int REWIND_TIME = 2000;
 
-    private Player videoPlayer;
+    private final Context context;
 
-    private Context context;
+    private Player videoPlayer;
 
     private Runnable videoRunnable;
 
@@ -59,7 +59,7 @@ public class VideoPlayerPlugin {
      * Set source,prepare,start
      *
      * @param avElement AVElement
-     * @param surface Surface
+     * @param surface   Surface
      */
     public synchronized void startPlay(AVElement avElement, Surface surface) {
         if (videoPlayer != null) {

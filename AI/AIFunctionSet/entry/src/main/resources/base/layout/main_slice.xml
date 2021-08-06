@@ -29,7 +29,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Text Recognition"
+            ohos:text="$string:text_recognition"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -50,7 +50,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Image Super Resolution"
+            ohos:text="$string:image_super_resolution"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -71,7 +71,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Document Correction"
+            ohos:text="$string:document_correction"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -92,7 +92,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="QRCode Generation"
+            ohos:text="$string:qc_code"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -113,7 +113,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Text Image Super Resolution"
+            ohos:text="$string:text_image_super_resolution"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -134,7 +134,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Word Segmentation"
+            ohos:text="$string:word_segmentation"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -155,7 +155,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Part Of Speech Tagging"
+            ohos:text="$string:part_of_speech_tagging"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -176,7 +176,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Assistant Intention Recognition"
+            ohos:text="$string:assistant"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -197,7 +197,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="IM Intent Recognition"
+            ohos:text="$string:im_intent"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -218,7 +218,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Keyword Extraction"
+            ohos:text="$string:keyword"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -239,7 +239,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Entity Identification"
+            ohos:text="$string:entity"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -260,7 +260,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Speech Recognition"
+            ohos:text="$string:speech_recognition"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>
@@ -281,7 +281,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Text To Speech"
+            ohos:text="$string:text_to_speech"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#FF000000"
             ohos:text_size="17fp"/>

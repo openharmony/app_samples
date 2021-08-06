@@ -16,7 +16,6 @@
 package ohos.samples.wlan.slice;
 
 import static ohos.event.commonevent.CommonEventSupport.COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED;
-import static ohos.wifi.WifiEvents.PARAM_P2P_DISCOVERY;
 import static ohos.wifi.p2p.WifiP2pConfig.GO_BAND_AUTO;
 
 import ohos.samples.wlan.ItemProvider;
@@ -73,7 +72,7 @@ public class P2pSlice extends AbilitySlice {
 
     private WeakReference<WifiP2pCallback> wifiP2pCallbackWeakReference;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {

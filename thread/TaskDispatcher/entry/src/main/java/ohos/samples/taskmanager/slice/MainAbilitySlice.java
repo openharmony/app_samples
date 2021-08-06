@@ -27,7 +27,6 @@ import ohos.app.dispatcher.task.Revocable;
 import ohos.app.dispatcher.task.TaskPriority;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
-import ohos.eventhandler.InnerEvent;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
@@ -48,7 +47,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private Text resultText;
 
-    private EventHandler handler = new EventHandler(EventRunner.current());
+    private final EventHandler handler = new EventHandler(EventRunner.current());
 
     @Override
     public void onStart(Intent intent) {
@@ -81,10 +80,10 @@ public class MainAbilitySlice extends AbilitySlice {
     private void syncTask(Component component) {
         StringBuffer stringBuffer = new StringBuffer();
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
-        globalTaskDispatcher.syncDispatch(() -> stringBuffer.append("Sync task1 run" + System.lineSeparator()));
-        stringBuffer.append("After sync task1" + System.lineSeparator());
-        globalTaskDispatcher.syncDispatch(() -> stringBuffer.append("Sync task2 run" + System.lineSeparator()));
-        stringBuffer.append("After sync task2" + System.lineSeparator());
+        globalTaskDispatcher.syncDispatch(() -> stringBuffer.append("Sync task1 run").append(System.lineSeparator()));
+        stringBuffer.append("After sync task1").append(System.lineSeparator());
+        globalTaskDispatcher.syncDispatch(() -> stringBuffer.append("Sync task2 run").append(System.lineSeparator()));
+        stringBuffer.append("After sync task2").append(System.lineSeparator());
         resultText.setText(stringBuffer.toString());
     }
 
@@ -97,20 +96,20 @@ public class MainAbilitySlice extends AbilitySlice {
             } catch (InterruptedException e) {
                 HiLog.error(LABEL_LOG, "%{public}s", "AsyncDispatch InterruptedException");
             }
-            stringBuffer.append("Async task1 run" + System.lineSeparator());
+            stringBuffer.append("Async task1 run").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
-        stringBuffer.append("After async task1" + System.lineSeparator());
+        stringBuffer.append("After async task1").append(System.lineSeparator());
         globalTaskDispatcher.asyncDispatch(() -> {
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 HiLog.error(LABEL_LOG, "%{public}s", "AsyncDispatch InterruptedException");
             }
-            stringBuffer.append("Async task2 run" + System.lineSeparator());
+            stringBuffer.append("Async task2 run").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
-        stringBuffer.append("After async task2" + System.lineSeparator());
+        stringBuffer.append("After async task2").append(System.lineSeparator());
         resultText.setText(stringBuffer.toString());
     }
 
@@ -119,12 +118,12 @@ public class MainAbilitySlice extends AbilitySlice {
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
         final long callTime = System.currentTimeMillis();
         globalTaskDispatcher.delayDispatch(() -> {
-            stringBuffer.append("DelayDispatch task1 run" + System.lineSeparator());
+            stringBuffer.append("DelayDispatch task1 run").append(System.lineSeparator());
             final long actualDelayMs = System.currentTimeMillis() - callTime;
-            stringBuffer.append("ActualDelayTime >= delayTime : " + (actualDelayMs >= DELAY_TIME));
+            stringBuffer.append("ActualDelayTime >= delayTime : ").append((actualDelayMs >= DELAY_TIME));
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         }, DELAY_TIME);
-        stringBuffer.append("After delayDispatch task1" + System.lineSeparator());
+        stringBuffer.append("After delayDispatch task1").append(System.lineSeparator());
         resultText.setText(stringBuffer.toString());
     }
 
@@ -133,15 +132,15 @@ public class MainAbilitySlice extends AbilitySlice {
         TaskDispatcher dispatcher = createParallelTaskDispatcher("", TaskPriority.DEFAULT);
         Group group = dispatcher.createDispatchGroup();
         dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("GroupTask1 is running" + System.lineSeparator());
+            stringBuffer.append("GroupTask1 is running").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
         dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("GroupTask2 is running" + System.lineSeparator());
+            stringBuffer.append("GroupTask2 is running").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
         dispatcher.groupDispatchNotify(group, () -> stringBuffer.append(
-            "This task running after all tasks in the group are completed" + System.lineSeparator()));
+            "This task running after all tasks in the group are completed").append(System.lineSeparator()));
         resultText.setText(stringBuffer.toString());
     }
 
@@ -149,11 +148,11 @@ public class MainAbilitySlice extends AbilitySlice {
         StringBuffer stringBuffer = new StringBuffer();
         TaskDispatcher dispatcher = getUITaskDispatcher();
         Revocable revocable = dispatcher.delayDispatch(() -> {
-            stringBuffer.append("Delay dispatch" + System.lineSeparator());
+            stringBuffer.append("Delay dispatch").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         }, 50);
         boolean revoked = revocable.revoke();
-        stringBuffer.append("Revoke result :" + revoked);
+        stringBuffer.append("Revoke result :").append(revoked);
         resultText.setText(stringBuffer.toString());
     }
 
@@ -161,16 +160,10 @@ public class MainAbilitySlice extends AbilitySlice {
         StringBuffer stringBuffer = new StringBuffer();
         TaskDispatcher dispatcher = createParallelTaskDispatcher("SyncBarrierDispatcher", TaskPriority.DEFAULT);
         Group group = dispatcher.createDispatchGroup();
-        dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("Task1 is running" + System.lineSeparator());
-        });
-        dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("Task2 is running" + System.lineSeparator());
-        });
-        dispatcher.syncDispatchBarrier(() -> {
-            stringBuffer.append("Barrier" + System.lineSeparator());
-        });
-        stringBuffer.append("After syncDispatchBarrier" + System.lineSeparator());
+        dispatcher.asyncGroupDispatch(group, () -> stringBuffer.append("Task1 is running").append(System.lineSeparator()));
+        dispatcher.asyncGroupDispatch(group, () -> stringBuffer.append("Task2 is running").append(System.lineSeparator()));
+        dispatcher.syncDispatchBarrier(() -> stringBuffer.append("Barrier").append(System.lineSeparator()));
+        stringBuffer.append("After syncDispatchBarrier").append(System.lineSeparator());
         resultText.setText(stringBuffer.toString());
     }
 
@@ -179,23 +172,23 @@ public class MainAbilitySlice extends AbilitySlice {
         TaskDispatcher dispatcher = createParallelTaskDispatcher("AsyncBarrierDispatcher", TaskPriority.DEFAULT);
         Group group = dispatcher.createDispatchGroup();
         dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("Task1 is running" + System.lineSeparator());
+            stringBuffer.append("Task1 is running").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
         dispatcher.asyncGroupDispatch(group, () -> {
-            stringBuffer.append("Task2 is running" + System.lineSeparator());
+            stringBuffer.append("Task2 is running").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
         dispatcher.asyncDispatchBarrier(() -> {
-            stringBuffer.append("Barrier" + System.lineSeparator());
+            stringBuffer.append("Barrier").append(System.lineSeparator());
             handler.postSyncTask(() -> resultText.setText(stringBuffer.toString()));
         });
-        stringBuffer.append("After asyncDispatchBarrier" + System.lineSeparator());
+        stringBuffer.append("After asyncDispatchBarrier").append(System.lineSeparator());
         resultText.setText(stringBuffer.toString());
     }
 
     private void applyDispatchTask(Component component) {
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
         final CountDownLatch latch = new CountDownLatch(TASK_TOTAL);
         final ArrayList<Long> indexList = new ArrayList<>(TASK_TOTAL);
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
@@ -208,7 +201,7 @@ public class MainAbilitySlice extends AbilitySlice {
         } catch (InterruptedException exception) {
             HiLog.error(LABEL_LOG, "%{public}s", "applyDispatchTask InterruptedException");
         }
-        stringBuffer.append("List size matches :" + (indexList.size() == TASK_TOTAL));
-        resultText.setText(stringBuffer.toString());
+        stringBuilder.append("List size matches :").append((indexList.size() == TASK_TOTAL));
+        resultText.setText(stringBuilder.toString());
     }
 }

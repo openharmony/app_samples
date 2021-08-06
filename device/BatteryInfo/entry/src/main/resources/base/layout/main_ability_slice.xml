@@ -24,7 +24,7 @@
         ohos:height="40vp"
         ohos:top_margin="50vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Get Battery Level"
+        ohos:text="$string:get_battery_level"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>
@@ -35,7 +35,7 @@
         ohos:height="40vp"
         ohos:top_margin="50vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Subscribe Battery Level"
+        ohos:text="$string:subscribe_battery_level"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>

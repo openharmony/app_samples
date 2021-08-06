@@ -37,8 +37,6 @@ import ohos.media.image.PixelMap;
 public class TextImageSuperResolutionSlice extends BaseSlice {
     private static final String IMAGE_PATH = "entry/resources/rawfile/super_text.png";
 
-    private Image originalImage;
-
     private Image outImage;
 
     private ITxtImageSuperResolution txtImageSuperResolution;
@@ -53,7 +51,7 @@ public class TextImageSuperResolutionSlice extends BaseSlice {
     }
 
     private void initComponents() {
-        originalImage = (Image) findComponentById(ResourceTable.Id_image);
+        Image originalImage = (Image) findComponentById(ResourceTable.Id_image);
         outImage = (Image) findComponentById(ResourceTable.Id_out_image);
         Component startButton = findComponentById(ResourceTable.Id_start);
         startButton.setClickedListener(this::doSuperResolution);
@@ -86,7 +84,7 @@ public class TextImageSuperResolutionSlice extends BaseSlice {
         aiTitle.setText("Text Image Super Resolution");
     }
 
-    private ConnectionCallback connectionCallback = new ConnectionCallback() {
+    private final ConnectionCallback connectionCallback = new ConnectionCallback() {
         @Override
         public void onServiceConnect() {
             LogUtil.info(getLocalClassName(), "Service connect succeeded");

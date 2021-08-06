@@ -35,7 +35,7 @@
 
         <Text
             ohos:id="$+id:name_text"
-            ohos:text="Name"
+            ohos:text="$string:name"
             ohos:width="0vp"
             ohos:text_size="20fp"
             ohos:text_color="#ffffff"
@@ -45,7 +45,7 @@
 
         <Text
             ohos:id="$+id:state_text"
-            ohos:text="Status"
+            ohos:text="$string:status"
             ohos:width="0vp"
             ohos:text_size="20fp"
             ohos:weight="1"

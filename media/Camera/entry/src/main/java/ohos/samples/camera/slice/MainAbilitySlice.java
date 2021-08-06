@@ -23,8 +23,6 @@ import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.Operation;
 import ohos.agp.components.Component;
-import ohos.agp.components.Image;
-import ohos.agp.components.Text;
 
 /**
  * MainAbilitySlice
@@ -46,10 +44,10 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void startAbility(String abilityName) {
         Operation operation = new Intent.OperationBuilder()
-            .withDeviceId("")
-            .withBundleName(getBundleName())
-            .withAbilityName(abilityName)
-            .build();
+                .withDeviceId("")
+                .withBundleName(getBundleName())
+                .withAbilityName(abilityName)
+                .build();
         Intent intent = new Intent();
         intent.setOperation(operation);
         startAbility(intent);

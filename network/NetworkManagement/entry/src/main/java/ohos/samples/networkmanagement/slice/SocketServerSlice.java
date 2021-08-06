@@ -40,7 +40,7 @@ public class SocketServerSlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private static int PORT = 8888;
+    private static final int PORT = 8888;
 
     private Text outText;
 
@@ -64,14 +64,13 @@ public class SocketServerSlice extends AbilitySlice {
         ThreadPoolUtil.submit(() -> {
             try (DatagramSocket socket = new DatagramSocket(PORT)) {
                 DatagramPacket packet = new DatagramPacket(new byte[255], 255);
+                //noinspection InfiniteLoopStatement
                 while (true) {
                     socket.receive(packet);
-                    getUITaskDispatcher().syncDispatch(() -> {
-                        outText.setText(
-                            "Receive a message from :" + packet.getAddress().getHostAddress() + System.lineSeparator()
-                                + " on port " + packet.getPort() + System.lineSeparator() + "message :" + new String(
-                                packet.getData()).substring(0, packet.getLength()));
-                    });
+                    getUITaskDispatcher().syncDispatch(() -> outText.setText(
+                        "Receive a message from :" + packet.getAddress().getHostAddress() + System.lineSeparator()
+                            + " on port " + packet.getPort() + System.lineSeparator() + "message :" + new String(
+                            packet.getData()).substring(0, packet.getLength())));
                     packet.setLength(255);
                     Thread.sleep(1000);
                 }

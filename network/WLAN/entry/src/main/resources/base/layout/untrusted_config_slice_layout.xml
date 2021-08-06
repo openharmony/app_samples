@@ -27,7 +27,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Add Untrusted Wifi"
+        ohos:text="$string:add_untrusted_wifi"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -39,7 +39,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Remove Untrusted Wifi"
+        ohos:text="$string:remove_untrusted_wifi"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 </DirectionalLayout>

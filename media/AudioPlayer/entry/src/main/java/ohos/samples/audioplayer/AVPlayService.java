@@ -68,7 +68,7 @@ public class AVPlayService extends AVBrowserService {
 
     private Player player;
 
-    private Timer timer = new Timer();
+    private final Timer timer = new Timer();
 
     private ProgressTimerTask progressTimerTask;
 
@@ -149,7 +149,7 @@ public class AVPlayService extends AVBrowserService {
         LogUtil.info(TAG, "onLoadAVElement");
     }
 
-    private AVSessionCallback avSessionCallback = new AVSessionCallback() {
+    private final AVSessionCallback avSessionCallback = new AVSessionCallback() {
         @Override
         public void onPlay() {
             super.onPlay();
@@ -182,7 +182,7 @@ public class AVPlayService extends AVBrowserService {
             super.onPlayNext();
             LogUtil.info(TAG + "-AVSessionCallback", "onPlayNext");
             AVDescription next = avElementManager.getNextAVElement().get().getAVDescription();
-            play(next, 0);
+            play(next);
         }
 
         @Override
@@ -190,17 +190,17 @@ public class AVPlayService extends AVBrowserService {
             super.onPlayPrevious();
             LogUtil.info(TAG + "-AVSessionCallback", "onPlayPrevious");
             AVDescription previous = avElementManager.getPreviousAVElement().get().getAVDescription();
-            play(previous, 0);
+            play(previous);
         }
 
-        private void play(AVDescription description, int position) {
+        private void play(AVDescription description) {
             if (player == null) {
                 player = new Player(getApplicationContext());
             }
             player.reset();
             player.setSource(new Source(description.getMediaUri().toString()));
             player.prepare();
-            player.rewindTo(position);
+            player.rewindTo(0);
             player.play();
 
             AVPlaybackState avPlaybackState = new AVPlaybackState.Builder().setAVPlaybackState(
@@ -235,7 +235,7 @@ public class AVPlayService extends AVBrowserService {
                 case AVPlaybackState.PLAYBACK_STATE_NONE: {
                     avElementManager.setCurrentAVElement(uri);
                     AVDescription current = avElementManager.getCurrentAVElement().getAVDescription();
-                    play(current, 0);
+                    play(current);
                     break;
                 }
                 default:

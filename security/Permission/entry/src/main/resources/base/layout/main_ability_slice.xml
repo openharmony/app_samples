@@ -21,7 +21,7 @@
     <Text
         ohos:width="match_parent"
         ohos:height="match_content"
-        ohos:text="Click on button to obtain permission"
+        ohos:text="$string:btn_obtain_permission"
         ohos:top_margin="50vp"
         ohos:left_margin="10vp"
         ohos:right_margin="10vp"
@@ -36,7 +36,7 @@
         ohos:height="40vp"
         ohos:top_margin="40vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Request Location permission"
+        ohos:text="$string:req_location_permission"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>
@@ -47,7 +47,7 @@
         ohos:height="40vp"
         ohos:top_margin="40vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Request Microphone permission"
+        ohos:text="$string:req_microphone_permission"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>
@@ -58,7 +58,7 @@
         ohos:height="40vp"
         ohos:top_margin="40vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Request Calendar permission"
+        ohos:text="$string:req_calendar_permission"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>
@@ -69,7 +69,7 @@
         ohos:height="40vp"
         ohos:top_margin="40vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="Request Storage permission"
+        ohos:text="$string:req_storage_permission"
         ohos:text_size="20vp"
         ohos:text_color="#ffffffff"
         ohos:background_element="$graphic:bg"/>

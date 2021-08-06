@@ -57,7 +57,7 @@ public class MainAbilitySlice extends AbilitySlice implements DeviceListener {
 
     private String dialogMessage;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             showDialog(dialogMessage);
@@ -84,10 +84,10 @@ public class MainAbilitySlice extends AbilitySlice implements DeviceListener {
         Component scanBtn = findComponentById(ResourceTable.Id_scan_btn);
         Component registerBtn = findComponentById(ResourceTable.Id_register_change_btn);
         Component unRegisterBtn = findComponentById(ResourceTable.Id_unregister_btn);
-        Component unDisconnectBtn = findComponentById(ResourceTable.Id_disconnect_btn);
+        Component disconnectBtn = findComponentById(ResourceTable.Id_disconnect_btn);
         registerBtn.setClickedListener(component -> devicePlugin.registerDeviceStateListener());
         unRegisterBtn.setClickedListener(component -> devicePlugin.unRegisterDeviceStateListener());
-        unDisconnectBtn.setClickedListener(component -> devicePlugin.stopRemoteConnectedAbility());
+        disconnectBtn.setClickedListener(component -> devicePlugin.stopRemoteConnectedAbility());
         scanBtn.setClickedListener(component -> scanRemoteAbility(true));
         deviceProvider = new DeviceProvider(this, deviceInfoList, devicePlugin);
         ListContainer listContainer = (ListContainer) findComponentById(ResourceTable.Id_container_list);

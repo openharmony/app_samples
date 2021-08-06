@@ -25,11 +25,6 @@ public class Constants {
     public static final int PERM_LOCATION_REQ_CODE = 1000;
 
     /**
-     * Contacts Read permission request code
-     */
-    public static final int PERM_READ_CONTACTS_REQ_CODE = 1001;
-
-    /**
      * Microphone permission request code
      */
     public static final int PERM_RECORD_AUDIO_REQ_CODE = 1002;

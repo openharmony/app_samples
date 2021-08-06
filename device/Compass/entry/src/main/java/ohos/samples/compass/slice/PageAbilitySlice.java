@@ -56,7 +56,7 @@ public class PageAbilitySlice extends AbilitySlice {
 
     private ICategoryOrientationDataCallback categoryOrientationDataCallback;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             compassAngleText.setText(getRotation(degree));

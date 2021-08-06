@@ -24,11 +24,11 @@ import ohos.global.resource.NotExistException;
 import ohos.global.resource.WrongTypeException;
 import ohos.multimodalinput.event.KeyEvent;
 import ohos.samples.accessibilityservice.ResourceTable;
+import ohos.samples.accessibilityservice.slice.KeyPressEventSlice;
 import ohos.samples.accessibilityservice.tts.TtsManager;
 import ohos.samples.accessibilityservice.utils.LogUtils;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -51,35 +51,31 @@ public class MyAccessibilityService extends AccessibleAbility {
         int eventType = accessibilityEventInfo.getAccessibilityEventType();
         int windowType = accessibilityEventInfo.getWindowChangeTypes();
         LogUtils.info(TAG, "onAccessibilityEvent,enventType=" + eventType + "windowType" + windowType);
-        switch (eventType) {
-            case AccessibilityEventInfo.TYPE_VIEW_CLICKED_EVENT:
-                LogUtils.info(TAG, "type view clicked");
-                ArrayList<CharSequence> contentList = accessibilityEventInfo.getContentList();
-                try {
-                    Element element = getContext().getResourceManager()
-                            .getElement(ResourceTable.String_string_button_perform_click);
-                    String string = element.getString();
-                    for (CharSequence content : contentList) {
-                        LogUtils.info(TAG, "type view clicked,content:" + content.toString() + ",string:" + string);
-                        if (content.toString().equals(string)) {
-                            LogUtils.info(TAG, "type view clicked,content:equals");
-                            TtsManager.getInstance().speakText(content.toString(), null);
-                            performCommonAction(AccessibleAbility.GLOBAL_ACTION_HOME);
-                        }
+        if (AccessibilityEventInfo.TYPE_VIEW_CLICKED_EVENT == eventType) {
+            LogUtils.info(TAG, "type view clicked");
+            ArrayList<CharSequence> contentList = accessibilityEventInfo.getContentList();
+            try {
+                Element element = getContext().getResourceManager()
+                        .getElement(ResourceTable.String_string_button_perform_click);
+                String string = element.getString();
+                for (CharSequence content : contentList) {
+                    LogUtils.info(TAG, "type view clicked,content:" + content.toString() + ",string:" + string);
+                    if (content.toString().equals(string)) {
+                        LogUtils.info(TAG, "type view clicked,content:equals");
+                        TtsManager.getInstance().speakText(content.toString(), null);
+                        performCommonAction(AccessibleAbility.GLOBAL_ACTION_HOME);
                     }
-                } catch (IOException | NotExistException | WrongTypeException e) {
-                    LogUtils.error(TAG, "type view clicked,Exception:" + e.getMessage());
                 }
-                break;
-            default:
-                break;
+            } catch (IOException | NotExistException | WrongTypeException e) {
+                LogUtils.error(TAG, "type view clicked,Exception:" + e.getMessage());
+            }
         }
         switch (windowType) {
             case AccessibilityEventInfo.WINDOWS_CHANGE_ADDED:
                 Optional<AccessibilityInfo> accessibilityInfo = getRootAccessibilityInfo();
                 String bundleName = accessibilityInfo.get().getBundleName().toString();
                 LogUtils.info(TAG, "WINDOWS_CHANGE_ADDED:" + bundleName);
-                if (bundleName.equals(BUNDLE_NAME) && isInSpecialApp == false) {
+                if (bundleName.equals(BUNDLE_NAME) && !isInSpecialApp) {
                     isInSpecialApp = true;
                     LogUtils.info(TAG, "You are in the " + bundleName);
                     runUIThread(() -> new ToastDialog(getContext()).setText("You are in the " + BUNDLE_NAME).show());
@@ -120,26 +116,10 @@ public class MyAccessibilityService extends AccessibleAbility {
         if (isNeedCustomVolumeKey) {
             if (keyEvent.getKeyCode() == KeyEvent.KEY_VOLUME_DOWN || keyEvent.getKeyCode() == KeyEvent.KEY_VOLUME_UP) {
                 if (keyEvent.getKeyCode() == KeyEvent.KEY_VOLUME_DOWN && keyEvent.isKeyDown()) {
-                    runUIThread(() -> {
-                        try {
-                            Class mClass = Class.forName("ohos.samples.accessibilityservice.slice.KeyPressEventSlice");
-                            mClass.getDeclaredMethod("scrollDown").invoke(mClass.newInstance(), new Object[]{});
-                        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException
-                                | ClassNotFoundException | InstantiationException e) {
-                            LogUtils.error(TAG, "KEY_VOLUME_DOWN error:" + e.getMessage());
-                        }
-                    });
+                    runUIThread(KeyPressEventSlice::scrollDown);
                 }
                 if (keyEvent.getKeyCode() == KeyEvent.KEY_VOLUME_UP && keyEvent.isKeyDown()) {
-                    runUIThread(() -> {
-                        try {
-                            Class mClass = Class.forName("ohos.samples.accessibilityservice.slice.KeyPressEventSlice");
-                            mClass.getDeclaredMethod("scrollUp").invoke(mClass.newInstance(), new Object[]{});
-                        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException
-                                | ClassNotFoundException | InstantiationException e) {
-                            LogUtils.error(TAG, "KEY_VOLUME_UP error:" + e.getMessage());
-                        }
-                    });
+                    runUIThread(KeyPressEventSlice::scrollUp);
                 }
                 return true;
             }

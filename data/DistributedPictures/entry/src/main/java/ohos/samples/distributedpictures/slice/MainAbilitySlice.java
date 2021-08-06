@@ -108,7 +108,7 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void copyPicToDistributedDir() {
-        writeToDistributedDir("entry/resources/rawfile/icon.png", distributedFile);
+        writeToDistributedDir(distributedFile);
         File file = new File(distributedFile);
         if (file.exists()) {
             showTip(this, "shared success");
@@ -122,8 +122,8 @@ public class MainAbilitySlice extends AbilitySlice {
         toastDialog.show();
     }
 
-    private void writeToDistributedDir(String rawFilePathString, String targetFilePath) {
-        RawFileEntry rawFileEntry = getResourceManager().getRawFileEntry(rawFilePathString);
+    private void writeToDistributedDir(String targetFilePath) {
+        RawFileEntry rawFileEntry = getResourceManager().getRawFileEntry("entry/resources/rawfile/icon.png");
         try (FileOutputStream output = new FileOutputStream(new File(targetFilePath))) {
             Resource resource = rawFileEntry.openRawFile();
             byte[] cache = new byte[CACHE_SIZE];

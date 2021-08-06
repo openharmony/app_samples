@@ -15,14 +15,10 @@
 
 package ohos.samples.devices.provider;
 
+import ohos.agp.components.*;
 import ohos.samples.devices.ResourceTable;
 import ohos.samples.devices.slice.MainAbilitySlice;
 
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.RecycleItemProvider;
-import ohos.agp.components.Text;
 import ohos.agp.utils.Color;
 import ohos.app.Context;
 import ohos.distributedschedule.interwork.DeviceInfo;
@@ -32,14 +28,14 @@ import java.util.List;
 /**
  * DeviceProvider
  */
-public class DeviceProvider extends RecycleItemProvider {
+public class DeviceProvider extends BaseItemProvider {
     private static final String STATUS_ONLINE = "online";
 
     private static final String STATUS_OFFLINE = "offline";
 
     private static final int SUBSTRING_INDEX = 6;
 
-    private Context context;
+    private final Context context;
 
     private List<DeviceInfo> deviceInfoList;
 

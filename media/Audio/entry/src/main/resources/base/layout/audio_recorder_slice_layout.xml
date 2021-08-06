@@ -21,7 +21,7 @@
     <Text
         ohos:id="$+id:title_text"
         ohos:text_size="16fp"
-        ohos:text="Sound Recorder"
+        ohos:text="$string:sound_recorder"
         ohos:top_margin="10vp"
         ohos:text_alignment="center"
         ohos:height="match_content"
@@ -37,7 +37,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Record"
+        ohos:text="$string:record"
         ohos:text_color="#000000"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>

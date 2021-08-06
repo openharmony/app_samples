@@ -15,6 +15,42 @@
     {
       "name": "image_net_url",
       "value": "https://img-blog.csdn.net/20160121201510406?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"
+    },
+    {
+      "name": "start_request",
+      "value": "Start Request"
+    },
+    {
+      "name": "network_equest",
+      "value": "Network Request"
+    },
+    {
+      "name": "socket_client",
+      "value": "Socket Client"
+    },
+    {
+      "name": "socket_server",
+      "value": "Socket Server"
+    },
+    {
+      "name": "http_cache",
+      "value": "HTTP Cache"
+    },
+    {
+      "name": "input_text",
+      "value": "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&amp;key=bf2ef503691a67e10d5bc4c5a6d8ff81"
+    },
+    {
+      "name": "input_service_ip",
+      "value": "Please input the server IP address"
+    },
+    {
+      "name": "send_message",
+      "value": "Send Message"
+    },
+    {
+      "name": "start_server",
+      "value": "Start Server"
     }
   ]
 }

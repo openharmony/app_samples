@@ -43,7 +43,7 @@
         ohos:text_alignment="center"
         ohos:margin="10vp"
         ohos:height="match_content"
-        ohos:text="O K"
+        ohos:text="$string:text_ok"
         ohos:text_size="18fp"
         ohos:text_color="#0000ff"/>
 </DirectionalLayout>

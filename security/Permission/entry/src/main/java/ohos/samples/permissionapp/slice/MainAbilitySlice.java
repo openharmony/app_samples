@@ -107,9 +107,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
                 @Override
                 public void run() {
                     capturer.stop();
-                    context.getUITaskDispatcher().asyncDispatch(() -> {
-                        showTips(context, "Stopped recording.");
-                    });
+                    context.getUITaskDispatcher().asyncDispatch(() -> showTips(context, "Stopped recording."));
                 }
             }, AUDIO_RECORDING_TIME);
         } catch (IllegalArgumentException | SecurityException e) {

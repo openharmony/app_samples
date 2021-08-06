@@ -44,7 +44,7 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:margin="10vp"
-        ohos:text="O K"
+        ohos:text="$string:text_ok"
         ohos:text_alignment="center"
         ohos:text_size="20fp"/>
 </DirectionalLayout>

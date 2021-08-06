@@ -32,7 +32,7 @@
         ohos:height="35vp"
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
-        ohos:text="Start"
+        ohos:text="$string:start"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 

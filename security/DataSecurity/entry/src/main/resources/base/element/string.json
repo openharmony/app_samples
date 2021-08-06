@@ -7,6 +7,26 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "encrypt",
+      "value": "Encrypt"
+    },
+    {
+      "name": "decrypt",
+      "value": "Decrypt"
+    },
+    {
+      "name": "plain_text",
+      "value": "PlainText : "
+    },
+    {
+      "name": "hello_world",
+      "value": "Hello World : "
+    },
+    {
+      "name": "result",
+      "value": "Result : "
     }
   ]
 }

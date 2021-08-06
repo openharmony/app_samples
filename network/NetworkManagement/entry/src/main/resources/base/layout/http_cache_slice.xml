@@ -38,7 +38,7 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="20vp"
-        ohos:text="Start Request"
+        ohos:text="$string:start_request"
         ohos:text_size="16fp"/>
 
     <Image

@@ -32,7 +32,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Network Request"
+            ohos:text="$string:network_equest"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>
@@ -56,7 +56,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Socket Client"
+            ohos:text="$string:socket_client"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>
@@ -80,7 +80,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="Socket Server"
+            ohos:text="$string:socket_server"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>
@@ -104,7 +104,7 @@
         <Text
             ohos:height="match_parent"
             ohos:width="match_content"
-            ohos:text="HTTP Cache"
+            ohos:text="$string:http_cache"
             ohos:text_alignment="vertical_center"
             ohos:text_color="#ff000000"
             ohos:text_size="16fp"/>

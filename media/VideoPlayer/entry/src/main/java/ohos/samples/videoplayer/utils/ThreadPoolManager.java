@@ -39,8 +39,8 @@ public class ThreadPoolManager {
     private ThreadPoolManager() {
         if (executor == null) {
             executor = new ThreadPoolExecutor(CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE, TimeUnit.SECONDS,
-                new ArrayBlockingQueue<Runnable>(20), Executors.defaultThreadFactory(),
-                new ThreadPoolExecutor.AbortPolicy());
+                    new ArrayBlockingQueue<>(20), Executors.defaultThreadFactory(),
+                    new ThreadPoolExecutor.AbortPolicy());
         }
     }
 

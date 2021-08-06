@@ -15,10 +15,6 @@
 
 import router from "@system.router";
 
-const injectRef = Object.getPrototypeOf(global) || global;
-
-injectRef.regeneratorRuntime = require("@babel/runtime/regenerator");
-
 export default {
     data: {
         loginStatus: false,
@@ -171,7 +167,6 @@ export default {
     },
     onChanged: async function (checked) {
         try {
-            var that = this;
             var actionData = {};
             actionData.checkState = checked ? 1 : 0;
             var action = {};

@@ -22,7 +22,7 @@
 
     <Text
         ohos:width="match_content"
-        ohos:text="Distribute Server"
+        ohos:text="$string:distribute_server"
         ohos:height="match_content"
         ohos:text_size="18fp"
         ohos:text_color="#0000ff"/>

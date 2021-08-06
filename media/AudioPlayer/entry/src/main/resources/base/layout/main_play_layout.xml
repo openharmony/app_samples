@@ -20,7 +20,7 @@
 
     <Button
         ohos:id="$+id:jump_to_next_page_button"
-        ohos:text_size="20fp"
+        ohos:text_size="18fp"
         ohos:text="$string:jump"
         ohos:text_alignment="center"
         ohos:width="match_content"
@@ -79,7 +79,6 @@
         ohos:background_element="#11000055"/>
 
     <DirectionalLayout
-        ohos:id="$+id:main_play_root"
         ohos:background_element="#11550055"
         ohos:width="300vp"
         ohos:height="200vp"
@@ -112,7 +111,7 @@
 
             <Text
                 ohos:id="$+id:text_delimiter"
-                ohos:text="/"
+                ohos:text="$string:slash"
                 ohos:text_size="20fp"
                 ohos:text_color="#FF000000"
                 ohos:text_alignment="center"

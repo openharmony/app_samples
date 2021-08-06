@@ -52,8 +52,6 @@ public class OrmContextSlice extends AbilitySlice {
 
     private DatabaseHelper helper;
 
-    private Component upgradeButton;
-
     private Preferences preferences;
 
     @Override
@@ -70,7 +68,7 @@ public class OrmContextSlice extends AbilitySlice {
         if (componentText instanceof Text) {
             logText = (Text) componentText;
         }
-        upgradeButton = findComponentById(ResourceTable.Id_upgrade_button);
+        Component upgradeButton = findComponentById(ResourceTable.Id_upgrade_button);
         upgradeButton.setClickedListener(this::upgrade);
         findComponentById(ResourceTable.Id_insert_button).setClickedListener(this::insert);
         findComponentById(ResourceTable.Id_update_button).setClickedListener(this::update);

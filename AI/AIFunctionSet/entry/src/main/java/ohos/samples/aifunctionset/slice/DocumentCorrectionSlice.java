@@ -38,8 +38,6 @@ import ohos.media.image.PixelMap;
 public class DocumentCorrectionSlice extends BaseSlice {
     private static final String IMAGE_PATH = "entry/resources/rawfile/doc_check.png";
 
-    private Image originalImage;
-
     private Image outImage;
 
     private IDocRefine docRefine;
@@ -54,7 +52,7 @@ public class DocumentCorrectionSlice extends BaseSlice {
     }
 
     private void initComponents() {
-        originalImage = (Image) findComponentById(ResourceTable.Id_image);
+        Image originalImage = (Image) findComponentById(ResourceTable.Id_image);
         outImage = (Image) findComponentById(ResourceTable.Id_out_image);
         Component startButton = findComponentById(ResourceTable.Id_start);
         startButton.setClickedListener(this::doSuperResolution);
@@ -89,7 +87,7 @@ public class DocumentCorrectionSlice extends BaseSlice {
         aiTitle.setText("Document Correction");
     }
 
-    private ConnectionCallback connectionCallback = new ConnectionCallback() {
+    private final ConnectionCallback connectionCallback = new ConnectionCallback() {
         @Override
         public void onServiceConnect() {
             LogUtil.info(getLocalClassName(), "Service connect succeeded");

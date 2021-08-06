@@ -33,7 +33,7 @@
             ohos:width="160vp"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Encrypt"
+            ohos:text="$string:encrypt"
             ohos:text_alignment="center"
             ohos:text_size="16fp"/>
 
@@ -44,7 +44,7 @@
             ohos:background_element="$graphic:button_background"
             ohos:left_margin="15vp"
             ohos:padding="10vp"
-            ohos:text="Decrypt"
+            ohos:text="$string:decrypt"
             ohos:text_alignment="center"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
@@ -59,14 +59,14 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:left_padding="15vp"
-            ohos:text="PlainText : "
+            ohos:text="$string:plain_text"
             ohos:text_size="16fp"/>
 
         <Text
             ohos:id="$+id:plaintext_text"
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:text="Hello World!"
+            ohos:text="$string:hello_world"
             ohos:text_color="#708095"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
@@ -80,7 +80,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:left_padding="15vp"
-            ohos:text="Result : "
+            ohos:text="$string:result"
             ohos:text_size="16fp"/>
 
         <Text

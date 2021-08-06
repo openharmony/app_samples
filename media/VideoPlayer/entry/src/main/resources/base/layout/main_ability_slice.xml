@@ -23,7 +23,7 @@
         ohos:id="$+id:videoTitle_text"
         ohos:text_size="15fp"
         ohos:width="match_content"
-        ohos:text="Video"
+        ohos:text="$string:video"
         ohos:layout_alignment="horizontal_center"
         ohos:left_margin="5vp"
         ohos:top_margin="20vp"
@@ -47,7 +47,7 @@
 
         <Button
             ohos:id="$+id:play_button"
-            ohos:text="play"
+            ohos:text="$string:play"
             ohos:width="0vp"
             ohos:weight="1"
             ohos:height="match_content"
@@ -58,7 +58,7 @@
 
         <Button
             ohos:id="$+id:pause_button"
-            ohos:text="pause"
+            ohos:text="$string:pause"
             ohos:width="0vp"
             ohos:weight="1"
             ohos:height="match_content"
@@ -80,7 +80,7 @@
 
         <Button
             ohos:id="$+id:seek_button"
-            ohos:text="seek"
+            ohos:text="$string:seek"
             ohos:width="0vp"
             ohos:weight="1"
             ohos:padding="8vp"
@@ -91,7 +91,7 @@
 
         <Button
             ohos:id="$+id:refresh_list_button"
-            ohos:text="Refresh List"
+            ohos:text="$string:refresh_list"
             ohos:width="0vp"
             ohos:weight="1"
             ohos:height="match_content"

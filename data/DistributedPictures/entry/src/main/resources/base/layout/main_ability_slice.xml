@@ -33,7 +33,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:padding="8vp"
-            ohos:text="Local Pictures"
+            ohos:text="$string:local_pictures"
             ohos:text_size="15fp"/>
 
         <Image
@@ -57,7 +57,7 @@
             ohos:width="match_parent"
             ohos:background_element="#55000055"
             ohos:padding="5vp"
-            ohos:text="Share Local Picture To Distributed Dir"
+            ohos:text="$string:share_to_distributed_dir"
             ohos:text_size="15fp"/>
 
         <DirectionalLayout
@@ -72,7 +72,7 @@
                 ohos:width="0vp"
                 ohos:background_element="#55000055"
                 ohos:padding="5vp"
-                ohos:text="Refresh"
+                ohos:text="$string:refresh"
                 ohos:text_size="15fp"
                 ohos:weight="1"/>
 
@@ -83,7 +83,7 @@
                 ohos:background_element="#55000055"
                 ohos:left_margin="10vp"
                 ohos:padding="5vp"
-                ohos:text="Delete"
+                ohos:text="$string:delete"
                 ohos:text_size="15fp"
                 ohos:weight="1"/>
         </DirectionalLayout>
@@ -101,7 +101,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:padding="8vp"
-            ohos:text="Remote Pictures"
+            ohos:text="$string:remote_picture"
             ohos:text_size="15fp"/>
 
         <Image

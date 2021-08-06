@@ -26,6 +26,7 @@ import ohos.utils.zson.ZSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -281,14 +282,14 @@ public class SearchUtils {
         filter1.put(CommonItem.IDENTIFIER, new ZSONArray(Arrays.asList(0, 1, 2, 3, 4, 5))); // The index is also hit if its value is 0 , 1, 2, 3, 4 or 5 for the CommonItem.IDENTIFIER field.
         filterCondition.add(filter1);
         ZSONObject filter2 = new ZSONObject();
-        filter2.put("tag", new ZSONArray(Arrays.asList("position")));
-        filter2.put(CommonItem.TITLE, new ZSONArray(Arrays.asList("position"))); // An index is hit if the value of the tag or CommonItem.TITLE field is position.
+        filter2.put("tag", new ZSONArray(Collections.singletonList("position")));
+        filter2.put(CommonItem.TITLE, new ZSONArray(Collections.singletonList("position"))); // An index is hit if the value of the tag or CommonItem.TITLE field is position.
         filterCondition.add(filter2);
         zsonObject.put(SearchParameter.FILTER_CONDITION, filterCondition); // An index is hit only if both the first and second conditions are met.
 
         // SearchParameter.DEVICE_ID_LIST indicates the device ID list. Indexes with the specified IDs are hit.
         ZSONObject deviceId = new ZSONObject();
-        deviceId.put("device_id", new ZSONArray(Arrays.asList("localDeviceId"))); // Specify the local device.
+        deviceId.put("device_id", new ZSONArray(Collections.singletonList("localDeviceId"))); // Specify the local device.
         zsonObject.put(SearchParameter.DEVICE_ID_LIST, deviceId);
 
         // Start a search by specifying the value range of a specified index field.

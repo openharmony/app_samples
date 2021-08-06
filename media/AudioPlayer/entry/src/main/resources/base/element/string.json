@@ -27,6 +27,14 @@
     {
       "name": "jump",
       "value": "TO PLAY ONLINE AUDIO"
+    },
+    {
+      "name": "slash",
+      "value": "/"
+    },
+    {
+      "name": "http",
+      "value": "https://"
     }
   ]
 }

@@ -11,6 +11,14 @@
     {
       "name": "serviceability_description",
       "value": "hap sample empty service"
+    },
+    {
+      "name": "distribute_server",
+      "value": "Distribute Server"
+    },
+    {
+      "name": "text_ok",
+      "value": "O K"
     }
   ]
 }

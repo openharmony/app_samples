@@ -15,18 +15,12 @@
 
 package ohos.samples.audioplayer;
 
+import ohos.agp.components.*;
 import ohos.samples.audioplayer.utils.LogUtil;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.Operation;
-import ohos.agp.components.Button;
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.ListContainer;
-import ohos.agp.components.RecycleItemProvider;
-import ohos.agp.components.Text;
 import ohos.bundle.ElementName;
 import ohos.bundle.IBundleManager;
 import ohos.media.common.AVMetadata;
@@ -131,7 +125,7 @@ public class AVPlayClient extends Ability {
     /**
      * create the list of audios
      */
-    class AVElementItemProvider extends RecycleItemProvider {
+    class AVElementItemProvider extends BaseItemProvider {
         @Override
         public int getCount() {
             return avElementList.size();
@@ -149,9 +143,9 @@ public class AVPlayClient extends Ability {
 
         @Override
         public Component getComponent(int position, Component component, ComponentContainer componentContainer) {
-            final Object item = avElementList.get(position);
-            if (component == null && item instanceof AVElement) {
-                String itemText = ((AVElement) item).getAVDescription().getTitle().toString();
+            final AVElement item = avElementList.get(position);
+            if (component == null && item != null) {
+                String itemText = item.getAVDescription().getTitle().toString();
                 Text text = (Text) LayoutScatter.getInstance(AVPlayClient.this)
                     .parse(ResourceTable.Layout_list_item, null, false);
                 text.setText(itemText);
@@ -160,9 +154,9 @@ public class AVPlayClient extends Ability {
                 return component;
             }
         }
-    };
+    }
 
-    private AVConnectionCallback avConnectionCallback = new AVConnectionCallback() {
+    private final AVConnectionCallback avConnectionCallback = new AVConnectionCallback() {
         @Override
         public void onConnected() {
             LogUtil.info(TAG + "-AVConnectionCallback", "onConnected");
@@ -183,7 +177,7 @@ public class AVPlayClient extends Ability {
         }
     };
 
-    private AVControllerCallback avControllerCallback = new AVControllerCallback() {
+    private final AVControllerCallback avControllerCallback = new AVControllerCallback() {
         @Override
         public void onAVMetadataChanged(AVMetadata metadata) {
             // this will be called with avSession.setAVMetadata() called on service.
@@ -250,7 +244,7 @@ public class AVPlayClient extends Ability {
         }
     };
 
-    private AVSubscriptionCallback avSubscriptionCallback = new AVSubscriptionCallback() {
+    private final AVSubscriptionCallback avSubscriptionCallback = new AVSubscriptionCallback() {
         @Override
         public void onAVElementListLoaded(String parentId, List<AVElement> children) {
             // this will be called with onLoadAVElementList() called on service.
