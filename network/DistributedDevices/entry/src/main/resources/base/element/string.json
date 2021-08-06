@@ -7,6 +7,22 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "name",
+      "value": "Name"
+    },
+    {
+      "name": "status",
+      "value": "Status"
+    },
+    {
+      "name": "type",
+      "value": "Type"
+    },
+    {
+      "name": "no_remote_device_found",
+      "value": "No remote device found"
     }
   ]
 }

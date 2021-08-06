@@ -173,8 +173,6 @@ public class MainAbilitySlice extends AbilitySlice {
         ImageSource.SourceOptions srcOpts = new ImageSource.SourceOptions();
         srcOpts.formatHint = "image/jpeg";
         ImageSource imageSource = ImageSource.create(jpgCachePath, srcOpts);
-        int format = imageSource.getThumbnailFormat();
-        byte[] thumbnailBytes = imageSource.getImageThumbnailBytes();
         ImageSource.DecodingOptions decodingOpts = new ImageSource.DecodingOptions();
         PixelMap thumbnailPixelMap = imageSource.createThumbnailPixelmap(decodingOpts, false);
         String location = imageSource.getImagePropertyString(PropertyKey.Exif.SUBJECT_LOCATION);
@@ -220,7 +218,7 @@ public class MainAbilitySlice extends AbilitySlice {
         showResultText.setText(
             "This pixelMap detail info :" + System.lineSeparator() + "capacity = " + capacity + System.lineSeparator()
                 + "bytesNumber = " + bytesNumber + System.lineSeparator() + "rowBytes = " + rowBytes
-                + System.lineSeparator() + "ninePatchData = " + ninePatchData + System.lineSeparator());
+                + System.lineSeparator() + "ninePatchData = " + Arrays.toString(ninePatchData) + System.lineSeparator());
         pixelMap.release();
         pixelMap2.release();
     }

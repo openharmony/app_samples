@@ -25,7 +25,7 @@ import ohos.agp.components.ComponentContainer;
  * AiMainSlice
  */
 public class AiMainSlice extends AbilitySlice {
-    private AbilitySlice[] sliceArray = {
+    private final AbilitySlice[] sliceArray = {
         new TextRecognitionSlice(), new ImageSuperResolutionSlice(), new DocumentCorrectionSlice(),
         new QRCodeGenerationSlice(), new TextImageSuperResolutionSlice(), new WordSegmentationSlice(),
         new PartOfSpeechTaggingSlice(), new AssistantIntentionRecognitionSlice(), new IMIntentRecognitionSlice(),

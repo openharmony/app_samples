@@ -30,8 +30,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Mainability
@@ -52,11 +50,9 @@ public class MainAbility extends Ability {
         String[] permissions = {
             SystemPermission.WRITE_USER_STORAGE, SystemPermission.MICROPHONE
         };
-        List<String> permissionFiltered = Arrays.stream(permissions)
-            .filter(permission -> verifySelfPermission(permission) != IBundleManager.PERMISSION_GRANTED)
-            .collect(Collectors.toList());
 
-        requestPermissionsFromUser(permissionFiltered.toArray(new String[permissionFiltered.size()]), 0);
+        requestPermissionsFromUser(Arrays.stream(permissions)
+                .filter(permission -> verifySelfPermission(permission) != IBundleManager.PERMISSION_GRANTED).toArray(String[]::new), 0);
     }
 
     @Override

@@ -34,7 +34,7 @@ public class VideoElementManager {
     private static final String TAG = VideoElementManager.class.getSimpleName();
     private static final String WEB_VIDEO_PATH = "https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/"
             + "cae-legoup-video-target/93be3d88-9fc2-4fbd-bd14-833bca731ca7.mp4";
-    private List<AVElement> avElements = new ArrayList<>();
+    private final List<AVElement> avElements = new ArrayList<>();
 
     /**
      * The construction method of this class

@@ -27,7 +27,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Scan"
+        ohos:text="$string:scan"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -40,7 +40,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Get Connected Info"
+        ohos:text="$string:get_connected_info"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -53,7 +53,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Get Country Code"
+        ohos:text="$string:get_connected_info"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -66,7 +66,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Get Support Feature"
+        ohos:text="$string:get_support_feature"
         ohos:text_alignment="center"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>

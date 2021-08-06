@@ -23,8 +23,6 @@ import ohos.bundle.IBundleManager;
 import ohos.security.SystemPermission;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * MainAbility
@@ -39,13 +37,11 @@ public class MainAbility extends Ability {
 
     private void requestPermissions() {
         String[] permissions = {
-            SystemPermission.WRITE_USER_STORAGE, SystemPermission.READ_USER_STORAGE, SystemPermission.CAMERA,
-            SystemPermission.MICROPHONE, SystemPermission.LOCATION
+                SystemPermission.WRITE_USER_STORAGE, SystemPermission.READ_USER_STORAGE, SystemPermission.CAMERA,
+                SystemPermission.MICROPHONE, SystemPermission.LOCATION
         };
-        List<String> permissionFiltered = Arrays.stream(permissions)
-            .filter(permission -> verifySelfPermission(permission) != IBundleManager.PERMISSION_GRANTED)
-            .collect(Collectors.toList());
-        requestPermissionsFromUser(permissionFiltered.toArray(new String[permissionFiltered.size()]), 0);
+        requestPermissionsFromUser(Arrays.stream(permissions)
+                .filter(permission -> verifySelfPermission(permission) != IBundleManager.PERMISSION_GRANTED).toArray(String[]::new), 0);
     }
 
     @Override

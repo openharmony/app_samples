@@ -30,7 +30,7 @@
         ohos:id="$+id:start"
         ohos:height="35vp"
         ohos:width="240vp"
-        ohos:text="Start"
+        ohos:text="$string:start"
         ohos:margin="10vp"
         ohos:text_size="16fp"
         ohos:background_element="$graphic:button_bg"/>

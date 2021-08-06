@@ -45,14 +45,4 @@ public class LogUtil {
     public static void info(String tag, String msg) {
         HiLog.info(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, TAG_LOG + tag, msg));
     }
-
-    /**
-     * Print error log
-     *
-     * @param tag log tag
-     * @param msg log message
-     */
-    public static void error(String tag, String msg) {
-        HiLog.error(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, TAG_LOG + tag, msg));
-    }
 }

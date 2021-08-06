@@ -27,7 +27,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Register"
+        ohos:text="$string:register"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -39,7 +39,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Unregister"
+        ohos:text="$string:unregister"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 

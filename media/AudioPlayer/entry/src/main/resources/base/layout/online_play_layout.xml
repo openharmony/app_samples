@@ -20,7 +20,7 @@
 
     <Text
         ohos:id="$+id:input_uri"
-        ohos:text="https://"
+        ohos:text="$string:http"
         ohos:text_size="20fp"
         ohos:margin="30vp"
         ohos:text_color="#FF000000"

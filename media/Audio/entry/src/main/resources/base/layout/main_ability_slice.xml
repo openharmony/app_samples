@@ -26,7 +26,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Player"
+        ohos:text="$string:play"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -38,7 +38,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Recorder"
+        ohos:text="$string:recorder"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -50,7 +50,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="14vp"
         ohos:padding="10vp"
-        ohos:text="Short Sound Player"
+        ohos:text="$string:short_sound_palyer"
         ohos:text_alignment="left"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>

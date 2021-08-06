@@ -30,7 +30,6 @@ import ohos.ai.cv.common.VisionManager;
 import ohos.ai.cv.text.ITextDetector;
 import ohos.ai.cv.text.Text;
 import ohos.ai.cv.text.TextConfiguration;
-import ohos.ai.cv.text.TextDetectType;
 import ohos.media.image.PixelMap;
 
 /**
@@ -38,8 +37,6 @@ import ohos.media.image.PixelMap;
  */
 public class TextRecognitionSlice extends BaseSlice {
     private static final String IMAGE_PATH = "entry/resources/rawfile/text_recognition.png";
-
-    private Image originalImage;
 
     private TextField outText;
 
@@ -54,7 +51,7 @@ public class TextRecognitionSlice extends BaseSlice {
     }
 
     private void initComponents() {
-        originalImage = (Image) findComponentById(ResourceTable.Id_image);
+        Image originalImage = (Image) findComponentById(ResourceTable.Id_image);
         outText = (TextField) findComponentById(ResourceTable.Id_out_text);
         Component startButton = findComponentById(ResourceTable.Id_start);
         startButton.setClickedListener(this::doSuperResolution);
@@ -87,7 +84,7 @@ public class TextRecognitionSlice extends BaseSlice {
         aiTitle.setText("Text Recognition");
     }
 
-    private ConnectionCallback connectionCallback = new ConnectionCallback() {
+    private final ConnectionCallback connectionCallback = new ConnectionCallback() {
         @Override
         public void onServiceConnect() {
             LogUtil.info(getLocalClassName(), "Service connect succeeded");

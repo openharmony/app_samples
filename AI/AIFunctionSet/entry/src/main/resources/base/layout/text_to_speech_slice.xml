@@ -26,7 +26,7 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:textfield_bg"
         ohos:focusable="focus_adaptable"
-        ohos:hint="Please enter a keyword"
+        ohos:hint="$string:enter_keyword_tips"
         ohos:left_margin="10vp"
         ohos:padding="10vp"
         ohos:right_margin="10vp"
@@ -39,6 +39,6 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="15vp"
-        ohos:text="Start"
+        ohos:text="$string:start"
         ohos:text_size="16fp"/>
 </DirectionalLayout>

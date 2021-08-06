@@ -40,7 +40,7 @@ public class SocketClientSlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private static int PORT = 8888;
+    private static final int PORT = 8888;
 
     private Text inputText;
 

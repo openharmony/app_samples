@@ -7,6 +7,74 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "scan",
+      "value": "Scan"
+    },
+    {
+      "name": "get_connected_info",
+      "value": "Get Connected Info"
+    },
+    {
+      "name": "get_country_code",
+      "value": "Get Country Code"
+    },
+    {
+      "name": "get_support_feature",
+      "value": "Get Support Feature"
+    },
+    {
+      "name": "basic_features",
+      "value": "Basic Features"
+    },
+    {
+      "name": "untrusted_config",
+      "value": "Untrusted Config"
+    },
+    {
+      "name": "p2p",
+      "value": "P2P"
+    },
+    {
+      "name": "wlan_notification",
+      "value": "Wlan Notification"
+    },
+    {
+      "name": "discover",
+      "value": "Discover"
+    },
+    {
+      "name": "stop_discover",
+      "value": "Stop Discover"
+    },
+    {
+      "name": "create_group",
+      "value": "Create Group"
+    },
+    {
+      "name": "remove_group",
+      "value": "Remove Group"
+    },
+    {
+      "name": "disconnect",
+      "value": "Disconnect"
+    },
+    {
+      "name": "add_untrusted_wifi",
+      "value": "Add Untrusted Wifi"
+    },
+    {
+      "name": "remove_untrusted_wifi",
+      "value": "Remove Untrusted Wifi"
+    },
+    {
+      "name": "register",
+      "value": "Register"
+    },
+    {
+      "name": "unregister",
+      "value": "Unregister"
     }
   ]
 }

@@ -38,7 +38,7 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="20vp"
-        ohos:text="Start Server"
+        ohos:text="$string:start_server"
         ohos:text_size="16fp"/>
 
     <Text

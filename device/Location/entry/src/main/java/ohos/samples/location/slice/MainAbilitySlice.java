@@ -54,13 +54,11 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private static final String PERM_LOCATION = "ohos.permission.LOCATION";
 
-    private LocatorResult locatorResult = new LocatorResult();
+    private final LocatorResult locatorResult = new LocatorResult();
 
     private Context context;
 
     private Locator locator;
-
-    private RequestParam requestParam;
 
     private GeoConvert geoConvert;
 
@@ -110,7 +108,7 @@ public class MainAbilitySlice extends AbilitySlice {
         geoAddressInfoText.append("CountryName : " + locationDetails.getCountryName());
     }
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             if (event.eventId == EVENT_ID) {
@@ -121,15 +119,15 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void register(Context ability) {
         context = ability;
-        requestPermission(PERM_LOCATION);
+        requestPermission();
     }
 
     private void registerLocationEvent() {
-        if (hasPermissionGranted(PERM_LOCATION)) {
+        if (hasPermissionGranted()) {
             int timeInterval = 0;
             int distanceInterval = 0;
             locator = new Locator(context);
-            requestParam = new RequestParam(RequestParam.PRIORITY_ACCURACY, timeInterval, distanceInterval);
+            RequestParam requestParam = new RequestParam(RequestParam.PRIORITY_ACCURACY, timeInterval, distanceInterval);
             locator.startLocating(requestParam, locatorResult);
         }
     }
@@ -140,13 +138,13 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    private boolean hasPermissionGranted(String permission) {
-        return context.verifySelfPermission(permission) == IBundleManager.PERMISSION_GRANTED;
+    private boolean hasPermissionGranted() {
+        return context.verifySelfPermission(PERM_LOCATION) == IBundleManager.PERMISSION_GRANTED;
     }
 
-    private void requestPermission(String permission) {
-        if (context.verifySelfPermission(permission) != IBundleManager.PERMISSION_GRANTED) {
-            context.requestPermissionsFromUser(new String[] {permission}, 0);
+    private void requestPermission() {
+        if (context.verifySelfPermission(PERM_LOCATION) != IBundleManager.PERMISSION_GRANTED) {
+            context.requestPermissionsFromUser(new String[] {PERM_LOCATION}, 0);
         }
     }
 
@@ -188,7 +186,7 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    private boolean fillGeoInfo(LocationBean locationDetails, double geoLatitude, double geoLongitude) {
+    private void fillGeoInfo(LocationBean locationDetails, double geoLatitude, double geoLongitude) {
         if (geoConvert == null) {
             geoConvert = new GeoConvert();
         }
@@ -198,13 +196,11 @@ public class MainAbilitySlice extends AbilitySlice {
                 if (!gaList.isEmpty()) {
                     GeoAddress geoAddress = gaList.get(0);
                     setGeo(locationDetails, geoAddress);
-                    return true;
                 }
             } catch (IllegalArgumentException | IOException e) {
                 HiLog.error(LABEL_LOG, "%{public}s", "fillGeoInfo exception");
             }
         }
-        return false;
     }
 
     private void setGeo(LocationBean locationDetails, GeoAddress geoAddress) {

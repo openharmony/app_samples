@@ -63,7 +63,7 @@ public class AudioRecorderSlice extends AbilitySlice {
 
     private Text pathText;
 
-    private AudioCapturerCallback callback = new AudioCapturerCallback() {
+    private final AudioCapturerCallback callback = new AudioCapturerCallback() {
         @Override
         public void onCapturerConfigChanged(List<AudioCapturerConfig> configs) {
             HiLog.info(LABEL_LOG, "%{public}s", "on capturer config changed");
@@ -126,7 +126,7 @@ public class AudioRecorderSlice extends AbilitySlice {
             isRecording = false;
             recordButton.setText("Start");
             showTips("Stop record");
-            pathText.setText("Path:" + getFilesDir() + File.separator + "record.mp3");
+            pathText.setText("Path:" + getFilesDir() + File.separator + "record.pcm");
         }
     }
 
@@ -141,7 +141,7 @@ public class AudioRecorderSlice extends AbilitySlice {
 
     private void runRecord() {
         getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(() -> {
-            file = new File(getFilesDir() + File.separator + "record.mp3");
+            file = new File(getFilesDir() + File.separator + "record.pcm");
             try (FileOutputStream outputStream = new FileOutputStream(file)) {
                 byte[] bytes = new byte[BUFFER_SIZE];
                 while (audioCapturer.read(bytes, 0, bytes.length) != -1) {

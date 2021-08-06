@@ -34,7 +34,7 @@
             ohos:weight="1"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Discover"
+            ohos:text="$string:discover"
             ohos:right_margin="10vp"
             ohos:text_size="16fp"/>
 
@@ -45,7 +45,7 @@
             ohos:weight="1"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Stop Discover"
+            ohos:text="$string:stop_discover"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
 
@@ -65,7 +65,7 @@
             ohos:background_element="$graphic:button_background"
             ohos:right_margin="10vp"
             ohos:padding="10vp"
-            ohos:text="Create Group"
+            ohos:text="$string:create_group"
             ohos:text_size="16fp"/>
 
         <Button
@@ -75,14 +75,14 @@
             ohos:weight="1"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Remove Group"
+            ohos:text="$string:remove_group"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
 
     <Button
         ohos:id="$+id:disconnect_button"
         ohos:text_size="16vp"
-        ohos:text="Disconnect"
+        ohos:text="$string:disconnect"
         ohos:padding="10vp"
         ohos:background_element="$graphic:button_background"
         ohos:left_margin="24vp"

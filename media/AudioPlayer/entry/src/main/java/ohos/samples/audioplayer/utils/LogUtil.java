@@ -34,16 +34,6 @@ public class LogUtil {
     }
 
     /**
-     * Print debug log
-     *
-     * @param tag log tag
-     * @param msg log message
-     */
-    public static void debug(String tag, String msg) {
-        HiLog.debug(LABEL_LOG, LOG_FORMAT, tag, msg);
-    }
-
-    /**
      * Print info log
      *
      * @param tag log tag

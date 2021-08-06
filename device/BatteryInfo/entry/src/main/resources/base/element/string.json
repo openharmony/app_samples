@@ -7,6 +7,14 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "get_battery_level",
+      "value": "Get Battery Level"
+    },
+    {
+      "name": "subscribe_battery_level",
+      "value": "Subscribe Battery Level"
     }
   ]
 }

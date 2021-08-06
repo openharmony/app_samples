@@ -15,6 +15,7 @@
 
 package ohos.samples.videoplayer.slice;
 
+import ohos.agp.components.*;
 import ohos.samples.videoplayer.ResourceTable;
 import ohos.samples.videoplayer.utils.LogUtil;
 import ohos.samples.videoplayer.utils.VideoElementManager;
@@ -22,13 +23,6 @@ import ohos.samples.videoplayer.utils.VideoPlayerPlugin;
 
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.DirectionalLayout;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.ListContainer;
-import ohos.agp.components.RecycleItemProvider;
-import ohos.agp.components.Text;
 import ohos.agp.components.surfaceprovider.SurfaceProvider;
 import ohos.agp.graphics.Surface;
 import ohos.agp.graphics.SurfaceOps;
@@ -49,19 +43,9 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private VideoPlayerPlugin videoPlayerPlugin;
 
-    private Component refreshButton;
-
-    private Component playButton;
-
-    private Component pauseButton;
-
-    private Component seekButton;
-
     private ListContainer listContainer;
 
     private List<AVElement> avElements = new ArrayList<>();
-
-    private VideoElementManager videoElementManager;
 
     private Surface surface;
 
@@ -79,8 +63,10 @@ public class MainAbilitySlice extends AbilitySlice {
     private void addSurfaceProvider() {
         surfaceProvider = new SurfaceProvider(this);
 
-        surfaceProvider.getSurfaceOps().get().addCallback(new SurfaceCallBack());
-        surfaceProvider.pinToZTop(true);
+        if (surfaceProvider.getSurfaceOps().isPresent()) {
+            surfaceProvider.getSurfaceOps().get().addCallback(new SurfaceCallBack());
+            surfaceProvider.pinToZTop(true);
+        }
 
         DirectionalLayout directionalLayout = (DirectionalLayout) findComponentById(ResourceTable.Id_directionalLayout);
         directionalLayout.addComponent(surfaceProvider);
@@ -92,10 +78,10 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void initComponents() {
         titleText = (Text) findComponentById(ResourceTable.Id_videoTitle_text);
-        refreshButton = findComponentById(ResourceTable.Id_refresh_list_button);
-        playButton = findComponentById(ResourceTable.Id_play_button);
-        pauseButton = findComponentById(ResourceTable.Id_pause_button);
-        seekButton = findComponentById(ResourceTable.Id_seek_button);
+        Component refreshButton = findComponentById(ResourceTable.Id_refresh_list_button);
+        Component playButton = findComponentById(ResourceTable.Id_play_button);
+        Component pauseButton = findComponentById(ResourceTable.Id_pause_button);
+        Component seekButton = findComponentById(ResourceTable.Id_seek_button);
         listContainer = (ListContainer) findComponentById(ResourceTable.Id_listContainer);
 
         playButton.setClickedListener((Component component) -> videoPlayerPlugin.startPlay());
@@ -114,7 +100,7 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void refreshList() {
-        videoElementManager = new VideoElementManager(getApplicationContext());
+        VideoElementManager videoElementManager = new VideoElementManager(getApplicationContext());
         avElements = videoElementManager.getAvElements();
         listContainer.setItemProvider(videoElementsListItemProvider);
     }
@@ -148,7 +134,7 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    class VideoElementsListItemProvider extends RecycleItemProvider {
+    class VideoElementsListItemProvider extends BaseItemProvider {
         @Override
         public int getCount() {
             return avElements.size();
@@ -170,7 +156,7 @@ public class MainAbilitySlice extends AbilitySlice {
             if (component == null) {
                 String itemText = item.getAVDescription().getTitle().toString();
                 Text text = (Text) LayoutScatter.getInstance(MainAbilitySlice.this)
-                    .parse(ResourceTable.Layout_list_item, null, false);
+                        .parse(ResourceTable.Layout_list_item, null, false);
                 text.setText(itemText);
                 return text;
             } else {

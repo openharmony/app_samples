@@ -29,9 +29,9 @@ import java.util.List;
  * ItemProvider
  */
 public class ItemProvider extends BaseItemProvider {
-    private Context context;
+    private final Context context;
 
-    private List<WifiP2pDevice> wifiP2pDevices;
+    private final List<WifiP2pDevice> wifiP2pDevices;
 
     public ItemProvider(Context abilitySliceContext, List<WifiP2pDevice> devices) {
         context = abilitySliceContext;

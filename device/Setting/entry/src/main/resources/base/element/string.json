@@ -7,6 +7,22 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "get_system_config",
+      "value": "Get System Config"
+    },
+    {
+      "name": "wifi_status",
+      "value": "wifi_status : "
+    },
+    {
+      "name": "bluetooth_status",
+      "value": "Bluetooth Status : "
+    },
+    {
+      "name": "airplane_status",
+      "value": "Airplane Mode Status : "
     }
   ]
 }

@@ -60,9 +60,8 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void initComponents() {
         batteryInfoText = (Text) findComponentById(ResourceTable.Id_battery_level_result);
-        findComponentById(ResourceTable.Id_get_battery_level).setClickedListener(listener -> {
-            batteryInfoText.setText(getBatteryInfo());
-        });
+        findComponentById(ResourceTable.Id_get_battery_level)
+                .setClickedListener(listener -> batteryInfoText.setText(getBatteryInfo()));
         Button subscribeBatteryChange = (Button) findComponentById(ResourceTable.Id_subscribe_battery_level_change);
         subscribeBatteryChange.setClickedListener(listener -> {
             if (!isSubscribedBatteryChange) {

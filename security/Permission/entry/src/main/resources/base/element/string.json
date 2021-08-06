@@ -7,6 +7,26 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "btn_obtain_permission",
+      "value": "Click on button to obtain permission"
+    },
+    {
+      "name": "req_location_permission",
+      "value": "Request Location permission"
+    },
+    {
+      "name": "req_microphone_permission",
+      "value": "Request Location permission"
+    },
+    {
+      "name": "req_calendar_permission",
+      "value": "Request Calendar permission"
+    },
+    {
+      "name": "req_storage_permission",
+      "value": "Request Storage permission"
     }
   ]
 }

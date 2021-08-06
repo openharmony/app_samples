@@ -7,6 +7,26 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "video",
+      "value": "Video"
+    },
+    {
+      "name": "play",
+      "value": "play"
+    },
+    {
+      "name": "pause",
+      "value": "pause"
+    },
+    {
+      "name": "seek",
+      "value": "seek"
+    },
+    {
+      "name": "refresh_list",
+      "value": "Refresh List"
     }
   ]
 }

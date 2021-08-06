@@ -43,7 +43,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private String result;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {
@@ -99,7 +99,7 @@ public class MainAbilitySlice extends AbilitySlice {
         ThreadPoolUtil.submit(() -> {
             int authenticationAction = biometricAuthentication.execAuthenticationAction(
                 BiometricAuthentication.AuthType.AUTH_TYPE_BIOMETRIC_FACE_ONLY,
-                BiometricAuthentication.SecureLevel.SECURE_LEVEL_S4, true, false, null);
+                BiometricAuthentication.SecureLevel.SECURE_LEVEL_S2, true, false, null);
             if (authenticationAction == 0) {
                 result = "Unlocked successfully";
                 handler.sendEvent(EVENT_MESSAGE_SUCCESS);
@@ -112,7 +112,12 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void cancelRecognition(Component component) {
         if (biometricAuthentication != null) {
-            biometricAuthentication.cancelAuthenticationAction();
+            int resultCode = biometricAuthentication.cancelAuthenticationAction();
+            if (resultCode == 0) {
+                resultText.setText("Cancel succeed.");
+            } else {
+                resultText.setText("Cancel failed,code = " + resultCode);
+            }
         }
     }
 

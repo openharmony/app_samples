@@ -33,9 +33,7 @@ import ohos.rpc.RemoteException;
 import ohos.utils.zson.ZSONObject;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Internal Ability
@@ -95,7 +93,7 @@ public class PreferencesInternalAbility extends AceInternalAbility {
                 checkLoginStatus(reply);
                 break;
             case SUBSCRIBE:
-                subscribe(data, reply, option);
+                subscribe(reply, option);
                 break;
             case GET_BACKGROUND_COLOR:
                 getBackgroundColor(reply);
@@ -169,9 +167,7 @@ public class PreferencesInternalAbility extends AceInternalAbility {
         reply.writeString(ZSONObject.toZSONString(saveResult));
     }
 
-    private void subscribe(MessageParcel data, MessageParcel reply, MessageOption option) {
-        Set<IRemoteObject> remoteObjectHandlers = new HashSet<>();
-        remoteObjectHandlers.add(data.readRemoteObject());
+    private void subscribe(MessageParcel reply, MessageOption option) {
         Map<String, Object> subscribeResult = new HashMap<>();
         subscribeResult.put(Constants.CODE, SUCCESS);
         subscribeResult.put(Constants.DATA, Constants.SUCCESS);

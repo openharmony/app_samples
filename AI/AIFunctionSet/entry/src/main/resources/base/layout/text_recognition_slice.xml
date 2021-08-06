@@ -32,7 +32,7 @@
         ohos:width="240vp"
         ohos:background_element="$graphic:button_bg"
         ohos:margin="20vp"
-        ohos:text="Start"
+        ohos:text="$string:start"
         ohos:text_size="16fp"/>
 
     <TextField

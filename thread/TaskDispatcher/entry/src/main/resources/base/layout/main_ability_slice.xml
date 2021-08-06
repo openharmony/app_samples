@@ -27,7 +27,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Sync Dispatch"
+        ohos:text="$string:sync_dispatch"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="50vp"/>
@@ -38,7 +38,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Async Dispatch"
+        ohos:text="$string:async_dispatch"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -49,7 +49,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Delay Dispatch"
+        ohos:text="$string:delay_dispatch"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -60,7 +60,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Dispatch Group"
+        ohos:text="$string:dispatch_group"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -71,7 +71,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Revoke Task"
+        ohos:text="$string:revoke_task"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -82,7 +82,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Sync Dispatch Barrier"
+        ohos:text="$string:sync_dispatch_barrier"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -93,7 +93,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Async Dispatch Barrier"
+        ohos:text="$string:async_dispatch_barrier"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
@@ -104,7 +104,7 @@
         ohos:width="300vp"
         ohos:background_element="$graphic:button_bg"
         ohos:padding="5vp"
-        ohos:text="Apply Dispatch"
+        ohos:text="$string:apply_Dispatch"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>

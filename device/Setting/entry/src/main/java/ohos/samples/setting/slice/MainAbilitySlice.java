@@ -69,7 +69,7 @@ public class MainAbilitySlice extends AbilitySlice {
         setAirplaneModeStatus(SystemSettings.getValue(dataAbilityHelper, SystemSettings.General.AIRPLANE_MODE_STATUS));
     }
 
-    private IDataAbilityObserver dataAbilityObserver = new IDataAbilityObserver() {
+    private final IDataAbilityObserver dataAbilityObserver = new IDataAbilityObserver() {
         @Override
         public void onChange() {
             String wifiFormat = SystemSettings.getValue(dataAbilityHelper, SystemSettings.Wireless.WIFI_STATUS);

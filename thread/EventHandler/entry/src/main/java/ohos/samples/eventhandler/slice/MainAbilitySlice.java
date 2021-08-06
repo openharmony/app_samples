@@ -72,9 +72,8 @@ public class MainAbilitySlice extends AbilitySlice {
     private void sendInnerEvent(Component component) {
         stringBuffer = new StringBuffer();
         long param = 0L;
-        Object object = null;
-        InnerEvent normalInnerEvent = InnerEvent.get(EVENT_MESSAGE_NORMAL, param, object);
-        InnerEvent delayInnerEvent = InnerEvent.get(EVENT_MESSAGE_DELAY, param, object);
+        InnerEvent normalInnerEvent = InnerEvent.get(EVENT_MESSAGE_NORMAL, param, null);
+        InnerEvent delayInnerEvent = InnerEvent.get(EVENT_MESSAGE_DELAY, param, null);
         handler.sendEvent(normalInnerEvent, EventHandler.Priority.IMMEDIATE);
         handler.sendEvent(delayInnerEvent, DELAY_TIME, EventHandler.Priority.IMMEDIATE);
     }
@@ -82,11 +81,11 @@ public class MainAbilitySlice extends AbilitySlice {
     private void postRunnableTask(Component component) {
         stringBuffer = new StringBuffer();
         Runnable task1 = () -> {
-            stringBuffer.append("Post runnableTask1 done" + System.lineSeparator());
+            stringBuffer.append("Post runnableTask1 done").append(System.lineSeparator());
             getUITaskDispatcher().asyncDispatch(() -> resultText.setText(stringBuffer.toString()));
         };
         Runnable task2 = () -> {
-            stringBuffer.append("Post runnableTask2 done" + System.lineSeparator());
+            stringBuffer.append("Post runnableTask2 done").append(System.lineSeparator());
             getUITaskDispatcher().asyncDispatch(() -> resultText.setText(stringBuffer.toString()));
         };
         handler.postTask(task1, EventHandler.Priority.IMMEDIATE);
@@ -109,11 +108,11 @@ public class MainAbilitySlice extends AbilitySlice {
         public void processEvent(InnerEvent event) {
             switch (event.eventId) {
                 case EVENT_MESSAGE_NORMAL:
-                    stringBuffer.append("Received an innerEvent message" + System.lineSeparator());
+                    stringBuffer.append("Received an innerEvent message").append(System.lineSeparator());
                     getUITaskDispatcher().asyncDispatch(() -> resultText.setText(stringBuffer.toString()));
                     break;
                 case EVENT_MESSAGE_DELAY:
-                    stringBuffer.append("Received an innerEvent delay message" + System.lineSeparator());
+                    stringBuffer.append("Received an innerEvent delay message").append(System.lineSeparator());
                     getUITaskDispatcher().asyncDispatch(() -> resultText.setText(stringBuffer.toString()));
                     break;
                 case EVENT_MESSAGE_CROSS_THREAD:
@@ -129,8 +128,7 @@ public class MainAbilitySlice extends AbilitySlice {
                         };
                         int testEventId = 1;
                         long testParam = 0;
-                        Object testObject = null;
-                        InnerEvent innerEvent = InnerEvent.get(testEventId, testParam, testObject);
+                        InnerEvent innerEvent = InnerEvent.get(testEventId, testParam, null);
                         eventHandler.sendEvent(innerEvent);
                     }
                     break;

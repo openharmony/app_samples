@@ -22,7 +22,22 @@
 3.  以下路径下的应用示例支持在OpenHarmony上运行，其余应用示例仅支持在HarmonyOS上运行。
     -   common/Clock
     -   common/JsHelloWorld
+    -   common/DistributeCalc
+    -   common/ECG
+    -   common/Flashlight
     -   ability/JsDistributedMusicPlayer
+    -   common/DistributeCalc
+    -   UI/AtomicLayout
+    -   UI/Badge
+    -   UI/chart
+    -   UI/JsAnimationStyle
+    -   UI/Picker
+    -   UI/Popup
+    -   UI/RefreshContainer
+    -   UI/Stack
+    -   UI/StepNavigator
+    -   UI/Swiper
+    -   UI/Tabs
 
 
 ## 相关仓<a name="section741114082513"></a>

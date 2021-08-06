@@ -44,7 +44,7 @@ public final class RemoteAbility extends Ability {
 
     private static final int DIALOG_CORNER_RADIUS = 30;
 
-    private RemoteAgentStub remoteAgent = new RemoteAgentStub(ABILITY_DESCRIPTION) {
+    private final RemoteAgentStub remoteAgent = new RemoteAgentStub(ABILITY_DESCRIPTION) {
         @Override
         public void setRemoteObject() {
             LogUtil.info(TAG, " RemoteAgentStub setRemoteObject");
@@ -57,14 +57,14 @@ public final class RemoteAbility extends Ability {
         LogUtil.info(TAG, "onConnect Success , ConnectedDeviceName : " + connectedDeviceName);
         super.onConnect(intent);
         showDialog("Connect Success");
-        showNotification(this, NOTIFICATION_ID, "DistributedServer message", "Connect Success");
+        showNotification(this, "Connect Success");
         return remoteAgent;
     }
 
     @Override
     public void onDisconnect(Intent intent) {
         super.onDisconnect(intent);
-        showNotification(this, NOTIFICATION_ID, "DistributedServer message", "Disconnected");
+        showNotification(this, "Disconnected");
         showDialog("Disconnected");
         cancelBackgroundRunning();
     }
@@ -76,14 +76,14 @@ public final class RemoteAbility extends Ability {
         cancelBackgroundRunning();
     }
 
-    private void showNotification(Ability ability, int notificationId, String title, String text) {
+    private void showNotification(Ability ability, String text) {
         NotificationRequest.NotificationNormalContent content = new NotificationRequest.NotificationNormalContent();
-        content.setTitle(title).setText(text);
+        content.setTitle("DistributedServer message").setText(text);
         NotificationRequest.NotificationContent notificationContent = new NotificationRequest.NotificationContent(
             content);
-        NotificationRequest request = new NotificationRequest(notificationId);
+        NotificationRequest request = new NotificationRequest(NOTIFICATION_ID);
         request.setContent(notificationContent);
-        ability.keepBackgroundRunning(notificationId, request);
+        ability.keepBackgroundRunning(NOTIFICATION_ID, request);
         try {
             NotificationHelper.publishNotification(request);
         } catch (RemoteException e) {

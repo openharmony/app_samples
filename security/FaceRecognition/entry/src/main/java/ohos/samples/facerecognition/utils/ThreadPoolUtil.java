@@ -35,7 +35,7 @@ public class ThreadPoolUtil {
 
     private static final AtomicInteger THREAD_ID = new AtomicInteger(1);
 
-    private static ThreadPoolExecutor executor = new ThreadPoolExecutor(CORE_COUNT, THREAD_COUNT, KEEP_ALIVE,
+    private static final ThreadPoolExecutor executor = new ThreadPoolExecutor(CORE_COUNT, THREAD_COUNT, KEEP_ALIVE,
         TimeUnit.SECONDS, new ArrayBlockingQueue<>(WORK_QUEUE_SIZE), new CommonThreadFactory());
 
     private ThreadPoolUtil() {
@@ -57,7 +57,7 @@ public class ThreadPoolUtil {
     static class CommonThreadFactory implements ThreadFactory {
         @Override
         public Thread newThread(Runnable runnable) {
-            String threadName = null;
+            String threadName;
             if (THREAD_ID.get() == Integer.MAX_VALUE) {
                 threadName = "threadpool-common-" + THREAD_ID.getAndSet(1);
             } else {

@@ -38,7 +38,7 @@ import java.util.Optional;
 public class AVElementManager {
     private static final String TAG = AVElementManager.class.getSimpleName();
 
-    private List<AVElement> avElements = new ArrayList<>();
+    private final List<AVElement> avElements = new ArrayList<>();
 
     private AVElement current;
 

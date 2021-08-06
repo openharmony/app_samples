@@ -28,7 +28,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Play Music Sound"
+        ohos:text="$string:play_music_sound"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
 
@@ -42,7 +42,7 @@
         ohos:top_margin="20vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Play Tone Sound"
+        ohos:text="$string:play_tone_sound"
         ohos:text_size="16vp"/>
 
     <Button

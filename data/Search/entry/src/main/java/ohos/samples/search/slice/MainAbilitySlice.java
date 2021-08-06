@@ -104,7 +104,7 @@ public class MainAbilitySlice extends AbilitySlice {
         Component btnSearchByPage = findComponentById(ResourceTable.Id_btnSearchByPage);
         btnSearchByPage.setClickedListener(this::searchByPage);
 
-        Component searchComponent = findComponentById(ResourceTable.Id_searchResult);;
+        Component searchComponent = findComponentById(ResourceTable.Id_searchResult);
         if (searchComponent instanceof Text) {
             searchResult = (Text) searchComponent;
         }

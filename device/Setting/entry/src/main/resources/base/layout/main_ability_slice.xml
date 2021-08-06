@@ -23,7 +23,7 @@
     <Text
         ohos:height="35vp"
         ohos:width="match_parent"
-        ohos:text="Get System Config"
+        ohos:text="$string:get_system_config"
         ohos:text_alignment="center"
         ohos:text_size="22fp"
         ohos:top_margin="30vp"/>
@@ -38,7 +38,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:left_padding="15vp"
-            ohos:text="WIFI Status : "
+            ohos:text="$string:wifi_status"
             ohos:text_size="16fp"/>
 
         <Text
@@ -58,7 +58,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:left_padding="15vp"
-            ohos:text="Bluetooth Status : "
+            ohos:text="$string:bluetooth_status"
             ohos:text_size="16fp"/>
 
         <Text
@@ -78,7 +78,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:left_padding="15vp"
-            ohos:text="Airplane Mode Status : "
+            ohos:text="$string:airplane_status"
             ohos:text_size="16fp"/>
 
         <Text

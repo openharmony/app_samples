@@ -7,6 +7,14 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "take_photo",
+      "value": "Take Photo"
+    },
+    {
+      "name": "video_record",
+      "value": "Video Record"
     }
   ]
 }

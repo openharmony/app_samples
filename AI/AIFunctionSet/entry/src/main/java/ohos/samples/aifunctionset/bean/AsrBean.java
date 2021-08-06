@@ -45,7 +45,7 @@ public class AsrBean {
     /**
      * Speech recognition result
      */
-    public class Result {
+    public static class Result {
         private double confidence;
 
         private String ori_word;

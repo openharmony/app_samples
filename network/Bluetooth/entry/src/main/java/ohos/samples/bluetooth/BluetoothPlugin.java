@@ -58,7 +58,7 @@ public class BluetoothPlugin {
 
     private CommonEventSubscriber commonEventSubscriber = null;
 
-    private Set<BluetoothRemoteDevice> availableDevices = new LinkedHashSet<>();
+    private final Set<BluetoothRemoteDevice> availableDevices = new LinkedHashSet<>();
 
     private AbilityContext mainSliceContext;
 
@@ -222,8 +222,7 @@ public class BluetoothPlugin {
     }
 
     private void handleDevicePairState(Intent intent) {
-        BluetoothRemoteDevice btRemoteDevice = intent.getParcelableParam(
-            BluetoothRemoteDevice.REMOTE_DEVICE_PARAM_DEVICE);
+        BluetoothRemoteDevice btRemoteDevice = intent.getSequenceableParam(BluetoothRemoteDevice.REMOTE_DEVICE_PARAM_DEVICE);
         if (btRemoteDevice.getPairState() == BluetoothRemoteDevice.PAIR_STATE_PAIRED) {
             updateAvailableDeviceList(btRemoteDevice);
             updatePairedDeviceList();
@@ -240,7 +239,7 @@ public class BluetoothPlugin {
     }
 
     private void handleBluetoothDeviceDiscovered(Intent intent) {
-        BluetoothRemoteDevice btRemoteDevice = intent.getParcelableParam(
+        BluetoothRemoteDevice btRemoteDevice = intent.getSequenceableParam(
             BluetoothRemoteDevice.REMOTE_DEVICE_PARAM_DEVICE);
         if (btRemoteDevice.getPairState() != BluetoothRemoteDevice.PAIR_STATE_PAIRED) {
             availableDevices.add(btRemoteDevice);

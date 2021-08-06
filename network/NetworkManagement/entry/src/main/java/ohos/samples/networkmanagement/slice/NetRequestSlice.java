@@ -113,7 +113,7 @@ public class NetRequestSlice extends AbilitySlice {
         });
     }
 
-    private NetStatusCallback callback = new NetStatusCallback() {
+    private final NetStatusCallback callback = new NetStatusCallback() {
         @Override
         public void onAvailable(NetHandle handle) {
             HiLog.info(LABEL_LOG, "%{public}s", "NetStatusCallback onAvailable");

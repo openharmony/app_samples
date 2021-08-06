@@ -33,7 +33,7 @@ import java.util.List;
  * BluetoothItemProvider extends BaseItemProvider
  */
 public class BluetoothItemProvider extends BaseItemProvider {
-    private AbilityContext context;
+    private final AbilityContext context;
 
     private List<BluetoothDevice> bluetoothDeviceList;
 

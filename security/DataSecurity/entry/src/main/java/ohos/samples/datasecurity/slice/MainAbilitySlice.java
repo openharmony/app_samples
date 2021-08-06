@@ -116,12 +116,14 @@ public class MainAbilitySlice extends AbilitySlice {
     private void encrypt() {
         try {
             Optional<KeyPair> keyPairOptional = getSecKey();
-            KeyPair keyPair = keyPairOptional.get();
-            Cipher cipher = Cipher.getInstance(ENCRYPT_ALGORITHM, PROVIDER);
-            cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
-            byte[] bytes = cipher.doFinal(PLAIN_TEXT.getBytes(StandardCharsets.UTF_8));
-            result = Base64.getEncoder().encodeToString(bytes);
-            resultText.setText(result);
+            if(keyPairOptional.isPresent()) {
+                KeyPair keyPair = keyPairOptional.get();
+                Cipher cipher = Cipher.getInstance(ENCRYPT_ALGORITHM, PROVIDER);
+                cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
+                byte[] bytes = cipher.doFinal(PLAIN_TEXT.getBytes(StandardCharsets.UTF_8));
+                result = Base64.getEncoder().encodeToString(bytes);
+                resultText.setText(result);
+            }
         } catch (NoSuchAlgorithmException | NoSuchPaddingException | NoSuchProviderException
             | InvalidKeyException | BadPaddingException | IllegalBlockSizeException e) {
             HiLog.error(LABEL_LOG, "%{public}s", "encrypt exception.");
@@ -131,13 +133,12 @@ public class MainAbilitySlice extends AbilitySlice {
     private void decrypt() {
         if (Objects.isNull(result) || PLAIN_TEXT.equals(result)) {
             HiLog.error(LABEL_LOG, "%{public}s", "result is null or " + PLAIN_TEXT.equals(result));
-            return;
         } else {
             try {
                 KeyStore keyStore = KeyStore.getInstance(KEY_STORE);
                 keyStore.load(null);
                 Key key = keyStore.getKey(KEY_PAIR_ALIAS, null);
-                PrivateKey privateKey = null;
+                PrivateKey privateKey;
                 if (key instanceof PrivateKey) {
                     privateKey = (PrivateKey) key;
                 } else {

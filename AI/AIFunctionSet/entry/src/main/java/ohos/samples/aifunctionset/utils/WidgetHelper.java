@@ -36,15 +36,14 @@ public final class WidgetHelper {
      * @return PixelMap pixelMap
      */
     public static PixelMap getPixelMapFromRaw(Context context, String path) {
-        PixelMap pixelMap = null;
         try {
             RawFileEntry rawFileEntry = context.getResourceManager().getRawFileEntry(path);
             Resource resource = rawFileEntry.openRawFile();
             ImageSource imageSource = ImageSource.create(resource, new ImageSource.SourceOptions());
-            pixelMap = imageSource.createPixelmap(null);
+            return imageSource.createPixelmap(null);
         } catch (IOException e) {
             LogUtil.error("getPixelMapFromRaw", "IOException :" + e.toString());
         }
-        return pixelMap;
+        return null;
     }
 }

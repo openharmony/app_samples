@@ -43,7 +43,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private DeviceProvider deviceProvider;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             deviceProvider.updateData(getDeviceList());
@@ -74,7 +74,7 @@ public class MainAbilitySlice extends AbilitySlice {
         DeviceManager.registerDeviceStateCallback(iDeviceStateCallback);
     }
 
-    private IDeviceStateCallback iDeviceStateCallback = new IDeviceStateCallback() {
+    private final IDeviceStateCallback iDeviceStateCallback = new IDeviceStateCallback() {
         @Override
         public void onDeviceOffline(String deviceId, int deviceType) {
             LogUtil.info(TAG, "DeviceOffline : " + deviceId);
