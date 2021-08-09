@@ -24,7 +24,7 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:margin="20vp"
-        ohos:text="Squared Result"
+        ohos:text="$string:second_text"
         ohos:text_color="#ff000000"
         ohos:text_alignment="center"
         ohos:text_size="15fp" />
@@ -34,7 +34,7 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:margin="20vp"
-        ohos:text="12"
+        ohos:text="$string:number"
         ohos:text_color="#ff000000"
         ohos:text_alignment="center"
         ohos:text_size="25fp" />
@@ -44,7 +44,7 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:padding="10vp"
-        ohos:text="Back First Ability"
+        ohos:text="$string:second_back_first"
         ohos:text_size="15fp"
         ohos:background_element="$graphic:button_bg" />
 

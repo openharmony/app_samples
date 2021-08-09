@@ -25,7 +25,7 @@
         ohos:height="match_parent"
         ohos:width="match_content"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="I'm second app."
+        ohos:text="$string:text"
         ohos:text_size="16fp"/>
 
 </DirectionalLayout>

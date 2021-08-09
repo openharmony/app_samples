@@ -30,7 +30,7 @@ import static ohos.samples.delegator.utils.Const.RESULT_OK;
  * @since 2021-05-19
  */
 public class SecondAbilitySlice extends AbilitySlice {
-    private TextField resposeText;
+    private TextField reSpouseText;
 
     @Override
     public void onStart(Intent intent) {
@@ -45,13 +45,13 @@ public class SecondAbilitySlice extends AbilitySlice {
                 receivedText.setText(content);
             }
         }
-        Component resposeTextComment = findComponentById(ResourceTable.Id_text_editSecond);
-        if (resposeTextComment instanceof TextField) {
-            resposeText = (TextField) resposeTextComment;
+        Component reSpouseTextComment = findComponentById(ResourceTable.Id_text_editSecond);
+        if (reSpouseTextComment instanceof TextField) {
+            reSpouseText = (TextField) reSpouseTextComment;
         }
         setResult.setClickedListener(component -> {
             Intent response = new Intent();
-            String res = resposeText.getText();
+            String res = reSpouseText.getText();
             response.setParam("Main", res);
             getAbility().setResult(RESULT_OK, response);
             terminateAbility();

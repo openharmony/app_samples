@@ -23,7 +23,7 @@
         ohos:id="$+id:text"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:text="I'm first ability second slice"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="100vp"/>
@@ -34,7 +34,7 @@
         ohos:width="match_parent"
         ohos:layout_alignment="center"
         ohos:background_element="$graphic:button_background"
-        ohos:text="Back"
+        ohos:text="$string:back_button"
         ohos:padding="10vp"
         ohos:left_margin="24vp"
         ohos:right_margin="24vp"

@@ -15,7 +15,6 @@
 
 package ohos.samples.abilityinteraction.slice;
 
-import ohos.agp.components.Component;
 import ohos.samples.abilityinteraction.ResourceTable;
 import ohos.samples.abilityinteraction.SecondAbility;
 import ohos.samples.abilityinteraction.utils.Const;

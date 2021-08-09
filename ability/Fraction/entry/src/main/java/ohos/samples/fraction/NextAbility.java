@@ -23,6 +23,8 @@ import ohos.agp.components.Component;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
+import java.util.Optional;
+
 /**
  * NextAbility
  *
@@ -67,7 +69,11 @@ public class NextAbility extends FractionAbility {
     }
 
     private void hide(Component component) {
-        Fraction fraction = getFractionManager().getFractionByTag("nextFraction").get();
+        Fraction fraction = new Fraction();
+        Optional<Fraction> optional = getFractionManager().getFractionByTag("nextFraction");
+        if (optional.isPresent()) {
+            fraction = optional.get();
+        }
         if ((getApplicationContext().getString(ResourceTable.String_hide_fraction)).equals(hideButton.getText())) {
             hideButton.setText(getApplicationContext().getString(ResourceTable.String_show_fraction));
             getFractionManager().startFractionScheduler().hide(fraction).submit();

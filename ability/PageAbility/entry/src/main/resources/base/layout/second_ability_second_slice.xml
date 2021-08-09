@@ -25,14 +25,14 @@
         ohos:text_size="18fp"
         ohos:top_margin="100vp"
         ohos:text_alignment="center"
-        ohos:text="I'm second ability second slice"/>
+        ohos:text="$string:second_text"/>
 
     <Button
         ohos:id="$+id:back_button"
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:layout_alignment="center"
-        ohos:text="Back"
+        ohos:text="$string:back_button"
         ohos:background_element="$graphic:button_background"
         ohos:left_margin="24vp"
         ohos:right_margin="24vp"

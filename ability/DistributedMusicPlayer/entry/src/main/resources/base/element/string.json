@@ -7,6 +7,14 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "play_time",
+      "value": "00:00"
+    },
+    {
+      "name": "music_name",
+      "value": "Technology"
     }
   ]
 }

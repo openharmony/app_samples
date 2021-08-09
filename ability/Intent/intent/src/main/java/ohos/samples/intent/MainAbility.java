@@ -31,8 +31,6 @@ public class MainAbility extends Ability {
 
     private static final int REQ_CODE_START = 0;
 
-    private String ACTION_START = "ability.intent.START";
-
     private Text resultText;
 
     @Override
@@ -63,6 +61,7 @@ public class MainAbility extends Ability {
 
     private void query() {
         Intent intent = new Intent();
+        String ACTION_START = "ability.intent.START";
         Operation operation = new Intent.OperationBuilder().withAction(ACTION_START).build();
         intent.setOperation(operation);
         startAbilityForResult(intent, REQ_CODE_START);

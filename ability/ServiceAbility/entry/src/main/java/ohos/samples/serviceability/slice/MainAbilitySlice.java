@@ -61,7 +61,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private static final String FOREGROUND_SERVICE = "ForegroundServiceAbility";
 
-    private EventHandler eventHandler = new EventHandler(EventRunner.current()) {
+    private final EventHandler eventHandler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {
@@ -90,36 +90,36 @@ public class MainAbilitySlice extends AbilitySlice {
         Component stopLocalButton = findComponentById(ResourceTable.Id_stop_local_button);
         Component connectLocalButton = findComponentById(ResourceTable.Id_connect_local_button);
         Component disconnectLocalButton = findComponentById(ResourceTable.Id_disconnect_local_button);
-        startLocalButton.setClickedListener(component -> startLocalService(LOCAL_BUNDLE, NORMAL_SERVICE));
+        startLocalButton.setClickedListener(component -> startLocalService(NORMAL_SERVICE));
         stopLocalButton.setClickedListener(component -> stopService(false));
         connectLocalButton.setClickedListener(component -> connectService(false));
         disconnectLocalButton.setClickedListener(component -> disconnectAbility(connection));
         Component keepRunningButton = findComponentById(ResourceTable.Id_keep_run_button);
-        keepRunningButton.setClickedListener(component -> startLocalService(LOCAL_BUNDLE, FOREGROUND_SERVICE));
+        keepRunningButton.setClickedListener(component -> startLocalService(FOREGROUND_SERVICE));
 
         Component startRemoteButton = findComponentById(ResourceTable.Id_start_remote_button);
         Component stopRemoteButton = findComponentById(ResourceTable.Id_stop_remote_button);
         Component connectRemoteButton = findComponentById(ResourceTable.Id_connect_remote_button);
         Component disconnectRemoteButton = findComponentById(ResourceTable.Id_disconnect_remote_button);
-        startRemoteButton.setClickedListener(component -> startRemoteService(REMOTE_BUNDLE, REMOTE_SERVICE));
+        startRemoteButton.setClickedListener(component -> startRemoteService());
         connectRemoteButton.setClickedListener(component -> connectService(true));
         stopRemoteButton.setClickedListener(component -> stopService(true));
         disconnectRemoteButton.setClickedListener(component -> disconnectAbility(connection));
     }
 
-    private void startLocalService(String bundleName, String serviceName) {
-        Intent localServiceIntent = getLocalServiceIntent(bundleName, serviceName);
+    private void startLocalService(String serviceName) {
+        Intent localServiceIntent = getLocalServiceIntent(serviceName);
         startAbility(localServiceIntent);
     }
 
-    private void startRemoteService(String bundleName, String serviceName) {
-        Intent remoteServiceIntent = getRemoteServiceIntent(bundleName, serviceName);
+    private void startRemoteService() {
+        Intent remoteServiceIntent = getRemoteServiceIntent();
         startAbility(remoteServiceIntent);
     }
 
-    private Intent getLocalServiceIntent(String bundleName, String serviceName) {
+    private Intent getLocalServiceIntent(String serviceName) {
         Operation operation = new Intent.OperationBuilder().withDeviceId("")
-            .withBundleName(bundleName)
+            .withBundleName(MainAbilitySlice.LOCAL_BUNDLE)
             .withAbilityName(serviceName)
             .build();
         Intent intent = new Intent();
@@ -127,10 +127,10 @@ public class MainAbilitySlice extends AbilitySlice {
         return intent;
     }
 
-    private Intent getRemoteServiceIntent(String bundleName, String serviceName) {
+    private Intent getRemoteServiceIntent() {
         Operation operation = new Intent.OperationBuilder().withDeviceId(getRemoteDeviceId())
-            .withBundleName(bundleName)
-            .withAbilityName(serviceName)
+            .withBundleName(MainAbilitySlice.REMOTE_BUNDLE)
+            .withAbilityName(MainAbilitySlice.REMOTE_SERVICE)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
             .build();
         Intent intent = new Intent();
@@ -140,15 +140,15 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void connectService(boolean isConnectRemote) {
         Intent intent = isConnectRemote
-            ? getRemoteServiceIntent(REMOTE_BUNDLE, REMOTE_SERVICE)
-            : getLocalServiceIntent(LOCAL_BUNDLE, NORMAL_SERVICE);
+            ? getRemoteServiceIntent()
+            : getLocalServiceIntent(NORMAL_SERVICE);
         connectAbility(intent, connection);
     }
 
     private void stopService(boolean isStopRemote) {
         Intent intent = isStopRemote
-            ? getRemoteServiceIntent(REMOTE_BUNDLE, REMOTE_SERVICE)
-            : getLocalServiceIntent(LOCAL_BUNDLE, NORMAL_SERVICE);
+            ? getRemoteServiceIntent()
+            : getLocalServiceIntent(NORMAL_SERVICE);
         stopAbility(intent);
     }
 
@@ -161,7 +161,7 @@ public class MainAbilitySlice extends AbilitySlice {
         return infoList.get(random).getDeviceId();
     }
 
-    private IAbilityConnection connection = new IAbilityConnection() {
+    private final IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject iRemoteObject, int resultCode) {
             HiLog.info(LABEL_LOG, "%{public}s", "onAbilityConnectDone resultCode : " + resultCode);

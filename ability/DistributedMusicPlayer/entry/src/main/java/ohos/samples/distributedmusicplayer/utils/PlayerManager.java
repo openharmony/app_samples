@@ -124,7 +124,7 @@ public class PlayerManager {
         handler.sendEvent(PLAY_STATE_PAUSE);
     }
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {

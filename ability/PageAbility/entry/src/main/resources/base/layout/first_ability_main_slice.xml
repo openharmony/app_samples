@@ -23,7 +23,7 @@
         ohos:id="$+id:text"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:text="I'm first ability main slice"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="100vp"/>
@@ -37,7 +37,7 @@
         ohos:padding="10vp"
         ohos:right_margin="24vp"
         ohos:background_element="$graphic:button_background"
-        ohos:text="First Ability Second Slice"
+        ohos:text="$string:present_button"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -50,7 +50,7 @@
         ohos:padding="10vp"
         ohos:right_margin="24vp"
         ohos:background_element="$graphic:button_background"
-        ohos:text="Second Ability Second Slice"
+        ohos:text="$string:present_second_ability_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -63,7 +63,7 @@
         ohos:padding="10vp"
         ohos:right_margin="24vp"
         ohos:background_element="$graphic:button_background"
-        ohos:text="Second Ability"
+        ohos:text="$string:start_second_ability_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -75,7 +75,7 @@
         ohos:padding="10vp"
         ohos:right_margin="24vp"
         ohos:background_element="$graphic:button_background"
-        ohos:text="Back"
+        ohos:text="$string:back_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 

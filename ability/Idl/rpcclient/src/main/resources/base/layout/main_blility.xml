@@ -25,32 +25,32 @@
         ohos:height="70vp"
         ohos:top_margin="20vp"
         ohos:bottom_margin="12vp"
-        ohos:text="IDL Calculator"
+        ohos:text="$string:btn"
         ohos:text_size="20fp"
         ohos:text_color="#ff0000"/>
 
     <TextField
-        ohos:id="$+id:first_textfield"
+        ohos:id="$+id:first_textField"
         ohos:width="match_parent"
         ohos:height="match_content"
-        ohos:hint="Enter First Number"
-        ohos:text_type="number"
+        ohos:hint="$string:first_textField"
+        ohos:text_input_type="pattern_number"
         ohos:text_size="18fp"
         ohos:text_color="#99000000"
         ohos:margin="20vp"
         ohos:multiple_lines="false"/>
 
     <TextField
-        ohos:id="$+id:second_textfield"
+        ohos:id="$+id:second_textField"
         ohos:width="match_parent"
         ohos:height="match_content"
-        ohos:hint="Enter second Number"
-        ohos:text_type="number"
-        ohos:layout_alignment="80"
+        ohos:hint="$string:second_textField"
+        ohos:text_input_type="pattern_number"
+        ohos:layout_alignment="bottom"
         ohos:text_size="18fp"
         ohos:margin="20vp"
         ohos:text_color="#99000000"
-        ohos:text_alignment="64"
+        ohos:text_alignment="vertical_center"
         ohos:multiple_lines="false"/>
 
     <Button
@@ -59,7 +59,7 @@
         ohos:height="70vp"
         ohos:top_margin="20vp"
         ohos:bottom_margin="12vp"
-        ohos:text="ADD"
+        ohos:text="$string:add_button"
         ohos:text_size="20fp"
         ohos:text_color="#ff007dff"/>
 
@@ -67,13 +67,13 @@
         ohos:id="$+id:result_text"
         ohos:width="match_parent"
         ohos:height="50vp"
-        ohos:text="Result"
-        ohos:layout_alignment="80"
+        ohos:text="$string:result_text"
+        ohos:layout_alignment="bottom"
         ohos:text_size="18fp"
         ohos:margin="20vp"
         ohos:text_color="#99000000"
-        ohos:text_alignment="64"
-        ohos:visibility="true"
+        ohos:text_alignment="vertical_center"
+        ohos:visibility="visible"
         ohos:left_margin="20vp"
         ohos:multiple_lines="false"/>
 </DirectionalLayout>

@@ -19,7 +19,6 @@ import ohos.samples.rpcserver.ResourceTable;
 
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.PositionLayout;
 
 /**
  * MainAbilitySlice

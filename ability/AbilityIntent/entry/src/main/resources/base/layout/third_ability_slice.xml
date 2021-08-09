@@ -32,7 +32,7 @@
         ohos:id="$+id:third_back_first"
         ohos:width="200vp"
         ohos:height="35vp"
-        ohos:text="Back First Ability"
+        ohos:text="$string:second_back_first"
         ohos:multiple_lines="true"
         ohos:text_size="12fp"
         ohos:bottom_margin="50vp"

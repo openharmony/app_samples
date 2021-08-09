@@ -52,7 +52,7 @@ public class ContinuationAbilitySlice extends AbilitySlice implements IAbilityCo
 
     private void initComponents() {
         findComponentById(ResourceTable.Id_continue_button).setClickedListener(this::migrateAbility);
-        messageTextField = (TextField) findComponentById(ResourceTable.Id_message_textfield);
+        messageTextField = (TextField) findComponentById(ResourceTable.Id_message_textField);
         if (isContinued && message != null) {
             messageTextField.setText(message);
         }

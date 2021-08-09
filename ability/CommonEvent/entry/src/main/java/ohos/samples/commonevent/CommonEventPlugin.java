@@ -37,7 +37,7 @@ public class CommonEventPlugin {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private String event = "com.utils.test";
+    private final String event = "com.utils.test";
 
     private boolean unSubscribe = true;
 
@@ -189,7 +189,7 @@ public class CommonEventPlugin {
             String receivedAction = commonEventData.getIntent().getAction();
             HiLog.info(LABEL_LOG, "%{public}s", "onReceiveEvent action:" + receivedAction);
             if (receivedAction.equals(event) && eventListener != null) {
-                eventListener.onEventReceive("Receive commonevent succeeded,commonevent is:" + event);
+                eventListener.onEventReceive("Receive CommonEvent succeeded,CommonEvent is:" + event);
             }
         }
     }

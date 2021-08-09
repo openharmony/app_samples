@@ -7,6 +7,10 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "btn",
+      "value": "IDL Server"
     }
   ]
 }

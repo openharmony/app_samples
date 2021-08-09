@@ -26,7 +26,7 @@
         ohos:id="$+id:title_text"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:text="Counter"
+        ohos:text="$string:title_text"
         ohos:text_color="#ff555555"
         ohos:text_size="20fp"/>
 

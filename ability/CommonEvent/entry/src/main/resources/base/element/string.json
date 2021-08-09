@@ -7,6 +7,18 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "subscribe_button",
+      "value": "Subscribe CommonEvent"
+    },
+    {
+      "name": "publish_button",
+      "value": "Publish CommonEvent"
+    },
+    {
+      "name": "unsubscribe_button",
+      "value": "Unsubscribe CommonEvent"
     }
   ]
 }

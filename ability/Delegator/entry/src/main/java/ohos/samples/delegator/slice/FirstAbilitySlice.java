@@ -40,8 +40,6 @@ public class FirstAbilitySlice extends AbilitySlice {
                 receivedText.setText(content);
             }
         }
-        setResult.setClickedListener(component -> {
-            terminateAbility();
-        });
+        setResult.setClickedListener(component -> terminateAbility());
     }
 }

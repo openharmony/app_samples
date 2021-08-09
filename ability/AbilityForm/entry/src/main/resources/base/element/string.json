@@ -7,6 +7,14 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "load_form_button",
+      "value": "Load Form"
+    },
+    {
+      "name": "remove_form_button",
+      "value": "Remove Form"
     }
   ]
 }

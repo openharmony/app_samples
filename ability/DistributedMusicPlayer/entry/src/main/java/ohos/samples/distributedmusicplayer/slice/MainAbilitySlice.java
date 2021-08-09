@@ -15,7 +15,6 @@
 
 package ohos.samples.distributedmusicplayer.slice;
 
-import ohos.hiviewdfx.HiLog;
 import ohos.samples.distributedmusicplayer.ResourceTable;
 import ohos.samples.distributedmusicplayer.utils.LogUtil;
 import ohos.samples.distributedmusicplayer.utils.PlayerManager;
@@ -51,9 +50,9 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
 
     private static final String URI2 = "resources/rawfile/Homey.wav";
 
-    private String[] musics = {URI1, URI2};
+    private final String[] musics = {URI1, URI2};
 
-    private int[] posters = {ResourceTable.Media_album, ResourceTable.Media_album2};
+    private final int[] posters = {ResourceTable.Media_album, ResourceTable.Media_album2};
 
     private PlayerManager playerManager;
 

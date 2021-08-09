@@ -22,7 +22,7 @@
     <Text
         ohos:background_element="$graphic:background_ability_first"
         ohos:height="match_content"
-        ohos:id="$+id:text_first_helloworld"
+        ohos:id="$+id:text_first_helloWorld"
         ohos:layout_alignment="horizontal_center"
         ohos:text="$string:first_text"
         ohos:top_margin="$float:top_margin"

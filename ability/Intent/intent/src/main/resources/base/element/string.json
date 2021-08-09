@@ -7,6 +7,14 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "start_by_name_button",
+      "value": "Start By Name"
+    },
+    {
+      "name": "start_by_attribute_button",
+      "value": "Start By Attribute"
     }
   ]
 }

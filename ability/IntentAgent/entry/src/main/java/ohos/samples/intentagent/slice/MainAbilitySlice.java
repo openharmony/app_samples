@@ -99,7 +99,6 @@ public class MainAbilitySlice extends AbilitySlice {
         intents.add(intent);
         IntentAgentInfo agentInfo = new IntentAgentInfo(REQUEST_CODE, IntentAgentConstant.OperationType.START_ABILITY,
             IntentAgentConstant.Flags.UPDATE_PRESENT_FLAG, intents, new IntentParams());
-        IntentAgent agent = IntentAgentHelper.getIntentAgent(this, agentInfo);
-        return agent;
+        return IntentAgentHelper.getIntentAgent(this, agentInfo);
     }
 }

@@ -37,7 +37,7 @@
         ohos:background_element="$graphic:button_background"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Load Form"
+        ohos:text="$string:load_form_button"
         ohos:text_size="16fp"/>
 
     <Button
@@ -50,7 +50,7 @@
         ohos:padding="10vp"
         ohos:background_element="$graphic:button_background"
         ohos:right_margin="24vp"
-        ohos:text="Remove Form"
+        ohos:text="$string:remove_form_button"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>
 </DirectionalLayout>

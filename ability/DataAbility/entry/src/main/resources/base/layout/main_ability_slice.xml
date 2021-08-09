@@ -47,7 +47,7 @@
             ohos:width="0vp"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Insert"
+            ohos:text="$string:insert_button"
             ohos:text_size="16fp"
             ohos:weight="1"/>
 
@@ -58,7 +58,7 @@
             ohos:background_element="$graphic:button_background"
             ohos:left_margin="10vp"
             ohos:padding="10vp"
-            ohos:text="Delete"
+            ohos:text="$string:delete_button"
             ohos:text_size="16fp"
             ohos:weight="1"/>
     </DirectionalLayout>
@@ -77,7 +77,7 @@
             ohos:width="0vp"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Update"
+            ohos:text="$string:update_button"
             ohos:text_size="16fp"
             ohos:weight="1"/>
 
@@ -88,7 +88,7 @@
             ohos:background_element="$graphic:button_background"
             ohos:left_margin="10vp"
             ohos:padding="10vp"
-            ohos:text="Query"
+            ohos:text="$string:query_button"
             ohos:text_size="16fp"
             ohos:weight="1"/>
     </DirectionalLayout>
@@ -101,7 +101,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Batch Insert"
+        ohos:text="$string:batch_insert_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -113,7 +113,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Batch Execute"
+        ohos:text="$string:batch_execute_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -133,7 +133,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Read Text File"
+        ohos:text="$string:read_file_button"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>
 </DirectionalLayout>

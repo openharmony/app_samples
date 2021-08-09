@@ -26,10 +26,9 @@ import ohos.aafwk.content.Intent;
 public class MainAbility extends Ability {
     private static final String RESULT_KEY = "ohos.samples.intent.RESULT_KEY";
 
-    private String ACTION_START = "ability.intent.START";
-
     @Override
     public void onStart(Intent intent) {
+        String ACTION_START = "ability.intent.START";
         super.onStart(intent);
         super.setMainRoute(MainAbilitySlice.class.getName());
         addActionRoute(ACTION_START, MainAbilitySlice.class.getName());

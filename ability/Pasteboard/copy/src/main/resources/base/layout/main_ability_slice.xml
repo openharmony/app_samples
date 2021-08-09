@@ -26,7 +26,7 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:background_element="$graphic:textfield_bg"
-        ohos:hint="Copy text content"
+        ohos:hint="$string:copy_text"
         ohos:padding="5vp"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
@@ -44,7 +44,7 @@
             ohos:width="0vp"
             ohos:background_element="$graphic:button_bg"
             ohos:padding="5vp"
-            ohos:text="Copy Text"
+            ohos:text="$string:copy_button"
             ohos:text_alignment="center"
             ohos:text_size="18fp"
             ohos:weight="1"/>
@@ -56,7 +56,7 @@
             ohos:background_element="$graphic:button_bg"
             ohos:left_margin="10vp"
             ohos:padding="5vp"
-            ohos:text="Clear Pasteboard"
+            ohos:text="$string:clear_button"
             ohos:text_alignment="center"
             ohos:text_size="18fp"
             ohos:weight="1"/>
