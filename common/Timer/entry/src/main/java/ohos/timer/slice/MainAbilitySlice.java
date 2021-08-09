@@ -24,7 +24,6 @@ import ohos.timer.utils.LogUtil;
 
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.DirectionalLayout;
 import ohos.agp.components.InputAttribute;
@@ -265,9 +264,6 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     private boolean isNumeric(String str) {
         Pattern pattern = Pattern.compile("[0-9]*");
         Matcher isNum = pattern.matcher(str);
-        if (!isNum.matches()) {
-            return false;
-        }
-        return true;
+        return isNum.matches();
     }
 }

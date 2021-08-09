@@ -23,11 +23,11 @@ import ohos.timer.utils.LogUtil;
 public class CountDownUtil {
     private static final String TAG = CountDownUtil.class.getSimpleName();
 
-    private long millisInFuture;
+    private final long millisInFuture;
 
-    private CountDownCallback countDownCallback;
+    private final CountDownCallback countDownCallback;
 
-    private CountDownTimer countDownTimer;
+    private final CountDownTimer countDownTimer;
 
     private boolean isCancel;
 

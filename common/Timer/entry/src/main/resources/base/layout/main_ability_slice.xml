@@ -37,7 +37,7 @@
                     ohos:width="match_content"
                     ohos:layout_alignment="center"
                     ohos:alignment="center"
-                    ohos:orientation="hoziontal">
+                    ohos:orientation="horizontal">
 
                     <Text
                         ohos:width="80vp"
@@ -69,7 +69,7 @@
                     ohos:height="match_content"
                     ohos:width="match_content"
                     ohos:layout_alignment="center"
-                    ohos:orientation="hoziontal">
+                    ohos:orientation="horizontal">
 
                     <TextField
                         ohos:id="$+id:tf_hour"
@@ -122,7 +122,7 @@
                     ohos:id="$+id:text_remaining_time"
                     ohos:width="match_content"
                     ohos:height="match_content"
-                    ohos:text_style="bold"
+                    ohos:text_font="$string:sans"
                     ohos:text="$string:default_remaining_time"
                     ohos:layout_alignment="center"
                     ohos:text_size="18fp"
@@ -152,7 +152,7 @@
                     ohos:width="match_content"
                     ohos:layout_alignment="center"
                     ohos:alignment="center"
-                    ohos:orientation="hoziontal">
+                    ohos:orientation="horizontal">
 
                     <Text
                         ohos:width="80vp"
@@ -175,7 +175,7 @@
                     ohos:height="match_content"
                     ohos:width="match_content"
                     ohos:layout_alignment="center"
-                    ohos:orientation="hoziontal">
+                    ohos:orientation="horizontal">
 
                     <TextField
                         ohos:id="$+id:tf_hour_repeat"
@@ -242,7 +242,7 @@
                     ohos:height="match_content"
                     ohos:width="match_parent"
                     ohos:weight="1"
-                    ohos:text="Timer"
+                    ohos:text="$string:timer"
                     ohos:text_size="18fp"
                     ohos:text_color="#ff007dff"
                     ohos:layout_alignment="center"
@@ -253,7 +253,7 @@
                     ohos:height="match_content"
                     ohos:width="match_parent"
                     ohos:weight="1"
-                    ohos:text="Repeat Timer"
+                    ohos:text="$string:repeat"
                     ohos:text_size="18fp"
                     ohos:layout_alignment="center"
                     ohos:text_alignment="center"/>

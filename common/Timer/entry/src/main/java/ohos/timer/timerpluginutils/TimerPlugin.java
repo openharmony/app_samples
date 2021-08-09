@@ -15,31 +15,23 @@
 
 package ohos.timer.timerpluginutils;
 
-import static ohos.miscservices.timeutility.Timer.ABILITY_TYPE_COMMON_EVENT;
-import static ohos.miscservices.timeutility.Timer.TIMER_TYPE_EXACT;
-import static ohos.miscservices.timeutility.Timer.TIMER_TYPE_WAKEUP;
-
-import ohos.timer.interfaces.TimerEventListener;
-import ohos.timer.slice.MainAbilitySlice;
-import ohos.timer.utils.Constant;
-import ohos.timer.utils.LogUtil;
-
 import ohos.aafwk.content.Intent;
-import ohos.agp.window.dialog.ToastDialog;
-import ohos.event.commonevent.CommonEventData;
-import ohos.event.commonevent.CommonEventManager;
-
-import ohos.event.commonevent.CommonEventSubscribeInfo;
-import ohos.event.commonevent.CommonEventSubscriber;
-import ohos.event.commonevent.MatchingSkills;
+import ohos.aafwk.content.Operation;
+import ohos.event.commonevent.*;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import ohos.eventhandler.InnerEvent;
 import ohos.miscservices.timeutility.Time;
 import ohos.miscservices.timeutility.Timer;
 import ohos.rpc.RemoteException;
+import ohos.timer.interfaces.TimerEventListener;
+import ohos.timer.slice.MainAbilitySlice;
+import ohos.timer.utils.Constant;
+import ohos.timer.utils.LogUtil;
 
 import java.util.Locale;
+
+import static ohos.miscservices.timeutility.Timer.*;
 
 /**
  * TimerPlugin implements CountDownUtil.CountDownCallback
@@ -55,7 +47,7 @@ public class TimerPlugin implements CountDownUtil.CountDownCallback {
 
     private long timeLeftInMilSec = 0L;
 
-    private MainAbilitySlice mainSliceContext;
+    private final MainAbilitySlice mainSliceContext;
 
     private TimerEventListener timerEventListener;
 
@@ -67,7 +59,7 @@ public class TimerPlugin implements CountDownUtil.CountDownCallback {
         mainSliceContext = sliceContext;
     }
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             if (event.eventId == EVENT_CODE) {
@@ -118,7 +110,8 @@ public class TimerPlugin implements CountDownUtil.CountDownCallback {
         }
 
         Intent intent = new Intent();
-        intent.setAction(Constant.REPEAT_TIMER_EVENT);
+        Operation operation = new Intent.OperationBuilder().withBundleName(Constant.REPEAT_TIMER_EVENT).build();
+        intent.setOperation(operation);
         Timer.TimerIntent timerIntent = new Timer.TimerIntent(intent, ABILITY_TYPE_COMMON_EVENT);
         repeatTimer = Timer.RepeatTimer.getTimer(mainSliceContext, timerIntent);
 
@@ -166,9 +159,7 @@ public class TimerPlugin implements CountDownUtil.CountDownCallback {
     }
 
     private void startOneShortTimer() {
-        Timer.OneShotTimer oneShotTimer = Timer.OneShotTimer.getTimer(mainSliceContext, () -> {
-            timerEventListener.notifyTimerCompleted();
-        });
+        Timer.OneShotTimer oneShotTimer = Timer.OneShotTimer.getTimer(mainSliceContext, () -> timerEventListener.notifyTimerCompleted());
         oneShotTimer.start(TIMER_TYPE_WAKEUP, Time.getCurrentTime() + millisInFuture);
     }
 
