@@ -7,6 +7,34 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "insert_button",
+      "value": "Insert"
+    },
+    {
+      "name": "delete_button",
+      "value": "Delete"
+    },
+    {
+      "name": "update_button",
+      "value": "Update"
+    },
+    {
+      "name": "query_button",
+      "value": "Query"
+    },
+    {
+      "name": "batch_insert_button",
+      "value": "Batch Insert"
+    },
+    {
+      "name": "batch_execute_button",
+      "value": "Batch Execute"
+    },
+    {
+      "name": "read_file_button",
+      "value": "Read Text File"
     }
   ]
 }

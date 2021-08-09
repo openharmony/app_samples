@@ -35,7 +35,7 @@ public class SecondAbilitySlice extends AbilitySlice {
         Component secondBackFirstButton = findComponentById(ResourceTable.Id_second_back_first);
         secondBackFirstButton.setClickedListener(component -> terminate());
 
-        Text showParametersText = (Text) findComponentById(ResourceTable.Id_secode_text);
+        Text showParametersText = (Text) findComponentById(ResourceTable.Id_second_text);
         showParametersText.setText(intent.getStringParam(Const.ABILITY_PARAMETER_KEY));
     }
 }

@@ -31,6 +31,6 @@ public class MainAbility extends AceAbility {
     @Override
     public void onStop() {
         super.onStop();
-        NotificationAbility.deregister();
+        NotificationAbility.deRegister();
     }
 }

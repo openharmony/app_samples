@@ -23,7 +23,7 @@
         ohos:id="$+id:text"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:text="This is second ability main slice"
+        ohos:text="$string:second_text"
         ohos:text_alignment="center"
         ohos:text_size="18fp"
         ohos:top_margin="100vp"/>
@@ -37,7 +37,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Back"
+        ohos:text="$string:back_button"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
 </DirectionalLayout>

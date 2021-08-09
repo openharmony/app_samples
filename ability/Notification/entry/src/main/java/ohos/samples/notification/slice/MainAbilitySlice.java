@@ -15,6 +15,7 @@
 
 package ohos.samples.notification.slice;
 
+import ohos.aafwk.content.Operation;
 import ohos.agp.components.Text;
 import ohos.event.commonevent.CommonEventData;
 import ohos.event.commonevent.CommonEventSubscriber;
@@ -66,7 +67,7 @@ public class MainAbilitySlice extends AbilitySlice {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_main_ability_slice);
         subscribeCommonEvent();
-        defineNotificationSlot(Const.SLOT_ID, Const.SLOT_NAME, NotificationSlot.LEVEL_HIGH);
+        defineNotificationSlot();
         initComponents();
     }
 
@@ -74,17 +75,17 @@ public class MainAbilitySlice extends AbilitySlice {
         Component publishButton = findComponentById(ResourceTable.Id_publish_button);
         Component publishTextButton = findComponentById(ResourceTable.Id_publish_text_button);
         publishButton.setClickedListener(
-            component -> publishNotification(Const.NOTIFICATION_TITLE, Const.NOTIFICATION_CONTENT));
+            component -> publishNotification());
         publishTextButton.setClickedListener(
-            component -> publishNotificationWithAction(Const.NOTIFICATION_TITLE2, Const.NOTIFICATION_CONTENT2));
+            component -> publishNotificationWithAction());
         Component cancelButton = findComponentById(ResourceTable.Id_cancel_button);
         Component cancelAllButton = findComponentById(ResourceTable.Id_cancel_all_button);
         cancelButton.setClickedListener(component -> cancel());
         cancelAllButton.setClickedListener(component -> cancelAll());
     }
 
-    private void defineNotificationSlot(String id, String name, int importance) {
-        NotificationSlot notificationSlot = new NotificationSlot(id, name, importance);
+    private void defineNotificationSlot() {
+        NotificationSlot notificationSlot = new NotificationSlot(Const.SLOT_ID, Const.SLOT_NAME, NotificationSlot.LEVEL_HIGH);
         notificationSlot.setEnableVibration(true);
         notificationSlot.setLockscreenVisibleness(NotificationRequest.VISIBLENESS_TYPE_PUBLIC);
         Uri uri = Uri.parse(Const.SOUND_URI);
@@ -96,11 +97,11 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    private void publishNotification(String title, String text) {
+    private void publishNotification() {
         notificationId = 0x1000001;
         NotificationRequest request = new NotificationRequest(notificationId).setSlotId(Const.SLOT_ID)
             .setTapDismissed(true);
-        request.setContent(createNotificationContent(title, text));
+        request.setContent(createNotificationContent(Const.NOTIFICATION_TITLE, Const.NOTIFICATION_CONTENT));
         IntentAgent intentAgent = createIntentAgent(MainAbility.class.getName(),
             IntentAgentConstant.OperationType.START_ABILITY);
         request.setIntentAgent(intentAgent);
@@ -111,11 +112,11 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    private void publishNotificationWithAction(String title, String text) {
+    private void publishNotificationWithAction() {
         notificationId = 0x1000002;
         NotificationRequest request = new NotificationRequest(notificationId).setSlotId(Const.SLOT_ID)
             .setTapDismissed(true);
-        request.setContent(createNotificationContent(title, text));
+        request.setContent(createNotificationContent(Const.NOTIFICATION_TITLE2, Const.NOTIFICATION_CONTENT2));
         IntentAgent intentAgent = createIntentAgent(MainAbility.class.getName(),
             IntentAgentConstant.OperationType.SEND_COMMON_EVENT);
         request.setIntentAgent(intentAgent);
@@ -137,14 +138,13 @@ public class MainAbilitySlice extends AbilitySlice {
     private NotificationRequest.NotificationContent createNotificationContent(String title, String text) {
         NotificationRequest.NotificationNormalContent content
             = new NotificationRequest.NotificationNormalContent().setTitle(title).setText(text);
-        NotificationRequest.NotificationContent notificationContent = new NotificationRequest.NotificationContent(
-            content);
-        return notificationContent;
+        return new NotificationRequest.NotificationContent(content);
     }
 
     private IntentAgent createIntentAgent(String ability, IntentAgentConstant.OperationType operationType) {
         Intent intent = new Intent();
-        intent.setAction(Const.NOTIFICATION_ACTION);
+        Operation operation = new Intent.OperationBuilder().withAction(Const.NOTIFICATION_ACTION).build();
+        intent.setOperation(operation);
         if (operationType != IntentAgentConstant.OperationType.SEND_COMMON_EVENT) {
             intent.setElement(new ElementName("", Const.BUNDLE_NAME, ability));
         }
@@ -198,8 +198,8 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    class NotificationEventSubscriber extends CommonEventSubscriber {
-        private AbilitySlice slice;
+    static class NotificationEventSubscriber extends CommonEventSubscriber {
+        private final AbilitySlice slice;
 
         /**
          * Constructor

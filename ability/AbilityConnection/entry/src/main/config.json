@@ -59,7 +59,7 @@
         "formsEnabled": false,
         "name": ".AnotherAbility",
         "icon": "$media:icon",
-        "description": "$string:anotherability_description",
+        "description": "$string:anotherAbility_description",
         "type": "page",
         "launchType": "standard"
       }

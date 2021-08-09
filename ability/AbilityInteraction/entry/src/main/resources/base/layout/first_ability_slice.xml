@@ -24,7 +24,7 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:margin="20vp"
-        ohos:text="Calculate Squared Number"
+        ohos:text="$string:first_text"
         ohos:text_color="#ff000000"
         ohos:text_alignment="center"
         ohos:text_size="15fp" />
@@ -34,7 +34,7 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:margin="20vp"
-        ohos:text="?"
+        ohos:text="$string:number"
         ohos:text_color="#88ff0000"
         ohos:text_alignment="center"
         ohos:text_size="25fp" />
@@ -45,7 +45,7 @@
         ohos:height="match_content"
         ohos:top_margin="10vp"
         ohos:padding="10vp"
-        ohos:text="Start Second Ability"
+        ohos:text="$string:enter_second"
         ohos:text_size="15fp"
         ohos:background_element="$graphic:button_bg" />
 
@@ -55,7 +55,7 @@
         ohos:height="match_content"
         ohos:top_margin="10vp"
         ohos:padding="10vp"
-        ohos:text="Start Continue Ability"
+        ohos:text="$string:continue_ability"
         ohos:text_size="15fp"
         ohos:background_element="$graphic:button_bg" />
 
@@ -64,10 +64,9 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:top_margin="50vp"
-        ohos:text="First Ability Lifecycle Changement:"
+        ohos:text="$string:lifecycle_title"
         ohos:text_color="#ff000000"
         ohos:text_alignment="left"
-        ohos:text_style="bold"
         ohos:text_size="15fp" />
 
     <Text

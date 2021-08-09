@@ -26,8 +26,6 @@ import ohos.agp.components.Text;
 import ohos.agp.components.element.ShapeElement;
 import ohos.agp.utils.Color;
 import ohos.agp.utils.LayoutAlignment;
-import ohos.hiviewdfx.HiLog;
-import ohos.hiviewdfx.HiLogLabel;
 
 /**
  * FractionDemo1

@@ -35,7 +35,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private SystemPasteboard pasteboard;
 
-    private IPasteDataChangedListener listener = new IPasteDataChangedListener() {
+    private final IPasteDataChangedListener listener = new IPasteDataChangedListener() {
         @Override
         public void onChanged() {
             PasteData pasteData = pasteboard.getPasteData();

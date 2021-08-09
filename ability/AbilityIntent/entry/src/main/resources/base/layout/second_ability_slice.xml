@@ -19,7 +19,7 @@
                  ohos:height="match_parent">
 
     <Text
-        ohos:id="$+id:secode_text"
+        ohos:id="$+id:second_text"
         ohos:width="match_content"
         ohos:height="35vp"
         ohos:multiple_lines="true"
@@ -33,7 +33,7 @@
         ohos:id="$+id:second_back_first"
         ohos:width="200vp"
         ohos:height="35vp"
-        ohos:text="Back First Ability"
+        ohos:text="$string:second_back_first"
         ohos:multiple_lines="true"
         ohos:text_size="12fp"
         ohos:bottom_margin="50vp"

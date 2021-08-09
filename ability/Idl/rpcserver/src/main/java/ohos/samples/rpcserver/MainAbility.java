@@ -18,10 +18,7 @@ package ohos.samples.rpcserver;
 import ohos.samples.rpcserver.slice.MainAbilitySlice;
 
 import ohos.aafwk.ability.Ability;
-import ohos.aafwk.ability.IAbilityConnection;
 import ohos.aafwk.content.Intent;
-import ohos.bundle.ElementName;
-import ohos.rpc.IRemoteObject;
 
 /**
  * MainAbility

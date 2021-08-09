@@ -21,7 +21,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import java.util.Locale;
 
 /**
- * Hilog util class
+ * HiLog util class
  */
 public class LogUtil {
     private static final String TAG_LOG = "AutoReplyNotificationSample";
@@ -34,16 +34,6 @@ public class LogUtil {
 
     private LogUtil() {
         /* Do nothing */
-    }
-
-    /**
-     * Print debug log
-     *
-     * @param tag log tag
-     * @param msg log message
-     */
-    public static void debug(String tag, String msg) {
-        HiLog.debug(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, tag, msg));
     }
 
     /**

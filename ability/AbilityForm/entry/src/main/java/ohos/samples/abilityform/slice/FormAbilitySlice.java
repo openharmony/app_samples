@@ -97,25 +97,23 @@ public class FormAbilitySlice extends AbilitySlice {
 
     private void showForm(Intent intent) {
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
-        globalTaskDispatcher.asyncDispatch(() -> {
-            FormAbilitySlice.this.acquireAbilityFormAsync(intent, new AbilityForm.OnAcquiredCallback() {
-                @Override
-                public void onAcquired(AbilityForm form) {
-                    if (form == null) {
-                        HiLog.info(LABEL_LOG, "%{public}s", "showForm: Form is null");
-                        return;
-                    }
-                    abilityForm = form;
-                    addForm();
+        globalTaskDispatcher.asyncDispatch(() -> FormAbilitySlice.this.acquireAbilityFormAsync(intent, new AbilityForm.OnAcquiredCallback() {
+            @Override
+            public void onAcquired(AbilityForm form) {
+                if (form == null) {
+                    HiLog.info(LABEL_LOG, "%{public}s", "showForm: Form is null");
+                    return;
                 }
+                abilityForm = form;
+                addForm();
+            }
 
-                @Override
-                public void onDestroyed(AbilityForm form) {
-                    abilityForm = null;
-                    HiLog.error(LABEL_LOG, "%{public}s", "showForm: AbilityForm on destroy");
-                }
-            });
-        });
+            @Override
+            public void onDestroyed(AbilityForm form) {
+                abilityForm = null;
+                HiLog.error(LABEL_LOG, "%{public}s", "showForm: AbilityForm on destroy");
+            }
+        }));
     }
 
     private void addForm() {

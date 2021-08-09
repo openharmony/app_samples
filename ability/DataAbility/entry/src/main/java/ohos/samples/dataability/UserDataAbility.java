@@ -20,7 +20,6 @@ import ohos.samples.dataability.utils.Const;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.ability.DataAbilityHelper;
 import ohos.aafwk.content.Intent;
-import ohos.app.Environment;
 import ohos.data.DatabaseHelper;
 import ohos.data.dataability.DataAbilityPredicates;
 import ohos.data.dataability.DataAbilityUtils;
@@ -48,11 +47,11 @@ public class UserDataAbility extends Ability {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private StoreConfig config = StoreConfig.newDefaultConfig(Const.DB_NAME);
+    private final StoreConfig config = StoreConfig.newDefaultConfig(Const.DB_NAME);
 
     private RdbStore rdbStore;
 
-    private RdbOpenCallback rdbOpenCallback = new RdbOpenCallback() {
+    private final RdbOpenCallback rdbOpenCallback = new RdbOpenCallback() {
         @Override
         public void onCreate(RdbStore store) {
             store.executeSql(
@@ -117,7 +116,7 @@ public class UserDataAbility extends Ability {
     @Override
     public FileDescriptor openFile(Uri uri, String mode) {
         File file = new File(getFilesDir(), uri.getDecodedQuery());
-        if (mode == null || !"rw".equals(mode)) {
+        if (!"rw".equals(mode)) {
             boolean result = file.setReadOnly();
             HiLog.info(LABEL_LOG, "%{public}s", "setReadOnly result: " + result);
         }

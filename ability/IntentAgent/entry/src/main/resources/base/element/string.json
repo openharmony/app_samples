@@ -7,6 +7,18 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "server_text",
+      "value": "I'm the intentAgent target ability"
+    },
+    {
+      "name": "publish_button",
+      "value": "Publish IntentAgent Notification"
+    },
+    {
+      "name": "proactive_button",
+      "value": "Proactive Activate IntentAgent"
     }
   ]
 }

@@ -25,7 +25,7 @@
         ohos:height="70px"
         ohos:top_margin="30vp"
         ohos:bottom_margin="12vp"
-        ohos:text="IDL Server"
+        ohos:text="$string:btn"
         ohos:text_size="20fp"
         ohos:text_color="#ff0000"/>
 </DirectionalLayout>

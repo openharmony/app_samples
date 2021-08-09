@@ -57,8 +57,7 @@ public class FirstAbilityMainSlice extends AbilitySlice {
 
     private void startAbilitySlice(Component component) {
         Intent intent = new Intent();
-        intent.setAction(ACTION);
-        Operation operation = new Intent.OperationBuilder().withDeviceId("")
+        Operation operation = new Intent.OperationBuilder().withDeviceId("").withAction(ACTION)
             .withBundleName(getBundleName())
             .withAbilityName(SecondAbility.class.getName())
             .build();

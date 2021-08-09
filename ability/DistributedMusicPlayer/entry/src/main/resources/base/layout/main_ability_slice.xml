@@ -33,7 +33,7 @@
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:bottom_margin="10vp"
-            ohos:text="Technology"
+            ohos:text="$string:music_name"
             ohos:text_alignment="center"
             ohos:text_color="#FFFFFF"
             ohos:text_size="34fp"/>
@@ -72,7 +72,7 @@
                 ohos:width="match_content"
                 ohos:layout_alignment="vertical_center"
                 ohos:right_margin="10vp"
-                ohos:text="00:00"
+                ohos:text="$string:play_time"
                 ohos:text_alignment="center"
                 ohos:text_color="#FFCCE7FF"
                 ohos:text_size="13vp"/>
@@ -88,7 +88,7 @@
                 ohos:width="match_content"
                 ohos:layout_alignment="vertical_center"
                 ohos:right_margin="10vp"
-                ohos:text="00:00"
+                ohos:text="$string:play_time"
                 ohos:text_alignment="center"
                 ohos:text_color="#FFCCE7FF"
                 ohos:text_size="13vp"/>
@@ -116,7 +116,7 @@
         ohos:top_margin="40vp">
 
         <DirectionalLayout
-            ohos:id="$+id:control_box2"
+            ohos:id="$+id:control_box"
             ohos:height="match_content"
             ohos:width="match_content"
             ohos:layout_alignment="center"

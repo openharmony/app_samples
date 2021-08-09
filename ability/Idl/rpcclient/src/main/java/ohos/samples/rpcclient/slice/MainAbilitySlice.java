@@ -55,7 +55,9 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private ToastDialog toastDialog;
 
-    private IAbilityConnection connection = new IAbilityConnection() {
+    private String message;
+
+    private final IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject remoteObject, int resultCode) {
             interfaceProxy = new CalculatorInterfaceProxy(remoteObject);
@@ -87,9 +89,9 @@ public class MainAbilitySlice extends AbilitySlice {
     private void initComponents() {
         Component addButton = findComponentById(ResourceTable.Id_add_button);
         addButton.setClickedListener(component -> startAddCalculator());
-        firstTextField = (TextField) findComponentById(ResourceTable.Id_first_textfield);
+        firstTextField = (TextField) findComponentById(ResourceTable.Id_first_textField);
         firstTextField.setTextInputType(InputAttribute.ENTER_KEY_TYPE_GO);
-        secondTextField = (TextField) findComponentById(ResourceTable.Id_second_textfield);
+        secondTextField = (TextField) findComponentById(ResourceTable.Id_second_textField);
         secondTextField.setTextInputType(InputAttribute.ENTER_KEY_TYPE_GO);
         resultText = (Text) findComponentById(ResourceTable.Id_result_text);
     }
@@ -129,8 +131,9 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void showTip(String msg) {
+        message = msg;
         toastDialog = new ToastDialog(getApplicationContext());
-        toastDialog.setText(msg);
+        toastDialog.setText(message);
         toastDialog.setAutoClosable(false);
         toastDialog.setDuration(TOAST_DURATION);
         toastDialog.show();

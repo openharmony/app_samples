@@ -7,6 +7,46 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "message_textField",
+      "value": "Input a message"
+    },
+    {
+      "name": "continue_button",
+      "value": "Continue Ability"
+    },
+    {
+      "name": "text",
+      "value": "I'm first ability main slice"
+    },
+    {
+      "name": "present_button",
+      "value": "First Ability Second Slice"
+    },
+    {
+      "name": "present_second_ability_button",
+      "value": "Second Ability Second Slice"
+    },
+    {
+      "name": "start_second_ability_button",
+      "value": "Second Ability"
+    },
+    {
+      "name": "back_button",
+      "value": "Back"
+    },
+    {
+      "name": "navigation_button",
+      "value": "Ability Slice Navigation"
+    },
+    {
+      "name": "continuation_button",
+      "value": "Ability Continuation"
+    },
+    {
+      "name": "second_text",
+      "value": "This is second ability main slice"
     }
   ]
 }

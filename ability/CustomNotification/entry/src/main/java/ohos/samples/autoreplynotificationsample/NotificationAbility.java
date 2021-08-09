@@ -15,6 +15,7 @@
 
 package ohos.samples.autoreplynotificationsample;
 
+import ohos.aafwk.content.Operation;
 import ohos.samples.autoreplynotificationsample.utils.Constants;
 import ohos.samples.autoreplynotificationsample.utils.LogUtil;
 
@@ -35,7 +36,6 @@ import ohos.event.notification.NotificationConstant;
 import ohos.event.notification.NotificationHelper;
 import ohos.event.notification.NotificationRequest;
 import ohos.event.notification.NotificationUserInput;
-import ohos.global.resource.NotExistException;
 import ohos.global.resource.RawFileEntry;
 import ohos.global.resource.Resource;
 import ohos.media.image.ImageSource;
@@ -177,7 +177,6 @@ public class NotificationAbility extends AceInternalAbility {
     }
 
     private PixelMap getPixMap() {
-        PixelMap pixelMap = null;
         try {
             RawFileEntry rawFileEntry = context.getResourceManager().getRawFileEntry(RAW_FILE_PATH + "icon.png");
             Resource resource = rawFileEntry.openRawFile();
@@ -187,11 +186,11 @@ public class NotificationAbility extends AceInternalAbility {
             decodingOptions.desiredSize = new Size(0, 0);
             decodingOptions.desiredRegion = new Rect(0, 0, 0, 0);
             decodingOptions.desiredPixelFormat = PixelFormat.ARGB_8888;
-            pixelMap = imageSource.createPixelmap(decodingOptions);
+            return imageSource.createPixelmap(decodingOptions);
         } catch (IOException e) {
             LogUtil.error(TAG, "getPixMap IOException");
         }
-        return pixelMap;
+        return null;
     }
 
     private void subscribeEvent(MessageParcel data, MessageParcel reply, MessageOption option) {
@@ -255,8 +254,10 @@ public class NotificationAbility extends AceInternalAbility {
     }
 
     private IntentAgent setIntentAgent() {
+
         Intent intent = new Intent();
-        intent.setAction(Constants.COMMON_EVENT_ACTION);
+        Operation operation = new Intent.OperationBuilder().withAction(Constants.COMMON_EVENT_ACTION).build();
+        intent.setOperation(operation);
         List<Intent> intentList = new ArrayList<>();
         intentList.add(intent);
 
@@ -282,13 +283,13 @@ public class NotificationAbility extends AceInternalAbility {
     }
 
     /**
-     * Internal ability deregistration.
+     * Internal ability deRegistration.
      */
-    public static void deregister() {
-        instance.onDeregister();
+    public static void deRegister() {
+        instance.onDeRegister();
     }
 
-    private void onDeregister() {
+    private void onDeRegister() {
         context = null;
         this.setInternalAbilityHandler(null);
     }

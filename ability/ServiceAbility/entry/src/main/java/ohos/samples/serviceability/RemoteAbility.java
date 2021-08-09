@@ -23,7 +23,6 @@ import ohos.app.Context;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
-import ohos.rpc.RemoteException;
 
 /**
  * RemoteAbility
@@ -35,7 +34,7 @@ public class RemoteAbility extends Ability {
 
     RemoteAgentStub remoteAgentStub = new RemoteAgentStub(DESCRIPTOR) {
         @Override
-        public void setRemoteObject(String param) throws RemoteException {
+        public void setRemoteObject(String param) {
             showTips(RemoteAbility.this, param);
         }
     };

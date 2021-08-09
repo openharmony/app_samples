@@ -24,7 +24,7 @@
     <Text
         ohos:id="$+id:server_text"
         ohos:width="match_content"
-        ohos:text="I'm the intentAgent target ability"
+        ohos:text="$string:server_text"
         ohos:height="match_content"
         ohos:text_size="18fp"
         ohos:text_color="#0000ff"/>

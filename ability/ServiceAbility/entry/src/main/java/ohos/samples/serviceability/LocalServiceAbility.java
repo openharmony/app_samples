@@ -67,7 +67,7 @@ public class LocalServiceAbility extends Ability {
         showTips(this, "LocalService onStop");
     }
 
-    private class CurrentRemoteObject extends RemoteObject {
+    private static class CurrentRemoteObject extends RemoteObject {
         private CurrentRemoteObject() {
             super("CurrentRemoteObject");
         }

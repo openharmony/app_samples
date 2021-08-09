@@ -143,22 +143,19 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void query(boolean queryAll) {
-        getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(new Runnable() {
-            @Override
-            public void run() {
-                String[] columns = new String[]{Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
-                DataAbilityPredicates predicates = new DataAbilityPredicates();
-                if (!queryAll) {
-                    // test data
-                    predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
-                }
-                try {
-                    ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
-                            predicates);
-                    appendText(resultSet);
-                } catch (DataAbilityRemoteException | IllegalStateException exception) {
-                    HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
-                }
+        getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(() -> {
+            String[] columns = new String[]{Const.DB_COLUMN_NAME, Const.DB_COLUMN_AGE, Const.DB_COLUMN_USER_ID};
+            DataAbilityPredicates predicates = new DataAbilityPredicates();
+            if (!queryAll) {
+                // test data
+                predicates.between(Const.DB_COLUMN_USER_ID, 2, 4);
+            }
+            try {
+                ResultSet resultSet = databaseHelper.query(Uri.parse(Const.BASE_URI + Const.DATA_PATH), columns,
+                        predicates);
+                appendText(resultSet);
+            } catch (DataAbilityRemoteException | IllegalStateException exception) {
+                HiLog.error(LABEL_LOG, "%{public}s", "query: dataRemote exception|illegalStateException");
             }
         });
     }
@@ -179,16 +176,13 @@ public class MainAbilitySlice extends AbilitySlice {
             String name = resultSet.getString(nameIndex);
             int age = resultSet.getInt(ageIndex);
             int userId = resultSet.getInt(userIndex);
-            appendStr.append(userId + "   " + name + "   " + age + System.lineSeparator());
+            appendStr.append(userId).append("   ").append(name).append("   ").append(age).append(System.lineSeparator());
         } while (resultSet.goToNextRow() && queryCount < allowQueryMaxCount);
         HiLog.info(LABEL_LOG, " queryCount : " + queryCount);
         HiLog.info(LABEL_LOG, " appendStr : " + appendStr.toString());
-        getUITaskDispatcher().asyncDispatch(new Runnable() {
-            @Override
-            public void run() {
-                logText.setText("");
-                logText.setText(appendStr.toString());
-            }
+        getUITaskDispatcher().asyncDispatch(() -> {
+            logText.setText("");
+            logText.setText(appendStr.toString());
         });
     }
 

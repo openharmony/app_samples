@@ -7,6 +7,42 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "start_local_button",
+      "value": "Start Local Service"
+    },
+    {
+      "name": "stop_local_button",
+      "value": "Stop Local Service"
+    },
+    {
+      "name": "connect_local_button",
+      "value": "Connect Local Service"
+    },
+    {
+      "name": "disconnect_local_button",
+      "value": "Disconnect Local Service"
+    },
+    {
+      "name": "keep_run_button",
+      "value": "Keep Background Running"
+    },
+    {
+      "name": "start_remote_button",
+      "value": "Start Remote Service"
+    },
+    {
+      "name": "stop_remote_button",
+      "value": "Stop Remote Service"
+    },
+    {
+      "name": "connect_remote_button",
+      "value": "Connect Remote Service"
+    },
+    {
+      "name": "disconnect_remote_button",
+      "value": "Disconnect Remote Service"
     }
   ]
 }
