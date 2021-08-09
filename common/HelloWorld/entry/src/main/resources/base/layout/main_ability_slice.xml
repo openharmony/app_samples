@@ -22,7 +22,7 @@
         ohos:id="$+id:text"
         ohos:width="match_content"
         ohos:height="match_content"
-        ohos:text="Hello World"
+        ohos:text="$string:hello"
         ohos:text_color="#000000"
         ohos:text_size="32fp"
         ohos:center_in_parent="true"/>
@@ -30,7 +30,7 @@
         ohos:id="$+id:button"
         ohos:width="match_content"
         ohos:height="match_content"
-        ohos:text="Next"
+        ohos:text="$string:next"
         ohos:text_size="19fp"
         ohos:text_color="#FFFFFF"
         ohos:background_element="$graphic:background_button"

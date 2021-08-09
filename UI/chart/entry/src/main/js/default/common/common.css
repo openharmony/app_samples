@@ -13,19 +13,8 @@
  * limitations under the License.
  */
 
-package ohos.samples.helloworld;
-
-import ohos.aafwk.ability.Ability;
-import ohos.aafwk.content.Intent;
-import ohos.samples.helloworld.slice.MainAbilitySlice;
-
-/**
- * MainAbility
- */
-public class MainAbility extends Ability {
-    @Override
-    public void onStart(Intent intent) {
-        super.onStart(intent);
-        super.setMainRoute(MainAbilitySlice.class.getName());
-    }
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

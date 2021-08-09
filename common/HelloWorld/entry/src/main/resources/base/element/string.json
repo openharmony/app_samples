@@ -11,6 +11,14 @@
     {
       "name": "secondability_description",
       "value": "hap sample empty provider"
+    },
+    {
+      "name": "hello",
+      "value": "Hello World"
+    },
+    {
+      "name": "next",
+      "value": "Next"
     }
   ]
 }

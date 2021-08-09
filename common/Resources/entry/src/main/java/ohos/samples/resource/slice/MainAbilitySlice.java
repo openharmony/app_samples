@@ -29,6 +29,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.samples.resource.ResourceTable;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 /**
@@ -41,8 +42,6 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private static final String RAW_FILE = "entry/resources/rawfile/text.txt";
 
-    private Component btnResource;
-
     private Text resourcesText;
 
     @Override
@@ -53,7 +52,7 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void initComponents() {
-        btnResource = findComponentById(ResourceTable.Id_btn_resource);
+        Component btnResource = findComponentById(ResourceTable.Id_btn_resource);
         resourcesText = (Text) findComponentById(ResourceTable.Id_resourece_text);
         btnResource.setClickedListener(component -> getResources());
     }
@@ -88,7 +87,7 @@ public class MainAbilitySlice extends AbilitySlice {
             byte[] bytes = new byte[resource.available()];
             String appends = null;
             while ((resource.read(bytes)) != -1) {
-                appends = (builder.append(new String(bytes, "UTF-8"))).toString();
+                appends = (builder.append(new String(bytes, StandardCharsets.UTF_8))).toString();
             }
             HiLog.info(LABEL_LOG, "%{public}s", appends);
             resourcesText.setText(

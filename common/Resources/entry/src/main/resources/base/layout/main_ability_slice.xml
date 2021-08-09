@@ -24,7 +24,7 @@
             ohos:text_size="30fp"
             ohos:width="match_parent"
             ohos:height="match_content"
-            ohos:text="getResources"
+            ohos:text="$string:getResources"
             ohos:text_color="#ffffff"
             ohos:background_element="#000fff"/>
 

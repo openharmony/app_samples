@@ -43,6 +43,18 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "timer",
+      "value": "Timer"
+    },
+    {
+      "name": "repeat",
+      "value": "Repeat Timer"
+    },
+    {
+      "name": "sans",
+      "value": "sans-serif-medium"
     }
   ]
 }

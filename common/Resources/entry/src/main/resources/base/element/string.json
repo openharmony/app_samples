@@ -11,6 +11,10 @@
     {
       "name": "select_timezone_text",
       "value": "Resource file display"
+    },
+    {
+      "name": "getResources",
+      "value": "getResources"
     }
   ]
 }
