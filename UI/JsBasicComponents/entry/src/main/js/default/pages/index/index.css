@@ -1,0 +1,440 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.div-main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.list-main {
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    margin-left : 24px;
+    margin-right : 24px;
+}
+
+.item-class {
+    flex-direction: column;
+}
+
+.case-title {
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.div-content {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.button-emphasize {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.button-emphasize-click {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.button-emphasize-long-click {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.button-emphasize-click :active {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    background-color: white;
+    text-color: #0040FF;
+}
+
+.button-border {
+    height: 40px;
+    font-size: 16px;
+    text-color: #0040FF;
+    radius: 16px;
+    border-color: #0040FF;
+    border-width: 2px;
+    border-style: solid;
+    background-color: lightgray;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button-border-click:active {
+    height: 40px;
+    font-size: 16px;
+    text-color: #0040FF;
+    radius: 16px;
+    border-color: #0040FF;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 20px;
+    background-color: lightgray;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button-border-click {
+    height: 40px;
+    font-size: 16px;
+    text-color: white;
+    radius: 16px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button-normal {
+    height: 40px;
+    radius: 16px;
+    font-size: 16px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: lightgray;
+    text-color: black;
+    font-weight: 500;
+}
+
+.button-text {
+    text-color: red;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    margin-left: 20px;
+    font-style: normal;
+}
+
+.button-capsule {
+    height: 40px;
+    font-size: 16px;
+    font-style: normal;
+    padding-left: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+}
+
+.button-loading {
+    height: 40px;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    padding-right: 20px;
+    width: 200px;
+}
+
+.button-circle {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.img {
+    width: 100%;
+    background-color: lightgrey;
+    object-fit: contain;
+}
+
+.title-text {
+    color:black;
+    font-size: 36px;
+    height: 90px;
+    width: 60%;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.paragraph-text {
+    color:black;
+    margin-top: 12px;
+    font-size: 28px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: start;
+}
+
+.custom-marquee {
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    margin: 20px;
+    border: 4px solid #FF8888;
+    border-radius: 20px;
+    font-size: 40px;
+    color: #FF8888;
+    font-weight: 600;
+    font-family: serif;
+    background-color: #FFDDDD;
+}
+
+.control-button {
+    flex-weight: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: white;
+    padding: 4px;
+    text-color: black;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.marquee-btn-content {
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.select {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding: 16px;
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    background-color: lightgray;
+}
+
+.option-style {
+    width: 100%;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    item-extent: 0px;
+    text-decoration: none;
+}
+
+.div-input-content {
+    flex-direction: column;
+    width: 400px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.comment-text2 {
+    width: 340px;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    text-color: black;
+    border-color: #bcbcbc;
+    border-width: 2px;
+    margin-bottom: 30px;
+}
+
+.comment {
+    width: 340px;
+    height: 60px;
+    font-size: 20px;
+    background-color: white;
+    border-color: #BCBCBC;
+    border-width: 2px;
+    placeholder-color: lightgray;
+}
+
+.comment-key {
+    width: 60px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.txt-input-desc {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.div-select {
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.min-progress {
+    width: 200px;
+    margin: 20px;
+    height: 200px;
+}
+
+.txt-case1-t1 {
+    font-size : 20px;
+    font-weight : bold;
+}
+
+.div-button-case1 {
+    flex-direction : row;
+    margin-top : 20px;
+}
+
+.txt-case1-t2 {
+    font-size : 20px;
+    font-weight : bold;
+    margin-top : 20px;
+}
+
+.div-column-top20 {
+    flex-direction : column;
+    align-items : center;
+    width : 100%;
+    margin-top : 20px;
+}
+
+.div-progress-row {
+    flex-direction : row;
+    width : 100%;
+    align-items : center;
+}
+
+.txt-progress-name {
+    text-color : black;
+    font-size : 20px;
+    margin-top: 20px;
+}
+
+.div-progress {
+    flex-direction : column;
+    stroke-width : 20px;
+    align-items : center;
+    justify-content : center;
+    width : 50%;
+}
+
+.div-horizontal-progress {
+    width : 80%;
+    margin-top : 20px;
+    stroke-width : 30px;
+}
+
+.div-select-content {
+    flex-direction : column;
+    align-items : center;
+    width : 100%;
+    margin-top : 20px;
+    padding-bottom : 400px;
+}
+
+.btn-input {
+    width: 100px;
+    height: 100px;
+}
+
+.piece-class{
+    font-weight: bold;
+    font-size: 30px;
+    text-color: black;
+}
+
+.cass-qrcode{
+    width: 40%;
+    height: 40%;
+    color: black;
+    margin-top: 10px;
+    background-color:lightgray ;
+}
+
+.margin {
+    margin: 7px;
+}
+
+.css-switch{
+    width: 300px;
+    height: 100px;
+}
+.css-switch-custom{
+    width: 300px;
+    height: 100px;
+    text-padding: 20px;
+    font-size: 20px;
+    texton-color: red;
+    font-weight: bold;
+    textoff-color: black;
+}
+
+.div-switch-row{
+    flex-direction : row;
+    width : 100%;
+    justify-content: center;
+}
+
+.div-switch {
+    flex-direction : column;
+    align-items : center;
+    padding-top: 30px;
+    width : 50%;
+}
+
+.txt-switch-name {
+    text-color : black;
+    font-size : 20px;
+    margin-top: 10px;
+}
+.txt-rating{
+    font-size: 20px;
+    textoff-color: black;
+    font-weight: bold;
+}
+
+.class-rating{
+    width: 300px;
+    height: 60px;
+}
+
+.class-rating-custom{
+    width: 300px;
+    height: 60px;
+    star-foreground: url("/common/images/like_yellow.png");
+    star-secondary: url("/common/images/like_yellow.png");
+    star-background: url("/common/images/like_space.png");
+}
+
+.div-content-rating2{
+    flex-direction: column;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 20px;
+}
+
+.div-toggle{
+    flex-wrap: wrap
+}

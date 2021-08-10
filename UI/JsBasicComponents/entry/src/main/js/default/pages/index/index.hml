@@ -1,0 +1,274 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<div class="div-main">
+    <list class="list-main">
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{$t('strings.title_case1')}}</text>
+            </div>
+            <div class="div-content">
+                <text class="txt-case1-t1">{{$t('strings.content_case1_t1')}}</text>
+                <div class="div-button-case1">
+                    <button class="button-emphasize" value="{{$t('strings.btn_emphasize')}}"></button>
+                    <button class="button-capsule" type="capsule" value="{{$t('strings.btn_capsule')}}"></button>
+                    <button class="button-loading" type="capsule" waiting="true" value="{{$t('strings.btn_load')}}"></button>
+                </div>
+
+                <div class="div-button-case1">
+                    <button class="button-border" value="{{$t('strings.btn_border')}}"></button>
+                    <button class="button-normal" value="{{$t('strings.btn_normal')}}"></button>
+                    <button class="button-text" type="text" value="{{$t('strings.btn_text')}}"></button>
+                    <button class="button-circle" type="circle"></button>
+                </div>
+
+                <text class="txt-case1-t2">{{$t('strings.content_case1_t2')}}</text>
+
+                <div class="div-button-case1">
+                    <button class="button-emphasize-click" value="{{$t('strings.btn_click')}} " on:click="clickBtn"></button>
+                    <button class="button-emphasize-long-click" value="{{$t('strings.btn_long_click')}} "on:longpress="clickBtnLong"></button>
+                    <button class="button-border-click" value="{{$t('strings.btn_click')}}" on:click="clickBtn"></button>
+                    <button class="button-loading" type="capsule" waiting="{{ waiting }} "value="{{$t('strings.btn_click')}}" on:click="clickBtnLoading"></button>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case2') }}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-column-top20">
+                    <image class="img" src="{{ imgPath }}"></image>
+                    <text class="title-text">{{ headTitle }}</text>
+                    <text class="paragraph-text">{{ paragraphFirst }}</text>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case3') }}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-column-top20">
+                    <marquee id="customMarquee" class="custom-marquee" scrollamount="{{ scrollAmount }}"
+                             loop="{{ loop }}" direction="{{ marqueeDir }}">{{ $t('strings.marqueeCustomData') }}
+                    </marquee>
+                    <div class="marquee-btn-content">
+                        <button class="control-button" onclick="onStartClick" value="{{ $t('strings.btn_marquee_start') }}"></button>
+                        <button class="control-button" onclick="onStopClick" value="{{ $t('strings.btn_marquee_stop') }}"></button>
+                    </div>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{$t('strings.title_case4')}}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-column-top20">
+                    <div class="div-input-content" if="{{ ! commentText }}">
+                        <text class="comment-text2" focusable="true"></text>
+                        <div>
+                            <input class="comment" value="{{ inputValue }}" onchange="updateValue()" placeholder="{{$t('strings.input_tip')}}" ></input>
+                            <text class="comment-key" onclick="update" focusable="true">{{$t('strings.input_sure')}}</text>
+                        </div>
+                    </div>
+
+                    <div class="div-input-content" if="{{ commentText }}">
+                        <text class="comment-text2" focusable="true">{{showValue}}</text>
+                        <div>
+                            <input class="comment" value="{{inputValue}}" onchange="updateValue()" placeholder="{{$t('strings.input_tip')}}"></input>
+                            <text class="comment-key" onclick="update" focusable="true">{{$t('strings.input_clean')}}</text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <text class="txt-input-desc">{{$t('strings.multi_select_button')}}</text>
+                    </div>
+
+                    <div class="div-select">
+                        <input type="checkbox" class="btn-input"></input>
+                        <input type="checkbox" class="btn-input"></input>
+                        <input type="checkbox" class="btn-input"></input>
+                        <input type="checkbox" class="btn-input"></input>
+                        <input type="checkbox" class="btn-input"></input>
+                    </div>
+
+                    <div>
+                        <text class="txt-input-desc">{{$t('strings.single_choice_button')}}</text>
+                    </div>
+
+                    <div class="div-select">
+                        <input type="radio" class="btn-input" name="radio1"></input>
+                        <input type="radio" class="btn-input" name="radio1"></input>
+                        <input type="radio" class="btn-input" name="radio1"></input>
+                        <input type="radio" class="btn-input" name="radio1"></input>
+                        <input type="radio" class="btn-input" name="radio1"></input>
+                    </div>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{$t('strings.title_case5')}}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-column-top20">
+                    <div class="div-progress-row">
+                        <div class="div-progress">
+                            <progress class="min-progress" type="scale-ring" percent="10" secondarypercent="50"></progress>
+                            <text class="txt-progress-name">{{$t('strings.progress_scale_ring')}}</text>
+                        </div>
+                        <div class="div-progress">
+                            <progress class="min-progress" type="circular"></progress>
+                            <text class="txt-progress-name">{{$t('strings.progress_circular')}}</text>
+                        </div>
+                    </div>
+
+                    <div class="div-progress-row">
+                        <div class="div-progress">
+                            <progress class="min-progress" type="arc" percent="10" secondarypercent="50"></progress>
+                            <text class="txt-progress-name">{{$t('strings.progress_arc')}}</text>
+                        </div>
+                        <div class="div-progress">
+                            <progress class="min-progress" type="ring" percent="10" secondarypercent="50"></progress>
+                            <text class="txt-progress-name">{{ $t('strings.progress_ring') }}</text>
+                        </div>
+                    </div>
+
+                    <progress class="div-horizontal-progress" type="horizontal"percent="10" secondarypercent="50"></progress>
+                    <text class="txt-progress-name">{{$t('strings.progress_horizontal')}}</text>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case6') }}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-select-content">
+                    <select id="orderTimeDataSel" class="select">
+                        <option value="value1" class="option-style"> {{ $t('strings.user1') }}</option>
+                        <option value="value2" class="option-style"> {{ $t('strings.user2') }}</option>
+                        <option value="value3" class="option-style"> {{ $t('strings.user3') }}</option>
+                    </select>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case7') }}</text>
+            </div>
+
+            <div class="div-content">
+                <div>
+                    <piece class="piece-class" if="{{first}}" content="{{$t('strings.piece_user')}}"></piece>
+                    <piece class="piece-class"if="{{second}}" content="{{$t('strings.piece_user')}}" on:click="pieceClicked" closable="true" on:close="closeSecond"></piece>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case8')}}</text>
+            </div>
+
+            <div class="div-content">
+                <qrcode class="cass-qrcode" value="https://huawei.com" on:longpress="longPressQrcode" ></qrcode>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case9')}}</text>
+            </div>
+
+            <div class="div-content">
+                <text class="margin">{{ $t('strings.toggle_multiple')}}</text>
+                <div class="div-toggle">
+                    <toggle class="margin" for="{{toggles}}" value="{{$item}}"></toggle>
+                </div>
+                <text class="margin">{{ $t('strings.toggle_single')}}</text>
+                <div class="div-toggle">
+                    <toggle class="margin" for="{{toggle_list}}" id="{{$item.id}}" checked="{{$item.checked}}"
+                        value="{{$item.name}}" on:change="allChange" on:click="allClick({{$item.id}},{{$item.name}})"></toggle>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case10') }}</text>
+            </div>
+
+            <div class="div-content">
+                <div class="div-switch-row">
+                    <div class="div-switch">
+                        <switch class="css-switch" ></switch>
+                        <text class="txt-switch-name">{{$t('strings.switch_default')}}</text>
+                    </div>
+
+                    <div class="div-switch">
+                        <switch class="css-switch" showtext="true" ></switch>
+                        <text class="txt-switch-name">{{$t('strings.switch_text')}}</text>
+                    </div>
+                </div>
+
+                <div class="div-switch-row">
+                    <div class="div-switch">
+                        <switch class="css-switch" showtext="true" on:change="switchChanged" checked="true" ></switch>
+                        <text class="txt-switch-name">{{$t('strings.switch_changed_status')}}</text>
+                    </div>
+
+                    <div class="div-switch">
+                        <switch class="css-switch-custom" showtext="true"texton="open" textoff="close"></switch>
+                        <text class="txt-switch-name">{{$t('strings.switch_custom_text')}}</text>
+                    </div>
+                </div>
+            </div>
+        </list-item>
+
+        <list-item class="item-class" clickeffect="false">
+            <div>
+                <text class="case-title">{{ $t('strings.title_case11') }}</text>
+            </div>
+
+            <div class="div-content">
+                <text class="txt-rating">{{ $t('strings.rating_txt1') }}</text>
+                <rating class="class-rating" numstars="5" rating="2" indicator="false" on:change="ratingChanged" ></rating>
+            </div>
+
+            <div class="div-content-rating2">
+                <text class="txt-rating">{{ $t('strings.rating_txt2') }}</text>
+                <rating class="class-rating" numstars="5" rating="4" indicator="true"></rating>
+            </div>
+
+            <div class="div-content-rating2">
+                <text class="txt-rating">{{ $t('strings.rating_txt3') }}</text>
+                <rating class="class-rating-custom" numstars="5" rating="1" indicator="false"></rating>
+            </div>
+        </list-item>
+    </list>
+</div>
