@@ -1,0 +1,59 @@
+{
+  "strings": {
+    "title_case1":"Case 1：Button",
+    "title_case2": "Case 2:Image And Text",
+    "title_case3": "Case 3:Marquee",
+    "title_case4": "Case 4:Input",
+    "title_case5": "Case 5:Progress",
+    "title_case6": "Case 6:Select",
+    "title_case7": "Case 7:Piece",
+    "title_case8": "Case 8: Qrcode",
+    "title_case9": "Case 9:Toggle",
+    "title_case10": "Case 10 Switch",
+    "title_case11": "Case 11:Rating",
+
+    "content_case1_t1":"基本按钮",
+    "content_case1_t2":"点击效果",
+    "btn_emphasize": "默认按钮",
+    "btn_border": "带边框按钮",
+    "btn_click": "Click me",
+    "btn_long_click":"Long press",
+    "btn_normal": "改背景色",
+    "btn_text": "文本按钮",
+    "btn_capsule": "胶囊型按钮",
+    "btn_circle": "圆形按钮",
+    "btn_load": "Loading",
+
+    "btn_marquee_start": "开始",
+    "btn_marquee_stop": "暂停",
+    "marqueeCustomData": "Custom marquee",
+
+    "input_sure": "发送",
+    "input_clean": "清除",
+    "multi_select_button": "多选按钮",
+    "single_choice_button": "单选按钮",
+    "input_tip": "请输入内容",
+
+    "user1":"用户1",
+    "user2":"用户2",
+    "user3":"用户3",
+
+    "progress_scale_ring":"带刻度圆环形进度条",
+    "progress_circular":"loading样式进度条",
+    "progress_arc":"弧形进度条",
+    "progress_ring":"圆环形进度条",
+    "progress_horizontal":"水平进度条",
+
+    "switch_default": "默认效果开关",
+    "switch_text": "带文字开关",
+    "switch_custom_text": "自定义开关文字",
+    "switch_changed_status":"选中结果",
+    "rating_txt1": "设置评分",
+    "rating_txt2": "禁止打分",
+    "rating_txt3": "自定义评分图片",
+
+    "toggle_multiple": "多选示例",
+    "toggle_single": "单选示例",
+    "piece_user": "收件人"
+  }
+}
