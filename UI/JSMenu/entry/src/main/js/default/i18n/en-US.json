@@ -1,0 +1,47 @@
+{
+  "strings": {
+    "menu_option": "Menu option",
+    "select_option": "Select option",
+    "menu": "Dishes:",
+    "snack": "Snack:",
+    "drink": "Drink:",
+    "clear_oder": "Clear Oder",
+    "submit_oder": "Submit Oder",
+    "finish_oder": "Submit Oder succeed",
+    "empty_order": "Empty Oder",
+    "resultStr": "Your menu details are as follows:",
+    "menus": [
+      {
+        "name": "Mapo Tofu"
+      },
+      {
+        "name": "Spicy Crayfish"
+      },
+      {
+        "name": "Dry Pot Bullfrog"
+      }
+    ],
+    "snacks": [
+      {
+        "name": "Meat clip buns"
+      },
+      {
+        "name": "Rolling dough"
+      },
+      {
+        "name": "You Tiao"
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Ice Peak"
+      },
+      {
+        "name": "Soy Milk"
+      },
+      {
+        "name": "Soy Milk"
+      }
+    ]
+  }
+}

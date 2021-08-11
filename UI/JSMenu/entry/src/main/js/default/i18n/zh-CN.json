@@ -1,0 +1,47 @@
+{
+  "strings": {
+    "menu_option": "菜单选项",
+    "select_option": "选择选项",
+    "menu": "主菜:",
+    "snack": "小吃:",
+    "drink": "饮料:",
+    "clear_oder": "清除订单",
+    "submit_oder": "提交订单",
+    "finish_oder": "提交订单成功",
+    "empty_order": "空的订单",
+    "resultStr": "您的选单详情如下:",
+    "menus": [
+      {
+        "name": "麻婆豆腐"
+      },
+      {
+        "name": "香辣小龙虾"
+      },
+      {
+        "name": "干锅牛蛙"
+      }
+    ],
+    "snacks": [
+      {
+        "name": "肉夹馍"
+      },
+      {
+        "name": "擀面皮"
+      },
+      {
+        "name": "油条"
+      }
+    ],
+    "drinks": [
+      {
+        "name": "冰峰"
+      },
+      {
+        "name": "豆奶"
+      },
+      {
+        "name": "啤酒"
+      }
+    ]
+  }
+}
