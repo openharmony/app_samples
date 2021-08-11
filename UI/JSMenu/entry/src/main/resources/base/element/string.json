@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "JSMenu"
+    },
+    {
+      "name": "mainability_description",
+      "value": "JSMenu Ability"
+    }
+  ]
+}

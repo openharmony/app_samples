@@ -1,0 +1,41 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <div class="div-select">
+        <text class="menu-text">{{ $t('strings.menu') }}</text>
+        <select class="select" id="select" on:change="onMenuChange">
+            <option class="menu-option" for="{{ menus }}" value="{{ $item.name }}">{{ $item.name }}</option>
+        </select>
+    </div>
+    <div class="div-select">
+        <text class="menu-text">{{ $t('strings.snack') }}</text>
+        <select class="select" id="snackSelect" on:change="onSnackChange">
+            <option class="menu-option" for="{{ snacks }}" value="{{ $item.name }}">{{ $item.name }}</option>
+        </select>
+    </div>
+    <div class="div-select">
+        <text class="menu-text">{{ $t('strings.drink') }}</text>
+        <select class="select" id="drinkSelect" on:change="onDrinkChange">
+            <option class="menu-option" for="{{ drinks }}" value="{{ $item.name }}">{{ $item.name }}</option>
+        </select>
+    </div>
+    <text class="result-text">{{ $t('strings.resultStr') }}</text>
+    <text id="result" class="result-text">{{ result }}</text>
+    <div class="div-btn">
+        <button class="button" onclick="onClearClick">{{ $t('strings.clear_oder') }}</button>
+        <button class="button" onclick="onFinishClick">{{ $t('strings.submit_oder') }}</button>
+    </div>
+</div>
