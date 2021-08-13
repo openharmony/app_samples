@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "directory": "directory",
+    "the": "The ",
+    "chapter": " chapter",
+    "context": "context",
+    "previous": "previous",
+    "next": "next",
+    "bright": "bright",
+    "dark": "dark",
+    "first": "The current chapter is the final chapter",
+    "last": "The current chapter is the first chapter"
+  }
+}
