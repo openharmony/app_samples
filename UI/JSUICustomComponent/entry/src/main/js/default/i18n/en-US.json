@@ -1,0 +1,30 @@
+{
+  "strings": {
+    "collect": "Collect",
+    "collected": "Collected",
+    "book_title": "Book name",
+    "book_introduction": "Book introduction",
+    "enter_shelf": "Enter collected",
+    "recommend":  "Recommended today:",
+    "collected_title":  "Collected:",
+    "collected_null_tips":  "Cannot find any collected books.",
+    "bookNames": [
+      {
+        "name": "Book name1",
+        "collect": false
+      },
+      {
+        "name": "Book name2",
+        "collect": false
+      },
+      {
+        "name": "Book name3",
+        "collect": false
+      },
+      {
+        "name": "Book name4",
+        "collect": false
+      }
+    ]
+  }
+}
