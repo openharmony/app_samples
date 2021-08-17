@@ -39,7 +39,6 @@ export default {
         this.ctx.lineTo(150, 100);
         this.ctx.lineTo(180, 150);
 
-        this.ctx.fill();
         this.ctx.closePath();
         this.ctx.stroke();
     },
