@@ -38,11 +38,9 @@ public class MediaEventAbilitySlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private String message = "This is mediaEvent";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private MediaEventHandle mediaEventHandle = new MediaEventHandle() {
+    private final MediaEventHandle mediaEventHandle = new MediaEventHandle() {
         @Override
         public boolean onPlay(MultimodalEvent multimodalEvent) {
             HiLog.info(LABEL_LOG, "onPlay");
@@ -74,6 +72,7 @@ public class MediaEventAbilitySlice extends AbilitySlice {
 
     private void showMediaEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "This is mediaEvent";
         utils.showDialogBox(message, referenceContext.get());
     }
 

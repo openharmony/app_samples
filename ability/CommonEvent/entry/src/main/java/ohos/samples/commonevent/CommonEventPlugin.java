@@ -81,7 +81,7 @@ public class CommonEventPlugin {
         intent.setOperation(operation);
         CommonEventData eventData = new CommonEventData(intent);
         CommonEventPublishInfo publishInfo = new CommonEventPublishInfo();
-        String[] permissions = {"ohos.sample.permission"};
+        String[] permissions = {"ohos.samples.permission"};
         publishInfo.setSubscriberPermissions(permissions);
         try {
             CommonEventManager.publishCommonEvent(eventData, publishInfo);

@@ -21,7 +21,6 @@ import ohos.agp.components.Component;
 import ohos.app.Context;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
-import ohos.multimodalinput.event.SpeechEvent;
 import ohos.samples.multimodeinput.ResourceTable;
 import ohos.samples.multimodeinput.utils.Utils;
 
@@ -42,28 +41,23 @@ public class SpeechAbilitySlice extends AbilitySlice {
 
     private static final String VOICE_EVENT_KEY = "MOVE";
 
-    private Component componentSpeech;
-
-    private Utils utils = Utils.getInstance();
+    private final Utils utils = Utils.getInstance();
 
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_second_main_ability_slice);
-        componentSpeech = findComponentById(ResourceTable.Id_speech_event_button);
+        Component componentSpeech = findComponentById(ResourceTable.Id_speech_event_button);
         componentSpeech.subscribeVoiceEvents(new Component.VoiceEvent(VOICE_EVENT_KEY));
         componentSpeech.setSpeechEventListener(onSpeechEvent);
     }
 
-    private Component.SpeechEventListener onSpeechEvent = new Component.SpeechEventListener() {
-        @Override
-        public boolean onSpeechEvent(Component component, SpeechEvent speechEvent) {
-            HiLog.info(LABEL_LOG, "onSpeechEvent");
-            if (speechEvent.getActionProperty() == VOICE_EVENT_KEY) {
-                showSpeechEvent();
-            }
-            return false;
+    private final Component.SpeechEventListener onSpeechEvent = (component, speechEvent) -> {
+        HiLog.info(LABEL_LOG, "onSpeechEvent");
+        if (speechEvent.getActionProperty().equals(VOICE_EVENT_KEY)) {
+            showSpeechEvent();
         }
+        return false;
     };
 
     private void showSpeechEvent() {

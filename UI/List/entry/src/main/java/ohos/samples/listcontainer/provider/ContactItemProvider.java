@@ -22,7 +22,7 @@ import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.RecycleItemProvider;
+import ohos.agp.components.BaseItemProvider;
 import ohos.agp.components.Text;
 import ohos.agp.components.TextField;
 import ohos.agp.window.dialog.CommonDialog;
@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * contactItemProvider
  */
-public class ContactItemProvider extends RecycleItemProvider {
+public class ContactItemProvider extends BaseItemProvider {
     private static final int DIALOG_WIDTH = 900;
 
     private static final int DIALOG_HEIGHT = 600;
@@ -44,7 +44,7 @@ public class ContactItemProvider extends RecycleItemProvider {
 
     private List<Contact> contactData;
 
-    private Context context;
+    private final Context context;
 
     public ContactItemProvider(Context context, List<Contact> contactData) {
         this.contactData = contactData;
@@ -68,13 +68,11 @@ public class ContactItemProvider extends RecycleItemProvider {
 
     @Override
     public Component getComponent(int position, Component component, ComponentContainer componentContainer) {
-        Component container = getItemComponent(position);
-        return container;
+        return getItemComponent(position);
     }
 
     private Component getItemComponent(int position) {
-        Component container = getComponent(position);
-        return container;
+        return getComponent(position);
     }
 
     private Component getComponent(int position) {

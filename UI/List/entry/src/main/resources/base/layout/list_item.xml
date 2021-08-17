@@ -32,7 +32,7 @@
         <Text
             ohos:id="$+id:name"
             ohos:left_margin="15vp"
-            ohos:width="0dp"
+            ohos:width="0px"
             ohos:layout_alignment="vertical_center"
             ohos:weight="1"
             ohos:height="match_content"
@@ -40,7 +40,7 @@
 
         <Text
             ohos:id="$+id:tel"
-            ohos:width="0dp"
+            ohos:width="0px"
             ohos:weight="2"
             ohos:layout_alignment="vertical_center"
             ohos:height="match_content"
@@ -49,7 +49,7 @@
 
         <Button
             ohos:id="$+id:btn_edit"
-            ohos:text="Edit"
+            ohos:text="$string:edit"
             ohos:width="match_content"
             ohos:height="match_content"
             ohos:layout_alignment="vertical_center"

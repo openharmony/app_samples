@@ -34,6 +34,8 @@ import ohos.multimodalinput.event.TouchEvent;
 import ohos.samples.customcomponent.ResourceTable;
 import ohos.samples.customcomponent.utils.Util;
 
+import java.util.Optional;
+
 /**
  * CustomControlBar
  *
@@ -103,7 +105,8 @@ public class CustomControlBar extends Component implements Component.DrawTask, C
         fillColor = new Color(DEF_FILL_COLOR);
         currentCount = TWO;
         centerRectFloat = new RectFloat();
-        image = Util.createPixelMapByResId(ResourceTable.Media_icon, getContext()).get();
+        Optional<PixelMap> optional = Util.createPixelMapByResId(ResourceTable.Media_icon, getContext());
+        optional.ifPresent(pixelMap -> image = pixelMap);
     }
 
     @Override

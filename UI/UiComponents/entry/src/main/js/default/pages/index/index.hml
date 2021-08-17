@@ -14,7 +14,7 @@
  -->
 
 <div class="container">
-    <navigation-bar class="nav-bar" title={{$t('Strings.title')}}> </navigation-bar>
+    <navigation-bar class="nav-bar" title="{{$t('Strings.title')}}"> </navigation-bar>
     <tabs class="tabs" index="0">
         <tab-bar class="tab-bar">
             <text class="tab-text">{{$t('Strings.tabBasic')}}
@@ -153,7 +153,7 @@
                         </text>
                     </div>
                     <slider class="slider" min="500" max="3000"
-                            value = {{sliderValue}} onchange="setSliderValue"></slider>
+                            value ="{{sliderValue}}" onchange="setSliderValue"></slider>
                 </div>
             </div>
             <!--FA & PA-->
@@ -161,17 +161,17 @@
                 <text>{{$t('Strings.getBatteryLevelEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batteryLevel" value={{$t('Strings.batteryLevel')}}></button>
+                    <button class="btn3" onclick="batteryLevel" value="{{$t('Strings.batteryLevel')}}"></button>
                 </div>
                 <text>{{$t('Strings.batterySubscribeEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batterySubscribe" value={{$t('Strings.batterySubscribe')}}></button>
+                    <button class="btn3" onclick="batterySubscribe" value="{{$t('Strings.batterySubscribe')}}"></button>
                 </div>
                 <text>{{$t('Strings.batteryUnSubscribeEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batteryUnSubscribe" value={{$t('Strings.batteryUnSubscribe')}}></button>
+                    <button class="btn3" onclick="batteryUnSubscribe" value="{{$t('Strings.batteryUnSubscribe')}}"></button>
                 </div>
             </div>
         </tab-content>

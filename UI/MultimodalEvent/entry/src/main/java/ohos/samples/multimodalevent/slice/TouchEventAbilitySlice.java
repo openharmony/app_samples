@@ -39,11 +39,9 @@ public class TouchEventAbilitySlice extends AbilitySlice {
 
     private static int count = 0;
 
-    private String message = "This is touchEvent";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private TouchEventHandle touchEventHandle = touchEvent -> {
+    private final TouchEventHandle touchEventHandle = touchEvent -> {
         HiLog.info(LABEL_LOG, "ontouch touchevent2");
         if (touchEvent != null) {
             if (count > 0) {
@@ -57,6 +55,7 @@ public class TouchEventAbilitySlice extends AbilitySlice {
 
     private void showTouchEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "This is touchEvent";
         utils.showDialogBox(message, referenceContext.get());
     }
 

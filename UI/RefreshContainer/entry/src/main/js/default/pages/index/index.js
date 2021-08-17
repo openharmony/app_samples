@@ -43,7 +43,7 @@ export default {
             }
         }
     },
-    initData: function (params) {
+    initData: function () {
         var index = this.listItem.length
         for (let todolistKey in this.listItem) {
             this.listItem[todolistKey].title = this.$t('strings.title') + index

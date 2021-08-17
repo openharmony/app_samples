@@ -27,7 +27,7 @@
         ohos:background_element="$graphic:color_gray_element"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="Title"
+        ohos:text="$string:title"
         ohos:text_alignment="horizontal_center"
         ohos:text_size="25fp"
         ohos:text_weight="1000"
@@ -44,9 +44,9 @@
         ohos:left_margin="15vp"
         ohos:multiple_lines="true"
         ohos:right_margin="15vp"
-        ohos:text="Catalog"
+        ohos:text="$string:catalog"
         ohos:text_alignment="center"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="10vp"
         ohos:top_margin="15vp"/>
 
@@ -59,9 +59,9 @@
         ohos:bottom_margin="15vp"
         ohos:end_of="$id:catalog_text"
         ohos:right_margin="15vp"
-        ohos:text="Content"
+        ohos:text="$string:content"
         ohos:text_alignment="center"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="25fp"
         ohos:top_margin="15vp"/>
 
@@ -75,8 +75,8 @@
         ohos:italic="false"
         ohos:left_of="$id:next_button"
         ohos:right_margin="15vp"
-        ohos:text="Previous"
-        ohos:text_font="serif"
+        ohos:text="$string:previous"
+        ohos:text_font="$string:serif"
         ohos:text_size="15fp"
         ohos:text_weight="5"/>
 
@@ -90,8 +90,8 @@
         ohos:bottom_margin="15vp"
         ohos:italic="false"
         ohos:right_margin="15vp"
-        ohos:text="Next"
-        ohos:text_font="serif"
+        ohos:text="$string:Next"
+        ohos:text_font="$string:serif"
         ohos:text_size="15fp"
         ohos:text_weight="5"/>
 </DependentLayout>

@@ -14,9 +14,6 @@
  */
 import prompt from '@system.prompt'
 
-const injectRef = Object.getPrototypeOf(global) || global
-
-injectRef.regeneratorRuntime = require('@babel/runtime/regenerator')
 export default {
     batteryLevel: function () {
         this.getBatteryLevel();

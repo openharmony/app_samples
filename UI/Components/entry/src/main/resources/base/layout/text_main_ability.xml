@@ -22,27 +22,27 @@
     ohos:orientation="vertical">
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text1"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:color_gray_element"
-        ohos:text="Text"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_size="28fp"
         ohos:top_margin="10vp"/>
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text2"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:text_element"
-        ohos:text="Text"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_size="28fp"
         ohos:top_margin="10vp"/>
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text3"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:text_element"
@@ -50,14 +50,14 @@
         ohos:left_margin="15vp"
         ohos:left_padding="15vp"
         ohos:right_padding="15vp"
-        ohos:text="Text"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_color="blue"
         ohos:text_size="28fp"
         ohos:top_margin="10vp"/>
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text4"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:text_element"
@@ -66,16 +66,16 @@
         ohos:left_margin="15vp"
         ohos:left_padding="15vp"
         ohos:right_padding="15vp"
-        ohos:text="Text"
+        ohos:text="$string:text"
         ohos:text_alignment="center"
         ohos:text_color="blue"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="28fp"
         ohos:text_weight="700"
         ohos:top_margin="10vp"/>
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text5"
         ohos:height="100vp"
         ohos:width="300vp"
         ohos:background_element="$graphic:text_element"
@@ -84,26 +84,26 @@
         ohos:left_margin="15vp"
         ohos:left_padding="15vp"
         ohos:right_padding="15vp"
-        ohos:text="Text"
+        ohos:text="$string:text"
         ohos:text_alignment="horizontal_center|bottom"
         ohos:text_color="blue"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="28fp"
         ohos:text_weight="700"
         ohos:top_margin="10vp"/>
 
     <Text
-        ohos:id="$+id:text"
+        ohos:id="$+id:text6"
         ohos:height="match_content"
         ohos:width="75vp"
         ohos:background_element="$graphic:text_element"
         ohos:italic="true"
         ohos:max_text_lines="2"
         ohos:multiple_lines="true"
-        ohos:text="TextText"
+        ohos:text="$string:textText"
         ohos:text_alignment="center"
         ohos:text_color="blue"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="28fp"
         ohos:text_weight="700"
         ohos:top_margin="10vp"/>
@@ -120,10 +120,10 @@
         ohos:min_height="30vp"
         ohos:multiple_lines="true"
         ohos:right_padding="8vp"
-        ohos:text="T"
+        ohos:text="$string:T"
         ohos:text_alignment="center"
         ohos:text_color="blue"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_weight="700"
         ohos:top_margin="10vp"/>
 
@@ -133,10 +133,10 @@
         ohos:width="75vp"
         ohos:background_element="$graphic:text_element"
         ohos:italic="true"
-        ohos:text="TextText"
+        ohos:text="$string:textText"
         ohos:text_alignment="center"
         ohos:text_color="blue"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="28fp"
         ohos:text_weight="700"
         ohos:top_margin="10vp"/>
@@ -148,7 +148,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Text Example Ability"
+        ohos:text="$string:text_example_ability"
         ohos:text_alignment="left"
         ohos:text_size="18fp"/>
 </DirectionalLayout>

@@ -7,6 +7,22 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "contact_edit",
+      "value": "Contact Edit"
+    },
+    {
+      "name": "save",
+      "value": "Save"
+    },
+    {
+      "name": "edit",
+      "value": "Edit"
+    },
+    {
+      "name": "add",
+      "value": "+"
     }
   ]
 }

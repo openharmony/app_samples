@@ -68,7 +68,7 @@
             ohos:width="match_parent"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Serially Animator Group"
+            ohos:text="$string:serially_animator_group"
             ohos:text_size="16vp"/>
 
         <Button
@@ -77,7 +77,7 @@
             ohos:width="match_parent"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Parallel Animator Group"
+            ohos:text="$string:parallel_animator_group"
             ohos:text_size="16vp"
             ohos:top_margin="20vp"/>
 
@@ -87,7 +87,7 @@
             ohos:width="match_parent"
             ohos:background_element="$graphic:button_background"
             ohos:padding="10vp"
-            ohos:text="Animator Group Builder"
+            ohos:text="$string:animator_group_builder"
             ohos:text_size="16vp"
             ohos:top_margin="20vp"/>
     </DirectionalLayout>

@@ -38,11 +38,9 @@ public class TelephoneEventAbilitySlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private String message = "This is showTelephoneEvent";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private TelephoneEventHandle telephoneEventHandle = new TelephoneEventHandle() {
+    private final TelephoneEventHandle telephoneEventHandle = new TelephoneEventHandle() {
         @Override
         public boolean onAnswer(MultimodalEvent multimodalEvent) {
             return false;
@@ -70,6 +68,7 @@ public class TelephoneEventAbilitySlice extends AbilitySlice {
 
     private void showTelphoneEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "This is showTelephoneEvent";
         utils.showDialogBox(message, referenceContext.get());
     }
 

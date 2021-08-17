@@ -14,9 +14,9 @@
  -->
 
 <div class="container">
-    <div class="box" style="height:{{height}}; width: {{width}};">
+    <div class="box" style="height : {{ height }}; width : {{ width }};">
         <text class="red-box">A</text>
     </div>
-    <button class="btn" value="{{$t('strings.refresh')}}" onclick="onClickRefresh"></button>
-    <button class="btn" value="{{$t('strings.return')}}" onclick="onClickReturn"></button>
+    <button class="btn" value="{{ $t('strings.refresh') }}" onclick="onClickRefresh"></button>
+    <button class="btn" value="{{ $t('strings.return') }}" onclick="onClickReturn"></button>
 </div>

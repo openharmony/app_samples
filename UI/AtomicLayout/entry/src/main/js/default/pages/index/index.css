@@ -13,17 +13,5 @@
  * limitations under the License.
  */
 
-.container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    width: 60%;
-    height: 100px;
-    font-size: 40px;
-    margin-top: 20px;
-    color: #ff00ff7f;
-}
+@import "../../common/common.css";
 

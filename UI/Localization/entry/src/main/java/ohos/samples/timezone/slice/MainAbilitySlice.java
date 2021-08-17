@@ -29,8 +29,6 @@ import java.util.Locale;
  * MainAbilitySlice
  */
 public class MainAbilitySlice extends AbilitySlice {
-    private static final String TAG = MainAbilitySlice.class.getSimpleName();
-
     private Text countryText;
 
     private Text timeDateText;

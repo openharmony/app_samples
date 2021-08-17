@@ -63,6 +63,14 @@
     {
       "name": "btn_9",
       "value": "Button 9"
+    },
+    {
+      "name": "start_code_ability",
+      "value": "Start Code Ability"
+    },
+    {
+      "name": "start_xml_ability",
+      "value": "Start Xml Ability"
     }
   ]
 }

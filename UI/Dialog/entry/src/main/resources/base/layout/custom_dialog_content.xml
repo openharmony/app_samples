@@ -94,7 +94,7 @@
             ohos:id="$+id:confirm_button"
             ohos:width="match_content"
             ohos:height="match_content"
-            ohos:text="confirm"
+            ohos:text="$string:confirm"
             ohos:text_size="20vp"
             ohos:top_margin="10vp"
             ohos:layout_alignment="horizontal_center"/>

@@ -7,6 +7,34 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "input_current_value",
+      "value": "Input Current Value:"
+    },
+    {
+      "name": "zero",
+      "value": "0"
+    },
+    {
+      "name": "input_max_value",
+      "value": "Input Max Value:"
+    },
+    {
+      "name": "hundred",
+      "value": "100"
+    },
+    {
+      "name": "input_progress_speed",
+      "value": "Input Progress Speed(Max:10s Min:1s):"
+    },
+    {
+      "name": "ten",
+      "value": "10"
+    },
+    {
+      "name": "start_progress",
+      "value": "Start Progress"
     }
   ]
 }

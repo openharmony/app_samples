@@ -14,32 +14,14 @@
  -->
 
 <div class="container">
-    <div class="item" on:click="badgeInvalidationRed">
-        <image class="img" src="/common/images/Image1.jpg"/>
+    <div for="{{ array }}" class="item" on:click="badgeInvalidation({{ $idx }})">
+        <image class="img" src="{{ $item.imgPath }}"/>
         <div class="content">
-            <text class="title" on:click="badgeInvalidationDigital">{{$t('strings.contacts')}}</text>
-            <text class="text" on:click="badgeInvalidationDigital">{{ $t('strings.message') }}</text>
-            <badge style="visibility:{{visibilityDigital}}" class="badge" config="{{badgeConfigDigital}}" visible="true" placement="left" on:click="badgeInvalidationDigital">
-                <text></text>
-            </badge>
-        </div>
-    </div>
-    <div class="item" onclick="badgeInvalidation">
-        <image class="img" src="/common/images/Image2.jpg"/>
-        <div class="content">
-            <text class="title" on:click="badgeInvalidation">{{$t('strings.contacts')}}</text>
-            <text class="text" on:click="badgeInvalidation">{{ $t('strings.message') }}</text>
-            <badge style="visibility:{{visibility}}" class="badge" config="{{badgeConfig}}" visible="true" count="100" maxcount="99" placement="left" onclick="badgeInvalidation">
-                <text></text>
-            </badge>
-        </div>
-    </div>
-    <div class="item" onclick="badgeInvalidation">
-        <image class="img" src="/common/images/Image3.jpg"/>
-        <div class="content">
-            <text class="title" on:click="badgeInvalidationText">{{$t('strings.contacts')}}</text>
-            <text class="text"  on:click="badgeInvalidationText">{{$t('strings.message') }}</text>
-            <badge style="visibility:{{visibilityText}}" class="badge" config="{{badgeConfig}}" visible="true" count="35" maxcount="99" placement="left" onclick="badgeInvalidationText">
+            <text class="title" on:click="badgeInvalidation({{ $idx }})">{{ $item.contacts }}</text>
+            <text class="text" on:click="badgeInvalidation({{ $idx }})">{{ $item.message }}</text>
+            <badge style="visibility : {{ $item.visibility }}" class="badge" config="{{ badgeConfig }}"
+                   visible="true" count="{{ $item.count }}" maxcount="{{ $item.maxCount }}" placement="left"
+                   on:click="badgeInvalidation({{ $idx }})">
                 <text></text>
             </badge>
         </div>

@@ -27,7 +27,7 @@
         ohos:background_element="$graphic:text_element"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="Title"
+        ohos:text="$string:title"
         ohos:text_alignment="horizontal_center"
         ohos:text_size="18fp"
         ohos:text_weight="1000"
@@ -42,9 +42,9 @@
         ohos:bottom_margin="15vp"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="Content"
+        ohos:text="$string:content"
         ohos:text_alignment="center"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="18fp"
         ohos:top_margin="15vp"/>
 
@@ -59,8 +59,8 @@
         ohos:left_padding="5vp"
         ohos:right_margin="25vp"
         ohos:right_padding="5vp"
-        ohos:text="Previous"
-        ohos:text_font="serif"
+        ohos:text="$string:previous"
+        ohos:text_font="$string:serif"
         ohos:text_size="18fp"/>
 
     <Button
@@ -75,6 +75,6 @@
         ohos:right_margin="15vp"
         ohos:right_padding="5vp"
         ohos:text="Next"
-        ohos:text_font="serif"
+        ohos:text_font="$string:serif"
         ohos:text_size="18fp"/>
 </DependentLayout>

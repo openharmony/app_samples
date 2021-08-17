@@ -35,7 +35,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Scale"
+        ohos:text="$string:scale"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
 
@@ -47,7 +47,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Rotate"
+        ohos:text="$string:rotate"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
 
@@ -59,7 +59,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Alpha"
+        ohos:text="$string:alpha"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
 
@@ -71,7 +71,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Translate"
+        ohos:text="$string:translate"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>
 </DirectionalLayout>

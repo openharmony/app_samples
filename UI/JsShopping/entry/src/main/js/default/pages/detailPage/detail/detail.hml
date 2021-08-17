@@ -96,7 +96,7 @@
         </div>
     </div>
     <div>
-        <div class="smallVideos" show="{{show}}">
+        <div class="smallVideos" show="{{display}}">
             <text class="smallVideos-text" onclick="closeVideo">
                 X关闭
             </text>

@@ -42,7 +42,7 @@ public class MouseEventSlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private Utils utils = Utils.getInstance();
+    private final Utils utils = Utils.getInstance();
 
     @Override
     protected void onStart(Intent intent) {
@@ -51,7 +51,7 @@ public class MouseEventSlice extends AbilitySlice {
         MultimodalEventHandle.registerStandardizedEventHandle(getAbility(), touchEvent);
     }
 
-    private TouchEventHandle touchEvent = event -> {
+    private final TouchEventHandle touchEvent = event -> {
         HiLog.info(LABEL_LOG, "mouseEvent");
         if (event.getMultimodalEvent() instanceof MouseEvent) {
             MouseEvent mouseEvent = (MouseEvent) event.getMultimodalEvent();

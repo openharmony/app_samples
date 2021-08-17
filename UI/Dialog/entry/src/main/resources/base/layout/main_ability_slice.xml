@@ -20,7 +20,7 @@
 
     <Button
             ohos:id="$+id:common_dialog"
-            ohos:text="common dialog"
+            ohos:text="$string:common_dialog"
             ohos:width="match_parent"
             ohos:text_size="15fp"
             ohos:left_margin="20vp"
@@ -33,7 +33,7 @@
 
     <Button
             ohos:id="$+id:list_dialog"
-            ohos:text="list dialog"
+            ohos:text="$string:list_dialog"
             ohos:width="match_parent"
             ohos:left_margin="20vp"
             ohos:right_margin="20vp"
@@ -46,7 +46,7 @@
 
     <Button
             ohos:id="$+id:multiselect_dialog"
-            ohos:text="multiselect dialog"
+            ohos:text="$string:multiselect_dialog"
             ohos:width="match_parent"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="15fp"
@@ -59,7 +59,7 @@
 
     <Button
             ohos:id="$+id:custom_dialog"
-            ohos:text="custom dialog"
+            ohos:text="$string:custom_dialog"
             ohos:width="match_parent"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="15fp"

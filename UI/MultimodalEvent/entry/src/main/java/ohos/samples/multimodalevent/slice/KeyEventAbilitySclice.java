@@ -42,11 +42,9 @@ public class KeyEventAbilitySclice extends AbilitySlice {
      */
     private static final int BACK_KEY_CODE = 2;
 
-    private String message = "This is keyEvent";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private KeyEventHandle keyEventHandle = keyEvent -> {
+    private final KeyEventHandle keyEventHandle = keyEvent -> {
         HiLog.info(LABEL_LOG, "keyEvent");
         if (keyEvent != null && keyEvent.isKeyDown()) {
             int keyCode = keyEvent.getKeyCode();
@@ -66,6 +64,7 @@ public class KeyEventAbilitySclice extends AbilitySlice {
 
     private void showKeyEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "This is keyEvent";
         utils.showDialogBox(message, referenceContext.get());
     }
 

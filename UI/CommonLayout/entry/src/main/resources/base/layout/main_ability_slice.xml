@@ -27,7 +27,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="DirectionalLayout"
+        ohos:text="$string:directional"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 
@@ -38,7 +38,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="DependentLayout"
+        ohos:text="$string:dependent"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 </DirectionalLayout>

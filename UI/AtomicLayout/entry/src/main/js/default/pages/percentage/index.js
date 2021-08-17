@@ -13,11 +13,10 @@
  * limitations under the License.
  */
 
-export default{
+export default {
     data: {
-        height:"200px",
+        height: "200px",
     },
-
     onClickReturn() {
         this.height = "200px"
     },

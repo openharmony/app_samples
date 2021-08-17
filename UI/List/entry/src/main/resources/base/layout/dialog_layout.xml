@@ -25,7 +25,7 @@
         ohos:width="match_content"
         ohos:top_margin="5vp"
         ohos:height="match_content"
-        ohos:text="Contact Edit"
+        ohos:text="$string:contact_edit"
         ohos:text_size="20fp"
         ohos:text_color="#000000"/>
 
@@ -80,7 +80,7 @@
         ohos:width="match_parent"
         ohos:bottom_margin="10vp"
         ohos:height="match_content"
-        ohos:text="Save"
+        ohos:text="$string:save"
         ohos:text_size="20fp"
         ohos:text_color="#000000"/>
 </DirectionalLayout>

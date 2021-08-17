@@ -123,8 +123,7 @@ public class BatteryInternalAbility extends AceInternalAbility {
         StringBuilder stringBuilder = new StringBuilder();
         boolean isCharging = getChargingStatus();
         double batteryValue = getBatteryLevel();
-        stringBuilder.append(batteryValue)
-            .append(" % Battery Left" + System.lineSeparator())
+        stringBuilder.append(batteryValue).append(" % Battery Left").append(System.lineSeparator())
             .append("isCharging: ")
             .append(isCharging);
         return stringBuilder.toString();
@@ -143,8 +142,7 @@ public class BatteryInternalAbility extends AceInternalAbility {
 
     private int getBatteryLevel() {
         BatteryInfo batteryInfo = new BatteryInfo();
-        int batteryLevel = batteryInfo.getCapacity();
-        return batteryLevel;
+        return batteryInfo.getCapacity();
     }
 
     private boolean getChargingStatus() {

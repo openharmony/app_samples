@@ -31,7 +31,7 @@
         ohos:left_margin="15vp"
         ohos:left_padding="8vp"
         ohos:right_padding="8vp"
-        ohos:text="button"
+        ohos:text="$string:button"
         ohos:text_size="18fp"
         ohos:top_margin="10vp"/>
 
@@ -45,7 +45,7 @@
         ohos:left_margin="15vp"
         ohos:left_padding="8vp"
         ohos:right_padding="8vp"
-        ohos:text="button"
+        ohos:text="$string:button"
         ohos:text_size="18fp"/>
 
     <Button
@@ -58,7 +58,7 @@
         ohos:left_margin="15vp"
         ohos:left_padding="15vp"
         ohos:right_padding="15vp"
-        ohos:text="button"
+        ohos:text="$string:button"
         ohos:text_size="18fp"/>
 
     <Button
@@ -71,7 +71,7 @@
         ohos:left_margin="15vp"
         ohos:left_padding="15vp"
         ohos:right_padding="15vp"
-        ohos:text="+"
+        ohos:text="$string:add"
         ohos:text_size="18fp"/>
 
     <Button
@@ -82,7 +82,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Button Example Ability"
+        ohos:text="$string:button_example_ability"
         ohos:text_alignment="left"
         ohos:text_size="18fp"/>
 </DirectionalLayout>
