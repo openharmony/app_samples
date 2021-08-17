@@ -1,0 +1,30 @@
+{
+  "strings": {
+    "collect": "收藏",
+    "collected": "已收藏",
+    "book_title": "书名",
+    "book_introduction": "书本简介",
+    "enter_shelf": "进入收藏",
+    "recommend":  "今日推荐:",
+    "collected_title":  "已收藏:",
+    "collected_null_tips":  "未找到已收藏的书籍.",
+    "bookNames": [
+      {
+        "name": "书名1",
+        "collect": false
+      },
+      {
+        "name": "书名2",
+        "collect": false
+      },
+      {
+        "name": "书名3",
+        "collect": false
+      },
+      {
+        "name": "书名4",
+        "collect": false
+      }
+    ]
+  }
+}
