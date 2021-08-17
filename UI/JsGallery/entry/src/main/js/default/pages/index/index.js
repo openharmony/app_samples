@@ -48,10 +48,10 @@ export default {
                 })
             }
         } else {
-            for (var i = 1;i <= 200; i++) {
+            for (var j = 1;j <= 200; j++) {
                 this.imgsrc.push({
-                    SourceFile: '/common/image/LOADPIC_' + ('0000' + i).slice(-4) + '.png',
-                    order: i
+                    SourceFile: '/common/image/LOADPIC_' + ('0000' + j).slice(-4) + '.png',
+                    order: j
                 })
             }
         }

@@ -19,17 +19,17 @@
                 <text>{{$t('Strings.getBatteryLevelEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batteryLevel" value={{$t('Strings.batteryLevel')}}></button>
+                    <button class="btn3" onclick="batteryLevel" value="{{$t('Strings.batteryLevel')}}"></button>
                 </div>
                 <text>{{$t('Strings.batterySubscribeEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batterySubscribe" value={{$t('Strings.batterySubscribe')}}></button>
+                    <button class="btn3" onclick="batterySubscribe" value="{{$t('Strings.batterySubscribe')}}"></button>
                 </div>
                 <text>{{$t('Strings.batteryUnSubscribeEvent')}}
                 </text>
                 <div class="button-controller">
-                    <button class="btn3" onclick="batteryUnSubscribe" value={{$t('Strings.batteryUnSubscribe')}}></button>
+                    <button class="btn3" onclick="batteryUnSubscribe" value="{{$t('Strings.batteryUnSubscribe')}}"></button>
                 </div>
             </div>
 </div>

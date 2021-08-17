@@ -15,10 +15,6 @@
 
 import prompt from '@system.prompt'
 
-const injectRef = Object.getPrototypeOf(global) || global
-
-injectRef.regeneratorRuntime = require('@babel/runtime/regenerator')
-
 export default {
     data: {
         ii18n: {},
@@ -57,7 +53,7 @@ export default {
     onSelectChanged: function (e) {
         this.showToast(e.newValue);
     },
-    showMessageFromTextArea: function (e) {
+    showMessageFromTextArea: function () {
         var text = this.textAreaContent;
         if (!text || 0 === text.length) {
             text = "Text Area is empty"

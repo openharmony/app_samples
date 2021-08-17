@@ -35,7 +35,7 @@
             ohos:id="$+id:bnt_add"
             ohos:height="40vp"
             ohos:text_size="30fp"
-            ohos:text="+"
+            ohos:text="$string:add"
             ohos:text_color="#000000"
             ohos:width="match_parent"
             ohos:background_element="$graphic:bg_common"/>

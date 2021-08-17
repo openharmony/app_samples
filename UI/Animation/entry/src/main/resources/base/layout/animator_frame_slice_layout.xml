@@ -24,7 +24,7 @@
         ohos:top_margin="20vp"
         ohos:height="match_content"
         ohos:id="$+id:frame_container"
-        ohos:background_element="$media:01"
+        ohos:background_element="$graphic:animation_element"
         ohos:width="match_content"/>
 
     <Button
@@ -35,7 +35,7 @@
         ohos:padding="10vp"
         ohos:left_margin="24vp"
         ohos:right_margin="24vp"
-        ohos:text="Start"
+        ohos:text="$string:start"
         ohos:text_size="16vp"
         ohos:top_margin="20vp"/>
 </DirectionalLayout>

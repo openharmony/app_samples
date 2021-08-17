@@ -38,11 +38,9 @@ public class CommonEventAbilitySlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private String message = "This is CommonEvent";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private CommonEventHandle commonEventHandle = new CommonEventHandle() {
+    private final CommonEventHandle commonEventHandle = new CommonEventHandle() {
         @Override
         public boolean onShowMenu(MultimodalEvent multimodalEvent) {
             return false;
@@ -135,6 +133,7 @@ public class CommonEventAbilitySlice extends AbilitySlice {
 
     private void showCommonEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "This is CommonEvent";
         utils.showDialogBox(message, referenceContext.get());
     }
 

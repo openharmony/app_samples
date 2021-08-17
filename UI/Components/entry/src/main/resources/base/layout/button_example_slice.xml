@@ -27,7 +27,7 @@
         ohos:width="match_content"
         ohos:background_element="$graphic:green_text_element"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="0123456789"
+        ohos:text="$string:number"
         ohos:text_alignment="center"
         ohos:text_size="20fp"/>
 
@@ -44,7 +44,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="1"
+            ohos:text="$string:one"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -55,7 +55,7 @@
             ohos:background_element="$graphic:green_circle_button_element"
             ohos:left_margin="5vp"
             ohos:right_margin="5vp"
-            ohos:text="2"
+            ohos:text="$string:two"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -64,7 +64,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="3"
+            ohos:text="$string:three"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
     </DirectionalLayout>
@@ -81,7 +81,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="4"
+            ohos:text="$string:four"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -92,7 +92,7 @@
             ohos:background_element="$graphic:green_circle_button_element"
             ohos:left_margin="5vp"
             ohos:right_margin="5vp"
-            ohos:text="5"
+            ohos:text="$string:five"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -101,7 +101,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="6"
+            ohos:text="$string:six"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
     </DirectionalLayout>
@@ -118,7 +118,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="7"
+            ohos:text="$string:seven"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -129,7 +129,7 @@
             ohos:background_element="$graphic:green_circle_button_element"
             ohos:left_margin="5vp"
             ohos:right_margin="5vp"
-            ohos:text="8"
+            ohos:text="$string:eight"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -138,7 +138,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="9"
+            ohos:text="$string:nine"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
     </DirectionalLayout>
@@ -155,7 +155,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="*"
+            ohos:text="$string:p"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -166,7 +166,7 @@
             ohos:background_element="$graphic:green_circle_button_element"
             ohos:left_margin="5vp"
             ohos:right_margin="5vp"
-            ohos:text="0"
+            ohos:text="$string:zero"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
 
@@ -175,7 +175,7 @@
             ohos:height="40vp"
             ohos:width="40vp"
             ohos:background_element="$graphic:green_circle_button_element"
-            ohos:text="#"
+            ohos:text="$string:w"
             ohos:text_alignment="center"
             ohos:text_size="15fp"/>
     </DirectionalLayout>
@@ -190,7 +190,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_padding="10vp"
         ohos:right_padding="10vp"
-        ohos:text="CALL"
+        ohos:text="$string:call"
         ohos:text_alignment="center"
         ohos:text_size="15fp"
         ohos:top_padding="2vp"/>

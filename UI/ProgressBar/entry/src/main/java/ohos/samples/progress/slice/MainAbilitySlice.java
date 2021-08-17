@@ -44,7 +44,6 @@ public class MainAbilitySlice extends AbilitySlice implements Slider.ValueChange
     private Slider currentSlider;
     private Slider maxSlider;
     private Slider speedSlider;
-    private Component startProgressButton;
     private Text currentText;
     private Text maxText;
     private Text speedText;
@@ -53,7 +52,7 @@ public class MainAbilitySlice extends AbilitySlice implements Slider.ValueChange
     private Timer timer;
     private int frequencyValue;
 
-    private EventHandler handler = new EventHandler(EventRunner.current()) {
+    private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             if (event.eventId == EVENT_ID) {
@@ -80,7 +79,7 @@ public class MainAbilitySlice extends AbilitySlice implements Slider.ValueChange
         maxText = (Text) findComponentById(ResourceTable.Id_max_value_text);
         speedSlider = (Slider) findComponentById(ResourceTable.Id_speed_value_slider);
         speedText = (Text) findComponentById(ResourceTable.Id_speed_value_text);
-        startProgressButton = findComponentById(ResourceTable.Id_start_progress_button);
+        Component startProgressButton = findComponentById(ResourceTable.Id_start_progress_button);
         progressBar = (ProgressBar) findComponentById(ResourceTable.Id_progressbar);
         currentSlider.setValueChangedListener(this);
         maxSlider.setValueChangedListener(this);

@@ -18,7 +18,6 @@ package ohos.samples.customcomponent.slice;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.samples.customcomponent.ResourceTable;
-import ohos.samples.customcomponent.modle.CustomComponent;
 
 /**
  * AnnlusAbilitySlice
@@ -26,7 +25,6 @@ import ohos.samples.customcomponent.modle.CustomComponent;
  * @since 2021-05-08
  */
 public class AnnulusAbilitySlice extends AbilitySlice {
-    private CustomComponent component;
 
     @Override
     public void onStart(Intent intent) {

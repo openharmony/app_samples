@@ -45,15 +45,13 @@ public class KeyEventAbilitySlice extends AbilitySlice {
      */
     private static final int BACK_KEY_CODE = 2;
 
-    private Component componentKey;
-
-    private Utils utils = Utils.getInstance();
+    private final Utils utils = Utils.getInstance();
 
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
         setUIContent(ResourceTable.Layout_key_main_ability_slice);
-        componentKey = findComponentById(ResourceTable.Id_key_event_text);
+        Component componentKey = findComponentById(ResourceTable.Id_key_event_text);
         HiLog.info(LABEL_LOG, "setKeyEventListener");
         componentKey.setKeyEventListener(onKeyEvent);
         componentKey.setTouchFocusable(true);
@@ -74,18 +72,15 @@ public class KeyEventAbilitySlice extends AbilitySlice {
         utils.showDialogBox(items, referenceContext.get());
     }
 
-    private Component.KeyEventListener onKeyEvent = new Component.KeyEventListener() {
-        @Override
-        public boolean onKeyEvent(Component component, KeyEvent keyEvent) {
-            HiLog.info(LABEL_LOG, "onKeyEvent");
-            if (keyEvent.isKeyDown()) {
-                int keyCode = keyEvent.getKeyCode();
-                if (keyCode != BACK_KEY_CODE) {
-                    showKeyEvent(keyEvent);
-                }
+    private final Component.KeyEventListener onKeyEvent = (component, keyEvent) -> {
+        HiLog.info(LABEL_LOG, "onKeyEvent");
+        if (keyEvent.isKeyDown()) {
+            int keyCode = keyEvent.getKeyCode();
+            if (keyCode != BACK_KEY_CODE) {
+                showKeyEvent(keyEvent);
             }
-            return false;
         }
+        return false;
     };
 
     @Override

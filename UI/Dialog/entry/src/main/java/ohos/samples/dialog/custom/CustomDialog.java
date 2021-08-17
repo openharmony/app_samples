@@ -35,8 +35,7 @@ import java.util.regex.Pattern;
  * CustomDialog
  */
 public class CustomDialog extends CommonDialog {
-    private static final String PATTERN = "^\\d{1}$";
-    private Component customComponent;
+    private static final String PATTERN = "^\\d$";
     private TextField checkCode1;
     private TextField checkCode2;
     private TextField checkCode3;
@@ -46,7 +45,7 @@ public class CustomDialog extends CommonDialog {
     private Text titleText;
     private Component confirmButton;
     private ConfirmListener confirmListener;
-    private Context context;
+    private final Context context;
 
     /**
      * CustomDialog
@@ -63,7 +62,7 @@ public class CustomDialog extends CommonDialog {
     }
 
     private void initComponents() {
-        customComponent = LayoutScatter.getInstance(context)
+        Component customComponent = LayoutScatter.getInstance(context)
                 .parse(ResourceTable.Layout_custom_dialog_content, null, true);
         checkCode1 = (TextField) customComponent.findComponentById(ResourceTable.Id_num_1_textfield);
         checkCode2 = (TextField) customComponent.findComponentById(ResourceTable.Id_num_2_textfield);

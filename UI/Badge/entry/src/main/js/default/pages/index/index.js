@@ -15,26 +15,48 @@
 
 export default {
     data: {
-        badgeConfig:{
-            badgeColor:"#FFFF0F0F",
-            textColor:"#ffffff",
-        },
-        badgeConfigDigital:{
-            badgeSize: "8px",
-            badgeColor:"#FFFF0F0F",
-            textColor:"#ffffff",
-        },
-        visibility:"visible",
-        visibilityText:"visible",
-        visibilityDigital: "visible"
+        array: [
+            {
+                imgPath: '/common/images/Image1.jpg',
+                contacts: "",
+                message: "",
+                visibility: "",
+                count: "",
+                maxCount: ""
+            },
+            {
+                imgPath: '/common/images/Image2.jpg',
+                contacts: '',
+                message: '',
+                visibility: "",
+                count: "100",
+                maxCount: "99"
+            },
+            {
+                imgPath: '/common/images/Image3.jpg',
+                contacts: '',
+                message: '',
+                visibility: "",
+                count: "35",
+                maxCount: "99"
+            }
+        ],
+        badgeConfig: {
+            badgeColor: "#FFFF0F0F",
+            textColor: "#ffffff",
+        }
     },
-    badgeInvalidationDigital:function() {
-        this.visibilityDigital = "hidden";
+    onInit() {
+        for (var arr in this.array) {
+            this.array[arr].contacts = this.$t('strings.contacts');
+            this.array[arr].message = this.$t('strings.message');
+            this.array[arr].visibility = "visible"
+        }
     },
-    badgeInvalidation:function() {
-        this.visibility = "hidden";
-    },
-    badgeInvalidationText:function() {
-        this.visibilityText = "hidden";
-    },
+    badgeInvalidation(id) {
+        var idx = JSON.stringify(id)
+        console.log(idx)
+        this.array[idx].visibility = "hidden";
+        console.log(this.array[idx].visibility)
+    }
 }

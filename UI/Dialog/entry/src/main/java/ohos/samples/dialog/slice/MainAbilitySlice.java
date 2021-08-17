@@ -45,10 +45,6 @@ public class MainAbilitySlice extends AbilitySlice {
      * DIALOG_BOX_WIDTH
      */
     public static final int DIALOG_BOX_WIDTH = 984;
-    private Component commonDialogButton;
-    private Component listDialogButton;
-    private Component multiSelectDialogButton;
-    private Component customDialogButton;
     private Text resultText;
 
     @Override
@@ -59,10 +55,10 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void initComponents() {
-        commonDialogButton = findComponentById(ResourceTable.Id_common_dialog);
-        listDialogButton = findComponentById(ResourceTable.Id_list_dialog);
-        multiSelectDialogButton = findComponentById(ResourceTable.Id_multiselect_dialog);
-        customDialogButton = findComponentById(ResourceTable.Id_custom_dialog);
+        Component commonDialogButton = findComponentById(ResourceTable.Id_common_dialog);
+        Component listDialogButton = findComponentById(ResourceTable.Id_list_dialog);
+        Component multiSelectDialogButton = findComponentById(ResourceTable.Id_multiselect_dialog);
+        Component customDialogButton = findComponentById(ResourceTable.Id_custom_dialog);
         resultText = (Text) findComponentById(ResourceTable.Id_result_text);
 
         commonDialogButton.setClickedListener(component -> showCommonDialog());

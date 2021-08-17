@@ -14,24 +14,12 @@
  */
 
 import router from '@system.router';
+
 export default {
-    data: {
-    },
-    onClickHidecapabilities() {
+    data: {},
+    onchange(type) {
         router.push({
-            uri: "pages/hide/index"
-        })
-    },
-
-    onClickPercentage() {
-        router.push({
-            uri: "pages/percentage/index"
-        })
-    },
-
-    onClickFixedscale() {
-        router.push({
-            uri: "pages/fixed/index"
+            uri: "pages/" + type + "/index"
         })
     }
 }

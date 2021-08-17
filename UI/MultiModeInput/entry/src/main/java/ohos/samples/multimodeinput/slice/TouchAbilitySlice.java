@@ -40,16 +40,14 @@ public class TouchAbilitySlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private Component componentTouch;
-
-    private Utils utils = Utils.getInstance();
+    private final Utils utils = Utils.getInstance();
 
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
         setUIContent(ResourceTable.Layout_first_main_ability_slice);
 
-        componentTouch = findComponentById(ResourceTable.Id_touch_event_button);
+        Component componentTouch = findComponentById(ResourceTable.Id_touch_event_button);
         HiLog.info(LABEL_LOG, "setTouchEventListener");
         componentTouch.setTouchEventListener(onTouchEvent);
     }
@@ -68,13 +66,10 @@ public class TouchAbilitySlice extends AbilitySlice {
         utils.showDialogBox(items, referenceContext.get());
     }
 
-    private Component.TouchEventListener onTouchEvent = new Component.TouchEventListener() {
-        @Override
-        public boolean onTouchEvent(Component component, TouchEvent touchEvent) {
-            HiLog.info(LABEL_LOG, "onTouchEvent");
-            showTouchEvent(touchEvent);
-            return true;
-        }
+    private final Component.TouchEventListener onTouchEvent = (component, touchEvent) -> {
+        HiLog.info(LABEL_LOG, "onTouchEvent");
+        showTouchEvent(touchEvent);
+        return true;
     };
 
     @Override

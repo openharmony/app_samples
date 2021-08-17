@@ -13,8 +13,6 @@
  * limitations under the License.
  */
 
-import image from '@system.image'
-
 export default {
     data: {
         componentName: 'Image',

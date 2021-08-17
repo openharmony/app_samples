@@ -22,7 +22,7 @@ export default {
     },
     data() {
         return {
-            show: this.showObject,
+            display: this.showObject,
         };
     },
     childClicked() {

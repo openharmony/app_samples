@@ -34,7 +34,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Spring"
+        ohos:text="$string:spring"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -46,7 +46,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Anticipate"
+        ohos:text="$string:anticipate"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -58,7 +58,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Cycle"
+        ohos:text="$string:cycle"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -70,7 +70,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Overshoot"
+        ohos:text="$string:Overshoot"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -82,7 +82,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Smooth Step"
+        ohos:text="$string:smooth_step"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 
@@ -94,7 +94,7 @@
         ohos:left_margin="24vp"
         ohos:padding="10vp"
         ohos:right_margin="24vp"
-        ohos:text="Cubic Hermit"
+        ohos:text="$string:cubic_hermit"
         ohos:text_size="16vp"
         ohos:top_margin="30vp"/>
 </DirectionalLayout>

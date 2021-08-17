@@ -26,7 +26,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Animator Frame"
+        ohos:text="$string:animator_framet"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 
@@ -37,7 +37,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Animator Value"
+        ohos:text="$string:animator_value"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 
@@ -48,7 +48,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Animator Property"
+        ohos:text="$string:animator_property"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 
@@ -59,7 +59,7 @@
         ohos:element_right="$media:ic_arrow_right"
         ohos:left_padding="24vp"
         ohos:padding="10vp"
-        ohos:text="Animator Group"
+        ohos:text="$string:animator_group"
         ohos:text_alignment="left"
         ohos:text_size="16vp"/>
 </DirectionalLayout>

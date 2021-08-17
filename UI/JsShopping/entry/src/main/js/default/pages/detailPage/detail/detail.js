@@ -24,7 +24,7 @@ export default {
         tempList: [],
         beginIndex: 0,
         endIndex: 0,
-        show: false,
+        display: false,
         playBar: false,
         smallVideoTime: 0,
         bigVideoTime: 0,

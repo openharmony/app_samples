@@ -19,7 +19,7 @@
     <text class="text-style" onclick="childClicked" focusable="true">
         Click here to view hidden text
     </text>
-    <text class="text-style" if="{{show}}">
-        hello world
+    <text class="text-style" if="{{display}}">
+        hello worldshow
     </text>
 </div>

@@ -28,7 +28,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="vertical"
+        ohos:text="$string:vertical"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>
 
@@ -43,7 +43,7 @@
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
             ohos:left_margin="15vp"
-            ohos:text="Button 1"
+            ohos:text="$string:btn_1"
             ohos:text_size="16fp"/>
 
         <Button
@@ -52,7 +52,7 @@
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
             ohos:left_margin="15vp"
-            ohos:text="Button 2"
+            ohos:text="$string:btn_2"
             ohos:text_size="16fp"/>
 
         <Button
@@ -61,7 +61,7 @@
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
             ohos:left_margin="15vp"
-            ohos:text="Button 3"
+            ohos:text="$string:btn_3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
 
@@ -74,7 +74,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="horizontal"
+        ohos:text="$string:horizontal"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -88,7 +88,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:left_margin="15vp"
-            ohos:text="Button 1"
+            ohos:text="$string:btn_1"
             ohos:text_size="16fp"/>
 
         <Button
@@ -96,7 +96,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:left_margin="15vp"
-            ohos:text="Button 2"
+            ohos:text="$string:btn_2"
             ohos:text_size="16fp"/>
 
         <Button
@@ -104,7 +104,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:left_margin="15vp"
-            ohos:text="Button 3"
+            ohos:text="$string:btn_3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
 
@@ -117,7 +117,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="alignment"
+        ohos:text="$string:alignment"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -132,7 +132,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:layout_alignment="left"
-            ohos:text="Button 1"
+            ohos:text="$string:btn_1"
             ohos:text_size="16fp"/>
 
         <Button
@@ -140,7 +140,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:layout_alignment="horizontal_center"
-            ohos:text="Button 2"
+            ohos:text="$string:btn_2"
             ohos:text_size="16fp"/>
 
         <Button
@@ -148,7 +148,7 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:layout_alignment="right"
-            ohos:text="Button 3"
+            ohos:text="$string:btn_3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
 
@@ -161,7 +161,7 @@
         ohos:layout_alignment="horizontal_center"
         ohos:left_margin="15vp"
         ohos:right_margin="15vp"
-        ohos:text="weight"
+        ohos:text="$string:weight"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
 
@@ -176,7 +176,7 @@
             ohos:height="30vp"
             ohos:width="50vp"
             ohos:background_element="$graphic:color_light_gray_element"
-            ohos:text="Button 1"
+            ohos:text="$string:btn_1"
             ohos:weight="1"
             ohos:text_size="15fp"/>
 
@@ -184,7 +184,7 @@
             ohos:height="30vp"
             ohos:width="50vp"
             ohos:background_element="$graphic:color_gray_element"
-            ohos:text="Button 2"
+            ohos:text="$string:btn_2"
             ohos:weight="2"
             ohos:text_size="16fp"/>
 
@@ -192,7 +192,7 @@
             ohos:height="30vp"
             ohos:width="50vp"
             ohos:background_element="$graphic:color_light_gray_element"
-            ohos:text="Button 3"
+            ohos:text="$string:btn_3"
             ohos:weight="3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>

@@ -21,7 +21,7 @@
     <Text
         ohos:width="match_content"
         ohos:height="match_content"
-        ohos:text="Input Current Value:"
+        ohos:text="$string:input_current_value"
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
@@ -47,7 +47,7 @@
             ohos:id="$+id:current_value_text"
             ohos:width="match_content"
             ohos:height="match_content"
-            ohos:text="0"
+            ohos:text="$string:zero"
             ohos:text_size="15fp"
             ohos:padding="5vp"
             ohos:right_margin="10vp"/>
@@ -56,7 +56,7 @@
     <Text
         ohos:width="match_content"
         ohos:height="match_content"
-        ohos:text="Input Max Value:"
+        ohos:text="$string:input_max_value"
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
@@ -83,7 +83,7 @@
             ohos:id="$+id:max_value_text"
             ohos:width="match_content"
             ohos:height="match_content"
-            ohos:text="100"
+            ohos:text="$string:hundred"
             ohos:text_size="15fp"
             ohos:padding="5vp"
             ohos:right_margin="10vp"/>
@@ -92,11 +92,11 @@
     <Text
         ohos:width="match_content"
         ohos:height="match_content"
-        ohos:text="Input Progress Speed(Max:10s Min:1s):"
+        ohos:text="$string:input_progress_speed"
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
-        ohos:left_margin="10f\vp"/>
+        ohos:left_margin="10vp"/>
 
     <DirectionalLayout
         ohos:orientation="horizontal"
@@ -120,14 +120,14 @@
             ohos:id="$+id:speed_value_text"
             ohos:width="match_content"
             ohos:height="match_content"
-            ohos:text="10"
+            ohos:text="$string:ten"
             ohos:text_size="15fp"
             ohos:padding="5vp"
             ohos:right_margin="10vp"/>
     </DirectionalLayout>
 
     <Button
-        ohos:text="Start Progress"
+        ohos:text="$string:start_progress"
         ohos:id="$+id:start_progress_button"
         ohos:width="match_parent"
         ohos:height="match_content"

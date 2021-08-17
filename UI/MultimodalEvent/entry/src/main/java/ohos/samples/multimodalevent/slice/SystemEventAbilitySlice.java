@@ -38,11 +38,9 @@ public class SystemEventAbilitySlice extends AbilitySlice {
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
-    private String message = "Page closed";
+    private final Utils utils = Utils.getInstance();
 
-    private Utils utils = Utils.getInstance();
-
-    private SystemEventHandle systemEventHandle = new SystemEventHandle() {
+    private final SystemEventHandle systemEventHandle = new SystemEventHandle() {
         @Override
         public boolean onMute(MultimodalEvent multimodalEvent) {
             return false;
@@ -67,6 +65,7 @@ public class SystemEventAbilitySlice extends AbilitySlice {
 
     private void showSystemEvent() {
         WeakReference<Context> referenceContext = new WeakReference<>(getContext());
+        String message = "Page closed";
         utils.showDialogBox(message, referenceContext.get());
     }
 
