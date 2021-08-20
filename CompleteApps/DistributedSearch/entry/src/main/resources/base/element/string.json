@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "DistributedSearch"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "button_distributed_device",
+      "value": "Dev"
+    },
+    {
+      "name": "button_add_distributed",
+      "value": "Join distributed file system"
+    },
+    {
+      "name": "image_label",
+      "value": "Image"
+    },
+    {
+      "name": "audio_label",
+      "value": "Audio"
+    },
+    {
+      "name": "video_label",
+      "value": "Video"
+    },
+    {
+      "name": "text_label",
+      "value": "File"
+    },
+    {
+      "name": "all_label",
+      "value": "All"
+    },
+    {
+      "name": "result_info_label",
+      "value": "No results"
+    },
+    {
+      "name": "cancel_label",
+      "value": "Cancel"
+    },
+    {
+      "name": "confirm_label",
+      "value": "Confirm"
+    },
+    {
+      "name": "input_notice_msg",
+      "value": "Please enter a valid search keyword"
+    },
+    {
+      "name": "file_path_label",
+      "value": "File path"
+    },
+    {
+      "name": "local_device_name",
+      "value": "Local"
+    },
+    {
+      "name": "distributed_exception_info",
+      "value": "Note: distributed file exception!"
+    },
+    {
+      "name": "file_source_label",
+      "value": "File source"
+    },
+    {
+      "name": "delete_file_info",
+      "value": "Are you sure to delete this file?"
+    },
+    {
+      "name": "delete_file_warn",
+      "value": "The file cannot be recovered after deletion"
+    },
+    {
+      "name": "delete_label",
+      "value": "Delete"
+    }
+  ]
+}
