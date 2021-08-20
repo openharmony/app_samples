@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "分布式搜索"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "button_distributed_device",
+      "value": "设备"
+    },
+    {
+      "name": "button_add_distributed",
+      "value": "加入分布式文件系统"
+    },
+    {
+      "name": "image_label",
+      "value": "图片"
+    },
+    {
+      "name": "audio_label",
+      "value": "音频"
+    },
+    {
+      "name": "video_label",
+      "value": "视频"
+    },
+    {
+      "name": "text_label",
+      "value": "文档"
+    },
+    {
+      "name": "all_label",
+      "value": "所有"
+    },
+    {
+      "name": "result_info_label",
+      "value": "暂无搜索结果"
+    },
+    {
+      "name": "cancel_label",
+      "value": "取消"
+    },
+    {
+      "name": "confirm_label",
+      "value": "确定"
+    },
+    {
+      "name": "input_notice_msg",
+      "value": "请输入有效的搜索关键字"
+    },
+    {
+      "name": "file_path_label",
+      "value": "文件路径"
+    },
+    {
+      "name": "local_device_name",
+      "value": "本机"
+    },
+    {
+      "name": "distributed_exception_info",
+      "value": "注意：分布式文件异常！"
+    },
+    {
+      "name": "file_source_label",
+      "value": "文件来源"
+    },
+    {
+      "name": "delete_file_info",
+      "value": "确定删除该文件？"
+    },
+    {
+      "name": "delete_file_warn",
+      "value": "删除后该文件不可恢复"
+    },
+    {
+      "name": "delete_label",
+      "value": "删除"
+    }
+  ]
+}

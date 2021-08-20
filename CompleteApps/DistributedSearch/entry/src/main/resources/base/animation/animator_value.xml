@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<animator xmlns:ohos="http://schemas.huawei.com/res/ohos"
+          ohos:delay="1000"
+          ohos:duration="2000"/>

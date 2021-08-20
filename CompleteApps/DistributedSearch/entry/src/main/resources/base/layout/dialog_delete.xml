@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="300vp"
+    ohos:width="match_parent"
+    ohos:background_element="$graphic:background_white_radius_10"
+    ohos:bottom_margin="10vp"
+    ohos:left_margin="20vp"
+    ohos:orientation="vertical"
+    ohos:right_margin="20vp">
+
+    <Image
+        ohos:height="140vp"
+        ohos:width="280vp"
+        ohos:image_src="$media:icon_delete_notice"
+        ohos:padding="20vp"
+        ohos:layout_alignment="center"
+        />
+    <Text
+        ohos:height="44vp"
+        ohos:width="280vp"
+        ohos:text="$string:delete_file_info"
+        ohos:text_size="24vp"
+        ohos:text_color="#000000"
+        ohos:text_alignment="center"
+        />
+
+    <Text
+        ohos:height="44vp"
+        ohos:width="280vp"
+        ohos:text="$string:delete_file_warn"
+        ohos:text_size="20vp"
+        ohos:text_color="#808080"
+        ohos:text_alignment="center"
+        />
+    <DirectionalLayout
+        ohos:height="44vp"
+        ohos:width="280vp"
+        ohos:orientation="horizontal"
+        >
+        <Text
+            ohos:id="$+id:operate_no"
+            ohos:height="44vp"
+            ohos:width="0vp"
+            ohos:text="$string:cancel_label"
+            ohos:text_alignment="center"
+            ohos:text_color="#1e90ff"
+            ohos:text_size="17fp"
+            ohos:weight="1"/>
+
+        <Component
+            ohos:height="25vp"
+            ohos:width="1vp"
+            ohos:background_element="#111111"
+            ohos:layout_alignment="vertical_center"/>
+
+        <Text
+            ohos:id="$+id:operate_yes"
+            ohos:height="44vp"
+            ohos:width="0vp"
+            ohos:text="$string:delete_label"
+            ohos:text_alignment="center"
+            ohos:text_color="#1e90ff"
+            ohos:text_size="17fp"
+            ohos:weight="1"/>
+    </DirectionalLayout>
+</DirectionalLayout>

@@ -1,0 +1,107 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.distributedsearch",
+    "vendor": "sample",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.distributedsearch",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.distributedsearch.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
+        "reason": "用于分布式数据交换",
+        "usedScene": {
+          "ability": [
+            "com.distributed.everything.slice.MainAbilitySlice"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_DISTRIBUTED_DEVICE_INFO"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_DEVICE_STATE_CHANGE"
+      },
+      {
+        "name": "ohos.permission.READ_USER_STORAGE",
+        "reason": "用于读取用户存储信息",
+        "usedScene": {
+          "ability": [
+            "com.distributed.everything.slice.MainAbilitySlice"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_USER_STORAGE",
+        "reason": "用于写取用户存储信息",
+        "usedScene": {
+          "ability": [
+            "com.distributed.everything.slice.MainAbilitySlice"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA",
+        "reason": "用于读取媒体文件信息",
+        "usedScene": {
+          "ability": [
+            "com.distributed.everything.slice.MainAbilitySlice"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_MEDIA",
+        "reason": "用于保存媒体文件信息",
+        "usedScene": {
+          "ability": [
+            "com.distributed.everything.slice.MainAbilitySlice"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      }
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "ohos.samples.distributedsearch.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
