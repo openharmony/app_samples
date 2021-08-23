@@ -19,7 +19,7 @@
 
 1. 编译约束
    已实名认证的开发者联盟账号 ，具体[参考](https://developer.huawei.com/consumer/cn/ )
-   开发工具：DevEcoStudio 2.2Beta1 下载地址 [HUAWEI DevEco Studio - HarmonyOS应用开发官网](https://developer.harmonyos.com/cn/develop/deveco-studio#download) 
+   开发工具：DevEcoStudio下载地址 [HUAWEI DevEco Studio - HarmonyOS应用开发官网](https://developer.harmonyos.com/cn/develop/deveco-studio#download) 
 
    •安装DevEco Studio 
 
