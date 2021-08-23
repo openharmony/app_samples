@@ -15,11 +15,7 @@
 
 package ohos.samples.distributedscheduler.slice;
 
-import ohos.aafwk.ability.continuation.ExtraParams;
-import ohos.aafwk.ability.continuation.ContinuationDeviceInfo;
-import ohos.aafwk.ability.continuation.IContinuationDeviceCallback;
-import ohos.aafwk.ability.continuation.IContinuationRegisterManager;
-import ohos.aafwk.ability.continuation.RequestCallback;
+import ohos.aafwk.ability.continuation.*;
 import ohos.distributedschedule.interwork.IInitCallback;
 import ohos.samples.distributedscheduler.MainAbility;
 import ohos.samples.distributedscheduler.RemoteAgentProxy;
@@ -75,6 +71,8 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private RemoteAgentProxy remoteAgentProxy = null;
 
+    private String jsonParams;
+
     private EventHandler eventHandler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
@@ -105,8 +103,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
         params.setDevType(devTypes);
         params.setTargetBundleName(REMOTE_BUNDLE);
-        String jsonParams = "{\"filter\":{\"commonFilter\":{\"groupType\":\"1|256\"}}," +
-        "\"isTurnOffRecommend\":true,\"transferScene\":0}";
+        jsonParams = "{'filter':{'commonFilter':{'groupType':'1|256','faFilter':'{\"targetBundleName\":\"ohos.samples.distributedscheduler\"}'}}}";
         params.setJsonParams(jsonParams);
         continuationRegisterManager.register(REMOTE_BUNDLE, params, callback, requestCallback);
     }
@@ -153,8 +150,6 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
         params.setDevType(devTypes);
         params.setTargetBundleName(REMOTE_BUNDLE);
-        String jsonParams = "{\"filter\":{\"commonFilter\":{\"groupType\":\"1|256\"}}," +
-        "\"isTurnOffRecommend\":true,\"transferScene\":0}";
         params.setJsonParams(jsonParams);
         continuationRegisterManager.showDeviceList(abilityToken, params, null);
     }
@@ -162,19 +157,27 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
         @Override
         public void onConnected(ContinuationDeviceInfo deviceInfo) {
-            selectedDeviceId = deviceInfo.getDeviceId();
         }
         @Override
         public void onDisconnected(String deviceId) {
-            selectedDeviceId = "";
         }
 
         @Override
         public void onDeviceConnectDone(String deviceId, String deviceType) {
+            HiLog.info(LABEL_LOG, "onDeviceConnectDone: " + deviceId);
+            selectedDeviceId = deviceId;
+            //更新选择设备后的流转状态
+            continuationRegisterManager.updateConnectStatus(abilityToken, selectedDeviceId, DeviceConnectState.CONNECTED.getState(), null);
+            showTips(getContext(), "device connect succeed");
         }
 
         @Override
         public void onDeviceDisconnectDone(String deviceId) {
+            HiLog.info(LABEL_LOG, "onDeviceDisconnectDone: " + deviceId);
+            selectedDeviceId = "";
+            //更新选择设备后的流转状态
+            continuationRegisterManager.updateConnectStatus(abilityToken, selectedDeviceId, DeviceConnectState.IDLE.getState(), null);
+            showTips(getContext(), "device disconnected");
         }
     };
 
