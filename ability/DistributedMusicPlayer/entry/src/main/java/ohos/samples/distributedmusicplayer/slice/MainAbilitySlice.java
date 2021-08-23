@@ -15,6 +15,7 @@
 
 package ohos.samples.distributedmusicplayer.slice;
 
+import ohos.aafwk.ability.continuation.*;
 import ohos.samples.distributedmusicplayer.ResourceTable;
 import ohos.samples.distributedmusicplayer.utils.LogUtil;
 import ohos.samples.distributedmusicplayer.utils.PlayerManager;
@@ -50,6 +51,8 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
 
     private static final String URI2 = "resources/rawfile/Homey.wav";
 
+    private static final String CONTINUE_BUNDLE = "ohos.samples.distributedmusicplayer";
+
     private final String[] musics = {URI1, URI2};
 
     private final int[] posters = {ResourceTable.Media_album, ResourceTable.Media_album2};
@@ -78,6 +81,12 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
 
     private Image musicPosters;
 
+    private IContinuationRegisterManager continuationRegisterManager;
+
+    private String jsonParams;
+
+    private int abilityToken;
+
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
@@ -87,6 +96,17 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
         initMedia();
         updateUI();
         remotePlay();
+        initContinuationRegisterManager();
+    }
+
+    private void initContinuationRegisterManager() {
+        continuationRegisterManager = getContinuationRegisterManager();
+        ExtraParams params = new ExtraParams();
+        String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
+        params.setDevType(devTypes);
+        jsonParams = "{'filter':{'commonFilter':{'groupType':'1|256','faFilter':'{\"targetBundleName\":\"ohos.samples.distributedmusicplayer\"}'}}}";
+        params.setJsonParams(jsonParams);
+        continuationRegisterManager.register(CONTINUE_BUNDLE, params, callback, requestCallback);
     }
 
     private void initMedia() {
@@ -114,11 +134,11 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
     }
 
     private void continueAbility(Component component) {
-        try {
-            continueAbility();
-        } catch (IllegalStateException e) {
-            LogUtil.info(TAG, e.getMessage());
-        }
+        ExtraParams params = new ExtraParams();
+        String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
+        params.setDevType(devTypes);
+        params.setJsonParams(jsonParams);
+        continuationRegisterManager.showDeviceList(abilityToken, params, null);
     }
 
     private void updateUI() {
@@ -243,6 +263,39 @@ public class MainAbilitySlice extends AbilitySlice implements PlayerStateListene
         LogUtil.info(TAG, "onRestoreData:" + currentTime);
         return true;
     }
+
+    private final IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
+        @Override
+        public void onConnected(ContinuationDeviceInfo deviceInfo) {
+            LogUtil.info(TAG, "onConnected: " + deviceInfo.getDeviceId());
+        }
+        @Override
+        public void onDisconnected(String deviceId) {
+            LogUtil.info(TAG, "onDisconnected: " + deviceId);
+        }
+
+        @Override
+        public void onDeviceConnectDone(String deviceId, String deviceType) {
+            LogUtil.info(TAG, "onDeviceConnectDone: " + deviceId);
+            //更新选择设备后的流转状态
+            continuationRegisterManager.updateConnectStatus(abilityToken, deviceId, DeviceConnectState.CONNECTED.getState(), null);
+            continueAbility(deviceId);
+        }
+
+        @Override
+        public void onDeviceDisconnectDone(String deviceId) {
+            LogUtil.info(TAG, "onDeviceDisconnectDone: " + deviceId);
+            //更新选择设备后的流转状态
+            continuationRegisterManager.updateConnectStatus(abilityToken, deviceId, DeviceConnectState.IDLE.getState(), null);
+        }
+    };
+
+    private final RequestCallback requestCallback = new RequestCallback() {
+        @Override
+        public void onResult(int result) {
+            abilityToken = result;
+        }
+    };
 
     @Override
     public void onCompleteContinuation(int i) {
