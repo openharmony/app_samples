@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "JSUICustomComponent"
+    },
+    {
+      "name": "mainability_description",
+      "value": "JSUICustomComponent Ability"
+    }
+  ]
+}
