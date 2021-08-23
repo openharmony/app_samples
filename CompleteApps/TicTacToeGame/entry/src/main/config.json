@@ -1,0 +1,72 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.tictactoegame",
+    "vendor": "sample",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.tictactoegame",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.tictactoegame.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "ohos.samples.tictactoegame.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "name": "ohos.samples.tictactoegame.RemoteServiceAbility",
+        "icon": "$media:icon",
+        "description": "$string:remoteserviceability_description",
+        "type": "service"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+      },
+      {
+        "name": "ohos.permission.servicebus.ACCESS_SERVICE"
+      },
+      {
+        "name": "com.huawei.hwddmp.servicebus.BIND_SERVICE"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_DEVICE_STATE_CHANGE"
+      },
+      {
+        "name": "ohos.permission.GET_DISTRIBUTED_DEVICE_INFO"
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      }
+    ]
+  }
+}
