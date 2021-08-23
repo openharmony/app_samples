@@ -1,0 +1,224 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "分布式购物车"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "add_succ_label",
+      "value": "添加成功"
+    },
+    {
+      "name": "device_select_label",
+      "value": "选择设备"
+    },
+    {
+      "name": "amount_details",
+      "value": "金额明细"
+    },
+    {
+      "name": "amount_notice_info",
+      "value": "*实际优惠金额请以下单页为准"
+    },
+    {
+      "name": "goods_prices_label",
+      "value": "商品总价"
+    },
+    {
+      "name": "discount_label",
+      "value": "优惠金额"
+    },
+    {
+      "name": "discount_0label",
+      "value": "优惠0元 优惠明细"
+    },
+    {
+      "name": "total_label",
+      "value": "合计"
+    },
+    {
+      "name": "total_0_label",
+      "value": "合计:0.00"
+    },
+    {
+      "name": "my_label",
+      "value": "我"
+    },
+    {
+      "name": "my_0_label",
+      "value": "我:￥0.00"
+    },
+    {
+      "name": "xiaowang_label",
+      "value": "小王"
+    },
+    {
+      "name": "xiaowang_0_label",
+      "value": "小王:￥0.00"
+    },
+    {
+      "name": "original_price_label",
+      "value": "原价"
+    },
+    {
+      "name": "original_price_0_label",
+      "value": "原价:￥0.00"
+    },
+    {
+      "name": "select_all_label",
+      "value": "全选"
+    },
+    {
+      "name": "settle_accounts_label",
+      "value": "去结算"
+    },
+    {
+      "name": "settle_accounts_0_label",
+      "value": "去结算(0)"
+    },
+    {
+      "name": "shopping_cart_slice",
+      "value": "我的购物车"
+    },
+    {
+      "name": "xiaowang_shopping_cart",
+      "value": "小王的购物车"
+    },
+    {
+      "name": "cashier_label",
+      "value": "收 银"
+    },
+    {
+      "name": "cloud_pay_label",
+      "value": "云闪付"
+    },
+    {
+      "name": "bank_card_pay_label",
+      "value": "银行卡支付"
+    },
+    {
+      "name": "confirm_payment_label",
+      "value": "确认支付"
+    },
+    {
+      "name": "pay_success_label",
+      "value": "订单支付成功"
+    },
+    {
+      "name": "finish_label",
+      "value": "完成"
+    },
+    {
+      "name": "specifications_label",
+      "value": "规格"
+    },
+    {
+      "name": "discount",
+      "value": "优惠"
+    },
+    {
+      "name": "activity_label",
+      "value": "活动"
+    },
+    {
+      "name": "activity_618_label",
+      "value": "618热爱狂欢"
+    },
+    {
+      "name": "add_cart_label",
+      "value": "加入购物车"
+    },
+    {
+      "name": "meger_cart_request_info",
+      "value": "您的好友***向您分享购物车，是否合并购物车？"
+    },
+    {
+      "name": "agree_label",
+      "value": "同意"
+    },
+    {
+      "name": "cancel_label",
+      "value": "取消"
+    },
+    {
+      "name": "cart_empty_info",
+      "value": "当前购物车空!!!"
+    },
+    {
+      "name": "submit_order_label",
+      "value": "提交订单"
+    },
+    {
+      "name": "default_label",
+      "value": "默认"
+    },
+    {
+      "name": "address_info",
+      "value": "深圳市龙岗区坂田街道天安云谷3栋B座27F"
+    },
+    {
+      "name": "phone_info",
+      "value": "**先生：186****6666"
+    },
+    {
+      "name": "commodity_amount_label",
+      "value": "商品金额"
+    },
+    {
+      "name": "freight_label",
+      "value": "运费"
+    },
+    {
+      "name": "subtraction_label",
+      "value": "共减"
+    },
+    {
+      "name": "coupon_label",
+      "value": "优惠券"
+    },
+    {
+      "name": "no_available_info",
+      "value": "无可用"
+    },
+    {
+      "name": "share_success_info",
+      "value": "分享成功"
+    },
+    {
+      "name": "discount_details",
+      "value": "元 优惠明细"
+    },
+    {
+      "name": "meger_success_info",
+      "value": "合并成功"
+    },
+    {
+      "name": "meger_cart_label",
+      "value": "合并购物车"
+    },
+    {
+      "name": "friends_info",
+      "value": "您的好友"
+    },
+    {
+      "name": "meger_cart_request",
+      "value": "请求向您合并他的购物车，是否合并？"
+    },
+    {
+      "name": "shared_cart_request",
+      "value": "向您分享他的购物车，是否接收？"
+    },
+    {
+      "name": "shared_cart_label",
+      "value": "分享购物车"
+    }
+  ]
+}

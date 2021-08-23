@@ -1,0 +1,74 @@
+[
+  {
+    "title": "GREE_CONDITION",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone6.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone6_list.png",
+    "param": "  8GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "7200.00",
+    "discount": "5000减600",
+    "content": "华为P40 Pro 5G手机【12期免息可选送豪礼】全网通智能手机 支持鸿蒙HarmonyOS 冰霜银 8G+256G",
+    "otherContent": "性价比高/流畅/大屏幕"
+  },
+  {
+    "title": "MIDEA_CONDITION",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone5.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone5_list.png",
+    "param": "  8GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "4000.00",
+    "discount": "5000减600",
+    "content": "华为 nova7pro 全网通 5G手机【支持鸿蒙系统 12期免息可选】 七号色 全网通 8G+128G(碎屏险套装）",
+    "otherContent": "性价比高/流畅/大屏幕"
+  },
+  {
+    "title": "MIDEA_FAN",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone4.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone4_list.png",
+    "param": "  8GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "3500.00",
+    "discount": "5000减600",
+    "content": "华为nova7se 5G手机 【支持鸿蒙HarmonyOs手机店内有售】 仲夏紫 全网通（8+128GB）乐活版",
+    "otherContent": "性价比高/流畅/大屏幕"
+  },
+  {
+    "title": "MIDEA_FAN_S",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone3.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone3_list.png",
+    "param": "  4GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "1800.00",
+    "discount": "5000减600",
+    "content": "华为（HUAWEI）畅享20SE手机 全网通4G版 5000mAh大电池 6.67英寸全高清大屏 幻夜黑 4GB+128GB",
+    "otherContent": "性价比高/流畅/大屏幕"
+  },
+  {
+    "title": "MIDEA_BRIDGE",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone2.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone2_list.png",
+    "param": "  8GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "5600.00",
+    "discount": "5000减600",
+    "content": "华为nova8 5G手机 【支持鸿蒙HarmonyOs】【pro/12期免息店内可选】 全网通8G+128G 8号色 官方标配【碎屏险套装】",
+    "otherContent": "性价比高/流畅/游戏机"
+  },
+  {
+    "title": "RONSHEN_BRIDGE",
+    "num": "1",
+    "imgDetail": "entry/resources/base/media/pic_mophone1.png",
+    "imgUrl": "entry/resources/base/media/pic_mophone1_list.png",
+    "param": "  8GB    128GB    6.58英寸",
+    "param2":"运行内存  机身存储  主屏幕尺寸",
+    "price": "4200.00",
+    "discount": "5000减600",
+    "content": "【搭载HarmonyOS 2】华为 HUAWEI Mate 40E 4G 全网通 6.5英寸OLED曲面屏 超感知徕卡影像 8GB+128GB亮黑色",
+    "otherContent": "OLED曲面屏/超感知徕卡影像/华为超级快充"
+  }
+]
