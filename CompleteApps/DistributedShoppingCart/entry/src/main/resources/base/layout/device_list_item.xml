@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:background_element="$graphic:background_dialog"
+    ohos:height="match_content"
+    ohos:width="match_parent">
+
+    <DependentLayout
+        ohos:id="$+id:id_front"
+        ohos:height="140px"
+        ohos:width="match_parent">
+        <Image
+            ohos:height="90px"
+            ohos:width="90px"
+            ohos:margin="30px"
+            ohos:id="$+id:dev_icon"
+            ohos:image_src="$media:icon_device"/>
+        <Text
+            ohos:id="$+id:item_chlid_textview"
+            ohos:height="80px"
+            ohos:width="match_parent"
+            ohos:right_of="$id:dev_icon"
+            ohos:text_size="18vp"/>
+        <Text
+            ohos:id="$+id:item_chlid_textId"
+            ohos:height="60px"
+            ohos:width="match_parent"
+            ohos:text_color="#FFCBCBD2"
+            ohos:text_size="12vp"
+            ohos:right_of="$id:dev_icon"
+            ohos:below="$id:item_chlid_textview"/>
+        <Component
+            ohos:top_margin="20px"
+            ohos:height="0.5fp"
+            ohos:width="match_parent"
+            ohos:background_element="#EAEAEC"
+            ohos:below="$id:dev_icon"
+            />
+    </DependentLayout>
+</DirectionalLayout>
