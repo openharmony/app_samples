@@ -29,7 +29,7 @@
            2).如果网络无法直接访问Internet，则可以通过代理服务器进行访问 • 生成密钥并申请证书 
 
    具体环境搭建请[参考：](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/installation_process-0000001071425528) 
-   更多资料请登录鸿蒙应用开发[官网:](https://developer.harmonyos.com/cn/)
+   更多资料请登录HarmonyOS应用开发[官网:](https://developer.harmonyos.com/cn/)
    
 2. 使用限制
    •该应用必须要有两部或以上同一组网内的手机
