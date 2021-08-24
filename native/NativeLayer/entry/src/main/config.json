@@ -1,0 +1,48 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.nativelayer",
+    "vendor": "samples",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.nativelayer",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.nativelayer.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "portrait",
+        "permissions": [],
+        "name": "ohos.samples.nativelayer.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard",
+        "visible": true
+      }
+    ]
+  }
+}

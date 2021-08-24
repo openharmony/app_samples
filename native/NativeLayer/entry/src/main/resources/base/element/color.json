@@ -1,0 +1,40 @@
+{
+  "color": [
+    {
+      "name": "color_button_blue_empty",
+      "value": "#3355FF"
+    },
+    {
+      "name": "color_button_blue_pressed",
+      "value": "#0000CC"
+    },
+    {
+      "name": "color_button_blue_text",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "color_transparent",
+      "value": "#00000000"
+    },
+    {
+      "name": "color_white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "color_dialog_text",
+      "value": "#000000"
+    },
+    {
+      "name": "color_dialog_line",
+      "value": "#9F9F9F"
+    },
+    {
+      "name": "color_dialog_content_text",
+      "value": "#5F5F5F"
+    },
+    {
+      "name": "color_button_white_pressed",
+      "value": "#E5E5E5"
+    }
+  ]
+}
