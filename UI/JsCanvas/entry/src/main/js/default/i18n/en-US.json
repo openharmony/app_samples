@@ -1,0 +1,10 @@
+{
+  "strings": {
+    "arc": "arc",
+    "strokeText": "strokeText",
+    "close": "close",
+    "bezierCurve": "bezierCurve",
+    "textBaseline": "textBaseline",
+    "delete": "delete"
+  }
+}
