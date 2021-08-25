@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "game" : "Game",
+    "hot_search": "Hot Search",
+    "discover": "Discover",
+    "wallet": "Wallet",
+    "scan": "Scan",
+    "browser": "Browser",
+    "contact": "Contact",
+    "message": "Message"
+  }
+}
