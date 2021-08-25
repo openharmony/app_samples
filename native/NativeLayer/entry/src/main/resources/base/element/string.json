@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "NativeLayer"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Native C++"
+    },
+    {
+      "name": "get_native_layer_info",
+      "value": "Get nativelayer info"
+    },
+    {
+      "name": "set_native_layer_info",
+      "value": "Set nativelayer width and height"
+    },
+    {
+      "name": "set_native_layer_format",
+      "value": "Set nativelayer format"
+    },
+    {
+      "name": "width",
+      "value": "Width: "
+    },
+    {
+      "name": "height",
+      "value": "Height: "
+    },
+    {
+      "name": "format",
+      "value": "Format: "
+    },
+    {
+      "name": "submit",
+      "value": "Sure"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "get_nativelayer_info_result",
+      "value": "get nativelayer info result: "
+    }
+  ]
+}

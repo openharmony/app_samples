@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "get_native_layer_info",
+      "value": "获取原生层信息"
+    },
+    {
+      "name": "set_native_layer_info",
+      "value": "设置原生层宽和高"
+    },
+    {
+      "name": "set_native_layer_format",
+      "value": "设置原生层图层格式"
+    },
+    {
+      "name": "width",
+      "value": "宽"
+    },
+    {
+      "name": "height",
+      "value": "高: "
+    },
+    {
+      "name": "format",
+      "value": "图层格式: "
+    },
+    {
+      "name": "submit",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    }
+  ]
+}
