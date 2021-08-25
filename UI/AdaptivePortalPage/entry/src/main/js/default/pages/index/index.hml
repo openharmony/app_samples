@@ -1,0 +1,128 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<element name="group-header" src="../../common/template-group-header.hml"></element>
+<element name="card-item" src="../../common/template-card-item.hml"></element>
+<element name="tab-bar-group" src="../../common/template-tabbar.hml"></element>
+
+<div class="container">
+    <div class="tab-bar-bg" if="{{ isTablet == true || isTv == true }}">
+        <div class="tab-bar-bottom">
+            <tab-bar-group for="{{ tabBars }}" icon="{{ isTv == true ? ('tv/' + $item.icon) : ($item.icon) }}" color="{{ isTv == true ? ('#3F97E9') : ('#035AFF') }}" text="{{ $item.text }}" active="{{ $idx == menu_tabs_index }}"></tab-bar-group>
+        </div>
+    </div>
+    <tabs class="div-tabs-bottom" index="{{ menu_tabs_index }}">
+        <tab-content class="div-tab-content" scrollable="false">
+            <div class="div-content-one">
+                <search class="search-title" hint="{{ $t('strings.SearchHint') }}"></search>
+                <image class="img-tab-bar-right" src="{{ isTv == true ? '/common/images/tab_bar_right_tv.png' : '/common/images/tab_bar_right.png'}}"></image>
+                <tabs class="div-tabs">
+                    <tab-bar class="div-tab-bar" mode="scrollable" style="position : relative;">
+                        <text class="txt-tab-bar" for="{{ subTabList }}">{{ $item }}</text>
+                    </tab-bar>
+                    <tab-content>
+                        <list class="div-content-one">
+                            <list-item class="item-content" clickeffect="false">
+                                <div class="list-one">
+                                    <div class="div-list-item-one" for="{{ listOne }}" id="{{ $item.id }}">
+                                        <button class="button-circle" type="circle"></button>
+                                        <text class="txt-list-item-one">{{ $item.title }}</text>
+                                    </div>
+                                </div>
+                                <group-header></group-header>
+                                <list class="list-two" scrolleffect="spring">
+                                    <list-item type="listItem" class="item-two" for="{{ listTwo }}" clickeffect="false">
+                                        <div class="div-list-item-two">
+                                            <image class="img-hmqs" src="{{ isTv == true ? '/common/images/item_tv.png' : '/common/images/item.png'}}"></image>
+                                            <div class="div-txt-hmqs">
+                                                <text class="txt-list-item-two">{{ $item.title }}</text>
+                                            </div>
+                                        </div>
+                                    </list-item>
+                                </list>
+                            <!-- card group1 -->
+                                <group-header></group-header>
+                                <list class="list-three" scrolleffect="spring">
+                                    <list-item type="listItem" class="item-three" for="{{ listThree }}"clickeffect="false">
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                    </list-item>
+                                </list>
+                            <!-- card group2 -->
+                                <group-header></group-header>
+                                <list class="list-three" scrolleffect="spring">
+                                    <list-item type="listItem" class="item-three" for="{{ listThree }}"clickeffect="false">
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                    </list-item>
+                                </list>
+                            <!-- card group3 -->
+                                <group-header></group-header>
+                                <list class="list-three" scrolleffect="spring">
+                                    <list-item type="listItem" class="item-three" for="{{ listThree }}" clickeffect="false">
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                        <card-item title="{{ $item.msg1 }}" author="{{ $item.msg2 }}"></card-item>
+                                        <divider class="divider" vertical="false"></divider>
+                                    </list-item>
+                                </list>
+                            </list-item>
+                        </list>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                    </tab-content>
+                </tabs>
+            </div>
+            <div class="div-content-others">
+                <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+            </div>
+            <div class="div-content-others">
+                <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+            </div>
+            <div class="div-content-others">
+                <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+            </div>
+            <div class="div-content-others">
+                <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+            </div>
+        </tab-content>
+    </tabs>
+    <div class="tab-bar-bottom" if="{{ ! (isTablet == true || isTv == true) }}">
+        <tab-bar-group for="{{ tabBars }}" icon="{{ $item.icon }}" text="{{ $item.text }}"active="{{ $idx == menu_tabs_index }}"></tab-bar-group>
+    </div>
+</div>

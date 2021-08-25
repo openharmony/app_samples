@@ -1,0 +1,81 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.content-title-more {
+    width: 100%;
+    height: 48px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    background-color: #F6F4F1;
+}
+
+.div-title-left {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
+}
+
+.txt-content-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-color: black;
+}
+
+.div-title-right {
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 24px;
+    align-items: center;
+}
+
+.txt-content-more {
+    font-size: 12px;
+    text-color: #A3A3A3;
+    margin-right: 10px;
+}
+
+.img-content-more {
+    width: 12px;
+    height: 24px;
+    flex-shrink: 0;
+    background-image: url('/common/images/more.png');
+    background-size: 12px 24px;
+}
+
+@media screen and (min-aspect-ratio: 1.7) {
+    .content-title-more {
+        background-color: black;
+    }
+
+    .img-content-more {
+        background-image: url('/common/images/more_tv.png');
+        background-size: 12px 24px;
+        background-position: right;
+    }
+
+    .txt-content-title {
+        text-color: #d9ffffff;
+    }
+
+    .txt-content-more {
+        text-color: #d9ffffff;
+    }
+}
