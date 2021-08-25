@@ -1,0 +1,114 @@
+{
+  "data": {
+    "title": "天天基金",
+    "time": "交易日更新净值时间：16:00-23:00",
+    "fundText": "基金名称",
+    "timeText": "近一周",
+    "arrayPlates": [
+      {
+        "id": 1,
+        "name": "上证指数",
+        "num": 3000.00,
+        "float": 36.12,
+        "per": "1.03%",
+        "exponent": "exponent-left",
+        "exponentNum": "exponent-float-red",
+        "exponentFloat": "exponent-float-red",
+        "exponentPer": "exponent-per-red"
+      },
+      {
+        "id": 2,
+        "name": "深圳成指",
+        "num": 3000.00,
+        "float": -36.12,
+        "per": "-1.03%",
+        "exponent": "exponent-mid",
+        "exponentNum": "exponent-num-green",
+        "exponentFloat": "exponent-float-green",
+        "exponentPer": "exponent-per-green"
+      },
+      {
+        "id": 3,
+        "name": "创业板指",
+        "num": 3000.00,
+        "float": -36.12,
+        "per": "-1.03%",
+        "exponent": "exponent-right",
+        "exponentNum": "exponent-num-green",
+        "exponentFloat": "exponent-float-green",
+        "exponentPer": "exponent-per-green"
+      }
+    ],
+    "array": [
+      {
+        "id": 1,
+        "name": "某某投资有限集团内需精选混合(LOF)",
+        "coded": 161810,
+        "perFront": "2.87%",
+        "perAfter": "2.87%",
+        "displayIndex": 4,
+        "perTextAfter": "per-text-red"
+      },
+      {
+        "id": 2,
+        "name": "银华内需精选混合(LOF)",
+        "coded": 161810,
+        "perFront": "2.87%",
+        "perAfter": "-2.87%",
+        "displayIndex": 4,
+        "perTextAfter": "per-text-green"
+      },
+      {
+        "id": 3,
+        "name": "银华内需精选混合(LOF)",
+        "coded": 161810,
+        "perFront": "2.87%",
+        "perAfter": "-2.87%",
+        "displayIndex": 3,
+        "perTextAfter": "per-text-green"
+      },
+      {
+        "id": 4,
+        "name": "银华内需精选混合(LOF)",
+        "coded": 161810,
+        "perFront": "2.87%",
+        "perAfter": "-2.87%",
+        "displayIndex": 2,
+        "perTextAfter": "per-text-green"
+      },
+      {
+        "id": 5,
+        "name": "银华内需精选混合(LOF)",
+        "coded": 161810,
+        "perFront": "2.87%",
+        "perAfter": "-2.87%",
+        "displayIndex": 1,
+        "perTextAfter": "per-text-green"
+      }
+    ],
+    "arrayImage": [
+      {
+        "id": 1,
+        "text": "排行"
+      },
+      {
+        "id": 2,
+        "text": "榜单"
+      },
+      {
+        "id": 3,
+        "text": "学堂"
+      }
+    ]
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.adaptiveservicewidget",
+      "abilityName": "ohos.samples.adaptiveservicewidget.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}

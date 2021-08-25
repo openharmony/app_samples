@@ -1,0 +1,255 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    flex-direction: column;
+    margin: 12px;
+}
+
+.region-title {
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.left-image {
+    width: 20px;
+    height: 20px;
+}
+
+.left-text {
+    font-size: 14px;
+    margin-left: 5px;
+    color: coral;
+    font-weight: bold;
+}
+
+.right-text {
+    font-size: 9px;
+    opacity: 0.6;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.region-plates {
+    margin-top: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    align-content: center;
+    flex-shrink: 0;
+}
+
+.exponent-left {
+    padding: 6px;
+    margin-right: 4px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #FFF8F8;
+    justify-content: space-evenly;
+}
+
+.exponent-text {
+    prefer-font-sizes: 12px,10px;
+    text-overflow: ellipsis;
+    max-lines: 1;
+    flex-grow: 1;
+    width: 80%;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.exponent-num-red {
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: #FE3D3B;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.exponent-div {
+    flex-direction: row;
+}
+
+.row-div {
+    flex-direction: row;
+    position: relative;
+    height: 20px;
+}
+
+.region-row-div {
+    flex-direction: row;
+    height: 50px;
+    position: relative;
+}
+
+.exponent-float-red {
+    font-size: 10px;
+    color: #FE3D3B;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.exponent-per-red {
+    font-size: 9px;
+    color: #FE3D3B;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-left: 7px;
+}
+
+.exponent-mid {
+    padding: 6px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #F4FDF4;
+    justify-content: space-evenly;
+}
+
+.fund-text {
+    font-size: 10px;
+    opacity: 0.6;
+    position: absolute;
+}
+
+.time-text-front {
+    font-size: 10px;
+    opacity: 0.6;
+    position: absolute;
+    right: 50px;
+}
+
+.time-text-after {
+    font-size: 10px;
+    opacity: 0.6;
+    position: absolute;
+    right: 0px;
+}
+
+.exponent-num-green {
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: #52C45E;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.exponent-float-green {
+    font-size: 10px;
+    color: #52C45E;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.exponent-per-green {
+    font-size: 9px;
+    color: #52C45E;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-left: 7px;
+}
+
+.exponent-right {
+    padding: 6px;
+    margin-left: 4px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #F4FDF4;
+    justify-content: space-evenly;
+}
+
+.region-fund {
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.region-fund-item {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.column-div {
+    flex-direction: column;
+}
+
+.coded-text {
+    font-size: 10px;
+    opacity: 0.6;
+    padding-top: 5px;
+}
+
+.per-text {
+    font-size: 10px;
+    color: #FE3D3B;
+    font-weight: bold;
+    opacity: 0.8;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+}
+
+.per-text-red {
+    font-size: 10px;
+    color: #FE3D3B;
+    font-weight: bold;
+    opacity: 0.8;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.per-text-green {
+    font-size: 10px;
+    color: #52C45E;
+    font-weight: bold;
+    opacity: 0.8;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.region-bottom {
+    flex-direction: row;
+    padding-top: 5px;
+    height: 75px;
+    justify-content: space-evenly;
+}
+
+.region-bottom-item {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.region-bottom-image {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.region-bottom-text {
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.8;
+    flex-shrink: 0;
+    left: 2px;
+}
