@@ -1,0 +1,135 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <grid-container id="myGrid" columns="3" class="grid-container">
+        <grid-row class="grid-row">
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_game.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.game') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_hot.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.hot_search') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_shortcut_discover.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.discover') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+        <grid-row class="grid-row">
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_me_purchased_items.png" class="img" onclick="getColWidth">
+                    </image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.wallet') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_scan.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.scan') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_discover_10.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.browser') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+        <grid-row class="grid-row">
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_public_contacts_filled.png" class="img" onclick="getColWidth">
+                    </image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.contact') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="div" onclick="getCol">
+                    <image src="../../common/images/ic_public_community_messages_filled.png" class="img"
+                           onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.message') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+    </grid-container>
+    <grid-container id="myGrid" columns="3" gutter="0px">
+        <grid-row class="grid-row">
+            <grid-col span="2">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_game.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.game') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_hot.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.hot_search') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+        <grid-row class="grid-row">
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_shortcut_discover.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.discover') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_me_purchased_items.png" class="img" onclick="getColWidth">
+                    </image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.wallet') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_scan.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.scan') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+        <grid-row class="grid-row">
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_discover_10.png" class="img" onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.browser') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_public_contacts_filled.png" class="img" onclick="getColWidth">
+                    </image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.contact') }}</text>
+                </div>
+            </grid-col>
+            <grid-col span="1">
+                <div class="box" onclick="getCol">
+                    <image src="../../common/images/ic_public_community_messages_filled.png" class="img"
+                           onclick="getColWidth"></image>
+                    <text class="text" onclick="getGutWidth">{{ $t('strings.message') }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+    </grid-container>
+</div>
