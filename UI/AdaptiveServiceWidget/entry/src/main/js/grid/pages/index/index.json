@@ -1,0 +1,18 @@
+{
+  "data": {
+    "title": "Title",
+    "detail": "Text",
+    "iconTitle": "Picture"
+  },
+  "actions": {
+    "routerEvents": {
+      "action": "router",
+      "bundleName": "ohos.samples.adaptiveservicewidget",
+      "abilityName": "ohos.samples.adaptiveservicewidget.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}
+

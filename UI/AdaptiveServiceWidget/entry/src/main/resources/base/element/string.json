@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "AdaptiveServiceWidget"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Service widget example"
+    }
+  ]
+}
