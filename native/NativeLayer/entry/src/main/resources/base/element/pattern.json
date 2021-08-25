@@ -1,0 +1,131 @@
+{
+  "pattern": [
+    {
+      "name": "button_base",
+      "value": [
+        {
+          "name": "width",
+          "value": "$float:button_width"
+        },
+        {
+          "name": "height",
+          "value": "$float:button_height"
+        },
+        {
+          "name": "text_size",
+          "value": "$float:button_text_size"
+        },
+        {
+          "name": "margin",
+          "value": "$float:button_margin"
+        }
+      ]
+    },
+    {
+      "name": "button_blue",
+      "parent": "button_base",
+      "value": [
+        {
+          "name": "background_element",
+          "value": "$graphic:button_blue"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_button_blue_text"
+        }
+      ]
+    },
+    {
+      "name": "dialog_title",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "$float:dialog_title_text_size"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_dialog_text"
+        },
+        {
+          "name": "padding",
+          "value": "$float:dialog_content_padding"
+        },
+        {
+          "name": "text_font",
+          "value": "sans-serif-medium"
+        }
+      ]
+    },
+    {
+      "name": "dialog_content_text",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "$float:dialog_content_text_size"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_dialog_text"
+        },
+        {
+          "name": "padding",
+          "value": "$float:dialog_content_padding"
+        },
+        {
+          "name": "multiple_lines",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "name": "dialog_content_text_field",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "$float:dialog_content_text_size"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_dialog_content_text"
+        },
+        {
+          "name": "padding",
+          "value": "$float:dialog_content_padding"
+        },
+        {
+          "name": "multiple_lines",
+          "value": "false"
+        },
+        {
+          "name": "background_element",
+          "value": "$graphic:background_text_field"
+        }
+      ]
+    },
+    {
+      "name": "dailog_button_pattern",
+      "value": [
+        {
+          "name": "text_size",
+          "value": "17fp"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_button_blue_empty"
+        },
+        {
+          "name": "text_font",
+          "value": "sans-serif-medium"
+        },
+        {
+          "name": "weight",
+          "value": "5"
+        },
+        {
+          "name": "background_element",
+          "value": "$graphic:dialog_button"
+        }
+      ]
+    }
+  ]
+}

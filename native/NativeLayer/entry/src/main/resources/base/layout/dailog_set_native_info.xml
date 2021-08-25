@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:background_element="$color:color_transparent"
+    ohos:padding="$float:dialog_padding">
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:padding="$float:dialog_content_padding"
+        ohos:background_element="$graphic:background_dialog"
+        ohos:orientation="vertical">
+        <Text
+            ohos:id="$+id:dialog_title"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:text="$string:set_native_layer_info"
+            ohos:theme="$pattern:dialog_title"/>
+        <Image
+            ohos:height="1px"
+            ohos:width="match_parent"
+            ohos:top_margin="$float:dialog_content_padding"
+            ohos:background_element="$color:color_dialog_line"/>
+        <DirectionalLayout
+            ohos:id="$+id:width_component"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:top_margin="$float:dialog_padding"
+            ohos:orientation="horizontal">
+            <Text
+                ohos:height="match_content"
+                ohos:width="80vp"
+                ohos:text="$string:width"
+                ohos:theme="$pattern:dialog_content_text"/>
+            <TextField
+                ohos:id="$+id:input_width"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:theme="$pattern:dialog_content_text_field"
+                ohos:text_input_type="pattern_number"/>
+        </DirectionalLayout>
+        <DirectionalLayout
+            ohos:id="$+id:height_component"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:top_margin="$float:dialog_padding"
+            ohos:orientation="horizontal">
+            <Text
+                ohos:height="match_content"
+                ohos:width="80vp"
+                ohos:text="$string:height"
+                ohos:theme="$pattern:dialog_content_text"/>
+            <TextField
+                ohos:id="$+id:input_height"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:theme="$pattern:dialog_content_text_field"
+                ohos:text_input_type="pattern_number"/>
+        </DirectionalLayout>
+        <DirectionalLayout
+            ohos:id="$+id:format_component"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:top_margin="$float:dialog_padding"
+            ohos:orientation="horizontal">
+            <Text
+                ohos:height="match_content"
+                ohos:width="80vp"
+                ohos:text="$string:format"
+                ohos:theme="$pattern:dialog_content_text"/>
+            <TextField
+                ohos:id="$+id:input_format"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:theme="$pattern:dialog_content_text_field"
+                ohos:text_input_type="pattern_number"/>
+        </DirectionalLayout>
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal"
+            ohos:top_margin="$float:dialog_padding"
+            ohos:alignment="vertical_center">
+            <Button
+                ohos:id="$+id:cancel"
+                ohos:height="$float:button_height"
+                ohos:width="match_parent"
+                ohos:text="$string:cancel"
+                ohos:theme="$pattern:dailog_button_pattern"/>
+            <Image
+                ohos:height="30vp"
+                ohos:width="1px"
+                ohos:background_element="$color:color_dialog_line"/>
+            <Button
+                ohos:id="$+id:submit"
+                ohos:height="$float:button_height"
+                ohos:width="match_parent"
+                ohos:text="$string:submit"
+                ohos:theme="$pattern:dailog_button_pattern"/>
+        </DirectionalLayout>
+    </DirectionalLayout>
+</DirectionalLayout>
