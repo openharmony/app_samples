@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "title": "标题",
+    "search_hint": "搜索",
+    "item_name": "双行列表",
+    "item_description": "辅助文本",
+    "item_right_text": "右侧文本",
+    "second_page": "第二页",
+    "third_page": "第三页",
+    "fourth_page": "第四页",
+    "fifth_page": "第五页"
+  }
+}

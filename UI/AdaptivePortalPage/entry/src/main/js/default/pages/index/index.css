@@ -1,0 +1,415 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F4F1;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-bar-bottom {
+    width: 100%;
+    height: 56px;
+    flex-direction: row;
+    background-color: #F6F4F1;
+    justify-content: space-between;
+}
+
+.div-tabs-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-tab-content {
+    width: 100%;
+    height: 150%;
+    background-color: #F6F4F1;
+}
+
+.div-content-one {
+    width: 100%;
+    height: 150%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search-title {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.img-tab-bar-right {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 24px;
+    top: 68px;
+}
+
+.div-tabs {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.div-tab-bar {
+    width: 100%;
+    height: 56px;
+    margin-right: 56px;
+}
+
+.txt-tab-bar {
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+}
+
+.txt-tab-bar:active {
+    color: #035AFE;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-one {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding-left: 8px;
+    background-color: #F6F4F1;
+}
+
+.div-list-item-one {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 52px;
+    height: 64px;
+}
+
+.button-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #CCCCCC;
+}
+
+.txt-list-item-one {
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.list-two {
+    height: 144px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #F6F4F1;
+}
+
+.item-two {
+    width: 104px;
+    height: 144px;
+    margin-left: 12px;
+    background-color: #F6F4F1;
+}
+
+.div-list-item-two {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.img-hmqs {
+    width: 104px;
+    height: 104px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.div-txt-hmqs {
+    width: 100%;
+    margin-top: 6px;
+    flex-direction: row;
+}
+
+.txt-list-item-two {
+    font-size: 16px;
+}
+
+.list-three {
+    width: 100%;
+    height: 224px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 8px;
+    background-color: #F6F4F1;
+}
+
+.item-three {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-left: 12px;
+    margin-right: -4px;
+    width: 95%;
+    background-color: white;
+}
+
+.divider {
+    color: #1affffff;
+    stroke-width: 1px;
+    line-cap: round;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.div-content-others {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.txt-show-page {
+    text-color: black;
+    font-size: 30px;
+}
+
+@media screen and (min-aspect-ratio: 0.8) {
+    .list-one {
+        width: 558px;
+        height: 72px;
+        padding-left: 13px;
+    }
+
+    .div-list-item-one {
+        width: 81px;
+        height: 64px;
+    }
+
+    .item-two {
+        margin-left: 16px;
+    }
+
+    .item-three {
+        width: 48%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 0.6) {
+    .search-title {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .img-tab-bar-right {
+        top: 65px;
+    }
+
+    .list-one {
+        width: 100%;
+        height: 72px;
+        margin-left: 24px;
+        margin-right: 24px;
+        padding-left: 16px;
+        background-color: #F6F4F1;
+    }
+
+    .div-list-item-one {
+        width: 110px;
+        height: 64px;
+    }
+
+    .item-two {
+        margin-left: 16px;
+    }
+
+    .item-three {
+        width: 48%;
+        background-color: white;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1.6) {
+    .search-title {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .img-tab-bar-right {
+        top: 65px;
+    }
+
+    .list-one {
+        width: 963px;
+        height: 72px;
+        margin-left: 99px;
+        margin-right: 122px;
+        padding-left: 21px;
+        background-color: #F6F4F1;
+    }
+
+    .div-list-item-one {
+        width: 140px;
+        height: 64px;
+    }
+
+    .item-two {
+        margin-right: 46px;
+    }
+
+    .item-three {
+        width: 32%;
+        background-color: white;
+    }
+
+    .tab-bar-bg{
+        width: 96px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #F6F4F1;
+    }
+
+    .tab-bar-bottom {
+        width: 96px;
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F6F4F1;
+        justify-content: space-between;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        background-color: #F6F4F1;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1.7) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .img-tab-bar-right {
+        top: 65px;
+    }
+
+    .div-list-item-one {
+        width: 81px;
+        height: 61px;
+    }
+
+    .item-two {
+        margin-right: 18px;
+        background-color: black;
+    }
+
+    .item-three {
+        width: 48%;
+        background-color: #1affffff;
+    }
+
+    .txt-list-item-one {
+        text-color: #99ffffff;
+    }
+
+    .txt-list-item-two {
+        text-color: #99ffffff;
+    }
+
+    .tab-bar-bg{
+        width: 96px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #1affffff;
+    }
+
+    .tab-bar-bottom {
+        width: 96px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #00ffffff
+    }
+
+    .search-title {
+        margin-left: 24px;
+        margin-right: 24px;
+        background-color: #1affffff;
+        placeholder-color: #99ffffff;
+        text-color: #99ffffff;
+    }
+
+    .div-tab-bar {
+        background-color: black;
+    }
+
+    .div-tab-content {
+        background-color: black;
+    }
+
+    .list-one {
+        width: 629px;
+        height: 61px;
+        background-color: black;
+    }
+
+    .button-circle {
+        background-color: #1affffff;
+    }
+
+    .div-list-item-one {
+        width: 81px;
+        height: 61px;
+    }
+
+    .list-two {
+        background-color: black;
+    }
+
+    .list-three {
+        background-color: black;
+    }
+
+    .txt-tab-bar:active {
+        color: #3F97E9;
+    }
+}
