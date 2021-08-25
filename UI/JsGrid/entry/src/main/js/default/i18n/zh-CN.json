@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "game" : "游戏中心",
+    "hot_search": "热搜",
+    "discover": "发现",
+    "wallet": "钱包",
+    "scan": "扫一扫",
+    "browser": "浏览器",
+    "contact": "联系人",
+    "message": "信息"
+  }
+}
