@@ -1,0 +1,10 @@
+{
+  "strings": {
+    "arc": "弧线",
+    "strokeText": "描边",
+    "close": "封闭",
+    "bezierCurve": "贝赛尔曲线",
+    "textBaseline": "水平对齐",
+    "delete": "清除"
+  }
+}
