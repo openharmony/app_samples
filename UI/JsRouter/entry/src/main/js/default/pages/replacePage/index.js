@@ -1,4 +1,5 @@
 /*
+ * @file
  * Copyright (c) 2021 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +21,11 @@ export default {
         dataValue: ''
     },
     onInit() {
-        this.dataValue = this.$t('strings.replace')
+        this.dataValue = this.$t('strings.replace');
     },
     backPage() {
         router.back({
-            uri: "pages/index/index"
+            uri: 'pages/index/index'
         });
     }
-}
+};
