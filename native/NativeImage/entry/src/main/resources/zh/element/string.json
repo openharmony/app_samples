@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "access_pixels",
+      "value": "获取Pixels"
+    },
+    {
+      "name": "get_image_info",
+      "value": "获取PixelMap信息"
+    },
+    {
+      "name": "unaccess_pixels",
+      "value": "解锁Pixels"
+    },
+    {
+      "name": "result_succeed",
+      "value": " 结果: 成功"
+    },
+    {
+      "name": "result_bad_parameter",
+      "value": " 结果: 参数错误"
+    },
+    {
+      "name": "result_jni_exception",
+      "value": " 结果: jni异常"
+    }
+  ]
+}
