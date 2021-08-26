@@ -1,0 +1,11 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    color: #000000;
+    opacity: 0.9;
+}

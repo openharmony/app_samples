@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "hello": "您好，",
+    "page": "首页",
+    "push": "这是push页面，欢迎",
+    "value": "首页传递的值",
+    "replace": "这是replace页面"
+  }
+}
