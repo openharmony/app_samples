@@ -1,4 +1,5 @@
 /*
+ * @file
  * Copyright (c) 2021 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +18,11 @@ import router from '@system.router';
 
 export default {
     data: {
-        data1: "default"
+        data1: 'default'
     },
     replacePage() {
         router.replace({
-            uri: "pages/replacePage/index"
-        })
+            uri: 'pages/replacePage/index'
+        });
     }
-}
+};
