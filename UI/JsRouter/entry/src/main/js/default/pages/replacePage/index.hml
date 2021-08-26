@@ -1,0 +1,5 @@
+<div class="container">
+    <text class="title" on:click="backPage" >
+        {{ $t('strings.hello') }} {{ dataValue }}
+    </text>
+</div>

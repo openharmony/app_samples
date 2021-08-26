@@ -1,0 +1,5 @@
+<div class="container">
+    <text class="title" on:click="pushPage" >
+        {{ $t('strings.hello') }} {{ title }}
+    </text>
+</div>
