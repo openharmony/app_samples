@@ -1,0 +1,31 @@
+{
+  "data": {
+    "titleList": [
+      {
+        "id": 1,
+        "title": "HOUR"
+      },
+      {
+        "id": 2,
+        "title": "MIN"
+      },
+      {
+        "id": 3,
+        "title": "SEC"
+      }
+    ],
+    "hour": "",
+    "min": "",
+    "sec": ""
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.jsfacard",
+      "abilityName": ".ClockAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}
