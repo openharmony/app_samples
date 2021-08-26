@@ -1,0 +1,39 @@
+{
+  "pattern": [
+    {
+      "name": "button_base",
+      "value": [
+        {
+          "name": "width",
+          "value": "$float:button_width"
+        },
+        {
+          "name": "height",
+          "value": "$float:button_height"
+        },
+        {
+          "name": "text_size",
+          "value": "$float:button_text_size"
+        },
+        {
+          "name": "margin",
+          "value": "$float:button_margin"
+        }
+      ]
+    },
+    {
+      "name": "button_blue",
+      "parent": "button_base",
+      "value": [
+        {
+          "name": "background_element",
+          "value": "$graphic:button_blue"
+        },
+        {
+          "name": "text_color",
+          "value": "$color:color_button_blue_text"
+        }
+      ]
+    }
+  ]
+}

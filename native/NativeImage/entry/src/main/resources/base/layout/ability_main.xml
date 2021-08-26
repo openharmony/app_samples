@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:orientation="vertical"
+    ohos:padding="$float:layout_padding">
+    <Image
+        ohos:id="$+id:image"
+        ohos:height="$float:image_height"
+        ohos:width="340vp"
+        ohos:image_src="$media:image"
+        ohos:scale_mode="stretch"
+        ohos:padding="$float:layout_padding"
+        ohos:background_element="$color:color_light_ray"/>
+    <Text
+        ohos:id="$+id:result_text"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:padding="$float:layout_padding"
+        ohos:text_size="$float:text_size"
+        ohos:text_color="$ohos:color:id_color_text_primary"/>
+    <Button
+        ohos:id="$+id:access_pixels"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:access_pixels"/>
+    <Button
+        ohos:id="$+id:get_image_info"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:get_image_info"/>
+    <Button
+        ohos:id="$+id:unaccess_pixels"
+        ohos:height="$float:button_height"
+        ohos:width="match_parent"
+        ohos:theme="$pattern:button_blue"
+        ohos:text="$string:unaccess_pixels"/>
+</DirectionalLayout>

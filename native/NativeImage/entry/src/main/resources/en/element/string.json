@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "access_pixels",
+      "value": "AccessPixels"
+    },
+    {
+      "name": "get_image_info",
+      "value": "GetImageInfo"
+    },
+    {
+      "name": "unaccess_pixels",
+      "value": "UnAccessPixels"
+    },
+    {
+      "name": "result_succeed",
+      "value": " result: success"
+    },
+    {
+      "name": "result_bad_parameter",
+      "value": " result: bad parameter"
+    },
+    {
+      "name": "result_jni_exception",
+      "value": " result: jni exception"
+    }
+  ]
+}
