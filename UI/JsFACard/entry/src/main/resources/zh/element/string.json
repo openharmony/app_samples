@@ -5,8 +5,12 @@
       "value": "Js卡片"
     },
     {
-      "name": "mainability_description",
-      "value": "JS卡片示例"
+      "name": "clockability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "app_name",
+      "value": "Js卡片"
     }
   ]
 }

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:background_element="$graphic:background_ability_clock"
+    ohos:orientation="vertical"
+    ohos:remote="true">
+
+    <DirectionalLayout
+        ohos:id="$+id:title"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:orientation="horizontal">
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:margin="10vp"
+            ohos:text="$string:hour"
+            ohos:text_size="10fp"/>
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:margin="10vp"
+            ohos:text="$string:min"
+            ohos:text_size="10fp"/>
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:margin="10vp"
+            ohos:text="$string:sec"
+            ohos:text_size="10fp"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:time"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="horizontal_center"
+        ohos:below="$id:title"
+        ohos:orientation="horizontal"
+        ohos:top_margin="0.5fp">
+
+        <Text
+            ohos:id="$+id:hour"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="10vp"
+            ohos:right_margin="5vp"
+            ohos:text="$string:time"
+            ohos:text_font="$string:text_font"
+            ohos:text_size="20fp"
+            ohos:top_margin="2vp"/>
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="$string:symbol"
+            ohos:text_size="20fp"
+            ohos:top_margin="2vp"/>
+
+        <Text
+            ohos:id="$+id:min"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="5vp"
+            ohos:right_margin="5vp"
+            ohos:text="$string:time"
+            ohos:text_font="$string:text_font"
+            ohos:text_size="20fp"
+            ohos:top_margin="2vp"/>
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="$string:symbol"
+            ohos:text_size="20fp"
+            ohos:top_margin="2vp"/>
+
+        <Text
+            ohos:id="$+id:sec"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="5vp"
+            ohos:right_margin="10vp"
+            ohos:text="$string:time"
+            ohos:text_font="$string:text_font"
+            ohos:text_size="20fp"
+            ohos:top_margin="2vp"/>
+    </DirectionalLayout>
+</DependentLayout>

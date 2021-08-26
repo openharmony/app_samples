@@ -12,6 +12,7 @@ ohos {
             }
         }
     }
+    compileOptions { annotationEnabled true }
 }
 
 dependencies {
