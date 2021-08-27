@@ -5,8 +5,12 @@
       "value": "JsFACard"
     },
     {
-      "name": "mainability_description",
-      "value": "JS card example"
+      "name": "app_name",
+      "value": "JsFACard"
+    },
+    {
+      "name": "clockability_description",
+      "value": "Java_Empty Ability"
     }
   ]
 }
