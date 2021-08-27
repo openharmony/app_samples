@@ -20,7 +20,7 @@ import ohos.aafwk.ability.AbilityPackage;
 /**
  * MyApplication
  *
- * @since 2021-07-05
+ * @since 2021-08-20
  */
 public class MyApplication extends AbilityPackage {
     @Override

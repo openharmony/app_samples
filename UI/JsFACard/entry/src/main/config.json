@@ -6,11 +6,15 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "keepAlive": true
+    }
+  },
   "module": {
     "package": "ohos.samples.jsfacard",
-    "name": ".MainAbility",
-    "mainAbility": "ohos.samples.jsfacard.MainAbility",
+    "name": ".MyApplication",
+    "mainAbility": "ohos.samples.jsfacard.ClockAbility",
     "deviceType": [
       "phone"
     ],
@@ -20,6 +24,18 @@
       "moduleType": "entry",
       "installationFree": false
     },
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING",
+        "reason": "keep service ability backgroud running",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.jsfacard.TimerAbility"
+          ],
+          "when": "always"
+        }
+      }
+    ],
     "abilities": [
       {
         "skills": [
@@ -32,17 +48,43 @@
             ]
           }
         ],
-        "name": ".MainAbility",
+        "name": ".ClockAbility",
+        "icon": "$media:icon",
+        "description": "$string:clockability_description",
+        "formsEnabled": true,
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "singleton",
+        "forms": [
+          {
+            "jsComponentName": "clock1x2",
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "1*2",
+            "name": "clock1x2",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "1*2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ]
+      },
+      {
+        "name": "ohos.samples.jsfacard.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
-        "formsEnabled": true,
         "label": "$string:entry_MainAbility",
         "type": "page",
+        "formsEnabled": true,
+        "launchType": "standard",
         "forms": [
           {
             "jsComponentName": "jsmusictemplate",
-            "isDefault": true,
-            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
+            "isDefault": false,
             "scheduledUpdateTime": "10:30",
             "defaultDimension": "2*4",
             "name": "jsmusictemplate",
@@ -56,25 +98,8 @@
             "updateDuration": 1
           },
           {
-            "jsComponentName": "card",
-            "isDefault": false,
-            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
-            "scheduledUpdateTime": "10:30",
-            "defaultDimension": "2*4",
-            "name": "card",
-            "description": "This is a service widget",
-            "colorMode": "auto",
-            "type": "JS",
-            "supportDimensions": [
-              "2*4"
-            ],
-            "updateEnabled": true,
-            "updateDuration": 1
-          },
-          {
             "jsComponentName": "jscardtemplate",
             "isDefault": false,
-            "formConfigAbility": "ability://ohos.samples.jsfacard.MainAbility",
             "scheduledUpdateTime": "10:30",
             "defaultDimension": "4*4",
             "name": "jscardtemplate",
@@ -86,9 +111,34 @@
             ],
             "updateEnabled": true,
             "updateDuration": 1
+          },
+          {
+            "jsComponentName": "card",
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*4",
+            "name": "card",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*4"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
           }
-        ],
-        "launchType": "standard"
+        ]
+      },
+      {
+        "name": "ohos.samples.jsfacard.TimerAbility",
+        "icon": "$media:icon",
+        "description": "$string:timerability_description",
+        "type": "service",
+        "visible": true,
+        "backgroundModes": [
+          "dataTransfer",
+          "location"
+        ]
       }
     ],
     "js": [
@@ -129,6 +179,17 @@
           "pages/index/index"
         ],
         "name": "jsmusictemplate",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        },
+        "type": "form"
+      },
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "clock1x2",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": true

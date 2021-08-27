@@ -20,17 +20,16 @@ import ohos.aafwk.ability.FormException;
 import ohos.aafwk.ability.ProviderFormInfo;
 import ohos.aafwk.content.Intent;
 import ohos.ace.ability.AceAbility;
-import ohos.hiviewdfx.HiLog;
-import ohos.hiviewdfx.HiLogLabel;
+import ohos.samples.jsfacard.utils.LogUtils;
 import ohos.utils.zson.ZSONObject;
 
 /**
  * Main ability
  *
- * @since 2021-07-05
+ * @since 2021-08-20
  */
 public class MainAbility extends AceAbility {
-    private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, MainAbility.class.getName());
+    private static final String TAG = MainAbility.class.getName();
 
     private static final String STATUS = "status";
 
@@ -42,30 +41,31 @@ public class MainAbility extends AceAbility {
 
     @Override
     public void onStart(Intent intent) {
-        HiLog.info(TAG, "onStart");
+        LogUtils.info(TAG, "onStart");
         super.onStart(intent);
     }
 
     @Override
     protected ProviderFormInfo onCreateForm(Intent intent) {
-        HiLog.info(TAG, "onCreateForm");
+        LogUtils.info(TAG, "onCreateForm");
         return super.onCreateForm(intent);
     }
 
     @Override
     protected void onUpdateForm(long formId) {
-        HiLog.info(TAG, "onUpdateForm");
+        LogUtils.info(TAG, "onUpdateForm");
         super.onUpdateForm(formId);
     }
 
     @Override
     protected void onDeleteForm(long formId) {
-        HiLog.info(TAG, "onDeleteForm: formId=" + formId);
+        LogUtils.info(TAG, "onDeleteForm: formId=" + formId);
         super.onDeleteForm(formId);
     }
 
     @Override
     protected void onTriggerFormEvent(long formId, String message) {
+        LogUtils.info(TAG, "onTriggerFormEvent: formId=" + formId);
         super.onTriggerFormEvent(formId, message);
         ZSONObject zsonObject = new ZSONObject();
         if (isStatus) {
@@ -79,7 +79,7 @@ public class MainAbility extends AceAbility {
         try {
             updateForm(formId, formBindingData);
         } catch (FormException e) {
-            HiLog.info(TAG, "onTriggerFormEvent:" + e.getMessage());
+            LogUtils.info(TAG, "onTriggerFormEvent:" + e.getMessage());
         }
     }
 }
