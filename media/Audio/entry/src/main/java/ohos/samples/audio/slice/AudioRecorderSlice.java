@@ -24,8 +24,6 @@ import ohos.agp.components.Component;
 import ohos.agp.components.Text;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.dispatcher.task.TaskPriority;
-import ohos.hiviewdfx.HiLog;
-import ohos.hiviewdfx.HiLogLabel;
 import ohos.media.audio.AudioCapturer;
 import ohos.media.audio.AudioCapturerCallback;
 import ohos.media.audio.AudioCapturerConfig;
@@ -33,6 +31,8 @@ import ohos.media.audio.AudioCapturerInfo;
 import ohos.media.audio.AudioDeviceDescriptor;
 import ohos.media.audio.AudioManager;
 import ohos.media.audio.AudioStreamInfo;
+import ohos.samples.audio.utils.HiLogUtils;
+import ohos.samples.audio.utils.ShellUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -40,12 +40,10 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * AudioCapturer
+ * AudioRecorderSlice
  */
 public class AudioRecorderSlice extends AbilitySlice {
     private static final String TAG = AudioRecorderSlice.class.getName();
-
-    private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
 
     private static final int SAMPLE_RATE = 44100;
 
@@ -66,7 +64,7 @@ public class AudioRecorderSlice extends AbilitySlice {
     private final AudioCapturerCallback callback = new AudioCapturerCallback() {
         @Override
         public void onCapturerConfigChanged(List<AudioCapturerConfig> configs) {
-            HiLog.info(LABEL_LOG, "%{public}s", "on capturer config changed");
+            HiLogUtils.info(TAG, "on capturer config changed");
         }
     };
 
@@ -81,7 +79,13 @@ public class AudioRecorderSlice extends AbilitySlice {
     private void initComponents() {
         recordButton = (Button) findComponentById(ResourceTable.Id_main_start_recoding);
         pathText = (Text) findComponentById(ResourceTable.Id_path_text);
-        recordButton.setClickedListener(this::record);
+        recordButton.setClickedListener((Component component)->{
+            if (isRecording && audioCapturer != null) {
+                stopRecord();
+                return;
+            }
+            startRecord();
+        });
     }
 
     private void initRecord() {
@@ -113,20 +117,15 @@ public class AudioRecorderSlice extends AbilitySlice {
         audioManager = null;
     }
 
-    private void record(Component component) {
-        if (isRecording && audioCapturer != null) {
-            stopRecord();
-            return;
-        }
-        startRecord();
-    }
-
     private void stopRecord() {
         if (audioCapturer.stop()) {
             isRecording = false;
             recordButton.setText("Start");
             showTips("Stop record");
             pathText.setText("Path:" + getFilesDir() + File.separator + "record.pcm");
+            String wavPath = getFilesDir() + File.separator + "record.wav";
+            ShellUtils.tranPcmToWavFile(file, wavPath);
+            pathText.setText("Path:" + getFilesDir() + File.separator + "record.wav");
         }
     }
 
@@ -139,7 +138,7 @@ public class AudioRecorderSlice extends AbilitySlice {
         }
     }
 
-    private void runRecord() {
+    private void runRecord(){
         getGlobalTaskDispatcher(TaskPriority.DEFAULT).asyncDispatch(() -> {
             file = new File(getFilesDir() + File.separator + "record.pcm");
             try (FileOutputStream outputStream = new FileOutputStream(file)) {
@@ -149,8 +148,8 @@ public class AudioRecorderSlice extends AbilitySlice {
                     bytes = new byte[BUFFER_SIZE];
                     outputStream.flush();
                 }
-            } catch (IOException  exception) {
-                HiLog.error(LABEL_LOG, "%{public}s", "record exception");
+            } catch (IOException exception) {
+                HiLogUtils.error(TAG, "record exception," + exception.getMessage());
             }
         });
     }
