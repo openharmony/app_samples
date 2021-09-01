@@ -15,15 +15,16 @@
 
 <div class="container">
     <div class="main-div" onclick="activeEvent">
+        <image src="{{ imageSrc }}" class="main-image"></image>
         <div class="right-div">
             <text class="music-text" style="margin-start : 14px; padding-left : 10px;">{{ $t('strings.music') }}</text>
             <text class="singer-text" style="margin-start : 14px; padding-left : 10px;">{{ $t('strings.singer') }}
             </text>
             <div style="justify-content : space-between; margin : 0px 3.8%; padding-left : 10px; width : 100%;">
-                <image src="/common/ic_default_blue.svg" class="check-image"></image>
-                <image src="/common/ic_default_blue.svg" class="check-image"></image>
-                <image src="/common/ic_default_blue.svg" class="check-image"></image>
-                <image src="/common/ic_default_blue.svg" class="check-image"></image>
+                <image src="{{ imageBlueSrc }}" class="check-image"></image>
+                <image src="{{ imageBlueSrc }}" class="check-image"></image>
+                <image src="{{ imageBlueSrc }}" class="check-image"></image>
+                <image src="{{ imageBlueSrc }}" class="check-image"></image>
             </div>
         </div>
     </div>
@@ -31,11 +32,10 @@
         <text class="music-text">{{ $t('strings.music') }}</text>
         <text class="singer-text">{{ $t('strings.singer') }}</text>
         <div class="image-div">
-            <image src="/common/ic_default_blue.svg" class="check-image"></image>
-            <image src="/common/ic_default_blue.svg" class="check-image"></image>
-            <image src="/common/ic_default_blue.svg" class="check-image"></image>
-            <image src="/common/ic_default_blue.svg" class="check-image"></image>
-            <image src="/common/ic_default_blue.svg" class="check-image"></image>
+            <image src="{{ imageBlueSrc }}" class="check-image"></image>
+            <image src="{{ imageBlueSrc }}" class="check-image"></image>
+            <image src="{{ imageBlueSrc }}" class="check-image"></image>
+            <image src="{{ imageBlueSrc }}" class="check-image"></image>
         </div>
     </div>
 </div>
