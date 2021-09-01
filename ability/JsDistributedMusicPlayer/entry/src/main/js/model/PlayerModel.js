@@ -123,11 +123,13 @@ export default class PlayerModel {
                 console.info('MusicPlayer[PlayerModel] getAudioAssets result.length = ' + value.length);
                 var beginIndex = self.playlist.audioFiles.length;
                 for (var i = 0; i < value.length; i++) {
-                    self.playlist.audioFiles[beginIndex + i] = new Song();
-                    self.playlist.audioFiles[beginIndex + i].name = value[i].name;
-                    self.playlist.audioFiles[beginIndex + i].fileUri = 'file:/' + value[i].URI;
-                    self.playlist.audioFiles[beginIndex + i].duration = 0;
-                    console.info('MusicPlayer[PlayerModel] getAudioAssets result ' + i + ', name=' + self.playlist.audioFiles[i].name + ',URI=' + self.playlist.audioFiles[i].fileUri);
+                    var index = beginIndex + i;
+                    self.playlist.audioFiles[index] = new Song();
+                    self.playlist.audioFiles[index].name = value[i].name;
+                    self.playlist.audioFiles[index].fileUri = 'file:/' + value[i].URI;
+                    self.playlist.audioFiles[index].duration = 0;
+                    console.info('MusicPlayer[PlayerModel] getAudioAssets result ' + i + ', name=' +
+                    self.playlist.audioFiles[index].name + ',URI=' + self.playlist.audioFiles[index].fileUri);
                 }
             }
             callback();

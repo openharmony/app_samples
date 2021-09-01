@@ -76,7 +76,7 @@ export default {
             featureAbility.getWant((error, want) => {
                 console.info('MusicPlayer[IndexPage] featureAbility.getWant=' + JSON.stringify(want));
                 var status = want.parameters;
-                if (status) {
+                if (status != null && status.uri != null) {
                     self.kvStoreModel.broadcastMessage(REMOTE_ABILITY_STARTED);
                     console.info('MusicPlayer[IndexPage] restorePlayingStatus');
                     self.playerModel.restorePlayingStatus(status, (index) => {
