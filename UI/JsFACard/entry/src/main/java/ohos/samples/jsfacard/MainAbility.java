@@ -81,11 +81,6 @@ public class MainAbility extends Ability {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] bytes = new byte[CACHE_SIZE];
         try {
-
-            if (resource == null) {
-                LogUtils.info(TAG, "resource is null");
-                return null;
-            }
             int len = 0;
             while (-1 != (len = resource.read(bytes))) {
                 byteArrayOutputStream.write(bytes, 0, len);
