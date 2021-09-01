@@ -15,21 +15,29 @@
 
 package ohos.samples.jsfacard;
 
+import ohos.aafwk.ability.Ability;
 import ohos.aafwk.ability.FormBindingData;
 import ohos.aafwk.ability.FormException;
 import ohos.aafwk.ability.ProviderFormInfo;
 import ohos.aafwk.content.Intent;
-import ohos.ace.ability.AceAbility;
+import ohos.global.resource.NotExistException;
+import ohos.global.resource.Resource;
 import ohos.samples.jsfacard.utils.LogUtils;
 import ohos.utils.zson.ZSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Main ability
  *
  * @since 2021-08-20
  */
-public class MainAbility extends AceAbility {
+public class MainAbility extends Ability {
     private static final String TAG = MainAbility.class.getName();
+
+    private static final int CACHE_SIZE = 1024 * 20;
 
     private static final String STATUS = "status";
 
@@ -48,7 +56,46 @@ public class MainAbility extends AceAbility {
     @Override
     protected ProviderFormInfo onCreateForm(Intent intent) {
         LogUtils.info(TAG, "onCreateForm");
-        return super.onCreateForm(intent);
+        ProviderFormInfo providerFormInfo = new ProviderFormInfo();
+        try {
+            Resource resourceImageSrc = getResourceManager().getResource(ResourceTable.Media_ic_image);
+            Resource resourceBlueSrc = getResourceManager().getResource(ResourceTable.Media_ic_blue);
+            byte[] bytesImageSrc = imageConvertToByteArray(resourceImageSrc);
+            byte[] bytesBlueSrc = imageConvertToByteArray(resourceBlueSrc);
+            ZSONObject zsonObject = new ZSONObject();
+            zsonObject.put("imageSrc", "memory://ic_image.png");
+            zsonObject.put("imageBlueSrc", "memory://ic_blue.svg");
+            FormBindingData formBindingData = new FormBindingData(zsonObject);
+            formBindingData.addImageData("ic_image.png", bytesImageSrc);
+            formBindingData.addImageData("ic_blue.svg", bytesBlueSrc);
+            providerFormInfo.setJsBindingData(formBindingData);
+        } catch (IOException e) {
+            LogUtils.info(TAG, "IOException" + e.getMessage());
+        } catch (NotExistException e) {
+            LogUtils.info(TAG, "NotExistException" + e.getMessage());
+        }
+        return providerFormInfo;
+    }
+
+    private byte[] imageConvertToByteArray(Resource resource) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        byte[] bytes = new byte[CACHE_SIZE];
+        try {
+
+            if (resource == null) {
+                LogUtils.info(TAG, "resource is null");
+                return null;
+            }
+            int len = 0;
+            while (-1 != (len = resource.read(bytes))) {
+                byteArrayOutputStream.write(bytes, 0, len);
+            }
+        } catch (FileNotFoundException e) {
+            LogUtils.info(TAG, "FileNotFoundException" + e.getMessage());
+        } catch (IOException e) {
+            LogUtils.info(TAG, "IOException" + e.getMessage());
+        }
+        return byteArrayOutputStream.toByteArray();
     }
 
     @Override
