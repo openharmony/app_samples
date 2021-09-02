@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <text class="title">{{ $t('strings.deviceInfo') }}:</text>
+    <text class="info-text">{{ $t('strings.serial') }}: {{ serial }}</text>
+    <text class="info-text">{{ $t('strings.bootloaderVersion') }}: {{ bootloaderVersion }}</text>
+    <text class="info-text">{{ $t('strings.securityPatchTag') }}: {{ securityPatchTag }}</text>
+    <text class="info-text">{{ $t('strings.displayVersion') }}: {{ displayVersion }}</text>
+    <text class="info-text">{{ $t('strings.osReleaseType') }}: {{ osReleaseType }}</text>
+    <text class="info-text">{{ $t('strings.osFullName') }}: {{ osFullName }}</text>
+    <text class="info-text">{{ $t('strings.majorVersion') }}: {{ majorVersion }}</text>
+    <text class="info-text">{{ $t('strings.seniorVersion') }}: {{ seniorVersion }}</text>
+    <text class="info-text">{{ $t('strings.featureVersion') }}: {{ featureVersion }}</text>
+    <text class="info-text">{{ $t('strings.buildVersion') }}: {{ buildVersion }}</text>
+    <text class="info-text">{{ $t('strings.sdkApiVersion') }}: {{ sdkApiVersion }}</text>
+    <text class="info-text">{{ $t('strings.firstApiVersion') }}: {{ firstApiVersion }}</text>
+    <text class="info-text">{{ $t('strings.versionId') }}: {{ versionId }}</text>
+    <input class="btn" type="button" value="{{ $t('strings.back') }}" onclick="back"></input>
+</div>
