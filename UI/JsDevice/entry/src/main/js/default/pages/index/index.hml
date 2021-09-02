@@ -1,0 +1,5 @@
+<div class="container" onswipe="touchMove">
+    <input class="btn" type="button" value="{{ $t('strings.deviceInfo') }}" onclick="deviceInfo"></input>
+    <input class="btn" type="button" value="{{ $t('strings.systemProperties') }}" onclick="systemProperties"></input>
+    <input class="btn" type="button" value="{{ $t('strings.batteryProperties') }}" onclick="batteryProperties"></input>
+</div>
