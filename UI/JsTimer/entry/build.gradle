@@ -13,5 +13,6 @@ ohos {
             }
         }
     }
+    
     supportSystem "standard"
 }
