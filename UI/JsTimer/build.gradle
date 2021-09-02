@@ -6,7 +6,7 @@ ohos {
         compatibleSdkVersion 6
     }
 }
-
+	
 buildscript {
     repositories {
         maven {
@@ -17,7 +17,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.huawei.ohos:hap:2.4.4.5-RC'
+        classpath 'com.huawei.ohos:hap:2.4.5.0'
+        classpath 'com.huawei.ohos:decctest:1.2.4.1'
     }
 }
 
@@ -31,3 +32,5 @@ allprojects {
         }
     }
 }
+
+
