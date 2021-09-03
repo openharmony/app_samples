@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "time-text": "time",
+    "countdown": "countdown",
+    "setTimer": "set timer",
+    "success": "start the time",
+    "failure": "cancel setting timer",
+    "setSystemTime": "set system time",
+    "setup": "set up the success",
+    "shutdown": "end of the timing"
+  }
+}
