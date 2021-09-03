@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "time-text": "时间",
+    "countdown": "倒计时",
+    "setTimer": "设置定时器",
+    "success": "开始计时",
+    "failure": "取消定时器",
+    "setSystemTime": "设置系统时间",
+    "setup": "设置成功",
+    "shutdown": "计时结束"
+  }
+}
