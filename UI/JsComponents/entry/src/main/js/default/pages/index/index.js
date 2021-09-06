@@ -47,7 +47,7 @@ export default {
         up: 'up',
         down: 'down',
         text: 'start',
-        show: false
+        showState: false
     },
     textClicked (e) {
         this.text = e.detail.text;
