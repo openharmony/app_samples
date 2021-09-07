@@ -216,7 +216,7 @@
             <text>
                 Parent Component：{{text}}
             </text>
-            <comp title="Custom Component" show-object="{{show}}" @event-type1="textClicked"></comp>
+            <comp title="Custom Component" show-object="{{showState}}" @event-type1="textClicked"></comp>
         </div>
     </list-item>
 </list>
