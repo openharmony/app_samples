@@ -17,7 +17,7 @@
     <text class="tip">{{ $t('strings.tip') }}</text>
     <div class="slider-div">
         <text>{{ $t('strings.dark') }}</text>
-        <slider class="slider" value="125" min="0" max="255" step="30" on:change="brightness"></slider>
+        <slider class="slider" value="125" min="0" max="255" step="1" on:change="brightness"></slider>
         <text>{{ $t('strings.bright') }}</text>
     </div>
 </div>
