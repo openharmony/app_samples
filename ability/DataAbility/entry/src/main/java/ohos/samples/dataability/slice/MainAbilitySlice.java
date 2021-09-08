@@ -178,6 +178,7 @@ public class MainAbilitySlice extends AbilitySlice {
             int userId = resultSet.getInt(userIndex);
             appendStr.append(userId).append("   ").append(name).append("   ").append(age).append(System.lineSeparator());
         } while (resultSet.goToNextRow() && queryCount < allowQueryMaxCount);
+        resultSet.close();
         HiLog.info(LABEL_LOG, " queryCount : " + queryCount);
         HiLog.info(LABEL_LOG, " appendStr : " + appendStr.toString());
         getUITaskDispatcher().asyncDispatch(() -> {
