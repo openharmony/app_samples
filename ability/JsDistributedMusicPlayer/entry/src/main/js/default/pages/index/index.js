@@ -72,31 +72,40 @@ export default {
         });
         this.playerModel.getPlaylist(() => {
             console.info('MusicPlayer[IndexPage] on playlist generated, refresh ui');
-
-            featureAbility.getWant((error, want) => {
-                console.info('MusicPlayer[IndexPage] featureAbility.getWant=' + JSON.stringify(want));
-                var status = want.parameters;
-                if (status != null && status.uri != null) {
-                    self.kvStoreModel.broadcastMessage(REMOTE_ABILITY_STARTED);
-                    console.info('MusicPlayer[IndexPage] restorePlayingStatus');
-                    self.playerModel.restorePlayingStatus(status, (index) => {
-                        console.info('MusicPlayer[IndexPage] restorePlayingStatus finished, index=' + index);
-                        if (index >= 0) {
-                            self.refreshSongInfo(index);
-                        } else {
-                            self.playerModel.preLoad(0, () => {
-                                self.refreshSongInfo(0);
-                            });
-                        }
-                    });
-                } else {
-                    self.playerModel.preLoad(0, () => {
-                        self.refreshSongInfo(0);
-                    });
-                }
-            });
+            self.restoreFromWant();
         });
         console.info('MusicPlayer[IndexPage] onInit end');
+    },
+    restoreFromWant() {
+        let self = this;
+        featureAbility.getWant((error, want) => {
+            console.info('MusicPlayer[IndexPage] featureAbility.getWant=' + JSON.stringify(want));
+            var status = want.parameters;
+            if (status != null && status.uri != null) {
+                self.kvStoreModel.broadcastMessage(REMOTE_ABILITY_STARTED);
+                console.info('MusicPlayer[IndexPage] restorePlayingStatus');
+                self.playerModel.restorePlayingStatus(status, (index) => {
+                    console.info('MusicPlayer[IndexPage] restorePlayingStatus finished, index=' + index);
+                    if (index >= 0) {
+                        self.refreshSongInfo(index);
+                    } else {
+                        self.playerModel.preLoad(0, () => {
+                            self.refreshSongInfo(0);
+                        });
+                    }
+                });
+            } else {
+                self.playerModel.preLoad(0, () => {
+                    self.refreshSongInfo(0);
+                });
+            }
+        });
+    },
+    onNewRequest() {
+        console.info('MusicPlayer[IndexPage] onNewRequest');
+        this.playerModel.pause();
+        this.playerModel.seek(0);
+        this.restoreFromWant();
     },
     onBackPress() {
         console.info('MusicPlayer[IndexPage] onBackPress isDialogShowing=' + this.isDialogShowing);
