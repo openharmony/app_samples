@@ -23,11 +23,10 @@ export default class RemoteDeviceModel {
     callback;
     deviceManager_;
 
-    constructor() {
-    }
+    constructor() {}
 
     registerDeviceListCallback(callback) {
-        if (typeof (this.deviceManager_) == 'undefined') {
+        if (typeof(this.deviceManager_) == 'undefined') {
             console.log("Calc[RemoteDeviceModel] deviceManager.createDeviceManager begin");
             let self = this;
             deviceManager.createDeviceManager("com.example.distributedcalc", (error, value) => {
@@ -57,7 +56,7 @@ export default class RemoteDeviceModel {
         console.info('Calc[RemoteDeviceModel] getTrustedDeviceListSync begin');
         var list = this.deviceManager_.getTrustedDeviceListSync();
         console.info('Calc[RemoteDeviceModel] getTrustedDeviceListSync end, deviceList=' + JSON.stringify(list));
-        if (typeof (list) != 'undefined' && typeof (list.length) != 'undefined') {
+        if (typeof(list) != 'undefined' && typeof(list.length) != 'undefined') {
             this.deviceList = list;
         }
         this.callback();
@@ -110,10 +109,27 @@ export default class RemoteDeviceModel {
             console.info('Calc[RemoteDeviceModel] deviceFound self.deviceList=' + self.deviceList);
             console.info('Calc[RemoteDeviceModel] deviceFound self.deviceList.length=' + self.deviceList.length);
             console.info('Calc[RemoteDeviceModel] authenticateDevice ' + JSON.stringify(data.device));
-            self.deviceManager_.authenticateDevice(data.device);
+            let extraInfo = {
+                "targetPkgName": 'com.example.distributedcalc',
+                "appName": 'Distributed Calc',
+                "appDescription": 'Distributed Calc',
+                "business": '0'
+            };
+            let authParam = {
+                "authType": 1,
+                "appIcon": '',
+                "appThumbnail": '',
+                "extraInfo": extraInfo
+            };
+            self.deviceManager_.authenticateDevice(data.device, authParam, (err, data) => {
+                if (err) {
+                    console.info('Calc[RemoteDeviceModel] authenticateDevice error:' + JSON.stringify(err));
+                    return;
+                }
+            });
             var list = self.deviceManager_.getTrustedDeviceListSync();
             console.info('Calc[RemoteDeviceModel] getTrustedDeviceListSync end, deviceList=' + JSON.stringify(list));
-            if (typeof (list) != 'undefined' && typeof (list.length) != 'undefined') {
+            if (typeof(list) != 'undefined' && typeof(list.length) != 'undefined') {
                 self.deviceList = list;
             }
         });
@@ -123,13 +139,6 @@ export default class RemoteDeviceModel {
                 duration: 3000,
             });
             console.info('Calc[RemoteDeviceModel] discoverFail data=' + JSON.stringify(data));
-        });
-        this.deviceManager_.on('authResult', (data) => {
-            prompt.showToast({
-                message: 'authResult data=' + JSON.stringify(data),
-                duration: 3000,
-            });
-            console.info('Calc[RemoteDeviceModel] authResult data=' + JSON.stringify(data));
         });
         this.deviceManager_.on('serviceDie', () => {
             prompt.showToast({
@@ -159,7 +168,6 @@ export default class RemoteDeviceModel {
         this.deviceManager_.off('deviceStateChange');
         this.deviceManager_.off('deviceFound');
         this.deviceManager_.off('discoverFail');
-        this.deviceManager_.off('authResult');
         this.deviceManager_.off('serviceDie');
         this.deviceList = new Array();
     }
