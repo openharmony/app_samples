@@ -1,0 +1,220 @@
+<div class="container">
+    <div class="showContent" show="{{isKeyBoardShow}}" >
+        <text class="keyText" >
+           {{showText}}
+        </text>
+    </div>
+    <div class="keyboard" id="keyboard" show="{{isKeyBoardShow}}" >
+        <div class="downContainer" @click="downClick()" >
+            <image class="itemImg" src="/common/images/down.png"></image>
+        </div>
+        <div class="keyboardContainer" if="{{status===1}}">
+            <div class="itemContainer">
+                <div class="item" for="{{wordList.slice(0, 10)}}"  @click="submitWord({{upper?$item.upperContent:$item.content}})">
+                    <text class="numberText">
+                        {{$item.title}}
+                    </text>
+                    <text class="keyText" >
+                        {{upper?$item.upperContent:$item.content}}
+                    </text>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="secondItem">
+                </div>
+                <div class="item" for="{{wordList.slice(10, 19)}}" onclick="submitWord({{upper?$item.upperContent:$item.content}})">
+                    <text class="numberText">
+                        {{$item.title}}
+                    </text>
+                    <text class="keyText">
+                        {{upper?$item.upperContent:$item.content}}
+                    </text>
+                </div>
+                <div class="secondItem">
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item upContainer grayColor" onclick="upperChange()">
+                    <image class="itemImg" src="{{upper===1?'/common/images/shift light.png':upper===true?'/common/images/shift light long.png':'/common/images/shift.png'}}"></image>
+                </div>
+                <div class="item" for="{{wordList.slice(19)}}" onclick="submitWord({{upper?$item.upperContent:$item.content}})">
+                    <text class="numberText">
+                        {{$item.title}}
+                    </text>
+                    <text class="keyText">
+                        {{upper?$item.upperContent:$item.content}}
+                    </text>
+                </div>
+                <div class="item deleteContainer grayColor" onclick="delete">
+                    <image class="itemImg" src="/common/images/delete.png"></image>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class=" numberChange firstItem  grayColor" @click="changeType(2)">
+                    <text class="grayText">
+                        ?123
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{','}})">
+                    <text class="keyText">
+                        ,
+                    </text>
+                </div>
+                <div class="firstItem spaceMain" @click="submitWord({{' '}})">
+                    <text class="grayText">
+                        space
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'.'}})">
+                    <text class="keyText">
+                        .
+                    </text>
+                </div>
+
+                <div class="firstItem submit grayColor" onclick="submit">
+                    <image class="itemImg" src="/common/images/return.png"></image>
+                </div>
+            </div>
+        </div>
+        <div class="keyboardContainer" elif="{{status===2}}">
+            <div class="itemContainer">
+                <div class="item" for="{{numberSymbolList.slice(0, 10)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item" for="{{numberSymbolList.slice(10, 20)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item numberSymbolContainer grayColor" @click="changeType(3)">
+                    <text  class="grayText">
+                        {{'=\<'}}
+                    </text>
+                </div>
+                <div class="item" for="{{numberSymbolList.slice(20)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+                <div class="item deleteContainer grayColor" onclick="delete">
+                    <image class="itemImg" src="/common/images/delete.png"></image>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item numberChange grayColor" @click="changeType(1)">
+                    <text class="grayText">
+                        ABC
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'_'}})">
+                    <text class="keyText ">
+                        _
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{','}})">
+                    <text class="keyText">
+                        ,
+                    </text>
+                </div>
+                <div class="item grayColor">
+                    <text class="numberKeyboard">
+                        12
+                    </text>
+                    <text class="numberKeyboard">
+                        34
+                    </text>
+                </div>
+                <div class="item spaceNumber" @click="submitWord({{' '}})">
+                    <text class="grayText">
+                        space
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'.'}})">
+                    <text class="keyText">
+                        .
+                    </text>
+                </div>
+
+                <div class="item submitNumber grayColor" onclick="submit">
+                    <image class="itemImg" src="/common/images/return.png"></image>
+                </div>
+            </div>
+        </div>
+        <div class="keyboardContainer" elif="{{status===3}}">
+            <div class="itemContainer">
+                <div class="item" for="{{symbolList.slice(0, 10)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item" for="{{symbolList.slice(10, 20)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item numberSymbolContainer grayColor" @click="changeType(2)">
+                    <text  class="grayText">
+                        {{'?123'}}
+                    </text>
+                </div>
+                <div class="item" for="{{symbolList.slice(20)}}" onclick="submitWord({{$item.content}})">
+                    <text class="keyText">
+                        {{$item.content}}
+                    </text>
+                </div>
+                <div class="item deleteContainer grayColor" onclick="delete">
+                    <image class="itemImg" src="/common/images/delete.png"></image>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="item numberChange grayColor" @click="changeType(1)">
+                    <text class="grayText">
+                        ABC
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'<'}})">
+                    <text class="keyText">
+                        {{'<'}}
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'>'}})">
+                    <text class="keyText">
+                        {{'>'}}
+                    </text>
+                </div>
+                <div class="item grayColor">
+                    <text class="numberKeyboard">
+                        12
+                    </text>
+                    <text class="numberKeyboard">
+                        34
+                    </text>
+                </div>
+                <div class="item spaceNumber" @click="submitWord({{' '}})">
+                    <text class="grayText">
+                        space
+                    </text>
+                </div>
+                <div class="item grayColor" @click="submitWord({{'.'}})">
+                    <text class="keyText">
+                        .
+                    </text>
+                </div>
+
+                <div class="item submitNumber grayColor" onclick="submit">
+                    <image class="itemImg" src="/common/images/return.png"></image>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

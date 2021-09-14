@@ -1,0 +1,6 @@
+<div class="container">
+    <text class="title">
+        {{ $t('strings.page') }}
+    </text>
+    <input class="btn" type="button" value="{{ $t('strings.back') }}" onclick="onclick"></input>
+</div>
