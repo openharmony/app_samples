@@ -1,0 +1,112 @@
+.container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.showContent{
+    width: 100%;
+    height: 50px;
+    background-color: #cdd0d7;
+    font-size: 20px;
+    align-items: center;
+}
+.showContent>.keyText{
+    font-size: 20px;
+}
+/*keyboard逻辑*/
+.keyboard{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.downContainer{
+    width: 100%;
+    height: 30px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4%;
+
+}
+.keyboardContainer {
+    width: 100%;
+    height: 240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemContainer{
+    width: 100%;
+    height: 25%;
+    background-color: #cdd0d7;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.item{
+    width: 8%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item:active{
+    background-color: gainsboro
+}
+.firstItem{
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.firstItem:active{
+    background-color: gainsboro
+}
+.secondItem{
+    width: 4%;
+    height: 0;
+}
+.numberText{
+    font-size: 7px;
+    color: gray;
+}
+.keyText{
+    font-size: 14px;
+    color: black;
+}
+.grayText{
+    font-size: 12px;
+    color: black;
+}
+.numberKeyboard{
+    font-size: 10px;
+    color: black;
+}
+.space{
+    width: 30%;
+}
+.spaceMain{
+    width: 45%;
+}
+.spaceNumber{
+    width: 25%;
+}
+.submit,.submitNumber{
+    width: 16%;
+}
+.upContainer,.deleteContainer,.numberSymbolContainer,.numberChange{
+    width: 13%;
+}
+.grayColor{
+    background-color: #a8abb7;
+}
+.itemImg{
+    width: 25px;
+    height: 22px;
+}
