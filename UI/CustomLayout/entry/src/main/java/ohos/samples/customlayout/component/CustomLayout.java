@@ -29,18 +29,18 @@ import java.util.Map;
  * @since 2021-07-03
  */
 public class CustomLayout extends ComponentContainer
-    implements ComponentContainer.EstimateSizeListener, ComponentContainer.ArrangeListener {
-    private final Map<Integer, Position> axis = new HashMap<>();
+        implements ComponentContainer.EstimateSizeListener, ComponentContainer.ArrangeListener {
+    private final Map<Integer, Layout> axis = new HashMap<>();
 
-    private int locationX;
+    private int locationX = 0;
 
-    private int locationY;
+    private int locationY = 0;
 
-    private int maxWidth;
+    private int maxWidth = 0;
 
-    private int maxHeight;
+    private int maxHeight = 0;
 
-    private int lastHeight;
+    private int lastHeight = 0;
 
     public CustomLayout(Context context, AttrSet attrSet) {
         super(context, attrSet);
@@ -50,15 +50,13 @@ public class CustomLayout extends ComponentContainer
 
     @Override
     public boolean onEstimateSize(int widthEstimatedConfig, int heightEstimatedConfig) {
+        invalidateValues();
         measureChildren(widthEstimatedConfig, heightEstimatedConfig);
-        int width = EstimateSpec.getSize(widthEstimatedConfig);
-
         for (int idx = 0; idx < getChildCount(); idx++) {
             Component childView = getComponentAt(idx);
-            addChild(childView, idx, width);
+            addChild(childView, idx, EstimateSpec.getSize(widthEstimatedConfig));
         }
-        setEstimatedSize(EstimateSpec.getChildSizeWithMode(maxWidth, widthEstimatedConfig, 0),
-            EstimateSpec.getChildSizeWithMode(maxHeight, heightEstimatedConfig, 0));
+        measureSelf(widthEstimatedConfig, heightEstimatedConfig);
         return true;
     }
 
@@ -71,40 +69,91 @@ public class CustomLayout extends ComponentContainer
         }
     }
 
-    private void measureChild(Component child, int parentWidthMeasureSpec, int parentHeightMeasureSpec) {
-        LayoutConfig lc = child.getLayoutConfig();
-        int childWidthMeasureSpec =
-            EstimateSpec.getChildSizeWithMode(lc.width, parentWidthMeasureSpec, EstimateSpec.UNCONSTRAINT);
-        int childHeightMeasureSpec =
-            EstimateSpec.getChildSizeWithMode(lc.height, parentHeightMeasureSpec, EstimateSpec.UNCONSTRAINT);
-        child.estimateSize(childWidthMeasureSpec, childHeightMeasureSpec);
+    private void measureChild(Component childView, int widthEstimatedConfig, int heightEstimatedConfig) {
+        LayoutConfig lc = childView.getLayoutConfig();
+        int childWidthMeasureSpec = 0;
+        int childHeightMeasureSpec = 0;
+
+        if (lc.width == LayoutConfig.MATCH_CONTENT) {
+            childWidthMeasureSpec = EstimateSpec.getSizeWithMode(lc.width, EstimateSpec.NOT_EXCEED);
+        } else if (lc.width == LayoutConfig.MATCH_PARENT) {
+            int parentWidth = EstimateSpec.getSize(widthEstimatedConfig);
+            int childWidth = parentWidth - childView.getMarginLeft() - childView.getMarginRight();
+            childWidthMeasureSpec = EstimateSpec.getSizeWithMode(childWidth, EstimateSpec.PRECISE);
+        } else {
+            childWidthMeasureSpec = EstimateSpec.getSizeWithMode(lc.width, EstimateSpec.PRECISE);
+        }
+
+        if (lc.height == LayoutConfig.MATCH_CONTENT) {
+            childHeightMeasureSpec = EstimateSpec.getSizeWithMode(lc.height, EstimateSpec.NOT_EXCEED);
+        } else if (lc.height == LayoutConfig.MATCH_PARENT) {
+            int parentHeight = EstimateSpec.getSize(heightEstimatedConfig);
+            int childHeight = parentHeight - childView.getMarginTop() - childView.getMarginBottom();
+            childHeightMeasureSpec = EstimateSpec.getSizeWithMode(childHeight, EstimateSpec.PRECISE);
+        } else {
+            childHeightMeasureSpec = EstimateSpec.getSizeWithMode(lc.height, EstimateSpec.PRECISE);
+        }
+        childView.estimateSize(childWidthMeasureSpec, childHeightMeasureSpec);
+    }
+
+    private void measureSelf(int widthEstimatedConfig, int heightEstimatedConfig) {
+        int widthSpace = EstimateSpec.getMode(widthEstimatedConfig);
+        int heightSpace = EstimateSpec.getMode(heightEstimatedConfig);
+        int widthConfig = 0;
+        switch (widthSpace) {
+            case EstimateSpec.UNCONSTRAINT:
+            case EstimateSpec.PRECISE:
+                int width = EstimateSpec.getSize(widthEstimatedConfig);
+                widthConfig = EstimateSpec.getSizeWithMode(width, EstimateSpec.PRECISE);
+                break;
+            case EstimateSpec.NOT_EXCEED:
+                widthConfig = EstimateSpec.getSizeWithMode(maxWidth, EstimateSpec.PRECISE);
+                break;
+            default:
+                break;
+        }
+
+        int heightConfig = 0;
+        switch (heightSpace) {
+            case EstimateSpec.UNCONSTRAINT:
+            case EstimateSpec.PRECISE:
+                int height = EstimateSpec.getSize(heightEstimatedConfig);
+                heightConfig = EstimateSpec.getSizeWithMode(height, EstimateSpec.PRECISE);
+                break;
+            case EstimateSpec.NOT_EXCEED:
+                heightConfig = EstimateSpec.getSizeWithMode(maxHeight, EstimateSpec.PRECISE);
+                break;
+            default:
+                break;
+        }
+        setEstimatedSize(widthConfig, heightConfig);
     }
 
     private void addChild(Component component, int id, int layoutWidth) {
-        Position position = new Position();
-        position.positionX = locationX + component.getMarginLeft();
-        position.positionY = locationY + component.getMarginTop();
-        position.width = component.getEstimatedWidth();
-        position.height = component.getEstimatedHeight();
-        if ((locationX + position.width) > layoutWidth) {
+        Layout layout = new Layout();
+        layout.positionX = locationX + component.getMarginLeft();
+        layout.positionY = locationY + component.getMarginTop();
+        layout.width = component.getEstimatedWidth();
+        layout.height = component.getEstimatedHeight();
+        if ((locationX + layout.width) > layoutWidth) {
             locationX = 0;
             locationY += lastHeight;
             lastHeight = 0;
-            position.positionX = locationX + component.getMarginLeft();
-            position.positionY = locationY + component.getMarginTop();
+            layout.positionX = locationX + component.getMarginLeft();
+            layout.positionY = locationY + component.getMarginTop();
         }
-        axis.put(id, position);
-        lastHeight = Math.max(lastHeight, position.height + component.getMarginBottom());
-        locationX += position.width + component.getMarginRight();
-        maxWidth = Math.max(maxWidth, position.positionX + position.width);
-        maxHeight = Math.max(maxHeight, position.positionY + position.height);
+        axis.put(id, layout);
+        lastHeight = Math.max(lastHeight, layout.height + component.getMarginBottom());
+        locationX += layout.width + component.getMarginRight();
+        maxWidth = Math.max(maxWidth, layout.positionX + layout.width);
+        maxHeight = Math.max(maxHeight, layout.positionY + layout.height);
     }
 
     @Override
     public boolean onArrange(int left, int top, int width, int height) {
         for (int idx = 0; idx < getChildCount(); idx++) {
             Component childView = getComponentAt(idx);
-            Position position = axis.get(idx);
+            Layout position = axis.get(idx);
             if (position != null) {
                 childView.arrange(position.positionX, position.positionY, position.width, position.height);
             }
@@ -112,12 +161,20 @@ public class CustomLayout extends ComponentContainer
         return true;
     }
 
+    private void invalidateValues() {
+        locationX = 0;
+        locationY = 0;
+        maxWidth = 0;
+        maxHeight = 0;
+        axis.clear();
+    }
+
     /**
      * Layout
      *
      * @since 2021-05-08
      */
-    private static class Position {
+    private static class Layout {
         int positionX = 0;
 
         int positionY = 0;
