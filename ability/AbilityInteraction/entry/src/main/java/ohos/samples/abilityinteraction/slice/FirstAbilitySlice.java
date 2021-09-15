@@ -87,7 +87,9 @@ public class FirstAbilitySlice extends AbilitySlice implements LifecycleStateObs
         Intent intent = new Intent();
         intent.setElement(new ElementName("", getBundleName(), SecondAbility.class.getName()));
         intent.setParam(Const.MESSAGE_KEY_SQUARED, inputNum);
-        startAbilityForResult(intent, REQUEST_CODE_TO_ABILITY_B);
+        if (this.getAbility().isTerminating()) {
+            startAbilityForResult(intent, REQUEST_CODE_TO_ABILITY_B);
+        }
     }
 
     @Override
