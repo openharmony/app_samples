@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import featureAbility from '@ohos.ability.featureability';
+import featureAbility from '@ohos.ability.featureAbility';
 import RemoteDeviceModel from '../../../model/RemoteDeviceModel.js';
 import PlayerModel from '../../../model/PlayerModel.js';
 import KvStoreModel from '../../../model/KvStoreModel.js';
@@ -209,13 +209,18 @@ export default {
         }
     },
     onContinueAbilityClick() {
-        console.info('MusicPlayer[IndexPage] onContinueAbilityClick');
+        console.info('MusicPlayer[IndexPage] onContinueAbilityClick begin');
         let self = this;
         this.remoteDeviceModel.registerDeviceListCallback(() => {
             console.info('MusicPlayer[IndexPage] registerDeviceListCallback, callback entered');
             var list = [];
             list[0] = DEVICE_LIST_LOCALHOST;
-            var deviceList = self.remoteDeviceModel.deviceList;
+            var deviceList;
+            if (self.remoteDeviceModel.discoverList != null) {
+                deviceList = self.remoteDeviceModel.discoverList;
+            } else {
+                deviceList = self.remoteDeviceModel.deviceList;
+            }
             console.info('MusicPlayer[IndexPage] on remote device updated, count=' + deviceList.length);
             for (var i = 0; i < deviceList.length; i++) {
                 console.info('MusicPlayer[IndexPage] device ' + i + '/' + deviceList.length + ' deviceId='
@@ -230,6 +235,7 @@ export default {
         });
         this.$element('continueAbilityDialog').show();
         this.isDialogShowing = true;
+        console.info('MusicPlayer[IndexPage] onContinueAbilityClick end');
     },
     startAbilityContinuation(deviceId, deviceName) {
         this.$element('continueAbilityDialog').close();
@@ -256,13 +262,17 @@ export default {
             parameters: params
         };
         var timerId = setTimeout(() => {
-            console.info('MusicPlayer[IndexPage] onMessageReceiveTimeout, terminateAbility');
-            featureAbility.terminateAbility();
+            console.info('MusicPlayer[IndexPage] onMessageReceiveTimeout, terminateSelf');
+            featureAbility.terminateSelf((error) => {
+                console.info('MusicPlayer[IndexPage] terminateSelf finished, error=' + error);
+            });
         }, 3000);
         this.kvStoreModel.setOnMessageReceivedListener(REMOTE_ABILITY_STARTED, () => {
-            console.info('MusicPlayer[IndexPage] OnMessageReceived, terminateAbility');
+            console.info('MusicPlayer[IndexPage] OnMessageReceived, terminateSelf');
             clearTimeout(timerId);
-            featureAbility.terminateAbility();
+            featureAbility.terminateSelf((error) => {
+                console.info('MusicPlayer[IndexPage] terminateSelf finished, error=' + error);
+            });
         });
         featureAbility.startAbility({
             want: wantValue
@@ -279,12 +289,35 @@ export default {
                 this.$element('continueAbilityDialog').close();
                 return;
             }
-            let self = this;
-            for (var i = 0; i < this.deviceList.length; i++) {
-                if (this.deviceList[i].id === e.value) {
-                    this.startAbilityContinuation(this.deviceList[i].id, this.deviceList[i].name);
+            var name = null;
+            if (this.remoteDeviceModel.discoverList != null) {
+                for (var i = 0; i < this.remoteDeviceModel.discoverList.length; i++) {
+                    if (this.remoteDeviceModel.discoverList[i].deviceId === e.value) {
+                        name = this.remoteDeviceModel.discoverList[i].deviceName;
+                        break;
+                    }
                 }
             }
+            if (name == null) {
+                console.error('MusicPlayer[IndexPage] onRadioChange failed, can not get name from discoverList');
+                return;
+            }
+            console.info('MusicPlayer[IndexPage] onRadioChange name=' + name);
+            for (i = 0; i < this.remoteDeviceModel.deviceList.length; i++) {
+                if (this.remoteDeviceModel.deviceList[i].deviceName === name) {
+                    this.startAbilityContinuation(this.remoteDeviceModel.deviceList[i].deviceId, this.remoteDeviceModel.deviceList[i].deviceName);
+                    return;
+                }
+            }
+            let self = this;
+            this.remoteDeviceModel.authDevice(e.value, () => {
+                console.info('MusicPlayer[IndexPage] auth and online finished');
+                for (i = 0; i < self.remoteDeviceModel.deviceList.length; i++) {
+                    if (self.remoteDeviceModel.deviceList[i].deviceName === name) {
+                        this.startAbilityContinuation(self.remoteDeviceModel.deviceList[i].deviceId, self.remoteDeviceModel.deviceList[i].deviceName);
+                    }
+                }
+            });
         }
     },
     cancelDialog(e) {
