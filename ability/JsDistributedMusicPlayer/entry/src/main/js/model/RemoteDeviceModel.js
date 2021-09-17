@@ -110,8 +110,8 @@ export default class RemoteDeviceModel {
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound data=' + JSON.stringify(data));
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound self.deviceList=' + self.deviceList);
             console.info('MusicPlayer[RemoteDeviceModel] deviceFound self.deviceList.length=' + self.deviceList.length);
-            for (var i = 0; i < self.deviceList.length; i++) {
-                if (self.deviceList[i].deviceId === data.device.deviceId) {
+            for (var i = 0; i < self.discoverList.length; i++) {
+                if (self.discoverList[i].deviceId === data.device.deviceId) {
                     console.info('MusicPlayer[RemoteDeviceModel] device founded, ignored');
                     return;
                 }
