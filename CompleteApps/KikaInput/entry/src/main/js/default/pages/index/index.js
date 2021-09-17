@@ -13,6 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 import app from '@system.app'
+import Window from '@ohos.window'
 import {InputMethodAbility} from '@ohos.inputMethodAbility'
 var inputMethodAbility=new InputMethodAbility();
 export default {
@@ -324,6 +325,10 @@ export default {
         isKeyBoardShow:false,
     },
     onInit(){
+        Window.getTopWindow().then((windowData)=>{
+            windowData.resetSize(480,250);
+            windowData.moveTo(0,710);
+        });
         inputMethodAbility.on('keyboardShow',(err) =>{
             console.info('keyboard show');
             this.isKeyBoardShow=true;
@@ -369,14 +374,15 @@ export default {
     delete(){
         if(this.showText){
             this.showText =  this.showText.substr(0,this.showText.length - 1);
+            inputMethodAbility.DeleteBackward(1);
         }
     },
     //提交数据
     submit(){
-        this.appExit();
+        inputMethodAbility.HideKeyboardSelf();
     },
     downClick(){
-        this.appExit();
+        inputMethodAbility.HideKeyboardSelf();
     }
 }
 
