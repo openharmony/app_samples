@@ -75,7 +75,7 @@ export default {
     setASyncCallback() {
         try {
             systemParameter.set("test.parameter.key", "testValue", function (err, data) {
-                if (err = "undefined") {
+                if (err == undefined) {
                     result = "setASyncCallback pass"
                     console.log("set test.parameter.key value success:" + data);
                 } else {
@@ -92,7 +92,7 @@ export default {
     getAsyncCallback() {
         try {
             systemParameter.get("test.parameter.key", function (err, data) {
-                if (err == "undefined") {
+                if (err == undefined) {
                     result = "getAsyncCallback pass";
                     console.log("get test.parameter.key value success:" + data);
                 } else {
@@ -109,7 +109,7 @@ export default {
     getDefAsyncCallback() {
         try {
             systemParameter.get("test.parameter.key", "default", function (err, data) {
-                if (err == "undefined") {
+                if (err == undefined) {
                     result = "getDefAsyncCallback pass";
                     console.log("get test.parameter.key value success:" + data);
                 } else {
