@@ -1,12 +1,14 @@
 <div class="container">
-    <div class="showContent" show="{{isKeyBoardShow}}" >
-        <text class="keyText" >
-           {{showText}}
-        </text>
-    </div>
+<!--    <div class="showContent" show="{{isKeyBoardShow}}" >-->
+<!--        <text class="keyText" >-->
+<!--           {{showText}}-->
+<!--        </text>-->
+<!--    </div>-->
     <div class="keyboard" id="keyboard" show="{{isKeyBoardShow}}" >
         <div class="downContainer" @click="downClick()" >
-            <image class="itemImg" src="/common/images/down.png"></image>
+            <div>
+                <image class="itemImg" src="/common/images/down.png"></image>
+            </div>
         </div>
         <div class="keyboardContainer" if="{{status===1}}">
             <div class="itemContainer">
