@@ -216,7 +216,7 @@ export default {
             var list = [];
             list[0] = DEVICE_LIST_LOCALHOST;
             var deviceList;
-            if (self.remoteDeviceModel.discoverList != null) {
+            if (self.remoteDeviceModel.discoverList.length > 0) {
                 deviceList = self.remoteDeviceModel.discoverList;
             } else {
                 deviceList = self.remoteDeviceModel.deviceList;
@@ -289,35 +289,38 @@ export default {
                 this.$element('continueAbilityDialog').close();
                 return;
             }
-            var name = null;
-            if (this.remoteDeviceModel.discoverList != null) {
+            if (this.remoteDeviceModel.discoverList.length > 0) {
+                console.info('MusicPlayer[IndexPage] continue to unauthed device');
+                var name = null;
                 for (var i = 0; i < this.remoteDeviceModel.discoverList.length; i++) {
                     if (this.remoteDeviceModel.discoverList[i].deviceId === e.value) {
                         name = this.remoteDeviceModel.discoverList[i].deviceName;
                         break;
                     }
                 }
-            }
-            if (name == null) {
-                console.error('MusicPlayer[IndexPage] onRadioChange failed, can not get name from discoverList');
-                return;
-            }
-            console.info('MusicPlayer[IndexPage] onRadioChange name=' + name);
-            for (i = 0; i < this.remoteDeviceModel.deviceList.length; i++) {
-                if (this.remoteDeviceModel.deviceList[i].deviceName === name) {
-                    this.startAbilityContinuation(this.remoteDeviceModel.deviceList[i].deviceId, this.remoteDeviceModel.deviceList[i].deviceName);
+                if (name == null) {
+                    console.error('MusicPlayer[IndexPage] onRadioChange failed, can not get name from discoverList');
                     return;
                 }
-            }
-            let self = this;
-            this.remoteDeviceModel.authDevice(e.value, () => {
-                console.info('MusicPlayer[IndexPage] auth and online finished');
-                for (i = 0; i < self.remoteDeviceModel.deviceList.length; i++) {
-                    if (self.remoteDeviceModel.deviceList[i].deviceName === name) {
-                        this.startAbilityContinuation(self.remoteDeviceModel.deviceList[i].deviceId, self.remoteDeviceModel.deviceList[i].deviceName);
+                console.info('MusicPlayer[IndexPage] onRadioChange name=' + name);
+
+                let self = this;
+                this.remoteDeviceModel.authDevice(e.value, () => {
+                    console.info('MusicPlayer[IndexPage] auth and online finished');
+                    for (i = 0; i < self.remoteDeviceModel.deviceList.length; i++) {
+                        if (self.remoteDeviceModel.deviceList[i].deviceName === name) {
+                            this.startAbilityContinuation(self.remoteDeviceModel.deviceList[i].deviceId, self.remoteDeviceModel.deviceList[i].deviceName);
+                        }
+                    }
+                });
+            } else {
+                console.info('MusicPlayer[IndexPage] continue to authed device');
+                for (i = 0; i < this.remoteDeviceModel.deviceList.length; i++) {
+                    if (this.remoteDeviceModel.deviceList[i].deviceId === e.value) {
+                        this.startAbilityContinuation(this.remoteDeviceModel.deviceList[i].deviceId, this.remoteDeviceModel.deviceList[i].deviceName);
                     }
                 }
-            });
+            }
         }
     },
     cancelDialog(e) {
