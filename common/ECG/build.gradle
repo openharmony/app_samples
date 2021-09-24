@@ -16,17 +16,6 @@
 apply plugin: 'com.huawei.ohos.app'
 
 ohos {
-    signingConfigs {
-        release {
-            storeFile file('D:\\chart\\Application.p12')
-            storePassword '0000001B6C8B758DC841FD17F8B78EE4B7A5B4B59737E8FE8B788F370F716BAA7F40248255E0A105E0880E'
-            keyAlias = 'Application'
-            keyPassword '0000001BDBCF72A30EBA96E17BF39B9932231EE66E19537FDB97B2DF5C997667D1DBC92AD6B5DB7190F091'
-            signAlg = 'SHA256withECDSA'
-            profile file('D:\\chart\\ECG.p7b')
-            certpath file('D:\\chart\\Application.cer')
-        }
-    }
     compileSdkVersion 6
     defaultConfig {
         compatibleSdkVersion 6
