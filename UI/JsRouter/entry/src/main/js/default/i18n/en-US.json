@@ -1,9 +1,9 @@
 {
   "strings": {
-    "hello": "Hello",
-    "world": "Home page",
-    "push": "This is the push page. Welcome",
-    "value": "Value passed on the home page",
-    "replace": "This is the Replace page"
+    "hello": "Hello.",
+    "world": "This is the home page.",
+    "push": "This is the Push page.",
+    "value": "Value passed by the home page.",
+    "replace": "This is the Replace page."
   }
 }
