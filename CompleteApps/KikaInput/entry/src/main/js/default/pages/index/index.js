@@ -326,8 +326,8 @@ export default {
     },
     onInit(){
         Window.getTopWindow().then((windowData)=>{
-            windowData.resetSize(480,250);
-            windowData.moveTo(0,710);
+            windowData.resetSize(480,190);
+            windowData.moveTo(0,702);
         });
         inputMethodAbility.on('keyboardShow',(err) =>{
             console.info('keyboard show');
