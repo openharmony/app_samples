@@ -17,6 +17,7 @@ import featureAbility from '@ohos.ability.featureAbility';
 import RemoteDeviceModel from '../../../model/RemoteDeviceModel.js';
 import PlayerModel from '../../../model/PlayerModel.js';
 import KvStoreModel from '../../../model/KvStoreModel.js';
+import display from '@ohos.display';
 
 function getShownTimer(ms) {
     var seconds = Math.floor(ms / 1000);
@@ -33,6 +34,9 @@ function getShownTimer(ms) {
 
 const REMOTE_ABILITY_STARTED = 'remoteAbilityStarted';
 var DEVICE_LIST_LOCALHOST;
+const SYSTEM_UI_HEIGHT = 134;
+const DESIGN_WIDTH = 720.0;
+const DESIGN_RATIO = 16 / 9;
 
 export default {
     data: {
@@ -49,15 +53,42 @@ export default {
         kvStoreModel: new KvStoreModel(),
         isDialogShowing: false,
         isSwitching: false,
+        riscale: 1, // ratio independent scale ratio
+        risw: 720, // ratio independent screen width
+        rish: 1280, // ratio independent screen height
+        hasInitialized: false,
     },
     onInit() {
         console.info('MusicPlayer[IndexPage] onInit begin');
+        console.info("MusicPlayer[IndexPage] getDefaultDisplay begin");
+        display.getDefaultDisplay().then(dis => {
+            console.info("MusicPlayer[IndexPage] getDefaultDisplay dis=" + JSON.stringify(dis));
+            var proportion = DESIGN_WIDTH / dis.width;
+            var screenWidth = DESIGN_WIDTH;
+            var screenHeight = (dis.height - SYSTEM_UI_HEIGHT) * proportion;
+            self.riscale = (screenHeight / screenWidth) / DESIGN_RATIO;
+            if (self.riscale < 1) {
+                // The screen ratio is shorter than design ratio
+                self.risw = screenWidth * self.riscale;
+                self.rish = screenHeight;
+            } else {
+                // The screen ratio is longer than design ratio
+                self.risw = screenWidth;
+                self.rish = screenHeight / self.riscale;
+            }
+            self.hasInitialized = true;
+            console.info("MusicPlayer[IndexPage] proportion=" + proportion + ", screenWidth="
+            + screenWidth + ", screenHeight=" + screenHeight + ", riscale=" + self.riscale
+            + ", risw=" + self.risw + ", rish=" + self.rish);
+        });
+        console.info("MusicPlayer[IndexPage] getDefaultDisplay end");
         DEVICE_LIST_LOCALHOST = {
             name: this.$t('strings.localhost'),
             id: 'localhost',
         };
         this.deviceList = [DEVICE_LIST_LOCALHOST];
         let self = this;
+        self.currentTimeText = getShownTimer(0);
         this.playerModel.setOnStatusChangedListener((isPlaying) => {
             console.info('MusicPlayer[IndexPage] on player status changed, isPlaying=' + isPlaying + ', refresh ui');
             self.playerModel.setOnPlayingProgressListener((currentTimeMs) => {
