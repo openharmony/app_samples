@@ -1,5 +1,15 @@
 # 设置<a name="ZH-CN_TOPIC_0000001080120136"></a>
 
--   TTS、Wireless、Network、Input、Sound、Display、Date、Call、General 九类定义了表征终端设备状态的相关字段，如屏幕亮度、日期格式、字体显示大小等，应用程序可以根据自身所拥有的权限对其进行增、删、改、查等操作，并进行相应的场景适配。
+### 简介
 
-    例如：TIME\_FORMAT——表示日期格式，应用程序可进行读写。
+系统设置数据项分为TTS（Text To Speech）、Wireless、Network、Input、Sound、Display、Date、Call、General九类。
+
+应用程序可通过SystemSettings提供系统设置的相关接口来对系统各类设置项进行查询。
+
+### 使用说明
+
+应用显示设备WiFi状态、蓝牙状态与飞行模式状态，修改以上三种设置，应用显示内容改变。
+
+### 约束与限制
+
+本示例仅支持在标准系统上运行。
