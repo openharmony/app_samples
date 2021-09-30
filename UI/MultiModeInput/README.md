@@ -1,10 +1,10 @@
 # Multimodal Input<a name="EN-US_TOPIC_0000001126596074"></a>
 
-##### Introduction<a name="section104mcpsimp"></a>
+### Introduction<a name="section104mcpsimp"></a>
 
 This sample app of multimodal input illustrates how to use APIs such as  **KeyEventListener**,  **TouchEventListener**, and  **SpeechEventListener**  to handle corresponding key, touch, and speech events.
 
-##### Usage<a name="section107mcpsimp"></a>
+### Usage<a name="section107mcpsimp"></a>
 
 The home page of the sample app contains the  **touchEvent**,  **keyEvent**,  **mouseEvent**, and  **speechEvent**  buttons. The specific implementation is as follows:
 
@@ -13,7 +13,7 @@ The home page of the sample app contains the  **touchEvent**,  **keyEvent**,  **
 3.  When you tap the  **mouseEvent**  button, you will be redirected to another page. If you tap the  **mouse**  button on that page by pressing the left key of the mouse, a popup dialog indicating a mouse click event will be displayed.
 4.  When you tap the  **speechEvent**  button, you will be redirected to another page. If you press the voice assistant button on the remote control of HUAWEI Vision, a popup dialog indicating a speech event will be displayed.
 
-##### Constraints<a name="section115mcpsimp"></a>
+### Constraints<a name="section115mcpsimp"></a>
 
 This sample can only be run on standard-system devices.
 
