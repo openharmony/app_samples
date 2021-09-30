@@ -1,0 +1,72 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <div class="title-bar">
+        <text class="title">{{ $t('strings.title') }}</text>
+        <text class="btn" onclick="onclick">{{ $t('strings.add') }}</text>
+    </div>
+    <stack class="content-container">
+        <list class="list" divider="true">
+            <list-item clickeffect="false" for="{{ listItem }}" class="todo-item">
+                <div class="item-container">
+                    <div class="item-row">
+                        <text class="item-text">{{ $t('strings.name') }}</text>
+                        <text class="item-text">{{ $item.name }}</text>
+                    </div>
+                    <div class="item-row">
+                        <text class="item-text">{{ $t('strings.phone') }}</text>
+                        <text class="item-text">{{ $item.phone }}</text>
+                    </div>
+                </div>
+                <input class="item-btn" type="button" onclick="showDeleteDialog($item)">{{ $t('strings.delete') }}
+                </input>
+            </list-item>
+        </list>
+        <text class="tips" show="{{ showTips }}">
+            {{ $t('strings.tips') }}
+        </text>
+    </stack>
+    <dialog id="deleteDialog" class="dialog-delete" oncancel="cancelDeleteDialog">
+        <div class="dialog-container">
+            <text class="dialog-text-delete">{{ $t('strings.delete_tips') }}</text>
+            <div class="text-container">
+                <input class="dialog-btn-cancel" type="button" value="{{ $t('strings.delete') }}"
+                       onclick="onDeleteSure"></input>
+                <text class="line"></text>
+                <input class="dialog-btn" type="button" value="{{ $t('strings.cancel') }}"
+                       onclick="cancelDeleteDialog"></input>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="showDialog" class="dialog" oncancel="cancelDialog">
+        <div class="dialog-container">
+            <div class="dialog-text-container">
+                <text class="dialog-text">{{ $t('strings.name') }}</text>
+                <textarea class="dialog-edit" value="{{ name }}">{{ name }}</textarea>
+            </div>
+            <div class="text-container">
+                <text class="dialog-text">{{ $t('strings.phone') }}</text>
+                <textarea class="dialog-edit" value="{{ phone }}">{{ phone }}</textarea>
+            </div>
+            <div class="text-container">
+                <input class="dialog-btn" type="button" value="{{ $t('strings.sure') }}" onclick="onConfirm"></input>
+                <text class="line"></text>
+                <input class="dialog-btn-cancel" type="button" value="{{ $t('strings.cancel') }}"
+                       onclick="cancelDialog"></input>
+            </div>
+        </div>
+    </dialog>
+</div>
