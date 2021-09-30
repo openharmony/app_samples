@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "tips": "No Contacts,Click the button 'Add contact' to add.",
+    "add": "Add contact",
+    "title": "Contact",
+    "name": "Name:",
+    "phone": "Phone:",
+    "sure": "Sure",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "delete_tips": "Delete this contact?",
+    "contact": "contact"
+  },
+  "Files": {
+  }
+}
