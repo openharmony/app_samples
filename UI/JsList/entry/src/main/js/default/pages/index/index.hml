@@ -1,0 +1,48 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container" onswipe="touchMove">
+    <text class="title">{{ $t('strings.productList') }}</text>
+    <div>
+        <list divider="true"  style="divider-color : #000000">
+            <list-item-group for="{{ category in categorylist }}" ongroupcollapse="collapse" ongroupexpand="expand">
+            <!--展开后-->
+                <list-item type="item" >
+                    <div class="item-group-child">
+                        <list scrollbar="auto" class="list-wrapper" scrollbaroffset="spring" scrollpage="true"
+                              divider="true" shapemode="rect" updateeffect="true" chainanimation="false">
+                            <list-item class="list-item" for="{{ category.product }}" onclick="onClick">
+                                <div class="list-left">
+                                    <image class="list-img" src="{{ $item.img }}"></image>
+                                </div>
+                                <div class="list-right">
+                                    <text class="list-model">{{ $item.model }}</text>
+                                    <text class="list-type">{{ $item.type }}</text>
+                                    <text class="list-info">{{ $item.info }}</text>
+                                </div>
+                            </list-item>
+                        </list>
+                    </div>
+                </list-item>
+            <!--收拢后-->
+                <list-item type="item" style="background-color : #87CEFA; height : 145px;" primary="true">
+                    <div class="item-group-child">
+                        <text style="margin-left: 20px;" class="list-info">{{ category.cate }}</text>
+                    </div>
+                </list-item>
+            </list-item-group>
+        </list>
+    </div>
+</div>
