@@ -1,0 +1,60 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="doc-page">
+    <div class="btn-div">
+        <swiper class="swip">
+            <image class="image" src="/common/image/micro2.png"/>
+            <image class="image1" src="/common/image/micro1.png"/>
+        </swiper>
+        <list>
+            <list-item class="item">
+                <text class="title-txt">{{$t('strings.phone')}}</text>
+            </list-item>
+            <list-item class="item" onclick="showParameter">
+                <div>
+                    <text class="txt">{{$t('strings.specification')}}</text>
+                </div>
+            </list-item>
+            <list-item class="item" onclick="showService">
+                <div>
+                    <text class="txt">{{$t('strings.service')}}</text>
+                </div>
+            </list-item>
+        </list>
+    </div>
+    <panel id="parameter" type="temporary" mode="half" miniheight="200px">
+        <div class="panel-div">
+            <text class="title-txt">{{$t('strings.parameter')}}</text>
+            <div for= "{{parameter}}" class="inner-div">
+                <div class="list-div">
+                    <text class="inner-txt">{{ $item.key }}</text>
+                </div>
+                <text class="panel-txt">{{ $item.value }}</text>
+            </div>
+            <button class="btn" type="capsule" value="{{$t('strings.determine')}}" onclick="closeParameter"></button>
+        </div>
+    </panel>
+    <panel id="service" type="foldable" mode="half" halfheight="1200px">
+        <div class="panel-div">
+            <text class="title-txt">{{$t('strings.assurance')}}</text>
+            <div for="{{ assurance }}" class="service-div">
+                <text class="title-txt">{{ $item.key }}</text>
+                <text class="panel-txt">{{ $item.value }}</text>
+            </div>
+            <button class="btn" type="capsule" value="{{$t('strings.determine')}}" onclick="closeParameter"></button>
+        </div>
+    </panel>
+</div>

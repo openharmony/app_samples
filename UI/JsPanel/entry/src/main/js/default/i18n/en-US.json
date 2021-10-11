@@ -1,0 +1,58 @@
+{
+  "strings": {
+    "phone": "Huawei Mate40 RS Porsche 5G phone",
+    "specification": "Product specifications",
+    "service": "Service guarantee",
+    "parameter": "Product parameters",
+    "determine": "determine",
+    "assurance": "Platform foundation Guarantee"
+  },
+  "list-parameter": [
+    {
+      "key": "Time to market",
+      "value": "In 2020"
+    },
+    {
+      "key": "Rear camera",
+      "value": "f/1.9"
+    },
+    {
+      "key": "thickness of the fuselage",
+      "value": "10.1mm"
+    },
+    {
+      "key": "screen size",
+      "value": "6.67"
+    },
+    {
+      "key": "Front facing camera",
+      "value": "f/2.4"
+    },
+    {
+      "key": "agreement",
+      "value": "Support 5G"
+    }
+  ],
+  "list-assurance": [
+    {
+      "key": "False a compensate four",
+      "value": "Genuine product guarantee false 1 compensate 4"
+    },
+    {
+      "key": "Return freight insurance",
+      "value": "The seller shall insure the return freight insurance and bear the return freight of a certain amount"
+    },
+    {
+      "key": "coinsurance",
+      "value": "Goods online repair, direct brand after sale"
+    },
+    {
+      "key": "A fast refund",
+      "value": "When the corresponding conditions are met, the good faith user can enjoy a speedy refund after returning the goods and sending them out"
+    },
+    {
+      "key": "Seven days without reason to return or exchange",
+      "value": "When the corresponding conditions are met, consumers can apply for \"seven days without reason to return or exchange goods"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.doc-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-div {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swip {
+    height: 50%;
+    margin-top: 80px;
+    flex-direction: column;
+    align-content: center;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.image1 {
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.item {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.title-txt {
+    color: #000000;
+    font-weight: bold;
+    font-size: 39px;
+    margin-top: 30px;
+}
+
+.txt {
+    font-weight: bold;
+    font-size: 39px;
+    color: cornflowerblue;
+}
+
+.panel-div {
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-div {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.inner-txt {
+    color: #000000;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+.list-div {
+    width: 250px;
+    margin-left: 40px;
+}
+
+.panel-txt {
+    color: #000000;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.service-div {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.btn {
+    width: 90%;
+    margin-top: 30px;
+}
