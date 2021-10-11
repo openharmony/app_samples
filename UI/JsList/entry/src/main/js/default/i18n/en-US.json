@@ -1,0 +1,88 @@
+{
+  "strings": {
+    "productList":"ProductList",
+    "categorylist": [
+      {
+        "cate": "Phone",
+        "product":[
+          {
+            "img":"common/image/mate.jpg",
+            "model": "Mate40Pro+",
+            "type": "Phone",
+            "info": "Kirin9000+HarmonyOS2.0，5nm Flagship chip"
+          },
+          {
+            "img":"common/image/maters.png",
+            "model": "Mate40RS PorshceDesign",
+            "type": "Phone",
+            "info": "Supercar gene, salute The Times"
+          },
+          {
+            "img":"common/image/matex.jpg",
+            "model": "Mate X2",
+            "type": "Phone",
+            "info": "Imagine a lot"
+          },
+          {
+            "img":"common/image/pfif.jpg",
+            "model":"P50Pro",
+            "type":"Phone",
+            "info":"Qualcomm dragon888+HarmonyOS2.0，New computational optics"
+          }
+        ]
+      },
+      {
+        "cate": "Pad",
+        "product": [
+          {
+            "img":"common/image/matepad.png",
+            "model":"MatePadPro12.6",
+            "type":"Pad",
+            "info":"Kirin9000+HarmonyOS2.0，Large screen productivity"
+          },
+          {
+            "img":"common/image/matepadone.jpg",
+            "model":"MatePad 11",
+            "type":"Pad",
+            "info":"HarmonyOS2.0，120HZrefresh rate"
+          }
+        ]
+      },
+      {
+        "cate": "Wisdom office",
+        "product": [
+          {
+            "img":"common/image/matebook.png",
+            "model":"MateBook X Pro",
+            "type":"Laptop",
+            "info":"Multi-screen collaboration, intelligent office"
+          },
+          {
+            "img":"common/image/mateview.png",
+            "model":"MateView",
+            "type":"Display",
+            "info":"Multi-screen collaboration, intelligent office"
+          },
+          {
+            "img":"common/image/matestations.png",
+            "model":"MateStation S",
+            "type":"Desktop computer",
+            "info":"Multi-screen collaboration, intelligent office"
+          },
+          {
+            "img":"common/image/matestationx.png",
+            "model":"MateStation X",
+            "type":"All-in-one computer",
+            "info":"Multi-screen collaboration, intelligent office"
+          },
+          {
+            "img":"common/image/pixlab.jpg",
+            "model":"PixLab",
+            "type":"Printer",
+            "info":"HarmonyOS2.0，Touch it and it will connect"
+          }
+        ]
+      }
+    ]
+  }
+}
