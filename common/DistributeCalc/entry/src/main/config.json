@@ -34,9 +34,10 @@
         ],
         "name": "com.example.distributedcalc.MainAbility",
         "icon": "$media:icon",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
-        "visible": true,
         "type": "page",
         "launchType": "standard"
       }
