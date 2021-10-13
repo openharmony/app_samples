@@ -11,6 +11,7 @@
   "module": {
     "package": "com.example.distributedcalc",
     "name": ".MyApplication",
+    "mainAbility": ".default",
     "deviceType": [
       "phone"
     ],
@@ -32,7 +33,7 @@
             ]
           }
         ],
-        "name": "com.example.distributedcalc.MainAbility",
+        "name": ".default",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -48,11 +49,7 @@
           "pages/index/index",
           "pages/calc/calc"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": false
-        }
+        "name": ".default"
       }
     ]
   }

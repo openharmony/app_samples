@@ -10,7 +10,7 @@
   "module": {
     "package": "ohos.samples.international",
     "name": ".MyApplication",
-    "mainAbility": "ohos.samples.international.MainAbility",
+    "mainAbility": ".default",
     "deviceType": [
       "phone"
     ],
@@ -33,7 +33,9 @@
           }
         ],
         "orientation": "unspecified",
-        "name": "ohos.samples.international.MainAbility",
+        "name": ".default",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "formsEnabled": false,
@@ -47,11 +49,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": false
-        }
+        "name": ".default"
       }
     ]
   }
