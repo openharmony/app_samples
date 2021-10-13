@@ -9,8 +9,8 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.chart",
-    "name": ".MainAbility",
-    "mainAbility": "ohos.samples.chart.MainAbility",
+    "name": ".MyApplication",
+    "mainAbility": ".default",
     "deviceType": [
       "phone"
     ],
@@ -32,8 +32,10 @@
             ]
           }
         ],
-        "name": ".MainAbility",
+        "name": ".default",
         "icon": "$media:icon",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
         "type": "page",
@@ -51,11 +53,7 @@
           "pages/loading/index",
           "pages/rainbow/index"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": true
-        }
+        "name": ".default"
       }
     ]
   }

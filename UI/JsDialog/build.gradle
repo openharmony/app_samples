@@ -3,10 +3,8 @@ apply plugin: 'com.huawei.ohos.app'
 
 // For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
 ohos {
-    compileSdkVersion 6
-    defaultConfig {
-        compatibleSdkVersion 6
-    }
+    compileSdkVersion 7
+    supportSystem "standard"
 }
 
 buildscript {
@@ -19,8 +17,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.huawei.ohos:hap:2.4.5.0'
-        classpath 'com.huawei.ohos:decctest:1.2.4.1'
+        classpath 'com.huawei.ohos:hap:3.0.3.2'
     }
 }
 

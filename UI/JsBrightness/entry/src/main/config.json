@@ -10,7 +10,7 @@
   "module": {
     "package": "ohos.samples.jsbrightness",
     "name": ".MyApplication",
-    "mainAbility": "ohos.samples.jsbrightness.MainAbility",
+    "mainAbility": "default",
     "deviceType": [
       "phone"
     ],
@@ -33,8 +33,10 @@
           }
         ],
         "orientation": "unspecified",
-        "name": "ohos.samples.jsbrightness.MainAbility",
+        "name": ".default",
         "icon": "$media:icon",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "description": "$string:mainability_description",
         "formsEnabled": false,
         "label": "$string:entry_MainAbility",
@@ -47,11 +49,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": false
-        }
+        "name": ".default"
       }
     ]
   }

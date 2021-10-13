@@ -1,8 +1,8 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
-      "value": "entry_MainAbility"
+      "name": "app_name",
+      "value": "JsTimer"
     },
     {
       "name": "mainability_description",

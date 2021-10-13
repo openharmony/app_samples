@@ -9,8 +9,8 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.grid",
-    "name": ".MainAbility",
-    "mainAbility": "ohos.samples.grid.MainAbility",
+    "name": ".Myapplication",
+    "mainAbility": ".default",
     "deviceType": [
       "phone"
     ],
@@ -32,8 +32,10 @@
             ]
           }
         ],
-        "name": "ohos.samples.grid.MainAbility",
+        "name": ".default",
         "icon": "$media:icon",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "description": "$string:mainability_description",
         "label": "$string:entry_MainAbility",
         "type": "page",
@@ -45,11 +47,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": true
-        }
+        "name": ".default"
       }
     ]
   }

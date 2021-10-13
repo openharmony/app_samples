@@ -11,7 +11,7 @@
   "module": {
     "package": "ohos.samples.jsdialog",
     "name": ".MyApplication",
-    "mainAbility": ".MainAbility",
+    "mainAbility": ".default",
     "deviceType": [
       "phone"
     ],
@@ -34,7 +34,9 @@
           }
         ],
         "orientation": "unspecified",
-        "name": ".MainAbility",
+        "name": ".default",
+        "srcPath": "default",
+        "srcLanguage": "js",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "formsEnabled": false,
@@ -48,11 +50,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": "default",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": false
-        }
+        "name": ".default"
       }
     ]
   }
