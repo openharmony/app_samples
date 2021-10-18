@@ -20,11 +20,6 @@ package ohos.timer.utils;
  */
 public class Constant {
     /**
-     * Application name
-     */
-    public static final String APP_NAME = "Timer";
-
-    /**
      * Time in milliseconds
      */
     public static final int ONE_HOUR = 60 * 60 * 1000;

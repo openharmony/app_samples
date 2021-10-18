@@ -57,16 +57,6 @@ public class LogUtil {
     }
 
     /**
-     * Print warn log
-     *
-     * @param tag log tag
-     * @param msg log message
-     */
-    public static void warn(String tag, String msg) {
-        HiLog.warn(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, tag, msg));
-    }
-
-    /**
      * Print error log
      *
      * @param tag log tag

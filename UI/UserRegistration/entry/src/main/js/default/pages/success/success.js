@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt'
 import router from '@system.router'
 
 export default {

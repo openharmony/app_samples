@@ -43,8 +43,8 @@
             ohos:text_size="20fp"
             ohos:background_element="$graphic:button_bg"
             ohos:text="$string:two"
-            ohos:left_margin="5vp"
-            ohos:right_margin="5vp"
+            ohos:start_margin="5vp"
+            ohos:end_margin="5vp"
             ohos:text_alignment="center"/>
 
         <Button
@@ -74,8 +74,8 @@
             ohos:width="60vp"
             ohos:height="60vp"
             ohos:text_size="20fp"
-            ohos:left_margin="5vp"
-            ohos:right_margin="5vp"
+            ohos:start_margin="5vp"
+            ohos:end_margin="5vp"
             ohos:background_element="$graphic:button_bg"
             ohos:text="$string:five"
             ohos:text_alignment="center"/>
@@ -107,8 +107,8 @@
             ohos:width="60vp"
             ohos:height="60vp"
             ohos:text_size="20fp"
-            ohos:left_margin="5vp"
-            ohos:right_margin="5vp"
+            ohos:start_margin="5vp"
+            ohos:end_margin="5vp"
             ohos:background_element="$graphic:button_bg"
             ohos:text="$string:eight"
             ohos:text_alignment="center"/>
@@ -140,8 +140,8 @@
             ohos:width="60vp"
             ohos:height="60vp"
             ohos:text_size="20fp"
-            ohos:left_margin="5vp"
-            ohos:right_margin="5vp"
+            ohos:start_margin="5vp"
+            ohos:end_margin="5vp"
             ohos:background_element="$graphic:button_bg"
             ohos:text="$string:zero"
             ohos:text_alignment="center"/>
@@ -163,8 +163,8 @@
         ohos:bottom_margin="5vp"
         ohos:text_alignment="center"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_padding="30vp"
-        ohos:right_padding="30vp"
+        ohos:start_padding="30vp"
+        ohos:end_padding="30vp"
         ohos:top_padding="2vp"
         ohos:bottom_padding="2vp"/>
 </DirectionalLayout>

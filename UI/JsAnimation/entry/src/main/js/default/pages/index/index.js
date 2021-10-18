@@ -45,6 +45,7 @@ export default {
         shadow: true
     },
     onInit() {
+        console.info("ssss"+ JSON.stringify(animatordata.videoopa))
         this.pass = this.pass;
         if (this.pass === true) {
             if (this.message[0] == 1) {

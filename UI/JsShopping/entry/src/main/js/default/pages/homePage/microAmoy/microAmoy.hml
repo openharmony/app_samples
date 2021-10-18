@@ -13,7 +13,7 @@
   limitations under the License.
  -->
 <div class="container">
-     <list class="list" scrollbar="off" shapemode="rect" scrolleffect="fade" cachedcount="5" onrequestitem="buildItem" beginindex="{{this.beginIndex}}" endindex="{{this.endIndex}}" repeatedlength="700" indexoffset="2">
+     <list class="list" scrollbar="off" shapemode="rect" scrolleffect="fade" cachedcount="5" onrequestitem="buildItem">
         <list-item type="top" class="listitem-title">
             <div class="top-listitem">
                  <text class="top-text">商城</text>

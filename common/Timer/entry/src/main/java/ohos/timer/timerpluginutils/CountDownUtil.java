@@ -57,17 +57,6 @@ public class CountDownUtil {
         }
     }
 
-    /**
-     * Stop the count down
-     */
-    public void stopCountDown() {
-        if (countDownTimer != null && !isCancel) {
-            countDownTimer.cancel();
-            isCancel = true;
-            LogUtil.info(TAG, "Timer cancelled or stopped, stop callback!");
-            countDownCallback.countDownCancel();
-        }
-    }
 
     private CountDownTimer getCountDownTimer() {
         return new CountDownTimer(millisInFuture) {
@@ -112,10 +101,5 @@ public class CountDownUtil {
          * @param millisUntilFinished Remaining time
          */
         void countDownTick(long millisUntilFinished);
-
-        /**
-         * Cancel the countdown.
-         */
-        void countDownCancel();
     }
 }

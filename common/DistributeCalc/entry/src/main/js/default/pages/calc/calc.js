@@ -38,7 +38,7 @@ export default {
         });
     },
     dataChange(key, value){
-        kvStore.put(key,value).then((data)=>{
+        kvStore.put(key,value).then(()=>{
             console.log('Calc[CalcPage] put key value successed! value:'+value);
         }).catch((err)=>{
             console.log('Calc[CalcPage] put key value failed:'+err);

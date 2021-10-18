@@ -17,11 +17,11 @@
     <stack class="stack">
         <image src="/common/clock_bg.png" class="clock-bg"></image>
         <image src="/common/hour_hand.png" class="clock-hand"
-               style="transform : rotate({{ hour * 30 + minute / 2 }}deg);"></image>
+               style="transform : rotate({{ hour * 30 + minute / 2 }});"></image>
         <image src="/common/minute_hand.png" class="clock-hand"
-               style="transform : rotate({{ minute * 6 + second / 10 }}deg);"></image>
+               style="transform : rotate({{ minute * 6 + second / 10 }});"></image>
         <image src="/common/second_hand.png" class="clock-hand"
-               style="transform : rotate({{ second * 6 }}deg);"></image>
+               style="transform : rotate({{ second * 6 }});"></image>
     </stack>
     <text class="digit-clock">{{ hour }}:{{ minute }}:{{ second }}</text>
 </div>

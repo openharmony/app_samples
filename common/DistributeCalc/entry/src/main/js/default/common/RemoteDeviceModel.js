@@ -86,9 +86,9 @@ export default class RemoteDeviceModel {
                 case 1:
                     if (self.deviceList.length > 0) {
                         var list = new Array();
-                        for (var i = 0; i < self.deviceList.length; i++) {
-                            if (self.deviceList[i].deviceId != data.device.deviceId) {
-                                list[i] = data.device;
+                        for (var j = 0; j < self.deviceList.length; j++) {
+                            if (self.deviceList[j].deviceId != data.device.deviceId) {
+                                list[j] = data.device;
                             }
                         }
                         self.deviceList = list;
@@ -121,7 +121,7 @@ export default class RemoteDeviceModel {
                 "appThumbnail": '',
                 "extraInfo": extraInfo
             };
-            self.deviceManager_.authenticateDevice(data.device, authParam, (err, data) => {
+            self.deviceManager_.authenticateDevice(data.device, authParam, (err) => {
                 if (err) {
                     console.info('Calc[RemoteDeviceModel] authenticateDevice error:' + JSON.stringify(err));
                     return;

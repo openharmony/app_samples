@@ -48,7 +48,7 @@ public class TimerAbility extends Ability {
 
     private OrmContext connect;
 
-    private DatabaseHelper helper = new DatabaseHelper(this);
+    private final DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     public void onStart(Intent intent) {

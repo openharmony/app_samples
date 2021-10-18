@@ -18,7 +18,7 @@
     <div class="bottom-bar-wrapper" if="{{ isTabletLandscape }}" >
         <tab-bar-group for="{{ tabBars }}" icon="{{ $item.icon }}" text="{{ $item.text }}" active="{{ $idx == menu_tabs_index }}"></tab-bar-group>
     </div>
-    <div class="div-content" index="{{ menu_tabs_index }}">
+    <div class="div-content">
         <div class="top-tool-bar">
             <image class="toolbar-image-add" src="/common/images/add.png" ></image>
             <image class="toolbar-image-add" src="/common/images/add.png" ></image>

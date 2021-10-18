@@ -36,5 +36,3 @@ public class MainAbilitySlice extends AbilitySlice {
         button.setClickedListener(listener -> present(new SecondAbilitySlice(), new Intent()));
     }
 }
-
-

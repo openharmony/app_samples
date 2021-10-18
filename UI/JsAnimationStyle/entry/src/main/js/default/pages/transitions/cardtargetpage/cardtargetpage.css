@@ -19,7 +19,7 @@
     background-color: #EBFFD7;
 }
 .div {
-    height: 600px;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
