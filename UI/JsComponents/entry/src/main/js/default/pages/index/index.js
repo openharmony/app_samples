@@ -70,16 +70,16 @@ export default {
     keyDown: function () {
         this.down = 'down keyed';
     },
-    touchCancel: function (event) {
+    touchCancel: function () {
         this.touchcancel = 'canceled';
     },
-    touchEnd: function (event) {
+    touchEnd: function () {
         this.touchend = 'ended';
     },
-    touchMove: function (event) {
+    touchMove: function () {
         this.touchmove = 'moved';
     },
-    touchStart: function (event) {
+    touchStart: function () {
         this.touchstart = 'touched';
     },
     longPress: function () {

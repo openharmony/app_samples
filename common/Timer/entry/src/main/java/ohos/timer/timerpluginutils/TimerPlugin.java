@@ -203,9 +203,4 @@ public class TimerPlugin implements CountDownUtil.CountDownCallback {
             Constant.TIME_FORMAT, remainingSeconds);
         handler.sendEvent(EVENT_CODE);
     }
-
-    @Override
-    public void countDownCancel() {
-        LogUtil.info(TAG, "countdown cancel");
-    }
 }

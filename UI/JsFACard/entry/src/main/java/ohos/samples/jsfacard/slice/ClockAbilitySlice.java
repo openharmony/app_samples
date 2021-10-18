@@ -42,18 +42,16 @@ public class ClockAbilitySlice extends AbilitySlice {
 
     private Timer timer;
 
-    private EventRunner eventRunner;
-
     private MyEventHandler myEventHandler;
 
-    private Runnable runnable = new Runnable() {
+    private final Runnable runnable = new Runnable() {
         @Override
         public void run() {
             initHandler();
         }
 
         private void initHandler() {
-            eventRunner = EventRunner.getMainEventRunner();
+            EventRunner eventRunner = EventRunner.getMainEventRunner();
             if (eventRunner == null) {
                 return;
             }

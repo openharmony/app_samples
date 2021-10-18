@@ -35,28 +35,6 @@ public class LogUtil {
     }
 
     /**
-     * Print debug log
-     *
-     * @param classType class name
-     * @param msg log message
-     */
-    @SuppressWarnings("rawtypes")
-    public static void debug(Class classType, String msg) {
-        HiLog.debug(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, classType, msg));
-    }
-
-    /**
-     * Print info log
-     *
-     * @param classType class name
-     * @param msg log message
-     */
-    @SuppressWarnings("rawtypes")
-    public static void info(Class classType, String msg) {
-        HiLog.info(LABEL_LOG, String.format(Locale.ROOT, LOG_FORMAT, classType, msg));
-    }
-
-    /**
      * Print info log
      *
      * @param className class name

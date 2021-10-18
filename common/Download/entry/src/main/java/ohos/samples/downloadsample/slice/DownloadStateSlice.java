@@ -37,8 +37,6 @@ public class DownloadStateSlice extends AbilitySlice {
 
     private DownloadSession downloadWebpageSession = null;
 
-    private DownloadSession downloadErrorPageSession = null;
-
     private Text downloadAppStateText;
 
     private Text downloadWebPageStateText;
@@ -83,7 +81,7 @@ public class DownloadStateSlice extends AbilitySlice {
         LogUtil.info(TAG, "DownloadFailed button clicked ");
         Uri uri = Uri.parse(Const.ERROR_URL);
         DownloadConfig param = new DownloadConfig.Builder(DownloadStateSlice.this, uri).build();
-        downloadErrorPageSession = new DownloadSession(DownloadStateSlice.this, param);
+        DownloadSession downloadErrorPageSession = new DownloadSession(DownloadStateSlice.this, param);
         downloadErrorPageSession.start();
         downloadErrorPageSession.addListener(listener);
     }

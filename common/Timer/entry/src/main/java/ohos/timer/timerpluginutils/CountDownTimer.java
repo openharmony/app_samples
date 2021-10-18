@@ -36,8 +36,6 @@ public abstract class CountDownTimer {
 
     private InnerEvent innerEvent;
 
-    private Handler handler;
-
     /**
      * Constructor for CountDownTimer
      *
@@ -46,16 +44,6 @@ public abstract class CountDownTimer {
      **/
     public CountDownTimer(long millis) {
         millisInFuture = millis;
-    }
-
-    /**
-     * Cancel the countdown.
-     */
-    public final synchronized void cancel() {
-        isCancelled = true;
-        if (handler != null) {
-            handler.removeEvent(innerEvent.eventId);
-        }
     }
 
     /**
@@ -74,7 +62,7 @@ public abstract class CountDownTimer {
         if (runner == null) {
             return this;
         }
-        handler = new Handler(runner);
+        Handler handler = new Handler(runner);
         int eventId = 0;
         long param = 0L;
 

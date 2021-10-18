@@ -26,8 +26,8 @@
         ohos:background_element="#0d000000"
         ohos:bottom_margin="10vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="15vp"
-        ohos:right_margin="15vp"
+        ohos:start_margin="15vp"
+        ohos:end_margin="15vp"
         ohos:text="$string:vertical"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>
@@ -42,7 +42,8 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_1"
             ohos:text_size="16fp"/>
 
@@ -51,7 +52,8 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_2"
             ohos:text_size="16fp"/>
 
@@ -60,7 +62,8 @@
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
             ohos:bottom_margin="3vp"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
@@ -72,8 +75,8 @@
         ohos:background_element="#0d000000"
         ohos:bottom_margin="10vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="15vp"
-        ohos:right_margin="15vp"
+        ohos:start_margin="15vp"
+        ohos:end_margin="15vp"
         ohos:text="$string:horizontal"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -87,7 +90,8 @@
             ohos:height="30vp"
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_1"
             ohos:text_size="16fp"/>
 
@@ -95,7 +99,8 @@
             ohos:height="30vp"
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_2"
             ohos:text_size="16fp"/>
 
@@ -103,7 +108,8 @@
             ohos:height="30vp"
             ohos:width="100vp"
             ohos:background_element="$graphic:color_light_gray_element"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:text="$string:btn_3"
             ohos:text_size="16fp"/>
     </DirectionalLayout>
@@ -115,8 +121,8 @@
         ohos:background_element="#0d000000"
         ohos:bottom_margin="10vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="15vp"
-        ohos:right_margin="15vp"
+        ohos:start_margin="15vp"
+        ohos:end_margin="15vp"
         ohos:text="$string:alignment"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -124,8 +130,8 @@
     <DirectionalLayout
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="15vp"
-        ohos:right_margin="15vp">
+        ohos:start_margin="15vp"
+        ohos:end_margin="15vp">
 
         <Button
             ohos:height="30vp"
@@ -159,8 +165,8 @@
         ohos:background_element="#0d000000"
         ohos:bottom_margin="10vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="15vp"
-        ohos:right_margin="15vp"
+        ohos:start_margin="15vp"
+        ohos:end_margin="15vp"
         ohos:text="$string:weight"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -168,9 +174,9 @@
     <DirectionalLayout
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="15vp"
+        ohos:start_margin="15vp"
         ohos:orientation="horizontal"
-        ohos:right_margin="15vp">
+        ohos:end_margin="15vp">
 
         <Button
             ohos:height="30vp"

@@ -31,7 +31,8 @@
 
         <Text
             ohos:id="$+id:name"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:width="0px"
             ohos:layout_alignment="vertical_center"
             ohos:weight="1"

@@ -15,10 +15,9 @@
 
 package ohos.samples.downloadsample;
 
-import ohos.samples.downloadsample.slice.MainAbilitySlice;
-import ohos.samples.downloadsample.utils.LogUtil;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
+import ohos.samples.downloadsample.slice.MainAbilitySlice;
 
 /**
  * MainAbility

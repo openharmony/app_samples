@@ -39,21 +39,24 @@
             ohos:height="60vp"
             ohos:width="60vp"
             ohos:background_element="#00ffff"
-            ohos:left_margin="10vp"/>
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"/>
 
         <Component
             ohos:id="$+id:target_image3"
             ohos:height="60vp"
             ohos:width="60vp"
             ohos:background_element="#00ffff"
-            ohos:left_margin="10vp"/>
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"/>
 
         <Component
             ohos:id="$+id:target_image4"
             ohos:height="60vp"
             ohos:width="60vp"
             ohos:background_element="#00ffff"
-            ohos:left_margin="10vp"/>
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"/>
     </DirectionalLayout>
 
     <DirectionalLayout

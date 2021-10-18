@@ -47,7 +47,7 @@ public class ClockAbility extends Ability {
 
     private OrmContext connect;
 
-    private DatabaseHelper helper = new DatabaseHelper(this);
+    private final DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     public void onStart(Intent intent) {
@@ -77,7 +77,7 @@ public class ClockAbility extends Ability {
             return providerFormInfo;
         }
 
-        long formId = INVALID_FORM_ID;
+        long formId;
         if (intent.hasParameter(AbilitySlice.PARAM_FORM_IDENTITY_KEY)) {
             formId = intent.getLongParam(AbilitySlice.PARAM_FORM_IDENTITY_KEY, INVALID_FORM_ID);
         } else {

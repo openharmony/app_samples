@@ -71,8 +71,8 @@ public class CustomLayout extends ComponentContainer
 
     private void measureChild(Component childView, int widthEstimatedConfig, int heightEstimatedConfig) {
         LayoutConfig lc = childView.getLayoutConfig();
-        int childWidthMeasureSpec = 0;
-        int childHeightMeasureSpec = 0;
+        int childWidthMeasureSpec;
+        int childHeightMeasureSpec;
 
         if (lc.width == LayoutConfig.MATCH_CONTENT) {
             childWidthMeasureSpec = EstimateSpec.getSizeWithMode(lc.width, EstimateSpec.NOT_EXCEED);

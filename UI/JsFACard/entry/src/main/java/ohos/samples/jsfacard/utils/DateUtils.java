@@ -39,8 +39,7 @@ public class DateUtils {
     public static String getCurrentDate(String format) {
         DateFormat dateFormat = new SimpleDateFormat(format);
         Date date = new Date();
-        String formatDate = dateFormat.format(date);
-        return formatDate;
+        return dateFormat.format(date);
     }
 
     /**

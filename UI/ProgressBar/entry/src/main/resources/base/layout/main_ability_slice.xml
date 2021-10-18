@@ -25,7 +25,8 @@
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
-        ohos:left_margin="10vp"/>
+        ohos:start_margin="10vp"
+        ohos:end_margin="0vp"/>
 
     <DirectionalLayout
         ohos:orientation="horizontal"
@@ -38,8 +39,8 @@
             ohos:width="0vp"
             ohos:weight="1"
             ohos:height="match_content"
-            ohos:left_padding="10vp"
-            ohos:right_padding="10vp"
+            ohos:start_padding="10vp"
+            ohos:end_padding="10vp"
             ohos:progress="0"
             ohos:layout_alignment="vertical_center"/>
 
@@ -50,7 +51,8 @@
             ohos:text="$string:zero"
             ohos:text_size="15fp"
             ohos:padding="5vp"
-            ohos:right_margin="10vp"/>
+            ohos:start_margin="0vp"
+            ohos:end_margin="10vp"/>
     </DirectionalLayout>
 
     <Text
@@ -60,7 +62,8 @@
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
-        ohos:left_margin="10vp"/>
+        ohos:start_margin="10vp"
+        ohos:end_margin="0vp"/>
 
     <DirectionalLayout
         ohos:orientation="horizontal"
@@ -75,8 +78,8 @@
             ohos:height="match_content"
             ohos:max="100"
             ohos:progress="100"
-            ohos:left_padding="10vp"
-            ohos:right_padding="10vp"
+            ohos:start_padding="10vp"
+            ohos:end_padding="10vp"
             ohos:layout_alignment="vertical_center"/>
 
         <Text
@@ -86,7 +89,8 @@
             ohos:text="$string:hundred"
             ohos:text_size="15fp"
             ohos:padding="5vp"
-            ohos:right_margin="10vp"/>
+            ohos:start_margin="0vp"
+            ohos:end_margin="10vp"/>
     </DirectionalLayout>
 
     <Text
@@ -96,7 +100,8 @@
         ohos:top_margin="30vp"
         ohos:text_size="15fp"
         ohos:padding="5vp"
-        ohos:left_margin="10vp"/>
+        ohos:start_margin="10vp"
+        ohos:end_margin="0vp"/>
 
     <DirectionalLayout
         ohos:orientation="horizontal"
@@ -112,8 +117,8 @@
             ohos:max="10"
             ohos:min="1"
             ohos:progress="10"
-            ohos:left_padding="10vp"
-            ohos:right_padding="10vp"
+            ohos:start_padding="10vp"
+            ohos:end_padding="10vp"
             ohos:layout_alignment="vertical_center"/>
 
         <Text
@@ -123,7 +128,8 @@
             ohos:text="$string:ten"
             ohos:text_size="15fp"
             ohos:padding="5vp"
-            ohos:right_margin="10vp"/>
+            ohos:start_margin="0vp"
+            ohos:end_margin="10vp"/>
     </DirectionalLayout>
 
     <Button
@@ -132,9 +138,9 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:padding="5vp"
-        ohos:left_margin="20vp"
+        ohos:start_margin="20vp"
         ohos:top_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:end_margin="20vp"
         ohos:background_element="#4169E1"
         ohos:text_size="20fp"/>
 

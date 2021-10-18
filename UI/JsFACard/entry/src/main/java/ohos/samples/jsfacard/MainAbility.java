@@ -81,7 +81,7 @@ public class MainAbility extends Ability {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] bytes = new byte[CACHE_SIZE];
         try {
-            int len = 0;
+            int len;
             while (-1 != (len = resource.read(bytes))) {
                 byteArrayOutputStream.write(bytes, 0, len);
             }

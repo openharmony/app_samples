@@ -39,31 +39,31 @@
             <video if="{{videomove_3}}" id="video2_1" class="videosmall {{video_center}}"
                     src="/common/animator/butterfly.mp4" controls="false" autoplay="true"
                     onfinish="playComplete2"></video>
-            <image if="{{imgflag[0]}}" showshadow="{{shadow}}" class="img {{img0}}" style="box-shadow: 0 0 20 0;"
+            <image if="{{imgflag[0]}}" class="img {{img0}}" style="box-shadow: 0 0 20 0;"
                     src="/common/gallery/001.png"></image>
-            <image if="{{imgflag[1]}}" showshadow="{{shadow}}" class="img {{img1}}" style="box-shadow: 20 20 20;"
+            <image if="{{imgflag[1]}}" class="img {{img1}}" style="box-shadow: 20 20 20;"
                     src="/common/gallery/002.png"></image>
-            <image if="{{imgflag[2]}}" showshadow="{{shadow}}" class="img {{img2}}" style="box-shadow: 0 0 20;"
+            <image if="{{imgflag[2]}}" class="img {{img2}}" style="box-shadow: 0 0 20;"
                     src="/common/gallery/003.png"></image>
-            <image if="{{imgflag[3]}}" showshadow="{{shadow}}" class="img {{img3}}" style="box-shadow: 20 20 20;"
+            <image if="{{imgflag[3]}}" class="img {{img3}}" style="box-shadow: 20 20 20;"
                     src="/common/gallery/004.png"></image>
-            <image if="{{imgflag[4]}}" showshadow="{{shadow}}" class="img {{img4}}" style="box-shadow: 0 0 20;"
+            <image if="{{imgflag[4]}}" class="img {{img4}}" style="box-shadow: 0 0 20;"
                     src="/common/gallery/005.png"></image>
-            <image if="{{imgflag[5]}}" showshadow="{{shadow}}" class="img {{img5}}" style="box-shadow: 20 20 20;"
+            <image if="{{imgflag[5]}}" class="img {{img5}}" style="box-shadow: 20 20 20;"
                     src="/common/gallery/006.png"></image>
-            <image if="{{imgflag[6]}}" showshadow="{{shadow}}" class="img {{img6}}" style="box-shadow: 0 0 20;"
+            <image if="{{imgflag[6]}}" class="img {{img6}}" style="box-shadow: 0 0 20;"
                     src="/common/gallery/006.png"></image>
-            <image if="{{imgflag[7]}}" showshadow="{{shadow}}" class="img {{img7}}" style="box-shadow: 20 20 20;"
+            <image if="{{imgflag[7]}}" class="img {{img7}}" style="box-shadow: 20 20 20;"
                     src="/common/gallery/008.png"></image>
-            <image if="{{imgflag[8]}}" showshadow="{{shadow}}" class="img {{img8}}" style="box-shadow: 0 0 20;"
+            <image if="{{imgflag[8]}}" class="img {{img8}}" style="box-shadow: 0 0 20;"
                     src="/common/gallery/009.png"></image>
-            <image if="{{imgflag[9]}}" showshadow="{{shadow}}" class="img {{img9}}" style="box-shadow: 20 20 20;"
+            <image if="{{imgflag[9]}}" class="img {{img9}}" style="box-shadow: 20 20 20;"
                     src="/common/gallery/010.png"></image>
-            <text class="text1" showshadow="{{shadow}}" show="{{flag1}}">
+            <text class="text1" show="{{flag1}}">
                 Harmony OS Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OS
                 Harmony OSHarmony OSHarmony
             </text>
-            <text class="text2" showshadow="{{shadow}}" show="{{flag2}}">
+            <text class="text2" show="{{flag2}}">
                 Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OS
                 Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OS
                 Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OS

@@ -15,11 +15,9 @@
 
 package ohos.samples.downloadsample.slice;
 
-import ohos.samples.downloadsample.ResourceTable;
-
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Component;
+import ohos.samples.downloadsample.ResourceTable;
 
 /**
  * DownloadSample app main ability slice

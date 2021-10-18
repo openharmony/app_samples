@@ -23,7 +23,6 @@
         </div>
     </div>
     <list id="imglist" style="columns: {{columns}};" cachedcount="100" onrequestitem="buildItem"
-            beginindex="{{this.beginIndex}}" endindex="{{this.endIndex}}" repeatedlength="{{repeatedlength}}"
             onscrolltop="scrollTop" onscrollbottom="scrollBottom" ontouchstart="touchStart">
         <list-item type="common" for="{{tempList}}" style="flex-direction: column;">
             <image class="imgs" src="{{$item.SourceFile}}" data="{{$item.SourceFile}}" onclick="redirect"

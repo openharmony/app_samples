@@ -2,8 +2,8 @@
   "app": {
     "bundleName": "ohos.samples.backgrounddownload",
     "version": {
-      "code": 2000000,
-      "name": "2.0"
+      "code": 1000000,
+      "name": "1.0"
     }
   },
   "deviceConfig": {},
