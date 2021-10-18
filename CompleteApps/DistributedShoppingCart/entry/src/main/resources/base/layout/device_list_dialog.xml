@@ -30,7 +30,8 @@
                 ohos:text_size="20vp"
                 ohos:weight="6vp"
                 ohos:height="100px"
-                ohos:left_margin="40px"
+                ohos:start_margin="40px"
+                ohos:end_margin="0px"
                 ohos:width="300px"
                 ohos:text="$string:device_select_label"
                 ohos:text_alignment="center"/>
@@ -39,7 +40,8 @@
                 ohos:width="72px"
                 ohos:height="72px"
                 ohos:top_margin="20px"
-                ohos:left_margin="320px"
+                ohos:start_margin="320px"
+                ohos:end_margin="0px"
                 ohos:right_of="$id:dev_title"
                 ohos:image_src="$media:icon_cancel"/>
             <Component

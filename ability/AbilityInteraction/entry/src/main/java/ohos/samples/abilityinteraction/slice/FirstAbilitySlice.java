@@ -94,15 +94,11 @@ public class FirstAbilitySlice extends AbilitySlice implements LifecycleStateObs
 
     @Override
     protected void onAbilityResult(int requestCode, int resultCode, Intent resultData) {
-        switch (requestCode) {
-            case REQUEST_CODE_TO_ABILITY_B:
-                if (resultCode == Const.RESULT_CODE_FROM_ABILITY_B) {
-                    long outputNum = resultData.getLongParam(Const.MESSAGE_KEY_SQUARED, 0);
-                    numberText.setText(String.valueOf(outputNum));
-                }
-                break;
-            default:
-                break;
+         if(requestCode == REQUEST_CODE_TO_ABILITY_B) {
+             if (resultCode == Const.RESULT_CODE_FROM_ABILITY_B) {
+                 long outputNum = resultData.getLongParam(Const.MESSAGE_KEY_SQUARED, 0);
+                 numberText.setText(String.valueOf(outputNum));
+             }
         }
     }
 

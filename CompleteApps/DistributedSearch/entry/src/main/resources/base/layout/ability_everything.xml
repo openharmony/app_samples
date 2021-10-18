@@ -23,11 +23,11 @@
             ohos:width="284vp"
             ohos:id="$+id:textEntry"
             ohos:background_element="$graphic:background_text_field"
-            ohos:hint="Enter the key to search"
+            ohos:hint="$string:Enter_the_key_to_search"
             ohos:text_alignment="vertical_center"
             ohos:text_size="24vp"
-            ohos:left_padding="8vp"
-            ohos:right_padding="24vp"
+            ohos:start_padding="8vp"
+            ohos:end_padding="24vp"
             ohos:bottom_padding="8vp"
             ohos:multiple_lines="false"
             />
@@ -64,7 +64,8 @@
             ohos:layout_alignment="left"
             ohos:orientation="horizontal"
             ohos:top_margin="0vp"
-            ohos:left_margin="0vp">
+            ohos:start_margin="0vp"
+            ohos:end_margin="0vp">
             <RadioButton
                 ohos:id="$+id:sel_image"
                 ohos:height="40vp"

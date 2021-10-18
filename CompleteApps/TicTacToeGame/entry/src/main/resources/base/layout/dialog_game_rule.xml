@@ -17,13 +17,15 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:width="1200px"
     ohos:height="1584px"
-    ohos:left_padding="45px"
+    ohos:start_padding="45px"
+    ohos:end_padding="0px"
     ohos:orientation="vertical">
     <DirectionalLayout
         xmlns:ohos="http://schemas.huawei.com/res/ohos"
         ohos:width="990px"
         ohos:height="1300px"
-        ohos:left_padding="45px"
+        ohos:start_padding="45px"
+        ohos:end_padding="0px"
         ohos:background_element="$graphic:background_game_rule"
         ohos:orientation="vertical">
         <Text
@@ -33,7 +35,8 @@
             ohos:text_size="48px"
             ohos:text_color="#333333"
             ohos:text_font="PingFangSC-Medium"
-            ohos:left_padding="356px"
+            ohos:start_padding="356px"
+            ohos:end_padding="0px"
             ohos:top_padding="130px"/>
         <Text
             ohos:height="match_content"
@@ -43,7 +46,8 @@
             ohos:text_size="36px"
             ohos:text_color="#666666"
             ohos:text_font="PingFangSC-Regular"
-            ohos:left_padding="100px"
+            ohos:start_padding="100px"
+            ohos:end_padding="0px"
             ohos:top_padding="50px"/>
 
         <Text
@@ -55,7 +59,8 @@
             ohos:text_size="36px"
             ohos:text_color="#666666"
             ohos:text_font="PingFangSC-Regular"
-            ohos:left_padding="100px"
+            ohos:start_padding="100px"
+            ohos:end_padding="0px"
             ohos:top_padding="50px"/>
         <Text
             ohos:height="70px"
@@ -64,7 +69,8 @@
             xmlns:ohos="http://schemas.huawei.com/res/ohos"
             ohos:width="match_content"
             ohos:height="match_content"
-            ohos:left_padding="190px"
+            ohos:start_padding="190px"
+            ohos:end_padding="0px"
             ohos:background_element="$graphic:background_game_rule"
             ohos:orientation="vertical">
             <Button
@@ -74,7 +80,6 @@
                 ohos:text="$string:confirm_label"
                 ohos:text_size="48px"
                 ohos:text_color="white"
-                ohos:text_font="PingFangSC-Medium"
                 ohos:background_element="$graphic:background_rule_yes"/>
         </DirectionalLayout>
     </DirectionalLayout>

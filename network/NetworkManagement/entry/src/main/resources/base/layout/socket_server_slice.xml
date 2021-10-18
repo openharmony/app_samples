@@ -26,9 +26,9 @@
         ohos:id="$+id:input_text"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="10vp"
+        ohos:start_margin="10vp"
         ohos:padding="10vp"
-        ohos:right_margin="10vp"
+        ohos:end_margin="10vp"
         ohos:text_alignment="center"
         ohos:text_size="16fp"/>
 

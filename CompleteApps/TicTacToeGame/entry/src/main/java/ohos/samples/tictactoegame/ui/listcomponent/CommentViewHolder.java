@@ -58,6 +58,8 @@ public class CommentViewHolder {
         }
     }
 
+
+    @SuppressWarnings("unchecked")
     private <T extends Component> T getView(int resId) {
         Component view = mViews.get(resId);
         if (view == null) {

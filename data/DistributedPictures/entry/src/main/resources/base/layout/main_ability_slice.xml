@@ -41,7 +41,8 @@
             ohos:width="60vp"
             ohos:align_parent_right="true"
             ohos:image_src="$media:icon"
-            ohos:right_margin="30vp"/>
+            ohos:start_margin="0px"
+            ohos:end_margin="30vp"/>
 
     </DependentLayout>
 
@@ -81,7 +82,8 @@
                 ohos:height="match_content"
                 ohos:width="0vp"
                 ohos:background_element="#55000055"
-                ohos:left_margin="10vp"
+                ohos:start_margin="10vp"
+                ohos:end_margin="0px"
                 ohos:padding="5vp"
                 ohos:text="$string:delete"
                 ohos:text_size="15fp"
@@ -109,6 +111,7 @@
             ohos:height="60vp"
             ohos:width="60vp"
             ohos:align_parent_right="true"
-            ohos:right_margin="30vp"/>
+            ohos:start_margin="0px"
+            ohos:end_margin="30vp"/>
     </DependentLayout>
 </DirectionalLayout>

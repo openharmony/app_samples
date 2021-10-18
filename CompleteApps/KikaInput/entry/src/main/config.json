@@ -10,7 +10,7 @@
   "deviceConfig": {},
   "module": {
     "package": "com.example.kikakeyboard",
-    "name": ".MyApplication",
+    "name": ".MainAbility",
     "mainAbility": "com.example.kikakeyboard.MainAbility",
     "deviceType": [
       "phone"

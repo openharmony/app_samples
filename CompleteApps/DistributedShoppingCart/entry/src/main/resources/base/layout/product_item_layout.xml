@@ -58,7 +58,8 @@
             ohos:below="$id:item_news_price"
             ohos:right_of="$id:item_news_image"
             ohos:background_element="$graphic:corner_bg_text"
-            ohos:left_padding="5px"
+            ohos:start_padding="5px"
+            ohos:end_padding="0px"
             ohos:text_color="red"
             ohos:text_size="12vp"
             ohos:weight="3"/>

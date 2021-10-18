@@ -26,8 +26,8 @@
         ohos:background_element="$graphic:text_background"
         ohos:multiple_lines="true"
         ohos:padding="10vp"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         ohos:top_margin="20vp"
         ohos:bottom_margin="10vp"
         ohos:scrollable="true"
@@ -39,8 +39,8 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:orientation="horizontal"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         >
 
         <Button
@@ -57,7 +57,8 @@
             ohos:height="$float:button_height"
             ohos:width="0"
             ohos:theme="$pattern:button_blue"
-            ohos:left_margin="20vp"
+            ohos:start_margin="20vp"
+            ohos:end_margin="0px"
             ohos:text="$string:update"
             ohos:weight="1"
             />
@@ -67,8 +68,8 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:orientation="horizontal"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         >
 
         <Button
@@ -85,7 +86,8 @@
             ohos:height="$float:button_height"
             ohos:width="0"
             ohos:theme="$pattern:button_blue"
-            ohos:left_margin="20vp"
+            ohos:start_margin="20vp"
+            ohos:end_margin="0px"
             ohos:text="$string:query"
             ohos:weight="1"
             />
@@ -96,8 +98,8 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:orientation="horizontal"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         >
 
     <Button
@@ -115,8 +117,8 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:orientation="horizontal"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         >
 
         <Button
@@ -133,7 +135,8 @@
             ohos:height="$float:button_height"
             ohos:width="0"
             ohos:theme="$pattern:button_blue"
-            ohos:left_margin="20vp"
+            ohos:start_margin="20vp"
+            ohos:end_margin="0px"
             ohos:text="$string:deleteDB"
             ohos:weight="1"
             />
@@ -143,7 +146,8 @@
             ohos:height="$float:button_height"
             ohos:width="0"
             ohos:theme="$pattern:button_blue"
-            ohos:left_margin="20vp"
+            ohos:start_margin="20vp"
+            ohos:end_margin="0px"
             ohos:text="$string:restoreDB"
             ohos:weight="1"
             />

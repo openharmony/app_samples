@@ -47,8 +47,8 @@ public class DiscountDetailDialog {
 
     private final int count;
     private CommonDialog commonDialog;
-    private int[] text = {0};
-    private int[] srcMoney = {0};
+    private final int[] text = {0};
+    private final int[] srcMoney = {0};
 
     public DiscountDetailDialog(Context context, int[] text, int[] src, int count) {
         System.arraycopy(text, 0, this.text, 0, text.length);

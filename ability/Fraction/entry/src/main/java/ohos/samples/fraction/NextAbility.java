@@ -35,12 +35,13 @@ public class NextAbility extends FractionAbility {
     private Button hideButton;
     private Button pushButton;
     private MainFraction mainFraction;
-    private NextFraction nextFraction;
+
 
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_next);
+        NextFraction nextFraction;
         mainFraction = new MainFraction();
         nextFraction = new NextFraction();
         getFractionManager().startFractionScheduler().add(ResourceTable.Id_next_fraction,

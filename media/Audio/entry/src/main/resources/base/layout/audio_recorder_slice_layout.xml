@@ -34,9 +34,9 @@
         ohos:background_element="$graphic:button_bg"
         ohos:bottom_margin="4vp"
         ohos:layout_alignment="center"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:record"
         ohos:text_color="#000000"
         ohos:text_size="16fp"
@@ -47,8 +47,8 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:multiple_lines="true"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         ohos:top_margin="20vp"
         ohos:text_size="16fp"/>
 </DirectionalLayout>

@@ -13,7 +13,8 @@
             ohos:width="400px"
             ohos:id="$+id:pay_succ"
             ohos:text="$string:pay_success_label"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="20vp"
             ohos:weight="6vp"
             />
@@ -23,7 +24,8 @@
             ohos:id="$+id:to_first_slice"
             ohos:text="$string:finish_label"
             ohos:right_of="$+id:pay_succ"
-            ohos:left_margin="480px"
+            ohos:start_margin="480px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />

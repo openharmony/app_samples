@@ -49,6 +49,8 @@ public class DeviceSelectDialog extends CommonDialog {
 
     private DeviceInfo checkedDevice;
 
+
+
     /**
      * Instantiates a new Device select dialog.
      *
@@ -73,6 +75,7 @@ public class DeviceSelectDialog extends CommonDialog {
     }
 
     private List<DeviceData> initDeviceData() {
+
         LogUtil.info(TAG, "begin to initDeviceData");
         List<DeviceInfo> deviceInfoList = DeviceManager.getDeviceList(DeviceInfo.FLAG_GET_ONLINE_DEVICE);
         List<DeviceData> deviceList = new ArrayList<>();

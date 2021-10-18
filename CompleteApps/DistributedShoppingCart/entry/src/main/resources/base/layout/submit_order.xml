@@ -10,7 +10,8 @@
         ohos:width="300px"
         ohos:text="$string:submit_order_label"
         ohos:text_alignment="left"
-        ohos:left_margin="20px"
+        ohos:start_margin="20px"
+        ohos:end_margin="0px"
         ohos:text_size="20vp"
         ohos:weight="6vp"
         />
@@ -29,7 +30,8 @@
             ohos:id="$+id:default_addr"
             ohos:text="$string:default_label"
             ohos:background_element="#F93737"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:text_color="$color:white"
             ohos:weight="5vp"
@@ -38,7 +40,8 @@
             ohos:id="$+id:addr"
             ohos:height="60px"
             ohos:width="match_parent"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text="$string:address_info"
             ohos:multiple_lines="true"
             ohos:right_of="$id:default_addr"
@@ -49,7 +52,8 @@
             ohos:height="60px"
             ohos:width="match_parent"
             ohos:text="$string:phone_info"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:below="$id:addr"
             ohos:text_size="14vp"
             ohos:weight="4vp"
@@ -65,7 +69,8 @@
             ohos:width="300px"
             ohos:id="$+id:head_pro_money"
             ohos:text="$string:commodity_amount_label"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />
@@ -74,10 +79,11 @@
             ohos:height="match_parent"
             ohos:width="match_parent"
             ohos:right_of="$id:head_pro_money"
-            ohos:text=" ￥2756.00"
+            ohos:text="$string:price2756"
             ohos:text_size="14vp"
             ohos:weight="4vp"
-            ohos:left_margin="200px"/>
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"/>
     </DependentLayout>
     <Component
         ohos:width="match_parent"
@@ -94,7 +100,8 @@
             ohos:width="300px"
             ohos:id="$+id:head_pro_tansmoney"
             ohos:text="$string:freight_label"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />
@@ -103,10 +110,11 @@
             ohos:height="match_parent"
             ohos:width="match_parent"
             ohos:right_of="$id:head_pro_tansmoney"
-            ohos:text=" ￥0.00"
+            ohos:text="$string:RMB01"
             ohos:text_size="14vp"
             ohos:weight="4vp"
-            ohos:left_margin="200px"/>
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"/>
     </DependentLayout>
     <Component
         ohos:width="match_parent"
@@ -123,7 +131,8 @@
             ohos:width="300px"
             ohos:id="$+id:head_pro_discountmoney"
             ohos:text="$string:subtraction_label"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />
@@ -132,10 +141,11 @@
             ohos:height="match_parent"
             ohos:width="match_parent"
             ohos:right_of="$id:head_pro_discountmoney"
-            ohos:text="-￥317.00"
+            ohos:text="$string:price317"
             ohos:text_size="14vp"
             ohos:weight="4vp"
-            ohos:left_margin="200px"/>
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"/>
     </DependentLayout>
     <Component
         ohos:width="match_parent"
@@ -152,7 +162,8 @@
             ohos:width="300px"
             ohos:id="$+id:head_coupons"
             ohos:text="$string:coupon_label"
-            ohos:left_margin="20px"
+            ohos:start_margin="20px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />
@@ -164,7 +175,8 @@
             ohos:text="$string:no_available_info"
             ohos:text_size="14vp"
             ohos:weight="4vp"
-            ohos:left_margin="200px"/>
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"/>
     </DependentLayout>
     <Component
         ohos:width="match_parent"
@@ -186,7 +198,8 @@
             ohos:width="300px"
             ohos:id="$+id:myshopping_cart"
             ohos:text="$string:total_label"
-            ohos:left_margin="30px"
+            ohos:start_margin="30px"
+            ohos:end_margin="0px"
             ohos:text_size="14vp"
             ohos:weight="4vp"
             />
@@ -195,16 +208,17 @@
             ohos:height="80px"
             ohos:width="match_parent"
             ohos:right_of="$id:myshopping_cart"
-            ohos:text=" :￥2439.00"
+            ohos:text="$string:price2349"
             ohos:text_size="14vp"
             ohos:weight="4vp"
-            ohos:left_margin="200px"/>
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"/>
     </DependentLayout>
     <DirectionalLayout
         ohos:height="200px"
         ohos:width="match_parent"
-        ohos:left_padding="20px"
-        ohos:right_padding="20px"
+        ohos:start_padding="20px"
+        ohos:end_padding="20px"
         ohos:background_element="#FAFAFA"
         ohos:alignment="center"
         ohos:orientation="horizontal"
@@ -214,9 +228,10 @@
             ohos:width="360px"
             ohos:height="160px"
             ohos:text_alignment="center"
-            ohos:left_margin="80px"
+            ohos:start_margin="80px"
+            ohos:end_margin="0px"
             ohos:text_size="16vp"
-            ohos:text="￥2439.00"
+            ohos:text="$string:price2349"
             ohos:text_color="#F93939"
             ohos:weight="6"/>
         <Text
@@ -225,7 +240,8 @@
             ohos:height="160px"
             ohos:background_element="$graphic:corner_bg_comment"
             ohos:text_alignment="center"
-            ohos:left_margin="100px"
+            ohos:start_margin="100px"
+            ohos:end_margin="0px"
             ohos:right_of="$id:total_money"
             ohos:text_color="white"
             ohos:text_size="20vp"

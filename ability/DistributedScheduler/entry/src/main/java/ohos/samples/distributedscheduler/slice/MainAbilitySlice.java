@@ -15,15 +15,10 @@
 
 package ohos.samples.distributedscheduler.slice;
 
-import ohos.aafwk.ability.continuation.*;
-import ohos.distributedschedule.interwork.IInitCallback;
-import ohos.samples.distributedscheduler.MainAbility;
-import ohos.samples.distributedscheduler.RemoteAgentProxy;
-import ohos.samples.distributedscheduler.ResourceTable;
-
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.IAbilityConnection;
 import ohos.aafwk.ability.IAbilityContinuation;
+import ohos.aafwk.ability.continuation.*;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.IntentParams;
 import ohos.aafwk.content.Operation;
@@ -39,12 +34,15 @@ import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
 import ohos.rpc.RemoteException;
+import ohos.samples.distributedscheduler.MainAbility;
+import ohos.samples.distributedscheduler.RemoteAgentProxy;
+import ohos.samples.distributedscheduler.ResourceTable;
 
 /**
  * MainAbilitySlice
  */
 public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuation {
-    private static final int DIALOG_WIDTH = 900;
+
     private static final String TAG = MainAbility.class.getSimpleName();
 
     private static final HiLogLabel LABEL_LOG = new HiLogLabel(3, 0xD000F00, TAG);
@@ -73,7 +71,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
 
     private String jsonParams;
 
-    private EventHandler eventHandler = new EventHandler(EventRunner.current()) {
+    private final EventHandler eventHandler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {
@@ -154,7 +152,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         continuationRegisterManager.showDeviceList(abilityToken, params, null);
     }
 
-    private IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
+    private final IContinuationDeviceCallback callback = new IContinuationDeviceCallback() {
         @Override
         public void onConnected(ContinuationDeviceInfo deviceInfo) {
         }
@@ -181,27 +179,13 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         }
     };
 
-    private RequestCallback requestCallback = new RequestCallback() {
+    private final RequestCallback requestCallback = new RequestCallback() {
         @Override
         public void onResult(int result) {
             abilityToken = result;
         }
     };
-
-    private IInitCallback iInitCallback = new IInitCallback() {
-        @Override
-        public void onInitSuccess(String deviceId) {
-            HiLog.info(LABEL_LOG, "device id success: " + deviceId);
-            showTips(getContext(), "device id onInitSuccess");
-        }
-
-        @Override
-        public void onInitFailure(String deviceId, int errorCode) {
-            HiLog.info(LABEL_LOG, "device id failed: " + deviceId + "errorCode: " + errorCode);
-            showTips(getContext(), "device id failed,errorCode="+errorCode);
-        }
-    };
-
+	
     private Intent getRemotePageIntent(String bundleName, String serviceName) {
         Operation operation = new Intent.OperationBuilder()
             .withDeviceId(selectedDeviceId)
@@ -246,7 +230,7 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         connectAbility(intent, connection);
     }
 
-    private IAbilityConnection connection = new IAbilityConnection() {
+    private final IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject iRemoteObject, int resultCode) {
             HiLog.info(LABEL_LOG, "%{public}s", "onAbilityConnectDone resultCode : " + resultCode);

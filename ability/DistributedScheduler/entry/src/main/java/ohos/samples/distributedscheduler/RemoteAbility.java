@@ -19,8 +19,6 @@ import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.agp.window.dialog.ToastDialog;
 import ohos.app.Context;
-import ohos.eventhandler.EventHandler;
-import ohos.eventhandler.EventRunner;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;

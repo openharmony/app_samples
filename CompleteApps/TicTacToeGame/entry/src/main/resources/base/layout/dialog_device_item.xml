@@ -19,10 +19,10 @@
         ohos:height="70vp">
 
     <Image ohos:scale_mode="inside" ohos:height="45vp"
-           ohos:left_margin="10vp" ohos:id="$+id:item_type"
+           ohos:start_margin="10vp" ohos:id="$+id:item_type" ohos:end_margin="0vp"
            ohos:width="50vp" ohos:layout_alignment="vertical_center"/>
-    <Text ohos:id="$+id:item_desc" ohos:height="match_parent" ohos:width="0vp" ohos:weight="1" ohos:ellipsize="middle" ohos:max_text_lines="1"
+    <Text ohos:id="$+id:item_desc" ohos:height="match_parent" ohos:width="0vp" ohos:weight="1"  ohos:max_text_lines="1"
            ohos:text_size="15fp" ohos:text_alignment="vertical_center"/>
-    <Image ohos:scale_mode="inside" ohos:height="20vp" ohos:image_src="$media:uncheck_point" ohos:right_margin="15vp" ohos:id="$+id:item_check"
+    <Image ohos:scale_mode="inside" ohos:height="20vp" ohos:image_src="$media:uncheck_point"  ohos:start_margin="0vp" ohos:end_margin="15vp" ohos:id="$+id:item_check"
            ohos:width="20vp" ohos:layout_alignment="vertical_center"/>
 </DirectionalLayout>

@@ -25,7 +25,8 @@
         ohos:width="match_content"
         ohos:text="$string:video"
         ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="5vp"
+        ohos:start_margin="5vp"
+        ohos:end_margin="0vp"
         ohos:top_margin="20vp"
         ohos:height="match_content"/>
 
@@ -40,8 +41,8 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:top_margin="20vp"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         ohos:layout_alignment="horizontal_center"
         ohos:orientation="horizontal">
 
@@ -52,7 +53,8 @@
             ohos:weight="1"
             ohos:height="match_content"
             ohos:padding="8vp"
-            ohos:right_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="20fp"/>
 
@@ -63,7 +65,8 @@
             ohos:weight="1"
             ohos:height="match_content"
             ohos:padding="8vp"
-            ohos:left_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:layout_alignment="vertical_center"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="20fp"/>
@@ -73,8 +76,8 @@
         ohos:width="match_parent"
         ohos:height="match_content"
         ohos:top_margin="10vp"
-        ohos:right_margin="20vp"
-        ohos:left_margin="20vp"
+        ohos:end_margin="20vp"
+        ohos:start_margin="20vp"
         ohos:layout_alignment="horizontal_center"
         ohos:orientation="horizontal">
 
@@ -85,7 +88,8 @@
             ohos:weight="1"
             ohos:padding="8vp"
             ohos:height="match_content"
-            ohos:right_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="20fp"/>
 
@@ -96,7 +100,8 @@
             ohos:weight="1"
             ohos:height="match_content"
             ohos:padding="8vp"
-            ohos:left_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:background_element="$graphic:button_background"
             ohos:text_size="20fp"/>
     </DirectionalLayout>

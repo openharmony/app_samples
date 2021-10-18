@@ -42,7 +42,8 @@
                 ohos:width="280px"
                 ohos:below="$id:image_content"
                 ohos:top_margin="20px"
-                ohos:left_margin="20px"
+                ohos:start_margin="20px"
+                ohos:end_margin="0px"
                 ohos:text_color="red"
                 ohos:text_size="18vp"
                 ohos:weight="6"/>
@@ -55,7 +56,8 @@
                 ohos:text_alignment="left"
                 ohos:multiple_lines="true"
                 ohos:top_margin="20px"
-                ohos:left_margin="20px"
+                ohos:start_margin="20px"
+                ohos:end_margin="0px"
                 ohos:text_size="16vp"/>
             <Text
                 ohos:id="$+id:title_other_content"
@@ -64,7 +66,8 @@
                 ohos:below="$id:title_content"
                 ohos:multiple_lines="true"
                 ohos:top_margin="20px"
-                ohos:left_margin="20px"
+                ohos:start_margin="20px"
+                ohos:end_margin="0px"
                 ohos:text_size="12vp"
                 ohos:text_alignment="left"/>
             <DependentLayout
@@ -110,7 +113,8 @@
                     ohos:width="200px"
                     ohos:right_of="$id:item_head_discount"
                     ohos:background_element="$graphic:corner_bg_text"
-                    ohos:left_padding="5px"
+                    ohos:start_padding="5px"
+                    ohos:end_padding="0px"
                     ohos:text_color="red"
                     ohos:text_size="12vp"
                     ohos:weight="3"/>
@@ -136,7 +140,8 @@
                     ohos:height="match_content"
                     ohos:width="350px"
                     ohos:right_of="$id:item_head_activety"
-                    ohos:left_padding="5px"
+                    ohos:start_padding="5px"
+                    ohos:end_padding="0px"
                     ohos:text_color="red"
                     ohos:text="$string:activity_618_label"
                     ohos:text_size="16vp"
@@ -154,26 +159,30 @@
             ohos:top_margin="30px"
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="40px"
+            ohos:start_margin="40px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_dianpu"/>
         <Image
             ohos:top_margin="30px"
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="145px"
+            ohos:start_margin="145px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:service"/>
         <StackLayout
             ohos:height="match_parent"
             ohos:width="100px"
             ohos:id="$+id:car_shoppingcart_layout"
-            ohos:left_margin="145px">
+            ohos:start_margin="145px"
+            ohos:end_margin="0px">
             <Text
                 ohos:id="$+id:cart_num_detail"
                 ohos:height="40px"
                 ohos:width="40px"
                 ohos:text=""
                 ohos:top_margin="20px"
-                ohos:left_margin="30px"
+                ohos:start_margin="30px"
+                ohos:end_margin="0px"
                 ohos:text_color="red"
                 ohos:background_element="$graphic:red_circel_button"
                 ohos:text_alignment="center"
@@ -192,8 +201,8 @@
             ohos:height="110px"
             ohos:background_element="$graphic:corner_bg_comment"
             ohos:text_alignment="center"
-            ohos:left_margin="70px"
-            ohos:right_margin="20px"
+            ohos:start_margin="70px"
+            ohos:end_margin="20px"
             ohos:top_margin="20px"
             ohos:text_color="white"
             ohos:text_size="20vp"

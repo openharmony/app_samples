@@ -44,6 +44,12 @@
         "type": "page",
         "launchType": "standard"
       }
-    ]
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [6,5]
+      }
+    }
   }
 }

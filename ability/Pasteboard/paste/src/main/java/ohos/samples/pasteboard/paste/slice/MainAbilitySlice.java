@@ -95,7 +95,7 @@ public class MainAbilitySlice extends AbilitySlice {
         return result;
     }
 
-    private IPasteDataChangedListener listener = new IPasteDataChangedListener() {
+    private final IPasteDataChangedListener listener = new IPasteDataChangedListener() {
         @Override
         public void onChanged() {
             PasteData pasteData = pasteboard.getPasteData();

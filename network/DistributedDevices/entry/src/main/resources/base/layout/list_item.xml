@@ -25,7 +25,7 @@
 
         <Text
             ohos:id="$+id:type_text"
-            ohos:text="Type"
+            ohos:text="$string:type"
             ohos:width="0vp"
             ohos:text_size="20fp"
             ohos:text_color="#ffffff"

@@ -49,7 +49,9 @@
         ohos:pivot_y="78vp"
         ohos:height="2vp"
         ohos:width="344vp"
-        ohos:left_padding="8vp"
-        ohos:left_margin="8vp"
+        ohos:start_padding="8vp"
+        ohos:end_padding="0vp"
+        ohos:start_margin="8vp"
+        ohos:end_margin="0vp"
         ohos:background_element="#E9E9E9"/>
 </DirectionalLayout>

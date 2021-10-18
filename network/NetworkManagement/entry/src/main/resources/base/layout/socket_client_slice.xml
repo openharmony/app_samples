@@ -24,10 +24,10 @@
     <Text
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="10vp"
+        ohos:start_margin="10vp"
         ohos:multiple_lines="true"
         ohos:padding="10vp"
-        ohos:right_margin="10vp"
+        ohos:end_margin="10vp"
         ohos:text="$string:client_tips"
         ohos:text_size="16fp"/>
 
@@ -37,9 +37,9 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:textfield_bg"
         ohos:hint="$string:input_service_ip"
-        ohos:left_margin="10vp"
+        ohos:start_margin="10vp"
         ohos:padding="10vp"
-        ohos:right_margin="10vp"
+        ohos:end_margin="10vp"
         ohos:text_alignment="center"
         ohos:text_size="16fp"/>
 

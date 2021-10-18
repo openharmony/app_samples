@@ -53,8 +53,8 @@
         ohos:top_margin="$float:top_margin"
         ohos:text_size="$float:text_size"
         ohos:layout_alignment="horizontal_center"
-        ohos:right_padding="$float:right_padding"
-        ohos:left_padding="$float:left_padding"
+        ohos:end_padding="$float:right_padding"
+        ohos:start_padding="$float:left_padding"
         ohos:background_element="$graphic:capsule_button_element"
         ohos:width="match_content"/>
 

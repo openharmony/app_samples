@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "IdlClient"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "btn",
+      "value": "IDL Calculator"
+    },
+    {
+      "name": "first_textField",
+      "value": "Enter First Number"
+    },
+    {
+      "name": "second_textField",
+      "value": "Enter second Number"
+    },
+    {
+      "name": "add_button",
+      "value": "ADD"
+    },
+    {
+      "name": "result_text",
+      "value": "Result"
+    }
+  ]
+}

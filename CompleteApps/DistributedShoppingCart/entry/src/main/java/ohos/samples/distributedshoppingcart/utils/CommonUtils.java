@@ -34,7 +34,6 @@ import java.util.Optional;
  */
 public class CommonUtils {
     private static final String TAG = "Common Utils";
-    private static final int GET_COLOR_STATE_FAILED = -1;
     private static final int JSON_READ_ERROR = -1;
 
     /**

@@ -219,6 +219,34 @@
     {
       "name": "shared_cart_label",
       "value": "Shared shopping cart"
+    },
+    {
+      "name": "RMB01",
+      "value": "￥0.00"
+    },
+    {
+      "name": "RMB02",
+      "value": "-￥0.00"
+    },
+    {
+      "name": "num1",
+      "value": "1"
+    },
+    {
+      "name": "price2349",
+      "value": "￥2439.00"
+    },
+    {
+      "name": "HUAWEI_Card",
+      "value": "HUAWEI Card"
+    },
+    {
+      "name": "price2756",
+      "value": "￥2756.00"
+    },
+    {
+      "name": "price317",
+      "value": "-￥317.00"
     }
   ]
 }

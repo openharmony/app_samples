@@ -29,7 +29,8 @@
             ohos:height="match_content"
             ohos:layout_alignment="center"
             ohos:image_src="$media:ic_bluetooth"
-            ohos:right_margin="10vp" />
+            ohos:start_margin="0vp"
+            ohos:end_margin="10vp" />
 
         <Text
             ohos:id="$+id:bluetooth_device_name"

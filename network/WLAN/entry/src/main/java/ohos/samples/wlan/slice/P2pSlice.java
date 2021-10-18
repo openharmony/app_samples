@@ -74,6 +74,7 @@ public class P2pSlice extends AbilitySlice {
 
     private final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
+        @SuppressWarnings("unchecked")
         protected void processEvent(InnerEvent event) {
             switch (event.eventId) {
                 case EVEN_ID_DISCOVER_END: {

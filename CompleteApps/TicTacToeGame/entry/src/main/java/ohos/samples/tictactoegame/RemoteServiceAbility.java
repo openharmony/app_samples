@@ -62,7 +62,7 @@ public class RemoteServiceAbility extends Ability {
     /**
      * GameRemount Object class
      */
-    private class GameRemountObject extends RemoteObject implements IRemoteBroker {
+    private static class GameRemountObject extends RemoteObject implements IRemoteBroker {
         private static final int COMMAND_PLUS = IRemoteObject.MIN_TRANSACTION_ID;
         private static final int ERR_OK = 0;
         private static final int ERROR = -1;

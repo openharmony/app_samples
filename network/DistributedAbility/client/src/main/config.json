@@ -57,6 +57,12 @@
       {
         "name": "ohos.permission.DISTRIBUTED_DATASYNC"
       }
-    ]
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [6,5]
+      }
+    }
   }
 }

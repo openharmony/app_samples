@@ -26,7 +26,8 @@
         ohos:width="match_content"
         ohos:height="match_content"
         ohos:top_margin="40vp"
-        ohos:left_margin="52vp"
+        ohos:start_margin="52vp"
+        ohos:end_margin="0vp"
         ohos:image_src="$media:icon_select2"/>
     <Text
         ohos:id="$+id:text_tips"
@@ -35,7 +36,8 @@
         ohos:height="match_parent"
         ohos:width="match_content"
         ohos:top_margin="8vp"
-        ohos:left_margin="48vp"
+        ohos:start_margin="48vp"
+        ohos:end_margin="0vp"
         ohos:text="$string:add_succ_label"
         ohos:text_color="$color:white"
         ohos:text_alignment="center"/>

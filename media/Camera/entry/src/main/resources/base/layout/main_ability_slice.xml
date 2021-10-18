@@ -25,8 +25,8 @@
         ohos:id="$+id:take_photo"
         ohos:height="40vp"
         ohos:width="match_parent"
-        ohos:left_padding="20vp"
-        ohos:right_padding="10vp"
+        ohos:start_padding="20vp"
+        ohos:end_padding="10vp"
         ohos:top_margin="20vp">
 
         <Text
@@ -50,8 +50,8 @@
         ohos:id="$+id:video_record"
         ohos:height="40vp"
         ohos:width="match_parent"
-        ohos:left_padding="20vp"
-        ohos:right_padding="10vp">
+        ohos:start_padding="20vp"
+        ohos:end_padding="10vp">
 
         <Text
             ohos:height="match_parent"

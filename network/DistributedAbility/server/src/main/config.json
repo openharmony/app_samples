@@ -61,6 +61,12 @@
       {
         "name": "ohos.permission.SYSTEM_FLOAT_WINDOW"
       }
-    ]
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [6,5]
+      }
+    }
   }
 }
