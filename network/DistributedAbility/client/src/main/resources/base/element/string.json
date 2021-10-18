@@ -7,6 +7,26 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "O_K",
+      "value": "O K"
+    },
+    {
+      "name": "ScanRemoteAbility",
+      "value": "ScanRemoteAbility"
+    },
+    {
+      "name": "RegisterChangeListener",
+      "value": "RegisterChangeListener"
+    },
+    {
+      "name": "UnRegisterChangeListener",
+      "value": "UnRegisterChangeListener"
+    },
+    {
+      "name": "DisconnectRemoteAbility",
+      "value": "DisconnectRemoteAbility"
     }
   ]
 }

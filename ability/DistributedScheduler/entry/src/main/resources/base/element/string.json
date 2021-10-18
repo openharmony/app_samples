@@ -11,6 +11,42 @@
     {
       "name": "PageAbility",
       "value": "PageAbility"
+    },
+    {
+      "name": "I_am_page_ability",
+      "value": "I'm page ability"
+    },
+    {
+      "name": "selectDevice",
+      "value": "selectDevice"
+    },
+    {
+      "name": "Start_Remote_FA",
+      "value": "Start Remote FA"
+    },
+    {
+      "name": "Start_Remote_PA",
+      "value": "Start Remote PA"
+    },
+    {
+      "name": "Stop_Remote_PA",
+      "value": "Stop Remote PA"
+    },
+    {
+      "name": "Connect_Remote_PA",
+      "value": "Connect Remote PA"
+    },
+    {
+      "name": "Disconnect_Remote_PA",
+      "value": "Disconnect Remote PA"
+    },
+    {
+      "name": "Continue_FA",
+      "value": "Continue FA"
+    },
+    {
+      "name": "Please_input_text",
+      "value": "Please input text"
     }
   ]
 }

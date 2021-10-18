@@ -14,7 +14,8 @@
             ohos:height="45vp"
             ohos:width="50vp"
             ohos:layout_alignment="vertical_center"
-            ohos:left_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:scale_mode="inside"/>
     </DirectionalLayout>
     <DirectionalLayout
@@ -27,7 +28,8 @@
             ohos:height="24vp"
             ohos:width="200vp"
             ohos:max_text_lines="1"
-            ohos:left_margin="8vp"
+            ohos:start_margin="8vp"
+            ohos:end_margin="0vp"
             ohos:text_alignment="bottom"
             ohos:text_size="16vp"
             />
@@ -35,7 +37,8 @@
             ohos:id="$+id:item_image_info"
             ohos:height="35vp"
             ohos:width="100vp"
-            ohos:left_margin="8vp"
+            ohos:start_margin="8vp"
+            ohos:end_margin="0vp"
             ohos:max_text_lines="1"
             ohos:text_alignment="top"
             ohos:text_size="12vp"

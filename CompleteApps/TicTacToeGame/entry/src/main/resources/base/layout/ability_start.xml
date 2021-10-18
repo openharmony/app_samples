@@ -30,20 +30,23 @@
             xmlns:ohos="http://schemas.huawei.com/res/ohos"
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_margin="70px"
+            ohos:start_margin="70px"
+            ohos:end_margin="0vp"
             ohos:orientation="vertical">
             <Image
                 ohos:id="$+id:img_me"
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:left_margin="60px"
+                ohos:start_margin="60px"
+                ohos:end_margin="0vp"
                 ohos:scale_mode="zoom_center"/>
         </DirectionalLayout>
         <DirectionalLayout
             xmlns:ohos="http://schemas.huawei.com/res/ohos"
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="450px"
+            ohos:start_padding="450px"
+            ohos:end_padding="0vp"
             ohos:background_element="white"
             ohos:orientation="vertical">
             <Image
@@ -62,7 +65,8 @@
         ohos:width="960px"
         ohos:height="960px"
         ohos:top_margin="233px"
-        ohos:left_margin="60px"
+        ohos:start_margin="60px"
+        ohos:end_margin="0vp"
         ohos:background_element="#DEDEDE"
         ohos:alignment_type="align_edges"
         ohos:row_count="3"
@@ -80,14 +84,16 @@
             ohos:height="316px"
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
         <Image
             ohos:id="$+id:img3"
             ohos:height="316px"
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
 
         <Image
@@ -104,7 +110,8 @@
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
             ohos:top_margin="6px"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
 
         <Image
@@ -113,7 +120,8 @@
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
             ohos:top_margin="6px"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
 
         <Image
@@ -129,7 +137,8 @@
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
             ohos:top_margin="6px"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
 
         <Image
@@ -138,7 +147,8 @@
             ohos:width="316px"
             ohos:background_element="#FFFFFF"
             ohos:top_margin="6px"
-            ohos:left_margin="6px"
+            ohos:start_margin="6px"
+            ohos:end_margin="0px"
             />
     </TableLayout>
 
@@ -153,7 +163,8 @@
             ohos:height="137px"
             ohos:width="137px"
             ohos:top_margin="6px"
-            ohos:left_margin="48px"
+            ohos:start_margin="48px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_back"
             ohos:scale_mode="zoom_center"
             ohos:layout_alignment="vertical_center"/>
@@ -161,11 +172,12 @@
             ohos:id="$+id:round_progress_bar"
             ohos:height="240px"
             ohos:width="240px"
-            ohos:left_margin="250px"
+            ohos:start_margin="250px"
+            ohos:end_margin="0px"
             ohos:max="10"
             ohos:min="0"
             ohos:progress_width="25px"
-            ohos:progress_hint_text="0"
+            ohos:progress_hint_text="$string:num0"
             ohos:progress_hint_text_size="80px"
             ohos:progress_hint_text_color="#00BAFF"
             ohos:progress="0"
@@ -175,7 +187,8 @@
             ohos:height="137px"
             ohos:width="137px"
             ohos:top_margin="6px"
-            ohos:left_margin="200px"
+            ohos:start_margin="200px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_refresh"
             ohos:scale_mode="zoom_center"
             ohos:layout_alignment="vertical_center"/>

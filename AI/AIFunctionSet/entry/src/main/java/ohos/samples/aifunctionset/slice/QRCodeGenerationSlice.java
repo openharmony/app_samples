@@ -74,7 +74,7 @@ public class QRCodeGenerationSlice extends BaseSlice {
         aiTitle.setText("QRCode Generation");
     }
 
-    private ConnectionCallback connectionCallback = new ConnectionCallback() {
+    private final ConnectionCallback connectionCallback = new ConnectionCallback() {
         @Override
         public void onServiceConnect() {
             LogUtil.info(getLocalClassName(), "Service connect succeeded");

@@ -49,6 +49,12 @@
         "visible": true,
         "formsEnabled": true
       }
-    ]
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [6,5]
+      }
+    }
   }
 }

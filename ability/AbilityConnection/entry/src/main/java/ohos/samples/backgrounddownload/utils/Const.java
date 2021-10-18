@@ -15,7 +15,6 @@
 
 package ohos.samples.backgrounddownload.utils;
 
-import java.net.PortUnreachableException;
 
 /**
  * const

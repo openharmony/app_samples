@@ -45,7 +45,7 @@ public class CommonEventPlugin {
 
     private NotificationEventListener eventListener;
 
-    private Context context;
+    private final Context context;
 
     /**
      * Initialize context

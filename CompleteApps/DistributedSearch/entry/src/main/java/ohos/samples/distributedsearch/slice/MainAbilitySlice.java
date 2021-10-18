@@ -89,9 +89,10 @@ public class MainAbilitySlice extends AbilitySlice {
         super.onForeground(intent);
     }
 
+
     private void initUi() {
         listview = (ListContainer)this.findComponentById(ResourceTable.Id_listview);
-        fileProvider = new FileListProvider(this, mFileList);
+        fileProvider = new FileListProvider<>(this, mFileList);
         listview.setItemProvider(fileProvider);
 
         listview.setVisibility(Component.HIDE);

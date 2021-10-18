@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/code/temp/native/NativeLayer/entry/.cxx/debug/arm64-v8a",
+  "command": "D:\\sdk\\HarmonyOS_SDK\\native\\2.2.0.1\\llvm\\bin\\clang++.exe --target=aarch64-linux-ohos --gcc-toolchain=D:/sdk/HarmonyOS_SDK/native/2.2.0.1/llvm --sysroot=D:/sdk/HarmonyOS_SDK/native/2.2.0.1/sysroot  -Dnativelayer_EXPORTS  -g -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\nativelayer.dir\\nativelayer.cpp.o -c D:\\code\\temp\\native\\NativeLayer\\entry\\src\\main\\cpp\\nativelayer.cpp",
+  "file": "D:\\code\\temp\\native\\NativeLayer\\entry\\src\\main\\cpp\\nativelayer.cpp"
+}
+]

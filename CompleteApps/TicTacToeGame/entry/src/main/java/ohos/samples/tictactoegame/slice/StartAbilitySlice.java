@@ -35,7 +35,6 @@ import ohos.samples.tictactoegame.connections.MyRemoteProxy;
 import ohos.samples.tictactoegame.utils.DeviceUtils;
 import ohos.samples.tictactoegame.utils.GameStatusUtils;
 import ohos.samples.tictactoegame.utils.PkUtils;
-import ohos.samples.tictactoegame.utils.UiUtils;
 
 import java.util.Timer;
 import java.util.TimerTask;

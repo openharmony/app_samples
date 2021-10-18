@@ -47,6 +47,10 @@
     {
       "name": "add_device_label",
       "value": "添加游戏设备"
+    },
+    {
+      "name": "num0",
+      "value": "0"
     }
   ]
 }

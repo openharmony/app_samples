@@ -27,9 +27,9 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:textfield_bg"
         ohos:hint="$string:enter_keyword_tips"
-        ohos:left_margin="10vp"
+        ohos:start_margin="10vp"
         ohos:padding="10vp"
-        ohos:right_margin="10vp"
+        ohos:end_margin="10vp"
         ohos:text_alignment="center"
         ohos:text_size="16fp"/>
 
@@ -48,8 +48,8 @@
         ohos:width="match_content"
         ohos:background_element="$graphic:textfield_bg"
         ohos:focusable="focus_disable"
-        ohos:left_margin="20vp"
-        ohos:right_margin="20vp"
+        ohos:start_margin="20vp"
+        ohos:end_margin="20vp"
         ohos:text_size="16fp"/>
 
 </DirectionalLayout>

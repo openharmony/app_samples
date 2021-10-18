@@ -25,9 +25,9 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_bg"
         ohos:layout_alignment="center"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:play_music_sound"
         ohos:text_size="16vp"
         ohos:top_margin="10vp"/>
@@ -38,10 +38,10 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_bg"
         ohos:layout_alignment="center"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:top_margin="20vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:play_tone_sound"
         ohos:text_size="16vp"/>
 
@@ -51,10 +51,10 @@
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_bg"
         ohos:layout_alignment="center"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
-        ohos:text="Play System Sound"
+        ohos:end_margin="24vp"
+        ohos:text="$string:play_system_sound"
         ohos:text_size="16vp"
         ohos:top_margin="20vp"/>
 </DirectionalLayout>

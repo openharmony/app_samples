@@ -7,6 +7,18 @@
     {
       "name": "mainability_description",
       "value": "hap sample empty page"
+    },
+    {
+      "name": "paste_text_content",
+      "value": "paste text content"
+    },
+    {
+      "name": "Paste_Text",
+      "value": "Paste Text"
+    },
+    {
+      "name": "Clear_Pasteboard",
+      "value": "Clear Pasteboard"
     }
   ]
 }

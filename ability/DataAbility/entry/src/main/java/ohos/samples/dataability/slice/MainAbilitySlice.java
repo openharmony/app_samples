@@ -57,7 +57,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private DataAbilityHelper databaseHelper;
 
-    private IDataAbilityObserver dataAbilityObserver = () -> {
+    private final IDataAbilityObserver dataAbilityObserver = () -> {
         HiLog.info(LABEL_LOG, "%{public}s", "database change");
         query(true);
     };

@@ -42,7 +42,8 @@
             ohos:height="40vp"
             ohos:width="160vp"
             ohos:background_element="$graphic:button_background"
-            ohos:left_margin="15vp"
+            ohos:start_margin="15vp"
+            ohos:end_margin="0vp"
             ohos:padding="10vp"
             ohos:text="$string:decrypt"
             ohos:text_alignment="center"
@@ -58,7 +59,8 @@
         <Text
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="15vp"
+            ohos:start_padding="15vp"
+            ohos:end_padding="0vp"
             ohos:text="$string:plain_text"
             ohos:text_size="16fp"/>
 
@@ -79,7 +81,8 @@
         <Text
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="15vp"
+            ohos:start_padding="15vp"
+            ohos:end_padding="0vp"
             ohos:text="$string:result"
             ohos:text_size="16fp"/>
 
@@ -88,9 +91,9 @@
             ohos:height="match_content"
             ohos:width="match_parent"
             ohos:enabled="false"
-            ohos:left_margin="20vp"
+            ohos:start_margin="20vp"
             ohos:multiple_lines="true"
-            ohos:right_margin="20vp"
+            ohos:end_margin="20vp"
             ohos:text_color="#708095"
             ohos:text_size="16fp"/>
     </DirectionalLayout>

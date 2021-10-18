@@ -37,7 +37,8 @@
         <Text
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="15vp"
+            ohos:start_padding="15vp"
+            ohos:end_padding="0vp"
             ohos:text="$string:wifi_status"
             ohos:text_size="16fp"/>
 
@@ -57,7 +58,8 @@
         <Text
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="15vp"
+            ohos:start_padding="15vp"
+            ohos:end_padding="0vp"
             ohos:text="$string:bluetooth_status"
             ohos:text_size="16fp"/>
 
@@ -77,7 +79,8 @@
         <Text
             ohos:height="match_content"
             ohos:width="match_content"
-            ohos:left_padding="15vp"
+            ohos:start_padding="15vp"
+            ohos:end_padding="0vp"
             ohos:text="$string:airplane_status"
             ohos:text_size="16fp"/>
 

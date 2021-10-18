@@ -83,6 +83,10 @@
     {
       "name": "delete_label",
       "value": "删除"
+    },
+    {
+      "name": "Enter_the_key_to_search",
+      "value": "Enter the key to search"
     }
   ]
 }

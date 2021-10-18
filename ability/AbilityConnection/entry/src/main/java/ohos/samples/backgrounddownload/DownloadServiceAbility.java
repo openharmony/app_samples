@@ -41,7 +41,7 @@ import java.util.List;
 public class DownloadServiceAbility extends Ability implements IDownloadListener {
     private static final String TAG = DownloadServiceAbility.class.getSimpleName();
 
-    private List<DownloadSession> downloadSessionList = new ArrayList<>();
+    private final List<DownloadSession> downloadSessionList = new ArrayList<>();
 
     private class DownloadRemoteObject extends RemoteObject {
         private DownloadRemoteObject() {

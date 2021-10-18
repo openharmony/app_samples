@@ -1,0 +1,3 @@
+D:/code/temp/native/NativeImage/entry/.cxx/debug/arm64-v8a/CMakeFiles/nativeimage.dir
+D:/code/temp/native/NativeImage/entry/.cxx/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/code/temp/native/NativeImage/entry/.cxx/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

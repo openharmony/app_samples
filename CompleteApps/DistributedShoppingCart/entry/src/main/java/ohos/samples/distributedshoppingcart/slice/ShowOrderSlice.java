@@ -28,7 +28,7 @@ public class ShowOrderSlice extends AbilitySlice {
     private static final String ZERO_STR = ".00";
     private static final String MONEY_STR = ":￥";
 
-    private Text commitOrder;
+
 
     @Override
     protected void onStart(Intent intent) {
@@ -38,6 +38,7 @@ public class ShowOrderSlice extends AbilitySlice {
     }
 
     private void initView(Intent intent) {
+        Text commitOrder;
         int total = intent.getIntParam(ShoppingCartManage.TOTAL_MONEY,0);
         int discount = intent.getIntParam(ShoppingCartManage.DISCOUNT_MONEY,0);
         Text textTotal = (Text)findComponentById(ResourceTable.Id_pro_money);

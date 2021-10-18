@@ -24,10 +24,10 @@
         ohos:height="150vp"
         ohos:width="match_parent"
         ohos:background_element="$graphic:text_background"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:multiple_lines="true"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:scrollable="true"
         ohos:text_alignment="top"
         ohos:text_size="14vp"
@@ -36,9 +36,9 @@
     <DirectionalLayout
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:orientation="horizontal"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:top_margin="20vp">
 
         <Button
@@ -56,7 +56,8 @@
             ohos:height="match_content"
             ohos:width="0vp"
             ohos:background_element="$graphic:button_background"
-            ohos:left_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:padding="10vp"
             ohos:text="$string:delete_button"
             ohos:text_size="16fp"
@@ -66,9 +67,9 @@
     <DirectionalLayout
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:orientation="horizontal"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:top_margin="20vp">
 
         <Button
@@ -86,7 +87,8 @@
             ohos:height="match_content"
             ohos:width="0vp"
             ohos:background_element="$graphic:button_background"
-            ohos:left_margin="10vp"
+            ohos:start_margin="10vp"
+            ohos:end_margin="0vp"
             ohos:padding="10vp"
             ohos:text="$string:query_button"
             ohos:text_size="16fp"
@@ -98,9 +100,9 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_background"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:batch_insert_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -110,9 +112,9 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_background"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:batch_execute_button"
         ohos:text_size="16fp"
         ohos:top_margin="20vp"/>
@@ -121,8 +123,8 @@
         ohos:height="1vp"
         ohos:width="match_parent"
         ohos:background_element="#696969"
-        ohos:left_margin="24vp"
-        ohos:right_margin="24vp"
+        ohos:start_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:top_margin="10vp"/>
 
     <Button
@@ -130,9 +132,9 @@
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:background_element="$graphic:button_background"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text="$string:read_file_button"
         ohos:text_size="16fp"
         ohos:top_margin="10vp"/>

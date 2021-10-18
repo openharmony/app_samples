@@ -43,7 +43,6 @@ public class ShoppingCartManage {
 
     public static final String SUB_EVENT = "SUB_EVENT";
     public static final String ACTION_EVENT = "ACTION_EVENT";
-    public static final String ACTION_DEV_NAME = "ACTION_DEV_NAME";
     public static final String MEGER_EVENT = "meger";
     public static final String SHARE_EVENT = "share";
     public static final String TOTAL_MONEY = "TOTAL_MONEY";
@@ -56,7 +55,7 @@ public class ShoppingCartManage {
      *
      * @return the device info
      */
-    public static final List<DeviceInfo> getDevices() {
+    public static List<DeviceInfo> getDevices() {
         if (DEVICES.size() > 0) {
             DEVICES.clear();
         }

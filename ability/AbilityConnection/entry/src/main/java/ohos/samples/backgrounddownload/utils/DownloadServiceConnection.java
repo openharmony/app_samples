@@ -40,7 +40,7 @@ public class DownloadServiceConnection implements IAbilityConnection {
     /**
      * handle message from service to ability slice
      */
-    private static EventHandler handler = new EventHandler(EventRunner.current()) {
+    private static final EventHandler handler = new EventHandler(EventRunner.current()) {
         @Override
         protected void processEvent(InnerEvent event) {
             if (event.eventId == Const.HANDLER_EVENT_ID && event.object instanceof String) {
@@ -50,7 +50,7 @@ public class DownloadServiceConnection implements IAbilityConnection {
         }
     };
 
-    private Context context;
+    private final Context context;
 
     private DownloadServiceProxy downloadServiceProxy;
 
@@ -154,7 +154,7 @@ public class DownloadServiceConnection implements IAbilityConnection {
     }
 
     private class DownloadServiceProxy implements IRemoteBroker {
-        private IRemoteObject remoteObject;
+        private final IRemoteObject remoteObject;
 
         DownloadServiceProxy(IRemoteObject iRemoteObject) {
             remoteObject = iRemoteObject;

@@ -26,7 +26,6 @@ import ohos.samples.distributedshoppingcart.been.ShoppingCartManage;
  * ShowPaySlice
  */
 public class ShowPaySlice extends AbilitySlice {
-    private Text pay;
     private Image payHuawei;
     private Image payBankCard;
     private Image payYunQuick;
@@ -39,6 +38,7 @@ public class ShowPaySlice extends AbilitySlice {
     }
 
     private void initView(Intent intent) {
+        Text pay;
         String money = intent.getStringParam(ShoppingCartManage.NEED_PAY);
         Text payMoney = (Text)findComponentById(ResourceTable.Id_need_pay_money);
         payMoney.setText(money);

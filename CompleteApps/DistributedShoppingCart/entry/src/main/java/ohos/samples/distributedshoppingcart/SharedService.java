@@ -46,7 +46,7 @@ public class SharedService extends Ability {
     /**
      * MyBinder class
      */
-    private class MyBinder extends NewsDemoIDLStub {
+    private static class MyBinder extends NewsDemoIDLStub {
         MyBinder(String descriptor) {
             super(descriptor);
         }

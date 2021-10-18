@@ -56,11 +56,12 @@
                 ohos:height="match_content"
                 ohos:width="60px"
                 ohos:below="$id:item_pro_param2"
-                ohos:left_margin="30px"
+                ohos:start_margin="30px"
+                ohos:end_margin="0px"
                 ohos:right_of="$id:item_pro_price"
                 ohos:text_size="16vp"
                 ohos:text_alignment="center"
-                ohos:text="1"
+                ohos:text="$string:num1"
                 ohos:weight="4"/>
             <Text
                 ohos:id="$+id:item_pro_discount"
@@ -69,7 +70,8 @@
                 ohos:below="$id:item_pro_price"
                 ohos:right_of="$id:item_pro_image"
                 ohos:background_element="$graphic:corner_bg_text"
-                ohos:left_padding="5px"
+                ohos:start_padding="5px"
+                ohos:end_padding="0px"
                 ohos:text_color="red"
                 ohos:text_size="12vp"
                 ohos:weight="3"/>

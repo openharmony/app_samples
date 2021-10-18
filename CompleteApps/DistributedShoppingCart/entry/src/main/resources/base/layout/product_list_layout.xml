@@ -33,29 +33,34 @@
         <Image
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="30px"
+            ohos:start_margin="30px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_home_select"/>
         <Image
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="145px"
+            ohos:start_margin="145px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_fenglei"/>
         <Image
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="145px"
+            ohos:start_margin="145px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_faxian"/>
         <StackLayout
             ohos:height="match_parent"
             ohos:width="100px"
             ohos:id="$+id:car_shoppingcart"
-            ohos:left_margin="145px">
+            ohos:start_margin="145px"
+            ohos:end_margin="0px">
             <Text
                 ohos:id="$+id:cart_num"
                 ohos:height="40px"
                 ohos:width="40px"
                 ohos:text=""
-                ohos:left_margin="20px"
+                ohos:start_margin="20px"
+                ohos:end_margin="0px"
                 ohos:text_color="red"
                 ohos:background_element="$graphic:red_circel_button"
                 ohos:text_alignment="center"
@@ -71,7 +76,8 @@
         <Image
             ohos:height="72px"
             ohos:width="72px"
-            ohos:left_margin="145px"
+            ohos:start_margin="145px"
+            ohos:end_margin="0px"
             ohos:image_src="$media:icon_me"/>
     </DirectionalLayout>
 </DirectionalLayout>

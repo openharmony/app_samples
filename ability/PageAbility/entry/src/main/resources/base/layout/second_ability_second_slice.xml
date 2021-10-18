@@ -34,8 +34,8 @@
         ohos:layout_alignment="center"
         ohos:text="$string:back_button"
         ohos:background_element="$graphic:button_background"
-        ohos:left_margin="24vp"
-        ohos:right_margin="24vp"
+        ohos:start_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:padding="10vp"
         ohos:text_size="16fp"
         ohos:top_margin="30vp"/>

@@ -1,0 +1,54 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.rpcclient",
+    "version": {
+      "code": 2000000,
+      "name": "2.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.samples.rpcclient",
+    "name": ".MainAbility",
+    "reqCapabilities": [
+      "video_support"
+    ],
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "rpcclient",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "portrait",
+        "formsEnabled": false,
+        "name": ".MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app_name",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [6,5]
+      }
+    }
+  }
+}

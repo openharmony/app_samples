@@ -33,7 +33,7 @@ import ohos.agp.window.dialog.ListDialog;
 public class MainAbilitySlice extends AbilitySlice implements CommonEventPlugin.NotificationEventListener {
     private static final int DIALOG_BOX_WIDTH = 984;
 
-    private CommonEventPlugin notificationPlugin = new CommonEventPlugin(this);
+    private final CommonEventPlugin notificationPlugin = new CommonEventPlugin(this);
 
     private Text resultText;
 

@@ -60,7 +60,7 @@ public class BluetoothPlugin {
 
     private final Set<BluetoothRemoteDevice> availableDevices = new LinkedHashSet<>();
 
-    private AbilityContext mainSliceContext;
+    private final AbilityContext mainSliceContext;
 
     private BluetoothEventListener bluetoothEventListener;
 

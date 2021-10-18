@@ -58,7 +58,7 @@
     "distroFilter": {
       "apiVersion": {
         "policy": "include",
-        "value": []
+        "value": [6,5]
       }
     }
   }

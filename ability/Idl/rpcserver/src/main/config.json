@@ -48,6 +48,12 @@
         "type": "service",
         "visible": true
       }
-    ]
+    ],
+    "distroFilter": {
+      "apiVersion": {
+        "policy": "include",
+        "value": [5,4]
+      }
+    }
   }
 }

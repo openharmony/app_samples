@@ -25,22 +25,22 @@
         ohos:width="match_parent"
         ohos:hint="$string:message_textField"
         ohos:top_margin="100vp"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:padding="5vp"
         ohos:background_element="$graphic:textfield_bg"
         ohos:text_alignment="center"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text_size="16vp"/>
 
     <Button
         ohos:id="$+id:continue_button"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="24vp"
+        ohos:start_margin="24vp"
         ohos:top_margin="50vp"
         ohos:background_element="$graphic:button_background"
         ohos:text="$string:continue_button"
         ohos:padding="10vp"
-        ohos:right_margin="24vp"
+        ohos:end_margin="24vp"
         ohos:text_size="16fp"/>
 </DirectionalLayout>

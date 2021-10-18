@@ -25,10 +25,10 @@
         ohos:id="$+id:input_text"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:left_margin="10vp"
+        ohos:start_margin="10vp"
         ohos:padding="10vp"
         ohos:multiple_lines="true"
-        ohos:right_margin="10vp"
+        ohos:end_margin="10vp"
         ohos:text="$string:image_net_url"
         ohos:text_size="16fp"/>
 
