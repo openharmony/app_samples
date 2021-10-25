@@ -29,10 +29,18 @@
 ##### 约束与限制
 
 1. 编译约束
+   已实名认证的开发者联盟账号 ，具体[参考](https://developer.huawei.com/consumer/cn/ )
+   开发工具：DevEcoStudio 下载地址 [HUAWEI DevEco Studio - HarmonyOS应用开发官网](https://developer.harmonyos.com/cn/develop/deveco-studio#download) 
 
-   设置DevEco Studio开发环境。
+   •安装DevEco Studio 
 
-   具体环境搭建请[参考：](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/installation_process-0000001071425528) 。
+   设置DevEco Studio开发环境，DevEco Studio开发环境需要连接到网络，以确保该正常使用。
+   可以根据以下两种情况配置开发环境：
+           1).如果您可以直接访问Internet，则只需下载HarmonyOS SDK 
+           2).如果网络无法直接访问Internet，则可以通过代理服务器进行访问 • 生成密钥并申请证书 
+
+   具体环境搭建请[参考：](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/installation_process-0000001071425528) 
+   更多资料请登录HarmonyOS应用开发[官网:](https://developer.harmonyos.com/cn/)
 
 2. 使用限制
    •本sample是一个模拟网上购物的应用，商品数据都是从文件中读取，所以需要在resource下准备一个商品清单文档（product_datas.json,具体路径：resource/rawfile/）。用户可以根据自己的喜爱添加商品信息。
