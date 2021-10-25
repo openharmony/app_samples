@@ -51,4 +51,4 @@ This sample is developed using Java. Tic-Tac-Toe is a simple and fun game for tw
 
 2. Usage Constraints
 
-  This sample app requires two phones in the same network, and only two phones can play the game at the same time.
+   This sample app requires two phones in the same network, and only two phones can play the game at the same time.

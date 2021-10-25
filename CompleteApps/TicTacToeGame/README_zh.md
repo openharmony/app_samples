@@ -46,7 +46,7 @@
 
    设置DevEco Studio开发环境。
 
-   具体环境搭建请[参考：](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/installation_process-0000001071425528) 。
+   具体环境搭建请[参考](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/installation_process-0000001071425528) 。
   
 
 2. 使用限制
