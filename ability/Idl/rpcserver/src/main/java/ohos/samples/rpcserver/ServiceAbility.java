@@ -31,7 +31,7 @@ public class ServiceAbility extends Ability {
     /**
      * CalculatorInterfaceStubImpl
      */
-    private static class CalculatorInterfaceStubImpl extends CalculatorInterfaceStub {
+    private static class CalculatorInterfaceStubImpl extends CalculatorInterfaceStub implements IRemoteObject {
         public CalculatorInterfaceStubImpl(String descriptor) {
             super(descriptor);
         }

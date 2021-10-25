@@ -186,11 +186,11 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
         }
     };
 	
-    private Intent getRemotePageIntent(String bundleName, String serviceName) {
+    private Intent getRemotePageIntent() {
         Operation operation = new Intent.OperationBuilder()
             .withDeviceId(selectedDeviceId)
-            .withBundleName(bundleName)
-            .withAbilityName(serviceName)
+            .withBundleName(REMOTE_BUNDLE)
+            .withAbilityName(REMOTE_SERVICE_FA)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
             .build();
         Intent intent = new Intent();
@@ -199,15 +199,15 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     }
 
     private void startRemoteFA() {
-        Intent remotePageIntent = getRemotePageIntent(REMOTE_BUNDLE, REMOTE_SERVICE_FA);
+        Intent remotePageIntent = getRemotePageIntent();
         startAbility(remotePageIntent);
     }
 
-    private Intent getRemoteServiceIntent(String bundleName, String serviceName) {
+    private Intent getRemoteServiceIntent() {
         Operation operation = new Intent.OperationBuilder()
             .withDeviceId(selectedDeviceId)
-            .withBundleName(bundleName)
-            .withAbilityName(serviceName)
+            .withBundleName(REMOTE_BUNDLE)
+            .withAbilityName(REMOTE_SERVICE)
             .withFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE)
             .build();
         Intent intent = new Intent();
@@ -216,17 +216,17 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     }
 
     private void startRemoteService() {
-        Intent remoteServiceIntent = getRemoteServiceIntent(REMOTE_BUNDLE, REMOTE_SERVICE);
+        Intent remoteServiceIntent = getRemoteServiceIntent();
         startAbility(remoteServiceIntent);
     }
 
     private void stopService() {
-        Intent intent = getRemoteServiceIntent(REMOTE_BUNDLE, REMOTE_SERVICE);
+        Intent intent = getRemoteServiceIntent();
         stopAbility(intent);
     }
 
     private void connectService() {
-        Intent intent = getRemoteServiceIntent(REMOTE_BUNDLE, REMOTE_SERVICE);
+        Intent intent = getRemoteServiceIntent();
         connectAbility(intent, connection);
     }
 
@@ -252,9 +252,9 @@ public class MainAbilitySlice extends AbilitySlice implements IAbilityContinuati
     };
 
     public void showTips(Context context, String msg) {
-        getUITaskDispatcher().asyncDispatch(()->{
-            new ToastDialog(context).setText(msg).show();
-        });
+        getUITaskDispatcher().asyncDispatch(()->
+            new ToastDialog(context).setText(msg).show()
+        );
     }
 
     @Override
