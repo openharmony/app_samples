@@ -57,10 +57,8 @@ public class MyRemoteProxy implements IRemoteBroker {
      * sendCmd
      *
      * @param cmd the cmd to send
-     * @return send result.
      */
-    public int sendCmd(int cmd) {
-        int result = 0;
+    public void sendCmd(int cmd) {
         MessageParcel data = MessageParcel.obtain();
         data.writeInt(cmd);
 
@@ -72,12 +70,11 @@ public class MyRemoteProxy implements IRemoteBroker {
             if (ec != ERR_OK) {
                 throw new RemoteException();
             }
-            result = reply.readInt();
         } catch (RemoteException e) {
             HiLog.error(LABEL_LOG, LOG_FORMAT, "MyRemoteProxy", "" + e);
         }
 
-        return result;
+
     }
 }
 

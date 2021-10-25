@@ -30,7 +30,7 @@ public class PkUtils {
         DirectionalLayout toastLayout = (DirectionalLayout) LayoutScatter.getInstance(context)
                 .parse(ResourceTable.Layout_layout_toast, null, false);
         new ToastDialog(context)
-                .setComponent(toastLayout)
+                .setContentCustomComponent(toastLayout)
                 .setSize(DirectionalLayout.LayoutConfig.MATCH_CONTENT, DirectionalLayout.LayoutConfig.MATCH_CONTENT)
                 .setAlignment(LayoutAlignment.CENTER)
                 .show();

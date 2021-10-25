@@ -34,7 +34,7 @@
             ohos:text="$string:game_rules"
             ohos:text_size="48px"
             ohos:text_color="#333333"
-            ohos:text_font="PingFangSC-Medium"
+            ohos:text_font="$string:SansSerif"
             ohos:start_padding="356px"
             ohos:end_padding="0px"
             ohos:top_padding="130px"/>
@@ -45,7 +45,7 @@
             ohos:multiple_lines="true"
             ohos:text_size="36px"
             ohos:text_color="#666666"
-            ohos:text_font="PingFangSC-Regular"
+            ohos:text_font="$string:SansSerif"
             ohos:start_padding="100px"
             ohos:end_padding="0px"
             ohos:top_padding="50px"/>
@@ -58,7 +58,7 @@
             ohos:element_padding="10px"
             ohos:text_size="36px"
             ohos:text_color="#666666"
-            ohos:text_font="PingFangSC-Regular"
+            ohos:text_font="$string:SansSerif"
             ohos:start_padding="100px"
             ohos:end_padding="0px"
             ohos:top_padding="50px"/>

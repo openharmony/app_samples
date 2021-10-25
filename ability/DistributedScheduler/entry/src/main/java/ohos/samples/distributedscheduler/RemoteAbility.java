@@ -22,7 +22,6 @@ import ohos.app.Context;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.IRemoteObject;
-import ohos.rpc.RemoteException;
 
 /**
  * RemoteAbility
@@ -37,7 +36,7 @@ public class RemoteAbility extends Ability {
 
     RemoteAgentStub remoteAgentStub = new RemoteAgentStub(DESCRIPTOR) {
         @Override
-        public void setRemoteObject(String param) throws RemoteException {
+        public void setRemoteObject(String param) {
             if(isConnected) {
                 showTips(RemoteAbility.this, param);
             }
@@ -79,8 +78,8 @@ public class RemoteAbility extends Ability {
     }
 
     private void showTips(Context context, String msg) {
-        getUITaskDispatcher().asyncDispatch(()->{
-            new ToastDialog(context).setText(msg).show();
-        });
+        getUITaskDispatcher().asyncDispatch(()->
+            new ToastDialog(context).setText(msg).show()
+        );
     }
 }

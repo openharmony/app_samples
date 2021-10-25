@@ -55,7 +55,7 @@ public class GameStatusUtils {
             img.setPixelMap(ResourceTable.Media_game_tie);
         }
         new ToastDialog(context)
-                .setComponent(toastLayout)
+                .setContentCustomComponent(toastLayout)
                 .setSize(DirectionalLayout.LayoutConfig.MATCH_CONTENT, DirectionalLayout.LayoutConfig.MATCH_CONTENT)
                 .setAlignment(LayoutAlignment.CENTER)
                 .setDuration(durationTime)

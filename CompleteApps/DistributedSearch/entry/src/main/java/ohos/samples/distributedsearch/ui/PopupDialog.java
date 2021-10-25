@@ -57,9 +57,7 @@ public class PopupDialog extends CommonDialog {
     private void configChoiceButton(Component rootView) {
         LogUtil.info(TAG, "begin to configChoiceButton");
         Text operateYes = (Text) rootView.findComponentById(ResourceTable.Id_operate_yes);
-        operateYes.setClickedListener(component -> {
-            destroy();
-        });
+        operateYes.setClickedListener(component -> destroy());
         Text operateNo = (Text) rootView.findComponentById(ResourceTable.Id_operate_no);
         operateNo.setClickedListener(component -> destroy());
     }

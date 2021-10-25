@@ -47,7 +47,7 @@ public class DeviceSelectDialog extends CommonDialog {
 
     private final AbilitySlice context;
 
-    private DeviceInfo checkedDevice;
+
 
 
 
@@ -81,9 +81,6 @@ public class DeviceSelectDialog extends CommonDialog {
         List<DeviceData> deviceList = new ArrayList<>();
         for (DeviceInfo deviceInfo : deviceInfoList) {
             deviceList.add(new DeviceData(false, deviceInfo));
-        }
-        if (deviceInfoList.size() > 0) {
-            checkedDevice = deviceInfoList.get(0);
         }
         LogUtil.info(TAG, "get " + deviceInfoList.size() + " devices");
         return deviceList;

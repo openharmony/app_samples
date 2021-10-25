@@ -15,9 +15,9 @@
 
 package ohos.samples.tictactoegame.ui.listcomponent;
 
+import ohos.agp.components.BaseItemProvider;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.RecycleItemProvider;
 import ohos.app.Context;
 
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.List;
  *
  * @param <T> params type
  */
-public abstract class ListComponentAdapter<T> extends RecycleItemProvider {
+public abstract class ListComponentAdapter<T> extends BaseItemProvider {
     private final Context mContext;
     private final List<T> mListBean;
     private final int mXmlId;
