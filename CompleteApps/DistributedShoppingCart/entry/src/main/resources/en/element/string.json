@@ -14,11 +14,11 @@
     },
     {
       "name": "add_succ_label",
-      "value": "Added successfully"
+      "value": "Item added."
     },
     {
       "name": "device_select_label",
-      "value": "Select device"
+      "value": "Select Device"
     },
     {
       "name": "amount_details",
@@ -26,19 +26,19 @@
     },
     {
       "name": "amount_notice_info",
-      "value": "*Please refer to the following sheet for the actual preferential amount"
+      "value": "*The exact coupon amount is subject to that displayed on the order page."
     },
     {
       "name": "goods_prices_label",
-      "value": "Total price of goods"
+      "value": "Price"
     },
     {
       "name": "discount_label",
-      "value": "Preferential amount"
+      "value": "Coupon"
     },
     {
       "name": "discount_0label",
-      "value": "Discount 0 yuan discount details"
+      "value": "0.00 CNY coupon used; details"
     },
     {
       "name": "total_label",
@@ -46,23 +46,23 @@
     },
     {
       "name": "total_0_label",
-      "value": "Total:0.00"
+      "value": "Total: 0.00"
     },
     {
       "name": "my_label",
-      "value": "me"
+      "value": "Me"
     },
     {
       "name": "my_0_label",
-      "value": "me:￥0.00"
+      "value": "Me: ¥0.00"
     },
     {
       "name": "xiaowang_label",
-      "value": "xiaowang"
+      "value": "Friend A"
     },
     {
       "name": "xiaowang_0_label",
-      "value": "xiaowang:￥0.00"
+      "value": "Friend A: ¥0.00"
     },
     {
       "name": "original_price_label",
@@ -70,27 +70,27 @@
     },
     {
       "name": "original_price_0_label",
-      "value": "Original price:￥0.00"
+      "value": "Original price: ¥0.00"
     },
     {
       "name": "select_all_label",
-      "value": "Select all"
+      "value": "All"
     },
     {
       "name": "settle_accounts_label",
-      "value": "Settlement"
+      "value": "Checkout"
     },
     {
       "name": "settle_accounts_0_label",
-      "value": "Settlement(0)"
+      "value": "Checkout (0)"
     },
     {
       "name": "shopping_cart_slice",
-      "value": "My shopping cart"
+      "value": "My Shopping Cart"
     },
     {
       "name": "xiaowang_shopping_cart",
-      "value": "Xiaowang's shopping cart"
+      "value": "Friend A's Shopping Cart"
     },
     {
       "name": "cashier_label",
@@ -98,19 +98,19 @@
     },
     {
       "name": "cloud_pay_label",
-      "value": "Cloud flash payment"
+      "value": "Yunshanfu"
     },
     {
       "name": "bank_card_pay_label",
-      "value": "Bank card payment"
+      "value": "Bank card"
     },
     {
       "name": "confirm_payment_label",
-      "value": "Confirm payment"
+      "value": "Pay"
     },
     {
       "name": "pay_success_label",
-      "value": "Order payment succeeded"
+      "value": "Payment succeeded."
     },
     {
       "name": "finish_label",
@@ -122,23 +122,23 @@
     },
     {
       "name": "discount",
-      "value": "Discount"
+      "value": "Coupon"
     },
     {
       "name": "activity_label",
-      "value": "Activity"
+      "value": "Event"
     },
     {
       "name": "activity_618_label",
-      "value": "618 love Carnival"
+      "value": "618 Shopping Festival"
     },
     {
       "name": "add_cart_label",
-      "value": "Add to cart"
+      "value": "Add to Cart"
     },
     {
       "name": "meger_cart_request_info",
-      "value": "Your friend * * * shared shopping carts with you. Do you want to merge shopping carts?"
+      "value": "Your friend * * * shares their shopping cart with you. Do you want to merge the shopping carts?"
     },
     {
       "name": "agree_label",
@@ -146,15 +146,15 @@
     },
     {
       "name": "cancel_label",
-      "value": "Cancel"
+      "value": "Disagree"
     },
     {
       "name": "cart_empty_info",
-      "value": "Shopping cart is empty!!!"
+      "value": "Your shopping cart is empty."
     },
     {
       "name": "submit_order_label",
-      "value": "Submit order"
+      "value": "Payment"
     },
     {
       "name": "default_label",
@@ -166,19 +166,19 @@
     },
     {
       "name": "phone_info",
-      "value": "Mr**：186****6666"
+      "value": "Mr **：186****6666"
     },
     {
       "name": "commodity_amount_label",
-      "value": "Commodity amount"
+      "value": "Purchase amount"
     },
     {
       "name": "freight_label",
-      "value": "Freight"
+      "value": "Shipping cost"
     },
     {
       "name": "subtraction_label",
-      "value": "Co subtraction"
+      "value": "Total coupon"
     },
     {
       "name": "coupon_label",
@@ -186,67 +186,39 @@
     },
     {
       "name": "no_available_info",
-      "value": "No available"
+      "value": "Unavailable"
     },
     {
       "name": "share_success_info",
-      "value": "Share success"
+      "value": "Shopping cart shared."
     },
     {
       "name": "discount_details",
-      "value": "RMB discount details"
+      "value": " CNY coupon used. Details"
     },
     {
       "name": "meger_success_info",
-      "value": "Merge succeeded"
+      "value": "Shopping carts merged."
     },
     {
       "name": "meger_cart_label",
-      "value": "Merge shopping cart"
+      "value": "Merge Shopping Carts"
     },
     {
       "name": "friends_info",
-      "value": "your friend"
+      "value": "Your friend "
     },
     {
       "name": "meger_cart_request",
-      "value": "Request to merge his shopping cart with you. Do you want to merge?"
+      "value": "requests to merge their shopping cart with yours. Do you want to merge the shopping carts?"
     },
     {
       "name": "shared_cart_request",
-      "value": "Share his shopping cart with you. Do you accept it？"
+      "value": "shares their shopping cart with you. Do you want to accept it？"
     },
     {
       "name": "shared_cart_label",
-      "value": "Shared shopping cart"
-    },
-    {
-      "name": "RMB01",
-      "value": "￥0.00"
-    },
-    {
-      "name": "RMB02",
-      "value": "-￥0.00"
-    },
-    {
-      "name": "num1",
-      "value": "1"
-    },
-    {
-      "name": "price2349",
-      "value": "￥2439.00"
-    },
-    {
-      "name": "HUAWEI_Card",
-      "value": "HUAWEI Card"
-    },
-    {
-      "name": "price2756",
-      "value": "￥2756.00"
-    },
-    {
-      "name": "price317",
-      "value": "-￥317.00"
+      "value": "Share Shopping Cart"
     }
   ]
 }
