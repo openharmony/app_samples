@@ -17,9 +17,9 @@ export default {
         hundredImg: "/common/A054_110.png",
         tensImg: "/common/A054_110.png",
         onesImg: "/common/A054_110.png",
-        tensLeft: "140px",
-        onesLeft: "170px",
-        chartUnit: "220px",
+        tensLeft: "100px",
+        onesLeft: "120px",
+        chartUnit: "170px",
         hundredDisplay: "none",
         realHrValue: 0,
         moving: false,
@@ -83,8 +83,7 @@ export default {
         this.handleMeasureData();
     },
     onHide() {
-        this.clearChart();
-        this.clearTimes();
+        console.log('onHide');
     },
     handleMeasureData() {
         this.updateElectrocarddiogram();
@@ -151,18 +150,18 @@ export default {
             let number = this.realHrValue.toString();
             if (number.length == doubleAvgHr) {
                 this.hundredDisplay = 'none';
-                this.tensLeft = '140px';
-                this.onesLeft = '170px';
-                this.chartUnit = '220px';
+                this.tensLeft = '100px';
+                this.onesLeft = '120px';
+                this.chartUnit = '170px';
                 tens = number.substring(subIndexZero, subIndexOne);
                 ones = number.substring(subIndexOne, subIndexTwo);
                 this.tensImg = '/common/A054_10' + tens + '.png';
                 this.onesImg = '/common/A054_10' + ones + '.png';
             } else if (number.length == threeAvgHr) {
                 this.hundredDisplay = 'block';
-                this.tensLeft = '170px';
-                this.onesLeft = '200px';
-                this.chartUnit = '250px';
+                this.tensLeft = '130px';
+                this.onesLeft = '150px';
+                this.chartUnit = '200px';
                 hundreds = number.substring(subIndexZero, subIndexOne);
                 tens = number.substring(subIndexOne, subIndexTwo);
                 ones = number.substring(subIndexTwo, subIndexEnd);
@@ -175,9 +174,9 @@ export default {
     },
     initRealHrValue() {
         this.hundredDisplay = 'none';
-        this.tensLeft = '140px';
-        this.onesLeft = '170px';
-        this.chartUnit = '220px';
+        this.tensLeft = '100px';
+        this.onesLeft = '120px';
+        this.chartUnit = '170px';
         this.tensImg = '/common/A054_110.png';
         this.onesImg = '/common/A054_110.png';
     },

@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.chat_t_l {
+.chart_t_l {
     width: 110px;
     height: 110px;
     object-fit: contain;
@@ -39,13 +39,13 @@
 .numberImg {
     width: 32px;
     height: 66px;
-    object-fit: scale-down;
+    object-fit: contain;
     display: flex;
     flex-shrink: 1;
 }
 .hundredImg {
-    left: 80px;
-    object-fit: scale-down;
+    left: 100px;
+    object-fit: contain;
     display: flex;
     flex-shrink: 1;
 }
