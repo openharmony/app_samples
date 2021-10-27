@@ -18,7 +18,7 @@
     },
     {
       "name": "title_label",
-      "value": "Tic tac toe battle"
+      "value": "Tic-Tac-Toe"
     },
     {
       "name": "game_rules",
@@ -30,15 +30,15 @@
     },
     {
       "name": "rules_info",
-      "value": "Two players, one with a circle (o) and one with a cross (x), take turns to play their own symbols on the grid of 3 by 3. If they are first connected into a line horizontally, vertically and obliquely, they will win. If both sides play correctly, they will be drawn. This game is actually controlled by the first player. The first player is attacking and the second player is defending."
+      "value": "Tic-Tac-Toe is a simple and fun game for two players. It is played on a 3 x 3 grid. Players take turns placing their Mark, X or O, on an open square in the grid. The first player to make three of their own mark in a row vertically, horizontally, or diagonally wins the game."
     },
     {
       "name": "rules_info1",
-      "value": "If the first player is the first player in the corner position, he will win the most. If the second player is in the side position, the first player can tie down the second player with two wires, and then create \"two snakes\". People who have played this game will find that if both players make the best choice, the game will be tied. Therefore, tic tac toe chess is most often used as a children's game."
+      "value": "Tic-Tac-Toe is a zero-sum game, which means that if both players are playing their best, the game will end in a tie."
     },
     {
       "name": "confirm_label",
-      "value": "Confirm"
+      "value": "OK"
     },
     {
       "name": "cancel_label",
@@ -46,15 +46,7 @@
     },
     {
       "name": "add_device_label",
-      "value": "Add game device"
-    },
-    {
-      "name": "num0",
-      "value": "0"
-    },
-    {
-      "name": "SansSerif",
-      "value": "sans-serif"
+      "value": "Add Player"
     }
   ]
 }
