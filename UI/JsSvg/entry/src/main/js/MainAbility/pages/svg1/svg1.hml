@@ -1,0 +1,65 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<div class="container">
+    <text class="title">{{ $t('strings.title') }}</text>
+    <list class="list">
+        <list-item class="list-item">
+            <text class="text">{{ 'rect:' }}</text>
+            <svg fill="white" width="700" height="400">
+                <rect width="200" height="150" x="10" y="20" stroke-width="4" stroke="blue"></rect>
+                <rect width="200" height="150" x="250" y="20" stroke-width="4" stroke="blue" rx="10" ry="10"></rect>
+                <rect width="200" height="150" x="10" y="200" stroke-width="10" fill="red" stroke="blue" rx="10"
+                      ry="10"></rect>
+                <rect width="200" height="150" x="250" y="200" stroke-width="10" stroke="red" rx="10" ry="10"
+                      stroke-dasharray="5 3" stroke-dashoffset="3"></rect>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'circle,ellipse:' }}</text>
+            <svg width="700" height="470">
+                <svg fill="white" width="700" height="350">
+                    <circle cx="100" cy="100" r="70" stroke-width="4" fill="red" stroke="blue"></circle>
+                    <circle cx="300" cy="100" r="70" stroke-width="10" stroke="red" stroke-dasharray="10 5"
+                            stroke-dashoffset="3"></circle>
+                </svg>
+                <svg fill="white" width="700" height="450">
+                    <ellipse cx="100" cy="320" rx="80" ry="120" stroke-width="4" fill="green" stroke="blue"></ellipse>
+                    <ellipse cx="320" cy="300" rx="120" ry="70" stroke-width="5" stroke="red" stroke-dasharray="10 5"
+                             stroke-dashoffset="3"></ellipse>
+                </svg>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'path:' }}</text>
+            <svg width="700" height="270">
+                <path d="M 30,110 A 20,20 0,0,1 170,50 A 20,20 0,0,1 300,100 Q 300,150 150,250 Q 30,150 30,110 z"
+                      stroke="blue" stroke-width="5" fill="yellow">
+                </path>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'line:' }}</text>
+            <svg width="700" height="280">
+                <line x1="10" x2="600" y1="50" y2="50" stroke-width="4" fill="white" stroke="blue"></line>
+                <line x1="10" x2="600" y1="100" y2="100" stroke-width="4" fill="white" stroke="blue"></line>
+                <line x1="10" x2="600" y1="150" y2="150" stroke-width="10" stroke="red" stroke-dasharray="5 3"
+                      stroke-dashoffset="3"></line>
+                <line x1="10" x2="600" y1="200" y2="200" stroke-width="10" stroke="black" stroke-linecap="round"></line>
+                <line x1="10" x2="600" y1="240" y2="240" stroke-width="10" stroke="black" stroke-linecap="square">
+                </line>
+            </svg>
+        </list-item>
+    </list>
+</div>

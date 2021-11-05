@@ -1,0 +1,123 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<div class="container">
+    <text class="title">{{ $t('strings.title') }}</text>
+    <list class="list">
+        <list-item class="list-item">
+            <text class="text">{{ 'text:' }}</text>
+            <svg fill="white" width="700" height="320">
+                <text y="45" font-size="45" fill="blue">
+                    test svg text string
+                    <animate attributeName="x" from="100" by="600" dur="3s" repeatCount="indefinite"></animate>
+                    <animate attributeName="opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                    <animate attributeName="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"></animate>
+                </text>
+                <text x="20" y="120" fill="blue">
+                    test svg text string
+                    <animate attributeName="font-size" from="10" to="70" dur="3s" repeatCount="indefinite"></animate>
+                </text>
+                <text x="20" y="200" font-size="45" fill="blue" stroke="red">
+                    text attribute stroke
+                    <animate attributeName="stroke" from="red" to="#00FF00" dur="3s" repeatCount="indefinite"></animate>
+                </text>
+                <text x="20" y="280" font-size="45" fill="white" stroke="red">
+                    text attribute stroke-width-opacity
+                    <animate attributeName="stroke-width" from="1" to="5" dur="3s" repeatCount="indefinite"></animate>
+                    <animate attributeName="stroke-opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite">
+                    </animate>
+                </text>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'tspan:' }}</text>
+            <svg fill="white" width="700" height="500">
+                <text x="20" y="50" fill="#D2691E" font-size="40">
+                    <tspan dx="-5" fill-opacity="0.7">first.</tspan>
+                    <tspan dx="5" fill="red" font-size="25" fill-opacity="0.4">second.</tspan>
+                    <tspan dy="-5" fill="#D2691E" font-size="35" rotate="-10" fill-opacity="0.6">third.</tspan>
+                    <tspan fill="#blue" font-size="40" rotate="10" fill-opacity="0.8" stroke="#00FF00"
+                           stroke-width="1px">forth.</tspan>
+                </text>
+                <text y="100" font-size="40" fill="blue">
+                    <tspan>
+                        tspan attribute x|opacity|rotate
+                        <animate attributeName="x" from="-100" to="700" dur="3s" repeatCount="indefinite"></animate>
+                        <animate attributeName="opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                        <animate attributeName="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+                <text y="200" font-size="40" fill="blue">
+                    <tspan>
+                        tspan attribute dx
+                        <animate attributeName="dx" from="-100" to="700" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+                <text>
+                    <tspan x="20" y="270" font-size="40">
+                        tspan attribute fill|fill-opacity
+                        <animate attributeName="fill" from="blue" to="red" dur="3s" repeatCount="indefinite"></animate>
+                        <animate attributeName="fill-opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+                <text>
+                    <tspan  x="20" y="320" fill="red">
+                        tspan attribute font-size
+                        <animate attributeName="font-size" from="10" to="50" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+                <text>
+                    <tspan x="20" y="380" font-size="40" fill="blue" stroke="red">
+                        tspan attribute stroke
+                        <animate attributeName="stroke" from="red" to="#00FF00" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+                <text>
+                    <tspan x="20" y="460" font-size="40" fill="white" stroke="red">
+                        tspan attribute stroke-width-opacity
+                        <animate attributeName="stroke-width" from="1" to="5" dur="3s" repeatCount="indefinite"></animate>
+                        <animate attributeName="stroke-opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                    </tspan>
+                </text>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'textPath:' }}</text>
+            <svg fill="#00FF00" width="700" height="450">
+                <path d="M40,500 Q400,400 500,180 Q500,40 200,40 Q40,40 40,160 Q40,280 180,280 Q280,280 300,200" stroke="red" fill="none"></path>
+                <text>
+                    <textpath fill="#D2691E" path="M40,500 Q400,400 500,180 Q500,40 200,40 Q40,40 40,160 Q40,280 180,280 Q280,280 300,200" font-size="30px">
+                        This is TextPath.
+                        <tspan dx="20" fill="blue">
+                            fill|fill-opacity
+                            <animate attributeName="fill" from="blue" to="red" dur="3s" repeatCount="indefinite"></animate>
+                            <animate attributeName="fill-opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                            <animate attributeName="font-size" from="10" to="50" dur="3s" repeatCount="indefinite"></animate>
+                        </tspan>
+                        <tspan dx="20" fill="blue">
+                            font-size
+                            <animate attributeName="font-size" from="10" to="50" dur="3s" repeatCount="indefinite"></animate>
+                        </tspan>
+                        <tspan dx="10" fill="green" font-size="30">Single tspan</tspan>
+                        <tspan dx="10" fill="white" stroke="red">
+                            stroke-width-opacity
+                            <animate attributeName="stroke-width" from="1" to="5" dur="3s" repeatCount="indefinite"></animate>
+                            <animate attributeName="stroke-opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite"></animate>
+                        </tspan>
+                    </textpath>
+                </text>
+            </svg>
+        </list-item>
+    </list>
+</div>
