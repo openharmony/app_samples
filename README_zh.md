@@ -19,28 +19,11 @@
 
 1.  安装运行应用示例之前，请先通过config.json文件中的"deviceType"字段来确认该应用示例支持的设备类型，可尝试通过修改该字段使其可以在相应类型的设备上运行（config.json文件一般在代码的entry/src/main路径下，不同的Sample可能会有不同）。
 2.  配置开发环境时，如果您想让应用示例运行到HarmonyOS上，请参考[DevEco Studio使用说明](https://developer.harmonyos.com/cn/docs/documentation/doc-guides/tools_overview-0000001053582387)。如果您想让应用示例运行到OpenHarmony上，请参考[DevEco Studio（OpenHarmony）使用指南](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/DevEco-Studio%EF%BC%88OpenHarmony%EF%BC%89%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md)。
-3.  以下路径下的应用示例支持在OpenHarmony上运行，其余应用示例仅支持在HarmonyOS上运行。
-    -   common/Clock
-    -   common/JsHelloWorld
-    -   common/DistributeCalc
-    -   common/ECG
-    -   common/Flashlight
-    -   ability/JsDistributedMusicPlayer
-    -   common/DistributeCalc
-    -   UI/AtomicLayout
-    -   UI/Badge
-    -   UI/chart
-    -   UI/JsAnimationStyle
-    -   UI/Picker
-    -   UI/Popup
-    -   UI/RefreshContainer
-    -   UI/Stack
-    -   UI/StepNavigator
-    -   UI/Swiper
-    -   UI/Tabs
-
+3.  Readme中标注为“支持标准系统”或“支持小型系统”的应用示例支持在OpenHarmony上运行，标注为“支持大型系统”的应用示例仅支持在HarmonyOS上运行。
+4.  所有HarmonyOS相关示例已被全部迁移至[Harmony组织](https://gitee.com/harmonyos)之下的[harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples)仓中，本仓中这部分示例不再更新，并将在未来被移除。
 
 ## 相关仓<a name="section741114082513"></a>
 
 1.  CAMERA\_SAMPLE\_APP组件的应用示例：[applications\_sample\_camera](https://gitee.com/openharmony/applications_sample_camera/blob/master/README_zh.md)
 2.  WIFI\_IOT\_APP组件的应用示例：[applications\_sample\_wifi\_iot](https://gitee.com/openharmony/applications_sample_wifi_iot/blob/master/README_zh.md)
+3.  HarmonyOS的应用示例：[harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples)
