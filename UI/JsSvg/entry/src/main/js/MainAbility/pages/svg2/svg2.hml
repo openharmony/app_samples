@@ -1,0 +1,35 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<div class="container">
+    <text class="title">{{ $t('strings.title') }}</text>
+    <list class="list">
+        <list-item class="list-item">
+            <text class="text">{{ 'polyline:' }}</text>
+            <svg width="700" height="420" fill="white" stroke="blue" stroke-width="5">
+                <polyline points="10,200 160,50 160,170 310,30" fill="red"></polyline>
+                <polyline points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
+                </polyline>
+            </svg>
+        </list-item>
+        <list-item class="list-item">
+            <text class="text">{{ 'polygon :' }}</text>
+            <svg fill="white" stroke="blue" stroke-width="5" width="700" height="420">
+                <polygon points="10,200 160,50 160,170 310,30" fill="red"></polygon>
+                <polygon points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
+                </polygon>
+            </svg>
+        </list-item>
+    </list>
+</div>

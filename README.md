@@ -18,7 +18,7 @@ We provide a series of app samples to help you quickly get familiar with the API
 ## Limitations<a name="section18841871178"></a>
 
 1.  Before installing and running the sample, check the  **deviceType**  field in the  **config.json**  file to obtain the device types supported by the sample. You can modify this field to enable the sample to run on your target device. \(The  **config.json**  file is generally stored in the  **entry/src/main**  directory, which may be different depending on the samples.\)
-2.  If you want to run the app sample on HarmonyOS, configure the development environment by referring to  [HUAWEI DevEco Studio User Guide](https://developer.harmonyos.com/en/docs/documentation/doc-guides/tools_overview-0000001053582387). If you want to run the app sample on OpenHarmony, configure the development environment by referring to  [DevEco Studio \(OpenHarmony\) User Guide](https://gitee.com/openharmony/docs/blob/master/en/application-dev/quick-start/deveco-studio-(openharmony)-user-guide.md).
+2.  If you want to run the app sample on HarmonyOS, configure the development environment by referring to  [HUAWEI DevEco Studio User Guide](https://developer.harmonyos.com/en/docs/documentation/doc-guides/tools_overview-0000001053582387). If you want to run the app sample on OpenHarmony, configure the development environment by referring to  [DevEco Studio \(OpenHarmony\) User Guide](https://gitee.com/openharmony/docs/blob/master/en/application-dev/quick-start/Readme-EN.md).
 3.  The following app samples can run on OpenHarmony, and other app samples can run only on HarmonyOS:
     -   common/Clock
     -   common/JsHelloWorld
