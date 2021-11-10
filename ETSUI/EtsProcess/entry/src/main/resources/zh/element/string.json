@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Ets进程信息"
+    },
+    {
+      "name": "description_mainability",
+      "value": "EtsProcess Ability"
+    },
+    {
+      "name": "uptime",
+      "value": "获取当前系统运行时间"
+    },
+    {
+      "name": "runCmd",
+      "value": "启动一个子进程"
+    },
+    {
+      "name": "close_child",
+      "value": "关闭子进程"
+    },
+    {
+      "name": "cwd",
+      "value": "获取进程当前工作目录"
+    },
+    {
+      "name": "change_work_directory",
+      "value": "更改进程当前工作目录"
+    },
+    {
+      "name": "exit",
+      "value": "退出当前系统"
+    },
+    {
+      "name": "kill",
+      "value": "发送signal到指定的进程"
+    }
+  ]
+}
