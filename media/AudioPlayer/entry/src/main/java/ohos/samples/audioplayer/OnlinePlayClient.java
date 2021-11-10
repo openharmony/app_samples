@@ -117,7 +117,7 @@ public class OnlinePlayClient extends Ability {
     @Override
     protected void onStop() {
         super.onStop();
-        release();
+        ThreadPoolManager.getInstance().execute(this::release);
     }
 
     private void release() {
