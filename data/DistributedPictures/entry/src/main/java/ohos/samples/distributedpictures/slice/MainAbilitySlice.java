@@ -61,7 +61,7 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     private void initDistributedFile() {
-		if (this.getDistributedDir() != null) {
+        if (this.getDistributedDir() != null) {
             distributedFile = this.getDistributedDir().getPath() + "/icon.png";
             HiLog.info(LABEL_LOG, "%{public}s", "distributedFile :" + distributedFile);
         }
