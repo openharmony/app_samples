@@ -23,7 +23,7 @@ struct Index {
 
   build() {
     Column() {
-      Text($r("app.string.entry_MainAbility"))
+      Text($r('app.string.entry_MainAbility'))
         .width('100%')
         .height(50)
         .backgroundColor('#0D9FFB')
@@ -43,7 +43,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .onClick(() => {
             this.result = process.uptime().toString() + 's'
-            console.info('guojin uptime=' + this.result)
+            console.info('[EtsProcess]uptime=' + this.result)
           })
           Button() {
             Text($r('app.string.cwd'))
@@ -56,6 +56,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
+            console.info('[EtsProcess]process cwd')
             this.result = process.cwd().toString()
           })
           Button() {
@@ -69,6 +70,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
+            console.info('[EtsProcess]process change dir')
             process.chdir('/system')
             this.result = process.cwd().toString()
           })
@@ -83,6 +85,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
+            console.info('[EtsProcess]send signal')
             var pres = process.getPid
             var result = process.kill(pres, 28)
             if (result === true) {
@@ -104,11 +107,11 @@ struct Index {
           .onClick(() => {
             child = process.runCmd('sleep 3;ls')
             this.result = child == null ? 'failed' : 'succeed'
-            console.info('guojin runCmd=' + this.result)
+            console.info('[EtsProcess]runCmd=' + this.result)
             var result = child.wait();
             result.then(val => {
               this.result = 'child process run finish' + JSON.stringify(val)
-              console.info('runCmd result =' + val)
+              console.info('[EtsProcess]runCmd result =' + val)
             })
           })
           Button() {
@@ -122,6 +125,7 @@ struct Index {
           .margin({ top: 15 })
           .backgroundColor('#0D9FFB')
           .onClick(() => {
+            console.info('[EtsProcess]close child process')
             child.close()
             this.result = 'close succeed'
           })
@@ -136,6 +140,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
+            console.info('[EtsProcess]process exit')
             process.exit(0)
           })
           Text(this.result)
