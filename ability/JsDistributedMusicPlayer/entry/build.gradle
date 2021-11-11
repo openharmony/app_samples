@@ -1,6 +1,6 @@
 apply plugin: 'com.huawei.ohos.hap'
 ohos {
-    compileSdkVersion 6
+    compileSdkVersion 7
     defaultConfig {
         compatibleSdkVersion 6
     }
@@ -12,5 +12,4 @@ ohos {
             }
         }
     }
-    supportSystem "standard"
 }
