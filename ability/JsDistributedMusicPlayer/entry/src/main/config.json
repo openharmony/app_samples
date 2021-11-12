@@ -43,7 +43,9 @@
         "description": "$string:mainability_description",
         "label": "$string:app_name",
         "type": "page",
-        "launchType": "singleton"
+        "launchType": "singleton",
+        "srcPath": "default",
+        "srcLanguage": "js"
       }
     ],
     "js": [
