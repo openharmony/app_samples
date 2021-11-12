@@ -26,6 +26,7 @@ import ohos.data.orm.OrmMigration;
 import ohos.data.orm.OrmObjectObserver;
 import ohos.data.orm.OrmPredicates;
 import ohos.data.preferences.Preferences;
+import ohos.data.rdb.RdbException;
 import ohos.data.rdb.RdbStore;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
@@ -267,8 +268,13 @@ public class OrmContextSlice extends AbilitySlice {
 
         @Override
         public void onMigrate(RdbStore store) {
-            HiLog.info(LABEL_LOG, "DataBase Version 1->2 onMigrate called");
-            store.executeSql("ALTER TABLE `Book` ADD COLUMN `addColumn12` INTEGER");
+            try {
+                HiLog.info(LABEL_LOG, "DataBase Version 1->2 onMigrate called");
+                store.executeSql("ALTER TABLE `Book` ADD COLUMN `addColumn12` INTEGER");
+            }
+            catch (RdbException e) {
+                HiLog.error(LABEL_LOG, "TestOrmMigration12.onMigrate exception, %{public}s", e.getMessage());
+            }
         }
     }
 
