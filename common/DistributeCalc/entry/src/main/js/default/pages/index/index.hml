@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div class="calc-container" @swipe="showDialog">
+<div class="calc-container">
     <div class="content">
         <stack class="calc-titlebar">
             <image class="calc-icon calc-back-btn" src="/common/ic_back.png" @click="handleExist"/>
