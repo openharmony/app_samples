@@ -1,0 +1,120 @@
+<!--
+Copyright (c) 2021 Huawei Device Co., Ltd.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div class="container">
+    <div class="header" onclick="exitApp">
+        <image class="back" src="/common/ic_back.png"></image>
+        <text class="title">{{ $t('strings.title') }}</text>
+    </div>
+    <list class="list">
+        <list-item class="list-item">
+            <swiper class="swiper" index="{{ swiperPage }}" duration="500" onchange="swiperChange">
+                <div class="page">
+                    <div class="progress-div">
+                        <text class="location-text">
+                            {{ airData[0].location }}
+                        </text>
+                        <stack class="progress">
+                            <progress class="circle-progress"
+                                      style="color : {{ textColor1 }}; background-color : {{ bgColor1 }};" type="arc"
+                                      percent="{{ percent1 }}">
+                            </progress>
+                            <div class="mask-layer">
+                                <text class="aqi">AQI</text>
+                                <text class="aqi-value">{{ airData[0].detailData }}</text>
+                                <text class="airquality" style="color : {{ textColor1 }};">{{ airData[0].airQuality }}
+                                </text>
+                            </div>
+                        </stack>
+                    </div>
+                    <div class="detail">
+                        <div class="text-wrapper">
+                            <text class="gas-name">CO</text>
+                            <text class="gas-value">100</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">NO2</text>
+                            <text class="gas-value">90</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">PM10</text>
+                            <text class="gas-value">120</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">PM2.5</text>
+                            <text class="gas-value">40</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">SO2</text>
+                            <text class="gas-value">150</text>
+                        </div>
+                    </div>
+                    <div style="width: 100%; justify-content: center;">
+                    <input class="btn" type="button" onclick="openDetail" value="{{ $t('strings.history') }}"></input>
+                    </div>
+                    <div class="footer">
+                        <text class="update-time">{{ $t('strings.update_time') }}</text>
+                        <text class="info-source">{{ $t('strings.source_info') }}</text>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="progress-div">
+                        <text class="location-text">
+                            {{ airData[1].location }}
+                        </text>
+                        <stack class="progress">
+                            <progress class="circle-progress"
+                                      style="color : {{ textColor2 }}; background-color : {{ bgColor2 }};" type="arc"
+                                      percent="{{ percent1 }}">
+                            </progress>
+                            <div class="mask-layer">
+                                <text class="aqi">AQI</text>
+                                <text class="aqi-value">{{ airData[1].detailData }}</text>
+                                <text class="airquality" style="color : {{ textColor2 }};">{{ airData[1].airQuality }}
+                                </text>
+                            </div>
+                        </stack>
+                    </div>
+                    <div class="detail">
+                        <div class="text-wrapper">
+                            <text class="gas-name">CO</text>
+                            <text class="gas-value">100</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">NO2</text>
+                            <text class="gas-value">90</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">PM10</text>
+                            <text class="gas-value">120</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">PM2.5</text>
+                            <text class="gas-value">40</text>
+                        </div>
+                        <div class="text-wrapper">
+                            <text class="gas-name">SO2</text>
+                            <text class="gas-value">150</text>
+                        </div>
+                    </div>
+                    <input class="btn" type="button" onclick="openDetail" value="{{ $t('strings.history') }}"></input>
+                    <div class="footer">
+                        <text class="update-time">{{ $t('strings.update_time') }}</text>
+                        <text class="info-source">{{ $t('strings.source_info') }}</text>
+                    </div>
+                </div>
+            </swiper>
+        </list-item>
+    </list>
+</div>
