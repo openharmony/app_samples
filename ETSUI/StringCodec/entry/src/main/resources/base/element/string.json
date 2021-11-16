@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "StringCodec",
+      "value": "StringCodec"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "StringCodec_title",
+      "value": "字符串编解码"
+    },
+    {
+      "name": "StringName",
+      "value": "字符串"
+    },
+    {
+      "name": "SpecString",
+      "value": "字符串 : "
+    },
+    {
+      "name": "SpecString_info",
+      "value": "HarmonyOS 3.0"
+    },
+    {
+      "name": "result",
+      "value": "result = "
+    },
+    {
+      "name": "result_f",
+      "value": "result[%f] = "
+    },
+    {
+      "name": "result_i",
+      "value": "result[%i] = "
+    },
+    {
+      "name": "result_d",
+      "value": "result[%d] = "
+    },
+    {
+      "name": "result_s",
+      "value": "result[%s] = "
+    },
+    {
+      "name": "SpecFormOutput",
+      "value": "特定格式输出"
+    },
+    {
+      "name": "num1",
+      "value": "10"
+    },
+    {
+      "name": "num2",
+      "value": "20"
+    },
+    {
+      "name": "num3",
+      "value": "100"
+    },
+    {
+      "name": "num4",
+      "value": "-10"
+    },
+    {
+      "name": "num5",
+      "value": "1000"
+    },
+    {
+      "name": "getErrorInfo",
+      "value": "获取系统错误码对应的详细信息"
+    },
+    {
+      "name": "StringCodec_info",
+      "value": "HarmonyOS 3.0，未来有迹可循！"
+    },
+    {
+      "name": "read",
+      "value": "读取："
+    },
+    {
+      "name": "write",
+      "value": "写入："
+    },
+    {
+      "name": "Text_encoder",
+      "value": "文本编码器"
+    },
+    {
+      "name": "Text_decoder",
+      "value": "文本译码器"
+    },
+    {
+      "name": "description_errlnput",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "entry_errlnput",
+      "value": "entry_errlnput"
+    }
+  ]
+}
