@@ -19,28 +19,11 @@ We provide a series of app samples to help you quickly get familiar with the API
 
 1.  Before installing and running the sample, check the  **deviceType**  field in the  **config.json**  file to obtain the device types supported by the sample. You can modify this field to enable the sample to run on your target device. \(The  **config.json**  file is generally stored in the  **entry/src/main**  directory, which may be different depending on the samples.\)
 2.  If you want to run the app sample on HarmonyOS, configure the development environment by referring to  [HUAWEI DevEco Studio User Guide](https://developer.harmonyos.com/en/docs/documentation/doc-guides/tools_overview-0000001053582387). If you want to run the app sample on OpenHarmony, configure the development environment by referring to  [DevEco Studio \(OpenHarmony\) User Guide](https://gitee.com/openharmony/docs/blob/master/en/application-dev/quick-start/Readme-EN.md).
-3.  The following app samples can run on OpenHarmony, and other app samples can run only on HarmonyOS:
-    -   common/Clock
-    -   common/JsHelloWorld
-    -   common/DistributeCalc
-    -   common/ECG
-    -   common/Flashlight
-    -   ability/JsDistributedMusicPlayer
-    -   common/DistributeCalc
-    -   UI/AtomicLayout
-    -   UI/Badge
-    -   UI/chart
-    -   UI/JsAnimationStyle
-    -   UI/Picker
-    -   UI/Popup
-    -   UI/RefreshContainer
-    -   UI/Stack
-    -   UI/StepNavigator
-    -   UI/Swiper
-    -   UI/Tabs
-
+3.  App samples that can run on standard-system or small-system devices (as stipulated in **Readme**) must run on OpenHarmony, whereas those that can run on large-system devices must run on HarmonyOS.
+4.  All app samples that must run on HarmonyOS have been migrated to the [harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples) repository in the [HarmonyOS community](https://gitee.com/harmonyos). These samples will no longer be updated in the current repository and will be removed soon.
 
 ## Repositories Involved<a name="section741114082513"></a>
 
-1.  [applications\_sample\_camera](https://gitee.com/openharmony/applications_sample_camera/blob/master/README.md)
-2.  [applications\_sample\_wifi\_iot](https://gitee.com/openharmony/applications_sample_wifi_iot/blob/master/README.md)
+1.  App samples of the **CAMERA\_SAMPLE\_APP** module: [applications\_sample\_camera](https://gitee.com/openharmony/applications_sample_camera/blob/master/README.md)
+2.  App samples of the **WIFI\_IOT\_APP** module: [applications\_sample\_wifi\_iot](https://gitee.com/openharmony/applications_sample_wifi_iot/blob/master/README.md)
+3.  HarmonyOS app samples: [harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples)
