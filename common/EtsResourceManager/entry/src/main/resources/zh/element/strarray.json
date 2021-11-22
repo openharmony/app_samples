@@ -1,0 +1,18 @@
+{
+  "strarray": [
+    {
+      "name": "str_array",
+      "value": [
+        {
+          "value": "小"
+        },
+        {
+          "value": "大"
+        },
+        {
+          "value": "超大"
+        }
+      ]
+    }
+  ]
+}
