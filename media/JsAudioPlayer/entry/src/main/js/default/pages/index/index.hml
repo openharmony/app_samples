@@ -1,0 +1,54 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container" onswipe="touchMove">
+    <div class="div-image">
+        <image class="image" src="common/images/bg-tv.jpg"></image>
+    </div>
+    <text class="title">
+        {{ title }}
+    </text>
+
+    <div class="div-but">
+        <div class="btn">
+            <image class="btn-image" src="common/images/volume.png" on:click="showPanel"></image>
+        </div>
+        <div class="btn">
+            <image class="btn-image" src="common/images/previous.png" on:click="onPreviousClick"></image>
+        </div>
+        <div class="btn">
+            <image class="btn-image" id="pauseId" src="{{ audioUrl }}" on:click="onPlayClick"></image>
+        </div>
+        <div class="btn">
+            <image class="btn-image" src="common/images/next.png" on:click="onNextClick"></image>
+        </div>
+    </div>
+    <panel id="showPanel" type="temporary">
+        <div class="title-panel">
+            <div class="image-div">
+                <image class="image-panel" src="common/images/music.png"></image>
+                <text class="text">{{ $t('strings.media') }}</text>
+            </div>
+            <div class="bell-div">
+                <text class="slider-value">0</text>
+                <slider class="slider" min="0" max="15" mode="inset" on:change="media"></slider>
+                <text class="slider-value">15</text>
+            </div>
+            <div class="close-panel">
+                <button class="panel-btn" type="capsule" value="{{$t('strings.close')}}" onclick="closePanel"></button>
+            </div>
+        </div>
+    </panel>
+</div>
