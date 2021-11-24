@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Ets公共事件"
+    },
+    {
+      "name": "description_mainability",
+      "value": "EtsCommonEvent Ability"
+    },
+    {
+      "name": "create_subscriber",
+      "value": "创建订阅者"
+    },
+    {
+      "name": "subscribe",
+      "value": "订阅公共事件"
+    },
+    {
+      "name": "publish",
+      "value": "发布公共事件"
+    },
+    {
+      "name": "publish_specify_commonEvent",
+      "value": "发布公共事件指定发布信息"
+    },
+    {
+      "name": "unsubscribe",
+      "value": "取消订阅"
+    }
+  ]
+}

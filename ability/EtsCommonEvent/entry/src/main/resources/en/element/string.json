@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "EtsCommonEvent"
+    },
+    {
+      "name": "description_mainability",
+      "value": "EtsCommonEvent Ability"
+    },
+    {
+      "name": "create_subscriber",
+      "value": "Create subscriber"
+    },
+    {
+      "name": "subscribe",
+      "value": "Subscribe"
+    },
+    {
+      "name": "publish",
+      "value": "Publish commonEvent"
+    },
+    {
+      "name": "publish_specify_commonEvent",
+      "value": "Publish specify commonEvent"
+    },
+    {
+      "name": "unsubscribe",
+      "value": "Unsubscribe"
+    }
+  ]
+}
