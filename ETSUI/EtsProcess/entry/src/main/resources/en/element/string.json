@@ -10,31 +10,31 @@
     },
     {
       "name": "uptime",
-      "value": "Get current process rum time"
+      "value": "Get running time"
     },
     {
       "name": "runCmd",
-      "value": "Start a child process"
+      "value": "Start child process"
     },
     {
       "name": "close_child",
-      "value": "Close the child process"
+      "value": "Close child process"
     },
     {
       "name": "cwd",
-      "value": "Get process work directory"
+      "value": "Get process working directory"
     },
     {
       "name": "change_work_directory",
-      "value": "Change work directory"
+      "value": "Change process working directory"
     },
     {
       "name": "exit",
-      "value": "Exit the process"
+      "value": "Exit process"
     },
     {
       "name": "kill",
-      "value": "send signal to process"
+      "value": "Send signal to process"
     }
   ]
 }
