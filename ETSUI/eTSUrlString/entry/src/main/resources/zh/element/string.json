@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSURLString"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "url",
+      "value": "URL:"
+    },
+    {
+      "name": "insert",
+      "value": "插入键值对到查询字符串"
+    },
+    {
+      "name": "delete",
+      "value": "删除键值对"
+    },
+    {
+      "name": "getFirst",
+      "value": "获取指定名称对应的第一个值"
+    },
+    {
+      "name": "setValue",
+      "value": "设置键的新值"
+    },
+    {
+      "name": "pleaseInsert",
+      "value": "不存在，请先插入"
+    }
+  ]
+}
