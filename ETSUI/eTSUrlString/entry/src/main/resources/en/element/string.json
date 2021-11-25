@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSURLString"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "url",
+      "value": "URL:"
+    },
+    {
+      "name": "insert",
+      "value": "Insert Key-value"
+    },
+    {
+      "name": "delete",
+      "value": "Delete Key-value"
+    },
+    {
+      "name": "getFirst",
+      "value": "GetFirst Key-value"
+    },
+    {
+      "name": "setValue",
+      "value": "Set new value of key"
+    },
+    {
+      "name": "pleaseInsert",
+      "value": "It does not exist. Please insert first"
+    }
+  ]
+}
