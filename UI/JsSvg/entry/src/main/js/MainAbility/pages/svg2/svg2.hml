@@ -24,7 +24,7 @@
             </svg>
         </list-item>
         <list-item class="list-item">
-            <text class="text">{{ 'polygon :' }}</text>
+            <text class="text">{{ 'polygon:' }}</text>
             <svg fill="white" stroke="blue" stroke-width="5" width="700" height="420">
                 <polygon points="10,200 160,50 160,170 310,30" fill="red"></polygon>
                 <polygon points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">

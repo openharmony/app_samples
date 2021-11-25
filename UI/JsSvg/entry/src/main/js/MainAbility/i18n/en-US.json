@@ -4,6 +4,6 @@
     "svg1": "circle\nellipse\npath\nline",
     "svg2": "polyline\npolygon",
     "svg3": "text\ntspan\ntextPath",
-    "svg4": "animate\nanimateMotion\nnanimateTransform"
+    "svg4": "animate\nanimateMotion\nanimateTransform"
   }
 }
