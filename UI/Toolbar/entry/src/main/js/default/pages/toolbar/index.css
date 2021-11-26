@@ -16,7 +16,7 @@
 .container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .list {
@@ -28,10 +28,11 @@
 }
 
 .title {
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    font-size: 30px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 .text {
