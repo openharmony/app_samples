@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "video_duration": "视频时长",
+    "second": "秒",
+    "video_start": "视频开始播放",
+    "video_pause": "视频暂停播放",
+    "video_seeked": "设置播放进度：",
+    "dialog_title": "视频播放完成，是否重新播放?",
+    "sure": "确定",
+    "cancel": "取消"
+  }
+}

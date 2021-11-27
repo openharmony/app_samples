@@ -1,0 +1,49 @@
+<!--
+Copyright (c) 2021 Huawei Device Co., Ltd.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div class="container" id="page">
+    <stack class="video-block">
+        <image class="image" src="/common/images/bg-tv.jpg"></image>
+        <video id="video"
+               class="video"
+               src="{{url}}"
+               autoplay="{{ autoplay }}"
+               poster="/common/images/bg-tv.jpg"
+               controls="{{ controlShow }}"
+               loop="{{ loop }}"
+               starttime="{{startTime}}}"
+               speed="{{speed}}"
+               on:prepared="prepared"
+               on:start="start"
+               on:pause="pause"
+               on:finish="finish"
+               on:seeked="seeked"
+               on:timeupdate="timeupdate"
+               on:longpress="longPress"
+               on:click="onClick" >
+        </video>
+    </stack>
+
+    <dialog id="confirmDialog" class="dialog-main">
+        <div class="dialog-content">
+            <div class="inner-txt">
+                <text class="txt">{{ $t('strings.dialog_title') }}</text>
+            </div>
+            <div class="inner-btn">
+                <button type="capsule" value="{{ $t('strings.cancel') }}" onclick="cancel" class="btn-txt"></button>
+                <button type="capsule" value="{{ $t('strings.sure') }}" onclick="confirm" class="btn-txt"></button>
+            </div>
+        </div>
+    </dialog>
+</div>
