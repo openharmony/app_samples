@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "video_duration": "Video duration",
+    "second": "second",
+    "video_start": "Video started",
+    "video_pause": "Video paused",
+    "video_seeked": "Set play progress:",
+    "dialog_title": "Video is complete, replay?",
+    "sure": "OK",
+    "cancel": "Cancel"
+  }
+}
