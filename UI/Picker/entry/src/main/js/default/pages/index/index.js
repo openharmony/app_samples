@@ -27,13 +27,13 @@ export default {
         this.dataText = e.newValue
     },
     dateChange(e) {
-        this.dataDate = e.year + "-" + e.month + "-" + e.day
+        this.dataDate = e.year + "-" + (e.month + 1) + "-" + e.day
     },
     timeChange(e) {
         this.dataTime = e.hour + ":" + e.minute + ":" + e.second
     },
     dateTimeChange(e) {
-        this.dataDateTime = e.year + "-" + e.month + "-" + e.day + "-" + e.hour + "-" + e.minute
+        this.dataDateTime = e.year + "-" + (e.month + 1) + "-" + e.day + "-" + e.hour + "-" + e.minute
     },
     multiTextChange(e) {
         var sum = " "

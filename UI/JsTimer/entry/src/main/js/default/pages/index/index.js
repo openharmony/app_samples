@@ -26,8 +26,8 @@ export default {
         time: 0
     },
     dateTimeChange(e) {
-        this.dataDateTime = e.year + "-" + e.month + "-" + e.day + "-" + e.hour + "-" + e.minute;
-        var date = new Date(e.year, e.month, e.day, e.hour, e.minute);
+        this.dataDateTime = e.year + "-" + (e.month + 1) + "-" + e.day + "-" + e.hour + "-" + e.minute;
+        var date = new Date(e.year, (e.month + 1), e.day, e.hour, e.minute);
         this.time = date.getTime();
     },
     timeChange(e) {
