@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSKvStore"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSKvStore Ability"
+    },
+    {
+      "name": "title",
+      "value": "eTSKvStore"
+    },
+    {
+      "name": "check_device",
+      "value": "Check device"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "note",
+      "value": "Note"
+    },
+    {
+      "name": "note_content",
+      "value": "Note content"
+    }
+  ]
+}
