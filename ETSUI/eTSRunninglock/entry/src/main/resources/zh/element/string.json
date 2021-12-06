@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSRunningLock"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "init_output",
+      "value": "休眠锁关闭，可定时息屏"
+    },
+    {
+      "name": "control_sleepLock",
+      "value": "控制系统休眠的锁"
+    },
+    {
+      "name": "search_support",
+      "value": "查询系统是否支持休眠锁"
+    },
+    {
+      "name": "sleepLockSwitch",
+      "value": "休眠锁开关"
+    },
+    {
+      "name": "timingout_screen",
+      "value": "5s后定时熄屏"
+    },
+    {
+      "name":"supportLock",
+      "value": "本系统支持阻止系统休眠的锁"
+    },
+    {
+      "name":"unsupportLock",
+      "value": "本系统不支持阻止系统休眠的锁"
+    },
+    {
+      "name":"stopSleep",
+      "value": "休眠锁已打开,无法定时熄屏"
+    },
+    {
+      "name":"turnSleep",
+      "value": "该锁已被解除,5s后可定时熄屏"
+    }
+  ]
+}

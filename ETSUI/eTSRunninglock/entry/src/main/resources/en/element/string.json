@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSRunningLock"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "init_output",
+      "value": "The sleep lock is off, and the screen can be off periodically"
+    },
+    {
+      "name": "control_sleepLock",
+      "value": "System sleep control lock"
+    },
+    {
+      "name": "search_support",
+      "value": "Query suppor"
+    },
+    {
+      "name": "sleepLockSwitch",
+      "value": "Sleep lock switch"
+    },
+    {
+      "name": "timingout_screen",
+      "value": "Timing out screen 5s after"
+    },
+    {
+      "name":"supportLock",
+      "value": "supportSleepLock"
+    },
+    {
+      "name":"unsupportLock",
+      "value": "unsupportSleepLock"
+    },
+    {
+      "name":"stopSleep",
+      "value": "The sleep lock is open and the screen cannot be periodically extinguished"
+    },
+    {
+      "name":"turnSleep",
+      "value": "The lock has been removed, and the screen can be put out periodically after 5 seconds"
+    }
+  ]
+}
