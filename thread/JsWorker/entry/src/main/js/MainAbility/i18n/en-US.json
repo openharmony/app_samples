@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "title": "JsWorker",
+    "tip_before": "Before sort:",
+    "tip_after": "After sort:",
+    "send_string": "Sort string array",
+    "clear": "Clear",
+    "menus": ["string adc","string adcf","string afc","string aaccdd"]
+  },
+  "Files": {
+  }
+}

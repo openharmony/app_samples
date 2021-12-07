@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "title": "JsWorker",
+    "tip_before": "排序前:",
+    "tip_after": "排序后:",
+    "send_string": "字符串排序",
+    "clear": "清除"
+  },
+  "Files": {
+  }
+}
