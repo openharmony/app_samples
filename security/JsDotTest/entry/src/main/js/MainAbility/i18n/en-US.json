@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "appName": "Dot Testing",
+    "event": "Event into",
+    "tracking": "Tracking",
+    "disable": "Disable application dosing：",
+    "write_success": "Successful write event",
+    "write_failed": "Write event failed，",
+    "appDisabled": "Failed to write event when application log is disabled",
+    "appAble": "Enable application registration, at which time events can be written successfully"
+  }
+}
