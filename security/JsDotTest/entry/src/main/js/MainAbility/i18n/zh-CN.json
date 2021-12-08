@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "appName": "测试打点",
+    "event": "事件写入",
+    "tracking": "追踪数值",
+    "disable": "禁用应用打点：",
+    "write_success": "成功写入事件",
+    "write_failed": "写入事件失败，",
+    "appDisabled": "禁用应用打点，无法成功写入事件",
+    "appAble": "启用应用打点，此时可成功写入事件"
+  }
+}
