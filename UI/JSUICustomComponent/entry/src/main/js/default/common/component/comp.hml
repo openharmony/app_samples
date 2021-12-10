@@ -17,7 +17,7 @@
     <image class="book_image" src="common/images/book.png"></image>
     <div class="content">
         <text class="text-name">{{ name }}</text>
-        <text class="text-introduction">{{ $t('strings.book_introduction') }}</text>
-        <text class="text-collect" style="color: {{ collectColor }};" onclick="childClicked">{{ collectStr }}</text>
+        <slot name="first"></slot>
+        <text class="text-collect" style="color : {{ collectColor }};" onclick="childClicked">{{ collectStr }}</text>
     </div>
 </div>

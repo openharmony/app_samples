@@ -25,7 +25,7 @@ export default {
     textClicked(obj) {
         console.info("textClicked, " + obj.detail.bookName)
         for (let todolistKey in this.bookNames) {
-            if(obj.detail.bookName == this.bookNames[todolistKey].name) {
+            if (obj.detail.bookName == this.bookNames[todolistKey].name) {
                 var result = this.bookNames[todolistKey].collect
                 this.bookNames[todolistKey].collect = !result
             }
@@ -34,13 +34,13 @@ export default {
     onShelfClick() {
         var collects = new Array();
         for (let todolistKey in this.bookNames) {
-            if(true == this.bookNames[todolistKey].collect) {
+            if (true == this.bookNames[todolistKey].collect) {
                 collects.push(this.bookNames[todolistKey])
             }
         }
         router.push({
             uri: "pages/collect/index",
-            params:{
+            params: {
                 bookNames: collects,
             }
         })

@@ -12,6 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import router from '@system.router';
 
 export default {
     data: {
@@ -22,5 +23,8 @@ export default {
         if(JSON.stringify(this.bookNames).length<=2){
             this.showTips = true
         }
+    },
+    back: function(){
+        router.back()
     }
 }
