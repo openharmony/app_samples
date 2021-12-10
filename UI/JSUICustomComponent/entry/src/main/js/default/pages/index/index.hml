@@ -17,8 +17,10 @@
 <div class="container">
     <text class="text-title" onclick="childClicked">{{ $t('strings.recommend') }}</text>
     <list scrolleffect="no">
-        <list-item clickeffect="false"  for="{{ bookNames }}">
-            <comp @event-type1="textClicked" name="{{ $item.name }}" collect="{{ $item.collect }}"></comp>
+        <list-item clickeffect="false" for="{{ bookNames }}">
+            <comp @event-type1="textClicked" name="{{ $item.name }}" collect="{{ $item.collect }}">
+                <text class="text-introduction" slot="first">{{ $t('strings.book_introduction') }}</text>
+            </comp>
         </list-item>
     </list>
     <div class="div-button">

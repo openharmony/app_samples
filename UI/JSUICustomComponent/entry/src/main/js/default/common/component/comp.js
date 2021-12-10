@@ -26,8 +26,8 @@ export default {
             }
         }
     },
-    onInit(){
-        this.initData();
+    onInit() {
+        console.info('[JsCustomComponet] comp onInit')
     },
     initData() {
         if (this.collect) {
@@ -38,8 +38,28 @@ export default {
             this.collectColor = "blue"
         }
     },
-    childClicked () {
-        this.$emit('eventType1',{bookName: this.name})
+    clearData() {
+        this.collectStr = ""
+        this.collectColor = ""
+    },
+    onAttached() {
+        console.info('[JsCustomComponet] comp onAttached')
+    },
+    onDetached() {
+        console.info('[JsCustomComponet] comp onDetached')
+    },
+    onPageShow() {
+        this.initData();
+        console.info('[JsCustomComponet] comp onPageShow')
+    },
+    onPageHide() {
+        console.info('[JsCustomComponet] comp onPageHide')
+        this.clearData()
+    },
+    childClicked() {
+        this.$emit('eventType1', {
+            bookName: this.name
+        })
         this.initData()
     },
 }
