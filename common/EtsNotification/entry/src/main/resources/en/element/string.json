@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "eTSNotification"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "choose_notification_type",
+      "value": "Choose notification type"
+    },
+    {
+      "name": "notification_type_normal",
+      "value": "Notification content basic text"
+    },
+    {
+      "name": "notification_type_long_text",
+      "value": "Notification content long text"
+    },
+    {
+      "name": "notification_type_multiline",
+      "value": "Notification content multiline"
+    },
+    {
+      "name": "add_slot",
+      "value": "Add slot"
+    },
+    {
+      "name": "publish_notification",
+      "value": "Publish notification"
+    },
+    {
+      "name": "cancel_last_notification",
+      "value": "Cancel the last notification"
+    },
+    {
+      "name": "cancel_all_notification",
+      "value": "Cancel all notification"
+    },
+    {
+      "name": "delete_slot",
+      "value": "Delete slot"
+    }
+  ]
+}
