@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "eTSNotification"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "choose_notification_type",
+      "value": "请选择通知类型"
+    },
+    {
+      "name": "notification_type_normal",
+      "value": "普通类型通知"
+    },
+    {
+      "name": "notification_type_long_text",
+      "value": "长文本类型通知"
+    },
+    {
+      "name": "notification_type_multiline",
+      "value": "多行文本类型通知"
+    },
+    {
+      "name": "add_slot",
+      "value": "创建Slot通道"
+    },
+    {
+      "name": "publish_notification",
+      "value": "发布通知"
+    },
+    {
+      "name": "cancel_last_notification",
+      "value": "取消最近发布的通知"
+    },
+    {
+      "name": "cancel_all_notification",
+      "value": "取消所有通知"
+    },
+    {
+      "name": "delete_slot",
+      "value": "删除通道"
+    }
+  ]
+}
