@@ -26,12 +26,12 @@ export default {
         time: 0
     },
     dateTimeChange(e) {
-        this.dataDateTime = e.year + "-" + (e.month + 1) + "-" + e.day + "-" + e.hour + "-" + e.minute;
-        var date = new Date(e.year, (e.month + 1), e.day, e.hour, e.minute);
+        this.dataDateTime = e.year + '-' + (e.month + 1) + '-' + e.day + '-' + e.hour + '-' + e.minute;
+        var date = new Date(e.year, e.month, e.day, e.hour, e.minute);
         this.time = date.getTime();
     },
     timeChange(e) {
-        this.dataTime = e.hour + ":" + e.minute + ":" + e.second;
+        this.dataTime = e.hour + ':' + e.minute + ':' + e.second;
         this.milliSecond = Number(e.hour) * 3600 * 1000 + Number(e.minute) * 60 * 1000 + Number(e.second) * 1000;
     },
     setTimer() {
