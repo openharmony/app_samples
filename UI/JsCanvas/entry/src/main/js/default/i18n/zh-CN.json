@@ -5,6 +5,10 @@
     "close": "封闭",
     "bezierCurve": "贝赛尔曲线",
     "textBaseline": "水平对齐",
+    "image": "图片",
+    "linearGradient": "线性渐变",
+    "radialGradient": "径向渐变",
+    "filter": "滤镜",
     "delete": "清除"
   }
 }

@@ -5,6 +5,10 @@
     "close": "close",
     "bezierCurve": "bezierCurve",
     "textBaseline": "textBaseline",
+    "image": "image",
+    "linearGradient": "linearGradient",
+    "radialGradient": "radialGradient",
+    "filter": "filter",
     "delete": "delete"
   }
 }
