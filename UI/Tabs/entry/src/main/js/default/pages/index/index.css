@@ -17,6 +17,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .tabs {
@@ -26,7 +28,7 @@
 
 .tab-content{
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
 .item-content {
@@ -88,6 +90,7 @@
 
 .dynamic-item {
     height: 56px;
+    width: 100%;
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 8px;
@@ -110,7 +113,7 @@
 
 .tab-bar {
     width: 100%;
-    height: 56px;
+    height: 67px;
     flex-direction: row;
     background-color: white;
 }

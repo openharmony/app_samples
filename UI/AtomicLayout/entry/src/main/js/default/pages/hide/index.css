@@ -17,7 +17,7 @@
 
 .aquamarine-box {
     width: 50%;
-    height: 150px;
+    height: 120px;
     display-index: 3;
     text-align: center;
     background-color: #DAF7A6;
@@ -25,7 +25,7 @@
 
 .yellow-box {
     width: 50%;
-    height: 150px;
+    height: 120px;
     display-index: 2;
     text-align: center;
     background-color: #FFC300;
@@ -33,7 +33,7 @@
 
 .red-box {
     width: 50%;
-    height: 150px;
+    height: 120px;
     display-index: 1;
     text-align: center;
     background-color: #FF5733;

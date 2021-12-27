@@ -48,7 +48,11 @@
           "pages/index/index",
           "pages/collect/index"
         ],
-        "name": ".default"
+        "name": ".default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
       }
     ]
   }

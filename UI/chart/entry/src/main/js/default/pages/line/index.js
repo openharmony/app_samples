@@ -27,8 +27,8 @@ export default {
                         textColor: '#000000'
                     },
                     {
-                        value: 15,
-                        description: "15",
+                        value: 20,
+                        description: "20",
                         textLocation: "bottom",
                         textColor: '#000000'
                     },
@@ -51,8 +51,8 @@ export default {
                         textColor: '#000000'
                     },
                     {
-                        value: 83,
-                        description: "83",
+                        value: 80,
+                        description: "80",
                         textLocation: "top",
                         textColor: '#000000'
                     },
@@ -75,8 +75,8 @@ export default {
                         textColor: '#000000'
                     },
                     {
-                        value: 99,
-                        description: "99",
+                        value: 81,
+                        description: "81",
                         textLocation: "top",
                         textColor: '#000000'
                     },
@@ -99,7 +99,7 @@ export default {
             },
             series: {
                 lineStyle: {
-                    width: "5px",
+                    width: "3px",
                     smooth: true,
                 },
                 headPoint: {

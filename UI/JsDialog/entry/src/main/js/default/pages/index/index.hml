@@ -35,7 +35,8 @@
                 </input>
             </list-item>
         </list>
-        <text class="tips" show="{{ showTips }}">
+
+        <text class="tips" if="{{ showTips }}">
             {{ $t('strings.tips') }}
         </text>
     </stack>
@@ -55,11 +56,11 @@
         <div class="dialog-container">
             <div class="dialog-text-container">
                 <text class="dialog-text">{{ $t('strings.name') }}</text>
-                <textarea class="dialog-edit" value="{{ name }}">{{ name }}</textarea>
+                <text class="dialog-edit">{{ name }}</text>
             </div>
             <div class="text-container">
                 <text class="dialog-text">{{ $t('strings.phone') }}</text>
-                <textarea class="dialog-edit" value="{{ phone }}">{{ phone }}</textarea>
+                <text class="dialog-edit">{{ phone }}</text>
             </div>
             <div class="text-container">
                 <input class="dialog-btn" type="button" value="{{ $t('strings.sure') }}" onclick="onConfirm"></input>

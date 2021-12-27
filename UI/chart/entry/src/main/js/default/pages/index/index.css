@@ -13,11 +13,12 @@
  * limitations under the License.
  */
 
- @import '../../common/common.css';
+@import '../../common/common.css';
 
 .btn {
     width: 70%;
-    height: 48px;
-    font-size: 16px;
-    margin-top: 20px;
+    height: 80px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
