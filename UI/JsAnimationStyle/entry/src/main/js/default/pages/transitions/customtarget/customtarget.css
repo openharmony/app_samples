@@ -14,8 +14,9 @@
  */
 
 .container {
+    width: 100%;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: #f8f8ff;
     transition-enter: Gocustomtransition;

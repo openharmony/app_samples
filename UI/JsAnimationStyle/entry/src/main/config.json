@@ -47,10 +47,6 @@
         "pages": [
           "pages/index/index",
           "pages/animation/index/index",
-          "pages/animation/rotate/rotate",
-          "pages/animation/scale/scale",
-          "pages/animation/translate/translate",
-          "pages/animation/compositeanimation/compositeanimation",
           "pages/gradient/index",
           "pages/customfont/index",
           "pages/transitions/index/index",
@@ -61,7 +57,11 @@
           "pages/transitions/customtransition/customtransition",
           "pages/transitions/customtarget/customtarget"
         ],
-        "name": ".default"
+        "name": ".default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
       }
     ]
   }

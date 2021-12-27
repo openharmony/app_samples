@@ -49,7 +49,11 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default"
+        "name": ".default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
       }
     ]
   }

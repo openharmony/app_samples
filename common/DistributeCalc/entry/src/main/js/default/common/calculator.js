@@ -47,7 +47,7 @@ function getFloatNum(one, other, oprate) {
         num = num1 + num2;
     }
     if (oprate === '/') {
-        num = num1 + s2.length;
+        num = (num1 + s2.length) > 3 ? (num1 + s2.length) : 3;
     }
     return num;
 }

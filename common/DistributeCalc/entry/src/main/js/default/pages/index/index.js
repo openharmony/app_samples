@@ -224,7 +224,7 @@ export default {
             if (pressedEqual) {
                 pressedEqual = false;
             }
-            this.expression = value;
+            this.expression += value;
         }
 
     },

@@ -15,11 +15,6 @@
 
  @import '../../common/common.css';
 
-.chart-region {
-    height: 400px;
-    width: 700px;
-}
-
 .chart-data {
     width: 200px;
     height: 200px;

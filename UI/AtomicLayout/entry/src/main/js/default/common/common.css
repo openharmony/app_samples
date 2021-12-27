@@ -18,20 +18,29 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .box {
-    width: 100%;
+    width: 350px;
     align-items: center;
     flex-direction: column;
     background-color: bisque;
 }
 
+.button-flex {
+    width: 350px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn {
-    width: 60%;
-    height: 100px;
-    font-size: 40px;
-    margin-top: 20px;
+    width: 80%;
+    height: 90px;
+    font-size: 30px;
+    margin: 10px;
     color: #ff00ff7f;
 }

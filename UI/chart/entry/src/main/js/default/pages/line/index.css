@@ -16,6 +16,6 @@
  @import '../../common/common.css';
 
 .chart-data {
-    width: 700px;
-    height: 600px;
+    width: 100%;
+    height: 90%;
 }

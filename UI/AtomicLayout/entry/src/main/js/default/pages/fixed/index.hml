@@ -17,6 +17,8 @@
     <div class="box" style="height : {{ height }}; width : {{ width }};">
         <text class="red-box">A</text>
     </div>
-    <button class="btn" value="{{ $t('strings.refresh') }}" onclick="onClickRefresh"></button>
-    <button class="btn" value="{{ $t('strings.return') }}" onclick="onClickReturn"></button>
+    <div class="button-flex">
+        <button class="btn" value="{{ $t('strings.refresh') }}" onclick="onClickRefresh"></button>
+        <button class="btn" value="{{ $t('strings.return') }}" onclick="onClickReturn"></button>
+    </div>
 </div>

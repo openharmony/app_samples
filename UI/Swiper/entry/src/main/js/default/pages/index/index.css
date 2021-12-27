@@ -17,27 +17,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper {
-    height: 250px;
+    height: 60%;
     indicator-size: 8px;
     indicator-color: lemonchiffon;
     align-content: center;
 }
 
 .divbutton {
-    height: 40px;
+    height: 90px;
     justify-content: space-around;
 }
 
 .button {
-    width: 100px;
-    height: 40px;
-    font-size: 16px;
+    width: 150px;
+    height: 90px;
+    font-size: 30px;
+    margin: 10px;
 }
 
 .image {
     width: 100%;
-    height: 200px;
+    height: 100%;
+    object-fit: cover;
 }

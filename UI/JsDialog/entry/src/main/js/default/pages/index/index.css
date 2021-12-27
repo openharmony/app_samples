@@ -144,6 +144,7 @@
     border-width: 1px;
     border-color: black;
     border-style: solid;
+    padding-left: 5px;
 }
 
 .dialog-btn {

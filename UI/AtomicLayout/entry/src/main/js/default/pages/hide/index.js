@@ -21,6 +21,6 @@ export default {
         this.height = "200px"
     },
     onClickRefresh() {
-        this.height = "600px"
+        this.height = "500px"
     }
 }

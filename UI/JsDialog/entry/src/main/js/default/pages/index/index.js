@@ -23,7 +23,6 @@ export default {
         deleteItem: null
     },
     onclick: function () {
-        this.num += 1
         this.name = this.$t('strings.contact') + this.num
         this.$element('showDialog').show();
     },
@@ -40,6 +39,7 @@ export default {
         this.$element('showDialog').close();
     },
     onConfirm: function () {
+        this.num += 1
         this.listItem.push({
             'name': this.name, 'phone': this.phone
         })

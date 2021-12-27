@@ -36,3 +36,8 @@
     margin: 10px;
     padding: 0px;
 }
+
+.text {
+    width: 40px;
+    font-size: 30;
+}

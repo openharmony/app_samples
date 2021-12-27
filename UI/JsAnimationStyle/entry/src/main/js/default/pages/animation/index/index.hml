@@ -14,8 +14,16 @@
  -->
 
 <div class="container">
-    <button class="btn"  value="{{ $t('strings.translate') }}" on:click="onClickTranslate"></button>
-    <button class="btn"  value="{{ $t('strings.rotate') }}"  on:click="onClickRotate"></button>
-    <button class="btn"  value="{{ $t('strings.scale') }}"  on:click="onClickScale"></button>
-    <button class="btn"  value="{{ $t('strings.compositeAnimation') }}"  on:click="onClickComposite"></button>
+    <text class="translate_style">
+        {{ $t('strings.translate') }}
+    </text>
+    <text class="rotate_style">
+        {{ $t('strings.rotate') }}
+    </text>
+    <text class="scale_style" >
+        {{ $t('strings.scale') }}
+    </text>
+    <text class="composite_style">
+        {{ $t('strings.compositeAnimation') }}
+    </text>
 </div>

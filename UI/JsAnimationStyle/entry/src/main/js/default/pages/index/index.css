@@ -14,13 +14,15 @@
  */
 
 .container {
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 .btn {
     width: 60%;
     height: 50px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }

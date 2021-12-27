@@ -14,14 +14,110 @@
  */
 
 .container {
+    width: 100%;
+    padding-top: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:10px;
 }
 
-.btn {
-    width: 60%;
-    height: 50px;
+.translate_style {
     font-size: 20px;
-    margin-top: 20px;
+    text-align: center;
+    text-color: black;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transform-origin: 0px 50%;
+    animation-name: translate_animation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes translate_animation
+{
+    from {
+        transform:translate(0px) ;
+    }
+    to {
+        transform:translate(150px) ;
+    }
+}
+
+.rotate_style {
+    font-size: 20px;
+    text-align: center;
+    text-color: black;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    animation-name: rotate_animation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate_animation
+{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(180deg);
+    }
+}
+
+.scale_style {
+    font-size: 20px;
+    text-align: center;
+    text-color: black;
+    background-color: rebeccapurple;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    animation-name: scale_animation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes scale_animation
+{
+    from {
+        transform: scale(1.0);
+    }
+    to {
+        transform:scale(2.0);
+    }
+}
+
+.composite_style {
+    font-size: 20px;
+    text-align: center;
+    text-color: black;
+    background-color: #f76160;
+    width: 100px;
+    height: 100px;
+    animation-name:compositeAnimation ;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes compositeAnimation
+{
+    from {
+        background-color: #f76160;
+        transform:translate(-100px,-100px) rotate(0deg) scale(1.0);
+    }
+    to {
+        background-color: #09ba07;
+        transform:translate(200px,100px) rotate(180deg) scale(1.5);
+    }
 }
