@@ -52,7 +52,11 @@
           "pages/systemProperties/systemProperties",
           "pages/batteryProperties/batteryProperties"
         ],
-        "name": ".default"
+        "name": ".default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
       }
     ]
   }

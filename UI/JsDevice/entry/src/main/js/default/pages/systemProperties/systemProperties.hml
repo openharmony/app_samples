@@ -14,7 +14,9 @@
  -->
 
 <div class="container">
-    <text class="title">{{ $t('strings.systemProperties') }}:</text>
+    <div class="title-box">
+        <text class="title" onclick="back">{{ $t('strings.systemProperties_title') }}</text>
+    </div>
     <text class="info-text">{{ $t('strings.results') }}: {{ results }}</text>
     <div class="button-row">
         <input class="info-button" type="button" value="setKey" onclick="setKey"></input>
@@ -31,5 +33,4 @@
     <div class="button-row">
         <input class="button-down" type="button" value="getDefAsyncCallback" onclick="getDefAsyncCallback"></input>
     </div>
-    <input class="btn" type="button" value="{{ $t('strings.back') }}" onclick="back"></input>
 </div>

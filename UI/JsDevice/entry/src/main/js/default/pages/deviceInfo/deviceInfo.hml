@@ -14,7 +14,9 @@
  -->
 
 <div class="container">
-    <text class="title">{{ $t('strings.deviceInfo') }}:</text>
+    <div class="title-box">
+        <text class="title" onclick="back">{{ $t('strings.deviceInfo_title') }}</text>
+    </div>
     <text class="info-text">{{ $t('strings.serial') }}: {{ serial }}</text>
     <text class="info-text">{{ $t('strings.bootloaderVersion') }}: {{ bootloaderVersion }}</text>
     <text class="info-text">{{ $t('strings.securityPatchTag') }}: {{ securityPatchTag }}</text>
@@ -28,5 +30,4 @@
     <text class="info-text">{{ $t('strings.sdkApiVersion') }}: {{ sdkApiVersion }}</text>
     <text class="info-text">{{ $t('strings.firstApiVersion') }}: {{ firstApiVersion }}</text>
     <text class="info-text">{{ $t('strings.versionId') }}: {{ versionId }}</text>
-    <input class="btn" type="button" value="{{ $t('strings.back') }}" onclick="back"></input>
 </div>
