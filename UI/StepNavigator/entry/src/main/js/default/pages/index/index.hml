@@ -16,28 +16,22 @@
 <div class="container">
     <stepper id="stepper" index="0" @finish="finish" @skip="skip">
         <stepper-item class="stepperItem">
-            <div class="item">
-                <text class="text">{{ $t('strings.one') }}</text>
-            </div>
+            <text class="text">{{ $t('strings.one') }}</text>
         </stepper-item>
         <stepper-item class="stepperItem">
-            <div class="item">
-                <text class="text">{{ $t('strings.two') }}</text>
-            </div>
+            <text class="text">{{ $t('strings.two') }}</text>
         </stepper-item>
         <stepper-item class="stepperItem">
             <div class="item">
                 <text class="text">{{ $t('strings.three') }}</text>
-            </div>
-            <div>
-                <input class="input" type="radio" name="radio" @change="change"/>
-                <text class="inputText">{{ $t('strings.skip') }}</text>
+                <div class="inputSkip">
+                    <input class="input" type="radio" name="radio" @change="change"/>
+                    <text class="inputText">{{ $t('strings.skip') }}</text>
+                </div>
             </div>
         </stepper-item>
         <stepper-item class="stepperItem">
-            <div class="item">
-                <text class="text">{{ $t('strings.four') }}</text>
-            </div>
+            <text class="text">{{ $t('strings.four') }}</text>
         </stepper-item>
     </stepper>
 </div>

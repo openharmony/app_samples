@@ -14,7 +14,9 @@
  -->
 
 <div class="container">
-    <text class="title">{{ $t('strings.batteryProperties') }}:</text>
+    <div class="title-box">
+        <text class="title" onclick="back">{{ $t('strings.batteryProperties_title') }}</text>
+    </div>
     <text class="info-text">{{ $t('strings.batterySOC') }}: {{ batterySOC }}</text>
     <text class="info-text">{{ $t('strings.chargingStatus') }}: {{ chargingStatus }}</text>
     <text class="info-text">{{ $t('strings.healthStatus') }}: {{ healthStatus }}</text>
@@ -22,5 +24,4 @@
     <text class="info-text">{{ $t('strings.voltage') }}: {{ voltage }}</text>
     <text class="info-text">{{ $t('strings.technology') }}: {{ technology }}</text>
     <text class="info-text">{{ $t('strings.batteryTemperature') }}: {{ batteryTemperature }}</text>
-    <input class="btn" type="button" value="{{ $t('strings.back') }}" onclick="back"></input>
 </div>
