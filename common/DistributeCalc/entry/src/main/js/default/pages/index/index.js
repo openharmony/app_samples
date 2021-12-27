@@ -15,192 +15,123 @@
 import {calc, isOperator} from '../../common/calculator.js';
 import app from '@system.app';
 import router from '@system.router';
-import distributedDataKit from '@ohos.data.distributedData';
 import RemoteDeviceModel from '../../common/RemoteDeviceModel.js';
 import featureAbility from '@ohos.ability.featureAbility';
-
+import {KvStoreModel} from '../../common/kvstoreModel.js';
 
 let pressedEqual = false;
-let kvManager, kvStore;
-const store_id = 'distributedCalc';
+let kvStoreModel = new KvStoreModel();
 
 export default {
     data: {
         title: '计算器',
         expression: '',
         result: '',
-        selectedIndex: -1,
+        selectedIndex: 0,
+        isFA: false,
         isPush: false,
         isDistributed: false,
         remoteDeviceModel: new RemoteDeviceModel(),
         deviceList: []
     },
     onInit() {
-        this.$watch("expression", (value) => {
+        this.$watch('expression', (value) => {
             if (value !== '') {
+                console.info('Calc[IndexPage] value  ' + value);
                 this.result = calc(value).toString();
-                if (this.isDistributed && kvStore != null && !this.isPush) {
-                    console.log('Calc[IndexPage] put key start');
-                    this.dataChange('expression', value);
-                }
+                console.info('Calc[IndexPage] result =  ' + this.result);
+                console.log('Calc[IndexPage] put key start');
+                this.dataChange('expression', value);
             }
         });
+        this.initKVManager();
     },
     onShow() {
         featureAbility.getWant((error, want) => {
             console.info('Calc[IndexPage] featureAbility.getWant =' + JSON.stringify(want.parameters));
             if (want.parameters.isFA === 'FA') {
-                router.replace({
-                    uri: 'pages/calc/calc'
-                });
-            } else {
-                this.initKVManager(() => {
-                })
+                this.isFA = true;
+                this.isDistributed = true;
             }
         });
     },
     dataChange(key, value) {
-        kvStore.put(key, value).then(() => {
-            console.log('Calc[IndexPage] put key value successed value:' + value);
-        }).catch((err) => {
-            console.log('Calc[IndexPage] put key value failed:' + err);
-        });
-    },
-    initKVManager(done) {
-        if (kvStore != null) {
-            this.isDistributed = true;
-            this.startDataListener();
-            done();
-            return;
+        console.log('Calc[IndexPage] dataChange isDistributed = ' + this.isDistributed);
+        if (this.isDistributed && kvStoreModel != null) {
+            kvStoreModel.put(key, value);
         }
-        console.log('Calc[IndexPage] get kv manager start');
-        const config =
-            {
-                userInfo: {
-                    userId: '0',
-                    userType: 0
-                },
-                bundleName: 'com.example.distributedcalc'
-            };
-        const promise = distributedDataKit.createKVManager(config);
-        promise.then((manager) => {
-            if (manager == null) {
-                console.log('Calc[IndexPage] get kv manager failed');
+    },
+    initKVManager() {
+        kvStoreModel.setOnMessageReceivedListener('expression', (value) => {
+            console.log('Calc[IndexPage] data changed:' + value);
+            if (value === 'exit') {
+                console.info('Calc[CalcPage] app exit! ');
+                app.terminate();
                 return;
             }
-            kvManager = manager;
-            console.log('Calc[IndexPage] get kv manager successed');
-            const options =
-                {
-                    createIfMissing: true,
-                    encrypt: false,
-                    backup: false,
-                    autoSync: true,
-                    kvStoreType: 1,
-                    schema: '',
-                    securityLevel: 3
-                };
-            kvManager.getKVStore(store_id, options).then((store) => {
-                if (store == null) {
-                    console.log("Calc[IndexPage] get kv store failed");
-                    return;
-                }
-                kvStore = store;
-                console.log("Calc[IndexPage] get kv store successed");
-                this.startDataListener();
-                done();
-            }).catch((err) => {
-                console.log("Calc[IndexPage] get kv store failed:" + err);
-            });
-        }).catch((err) => {
-            console.log('Calc[IndexPage] get kv manager failed:' + err);
-        });
-        console.log('Calc[IndexPage] get kv manager end');
-    },
-    startDataListener() {
-        if (kvStore == null) {
-            console.info('Calc[IndexPage] startDataListener kvstore is null');
-            return;
-        }
-        let that = this;
-        kvStore.on('dataChange', 1, function (data) {
-            console.info('Calc[IndexPage] dataChange, ' + JSON.stringify(data));
-            console.info('Calc[IndexPage] dataChange, insert ' + data.insertEntries.length + " udpate " + data.updateEntries.length);
-            if (data) {
-                let arr = data.insertEntries.concat(data.updateEntries);
-                console.info('Calc[IndexPage] arr ' + JSON.stringify(arr));
-                for (let i = 0;i < arr.length; i++) {
-                    let entry = arr[i];
-                    if (entry.key === 'expression') {
-                        that.isPush = true;
-                        if (entry.value.value == "clear") {
-                            console.log("Calc[IndexPage] data expression:clear");
-                            that.expression = '';
-                            that.result = '';
-                            continue;
-                        } else if (entry.value.value == "equal") {
-                            if (that.result !== '') {
-                                console.log("Calc[IndexPage] data expression:equal");
-                                that.expression = that.result;
-                                that.result = '';
-                                //pressedEqual = true;
-                            }
-                            continue;
-                        }
-                        that.expression = entry.value.value;
-                        pressedEqual = false;
-                        console.log("Calc[IndexPage] data expression:" + that.expression);
-                        console.log("Calc[IndexPage] data changed:" + entry.value.value);
-                    }
-                }
+            if (value === 'clear') {
+                console.log('Calc[IndexPage] data expression:clear');
+                this.expression = '';
+                this.result = '';
+                return;
             }
+            if (value === 'equal') {
+                if (this.result !== '') {
+                    console.log('Calc[IndexPage] data expression:equal');
+                    this.expression = this.result;
+                    this.result = '';
+                    pressedEqual = true;
+                }
+                return;
+            }
+            this.expression = value;
+            pressedEqual = false;
+            console.log('Calc[IndexPage] data expression:' + this.expression);
         });
+        setInterval(() => {
+            if (this.isDistributed) {
+                let temp = this.expression;
+                this.expression = temp;
+            }
+        }, 200);
     },
     stopDataListener() {
-        console.log("Calc[IndexPage] stopDataListener");
+        console.log('Calc[IndexPage] stopDataListener');
     },
     onDestroy() {
         this.remoteDeviceModel.unregisterDeviceListCallback();
-        if (this.isDistributed && kvStore != null) {
+        if (this.isDistributed && kvStoreModel != null) {
             this.stopDataListener();
             this.isDistributed = false;
         }
-        router.clear()
+        router.clear();
     },
     showDialog() {
         console.info('Calc[IndexPage] showDialog start');
         this.deviceList = [];
         let self = this;
         this.remoteDeviceModel.registerDeviceListCallback(() => {
-            console.info('Calc[IndexPage] registerDeviceListCallback, callback entered');
-            console.info('Calc[IndexPage] on remote device updated, count=' + self.remoteDeviceModel.deviceList.length);
-            var list = new Array();
-            list[0] = {
+            console.info('Calc[IndexPage] registerDeviceListCallback on remote device updated, count='
+            + self.remoteDeviceModel.deviceList.length);
+            var list = [];
+            list.push({
                 deviceId: '0',
-                deviceName: '本机',
+                deviceName: 'Local device',
                 deviceType: 0,
-                checked: false
-            }
-            var deviceList_;
-            if (self.remoteDeviceModel.discoverList.length > 0) {
-                deviceList_ = self.remoteDeviceModel.discoverList;
-            } else {
-                deviceList_ = self.remoteDeviceModel.deviceList;
-            }
-            for (var i = 0; i < deviceList_.length; i++) {
-                console.info('Calc[IndexPage] device ' + i + '/' + deviceList_.length +
-                ' deviceId=' + deviceList_[i].deviceId + ' deviceName=' + deviceList_[i].deviceName
-                + ' deviceType=' + deviceList_[i].deviceType);
-                list[i + 1] = {
-                    deviceId: deviceList_[i].deviceId,
-                    deviceName: deviceList_[i].deviceName,
-                    deviceType: deviceList_[i].deviceType,
-                    checked: false
-                }
-            }
-            for (let i = 0; i < list.length; i++) {
-                list[i].checked = (this.selectedIndex === i);
-                console.info('Calc[IndexPage] list[i].checked:' + list[i].checked);
+                checked: (this.selectedIndex === 0)
+            });
+            var tempList = this.remoteDeviceModel.discoverList.length > 0
+                ? this.remoteDeviceModel.discoverList : this.remoteDeviceModel.deviceList;
+            for (var i = 0; i < tempList.length; i++) {
+                console.info('Calc[IndexPage] device ' + i + '/' + tempList.length
+                + ' deviceId=' + tempList[i].deviceId + ' deviceName=' + tempList[i].deviceName
+                + ' deviceType=' + tempList[i].deviceType);
+                list.push({
+                    deviceId: tempList[i].deviceId,
+                    deviceName: tempList[i].deviceName,
+                    deviceType: tempList[i].deviceType,
+                    checked: (this.selectedIndex === (i + 1))
+                });
             }
             self.deviceList = list;
             this.$element('showDialog').show();
@@ -210,88 +141,68 @@ export default {
         this.$element('showDialog').close();
         this.remoteDeviceModel.unregisterDeviceListCallback();
     },
-    selectDevice(index, e) {
-        console.log("Calc[IndexPage] select e.value:" + e.value)
-        console.log("Calc[IndexPage] select index:" + index)
-        console.log("Calc[IndexPage] select selectedIndex:" + this.selectedIndex)
-        if (this.deviceList[index].deviceName != e.value) {
-            console.log("Calc[IndexPage] index != e.value")
-            console.log("Calc[IndexPage] value:" + e.value)
-            return
-        }
-        if (!e.checked) {
-            console.log("Calc[IndexPage] !e.checked")
-            return;
-        }
+    selectDevice(item) {
+        let index = this.deviceList.indexOf(item);
+        console.log('Calc[IndexPage] select index:' + index);
+        console.log('Calc[IndexPage] select selectedIndex:' + this.selectedIndex);
         if (index === this.selectedIndex) {
-            console.log("Calc[IndexPage] index === this.selectedIndex")
+            console.log('Calc[IndexPage] index === this.selectedIndex');
             return;
         }
-        if (index == 0) {
-            console.log("Calc[IndexPage] stop ability")
+        this.selectedIndex = index;
+        if (index === 0) {
+            console.log('Calc[IndexPage] stop ability');
             this.dataChange('expression', 'exit');
             this.isDistributed = false;
             this.stopDataListener();
-            this.deviceList = []
-            this.$element('showDialog').close()
-        } else {
-            console.log("Calc[IndexPage] start ability ......")
-            this.isDistributed = true
-            let needAuth;
-            if (this.remoteDeviceModel.discoverList.length > 0) {
-                needAuth = true
-            } else {
-                needAuth = false
-            }
-            console.log("Calc[IndexPage] start ability1, needAuth：" + needAuth)
-            if (needAuth) {
-                console.log("Calc[IndexPage] continue auth device:" + JSON.stringify(this.deviceList[index]))
-                this.remoteDeviceModel.authenticateDevice(this.deviceList[index], () => {
-                    console.log("Calc[IndexPage] auth and online finished")
-                    for (var i = 0; i < this.remoteDeviceModel.deviceList.length; i++) {
-                        if (this.remoteDeviceModel.deviceList[i].deviceName === this.deviceList[index].deviceName) {
-                            this.startAbility(this.remoteDeviceModel.deviceList[i].deviceId)
-                        }
-                    }
-                })
-            } else {
-                console.log("Calc[IndexPage] continue unauthed device:" + JSON.stringify(this.deviceList))
-                this.startAbility(this.deviceList[index].deviceId)
-            }
-            console.log("Calc[IndexPage] start ability2 ......")
-            this.deviceList = []
-            this.$element('showDialog').close()
-            console.log("Calc[IndexPage] start ability end....")
+            this.clearSelectState();
+            return;
         }
-        this.selectedIndex = index;
+        console.log('Calc[IndexPage] start ability ......');
+        this.isDistributed = true;
+        if (this.remoteDeviceModel === null || this.remoteDeviceModel.discoverList.length <= 0) {
+            console.log('Calc[IndexPage] continue unauthed device:' + JSON.stringify(this.deviceList));
+            this.startAbility(this.deviceList[index].deviceId);
+            this.clearSelectState();
+            return;
+        }
+        console.log('Calc[IndexPage] start ability1, needAuth');
+        this.remoteDeviceModel.authenticateDevice(this.deviceList[index], () => {
+            console.log('Calc[IndexPage] auth and online finished');
+            this.startAbility(this.deviceList[index].deviceId);
+        });
+        this.clearSelectState();
+        console.log('Calc[IndexPage] start ability end....');
+    },
+    clearSelectState() {
+        this.deviceList = [];
+        this.$element('showDialog').close();
     },
     startAbility(deviceId) {
-        console.log("Calc[IndexPage] startAbility deviceId:" + deviceId);
+        console.log('Calc[IndexPage] startAbility deviceId:' + deviceId);
         featureAbility.startAbility({
             want: {
                 bundleName: 'com.example.distributedcalc',
-                abilityName: 'com.example.distributedcalc.MainAbility',
+                abilityName: 'com.example.distributedcalc.default',
                 deviceId: deviceId,
                 parameters: {
                     isFA: 'FA'
                 }
             }
         }).then((data) => {
-            console.log("Calc[IndexPage] start ability finished:" + JSON.stringify(data));
+            console.log('Calc[IndexPage] start ability finished:' + JSON.stringify(data));
             this.dataChange('expression', this.expression);
         });
-        console.log("Calc[IndexPage] startAbility end");
+        console.log('Calc[IndexPage] startAbility end');
     },
     handleClear() {
         this.expression = '';
         this.result = '';
-        if (this.isDistributed && kvStore != null) {
-            console.log('Calc[IndexPage] handleClear');
-            this.dataChange('expression', 'clear');
-        }
+        console.log('Calc[IndexPage] handleClear');
+        this.dataChange('expression', 'clear');
     },
     handleInput(value) {
-        console.log("Calc[IndexPage] handle input value:" + value);
+        console.log('Calc[IndexPage] handle input value:' + value);
         this.isPush = false;
         if (isOperator(value)) {
             if (pressedEqual) {
@@ -305,18 +216,15 @@ export default {
                     }
                 }
             }
-            if (!this.expression && (value == '*' || value == '/')) {
+            if (!this.expression && (value === '*' || value === '/')) {
                 return;
             }
             this.expression += value;
         } else {
             if (pressedEqual) {
-                this.expression = value;
                 pressedEqual = false;
-            } else {
-                console.log("Calc[IndexPage] handle input:" + value)
-                this.expression += value;
             }
+            this.expression = value;
         }
 
     },
@@ -325,19 +233,15 @@ export default {
             this.expression = '';
             this.result = '';
             pressedEqual = false;
-            if (this.isDistributed && kvStore != null) {
-                console.log('Calc[IndexPage] handleBackspace1');
-                this.dataChange('expression', 'clear');
-            }
+            console.log('Calc[IndexPage] handleBackspace1');
+            this.dataChange('expression', 'clear');
         } else {
             this.isPush = false;
             this.expression = this.expression.slice(0, -1);
             if (!this.expression.length) {
                 this.result = '';
-                if (this.isDistributed && kvStore != null) {
-                    console.log('Calc[IndexPage] handleBackspace2');
-                    this.dataChange('expression', 'clear');
-                }
+                console.log('Calc[IndexPage] handleBackspace2');
+                this.dataChange('expression', 'clear');
             }
         }
     },
@@ -347,18 +251,8 @@ export default {
             this.expression = this.result;
             this.result = '';
             pressedEqual = true;
-            if (this.isDistributed && kvStore != null) {
-                console.log('Calc[IndexPage] handleEqual');
-                this.dataChange('expression', 'equal');
-            }
+            console.log('Calc[IndexPage] handleEqual');
+            this.dataChange('expression', 'equal');
         }
-    },
-    handleTerminate(e) {
-        if (e.direction === 'right') {
-            app.terminate();
-        }
-    },
-    handleExist() {
-        app.terminate();
     }
-}
+};

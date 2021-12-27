@@ -168,21 +168,21 @@ export default class RemoteDeviceModel {
                     'appName': 'Distributed Calc',
                     'appDescription': 'Distributed Calc',
                     'business': '0'
-                }
+                };
                 let authParam = {
                     'authType': 1,
                     'appIcon': '',
                     'appThumbnail': '',
                     'extraInfo': extraInfo
-                }
+                };
                 this.#deviceManager.authenticateDevice(device, authParam, (err, data) => {
                     if (err) {
                         console.info('Calc[RemoteDeviceModel] authenticateDevice error:' + JSON.stringify(err));
-                        this.authCallback = null
-                        return
+                        this.authCallback = null;
+                        return;
                     }
                     console.info('Calc[RemoteDeviceModel] authenticateDevice succeed:' + JSON.stringify(data));
-                    this.authCallback = callBack
+                    this.authCallback = callBack;
                 })
 
             }

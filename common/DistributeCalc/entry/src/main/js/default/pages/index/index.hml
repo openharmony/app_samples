@@ -20,7 +20,8 @@ limitations under the License.
             <text class="calc-title">
                 {{ title }}
             </text>
-            <image class="calc-icon calc-select-device-btn" @click="showDialog" src="/common/ic_hop_normal.png"/>
+            <image if="{{ isFA == false }}" class="calc-icon calc-select-device-btn" @click="showDialog"
+                   src="/common/ic_hop_normal.png"/>
         </stack>
         <text class="calc-expr">
             {{ expression }}
@@ -87,10 +88,11 @@ limitations under the License.
             <text class="calc-select-device-text calc-select-device-item-title">选择设备</text>
             <list class="calc-select-device-item">
                 <list-item style="width : 100%; height : 50%;" for="{{ deviceList }}">
-                    <text class="calc-select-device-item-left">{{ $item.deviceName }}</text>
+                    <text class="calc-select-device-item-left" on:click="selectDevice({{ $item }})">{{ $item.deviceName }}
+                    </text>
                     <input class="calc-select-device-item-right" type="radio" name="deviceRadio"
-                           value="{{ $item.deviceName }}"
-                           checked="{{ $item.checked }}" @change="selectDevice({{ $idx }})"></input>
+                           value="{{ $item.deviceName }}" checked="{{ $item.checked }}"
+                           @change="selectDevice({{ $item }})"></input>
                 </list-item>
             </list>
             <text class="calc-select-device-text calc-select-device-item-cancel-btn" @click="cancelDialog">取消
