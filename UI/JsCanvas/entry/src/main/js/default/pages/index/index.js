@@ -18,7 +18,21 @@ export default {
         ctx: null
     },
     onShow() {
-        this.ctx = this.$refs.canvas.getContext('2d');
+        const cav = this.$refs.canvas;
+        this.ctx = cav.getContext('2d');
+    },
+    imageClick() {
+        this.ctx.clearRect(0, 0, 300, 300);
+        var ctx1 = this.$element('drawImage').getContext('2d');
+        var img = new Image();
+        img.src = 'common/images/like_yellow.png';
+        img.onload = function () {
+            console.log('Image load success');
+            ctx1.drawImage(img, 50, 50, 200, 200);
+        };
+        img.onerror = function () {
+            console.log('Image load fail');
+        };
     },
     handleClick() {
         this.ctx.beginPath();
@@ -68,5 +82,59 @@ export default {
         this.ctx.fillText('Middle', 125, 220);
         this.ctx.textBaseline = 'alphabetic';
         this.ctx.fillText('Alphabetic', 195, 220);
+    },
+    offScreen() {
+        var offscreen = new OffscreenCanvas(360, 500);
+        var offCanvas2 = offscreen.getContext("2d");
+        var img = new Image();
+        img.src = 'common/images/ai.png';
+        offCanvas2.drawImage(img, 0, 0, 100, 100);
+        offCanvas2.filter = 'blur(5px)';
+        offCanvas2.drawImage(img, 100, 0, 100, 100);
+
+        offCanvas2.filter = 'grayscale(50%)';
+        offCanvas2.drawImage(img, 200, 0, 100, 100);
+
+        offCanvas2.filter = 'hue-rotate(90deg)';
+        offCanvas2.drawImage(img, 0, 100, 100, 100);
+
+        offCanvas2.filter = 'invert(100%)';
+        offCanvas2.drawImage(img, 100, 100, 100, 100);
+
+        offCanvas2.filter = 'drop-shadow(8px 8px 10px green)';
+        offCanvas2.drawImage(img, 200, 100, 100, 100);
+
+        offCanvas2.filter = 'brightness(0.4)';
+        offCanvas2.drawImage(img, 0, 200, 100, 100);
+
+        offCanvas2.filter = 'opacity(25%)';
+        offCanvas2.drawImage(img, 100, 200, 100, 100);
+
+        offCanvas2.filter = 'saturate(30%)';
+        offCanvas2.drawImage(img, 200, 200, 100, 100);
+
+        offCanvas2.filter = 'sepia(60%)';
+        offCanvas2.drawImage(img, 0, 300, 100, 100);
+
+        offCanvas2.filter = 'contrast(200%)';
+        offCanvas2.drawImage(img, 100, 300, 100, 100);
+        var bitmap = offscreen.transferToImageBitmap();
+        this.ctx.transferFromImageBitmap(bitmap);
+    },
+    linearGradient() {
+        var gradient = this.ctx.createLinearGradient(50, 0, 300, 100);
+        gradient.addColorStop(0.0, 'red');
+        gradient.addColorStop(0.5, 'white');
+        gradient.addColorStop(1.0, 'green');
+        this.ctx.fillStyle = gradient;
+        this.ctx.fillRect(0, 0, 500, 500);
+    },
+    radialGradient() {
+        var gradient = this.ctx.createRadialGradient(150, 150, 50, 150, 150, 150);
+        gradient.addColorStop(0.0, 'red');
+        gradient.addColorStop(0.5, 'white');
+        gradient.addColorStop(1.0, 'green');
+        this.ctx.fillStyle = gradient;
+        this.ctx.fillRect(0, 0, 500, 500);
     }
 }
