@@ -1,0 +1,110 @@
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import dataRdb from '@ohos.data.rdb'
+import prompt from '@system.prompt'
+import {Student} from '../model/student'
+
+const STORE_CONFIG = { name: 'student.db', encryptKey: null }
+const TABLE_NAME = 'student'
+const SQL_CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, age INTEGER, phone TEXT NOT NULL)'
+const TAG = 'Rdb.rdbModel'
+const columns = ['id', 'name', 'age', 'phone']
+
+export class rdbModel {
+  rdbStore
+
+  constructor() {
+  }
+
+  getRdbStore(callback) {
+    let self = this
+    if ((typeof (this.rdbStore) != 'undefined')) {
+      callback()
+      return;
+    }
+    dataRdb.getRdbStore(STORE_CONFIG, 1, function (err, rdb) {
+      self.rdbStore = rdb
+      self.rdbStore.executeSql(SQL_CREATE_TABLE)
+      console.info(TAG + 'create table done.')
+      callback()
+    })
+  }
+
+  insertData(student: Student, callback) {
+    const valueBucket = {
+      'name': student.name,
+      'age': student.age,
+      'phone': student.phone,
+    }
+    this.rdbStore.insert(TABLE_NAME, valueBucket, function (err, ret) {
+      console.log(TAG + 'insert done: ' + ret)
+      callback(ret)
+      prompt.showToast({ message: 'insert done:' + ret })
+
+    })
+  }
+
+  updateData(student: Student) {
+    const valueBucket = {
+      'name': student.name,
+      'age': student.age,
+      'phone': student.phone,
+    }
+    let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
+    console.info(TAG + 'updateData id=' + student.id)
+    predicates.equalTo('id', student.id)
+    this.rdbStore.update(valueBucket, predicates, function (err, ret) {
+      console.log(TAG + 'updated row count: ' + ret)
+      prompt.showToast({ message: 'updated row done:' + ret })
+    })
+  }
+
+  deleteByStudent(student: Student) {
+    let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
+    predicates.equalTo('id', student.id)
+    this.rdbStore.delete(predicates, function (err, rows) {
+      console.log(TAG + 'delete rows: ' + rows)
+      prompt.showToast({ message: 'delete student' + rows })
+    })
+  }
+
+  query(predicates, callback) {
+    console.info(TAG + 'query start')
+    let self = this
+    this.rdbStore.query(predicates, columns, function (err, resultSet) {
+      let resultList = self.getListFromResultSet(resultSet)
+      callback(resultList)
+    })
+  }
+
+  getListFromResultSet(resultSet) {
+    console.info(TAG + 'getListFromResultSet')
+    let studentList = []
+    console.log(TAG + 'resultSet column names:' + resultSet.columnNames)
+    console.log(TAG + 'resultSet row count:' + resultSet.rowCount)
+    console.log(TAG + 'resultSet goToFirstRow:' + resultSet.goToFirstRow())
+    for (let i = 0;i < resultSet.rowCount; i++) {
+      let student = new Student(resultSet.getDouble(resultSet.getColumnIndex('id'))
+        , resultSet.getString(resultSet.getColumnIndex('name'))
+        , resultSet.getDouble(resultSet.getColumnIndex('age'))
+        , resultSet.getString(resultSet.getColumnIndex('phone')))
+      studentList.push(student)
+      console.log(TAG + 'resultSet student:' + JSON.stringify(student))
+      console.log(TAG + 'resultSet goToNextRow:' + resultSet.goToNextRow())
+    }
+    return studentList
+  }
+}
