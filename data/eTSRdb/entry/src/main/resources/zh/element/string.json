@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSRdb"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSRdb Ability"
+    },
+    {
+      "name": "title",
+      "value": "Rdb-StudentInfo"
+    },
+    {
+      "name": "delete_by_student",
+      "value": "删除学生信息"
+    },
+    {
+      "name": "student_info",
+      "value": "学生信息"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "yes",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "student_name",
+      "value": "姓名:"
+    },
+    {
+      "name": "student_age",
+      "value": "年龄:"
+    },
+    {
+      "name": "student_phone",
+      "value": "电话:"
+    },
+    {
+      "name": "query_by_name",
+      "value": "按姓名查询"
+    },
+    {
+      "name": "query_by_age",
+      "value": "按年龄查询"
+    },
+    {
+      "name": "query_by_phone",
+      "value": "按电话查询"
+    },
+    {
+      "name": "query_by_age_tip",
+      "value": "搜索年龄在18-20岁的信息"
+    },
+    {
+      "name": "query_by_phone_tip",
+      "value": "搜索手机号为170开头包含数字5的信息"
+    }
+  ]
+}

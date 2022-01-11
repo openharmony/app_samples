@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSRdb"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSRdb Ability"
+    },
+    {
+      "name": "title",
+      "value": "Rdb-StudentInfo"
+    },
+    {
+      "name": "delete_by_student",
+      "value": "Delete student information"
+    },
+    {
+      "name": "student_info",
+      "value": "Student information"
+    },
+    {
+      "name": "delete",
+      "value": "Delete"
+    },
+    {
+      "name": "yes",
+      "value": "OK"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "student_name",
+      "value": "name:"
+    },
+    {
+      "name": "student_age",
+      "value": "age:"
+    },
+    {
+      "name": "student_phone",
+      "value": "phone:"
+    },
+    {
+      "name": "query_by_name",
+      "value": "query by name"
+    },
+    {
+      "name": "query_by_age",
+      "value": "query by age"
+    },
+    {
+      "name": "query_by_phone",
+      "value": "query by phone"
+    },
+    {
+      "name": "query_by_age_tip",
+      "value": "Search for information aged 18-20"
+    },
+    {
+      "name": "query_by_phone_tip",
+      "value": "Search for information with a phone number starting with 170 and containing the number 5"
+    }
+  ]
+}
