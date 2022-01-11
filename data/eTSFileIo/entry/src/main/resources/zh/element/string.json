@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "title",
+      "value": "文件管理"
+    },
+    {
+      "name": "create_fileIo",
+      "value": "创建文件"
+    },
+    {
+      "name": "rename_fileIo",
+      "value": "修改文件名"
+    },
+    {
+      "name": "write_fileIo",
+      "value": "写入文件"
+    },
+    {
+      "name": "delete_fileIo",
+      "value": "删除文件"
+    },
+    {
+      "name": "read_fileIo",
+      "value": "读取文件"
+    }
+  ]
+}
