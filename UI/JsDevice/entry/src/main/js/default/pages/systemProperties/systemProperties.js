@@ -16,24 +16,26 @@
 import router from '@system.router'
 import systemParameter from '@ohos.systemParameter';
 
-let result = ''
+let self = null
 export default {
     data: {
         results: ''
+    },
+    onInit(){
+        self = this
     },
     setKey() {
         try {
             var promise = systemParameter.set("test.parameter.key", "testValue");
             promise.then(function (data) {
-                result = "setKey pass";
+                self.results = "setKey pass";
                 console.log("set test.parameter.key success" + data);
             }).catch(function (err) {
-                result = "set test.parameter.key error" + err.code;
+                self.results = "set test.parameter.key error" + err.code;
                 console.log("set test.parameter.key error" + err.code);
             });
-            this.results = result;
         } catch (e) {
-            this.results = "set unexpected error:" + e;
+            self.results = "set unexpected error:" + e;
             console.log("set unexpected error:" + e);
         }
     },
@@ -41,15 +43,14 @@ export default {
         try {
             var promise = systemParameter.get("test.parameter.key", "default");
             promise.then(function (data) {
-                result = "getKey pass";
+                self.results = "getKey pass";
                 console.log("get test.parameter.key success:" + JSON.stringify(data));
             }).catch(function (err) {
-                result = "get test.parameter.key error:" + err.code;
+                self.results = "get test.parameter.key error:" + err.code;
                 console.log("get test.parameter.key error:" + err.code);
             });
-            this.results = result;
         } catch (e) {
-            this.results = "get unexpected error:" + e;
+            self.results = "get unexpected error:" + e;
             console.log("get unexpected error:" + e);
         }
     },
@@ -76,16 +77,15 @@ export default {
         try {
             systemParameter.set("test.parameter.key", "testValue", function (err, data) {
                 if (err == undefined) {
-                    result = "setASyncCallback pass"
+                    self.results = "setASyncCallback pass"
                     console.log("set test.parameter.key value success:" + data);
                 } else {
-                    result = "set test.parameter.key value err:" + err.code;
+                    self.results = "set test.parameter.key value err:" + err.code;
                     console.log("set test.parameter.key value err:" + err.code);
                 }
             });
-            this.results = result;
         } catch (e) {
-            this.results = "set unexpected error:" + e;
+            self.results = "set unexpected error:" + e;
             console.log("set unexpected error:" + e);
         }
     },
@@ -93,16 +93,15 @@ export default {
         try {
             systemParameter.get("test.parameter.key", function (err, data) {
                 if (err == undefined) {
-                    result = "getAsyncCallback pass";
+                    self.results = "getAsyncCallback pass";
                     console.log("get test.parameter.key value success:" + data);
                 } else {
-                    result = "get test.parameter.key value err:" + err.code;
+                    self.results = "get test.parameter.key value err:" + err.code;
                     console.log("get test.parameter.key value err:" + err.code);
                 }
             });
-            this.results = result;
         } catch (e) {
-            this.results = "getSync unexpected error:" + e;
+            self.results = "getSync unexpected error:" + e;
             console.log("getSync unexpected error:" + e);
         }
     },
@@ -110,16 +109,15 @@ export default {
         try {
             systemParameter.get("test.parameter.key", "default", function (err, data) {
                 if (err == undefined) {
-                    result = "getDefAsyncCallback pass";
+                    self.results = "getDefAsyncCallback pass";
                     console.log("get test.parameter.key value success:" + data);
                 } else {
-                    result = "get test.parameter.key value err:" + err.code;
+                    self.results = "get test.parameter.key value err:" + err.code;
                     console.log("get test.parameter.key value err:" + err.code);
                 }
             });
-            this.results = result;
         } catch (e) {
-            this.results = "get test.parameter.key value err:" + e;
+            self.results = "get test.parameter.key value err:" + e;
             console.log("get test.parameter.key value err:" + e);
         }
     },
