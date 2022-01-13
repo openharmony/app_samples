@@ -33,6 +33,7 @@
           }
         ],
         "srcPath": "MainAbility",
+        "visible": true,
         "name": ".MainAbility",
         "srcLanguage": "ets",
         "icon": "$media:icon",

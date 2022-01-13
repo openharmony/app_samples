@@ -33,6 +33,7 @@
           }
         ],
         "orientation": "unspecified",
+        "visible": true,
         "name": ".default",
         "icon": "$media:icon",
         "srcLanguage": "js",

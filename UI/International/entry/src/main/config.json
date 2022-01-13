@@ -33,6 +33,7 @@
           }
         ],
         "orientation": "unspecified",
+        "visible": true,
         "name": ".default",
         "srcPath": "default",
         "srcLanguage": "js",

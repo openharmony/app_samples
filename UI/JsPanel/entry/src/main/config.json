@@ -34,6 +34,7 @@
           }
         ],
         "orientation": "unspecified",
+        "visible": true,
         "name": ".default",
         "icon": "$media:icon",
         "srcPath": "default",
