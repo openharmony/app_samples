@@ -23,24 +23,25 @@
 
 .picker {
     width: 200px;
-    height: 30px;
-    font-size: 16px;
+    height: 40px;
+    font-size: 25px;
     margin-left: 20px;
     text-align: center;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-color: black;
 }
 
 .text {
     width: 30%;
-    font-size: 16px;
+    font-size: 25px;
+    margin-left: 20px;
     text-align: center;
 
 }
 
 .picker-text {
     width: 100%;
-    height: 50px;
+    height: 70px;
     align-items: center;
 }
