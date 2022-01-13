@@ -36,7 +36,7 @@
           }
         ],
         "orientation": "unspecified",
-        "visible": false,
+        "visible": true,
         "formsEnabled": false,
         "name": ".default",
         "icon": "$media:icon",

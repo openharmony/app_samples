@@ -33,6 +33,7 @@
           }
         ],
         "orientation": "unspecified",
+        "visible": true,
         "srcPath": "MainAbility",
         "name": ".MainAbility",
         "srcLanguage": "ets",

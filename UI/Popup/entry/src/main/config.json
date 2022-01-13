@@ -33,6 +33,7 @@
           }
         ],
         "name": ".default",
+        "visible": true,
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
