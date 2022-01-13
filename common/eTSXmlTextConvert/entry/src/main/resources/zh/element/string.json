@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSXmlTextConvert"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "serializer",
+      "value": "Xml 生成"
+    },
+    {
+      "name": "parser",
+      "value": "Xml 解析"
+    },
+    {
+      "name": "convert",
+      "value": "Xml 转换"
+    }
+  ]
+}
