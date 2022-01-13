@@ -18,10 +18,17 @@ export default {
         data: ["15", "20", "25"],
         multiText: [["A", "B", "C", "D"], ["a", "b", "c", "d"], ["1", "2", "3", "4"]],
         dataText: "15",
-        dataDate: "2021-8-2",
-        dataTime: "24:00:00",
-        dataDateTime: "2021-8-2-12-00",
-        pickerMulti: "Ab1"
+        dataDate: "",
+        dataTime: "",
+        dataDateTime: "",
+        pickerMulti: "Aa1"
+    },
+    onInit(){
+        var date = new Date()
+        this.dataDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
+        this.dataTime = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+        this.dataDateTime = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" +date.getDate() + '-' +
+        date.getHours() + "-" + date.getMinutes()
     },
     textChange(e) {
         this.dataText = e.newValue
