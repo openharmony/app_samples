@@ -20,31 +20,26 @@ export default {
         result: '',
         result1: '',
         result2: '',
-        date: null,
+        dataDate: null,
         dateTime: ''
     },
     onInit() {
-        this.date = new Date();
-        this.dateTime = this.date.getFullYear() + '-' + this.date.getMonth() + '-' + this.date.getDay() + '-' +
-            this.date.getDate() + '-' + this.date.getMinutes() + '-' + this.date.getSeconds();
+        var datet = new Date()
+        this.dateTime = datet.getFullYear() + '-' + (datet.getMonth() + 1) + '-' + datet.getDate()
+        this.dataDate = new Date(datet.getFullYear(), datet.getMonth(), datet.getDate(), datet.getHours(),
+            datet.getMinutes(), datet.getSeconds())
     },
     cn() {
-        var dateFmt = new Intl.DateTimeFormat('zh-CN');
-        var date = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDay(), this.date.getDate(),
-            this.date.getMinutes(), this.date.getSeconds());
-        this.result = dateFmt.format(date);
+        var dateFmt = new Intl.DateTimeFormat('zh-CN')
+        this.result = dateFmt.format(this.dataDate)
     },
     en() {
-        var dateFmt1 = new Intl.DateTimeFormat('en-GB');
-        var date = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDay(), this.date.getDate(),
-            this.date.getMinutes(), this.date.getSeconds());
-        this.result1 = dateFmt1.format(date);
+        var dateFmt1 = new Intl.DateTimeFormat('en-GB')
+        this.result1 = dateFmt1.format(this.dataDate)
     },
     ja() {
-        var dateFmt2 = new Intl.DateTimeFormat('ja-JP');
-        var date = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDay(), this.date.getDate(),
-            this.date.getMinutes(), this.date.getSeconds());
-        this.result2 = dateFmt2.format(date);
+        var dateFmt2 = new Intl.DateTimeFormat('ja-JP')
+        this.result2 = dateFmt2.format(this.dataDate)
     }
 }
 
