@@ -12,6 +12,7 @@
 
 ## 目录<a name="sectionMenu"></a>
 - ability
+  - [`DMS:`分布式Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/DMS)
   - [`EtsCommonEvent:`订阅公共事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/EtsCommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/ability/JsDistributedMusicPlayer)
 - common
@@ -21,9 +22,11 @@
   - [`ECG:`心率检测（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/ECG)
   - [`EtsNotification:`通知（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/EtsNotification)
   - [`EtsResourceManager:`资源管理器（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/EtsResourceManager)
+  - [`eTSXmlTextConvert:`xml文本转换（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSXmlTextConvert)
   - [`Flashlight:`手电筒（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/JsHelloWorld)
 - data
+  - [`eTSFileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSFileIo)
   - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
   - [`eTSLiteStorage:`轻量级存储（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSLiteStorage)
   - [`eTSRdb:`关系型数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSRdb)
@@ -38,6 +41,8 @@
   - [`KikaInput:`轻量级输入法（JS）](https://gitee.com/openharmony/app_samples/tree/master/CompleteApps/KikaInput)
   - [`AstronautsGame:`太空人避障游戏（C++）](https://gitee.com/openharmony/app_samples/tree/master/CompleteApps/AstronautsGame)
 - ETSUI
+  - [`eTSBuildCommonView:`创建简单视图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSBuildCommonView)
+  - [`eTSCanvas:`画布组件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSCanvas)
   - [`EtsProcess:`进程信息（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/EtsProcess)
   - [`StringCodec:`字符串编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/StringCodec)
   - [`eTSBuildCommonView:`创建简单视图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSBuildCommonView)
