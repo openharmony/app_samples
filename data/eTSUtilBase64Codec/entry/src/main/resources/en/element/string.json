@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "change_str",
+      "value": "String to convert:"
+    },
+    {
+      "name": "encode",
+      "value": "encode"
+    },
+    {
+      "name": "decode",
+      "value": "decode"
+    }
+  ]
+}

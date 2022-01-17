@@ -25,6 +25,8 @@
   - [`eTSXmlTextConvert:`xml文本转换（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSXmlTextConvert)
   - [`Flashlight:`手电筒（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/JsHelloWorld)
+  - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSUtilBase64Codec)
+  
 - data
   - [`eTSFileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSFileIo)
   - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
