@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSDataAbility"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSDataAbility Ability"
+    },
+    {
+      "name": "description_dataability",
+      "value": "dataability provider"
+    },
+    {
+      "name": "title",
+      "value": "DataAbility"
+    },
+    {
+      "name": "batch_insert",
+      "value": "批量插入"
+    },
+    {
+      "name": "book_name",
+      "value": "书名:"
+    },
+    {
+      "name": "book_intro",
+      "value": "书本简介:"
+    },
+    {
+      "name": "search_tip",
+      "value": "点击此处搜索"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "请输入进行搜索"
+    }
+  ]
+}
