@@ -254,5 +254,8 @@ export default {
             console.log('Calc[IndexPage] handleEqual');
             this.dataChange('expression', 'equal');
         }
+    },
+    handleExist() {
+        app.terminate();
     }
 };

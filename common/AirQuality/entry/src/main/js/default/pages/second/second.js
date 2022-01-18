@@ -26,11 +26,6 @@ export default {
         }
     },
     backMain() {
-        router.replace({
-            uri: 'pages/index/index',
-            params: {
-                selectedCityIndex: this.selectedCityIndex
-            }
-        });
+        router.back()
     }
 }
