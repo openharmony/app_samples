@@ -64,7 +64,7 @@ function calcSuffixExpression(expression) {
             const one = numberStack.pop();
             const other = numberStack.pop();
             const result = OperatorHandlers[element](other, one);
-            numberStack.push(result);
+            numberStack.push(Number(result));
         }
     }
     return numberStack[0];
