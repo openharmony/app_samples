@@ -1,0 +1,132 @@
+{
+  "string": [
+    {
+      "name": "eTSUtilScope",
+      "value": "eTSUtilScope"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "age",
+      "value": "年龄判断"
+    },
+    {
+      "name": "temperature",
+      "value": "体温检测"
+    },
+    {
+      "name": "range",
+      "value": "范围判断"
+    },
+    {
+      "name": "judge_age",
+      "value": "判断年龄是否在限制内"
+    },
+    {
+      "name": "age_analyse",
+      "value": "年龄分析"
+    },
+    {
+      "name": "judge_temp",
+      "value": "判断您的体温是否正常"
+    },
+    {
+      "name": "temp_morning",
+      "value": "您早上的体温是:"
+    },
+    {
+      "name": "temp_noon",
+      "value": "您中午的体温是:"
+    },
+    {
+      "name": "temp_night",
+      "value": "您晚上的体温是:"
+    },
+    {
+      "name": "judge_sleep",
+      "value": "判断您的睡眠是否充足:"
+    },
+    {
+      "name": "short_sleep",
+      "value": "这一个月，您最短的睡眠时间是几小时:"
+    },
+    {
+      "name": "long_sleep",
+      "value": "这一个月，您最长的睡眠时间是几小时:"
+    },
+    {
+      "name": "sleep_analyse",
+      "value": "睡眠分析"
+    },
+    {
+      "name": "sleep_time",
+      "value": "*人的正常睡眠时间是7到10个小时"
+    },
+    {
+      "name": "temp_analyse",
+      "value": "体温分析"
+    },
+    {
+      "name": "determine",
+      "value": "确定"
+    },
+    {
+      "name": "age_message_confirm",
+      "value": "您的年龄符合规定"
+    },
+    {
+      "name": "age_message_not_confirm",
+      "value": "对不起，您的年龄不符合规定"
+    },
+    {
+      "name": "temp_message_lower",
+      "value": "您今天的最低体温是"
+    },
+    {
+      "name": "temp_message_upper",
+      "value": "您今天的最高体温是"
+    },
+    {
+      "name": "temp_message_normal",
+      "value": "您的体温在正常范围"
+    },
+    {
+      "name": "temp_message_abnormal",
+      "value": "您今天的体温不正常，还望您尽快就医，注意身体！"
+    },
+    {
+      "name": "combine",
+      "value": "睡眠区间和正常的睡眠区间的并集为"
+    },
+    {
+      "name": "interval",
+      "value": "睡眠区间和正常的睡眠区间的交集为"
+    },
+    {
+      "name": "age_placeholder",
+      "value": "请输入您的年龄"
+    },
+    {
+      "name": "morning_placeholder",
+      "value": "请输入您早上的体温"
+    },
+    {
+      "name": "noon_placeholder",
+      "value": "请输入您中午的体温"
+    },
+    {
+      "name": "night_placeholder",
+      "value": "请输入您晚上的体温"
+    },
+    {
+      "name": "enter_sleep_time",
+      "value": "请输入睡眠时间"
+    },
+    {
+      "name": "upper",
+      "value": "37"
+    }
+  ]
+}

@@ -79,6 +79,8 @@
   - [`Tabs:`页签容器（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Tabs)
   - [`Toolbar:`工具栏（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Toolbar)
   - [`chart:`图表组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/chart)
+- Util
+  - [`eTSUtilScope:`范围判断（JS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
 
 ## 使用说明<a name="section17988202503116"></a>
 
