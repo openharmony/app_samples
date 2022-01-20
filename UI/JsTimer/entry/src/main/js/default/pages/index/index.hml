@@ -22,8 +22,8 @@
     <button class="btn" onclick="setTime">{{ $t('strings.setSystemTime') }}</button>
     <div class="picker-text">
         <text class="text">{{ $t('strings.countdown') }}</text>
-        <picker class="picker" type="time" containsecond="true" value="00:00:00" hours="24" on:change="timeChange">{{
-            dataTime }}</picker>
+        <picker class="picker" type="multi-text" columns="3" range="{{ multiText }}"
+                on:change="multiTextChange">{{ dataTime }}</picker>
     </div>
     <button class="btn" onclick="setTimer">{{ $t('strings.setTimer') }}</button>
     <button class="btn" onclick="clearTimer">{{ $t('strings.failure') }}</button>
