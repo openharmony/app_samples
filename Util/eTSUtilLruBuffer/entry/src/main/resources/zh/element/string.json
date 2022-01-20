@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "eTSUtilLruBuffer"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSUtilLruBuffer Ability"
+    },
+    {
+      "name": "initialize_buffer",
+      "value": "初始化缓冲区"
+    },
+    {
+      "name": "get_buffer_capacity",
+      "value": "获取缓冲区容量"
+    },
+    {
+      "name": "update_buffer_capacity",
+      "value": "更新缓冲区容量"
+    },
+    {
+      "name": "get_buffer_string",
+      "value": "获取缓冲区字符串"
+    },
+    {
+      "name": "add_key_value",
+      "value": "添加键值对"
+    },
+    {
+      "name": "get_value_with_key",
+      "value": "获取键对应的值"
+    },
+    {
+      "name": "get_all_key_values",
+      "value": "获取所有键值对"
+    },
+    {
+      "name": "delete_key_and_value",
+      "value": "删除指定键及关联值"
+    },
+    {
+      "name": "clear_all_key_values",
+      "value": "清除所有键值对"
+    },
+    {
+      "name": "view_operation_record",
+      "value": "查看操作记录"
+    }
+  ]
+}
