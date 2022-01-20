@@ -37,35 +37,35 @@
 
 .yellow-box {
     margin-top: 4px;
-    background-color: yellow;
+    background-color: #f7ce00;
     width: 16px;
     height: 16px;
 }
 
 .orangered-box {
     margin-top: 4px;
-    background-color: orangered;
+    background-color: #f76223;
     width: 16px;
     height: 16px;
 }
 
 .palevioletred-box {
     margin-top: 4px;
-    background-color: palevioletred;
+    background-color: #f772ac;
     width: 16px;
     height: 16px;
 }
 
 .purple-box {
     margin-top: 4px;
-    background-color: purple;
+    background-color: #a575eb;
     width: 16px;
     height: 16px;
 }
 
 .darkslateblue-box {
     margin-top: 4px;
-    background-color: darkslateblue;
+    background-color: #7b79f7;
     width: 16px;
     height: 16px;
 }
