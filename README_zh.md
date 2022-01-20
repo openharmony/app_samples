@@ -15,6 +15,7 @@
   - [`DMS:`分布式Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/DMS)
   - [`EtsCommonEvent:`订阅公共事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/EtsCommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/ability/JsDistributedMusicPlayer)
+  - [`eTSDataAbility:`DataAbility的创建与访问（eTS）](https://gitee.com/openharmony/app_samples/tree/master/abiltiy/eTSDataAbility)
 - common
   - [`AirQuality:`空气质量（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/AirQuality)
   - [`Clock:`时钟（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Clock)
@@ -80,7 +81,8 @@
   - [`Toolbar:`工具栏（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Toolbar)
   - [`chart:`图表组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/chart)
 - Util
-  - [`eTSUtilScope:`范围判断（JS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
+  - [`eTSUtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
+  - [`eTSUtilLruBuffer:`缓冲区（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilLruBuffer)
 
 ## 使用说明<a name="section17988202503116"></a>
 
