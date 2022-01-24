@@ -161,7 +161,7 @@ export default {
                 this.hundredDisplay = 'block';
                 this.tensLeft = '130px';
                 this.onesLeft = '150px';
-                this.chartUnit = '200px';
+                this.chartUnit = '170px';
                 hundreds = number.substring(subIndexZero, subIndexOne);
                 tens = number.substring(subIndexOne, subIndexTwo);
                 ones = number.substring(subIndexTwo, subIndexEnd);
