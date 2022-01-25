@@ -38,6 +38,8 @@
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
 - security
   - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/security/JsDotTest)
+- Telephony
+    - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
 - thread
   - [`JsWorker:`启动一个worker（JS）](https://gitee.com/openharmony/app_samples/tree/master/thread/JsWorker)
 - CompleteApps
