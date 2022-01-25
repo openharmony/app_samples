@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "有理数运算"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "rationalNumber",
+      "value": "有理数:"
+    },
+    {
+      "name": "numerator",
+      "value": "分子:"
+    },
+    {
+      "name": "denominator",
+      "value": "分母:"
+    },
+    {
+      "name": "compare",
+      "value": "有理数比较"
+    },
+    {
+      "name": "get",
+      "value": "获取有理数的值"
+    },
+    {
+      "name": "getDenominator",
+      "value": "获取有理数分子分母"
+    },
+    {
+      "name": "isZero",
+      "value": "检查是否为0"
+    },
+    {
+      "name": "isNaN",
+      "value": "检查是否表示NaN"
+    },
+    {
+      "name": "isFinite",
+      "value": "检查是否为有限值"
+    }
+  ]
+}
