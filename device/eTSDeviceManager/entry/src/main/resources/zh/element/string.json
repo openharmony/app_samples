@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "设备管理"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSDeviceManger Ability"
+    },
+    {
+      "name": "refresh_device_list",
+      "value": "刷新设备列表"
+    },
+    {
+      "name": "device_name",
+      "value": "设备名称:"
+    },
+    {
+      "name": "device_id",
+      "value": "设备Id:"
+    },
+    {
+      "name": "device_state",
+      "value": "状态:"
+    }
+  ]
+}

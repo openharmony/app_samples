@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "eTSDeviceManger"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSDeviceManger Ability"
+    },
+    {
+      "name": "refresh_device_list",
+      "value": "Refresh device list"
+    },
+    {
+      "name": "device_name",
+      "value": "Device name:"
+    },
+    {
+      "name": "device_id",
+      "value": "Device id:"
+    },
+    {
+      "name": "device_state",
+      "value": "State:"
+    }
+  ]
+}
