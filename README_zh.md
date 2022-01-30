@@ -16,6 +16,7 @@
   - [`EtsCommonEvent:`订阅公共事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/EtsCommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/ability/JsDistributedMusicPlayer)
   - [`eTSDataAbility:`DataAbility的创建与访问（eTS）](https://gitee.com/openharmony/app_samples/tree/master/abiltiy/eTSDataAbility)
+  - [`eTSServiceAbility:`ServiceAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSServiceAbility)
 - common
   - [`AirQuality:`空气质量（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/AirQuality)
   - [`Clock:`时钟（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Clock)
@@ -23,10 +24,9 @@
   - [`ECG:`心率检测（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/ECG)
   - [`EtsNotification:`通知（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/EtsNotification)
   - [`EtsResourceManager:`资源管理器（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/EtsResourceManager)
-  - [`eTSXmlTextConvert:`xml文本转换（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSXmlTextConvert)
   - [`Flashlight:`手电筒（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/JsHelloWorld)
-  - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSUtilBase64Codec)
+  - [`eTSPowerManager:`系统电源管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSPowerManager)
 - data
   - [`eTSFileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSFileIo)
   - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
@@ -41,7 +41,8 @@
 - security
   - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/security/JsDotTest)
 - Telephony
-    - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
+  - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
+  - [`eTSRadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSRadioTech)	
 - thread
   - [`JsWorker:`启动一个worker（JS）](https://gitee.com/openharmony/app_samples/tree/master/thread/JsWorker)
 - CompleteApps
@@ -85,9 +86,12 @@
   - [`Toolbar:`工具栏（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Toolbar)
   - [`chart:`图表组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/chart)
 - Util
+  - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSUtilBase64Codec)
   - [`eTSUtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
   - [`eTSUtilLruBuffer:`缓冲区（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilLruBuffer)
   - [`eTSUtilRationalNumber:`有理数（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilRationalNumber)
+  - [`eTSUtilTypeCheck:`内置对象类型检查（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilTypeCheck)
+  - [`eTSXmlTextConvert:`xml文本转换（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSXmlTextConvert)  
 
 ## 使用说明<a name="section17988202503116"></a>
 
