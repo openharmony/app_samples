@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "系统电源管理"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name":"turnOff",
+      "value": "关机"
+    },
+    {
+      "name":"restart",
+      "value": "重启"
+    },
+    {
+      "name":"checkState",
+      "value": "检测亮灭屏状态"
+    },
+    {
+      "name":"questionTurnOff",
+      "value": "确定要关机吗？"
+    },
+    {
+      "name":"questionRestart",
+      "value": "确定要重启吗？"
+    },
+    {
+      "name":"determine",
+      "value": "确定"
+    },
+    {
+      "name":"cancel",
+      "value": "取消"
+    }
+  ]
+}
