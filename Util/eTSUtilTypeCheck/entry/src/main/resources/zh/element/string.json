@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "util工具函数-内置对象类型检查"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "text",
+      "value": "确认"
+    },
+    {
+      "name": "show",
+      "value": "显示预置值"
+    },
+    {
+      "name": "check",
+      "value": "校验预置值"
+    }
+  ]
+}

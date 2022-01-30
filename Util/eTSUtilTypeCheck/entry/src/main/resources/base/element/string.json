@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSUtilTypeCheck"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "text",
+      "value": "confirm"
+    },
+    {
+      "name": "show",
+      "value": "Display preset value"
+    },
+    {
+      "name": "check",
+      "value": "Check preset value"
+    }
+  ]
+}
