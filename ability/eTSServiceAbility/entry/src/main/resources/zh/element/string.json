@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSServiceAbility"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSServiceAbility Ability"
+    },
+    {
+      "name": "description_serviceability",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "connect_service",
+      "value": "连接服务"
+    },
+    {
+      "name": "sort_string",
+      "value": "字符串排序"
+    },
+    {
+      "name": "disconnect_service",
+      "value": "断开服务"
+    },
+    {
+      "name": "input_placeholder",
+      "value": "请输入一个字符串"
+    }
+  ]
+}
