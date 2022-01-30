@@ -27,12 +27,14 @@
   - [`Flashlight:`手电筒（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/JsHelloWorld)
   - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSUtilBase64Codec)
-  
 - data
   - [`eTSFileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSFileIo)
   - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
   - [`eTSLiteStorage:`轻量级存储（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSLiteStorage)
   - [`eTSRdb:`关系型数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSRdb)
+- device
+  - [`eTSDeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSDeviceManager)
+  - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSWlan) 
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
@@ -85,6 +87,7 @@
 - Util
   - [`eTSUtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
   - [`eTSUtilLruBuffer:`缓冲区（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilLruBuffer)
+  - [`eTSUtilRationalNumber:`有理数（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilRationalNumber)
 
 ## 使用说明<a name="section17988202503116"></a>
 
