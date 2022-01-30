@@ -1,0 +1,100 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSWLAN"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSWLAN Ability"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "wlan",
+      "value": "WLAN"
+    },
+    {
+      "name": "available_wlan",
+      "value": "可用WLAN"
+    },
+    {
+      "name": "connected",
+      "value": "已连接"
+    },
+    {
+      "name": "about",
+      "value": "关于"
+    },
+    {
+      "name": "ip_address",
+      "value": "IP地址:"
+    },
+    {
+      "name": "gate_way",
+      "value": "网关:"
+    },
+    {
+      "name": "net_mask",
+      "value": "掩码:"
+    },
+    {
+      "name": "primary_dns",
+      "value": "主DNS服务器:"
+    },
+    {
+      "name": "second_dns",
+      "value": "备DNS服务器:"
+    },
+    {
+      "name": "server_ip",
+      "value": "DHCP服务端ip:"
+    },
+    {
+      "name": "lease_duration",
+      "value": "IP地址租用时长:"
+    },
+    {
+      "name": "country_code",
+      "value": "国家码："
+    },
+    {
+      "name": "infrastructure_feature",
+      "value": "基础结构模式特性:"
+    },
+    {
+      "name": "ghz_feature",
+      "value": "5 GHz 宽带特性:"
+    },
+    {
+      "name": "gas_anqp_feature",
+      "value": "GAS/ANQP特性:"
+    },
+    {
+      "name": "wifi_direct",
+      "value": "WiFi-Direct特性:"
+    },
+    {
+      "name": "soft_ap",
+      "value": "Soft AP特性:"
+    },
+    {
+      "name": "wifi_aware",
+      "value": "WiFi Aware组网特性:"
+    },
+    {
+      "name": "encryption",
+      "value": "加密"
+    },
+    {
+      "name": "open",
+      "value": "开放"
+    }
+  ]
+}
