@@ -22,7 +22,7 @@ const OperatorLevels = {
 };
 
 const OperatorHandlers = {
-    '+': (one, other) => (one + other).toFixed(getFloatNum(one, other, '+')),
+    '+': (one, other) => (parseFloat(one) + parseFloat(other)).toFixed(getFloatNum(one, other, '+')),
     '-': (one, other) => (one - other).toFixed(getFloatNum(one, other, '-')),
     '*': (one, other) => (one * other).toFixed(getFloatNum(one, other, '*')),
     '/': (one, other) => (one / other).toFixed(getFloatNum(one, other, '/')),
@@ -59,12 +59,16 @@ function calcSuffixExpression(expression) {
     while (expression.length) {
         let element = expression.shift();
         if (!isOperator(element)) {
-            numberStack.push(Number(element));
+            numberStack.push(element);
         } else {
             const one = numberStack.pop();
             const other = numberStack.pop();
             const result = OperatorHandlers[element](other, one);
-            numberStack.push(Number(result));
+            if (result.length > 15) {
+                numberStack.push(parseFloat(result).toExponential());
+            } else {
+                numberStack.push(result);
+            }
         }
     }
     return numberStack[0];

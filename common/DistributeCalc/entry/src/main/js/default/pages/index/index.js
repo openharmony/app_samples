@@ -38,7 +38,7 @@ export default {
         this.$watch('expression', (value) => {
             if (value !== '') {
                 console.info('Calc[IndexPage] value  ' + value);
-                this.result = calc(value).toString();
+                this.result = calc(value);
                 console.info('Calc[IndexPage] result =  ' + this.result);
                 console.log('Calc[IndexPage] put key start');
                 this.dataChange('expression', value);
@@ -256,6 +256,7 @@ export default {
         }
     },
     handleExist() {
+        console.log('Calc[IndexPage] handleExist');
         app.terminate();
     }
 };
