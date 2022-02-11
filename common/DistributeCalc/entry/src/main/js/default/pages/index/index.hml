@@ -16,10 +16,12 @@ limitations under the License.
 <div class="calc-container">
     <div class="content">
         <stack class="calc-titlebar">
-            <image class="calc-icon calc-back-btn" src="/common/ic_back.png" @click="handleExist"/>
-            <text class="calc-title">
-                {{ title }}
-            </text>
+            <div @click="handleExist">
+                <image class="calc-icon calc-back-btn" src="/common/ic_back.png"/>
+                <text class="calc-title">
+                    {{ title }}
+                </text>
+            </div>
             <image if="{{ isFA == false }}" class="calc-icon calc-select-device-btn" @click="showDialog"
                    src="/common/ic_hop_normal.png"/>
         </stack>
