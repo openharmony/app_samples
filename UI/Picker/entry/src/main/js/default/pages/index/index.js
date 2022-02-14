@@ -27,8 +27,8 @@ export default {
         var date = new Date()
         this.dataDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
         this.dataTime = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
-        this.dataDateTime = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" +date.getDate() + '-' +
-        date.getHours() + "-" + date.getMinutes()
+        this.dataDateTime = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" +date.getDate() + ' ' +
+        date.getHours() + ":" + date.getMinutes()
     },
     textChange(e) {
         this.dataText = e.newValue
@@ -40,7 +40,7 @@ export default {
         this.dataTime = e.hour + ":" + e.minute + ":" + e.second
     },
     dateTimeChange(e) {
-        this.dataDateTime = e.year + "-" + (e.month + 1) + "-" + e.day + "-" + e.hour + "-" + e.minute
+        this.dataDateTime = e.year + "-" + (e.month + 1) + "-" + e.day + " " + e.hour + ":" + e.minute
     },
     multiTextChange(e) {
         var sum = " "
