@@ -14,13 +14,13 @@
  */
 import dataRdb from '@ohos.data.rdb'
 import router from '@system.router';
-import {AddDialog} from '../common/dialog'
-import {StudentView} from '../common/studentView'
-import {Student} from '../model/student'
-import {rdbModel} from '../model/rdbModel'
+import { AddDialog } from '../common/dialog'
+import { StudentView } from '../common/studentView'
+import { Student } from '../model/student'
+import { rdbModel } from '../model/rdbModel'
+import { TABLE_NAME, SQL_CREATE_TABLE, COLUMNS } from '../model/rdbConst'
 
-let self = null
-const TABLE_NAME = 'student'
+const TAG = '[Rdb.Index]'
 
 @Entry
 @Component
@@ -29,48 +29,47 @@ struct Index {
   @State editStudent: Student = new Student(0, '', NaN, '')
   @State isInsert: boolean = false
   private index: number = -1
-  private rdb = new rdbModel()
+  private rdb = new rdbModel(TABLE_NAME, SQL_CREATE_TABLE, COLUMNS)
   private addDialogController: CustomDialogController = new CustomDialogController({
-    builder: AddDialog({ isInsert: this.isInsert, editStudent: this.editStudent, action: this.onAccept }),
+    builder: AddDialog({ isInsert: this.isInsert, editStudent: this.editStudent, action: this.onAccept.bind(this) }),
     autoCancel: true
   })
 
   onAccept(isInsert:boolean, student:Student) {
-    console.log('[Rdb.index] onAccept isInsert= ' + isInsert + ',student=' + JSON.stringify(student))
+    console.log(`${TAG}onAccept isInsert:${this.isInsert}, student:${JSON.stringify(student)}`)
     if (isInsert) {
-      self.rdb.insertData(student, (id) => {
+      this.rdb.insertData(student, (id) => {
         student.id = id
-        self.students.push(student)
+        this.students.push(student)
       })
     } else {
-      console.log('[Rdb.index] onAccept updateData, index=' + self.index)
-      self.rdb.updateData(student)
-      let list = self.students
-      self.students = []
-      list[self.index] = student
-      self.students = list
-      self.index = -1
+      console.log(`${TAG}onAccept updateData, index:${this.index}`)
+      this.rdb.updateData(student)
+      let list = this.students
+      this.students = []
+      list[this.index] = student
+      this.students = list
+      this.index = -1
     }
   }
 
   deleteCallBack(student) {
-    console.info('[Rdb.index]delete student id=' + student.id)
-    let index = self.students.indexOf(student)
-    self.students.splice(index, 1)
-    self.rdb.deleteByStudent(student)
+    console.log(`${TAG}delete student id:${student.id}`)
+    let index = this.students.indexOf(student)
+    this.students.splice(index, 1)
+    this.rdb.deleteByStudent(student)
   }
 
   aboutToAppear() {
-    console.log('[Rdb.index] aboutToAppear')
-    self = this
-    this.rdb.getRdbStore(() => {
-      console.log('[Rdb.index]getRdbStore finish')
+    console.log(`${TAG}aboutToAppear`)
+    this.rdb.getRdbStore(function(){
+      console.log(`${TAG}getRdbStore finish`)
       let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
-      self.rdb.query(predicates, (result) => {
-        console.log('[Rdb.index] queryAll finish')
-        self.students = result
-      })
-    })
+      this.rdb.query(predicates, function(result){
+        console.log(`${TAG}queryAll finish`)
+        this.students = result
+      }.bind(this))
+    }.bind(this))
   }
 
   build() {
@@ -103,7 +102,7 @@ struct Index {
       List() {
         ForEach(this.students, item => {
           ListItem() {
-            StudentView({ student: item, deleteCallBack: this.deleteCallBack })
+            StudentView({ student: item, deleteCallBack: this.deleteCallBack.bind(this) })
           }
           .onClick(() => {
             this.isInsert = false

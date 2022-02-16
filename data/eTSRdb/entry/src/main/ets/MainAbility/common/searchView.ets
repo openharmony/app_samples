@@ -16,9 +16,9 @@
 @Component
 export struct SearchView {
   private searchName: string = ''
-  private queryByNameCallback = null
-  private queryByAgeCallback = null
-  private queryByPhoneCallback = null
+  private queryByNameCallback: (data: string) => void
+  private queryByAgeCallback: () => void
+  private queryByPhoneCallback: () => void
 
   build() {
     Column() {
@@ -52,7 +52,6 @@ export struct SearchView {
         .backgroundColor('#0D9FFB')
         .margin({ right: 10 })
         .onClick(() => {
-          console.info('[Rdb.SearchView] query name=' + this.searchName)
           this.queryByNameCallback(this.searchName)
         })
       }

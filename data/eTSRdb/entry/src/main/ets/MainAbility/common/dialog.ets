@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import {Student} from '../model/student'
+import { Student } from '../model/student'
 
 @CustomDialog
 export struct AddDialog {
@@ -89,8 +89,8 @@ export struct AddDialog {
         .backgroundColor(Color.White)
         .margin(5)
         .onClick(() => {
-          console.info('[Rdb.dialog] editStudent = ' + JSON.stringify(this.editStudent))
-          console.info('[Rdb.dialog] isInsert = ' + this.isInsert)
+          console.info(`[Rdb.dialog] editStudent = ${JSON.stringify(this.editStudent)}`)
+          console.info(`[Rdb.dialog] isInsert = ${this.isInsert}`)
           this.controller.close()
           if (this.editStudent.name !== '' || this.editStudent.age > 0 || this.editStudent.phone !== '') {
             this.action(this.isInsert, this.editStudent)
