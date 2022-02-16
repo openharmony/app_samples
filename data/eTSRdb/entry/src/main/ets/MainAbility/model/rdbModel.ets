@@ -15,32 +15,34 @@
 
 import dataRdb from '@ohos.data.rdb'
 import prompt from '@system.prompt'
-import {Student} from '../model/student'
+import { Student } from '../model/student'
+import { STORE_CONFIG } from '../model/rdbConst'
 
-const STORE_CONFIG = { name: 'student.db', encryptKey: null }
-const TABLE_NAME = 'student'
-const SQL_CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, age INTEGER, phone TEXT NOT NULL)'
-const TAG = 'Rdb.rdbModel'
-const columns = ['id', 'name', 'age', 'phone']
+const TAG = '[Rdb.rdbModel]'
 
 export class rdbModel {
-  rdbStore
+  private rdbStore: any = null
+  private tableName: string = ''
+  private sqlCreateTable: string = ''
+  private columns: Array<string> = []
 
-  constructor() {
+  constructor(tableName: string, sqlCreateTable: string, columns: Array<string>) {
+    this.tableName = tableName
+    this.sqlCreateTable = sqlCreateTable
+    this.columns = columns
   }
 
   getRdbStore(callback) {
-    let self = this
-    if ((typeof (this.rdbStore) != 'undefined')) {
+    if (this.rdbStore != null) {
       callback()
       return;
     }
     dataRdb.getRdbStore(STORE_CONFIG, 1, function (err, rdb) {
-      self.rdbStore = rdb
-      self.rdbStore.executeSql(SQL_CREATE_TABLE)
-      console.info(TAG + 'create table done.')
+      this.rdbStore = rdb
+      this.rdbStore.executeSql(this.sqlCreateTable)
+      console.log(`${TAG}create table done`)
       callback()
-    })
+    }.bind(this))
   }
 
   insertData(student: Student, callback) {
@@ -49,11 +51,10 @@ export class rdbModel {
       'age': student.age,
       'phone': student.phone,
     }
-    this.rdbStore.insert(TABLE_NAME, valueBucket, function (err, ret) {
-      console.log(TAG + 'insert done: ' + ret)
+    this.rdbStore.insert(this.tableName, valueBucket, function (err, ret) {
+      console.log(`${TAG}insert done:${ret}`)
       callback(ret)
       prompt.showToast({ message: 'insert done:' + ret })
-
     })
   }
 
@@ -63,47 +64,45 @@ export class rdbModel {
       'age': student.age,
       'phone': student.phone,
     }
-    let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
-    console.info(TAG + 'updateData id=' + student.id)
+    let predicates = new dataRdb.RdbPredicates(this.tableName)
+    console.log(`${TAG}updateData id=${student.id}`)
     predicates.equalTo('id', student.id)
     this.rdbStore.update(valueBucket, predicates, function (err, ret) {
-      console.log(TAG + 'updated row count: ' + ret)
+      console.log(`${TAG}updated row count: ${ret}`)
       prompt.showToast({ message: 'updated row done:' + ret })
     })
   }
 
   deleteByStudent(student: Student) {
-    let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
+    let predicates = new dataRdb.RdbPredicates(this.tableName)
     predicates.equalTo('id', student.id)
     this.rdbStore.delete(predicates, function (err, rows) {
-      console.log(TAG + 'delete rows: ' + rows)
+      console.log(`${TAG}delete rows: ${rows}`)
       prompt.showToast({ message: 'delete student' + rows })
     })
   }
 
   query(predicates, callback) {
-    console.info(TAG + 'query start')
+    console.log(`${TAG}query start`)
     let self = this
-    this.rdbStore.query(predicates, columns, function (err, resultSet) {
+    this.rdbStore.query(predicates, this.columns, function (err, resultSet) {
       let resultList = self.getListFromResultSet(resultSet)
       callback(resultList)
     })
   }
 
   getListFromResultSet(resultSet) {
-    console.info(TAG + 'getListFromResultSet')
+    console.log(`${TAG}getListFromResultSet`)
     let studentList = []
-    console.log(TAG + 'resultSet column names:' + resultSet.columnNames)
-    console.log(TAG + 'resultSet row count:' + resultSet.rowCount)
-    console.log(TAG + 'resultSet goToFirstRow:' + resultSet.goToFirstRow())
+    console.log(`${TAG}resultSet column names:${resultSet.columnNames}`)
+    console.log(`${TAG}resultSet row count:${resultSet.rowCount}`)
+    console.log(`${TAG}resultSet goToFirstRow:${resultSet.goToFirstRow()}`)
     for (let i = 0;i < resultSet.rowCount; i++) {
       let student = new Student(resultSet.getDouble(resultSet.getColumnIndex('id'))
         , resultSet.getString(resultSet.getColumnIndex('name'))
         , resultSet.getDouble(resultSet.getColumnIndex('age'))
         , resultSet.getString(resultSet.getColumnIndex('phone')))
       studentList.push(student)
-      console.log(TAG + 'resultSet student:' + JSON.stringify(student))
-      console.log(TAG + 'resultSet goToNextRow:' + resultSet.goToNextRow())
     }
     return studentList
   }

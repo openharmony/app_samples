@@ -21,7 +21,7 @@ export struct StudentView {
   private student: Student = null
   private deleteCallBack = null
   private deleteDialogController: CustomDialogController = new CustomDialogController({
-    builder: DeleteDialog({ student:this.student,deleteCallback:this.deleteCallBack }),
+    builder: DeleteDialog({ student: this.student, deleteCallback: this.deleteCallBack }),
     autoCancel: true
   })
 
@@ -70,8 +70,7 @@ export struct StudentView {
         }
         .type(ButtonType.Capsule)
         .backgroundColor('#F5F5F5')
-        .onClick(()=>{
-          console.info('[Rdb.StudentView] delete student.id=' + this.student.id)
+        .onClick(() => {
           this.deleteDialogController.open()
         })
       }

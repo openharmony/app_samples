@@ -14,57 +14,54 @@
  */
 import dataRdb from '@ohos.data.rdb'
 import prompt from '@system.prompt'
-import {Student} from '../model/student'
-import {StudentView} from '../common/studentView'
-import {SearchView} from '../common/searchView'
-import {rdbModel} from '../model/rdbModel'
+import { Student } from '../model/student'
+import { StudentView } from '../common/studentView'
+import { SearchView } from '../common/searchView'
+import { rdbModel } from '../model/rdbModel'
+import { TABLE_NAME, SQL_CREATE_TABLE, COLUMNS } from '../model/rdbConst'
 
-let self = null
-const TABLE_NAME = 'student'
+const TAG = '[Rdb.Search]'
 
 @Entry
 @Component
 struct Index {
+  private rdb = new rdbModel(TABLE_NAME, SQL_CREATE_TABLE, COLUMNS)
   @State result: Array<Student> = []
-  private rdb = new rdbModel()
 
   queryByNameCallback(data) {
-    console.info('[Rdb.search]search queryByName name =' + data)
+    console.log(`${TAG}search queryByName name:${data}`)
     if (data === '') {
       prompt.showToast({ message: 'query name is null' })
       return
     }
     let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
     predicates.equalTo('name', data)
-    self.query(predicates)
+    this.query(predicates)
   }
 
   queryByAgeCallback() {
-    console.info('[Rdb.search]search queryByAge')
+    console.log(`${TAG}search queryByAge`)
     let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
     predicates.between('age', 18, 20)
-    self.query(predicates)
+    this.query(predicates)
   }
 
   queryByPhoneCallback() {
-    console.info('[Rdb.search]search queryByPhone')
+    console.log(`${TAG}search queryByPhone`)
     let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
     predicates.beginsWith('phone', '170')
       .and()
       .contains('phone', '5')
-    self.query(predicates)
+    this.query(predicates)
   }
 
   query(predicates) {
-    self.rdb.getRdbStore(() => {
-      self.rdb.query(predicates, (studentsList) => {
-        self.result = studentsList
+    console.log(`${TAG}query`)
+    this.rdb.getRdbStore(function () {
+      this.rdb.query(predicates, (studentsList) => {
+        this.result = studentsList
       })
-    })
-  }
-
-  aboutToAppear() {
-    self = this
+    }.bind(this))
   }
 
   build() {
@@ -79,9 +76,9 @@ struct Index {
       .backgroundColor('#0D9FFB')
       .padding({ left: 15 })
 
-      SearchView({ queryByNameCallback: this.queryByNameCallback,
-        queryByAgeCallback: this.queryByAgeCallback,
-        queryByPhoneCallback: this.queryByPhoneCallback })
+      SearchView({ queryByNameCallback: this.queryByNameCallback.bind(this),
+        queryByAgeCallback: this.queryByAgeCallback.bind(this),
+        queryByPhoneCallback: this.queryByPhoneCallback.bind(this) })
 
       List() {
         ForEach(this.result, item => {
