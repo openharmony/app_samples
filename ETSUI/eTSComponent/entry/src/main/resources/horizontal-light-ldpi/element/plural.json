@@ -1,0 +1,30 @@
+{
+  "plural": [
+    {
+      "name":"pluralstring",
+      "value":[
+        {
+          "quantity":"one",
+          "value":"%1$s apple %2$d day 3"
+        },
+        {
+          "quantity":"other",
+          "value":"%1$s apples %2$d days 3"
+        }
+      ]
+    },
+    {
+      "name":"pluralstringfirst",
+      "value":[
+        {
+          "quantity":"one",
+          "value":"pluralstringfirst one 3"
+        },
+        {
+          "quantity":"other",
+          "value":"pluralstringfirst other 3"
+        }
+      ]
+    }
+  ]
+}
