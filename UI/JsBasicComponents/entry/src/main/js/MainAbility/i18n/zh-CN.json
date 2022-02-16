@@ -1,15 +1,15 @@
 {
   "strings": {
-    "title_case1":"Case 1：Button",
+    "title_case1":"Case 1:Button",
     "title_case2": "Case 2:Image And Text",
     "title_case3": "Case 3:Marquee",
     "title_case4": "Case 4:Input",
     "title_case5": "Case 5:Progress",
     "title_case6": "Case 6:Select",
     "title_case7": "Case 7:Piece",
-    "title_case8": "Case 8: Qrcode",
+    "title_case8": "Case 8:Qrcode",
     "title_case9": "Case 9:Toggle",
-    "title_case10": "Case 10 Switch",
+    "title_case10": "Case 10:Switch",
     "title_case11": "Case 11:Rating",
 
     "content_case1_t1":"基本按钮",

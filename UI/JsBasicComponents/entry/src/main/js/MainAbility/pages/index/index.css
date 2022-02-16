@@ -30,12 +30,12 @@
     margin-right : 24px;
 }
 
-.item-class {
+.item-div{
     flex-direction: column;
 }
 
 .case-title {
-    font-size: 40px;
+    font-size: 30px;
     color: black;
     font-weight: 900;
     margin-top: 40px;
@@ -350,7 +350,7 @@
     align-items : center;
     width : 100%;
     margin-top : 20px;
-    padding-bottom : 400px;
+    padding-bottom : 300px;
 }
 
 .btn-input {

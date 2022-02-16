@@ -1,16 +1,17 @@
 {
   "app": {
-    "bundleName": "ohos.samples.jsbasiccomponent",
+    "bundleName": "ohos.samples.jsbasiccomponents",
+    "vendor": "samples",
     "version": {
       "code": 1000000,
-      "name": "1.0"
+      "name": "1.0.0"
     }
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.jsbasiccomponent",
+    "package": "ohos.samples.jsbasiccomponents",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
       "phone"
     ],
@@ -32,12 +33,14 @@
             ]
           }
         ],
+        "orientation": "unspecified",
         "visible": true,
-        "name": ".default",
-        "icon": "$media:icon",
-        "srcPath": "default",
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
         "srcLanguage": "js",
-        "description": "$string:mainability_description",
+        "icon": "$media:icon",
+        "description": "$string:description_mainability",
+        "formsEnabled": false,
         "label": "$string:app_name",
         "type": "page",
         "launchType": "standard"
@@ -48,7 +51,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }
