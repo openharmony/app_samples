@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "ETS_Empty Feature Ability"
+    },
+    {
+      "name": "hello",
+      "value": "Hello"
+    },
+    {
+      "name": "world",
+      "value": "World"
+    },
+    {
+      "name": "add",
+      "value": "Дадаць"
+    },
+    {
+      "name": "not_set",
+      "value": "Не зададзены"
+    },
+    {
+      "name": "no_contact_set",
+      "value": "Кантакт не зададзены"
+    },
+    {
+      "name": "add_contacts",
+      "value": "Дадаць кантакт"
+    },
+    {
+      "name": "in_the_last_day",
+      "value": "За апошнія 24 гадзіны"
+    },
+    {
+      "name": "no_missed_calls",
+      "value": "Прапушчаных выклікаў няма"
+    }
+  ]
+}

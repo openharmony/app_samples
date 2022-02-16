@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "my_font",
+      "value": "10.0vp"
+    },
+    {
+      "name":"text_headline1",
+      "value":"10px"
+    },
+    {
+      "name":"radius_button",
+      "value":"10px"
+    }
+  ]
+}

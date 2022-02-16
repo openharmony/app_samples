@@ -1,0 +1,103 @@
+{
+  "app": {
+    "bundleName": "com.openharmony.openacetest",
+    "vendor": "openharmony",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.openharmony.openacetest",
+    "name": ".MyApplication",
+    "mainAbility": ".MainAbility",
+    "srcPath": ".MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:icon",
+        "description": "$string:description_mainability",
+        "formsEnabled": false,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/index",
+          "pages/component_basis/index",
+          "pages/component_container/index",
+          "pages/component_basis/button/buttonPage",
+          "pages/component_basis/divider/dividerPage",
+          "pages/component_basis/blank/blankPage",
+          "pages/component_basis/qrCode/QRCodePage",
+          "pages/component_basis/span/spanPage",
+          "pages/component_basis/text/textPage",
+          "pages/component_basis/toggle/togglePage",
+          "pages/component_basis/progress/progressPage",
+          "pages/component_basis/slider/sliderPage",
+          "pages/component_basis/rating/ratingPage",
+          "pages/component_basis/dataPanel/dataPanelPage",
+          "pages/component_basis/textArea/textAreaPage",
+          "pages/component_basis/gauge/gaugePage",
+          "pages/component_basis/marquee/marqueePage",
+          "pages/component_basis/image/imagePage",
+          "pages/component_basis/menu/menuPage",
+          "pages/component_basis/textInput/textInputPage",
+          "pages/component_container/Column/ColumnPage",
+          "pages/component_container/grid/gridIndex",
+          "pages/component_container/flex/flexPage",
+          "pages/component_container/grid/gridPage",
+          "pages/component_container/grid/gridItemPage",
+          "pages/component_container/list/listPage",
+          "pages/component_container/navigator/navigatorPage",
+          "pages/component_container/navigator/navigatorDetail1",
+          "pages/component_container/navigator/navigatorDetail2",
+          "pages/component_container/row/rowPage",
+          "pages/component_container/panel/panelPage",
+          "pages/component_container/scroll/scrollPage",
+          "pages/component_container/stack/stackPage",
+          "pages/component_container/swiper/swiperPage",
+          "pages/component_container/tab/tabsPage",
+          "pages/component_container/Counter/counterPage",
+          "pages/component_container/badge/badgePage"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}
