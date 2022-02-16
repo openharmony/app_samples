@@ -89,7 +89,7 @@ export function getShopCartFromStorage() {
       shopCar = []
       return
     }
-    shopCar = transStrToNoteModel(shopCarStr)
+    shopCar = transStrToGoodsModel(shopCarStr)
   })
 }
 
