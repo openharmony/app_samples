@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this sample, you can obtain the device information, system attributes, battery attributes, and charging attributes through the **deviceInfo**, **systemParameter**, and **batteryInfo** APIs.
+In this sample, you can obtain the device information, system attributes and battery information through the **deviceInfo**, **systemParameter**, and **batteryInfo** APIs.
 
 ### Usage
 

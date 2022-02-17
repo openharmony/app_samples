@@ -51,7 +51,7 @@
           "pages/index/index",
           "pages/deviceInfo/deviceInfo",
           "pages/systemProperties/systemProperties",
-          "pages/batteryProperties/batteryProperties"
+          "pages/batteryInfo/batteryInfo"
         ],
         "name": ".default",
         "window": {

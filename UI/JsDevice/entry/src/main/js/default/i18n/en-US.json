@@ -2,7 +2,7 @@
   "strings": {
     "deviceInfo": "DeviceInfo",
     "systemProperties": "SystemProperties",
-    "batteryProperties": "BatteryProperties",
+    "batteryInfo": "BatteryInfo",
     "back": "Back",
     "serial": "serial",
     "bootloaderVersion": "bootloaderVersion",

@@ -6,7 +6,7 @@ The **<slider\>** component is often used to set the sound, brightness, and font
 
 ### Usage
 
- This sample app provides a slider with five levels, corresponding to five font sizes. You can drag the slider to adjust the font size.
+ This sample app provides a slider with six levels, corresponding to six font sizes. You can drag the slider to adjust the font size.
 
 ### Constraints
 

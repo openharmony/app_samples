@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="title-box">
-        <text class="title" onclick="back">{{ $t('strings.batteryProperties_title') }}</text>
+        <text class="title" onclick="back">{{ $t('strings.batteryInfo_title') }}</text>
     </div>
     <text class="info-text">{{ $t('strings.batterySOC') }}: {{ batterySOC }}</text>
     <text class="info-text">{{ $t('strings.chargingStatus') }}: {{ chargingStatus }}</text>
