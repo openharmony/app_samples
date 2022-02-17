@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例通过deviceInfo、systemParameter和batteryInfo接口分别来查询设备信息、系统属性和电池和充电属性。
+本示例通过deviceInfo、systemParameter和batteryInfo接口分别来查询设备信息、系统属性和电池信息。
 
 ### 使用说明
 

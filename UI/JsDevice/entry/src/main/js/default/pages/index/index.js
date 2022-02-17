@@ -11,9 +11,9 @@ export default {
             uri: 'pages/systemProperties/systemProperties'
         })
     },
-    batteryProperties() {
+    batteryInfo() {
         router.push({
-            uri: 'pages/batteryProperties/batteryProperties'
+            uri: 'pages/batteryInfo/batteryInfo'
         })
     }
 }

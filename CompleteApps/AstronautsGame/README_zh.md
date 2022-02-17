@@ -33,7 +33,7 @@
 
 ​    将 CONFIG_PWM_SUPPORT is not set这一行，   改为CONFIG_PWM_SUPPORT=y
 
-4）  代码编译和烧录请参考：[链接](https://gitee.com/openharmony/docs/blob/master/zh-cn/device-dev/quick-start/quickstart-lite-steps-hi3861-connection.md)
+4）  代码编译和烧录请参考：[链接](https://gitee.com/openharmony/docs/blob/master/zh-cn/device-dev/quick-start/quickstart-lite-steps-hi3861.md)
 
 ##### 2. 游戏玩法如下
 
@@ -57,4 +57,4 @@
 
 想获取更多的OpenHarmony轻量级开发指导，请访问：[链接](https://device.harmonyos.com/cn/docs/start/introduce/quickstart-lite-overview-0000001105598722)
 
-开发工具下载：[链接](https://device.harmnyos.com/cn/ide)
+开发工具下载：[链接](https://developer.harmonyos.com/cn/develop/deveco-studio)
