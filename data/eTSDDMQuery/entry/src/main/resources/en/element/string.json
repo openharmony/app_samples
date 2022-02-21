@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSDDMQuery"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSKvStore Ability"
+    },
+    {
+      "name": "push",
+      "value": "Add Data"
+    },
+    {
+      "name": "resultSet",
+      "value": "Query the result set"
+    },
+    {
+      "name": "prefixKey",
+      "value": "Query the specified value entry"
+    },
+    {
+      "name": "addResult",
+      "value": "And conditional query"
+    },
+    {
+      "name": "orderByDesc",
+      "value": "Query results descending order"
+    },
+    {
+      "name": "lessThan",
+      "value": "Query smaller than value"
+    }
+  ]
+}
