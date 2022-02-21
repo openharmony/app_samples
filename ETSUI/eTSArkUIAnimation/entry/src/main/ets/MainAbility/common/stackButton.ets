@@ -13,7 +13,9 @@
  * limitations under the License.
  */
 
+import { Item } from '../model/item.ets'
 import { Point, AxisModel } from '../model/axisModel.ets'
+import { SmallAnimation } from '../common/smallAnimation.ets'
 
 const IMAGE_RESOURCE: Resource[] = [
   $r('app.media.money1'),
@@ -26,62 +28,19 @@ const IMAGE_RESOURCE: Resource[] = [
   $r('app.media.money8')
 ]
 
-@Observed
-class Item {
-  index: number = 0
-  clicked: boolean = false
-  image: Resource = $r('app.media.money1')
-
-  constructor(index: number, image: Resource, clicked: boolean) {
-    this.index = index
-    this.image = image
-    this.clicked = clicked
-  }
-}
-
-@Component
-struct SmallAnimation {
-  @Link mainFlag: boolean
-  private point: Point = new Point(0, 0)
-  @State item: Item = new Item(0, $r('app.media.money1'), false)
-
-  build() {
-    Image(this.item.image)
-      .objectFit(ImageFit.Contain)
-      .width('20%')
-      .height('20%')
-      .translate(this.mainFlag ? { x: this.point.x, y: this.point.y } : { x: 0, y: 0 })
-      .rotate({ x: 0, y: 0, z: 1, angle: this.item.clicked ? 360 : 0 })
-      .scale(this.item.clicked ? { x: 1.25, y: 1.25 } : { x: 1, y: 1 })
-      .opacity(this.item.clicked ? 0.6 : 1)
-      .onClick(() => {
-        this.item.clicked = !this.item.clicked
-      })
-      .animation(
-        {
-          delay: 10,
-          duration: 300,
-          iterations: 1,
-          curve: Curve.Smooth,
-          playMode: PlayMode.Normal
-        }
-      )
-  }
-}
-
 @Component
 export struct StackButton {
   @State mainFlag: boolean = false
   @State imagerArr: Array<Item> = []
   @State @Watch('onQuantityChange') quantity: number = 3
-  private axis: AxisModel = new AxisModel(125, this.quantity)
+  private axis: AxisModel = new AxisModel(175, this.quantity)
 
   onQuantityChange() {
     this.imagerArr = []
     for (let i = 0; i < this.quantity; i++) {
       this.imagerArr.push(new Item(i, IMAGE_RESOURCE[i], false))
     }
-    this.axis = new AxisModel(125, this.quantity)
+    this.axis = new AxisModel(175, this.quantity)
   }
 
   aboutToAppear() {
@@ -143,7 +102,7 @@ export struct StackButton {
             this.animate()
           })
       }
-      .rotate({ x: 0, y: 0, z: 1, angle: this.mainFlag ? 0 : 360 })
+      .rotate({ x: 0, y: 0, z: 1, angle: this.mainFlag ? 360 : 90 })
       .width('100%')
       .height('80%')
       .layoutWeight(1)
