@@ -1,0 +1,84 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSRPC"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "vegetable",
+      "value": "Veggie"
+    },
+    {
+      "name": "vegetable_potato",
+      "value": "Potato"
+    },
+    {
+      "name": "vegetable_cabbage",
+      "value": "Cabbage"
+    },
+    {
+      "name": "vegetable_eggplant",
+      "value": "Eggplant"
+    },
+    {
+      "name": "fruit",
+      "value": "Fruit"
+    },
+    {
+      "name": "fruit_apple",
+      "value": "Apple"
+    },
+    {
+      "name": "fruit_banana",
+      "value": "Banana"
+    },
+    {
+      "name": "fruit_peach",
+      "value": "Peach"
+    },
+    {
+      "name": "meat",
+      "value": "Meat"
+    },
+    {
+      "name": "meat_beef",
+      "value": "Beef"
+    },
+    {
+      "name": "meat_pork",
+      "value": "Pork"
+    },
+    {
+      "name": "meat_chicken",
+      "value": "Chicken"
+    },
+    {
+      "name": "snacks",
+      "value": "Snacks"
+    },
+    {
+      "name": "snacks_biscuits",
+      "value": "Biscuits"
+    },
+    {
+      "name": "snacks_chips",
+      "value": "Chips"
+    },
+    {
+      "name": "snacks_candy",
+      "value": "Candy"
+    },
+    {
+      "name": "final_price",
+      "value": "The final price of the order is："
+    },
+    {
+      "name": "confirm",
+      "value": "Confirm an order"
+    }
+  ]
+}
