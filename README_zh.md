@@ -32,6 +32,7 @@
   - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
   - [`eTSLiteStorage:`轻量级存储（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSLiteStorage)
   - [`eTSRdb:`关系型数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSRdb)
+  - [`eTSDDMQuery:`结果集与谓词（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSDDMQuery)
 - device
   - [`eTSDeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSDeviceManager)
   - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSWlan) 
@@ -57,7 +58,8 @@
   - [`eTSRunninglock:`运行锁（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSRunninglock)
   - [`eTSUrlString:`URL字符串解析（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSUrlString)
   - [`eTSComponent:`Ets组件测试Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSComponent)
-  - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie)  
+  - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie) 
+  - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)   
 - ArkUI
   - [`AtomicLayout:`原子布局（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Badge)
