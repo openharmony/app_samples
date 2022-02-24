@@ -31,7 +31,7 @@
         <text class="menu-text">{{ $t('strings.drink') }}</text>
         <text onclick="onDrinkClick" class="menu-title">{{ drink_result }}</text>
         <menu id="drinkMenu" onselected="onDrinkSelected">
-           <option class="snack-option" for="{{ drinks }}" value="{{ $item.name }}">{{ $item.name }}</option>
+           <option class="drink-option" for="{{ drinks }}" value="{{ $item.name }}">{{ $item.name }}</option>
         </menu>
     </div>
     <text class="result-text">{{ $t('strings.resultStr') }}</text>
