@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "录音机"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "rename",
+      "value": "重命名"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "delete_message_one",
+      "value": "删除此录音?"
+    },
+    {
+      "name": "delete_message_other",
+      "value": "删除所选录音?"
+    },
+    {
+      "name": "check_title_unselected",
+      "value": "未选择"
+    },
+    {
+      "name": "check_title_selected",
+      "value": "已选择"
+    },
+    {
+      "name": "check_title_selected_end",
+      "value": "项"
+    }
+  ]
+}
