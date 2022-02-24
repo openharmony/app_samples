@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Recorder"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "rename",
+      "value": "Rename"
+    },
+    {
+      "name": "delete",
+      "value": "Delete"
+    },
+    {
+      "name": "sure",
+      "value": "OK"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "delete_message_one",
+      "value": "Delete this recording?"
+    },
+    {
+      "name": "delete_message_other",
+      "value": "Delete the selected recordings?"
+    },
+    {
+      "name": "check_title_unselected",
+      "value": "No selected"
+    },
+    {
+      "name": "check_title_selected",
+      "value": "selected"
+    },
+    {
+      "name": "check_title_selected_end",
+      "value": "items"
+    }
+  ]
+}
