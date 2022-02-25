@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "title": "title",
+    "search_hint": "search",
+    "item_name": "double lines",
+    "item_description": "item description",
+    "item_right_text": "item right text",
+    "second_page": "Second page",
+    "third_page": "Third page",
+    "fourth_page": "Fourth page",
+    "fifth_page": "Fifth page"
+  }
+}
