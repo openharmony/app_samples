@@ -1,0 +1,71 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<element src="../../common/template-tabbar.hml" name="tab-bar-group"></element>
+<div class="container">
+    <div class="bottom-bar-wrapper" if="{{ isTabletLandscape }}">
+        <tab-bar-group for="{{ tabBars }}" icon="{{ $item.icon }}" text="{{ $item.text }}"
+                       active="{{ $idx == menu_tabs_index }}"></tab-bar-group>
+    </div>
+    <div class="div-content">
+        <div class="top-tool-bar">
+            <image class="toolbar-image-add" src="/common/images/add.png"></image>
+            <image class="toolbar-image-add" src="/common/images/add.png"></image>
+            <image class="toolbar-image-more" src="/common/images/more.png"></image>
+        </div>
+        <tabs class="tabs" index="{{ menu_tabs_index }}" vertical="true">
+            <tab-content class="tabContent" scrollable="false">
+                <div class="item-content">
+                    <text class="title">{{ $t('strings.title') }}</text>
+                    <div class="search">
+                        <search class="search-bar" hint="{{ $t('strings.search_hint') }}"></search>
+                    </div>
+                    <list class="list-wrapper">
+                        <list-item type="ListItem" class="list-items" for="{{ list_data }}" id="{{ $item.id }}"
+                                   clickeffect="false">
+                            <div class="item-wrapper">
+                                <image class="item-icon" src="/common/images/home_person_picture.png"></image>
+                                <div class="item-name-description-wrapper">
+                                    <text class="item-name">{{ $t('strings.item_name') }}</text>
+                                    <text class="item-description">{{ $t('strings.item_description') }}</text>
+                                </div>
+                                <div class="item-right-part-wrapper">
+                                    <text class="item-right-text">{{ $t('strings.item_right_text') }}</text>
+                                    <image class="item-right-circle" src="/common/images/circle.png"></image>
+                                </div>
+                            </div>
+                        </list-item>
+                    </list>
+                </div>
+                <div class="item-content">
+                    <text class="item-title">{{ $t('strings.second_page') }}</text>
+                </div>
+                <div class="item-content">
+                    <text class="item-title">{{ $t('strings.third_page') }}</text>
+                </div>
+                <div class="item-content">
+                    <text class="item-title">{{ $t('strings.fourth_page') }}</text>
+                </div>
+                <div class="item-content">
+                    <text class="item-title">{{ $t('strings.fifth_page') }}</text>
+                </div>
+            </tab-content>
+        </tabs>
+    </div>
+    <div class="bottom-bar-wrapper" if="{{ ! isTabletLandscape }}">
+        <tab-bar-group for="{{ tabBars }}" icon="{{ $item.icon }}" text="{{ $item.text }}"
+                       active="{{ $idx == menu_tabs_index }}"></tab-bar-group>
+    </div>
+</div>
