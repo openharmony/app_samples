@@ -11,6 +11,9 @@
 为帮助开发者快速熟悉HarmonyOS和OpenHarmony SDK所提供的API和应用开发流程，我们提供了一系列的应用示例，即Sample。每一个应用示例都是一个独立的DevEco Studio工程项目，开发者可以将工程导入到DevEco Studio开发工具，通过浏览代码、编译工程、安装和运行应用示例来了解应用示例中涉及API的使用方法。
 
 ## 目录<a name="sectionMenu"></a>
+- Communication
+  - [`eTSRPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSRPC)
+  - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSWlan) 
 - ability
   - [`DMS:`分布式Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/DMS)
   - [`EtsCommonEvent:`订阅公共事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/EtsCommonEvent)
@@ -35,12 +38,12 @@
   - [`eTSDDMQuery:`结果集与谓词（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSDDMQuery)
 - device
   - [`eTSDeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSDeviceManager)
-  - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSWlan) 
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
-- security
-  - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/security/JsDotTest)
+  - [`eTSRecorder:`录音机（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/eTSRecorder)
+- DFX
+  - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/DFX/JsDotTest)
 - Telephony
   - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
   - [`eTSRadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSRadioTech)	
@@ -59,8 +62,9 @@
   - [`eTSUrlString:`URL字符串解析（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSUrlString)
   - [`eTSComponent:`Ets组件测试Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSComponent)
   - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie) 
-  - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)   
-- ArkUI
+  - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)
+  - [`eTSMediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSMediaQuery)   
+- UI
   - [`AtomicLayout:`原子布局（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Badge)
   - [`International:`国际化（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/International)
@@ -88,6 +92,12 @@
   - [`Tabs:`页签容器（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Tabs)
   - [`Toolbar:`工具栏（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Toolbar)
   - [`chart:`图表组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/chart)
+  - [`JsAdaptivePortalList:`多设备自适应的效率型首页（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsAdaptivePortalList)
+  - [`JsAdaptivePortalPage:`多设备自适应的FA页面（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsAdaptivePortalPage)
+  - [`JsImage:`基本动画（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsImage)
+  - [`JsGallery:`图库示例应用（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsGallery)
+  - [`JsComponents:`Js组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsComponents)
+  - [`JsUserRegistration:`用户注册（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsUserRegistration)
 - Util
   - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilBase64Codec)
   - [`eTSUtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
