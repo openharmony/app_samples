@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSCustomComponent"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "description_productdata",
+      "value": "hap sample empty provider"
+    },
+    {
+      "name": "title",
+      "value": "自定义组件"
+    },
+    {
+      "name": "newProduct",
+      "value": "首发新品"
+    },
+    {
+      "name": "mediaMeasurement",
+      "value": "媒体测评"
+    },
+    {
+      "name": "liveBack",
+      "value": "直播回顾"
+    },
+    {
+      "name": "officalPreheating",
+      "value": "官方预热"
+    },
+    {
+      "name": "mediaGuess",
+      "value": "媒体爆料"
+    },
+    {
+      "name": "liveAppointment",
+      "value": "直播预约"
+    },
+    {
+      "name": "appointment",
+      "value": "预约"
+    },
+    {
+      "name": "collection",
+      "value": "收藏"
+    },
+    {
+      "name": "browse",
+      "value": "浏览"
+    }
+  ]
+}
