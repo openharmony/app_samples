@@ -46,7 +46,7 @@ export class KvStoreModel {
                 backup: false,
                 autoSync: true,
                 kvStoreType: 1,
-                securityLevel: 3,
+                securityLevel: 1,
             };
             console.info('[KvStoreModel] kvManager.getKVStore begin');
             self.kvManager.getKVStore(STORE_ID, options).then((store) => {

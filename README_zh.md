@@ -38,6 +38,7 @@
   - [`eTSDDMQuery:`结果集与谓词（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSDDMQuery)
 - device
   - [`eTSDeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSDeviceManager)
+  - [`eTSSenSor:`传感器（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSSenSor)
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
