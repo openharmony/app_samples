@@ -1,0 +1,17 @@
+{
+  "strings": {
+    "hello": "您好",
+    "world": "世界",
+    "load": "负载配置",
+    "quantity": "视频显隐数量",
+    "move": "视频移动数量",
+    "picture": "图片移动数量",
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "confirm": "确定",
+    "cancel": "取消"
+  },
+  "Files": {
+  }
+}

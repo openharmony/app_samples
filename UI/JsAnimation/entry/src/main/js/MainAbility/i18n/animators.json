@@ -1,0 +1,14 @@
+{
+  "videoopa":{
+    "videoopa_1": true,
+    "videoopa_2": true,
+    "videoopa_3": false
+  },
+  "videomove": {
+    "videomove_1": true,
+    "videomove_2": true,
+    "videomove_3": false
+  },
+  "imgmove": [true,true,true,true,true,true,false,false,false,false],
+  "shadow": false
+}
