@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSCustomComponent"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "description_productdata",
+      "value": "hap sample empty provider"
+    },
+    {
+      "name": "title",
+      "value": "Custom Component"
+    },
+    {
+      "name": "newProduct",
+      "value": "New Product"
+    },
+    {
+      "name": "mediaMeasurement",
+      "value": "Media Measurement"
+    },
+    {
+      "name": "liveBack",
+      "value": "Live Back"
+    },
+    {
+      "name": "officalPreheating",
+      "value": "Offical Preheating"
+    },
+    {
+      "name": "mediaGuess",
+      "value": "Media Guess"
+    },
+    {
+      "name": "liveAppointment",
+      "value": "Live Appointment"
+    },
+    {
+      "name": "appointment",
+      "value": "appointment"
+    },
+    {
+      "name": "collection",
+      "value": "collection"
+    },
+    {
+      "name": "browse",
+      "value": "browse"
+    }
+  ]
+}
