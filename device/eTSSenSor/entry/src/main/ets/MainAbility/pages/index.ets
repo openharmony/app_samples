@@ -25,7 +25,7 @@ struct Index {
   @State angleTest: string = '0°'
 
   aboutToAppear() {
-    sensor.on(256, function (error, data) {
+    sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, function(error, data){
       console.info(`${TAG} component: on`)
       if (error) {
         console.error(`${TAG} on failed. Error code: ${error.code}; message: ${error.message}`)
@@ -35,11 +35,11 @@ struct Index {
       console.info(`${TAG} Y-coordinate component: ${data.y}`)
       console.info(`${TAG} Z-coordinate component: ${data.z}`)
       this.calibration = Math.round(data.x)
-      this.angle = -(this.calibration + 180)
-      if ((this.calibration - 180) < 0) {
-        this.angleTest = (this.calibration + 180) + '°'
+      this.angle = -(this.calibration - 135)
+      if ((this.calibration - 90) < 0) {
+        this.angleTest = (270 + this.calibration) + '°'
       } else {
-        this.angleTest = (this.calibration - 180) + '°'
+        this.angleTest = (this.calibration - 90) + '°'
       }
     }.bind(this), { interval: 10000000 })
   }

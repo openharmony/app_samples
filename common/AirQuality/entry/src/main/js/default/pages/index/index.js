@@ -70,7 +70,7 @@ export default {
         }
     },
     openDetail() {
-        router.replace({
+        router.push({
             uri: 'pages/second/second',
             params: {
                 selectedCityIndex: this.swiperPage
