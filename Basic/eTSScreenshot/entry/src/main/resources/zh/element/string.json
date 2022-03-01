@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTS屏幕截图"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "btn_fullscreen",
+      "value": "全屏截图"
+    },
+    {
+      "name": "btn_fixedsize",
+      "value": "固定大小截图"
+    },
+    {
+      "name": "ok",
+      "value": "确定"
+    }
+  ]
+}

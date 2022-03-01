@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSScreenshot"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "btn_fullscreen",
+      "value": "FullScreen screenshot"
+    },
+    {
+      "name": "btn_fixedsize",
+      "value": "Fixed-size screenshot"
+    },
+    {
+      "name": "ok",
+      "value": "OK"
+    }
+  ]
+}
