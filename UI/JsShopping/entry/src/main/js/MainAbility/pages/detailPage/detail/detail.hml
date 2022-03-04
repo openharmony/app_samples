@@ -1,0 +1,109 @@
+<!--
+  Copyright (c) 2021 Huawei Device Co., Ltd.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ -->
+<element name="bannerSwiper" src="../bannerSwiper/bannerSwiper.hml"></element>
+<element name="deliveryInfo" src="../deliveryInfo/deliveryInfo.hml"></element>
+<element name="evaluation" src="../evaluation/evaluation.hml"></element>
+<element name="recommend" src="../recommend/recommend.hml"></element>
+<div class="container">
+    <div class="topshopcarts" onclick="back">
+        <div class="topshopcart">
+            <image class="topshopcartimg1" src="/common/Icon/arrow.png"></image>
+        </div>
+        <div>
+            <div class="topshopcart">
+                <image class="topshopcartimg2" src="{{ commonimg[4].url }}"></image>
+            </div>
+            <div class="topshopcart">
+                <image class="topshopcartimg2" src="/common/Icon/ellipsis_vertical_line.png"></image>
+            </div>
+        </div>
+    </div>
+    <list cachedcount="10" onrequestitem="buildItem" beginindex="{{ this.beginIndex }}" endindex="{{ this.endIndex }}"
+          repeatedlength="23" indexoffset="5">
+        <list-item type="swiper" class="list-swiper">
+            <bannerswiper id="banners" bannerdata="{{ goodsimgs }}" onreceive="receiveBigVideoTime"></bannerswiper>
+        </list-item>
+        <list-item type="blank" sticky="normal" style="width : 100%; height : 20px; background-color : #FFFFFF;">
+        </list-item>
+        <list-item type="blank" sticky="normal" onsticky="stickyPage"
+                   style="width : 100%; height : 10px; background-color : #FFFFFF;"></list-item>
+        <list-item type="deliveryInfo" class="ceils" style="flex-direction : column;">
+            <deliveryInfo deliveryinfo="{{ specficlist }}" commonimg="{{ commonimg }}"></deliveryInfo>
+        </list-item>
+        <list-item type="evaluation" class="ceils">
+            <evaluation evaluation="{{ comment }}" commonimg="{{ commonimg }}"></evaluation>
+        </list-item>
+        <list-item type="recommend" class="ceils">
+            <recommend recommenddata="{{ recommendgood }}" commonimg="{{ commonimg }}"></recommend>
+        </list-item>
+        <list-item type="goodsdata1" for="{{ tempList }}">
+            <image src="{{ $item.url }}" style="object-fit : cover;"></image>
+        </list-item>
+        <list-item type="goodsdata2" class="listitem">
+            <div class="content">
+                <div for="{{ recommendgood.img }}" class="recommend-box">
+                    <image class="recommend-img" src="{{ $item.icon }}"></image>
+                    <text class="recommend-good-name">{{ $item.title }}
+                    </text>
+                    <text class="recommend-price">{{ $item.price }}
+                    </text>
+                </div>
+            </div>
+        </list-item>
+    </list>
+    <div class="malldetail-buy">
+        <div class="shop-img">
+            <div class="malldetail-buy-com">
+                <image class="malldetail-shopcart-img" src="{{ commonimg[4].url }}"></image>
+                <text>
+                    店铺
+                </text>
+            </div>
+            <div class="malldetail-buy-com">
+                <image class="malldetail-shopcart-img" src="{{ commonimg[9].url }}"></image>
+                <text>
+                    客服
+                </text>
+            </div>
+            <div class="malldetail-buy-com">
+                <image if="{{ ! isCollect }}" class="malldetail-star-img" src="{{ commonimg[5].url }}"
+                       onclick="collectItem('true')"></image>
+                <image else class="malldetail-star-img" src="{{ commonimg[6].url }}"
+                       onclick="collectItem('false')"></image>
+                <text>
+                    收藏
+                </text>
+            </div>
+        </div>
+        <div class="cart">
+            <text class="malldetail-shopcart-add" onclick="addCart">
+                加入购物车
+            </text>
+            <text class="malldetail-now-buy">
+                立即购买
+            </text>
+        </div>
+    </div>
+    <div>
+        <div class="smallVideos" show="{{ display }}">
+            <text class="smallVideos-text" onclick="closeVideo">
+                X关闭
+            </text>
+            <video id="smallVideo" controls="{{ playBar }}" src="/common/detailImg/swiperImg/swiper.mp4"
+                   poster="{{ goodsimgs.videos.url }}" onfinish="playComplete" ontimeupdate="getSmallVideoTime"
+                   onclick="showPlayBar"></video>
+        </div>
+    </div>
+</div>
