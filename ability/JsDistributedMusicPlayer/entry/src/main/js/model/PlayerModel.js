@@ -14,6 +14,7 @@
  */
 
 import media from '@ohos.multimedia.media';
+import fileIO from '@ohos.fileio';
 import mediaLibrary from '@ohos.multimedia.medialibrary';
 
 export
@@ -110,8 +111,8 @@ export default class PlayerModel {
         console.info('MusicPlayer[PlayerModel] getAudioAssets begin');
         self.playlist = new Playlist();
         self.playlist.audioFiles = [];
-        self.playlist.audioFiles[0] = new Song('dynamic.wav', 'file://system/etc/dynamic.wav', 0);
-        self.playlist.audioFiles[1] = new Song('demo.wav', 'file://system/etc/demo.wav', 0);
+        self.playlist.audioFiles[0] = new Song('dynamic.wav', 'system/etc/dynamic.wav', 0);
+        self.playlist.audioFiles[1] = new Song('demo.wav', 'system/etc/demo.wav', 0);
         helper.getAudioAssets(args, (error, value) => {
             console.info('MusicPlayer[PlayerModel] getAudioAssets callback entered');
             if (error) {
@@ -126,7 +127,7 @@ export default class PlayerModel {
                     var index = beginIndex + i;
                     self.playlist.audioFiles[index] = new Song();
                     self.playlist.audioFiles[index].name = value[i].name;
-                    self.playlist.audioFiles[index].fileUri = 'file:/' + value[i].URI;
+                    self.playlist.audioFiles[index].fileUri = value[i].URI;
                     self.playlist.audioFiles[index].duration = 0;
                     console.info('MusicPlayer[PlayerModel] getAudioAssets result ' + i + ', name=' +
                     self.playlist.audioFiles[index].name + ',URI=' + self.playlist.audioFiles[index].fileUri);
@@ -185,38 +186,43 @@ export default class PlayerModel {
             return 0;
         }
         this.index = index;
-        var source = this.playlist.audioFiles[index].fileUri;
-        if (typeof (source) === 'undefined') {
-            console.error('MusicPlayer[PlayerModel] preLoad ignored, source=' + source);
-            return;
-        }
-        console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' begin');
-        console.info('MusicPlayer[PlayerModel] state=' + this.#player.state);
-        let self = this;
-        if (source === this.#player.src && this.#player.state != 'idle') {
-            console.info('MusicPlayer[PlayerModel] preLoad finished. src not changed');
-            callback();
-        } else if (this.#player.state === 'idle') {
-            this.#player.on('dataLoad', () => {
-                console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+        let uri = this.playlist.audioFiles[index].fileUri
+        fileIO.open(uri, function(err, fdNumber){
+            let fdPath = 'fd://'
+            let source = fdPath + fdNumber
+            console.info('MusicPlayer[PlayerModel] preLoad source' + source)
+            if (typeof (source) === 'undefined') {
+                console.error('MusicPlayer[PlayerModel] preLoad ignored, source=' + source);
+                return;
+            }
+            console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' begin');
+            console.info('MusicPlayer[PlayerModel] state=' + this.#player.state);
+            let self = this;
+            if (source === this.#player.src && this.#player.state != 'idle') {
+                console.info('MusicPlayer[PlayerModel] preLoad finished. src not changed');
                 callback();
-            });
-            console.info('MusicPlayer[PlayerModel] player.src=' + source);
-            this.#player.src = source;
-        } else {
-            this.notifyPlayingStatus(false);
-            this.cancelTimer();
-            console.info('MusicPlayer[PlayerModel] player.reset');
-            self.#player.reset();
-            console.info('MusicPlayer[PlayerModel] player.reset done, state=' + self.#player.state);
-            self.#player.on('dataLoad', () => {
-                console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
-                callback();
-            });
-            console.info('MusicPlayer[PlayerModel] player.src=' + source);
-            self.#player.src = source;
-        }
-        console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' end');
+            } else if (this.#player.state === 'idle') {
+                this.#player.on('dataLoad', () => {
+                    console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+                    callback();
+                });
+                console.info('MusicPlayer[PlayerModel] player.src=' + source);
+                this.#player.src = source;
+            } else {
+                this.notifyPlayingStatus(false);
+                this.cancelTimer();
+                console.info('MusicPlayer[PlayerModel] player.reset');
+                self.#player.reset();
+                console.info('MusicPlayer[PlayerModel] player.reset done, state=' + self.#player.state);
+                self.#player.on('dataLoad', () => {
+                    console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+                    callback();
+                });
+                console.info('MusicPlayer[PlayerModel] player.src=' + source);
+                self.#player.src = source;
+            }
+            console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' end');
+        }.bind(this))
     }
 
     getDuration() {
