@@ -1,0 +1,25 @@
+{
+  app: {
+    signingConfigs: [
+    ],
+    compileSdkVersion: 9,
+    compatibleSdkVersion: 6,
+    products: [
+      {
+        name: "default",
+      }
+    ]
+  },
+  modules: [
+    {
+      name: "phone",
+      srcPath: "./entry",
+      target: [
+        {
+          "name": "default",
+        }
+      ]
+    }
+  ]
+}
+

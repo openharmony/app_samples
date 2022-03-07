@@ -1,0 +1,21 @@
+{
+  "name": "ohosproject",
+  "version": "1.0.0",
+  "description": "ohos project demo",
+  "main": "hvigorfile.js",
+  "ohos": {
+    "org": "huawei",
+    "buildTool": "hvigor",
+    "directoryLevel": "project"
+  },
+  "scripts": {
+    "buildApp": "hvigor assembleApp -m project"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@ohos/hvigor": "file:offline-dependency/ohos-hvigor-1.0.0.tgz",
+    "@ohos/hvigor-cli": "file:offline-dependency/ohos-hvigor-cli-1.0.0.tgz",
+    "@ohos/hvigor-ohos-plugin": "file:offline-dependency/ohos-hvigor-ohos-plugin-1.0.0.tgz",
+    "@ohos/sdk-common": "file:offline-dependency/ohos-sdk-common-1.0.0.tgz"
+  }
+}
