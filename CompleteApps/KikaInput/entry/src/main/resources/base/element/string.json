@@ -1,12 +1,24 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
-      "value": "entry_MainAbility"
+      "name": "extension_ability_name",
+      "value": "kikaInput extension"
     },
     {
-      "name": "mainability_description",
-      "value": "JS_Empty Ability"
+      "name": "extension_ability_descripter1",
+      "value": "1-soft input extension by kika"
+    },
+    {
+      "name": "extension_ability_descripter2",
+      "value": "2-soft input extension by kika"
+    },
+    {
+      "name": "phone_entry_main",
+      "value": "phone_entry_main"
+    },
+    {
+      "name": "entry_label",
+      "value": "kikaInput"
     }
   ]
 }

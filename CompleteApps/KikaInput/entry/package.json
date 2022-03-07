@@ -1,1 +1,13 @@
-{}
+{
+  "name": "phone",
+  "version": "1.0.0",
+  "ohos": {
+    "org": "huawei",
+    "buildTool": "hvigor",
+    "directoryLevel": "module"
+  },
+  "main": "hvigorfile.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

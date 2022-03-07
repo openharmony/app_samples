@@ -1,0 +1,311 @@
+export interface keySourceListType {
+  title: string,
+  content: string,
+  upperContent: string
+}
+
+export interface sourceListType {
+  content: string
+}
+
+export let keySourceListData: keySourceListType[] = [
+  {
+    title: '1',
+    content: 'q',
+    upperContent: 'Q'
+  },
+  {
+    title: '2',
+    content: 'w',
+    upperContent: 'W'
+  },
+  {
+    title: '3',
+    content: 'e',
+    upperContent: 'E'
+  },
+  {
+    title: '4',
+    content: 'r',
+    upperContent: 'R'
+  },
+  {
+    title: '5',
+    content: 't',
+    upperContent: 'T'
+  },
+  {
+    title: '6',
+    content: 'y',
+    upperContent: 'Y'
+  },
+  {
+    title: '7',
+    content: 'u',
+    upperContent: 'U'
+  },
+  {
+    title: '8',
+    content: 'i',
+    upperContent: 'I'
+  },
+  {
+    title: '9',
+    content: 'o',
+    upperContent: 'O'
+  },
+  {
+    title: '0',
+    content: 'p',
+    upperContent: 'P'
+  },
+  {
+    title: String.fromCharCode(126),
+    content: 'a',
+    upperContent: 'A'
+  },
+  {
+    title: String.fromCharCode(33),
+    content: 's',
+    upperContent: 'S'
+  },
+  {
+    title: '@',
+    content: 'd',
+    upperContent: 'D'
+  },
+  {
+    title: String.fromCharCode(35),
+    content: 'f',
+    upperContent: 'F'
+  },
+  {
+    title: '%',
+    content: 'g',
+    upperContent: 'G'
+  },
+  {
+    title: String.fromCharCode(39),
+    content: 'h',
+    upperContent: 'H'
+  },
+  {
+    title: '&',
+    content: 'j',
+    upperContent: 'J'
+  },
+  {
+    title: '*',
+    content: 'k',
+    upperContent: 'K'
+  },
+  {
+    title: '?',
+    content: 'l',
+    upperContent: 'L'
+  },
+  {
+    title: String.fromCharCode(72),
+    content: 'z',
+    upperContent: 'Z'
+  },
+  {
+    title: String.fromCharCode(73),
+    content: 'x',
+    upperContent: 'X'
+  },
+  {
+    title: String.fromCharCode(175),
+    content: 'c',
+    upperContent: 'C'
+  },
+  {
+    title: String.fromCharCode(95),
+    content: 'v',
+    upperContent: 'V'
+  },
+  {
+    title: String.fromCharCode(58),
+    content: 'b',
+    upperContent: 'B'
+  },
+  {
+    title: String.fromCharCode(59),
+    content: 'n',
+    upperContent: 'N'
+  },
+  {
+    title: String.fromCharCode(47),
+    content: 'm',
+    upperContent: 'M'
+  }
+]
+
+export let numberSourceListData: sourceListType[] = [
+  {
+    content: '1'
+  },
+  {
+    content: '2'
+  },
+  {
+    content: '3'
+  },
+  {
+    content: '4'
+  },
+  {
+    content: '5'
+  },
+  {
+    content: '6'
+  },
+  {
+    content: '7'
+  },
+  {
+    content: '8'
+  },
+  {
+    content: '9'
+  },
+  {
+    content: '0'
+  },
+  {
+    content: '@'
+  },
+  {
+    content: '#'
+  },
+  {
+    content: '$'
+  },
+  {
+    content: '%'
+  },
+  {
+    content: '&'
+  },
+  {
+    content: '-'
+  },
+  {
+    content: '+'
+  },
+  {
+    content: '('
+  },
+  {
+    content: ')'
+  },
+  {
+    content: '/'
+  },
+  {
+    content: '*'
+  },
+  {
+    content: '"'
+  },
+  {
+    content: "'"
+  },
+  {
+    content: ':'
+  },
+  {
+    content: ';'
+  },
+  {
+    content: '!'
+  },
+  {
+    content: '?'
+  },
+
+]
+
+export let symbolSourceListData: sourceListType[] = [
+  {
+    content: '~'
+  },
+  {
+    content: '`'
+  },
+  {
+    content: '|'
+  },
+  {
+    content: '\u2022'
+  },
+  {
+    content: '\u221A'
+  },
+  {
+    content: '\u03A0'
+  },
+  {
+    content: '\u00F7'
+  },
+  {
+    content: '\u00D7'
+  },
+  {
+    content: String.fromCharCode(182)
+  },
+  {
+    content: '\u2206'
+  },
+  {
+    content: String.fromCharCode(163)
+  },
+  {
+    content: '\u20ac'
+  },
+  {
+    content: String.fromCharCode(165)
+  },
+  {
+    content: String.fromCharCode(162)
+  },
+  {
+    content: String.fromCharCode(94)
+  },
+  {
+    content: '\u00B0'
+  },
+  {
+    content: '='
+  },
+  {
+    content: String.fromCharCode(123)
+  },
+  {
+    content: String.fromCharCode(125)
+  },
+  {
+    content: String.fromCharCode(44)
+  },
+  {
+    content: String.fromCharCode(92)
+  },
+  {
+    content: String.fromCharCode(169)
+  },
+  {
+    content: String.fromCharCode(174)
+  },
+  {
+    content: '\u2122'
+  },
+  {
+    content: '\u2105'
+  },
+  {
+    content: '['
+  },
+  {
+    content: ']'
+  },
+]
