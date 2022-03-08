@@ -1,17 +1,17 @@
-# 系统电源管理
+# Power Management
 
-### 简介
+### Introduction
 
-本示例展示了关机、重启以及检测亮灭屏状态的功能。
+This sample shows how to power off a device, restart the system, and check the screen status.
 
-### 使用说明
+### Usage
 
-1：点击**关机**按钮，并在弹框中点击确定，系统将关机。点击取消，则关闭弹窗。
+1. To power off a device, tap the **Power off** button, and click **OK** in the displayed dialog. To quit, tap **Cancel** in the displayed dialog.
 
-2：点击**重启**按钮，并在弹框中点击确定，系统将重启。点击取消，则关闭弹窗。
+2. To restart the system, touch the **Restart** button, and click **OK** in the displayed dialog. To quit, tap **Cancel** in the displayed dialog.
 
-3：点击**检测亮灭屏状态**按钮，将会把检测的结果信息展示在显示窗口中。
+3. To check whether the screen is on or off, tap the **Check screen status** button. The check result will be shown in the displayed dialog.
 
-### 约束与限制
+### Constraints
 
-本示例仅支持在标准系统上运行。
+This sample can only be run on standard-system devices.
