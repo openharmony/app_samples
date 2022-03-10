@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "目录环境"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "storage_data",
+      "value": "内存存储根目录"
+    },
+    {
+      "name": "user_data",
+      "value": "公共文件根目录"
+    },
+    {
+      "name": "used",
+      "value": "已使用"
+    },
+    {
+      "name": "free",
+      "value": "剩余空间:"
+    },
+    {
+      "name": "total",
+      "value": "总空间:"
+    }
+  ]
+}
