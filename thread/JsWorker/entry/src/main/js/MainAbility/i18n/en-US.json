@@ -1,8 +1,8 @@
 {
   "strings": {
     "title": "JsWorker",
-    "tip_before": "Before sort:",
-    "tip_after": "After sort:",
+    "tip_before": "Before sorting:",
+    "tip_after": "After sorting:",
     "send_string": "Sort string array",
     "clear": "Clear",
     "menus": ["string adc","string adcf","string afc","string aaccdd"]
