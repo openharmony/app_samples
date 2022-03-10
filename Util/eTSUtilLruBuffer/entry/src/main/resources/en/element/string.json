@@ -26,23 +26,23 @@
     },
     {
       "name": "add_key_value",
-      "value": "Add key value pair"
+      "value": "Add key-value pair"
     },
     {
       "name": "get_value_with_key",
-      "value": "Get value with key"
+      "value": "Get value of key"
     },
     {
       "name": "get_all_key_values",
-      "value": "Get all key-values"
+      "value": "Get all key-value pairs"
     },
     {
       "name": "delete_key_and_value",
-      "value": "Delete the value of key"
+      "value": "Delete key and value"
     },
     {
       "name": "clear_all_key_values",
-      "value": "Clear all key-values"
+      "value": "Clear all key-value pairs"
     },
     {
       "name": "view_operation_record",
