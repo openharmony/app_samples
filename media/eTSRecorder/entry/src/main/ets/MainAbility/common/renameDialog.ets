@@ -49,7 +49,6 @@ export struct RenameDialog {
             prompt.showToast({ message: 'input name' })
             return
           }
-          this.newName = 'rename'
           this.controller.close()
           if (this.newName != this.record.fileName) {
             this.renameCallback(this.record, this.newName)

@@ -90,15 +90,16 @@ export struct HomeView {
       if (this.checkState) {
         Row() {
           Button({ type: ButtonType.Circle, stateEffect: true }) {
-            Image($r('app.media.ic_rename'))
-              .objectFit(ImageFit.Contain)
-              .size({ width: 30, height: 30 })
-              .margin({ bottom: 20 })
-            Text($r('app.string.rename'))
-              .fontSize(15)
-              .margin({ top: 45 })
-              .width(70)
-              .textAlign(TextAlign.Center)
+            Column() {
+              Image($r('app.media.ic_rename'))
+                .objectFit(ImageFit.Contain)
+                .size({ width: 30, height: 30 })
+              Text($r('app.string.rename'))
+                .fontSize(15)
+                .margin({ top: 5 })
+                .width(70)
+                .textAlign(TextAlign.Center)
+            }
           }
           .size({ width: 70, height: 70 })
           .layoutWeight(1)
@@ -117,15 +118,16 @@ export struct HomeView {
           })
 
           Button({ type: ButtonType.Circle, stateEffect: true }) {
-            Image($r('app.media.delete'))
-              .objectFit(ImageFit.Contain)
-              .size({ width: 25, height: 25 })
-              .margin({ bottom: 20 })
-            Text($r('app.string.delete'))
-              .fontSize(15)
-              .margin({ top: 45 })
-              .width(70)
-              .textAlign(TextAlign.Center)
+            Column() {
+              Image($r('app.media.delete'))
+                .objectFit(ImageFit.Contain)
+                .size({ width: 25, height: 25 })
+              Text($r('app.string.delete'))
+                .fontSize(15)
+                .margin({ top: 5 })
+                .width(70)
+                .textAlign(TextAlign.Center)
+            }
           }
           .size({ width: 70, height: 70 })
           .layoutWeight(1)

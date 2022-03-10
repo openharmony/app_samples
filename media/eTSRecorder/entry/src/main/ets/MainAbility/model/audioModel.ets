@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import media from '@ohos.multimedia.media'
+import {getFdNumber} from '../model/utils'
 
 const TAG: string = '[Record.AudioModel]'
 
@@ -26,25 +27,32 @@ export class AudioModel {
     this.isPlay = isPlay
     this.release();
     this.audioPlayer = media.createAudioPlayer()
-    this.audioPlayer.on('dataLoad', function(){
+    this.audioPlayer.on('dataLoad', () => {
       console.info(`${TAG}case dataLoad called`)
       if (this.isPlay) {
         this.audioPlayer.play()
       }
-    }.bind(this));
+    })
     this.audioPlayer.on('pause', () => {
       console.info(`${TAG}case pause called`)
-    });
+    })
     this.audioPlayer.on('play', () => {
       console.info(`${TAG}case play called`)
-    });
-    this.audioPlayer.on('stop', function(){
+    })
+    this.audioPlayer.on('stop', () => {
       console.info(`${TAG}audioPlayer stop called`)
       this.audioPlayer.release()
       this.audioPlayer = undefined
-    }.bind(this))
-    this.audioPlayer.src = playSrc
-    console.info(`${TAG}create audioPlayer success`)
+    })
+    this.audioPlayer.on('error', () => {
+      console.info(`${TAG}audioPlayer error called`)
+    })
+    this.audioPlayer.reset()
+    let fdPath = getFdNumber(playSrc)
+    fdPath.then(fdNumber=>{
+      this.audioPlayer.src = fdNumber
+      console.info(`${TAG}create audioPlayer success`)
+    })
   }
 
   release() {
@@ -56,18 +64,19 @@ export class AudioModel {
   }
 
   onFinish(callback) {
-    this.audioPlayer.on('finish', function(){
+    console.info(`${TAG}set onFinish`)
+    this.audioPlayer.on('finish', () => {
       console.info(`${TAG}audioPlayer finish called`)
       this.audioPlayer.seek(0)
       callback()
-    }.bind(this));
+    });
   }
 
   onPlay(callback) {
-    this.audioPlayer.on('play', function(){
+    this.audioPlayer.on('play', () => {
       console.info(`${TAG}audioPlayer play called`)
       callback()
-    }.bind(this));
+    })
   }
 
   play() {

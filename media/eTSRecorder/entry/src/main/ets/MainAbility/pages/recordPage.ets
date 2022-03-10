@@ -18,19 +18,10 @@ import { AnimateView } from '../common/animateView'
 import { FileManager } from '../model/fileManager'
 import { RecordModel } from '../model/recordModel'
 import { Record } from '../model/record'
-import { updateTime } from '../model/updateTime'
+import { updateTime } from '../model/utils.ets'
+import { prepareFdNumber } from '../model/utils'
 
 const TAG = '[Recorder.Record]'
-
-let audioConfig = {
-  audioSourceType: 1,
-  audioEncoder: 3,
-  audioEncodeBitRate: 22050,
-  audioSampleRate: 22050,
-  numberOfChannels: 2,
-  format: 2,
-  uri: ''
-}
 
 @Entry
 @Component
@@ -45,21 +36,23 @@ struct RecordPage {
   @State duration: string = '00:00'
 
   finish() {
-    this.isRecording = false
-    this.recordModel.finish()
-    let recorder = new Record(this.fileName, this.file, this.addDate, this.duration, false)
-    this.fileManager.putFile(recorder)
-    router.back()
+    this.recordModel.finish(function(){
+      this.isRecording = false
+      let recorder = new Record(this.fileName, this.file, this.addDate, this.duration, false)
+      this.fileManager.putFile(recorder)
+      router.back()
+    }.bind(this))
   }
 
   aboutToAppear() {
-    this.recordModel.initAudioRecorder();
-    audioConfig.uri = 'file://' + this.file
-    this.recordModel.startRecorder(audioConfig, function(){
-      this.animator()
-      this.millisecond = 0
-      console.info(`${TAG}startRecorder callback success`)
-    }.bind(this))
+    this.recordModel.initAudioRecorder()
+    let fdPath = prepareFdNumber(this.file)
+    fdPath.then(fdNumber => {
+      this.recordModel.startRecorder(fdNumber, () => {
+        console.info(`${TAG}startRecorder callback success`)
+        this.millisecond = 0
+      })
+    })
   }
 
   updateTimeStr() {
@@ -69,7 +62,7 @@ struct RecordPage {
 
   build() {
     Column() {
-      TitleBar({ title: this.fileName})
+      TitleBar({ title: this.fileName })
       Column() {
         AnimateView({ isPlay: this.isRecording, isReset: false, updateTimeStr: this.updateTimeStr.bind(this) })
         Image($r('app.media.bg_record'))
@@ -100,11 +93,13 @@ struct RecordPage {
           .backgroundColor('#FFFFFF')
           .margin({ left: '17%' })
           .onClick(() => {
-            this.isRecording = !this.isRecording
+            let callback = function(){
+              this.isRecording = !this.isRecording
+            }.bind(this)
             if (this.isRecording) {
-              this.recordModel.resume()
+              this.recordModel.pause(callback)
             } else {
-              this.recordModel.pause()
+              this.recordModel.resume(callback)
             }
           })
         }
@@ -116,7 +111,7 @@ struct RecordPage {
     .backgroundColor('#F5F5F5')
   }
 
-  onPageHide(){
+  onPageHide() {
     this.finish()
   }
 }
