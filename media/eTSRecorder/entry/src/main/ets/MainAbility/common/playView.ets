@@ -14,7 +14,7 @@
  */
 import { AnimateView } from '../common/animateView'
 import { AudioModel } from '../model/audioModel'
-import { updateTime } from '../model/updateTime'
+import { updateTime } from '../model/utils.ets'
 
 const TAG = '[Record.PlayView]'
 

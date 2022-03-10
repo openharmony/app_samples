@@ -37,7 +37,7 @@ struct Play {
     .backgroundColor('#F0F0F0')
   }
 
-  onPageHide(){
+  onPageHide() {
     this.audioModel.finish()
   }
 }

@@ -41,7 +41,7 @@ export class FileManager {
   putFile(record) {
     let recordList = this.getFiles()
     for (let i = 0;i < recordList.length; i++) {
-      if(recordList[i].fileName === record.fileName){
+      if (recordList[i].fileName === record.fileName) {
         return
       }
     }
@@ -86,13 +86,12 @@ export class FileManager {
     console.info(`${TAG} createFile`)
     let Time = new Date()
     let addDate = JSON.stringify(Time.getFullYear()) + '/' + this.tempNum(Time.getMonth() + 1) + '/' + this.tempNum(Time.getDate())
-    let fileName = JSON.stringify(Time.getFullYear()) + this.tempNum(Time.getMonth() + 1) +
-    this.tempNum(Time.getDate()) + "_" + this.tempNum(Time.getHours()) +
-    this.tempNum(Time.getMinutes()) + this.tempNum(Time.getSeconds())
+    let fileName = JSON.stringify(Time.getFullYear()) + this.tempNum(Time.getMonth() + 1)
+      + this.tempNum(Time.getDate()) + "_" + this.tempNum(Time.getHours())
+      + this.tempNum(Time.getMinutes()) + this.tempNum(Time.getSeconds())
     let file = PATH + fileName + ".wav"
-    console.info(`${TAG} file=${file}`)
     let child = process.runCmd("touch " + file + ";chmod -R 777 /data/accounts/account_0/appdata/ohos.samples.etsrecorder/files/")
-    let result = child.wait();
+    let result = child.wait()
     result.then(() => {
       callback(fileName, file, addDate)
     })

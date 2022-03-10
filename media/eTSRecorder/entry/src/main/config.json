@@ -64,6 +64,11 @@
           "autoDesignWidth": false
         }
       }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.MICROPHONE"
+      }
     ]
   }
 }

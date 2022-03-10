@@ -12,6 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import fileIo from '@ohos.fileio'
+
+const TAG: string = '[Record.Utils]'
+
 export function getTimeString(timeIndex, index) {
   let result = timeIndex + index - 3
   if (result < 0) {
@@ -37,4 +41,16 @@ export function updateTime(millisecond) {
     secondStr = "0" + second
   }
   return minuteStr + ':' + secondStr;
+}
+
+export async function getFdNumber(path) {
+  console.info(`${TAG}getFdNumber,path=${path}`)
+  let fdNumber = await fileIo.open(path)
+  return 'fd://' + fdNumber
+}
+
+export async function prepareFdNumber(path) {
+  console.info(`${TAG}getFdNumber,path=${path}`)
+  let fdNumber = await fileIo.open(path, 0o2, 0o666)
+  return 'fd://' + fdNumber
 }

@@ -15,9 +15,18 @@
 import media from '@ohos.multimedia.media'
 
 const TAG: string = '[Record.RecordModel]'
+let audioConfig = {
+  audioSourceType: 1,
+  audioEncoder: 3,
+  audioEncodeBitRate: 22050,
+  audioSampleRate: 22050,
+  numberOfChannels: 2,
+  format: 6,
+  uri: ''
+}
 
 export class RecordModel {
-  private audioRecorder = undefined;
+  private audioRecorder = undefined
 
   initAudioRecorder() {
     this.release();
@@ -33,46 +42,56 @@ export class RecordModel {
     }
   }
 
-  startRecorder(config, callback) {
+  startRecorder(pathName, callback) {
     console.info(`${TAG}enter the startRecorder,audioRecorder=${JSON.stringify(this.audioRecorder)}`)
     console.info(`${TAG}typeof (this.audioRecorder)=${JSON.stringify(typeof (this.audioRecorder))}`)
     if (typeof (this.audioRecorder) != 'undefined') {
       console.info(`${TAG}enter the if`)
-      this.audioRecorder.on('prepare', function(){
+      this.audioRecorder.on('prepare', () => {
         console.info(`${TAG}setCallback  prepare case callback is called`)
         this.audioRecorder.start()
-      }.bind(this))
+      })
       this.audioRecorder.on('start', () => {
         console.info(`${TAG}setCallback start case callback is called`)
         callback()
       })
       console.info(`${TAG}start prepare`)
-      this.audioRecorder.prepare(config)
+      audioConfig.uri = pathName
+      this.audioRecorder.prepare(audioConfig)
     } else {
       console.info(`${TAG}case failed, audioRecorder is null`)
     }
   }
 
-  pause() {
+  pause(callback) {
     console.info(`${TAG}audioRecorder pause called`)
     if (typeof (this.audioRecorder) != `undefined`) {
+      this.audioRecorder.on('pause', () => {
+        console.info(`${TAG}audioRecorder pause finish`)
+        callback()
+      })
       this.audioRecorder.pause()
     }
   }
 
-  resume() {
+  resume(callback) {
     console.info(`${TAG}audioRecorder resume called`)
     if (typeof (this.audioRecorder) != `undefined`) {
+      this.audioRecorder.on('resume', () => {
+        console.info(`${TAG}audioRecorder resume finish`)
+        callback()
+      })
       this.audioRecorder.resume()
     }
   }
 
-  finish() {
+  finish(callback) {
     if (typeof (this.audioRecorder) != `undefined`) {
-      this.audioRecorder.on('stop', function(){
+      this.audioRecorder.on('stop', () => {
         console.info(`${TAG}audioRecorder stop called`)
         this.audioRecorder.release()
-      }.bind(this))
+        callback()
+      })
       this.audioRecorder.stop()
     }
   }
