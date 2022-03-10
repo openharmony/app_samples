@@ -1,0 +1,35 @@
+{
+  "string": [
+    {
+      "name": "eTSEmitter",
+      "value": "eTSEmitter"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "event_notification",
+      "value": "事件通知"
+    },
+    {
+      "name": "submit",
+      "value": "提交"
+    },
+    {
+      "name": "product_name",
+      "value": "名称:"
+    },{
+      "name": "price",
+      "value": "价格:"
+    },
+    {
+      "name": "enter_mall",
+      "value": "进入商城"
+    },
+    {
+      "name": "my_order",
+      "value": "我的订单"
+    }
+  ]
+}

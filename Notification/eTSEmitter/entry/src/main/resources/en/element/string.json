@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "eTSEmitter",
+      "value": "eTSEmitter"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "event_notification",
+      "value": "event notification"
+    },
+    {
+      "name": "submit",
+      "value": "submit"
+    },
+    {
+      "name": "product_name",
+      "value": "name:"
+    },
+    {
+      "name": "price",
+      "value": "price:"
+    },
+    {
+      "name": "enter_mall",
+      "value": "enter the mall"
+    },
+    {
+      "name": "my_order",
+      "value": "my order"
+    }
+  ]
+}
