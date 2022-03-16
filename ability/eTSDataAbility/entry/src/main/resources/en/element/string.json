@@ -18,23 +18,23 @@
     },
     {
       "name": "batch_insert",
-      "value": "BatchInsert"
+      "value": "Batch insert"
     },
     {
       "name": "book_name",
-      "value": "BookName:"
+      "value": "Book name:"
     },
     {
       "name": "book_intro",
-      "value": "BookIntroduction:"
+      "value": "Book introduction:"
     },
     {
       "name": "search_tip",
-      "value": "Click here to search"
+      "value": "Touch here to search"
     },
     {
       "name": "search_placeholder",
-      "value": "Please input to search"
+      "value": "Search"
     }
   ]
 }
