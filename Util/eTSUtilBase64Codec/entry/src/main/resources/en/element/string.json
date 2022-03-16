@@ -14,11 +14,11 @@
     },
     {
       "name": "encode",
-      "value": "encode"
+      "value": "Encode"
     },
     {
       "name": "decode",
-      "value": "decode"
+      "value": "Decode"
     }
   ]
 }
