@@ -10,7 +10,7 @@
     },
     {
       "name": "rationalNumber",
-      "value": "RationalNumber:"
+      "value": "Rational number:"
     },
     {
       "name": "numerator",
@@ -22,27 +22,27 @@
     },
     {
       "name": "compare",
-      "value": "RationalNumber comparison"
+      "value": "Compare rational numbers"
     },
     {
       "name": "get",
-      "value": "get RationalNumber value"
+      "value": "Get rational number value"
     },
     {
       "name": "getDenominator",
-      "value": "get numerator denominator"
+      "value": "Get numerator and denominator"
     },
     {
       "name": "isZero",
-      "value": "Check whether it is 0"
+      "value": "Check for zero"
     },
     {
       "name": "isNaN",
-      "value": "Check whether it is NaN"
+      "value": "Check for NaN"
     },
     {
       "name": "isFinite",
-      "value": "Check whether it is finite"
+      "value": "Check for finite number"
     }
   ]
 }
