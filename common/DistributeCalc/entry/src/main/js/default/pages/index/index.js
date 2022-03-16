@@ -35,6 +35,7 @@ export default {
         deviceList: []
     },
     onInit() {
+        this.grantPermission()
         this.$watch('expression', (value) => {
             if (value !== '') {
                 console.info('Calc[IndexPage] value  ' + value);
@@ -54,6 +55,18 @@ export default {
                 this.isDistributed = true;
             }
         });
+    },
+    grantPermission(){
+        console.info('Calc[IndexPage] grantPermission')
+        let context = featureAbility.getContext()
+        context.verifyPermission('ohos.permission.DISTRIBUTED_DATASYNC',function(err,num){
+           console.info('Calc[IndexPage] verifyPermission, num =' + num)
+            if(num === 0){
+                context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'],666,function(result){
+                    console.info('Calc[IndexPage] requestPermissionsFromUser, result.requestCode=' + result.requestCode)
+                })
+            }
+        })
     },
     dataChange(key, value) {
         console.log('Calc[IndexPage] dataChange isDistributed = ' + this.isDistributed);

@@ -60,6 +60,7 @@ export default {
     },
     onInit() {
         console.info('MusicPlayer[IndexPage] onInit begin');
+        this.grantPermission()
         console.info("MusicPlayer[IndexPage] getDefaultDisplay begin");
         display.getDefaultDisplay().then(dis => {
             console.info("MusicPlayer[IndexPage] getDefaultDisplay dis=" + JSON.stringify(dis));
@@ -106,6 +107,18 @@ export default {
             self.restoreFromWant();
         });
         console.info('MusicPlayer[IndexPage] onInit end');
+    },
+    grantPermission(){
+        console.info('MusicPlayer[IndexPage] grantPermission')
+        let context = featureAbility.getContext()
+        context.verifyPermission('ohos.permission.DISTRIBUTED_DATASYNC', function(err, num){
+            console.info('MusicPlayer[IndexPage] verifyPermission, num = ' + num)
+            if(num === 0){
+                context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function(result){
+                    console.info('MusicPlayer[IndexPage] requestPermissionsFromUser, result.requestCode = ' + result.requestCode)
+                })
+            }
+        })
     },
     restoreFromWant() {
         let self = this;
