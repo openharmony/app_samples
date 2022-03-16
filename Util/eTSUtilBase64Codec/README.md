@@ -1,15 +1,15 @@
-# Utilbase64编解码
+# util Tool Function – Base64Codec
 
-### 简介
+### Introduction
 
-Base64是一种基于64个可打印字符来表示二进制数据的方法，本示例展示了Base64编码及解码的结果输出
+Base64 is a method of representing binary data based on 64 printable characters. This sample shows Base64 encoding and decoding output.
 
-### 使用说明
+### Usage
 
-1：点击**编码**按钮，将会把字符串转换为ASCII码，然后对ASCII码进行编码，并在文本框输出编码后的结果。
+1. Touch **Encode**. The sample app converts the string into ASCII code, encodes the ASCII code, and displays the encoded result in the text box.
 
-2：点击**解码**按钮，将会把编码后输出的结果作为解码器的入参，解码后得到ASCII码数组，然后将ASCII码数组转换为字符串在文本框输出。
+2. Touch **Decode**. The previously encoded result is used as the input to the decoder. After decoding, the sample app obtains an ASCII code array, converts it into a string, and displays the string in the text box.
 
-### 约束与限制
+### Constraints
 
-本示例仅支持在标准系统上运行。
+This sample can only be run on standard-system devices.
