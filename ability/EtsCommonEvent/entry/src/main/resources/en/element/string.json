@@ -18,11 +18,11 @@
     },
     {
       "name": "publish",
-      "value": "Publish commonEvent"
+      "value": "Publish common event"
     },
     {
       "name": "publish_specify_commonEvent",
-      "value": "Publish specify commonEvent"
+      "value": "Publish specified common event"
     },
     {
       "name": "unsubscribe",
