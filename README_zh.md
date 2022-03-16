@@ -11,6 +11,8 @@
 为帮助开发者快速熟悉HarmonyOS和OpenHarmony SDK所提供的API和应用开发流程，我们提供了一系列的应用示例，即Sample。每一个应用示例都是一个独立的DevEco Studio工程项目，开发者可以将工程导入到DevEco Studio开发工具，通过浏览代码、编译工程、安装和运行应用示例来了解应用示例中涉及API的使用方法。
 
 ## 目录<a name="sectionMenu"></a>
+- Basic
+  - [`eTSScreenshot:`基础功能-屏幕截图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSScreenshot)
 - Communication
   - [`eTSRPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSRPC)
   - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSWlan) 
@@ -55,6 +57,7 @@
   - [`AstronautsGame:`太空人避障游戏（C++）](https://gitee.com/openharmony/app_samples/tree/master/CompleteApps/AstronautsGame)
 - ETSUI
   - [`eTSCanvas:`画布组件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSCanvas)
+  - [`eTSCustomComponent:`组件化（eTS）](https://gitee.com/zhangxinlogo/app_samples/tree/master/ETSUI/eTSCustomComponent)
   - [`EtsProcess:`进程信息（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/EtsProcess)
   - [`StringCodec:`字符串编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/StringCodec)
   - [`eTSBuildCommonView:`创建简单视图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSBuildCommonView)
@@ -64,11 +67,17 @@
   - [`eTSComponent:`Ets组件测试Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSComponent)
   - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie) 
   - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)
-  - [`eTSMediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSMediaQuery)   
+  - [`eTSMediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSMediaQuery)
+- FileManager
+  - [`eTSEnvironment:`目录环境（eTS）](https://gitee.com/openharmony/app_samples/tree/master/FileManager/eTSEnvironment)
+- Notification
+  - [`eTSEmitter:`处理进程内事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/eTSEmitter)
 - UI
   - [`AtomicLayout:`原子布局（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Badge)
   - [`International:`国际化（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/International)
+  - [`JsApp:`购物车示例应用（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsApp)  
+  - [`JsShopping:`购物示例应用（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsShopping)     
   - [`JSMenu:`菜单（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JSMenu)
   - [`JSUICustomComponent:`自定义组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JSUICustomComponent)
   - [`JsAnimationStyle:`动画与自定义字体（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsAnimationStyle)
