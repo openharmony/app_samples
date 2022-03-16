@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSDistributeAccountManager"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "distribute_account_manager",
+      "value": "Distribute Account Manager"
+    },
+    {
+      "name": "password",
+      "value": "password:"
+    },
+    {
+      "name": "user_name",
+      "value": "userName:"
+    },
+    {
+      "name": "login",
+      "value": "login"
+    },
+    {
+      "name": "exit_login",
+      "value": "exit login"
+    },
+    {
+      "name": "written_off",
+      "value": "written off"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSDistributeAccountManager"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "distribute_account_manager",
+      "value": "分布式账号管理"
+    },
+    {
+      "name": "password",
+      "value": "密码:"
+    },
+    {
+      "name": "user_name",
+      "value": "用户名:"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "exit_login",
+      "value": "退出登录"
+    },
+    {
+      "name": "written_off",
+      "value": "注销"
+    }
+  ]
+}
