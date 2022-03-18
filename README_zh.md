@@ -13,6 +13,8 @@
 ## 目录<a name="sectionMenu"></a>
 - Basic
   - [`eTSScreenshot:`基础功能-屏幕截图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSScreenshot)
+- Account
+  - [`eTSDistributeAccount:`账号管理-分布式账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSDistributeAccount)  
 - Communication
   - [`eTSRPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSRPC)
   - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSWlan) 
@@ -68,10 +70,12 @@
   - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie) 
   - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)
   - [`eTSMediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSMediaQuery)
+  - [`eTSXComponent:`ArkUI-XComponent（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSXComponent)
 - FileManager
   - [`eTSEnvironment:`目录环境（eTS）](https://gitee.com/openharmony/app_samples/tree/master/FileManager/eTSEnvironment)
 - Notification
   - [`eTSEmitter:`处理进程内事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/eTSEmitter)
+  - [`eTSAlarmClock:`后台代理提醒（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/eTSAlarmClock)
 - UI
   - [`AtomicLayout:`原子布局（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Badge)

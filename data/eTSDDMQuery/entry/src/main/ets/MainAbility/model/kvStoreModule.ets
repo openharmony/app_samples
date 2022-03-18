@@ -42,7 +42,7 @@ export class KvStoreModule {
       autoSync: true,
       kvStoreType: 1,
       securityLevel: 3,
-      schema: ''
+      schema: undefined
     }
     distributedData.createKVManager(config).then((manager) => {
       console.info(`${TAG} createKVManager success, kvManager = ${JSON.stringify(manager)}`)
@@ -50,14 +50,14 @@ export class KvStoreModule {
       let name = new distributedData.FieldNode('name')
       name.type = 1
       name.nullable = false
-      name.default = 0
+      name.default = '0'
 
       let schema = new distributedData.Schema()
       schema.root.appendChild(name)
       schema.indexes = ['$.name']
       schema.mode = 1
-      options.schema = schema.toJsonString()
-      console.log(`${TAG} ${schema.toJsonString()}`)
+      options.schema = schema
+      console.log(`${TAG} ${schema}`)
       manager.getKVStore(this.storeId, options).then((store) => {
         console.info(`${TAG} getKVStore success, SingleKVStore = ${store}`)
         this.SingleKVStore = store
