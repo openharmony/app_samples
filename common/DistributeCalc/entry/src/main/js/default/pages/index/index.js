@@ -18,6 +18,8 @@ import router from '@system.router';
 import RemoteDeviceModel from '../../common/RemoteDeviceModel.js';
 import featureAbility from '@ohos.ability.featureAbility';
 import {KvStoreModel} from '../../common/kvstoreModel.js';
+import bundle from '@ohos.bundle';
+import abilityAccessCtrl from '@ohos.abilityAccessCtrl';
 
 let pressedEqual = false;
 let kvStoreModel = new KvStoreModel();
@@ -56,17 +58,25 @@ export default {
             }
         });
     },
-    grantPermission(){
+    async grantPermission() {
         console.info('Calc[IndexPage] grantPermission')
         let context = featureAbility.getContext()
-        context.verifyPermission('ohos.permission.DISTRIBUTED_DATASYNC',function(err,num){
-           console.info('Calc[IndexPage] verifyPermission, num =' + num)
-            if(num === 0){
-                context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'],666,function(result){
-                    console.info('Calc[IndexPage] requestPermissionsFromUser, result.requestCode=' + result.requestCode)
-                })
-            }
-        })
+        let bundleFlag = 0
+        let tokenId = undefined
+        let userId = 100
+        let appInfo = await bundle.getApplicationInfo('com.example.distributedcalc', bundleFlag, userId)
+        tokenId = appInfo.accessTokenId
+        console.info(`Calc[IndexPage] grantPermission,tokenId=${tokenId}`)
+        let atManager = abilityAccessCtrl.createAtManager()
+
+        let result = await atManager.verifyAccessToken(tokenId, 'ohos.permission.DISTRIBUTED_DATASYNC')
+        console.info(`Calc[IndexPage] grantPermission,verifyPermission,result=${result}`)
+        if (result == abilityAccessCtrl.GrantStatus.PERMISSION_DENIED) {
+            console.info(`Calc[IndexPage] grantPermission,verifyPermission,result=PERMISSION_DENIED`)
+            context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function (result) {
+                console.info(`Calc[IndexPage] grantPermission,requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
+            })
+        }
     },
     dataChange(key, value) {
         console.log('Calc[IndexPage] dataChange isDistributed = ' + this.isDistributed);
