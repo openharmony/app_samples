@@ -18,6 +18,8 @@ import RemoteDeviceModel from '../../../model/RemoteDeviceModel.js';
 import PlayerModel from '../../../model/PlayerModel.js';
 import KvStoreModel from '../../../model/KvStoreModel.js';
 import display from '@ohos.display';
+import bundle from '@ohos.bundle';
+import abilityAccessCtrl from '@ohos.abilityAccessCtrl';
 
 function getShownTimer(ms) {
     var seconds = Math.floor(ms / 1000);
@@ -108,17 +110,25 @@ export default {
         });
         console.info('MusicPlayer[IndexPage] onInit end');
     },
-    grantPermission(){
+    async grantPermission() {
         console.info('MusicPlayer[IndexPage] grantPermission')
         let context = featureAbility.getContext()
-        context.verifyPermission('ohos.permission.DISTRIBUTED_DATASYNC', function(err, num){
-            console.info('MusicPlayer[IndexPage] verifyPermission, num = ' + num)
-            if(num === 0){
-                context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function(result){
-                    console.info('MusicPlayer[IndexPage] requestPermissionsFromUser, result.requestCode = ' + result.requestCode)
-                })
-            }
-        })
+        let bundleFlag = 0
+        let tokenId = undefined
+        let userId = 100
+        let appInfo = await bundle.getApplicationInfo('com.ohos.distributedmusicplayer', bundleFlag, userId)
+        tokenId = appInfo.accessTokenId
+        console.info(`MusicPlayer[IndexPage] grantPermission,tokenId=${tokenId}`)
+        let atManager = abilityAccessCtrl.createAtManager()
+
+        let result = await atManager.verifyAccessToken(tokenId, 'ohos.permission.DISTRIBUTED_DATASYNC')
+        console.info(`MusicPlayer[IndexPage] grantPermission,verifyPermission,result=${result}`)
+        if (result == abilityAccessCtrl.GrantStatus.PERMISSION_DENIED) {
+            console.info(`MusicPlayer[IndexPage] grantPermission,verifyPermission,result=PERMISSION_DENIED`)
+            context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function (result) {
+                console.info(`MusicPlayer[IndexPage] grantPermission,requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
+            })
+        }
     },
     restoreFromWant() {
         let self = this;
