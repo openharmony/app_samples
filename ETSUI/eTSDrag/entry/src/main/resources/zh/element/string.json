@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "mouseDrag",
+      "value": "鼠标拖拽"
+    },
+    {
+      "name": "addCate",
+      "value": "添加的品类"
+    },
+    {
+      "name": "allCate",
+      "value": "所有品类"
+    },
+    {
+      "name": "remove",
+      "value": "移除"
+    }
+  ]
+}
