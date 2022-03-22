@@ -13,42 +13,23 @@
  * limitations under the License.
  */
 
-import wifi from '@ohos.wifi';
-import prompt from '@system.prompt';
+import prompt from '@system.prompt'
+import wifi from '@ohos.wifi'
+import HiLog from '../model/HiLog'
 
-const TAG = '[WiFiModel]'
+const TAG = 'WiFiModel'
 
 export class WifiModel {
-  private eventListener = null
-
-  constructor() {
-    this.eventListener = new wifi.EventListener()
-  }
-
-  addConnectListener(callback) {
-    this.eventListener.on('wifiConnectionChange', (state) => {
-      console.info(`${TAG} wifiConnectionChange ${state}`)
-      callback(state)
-    })
-  }
-
-  addWifiStateListener(callback) {
-    this.eventListener.on('wifiStateChange', (state) => {
-      console.info(`${TAG} wifiStateChange ${state}`)
-      callback(state)
-    })
-  }
-
   getScanInfos(callback) {
-    wifi.scan()
-    console.info(`${TAG} scanWifi`)
-    wifi.getScanInfos((result) => {
+    HiLog.log(TAG, 'scanWifi begin')
+    wifi.getScanInfos((err, result) => {
       let wifiList = []
-      console.info(`${TAG} wifi received scan info call back:${JSON.stringify(result)}`)
-      if (result === null || result.length === 0) {
+      if (err) {
+        HiLog.log(TAG, `scan info err: ${JSON.stringify(err)}`)
         callback(wifiList)
         return
       }
+      HiLog.log(TAG, `scan info call back: ${result.length}`)
       for (var i = 0; i < result.length; ++i) {
         wifiList.push({
           ssid: result[i].ssid,
@@ -66,19 +47,7 @@ export class WifiModel {
 
   connectNetwork(scanInfo, psw) {
     prompt.showToast({ message: 'connecting' })
-    console.info(`${TAG} connectNetwork bssid=${scanInfo.bssid}`)
-    let deviceConfigs = wifi.getDeviceConfigs()
-    console.info(TAG + 'getDeviceConfigs:' + JSON.stringify(deviceConfigs))
-    for (let i = 0;i < deviceConfigs.length; i++) {
-      if (deviceConfigs[i].bssid === scanInfo.bssid) {
-        if (deviceConfigs[i].preSharedKey !== psw) {
-          prompt.showToast({ message: 'err password' })
-          return
-        }
-        prompt.showToast({ message: `connect result = ${wifi.connectToDevice(deviceConfigs[i])}` })
-        return
-      }
-    }
+    HiLog.log(TAG, `connectNetwork bssid=${scanInfo.bssid}`)
     let deviceConfig = {
       ssid: scanInfo.ssid,
       bssid: scanInfo.bssid,
@@ -120,7 +89,7 @@ export class WifiModel {
   getCountryCode() {
     let countryCodeList = []
     let countryCode = wifi.getCountryCode()
-    countryCodeList.push({ key: $r('app.string.country_code'), value: 'CH' })
+    countryCodeList.push({ key: $r('app.string.country_code'), value: countryCode })
     return countryCodeList
   }
 

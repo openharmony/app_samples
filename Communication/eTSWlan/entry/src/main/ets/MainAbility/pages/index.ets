@@ -13,30 +13,37 @@
  * limitations under the License.
  */
 
-import wifi from '@ohos.wifi';
-import { WifiModel } from '../model/wifiModel'
-import { TitleBar } from '../component/titleBar'
+import wifi from '@ohos.wifi'
 import { AvailableWifi } from '../component/availableWifi'
+import grantPermission from '../model/permissionUtils'
+import HiLog from '../model/HiLog'
+import { TitleBar } from '../component/titleBar'
+import { WifiModel } from '../model/wifiModel'
 
-const TAG = '[eTSWiFi]'
-let self = null
+const TAG = 'Index'
 
 @Entry
 @Component
 struct Index {
   private wifiModel: WifiModel = new WifiModel()
-  private linkedInfo: any = { ssid: "", bssid: "", networkId: 0, rssi: 0, band: 0 }
+  private linkedInfo: unknown = {
+    ssid: "",
+    bssid: "",
+    networkId: 0,
+    rssi: 0,
+    band: 0
+  }
   @State wifiList: Array<any> = []
   @State isLinked: boolean = false
   @State isSwitchOn: boolean = false
 
   scan() {
     this.wifiModel.getScanInfos((result) => {
-      if (self.isSwitchOn) {
-        self.wifiList = result
+      if (this.isSwitchOn) {
+        this.wifiList = result
         if (result.length === 0) {
           setTimeout(() => {
-            self.scan()
+            this.scan()
           }, 1000)
         }
       }
@@ -44,42 +51,53 @@ struct Index {
   }
 
   getLinkedInfo() {
-    wifi.getLinkedInfo((linkedInfo) => {
-      console.info(`${TAG} linkedInfo ${JSON.stringify(linkedInfo)}`)
-      if (linkedInfo === null) {
-        self.isLinked = false
-        self.linkedInfo = { ssid: "", bssid: "", networkId: 0, rssi: 0, band: 0 }
+    wifi.getLinkedInfo((err, linkedInfo) => {
+      if (err) {
+        HiLog.error(TAG, `getLinkedInfo err: ${JSON.stringify(err)}`)
         return
       }
-      self.linkedInfo = linkedInfo
-      self.isLinked = self.linkedInfo.bssid.length > 0 ? true : false
+      HiLog.log(TAG, `linkedInfo: ${JSON.stringify(linkedInfo)}`)
+      if (linkedInfo === null || linkedInfo.bssid === '') {
+        this.isLinked = false
+        this.linkedInfo = {
+          ssid: "",
+          bssid: "",
+          networkId: 0,
+          rssi: 0,
+          band: 0
+        }
+        return
+      }
+      this.linkedInfo = linkedInfo
     })
   }
 
   addListener() {
-    this.wifiModel.addConnectListener((state) => {
-      console.info(`${TAG}  connectLisener state=' ${state}`)
-      if (state === 1 || state === 4) {
-        self.isLinked = true
-        self.getLinkedInfo()
+    wifi.on('wifiConnectionChange', state => {
+      HiLog.log(TAG, `wifiConnectionChange: ${state}`)
+      if (state === 1) { // 1: wifi is connected, 0:wifi is disConnected
+        this.isLinked = true
+        this.getLinkedInfo()
         return
       }
-      self.isLinked = false
+      this.isLinked = false
     })
-    this.wifiModel.addWifiStateListener((state) => {
-      console.info(`${TAG}  wifiStateLisener state=' ${state}`)
-      self.wifiList = []
-      if (state === 2 || state === 3) {
-        self.scan()
+    wifi.on('wifiStateChange', state => {
+      HiLog.log(TAG, `wifiStateLisener state: ${state}`)
+      this.wifiList = []
+      if (state === 1) { // 1: wifi is enable, 0:wifi is disable
+        wifi.scan()
+        this.scan()
       }
     })
   }
 
   aboutToAppear() {
-    self = this
+    grantPermission()
     if (wifi.isWifiActive()) {
-      console.info(`${TAG}  wifi active`)
+      HiLog.log(TAG, 'wifi is active')
       this.isSwitchOn = true
+      wifi.scan()
       this.scan()
       if (wifi.isConnected()) {
         this.getLinkedInfo()
@@ -99,7 +117,7 @@ struct Index {
         Column() {
           Toggle({ type: ToggleType.Switch, isOn: this.isSwitchOn })
             .onChange((isOn: boolean) => {
-              console.info(`${TAG} wifi swtich is ${isOn}`)
+              HiLog.log(TAG, `wifi swtich is: ${isOn}`)
               if (isOn) {
                 this.isSwitchOn = true
                 wifi.enableWifi()
@@ -137,5 +155,10 @@ struct Index {
     }
     .size({ width: '100%', height: '100%' })
     .backgroundColor('#F5F5F5')
+  }
+
+  aboutToDisappear() {
+    wifi.off('wifiConnectionChange')
+    wifi.off('wifiStateChange')
   }
 }
