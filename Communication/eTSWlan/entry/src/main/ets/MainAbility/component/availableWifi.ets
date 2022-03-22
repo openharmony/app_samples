@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import prompt from '@system.prompt'
+import HiLog from '../model/HiLog'
+import { PasswordDialog } from '../component/pswDialog'
 import { WifiModel } from '../model/wifiModel'
 import { WifiView } from '../component/wifiView'
-import { PasswordDialog } from '../component/pswDialog'
 
-const TAG = '[AvailableWiFi]'
+const TAG = 'AvailableWiFi'
 let self = null
 
 @Component
@@ -33,7 +33,7 @@ export struct AvailableWifi {
   })
 
   onAccept(scanInfo, psw) {
-    console.info(`${TAG} connect wifi`)
+    HiLog.info(TAG, 'connect wifi')
     self.wifiModel.connectNetwork(scanInfo, psw)
   }
 
@@ -56,7 +56,7 @@ export struct AvailableWifi {
             WifiView({ wifi: item })
           }
           .onClick(() => {
-            console.info(TAG + 'connect wifi')
+            HiLog.info(TAG, 'wifi click')
             this.selectIndex = index
             if (this.linkedInfo !== null && item.ssid === this.linkedInfo.ssid) {
               prompt.showToast({ message: 'this wifi is connected' })
@@ -74,6 +74,6 @@ export struct AvailableWifi {
       .divider({ strokeWidth: 1, color: Color.Gray, startMargin: 10, endMargin: 10 })
       .margin(10)
     }
-    .margin({ top: 15 })
+    .margin({ top: 15, bottom: 100 })
   }
 }
