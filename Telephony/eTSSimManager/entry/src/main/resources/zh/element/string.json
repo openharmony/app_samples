@@ -1,0 +1,116 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "SIM卡管理"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "network",
+      "value": "4G/3G/2G"
+    },
+    {
+      "name": "voice",
+      "value": "默认拨号卡"
+    },
+    {
+      "name": "data",
+      "value": "默认移动数据"
+    },
+    {
+      "name": "call",
+      "value": "双卡间呼叫转移"
+    },
+    {
+      "name": "calling",
+      "value": "一卡来电无法呼入时，呼转至另一张卡"
+    },
+    {
+      "name": "sim1_state",
+      "value": "SIM卡1状态"
+    },
+    {
+      "name": "sim2_state",
+      "value": "SIM卡2状态"
+    },
+    {
+      "name": "unknown",
+      "value": "SIM卡状态未知"
+    },
+    {
+      "name": "not_present",
+      "value": "没有插入SIM卡"
+    },
+    {
+      "name": "locked",
+      "value": "SIM卡被PIN、PUK或网络锁锁定"
+    },
+    {
+      "name": "not_ready",
+      "value": "SIM卡在位但无法正常工作"
+    },
+    {
+      "name": "ready",
+      "value": "SIM卡在位且工作正常"
+    },
+    {
+      "name": "loaded",
+      "value": "SIM卡在位且所有卡文件加载完毕"
+    },
+    {
+      "name": "spn",
+      "value": "SPN号码"
+    },
+    {
+      "name": "IccId",
+      "value": "ICCID"
+    },
+    {
+      "name": "iso",
+      "value": "ISO国家码"
+    },
+    {
+      "name": "plmn",
+      "value": "归属PLMN号"
+    },
+    {
+      "name": "gid",
+      "value": "GID"
+    },
+    {
+      "name": "active",
+      "value": "Sim卡状态"
+    },
+    {
+      "name": "sim_activation",
+      "value": "Sim卡已激活 "
+    },
+    {
+      "name": "sim_inactivated",
+      "value": "Sim卡未激活  "
+    },
+    {
+      "name": "sim1_id",
+      "value": "卡1"
+    },
+    {
+      "name": "sim2_id",
+      "value": "卡2"
+    },
+    {
+      "name": "sim1_card",
+      "value": "SIM卡1"
+    },
+    {
+      "name": "sim2_card",
+      "value": "SIM卡2"
+    },
+    {
+      "name": "err",
+      "value": "错误"
+    }
+  ]
+}
