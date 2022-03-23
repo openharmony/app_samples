@@ -1,0 +1,116 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "SIM Card Management"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "network",
+      "value": "4G/3G/2G"
+    },
+    {
+      "name": "voice",
+      "value": "Default dial card"
+    },
+    {
+      "name": "data",
+      "value": "Default mobile data"
+    },
+    {
+      "name": "call",
+      "value": "Call forwarding between dual cards"
+    },
+    {
+      "name": "calling",
+      "value": "When a call from one card cannot be received, the call will be forwarded to another card"
+    },
+    {
+      "name": "sim1_state",
+      "value": "SIM Card 1 Status"
+    },
+    {
+      "name": "sim2_state",
+      "value": "SIM Card 2 Status"
+    },
+    {
+      "name": "unknown",
+      "value": "SIM is unknown"
+    },
+    {
+      "name": "not_present",
+      "value": "SIM is not present"
+    },
+    {
+      "name": "locked",
+      "value": "SIM is locked"
+    },
+    {
+      "name": "not_ready",
+      "value": "SIM is not ready"
+    },
+    {
+      "name": "ready",
+      "value": "SIM is ready"
+    },
+    {
+      "name": "loaded",
+      "value": "SIM is loaded"
+    },
+    {
+      "name": "spn",
+      "value": "SPN number"
+    },
+    {
+      "name": "IccId",
+      "value": "ICCID"
+    },
+    {
+      "name": "iso",
+      "value": "ISO country code"
+    },
+    {
+      "name": "plmn",
+        "value": "Home PLMN number"
+    },
+    {
+      "name": "gid",
+      "value": "GID"
+    },
+    {
+      "name": "sim1_id",
+      "value": "Card1"
+    },
+    {
+      "name": "active",
+      "value": "Sim state"
+    },
+    {
+      "name": "sim_activation",
+      "value": "Sim activation "
+    },
+    {
+      "name": "sim_inactivated",
+      "value": "Sim inactivated  "
+    },
+    {
+      "name": "sim2_id",
+      "value": "Card2"
+    },
+    {
+      "name": "sim1_card",
+      "value": "SIM1 Card"
+    },
+    {
+      "name": "sim2_card",
+      "value": "SIM2 Card"
+    },
+    {
+      "name": "err",
+      "value": "Error"
+    }
+  ]
+}
