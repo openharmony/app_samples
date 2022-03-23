@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSContainer"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "contact_name",
+      "value": "name："
+    },
+    {
+      "name": "contact_age",
+      "value": "age："
+    },
+    {
+      "name": "contact_phone",
+      "value": "phone："
+    },
+    {
+      "name": "button_delete",
+      "value": "delete"
+    },
+    {
+      "name": "button_confirm",
+      "value": "confirm"
+    },
+    {
+      "name": "button_cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "contact_information",
+      "value": "Contact Information"
+    },
+    {
+      "name": "input_name",
+      "value": "Input the name"
+    },
+    {
+      "name": "input_age",
+      "value": "Input the age"
+    },
+    {
+      "name": "input_phone",
+      "value": "Input the phone"
+    }
+  ]
+}
