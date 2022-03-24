@@ -20,7 +20,7 @@ import { PlayView } from '../common/playView'
 import { FileManager, PATH } from '../model/fileManager'
 import { AudioModel } from '../model/audioModel'
 import { RenameDialog } from '../common/renameDialog'
-import { PermissionUtils } from '../model/permissionUtils'
+import { grantPermission } from '../model/permissionUtils'
 
 let portraitFunc = null
 let TAG = '[Record.Index]'
@@ -28,7 +28,6 @@ let TAG = '[Record.Index]'
 @Entry
 @Component
 struct Index {
-  private permissionUtils: PermissionUtils = new PermissionUtils()
   private fileManager = new FileManager()
   private audioModel: AudioModel = new AudioModel()
   @State recordList: Array<Record> = []
@@ -118,7 +117,7 @@ struct Index {
   }
 
   aboutToAppear() {
-    this.permissionUtils.grantPermission()
+    grantPermission()
     portraitFunc = this.onPortrait.bind(this)
     this.listener.on('change', portraitFunc)
   }

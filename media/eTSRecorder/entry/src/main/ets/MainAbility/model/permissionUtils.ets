@@ -1,20 +1,26 @@
 import featureAbility from '@ohos.ability.featureAbility'
+import bundle from '@ohos.bundle'
+import abilityAccessCtrl from '@ohos.abilityAccessCtrl'
 
 const PERMISSION_NAME: string = 'ohos.permission.MICROPHONE'
-const TAG: string = '[Record.PermissionUtils]'
+const TAG: string = '[Record.Permission]'
 let requestCode = 3
 
-export class PermissionUtils {
-  async grantPermission() {
-    console.info(`${TAG} grantPermission`)
-    let context = featureAbility.getContext()
-    let verifyCode = await context.verifyPermission(PERMISSION_NAME) // 检测权限，如果未授权返回-1
-    console.info(`${TAG} verifyPermission,verifyCode = ${verifyCode}`)
-    if (verifyCode == -1) {
-      context.requestPermissionsFromUser([PERMISSION_NAME], requestCode, (err, result) => {
-        console.info(`${TAG} requestPermissionsFromUser,err=${JSON.stringify(err)}`)
-        console.info(`${TAG} requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
-      })
-    }
+export async function grantPermission() {
+  console.info(`${TAG} grantPermission`)
+  let context = featureAbility.getContext()
+  let bundleFlag = 0
+  let tokenId = undefined
+  let userId = 100
+  let appInfo = await bundle.getApplicationInfo('ohos.samples.etsrecorder', bundleFlag, userId)
+  tokenId = appInfo.accessTokenId
+  console.info(`${TAG} grantPermission,tokenId=${tokenId}`)
+  let atManager = abilityAccessCtrl.createAtManager()
+  let result = await atManager.verifyAccessToken(tokenId, PERMISSION_NAME)
+  console.info(`${TAG} grantPermission,verifyPermission,result=${result}`)
+  if (result == abilityAccessCtrl.GrantStatus.PERMISSION_DENIED) {
+    context.requestPermissionsFromUser([PERMISSION_NAME], requestCode, function (result) {
+      console.info(`${TAG} grantPermission,requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
+    })
   }
 }
