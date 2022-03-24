@@ -103,6 +103,7 @@ export class rdbModel {
         , resultSet.getDouble(resultSet.getColumnIndex('age'))
         , resultSet.getString(resultSet.getColumnIndex('phone')))
       studentList.push(student)
+      resultSet.goToNextRow()
     }
     return studentList
   }
