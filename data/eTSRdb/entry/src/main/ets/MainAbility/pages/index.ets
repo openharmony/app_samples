@@ -78,14 +78,15 @@ struct Index {
         Text($r("app.string.title"))
           .width('90%')
           .fontColor(Color.White)
-          .fontSize(20)
+          .fontSize(25)
         Button() {
           Image($r('app.media.add'))
-            .height(45).width('100%')
+            .height('100%').width('100%')
             .objectFit(ImageFit.Contain)
             .align(Alignment.End)
         }
-        .width('10%')
+        .width('12%')
+        .height('100%')
         .type(ButtonType.Normal)
         .backgroundColor('#0D9FFB')
         .align(Alignment.End)
@@ -95,9 +96,11 @@ struct Index {
           this.addDialogController.open()
         })
       }
-      .height(50).width('100%')
+      .height('8%')
+      .width('100%')
       .backgroundColor('#0D9FFB')
       .padding({ left: 15, right: 15 })
+      .constraintSize({ minHeight: 50 })
 
       List() {
         ForEach(this.students, item => {
@@ -116,9 +119,9 @@ struct Index {
       .layoutWeight(1)
       .divider({ strokeWidth: 1, color: Color.Gray, startMargin: 10, endMargin: 10 })
 
-      Column() {
+      Row() {
         Image($r('app.media.search_gray'))
-          .height(40).width(40)
+          .height(40).width('100%')
           .objectFit(ImageFit.Contain)
           .onClick(() => {
             router.push({
@@ -126,8 +129,9 @@ struct Index {
             })
           })
       }
-      .width('100%').height(50)
+      .width('100%').height('8%')
       .backgroundColor('#F0F0F0')
+      .constraintSize({ minHeight: 50 })
     }
     .width('100%').height('100%')
   }

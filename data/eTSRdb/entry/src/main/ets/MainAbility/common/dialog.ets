@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 
+
 import { Student } from '../model/student'
 
 @CustomDialog
@@ -54,6 +55,8 @@ export struct AddDialog {
         TextInput({ placeholder: 'input age', text: this.editStudent.age.toString() })
           .layoutWeight(1)
           .type(InputType.Number)
+          .inputFilter('^[1-9][0-9]*$')
+          .maxLength(3)
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .margin({ left: 10 })
@@ -71,6 +74,8 @@ export struct AddDialog {
         TextInput({ placeholder: 'input phone', text: this.editStudent.phone })
           .layoutWeight(1)
           .type(InputType.Number)
+          .inputFilter('^1[0-9]*$')
+          .maxLength(11)
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .margin({ left: 10 })

@@ -65,11 +65,13 @@ export struct StudentView {
           Text($r('app.string.delete'))
             .fontColor(Color.Red)
             .fontSize(19)
-            .width(100)
+            .width('100%')
             .textAlign(TextAlign.Center)
         }
         .type(ButtonType.Capsule)
         .backgroundColor('#F5F5F5')
+        .height(50)
+        .width(120)
         .onClick(() => {
           this.deleteDialogController.open()
         })
