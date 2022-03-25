@@ -99,6 +99,7 @@ export struct AudioItem {
         .onClick(() => {
           console.info(`${TAG} rename click`)
           this.clickItem(this.record, 'rename')
+          this.leftSliderIndex = -1
         })
 
         Button() {
@@ -113,6 +114,7 @@ export struct AudioItem {
         .onClick(() => {
           console.info(`${TAG} delete click`)
           this.clickItem(this.record, 'delete')
+          this.leftSliderIndex = -1
         })
       }
       .width(120)

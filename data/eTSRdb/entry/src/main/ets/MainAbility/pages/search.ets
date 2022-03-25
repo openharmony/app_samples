@@ -31,7 +31,7 @@ struct Index {
   queryByNameCallback(data) {
     console.log(`${TAG}search queryByName name:${data}`)
     if (data === '') {
-      prompt.showToast({ message: 'query name is null' })
+      prompt.showToast({ message: 'query name is empty' })
       return
     }
     let predicates = new dataRdb.RdbPredicates(TABLE_NAME)

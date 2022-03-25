@@ -102,6 +102,7 @@ struct Index {
           action: () => {
             deleteAction()
             if (this.fileManager.isDelete(this.record.fileName)) {
+              this.audioModel.finish()
               this.record = new Record('', '', '', '', false)
             }
           }

@@ -110,7 +110,7 @@ struct Index {
           .onClick(() => {
             this.isInsert = false
             this.index = this.students.indexOf(item)
-            this.editStudent = item
+            this.editStudent = new Student(item.id, item.name, item.age, item.phone)
             this.addDialogController.open()
           })
         }, item => item.toString())
