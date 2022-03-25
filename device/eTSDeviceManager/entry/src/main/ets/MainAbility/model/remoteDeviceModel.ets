@@ -14,15 +14,13 @@
  */
 
 import deviceManager from '@ohos.distributedHardware.deviceManager'
-import { DeviceStateChangeAction } from '../model/deviceStateAction'
 
 const SUBSCRIBE_ID = 100
 
 export class RemoteDeviceModel {
-  deviceList:Array<any> = []
-  discoverList:Array<any> = []
+  deviceList: Array<any> = []
+  discoverList: Array<any> = []
   callback
-  authCallback
   deviceManager
 
   constructor() {
@@ -50,9 +48,17 @@ export class RemoteDeviceModel {
   deviceStateChangeActionOnline(device) {
     this.deviceList[this.deviceList.length] = device
     console.info('[DeviceMnager.RemoteDeviceModel] online, device list=' + JSON.stringify(this.deviceList))
-    if (this.authCallback != null) {
-      this.authCallback()
-      this.authCallback = null
+    for (let i = this.discoverList.length - 1; i >= 0; i--) {
+      if (this.discoverList[i].deviceId != device.deviceId) {
+        this.discoverList.splice(i, 1)
+        break
+      }
+    }
+    for (let j = 0; j < this.deviceList.length; j++) {
+      if (this.deviceList[j].deviceId === device.deviceId) {
+        this.deviceList[j] = device
+        break
+      }
     }
     this.callback()
   }
@@ -67,22 +73,6 @@ export class RemoteDeviceModel {
     }
     this.deviceList = list
     console.info('[DeviceMnager.RemoteDeviceModel] offline, device list=' + JSON.stringify(this.deviceList))
-    this.callback()
-  }
-
-  deviceStateChangeActionReady(device) {
-    if (this.deviceList.length <= 0) {
-      this.deviceList[this.deviceList.length] = device
-      this.callback()
-      return
-    }
-    for (let j = 0; j < this.deviceList.length; j++) {
-      if (this.deviceList[j].deviceId === device.deviceId) {
-        this.deviceList[j] = device
-        break
-      }
-    }
-    console.info('[DeviceMnager.RemoteDeviceModel] ready, device list=' + JSON.stringify(this.deviceList))
     this.callback()
   }
 
@@ -109,15 +99,14 @@ export class RemoteDeviceModel {
       }
       console.info('[DeviceMnager.RemoteDeviceModel] deviceStateChange data=' + JSON.stringify(data))
       switch (data.action) {
-        case DeviceStateChangeAction.ONLINE:
+        case deviceManager.DeviceStateChangeAction.ONLINE:
           console.info('[DeviceMnager.RemoteDeviceModel] deviceStateChange ONLINE')
           self.deviceStateChangeActionOnline(data.device)
           break
-        case DeviceStateChangeAction.READY:
+        case deviceManager.DeviceStateChangeAction.READY:
           console.info('[DeviceMnager.RemoteDeviceModel] deviceStateChange READY')
-          self.deviceStateChangeActionReady(data.device)
           break
-        case DeviceStateChangeAction.OFFLINE:
+        case deviceManager.DeviceStateChangeAction.OFFLINE:
           console.info('[DeviceMnager.RemoteDeviceModel] deviceStateChange OFFLINE')
           self.deviceStateChangeActionOffline(data.device)
           break
@@ -178,7 +167,7 @@ export class RemoteDeviceModel {
     this.discoverList = []
   }
 
-  authenticateDevice(device, callBack) {
+  authenticateDevice(device) {
     console.info('[DeviceMnager.RemoteDeviceModel] authenticateDevice ' + JSON.stringify(device))
     for (let i = 0; i < this.discoverList.length; i++) {
       if (this.discoverList[i].deviceId != device.deviceId) {
@@ -199,11 +188,9 @@ export class RemoteDeviceModel {
       this.deviceManager.authenticateDevice(device, authParam, (err, data) => {
         if (err) {
           console.info('[DeviceMnager.RemoteDeviceModel] authenticateDevice error:' + JSON.stringify(err))
-          this.authCallback = null
           return
         }
         console.info('[DeviceMnager.RemoteDeviceModel] authenticateDevice succeed:' + JSON.stringify(data))
-        this.authCallback = callBack
       })
     }
   }

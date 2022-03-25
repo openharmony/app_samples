@@ -78,10 +78,7 @@ struct Index {
           .onClick(() => {
             let self = this
             if (item.state === 'discover') {
-              this.remoteDeviceModel.authenticateDevice(item, () => {
-                console.log('[DeviceMnager.IndexPage] auth and online finished')
-                self.deviceList[index].state = 'online'
-              })
+              this.remoteDeviceModel.authenticateDevice(item)
             }
           })
         }, item => JSON.stringify(item))

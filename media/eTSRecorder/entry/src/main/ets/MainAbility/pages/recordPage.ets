@@ -32,7 +32,7 @@ struct RecordPage {
   private recordModel: RecordModel = new RecordModel()
   private fileManager: FileManager = new FileManager()
   private millisecond: number = 0
-  @State isRecording: boolean = true
+  @State isRecording: boolean = false
   @State duration: string = '00:00'
 
   finish() {
@@ -40,7 +40,6 @@ struct RecordPage {
       this.isRecording = false
       let recorder = new Record(this.fileName, this.file, this.addDate, this.duration, false)
       this.fileManager.putFile(recorder)
-      router.back()
     }.bind(this))
   }
 
@@ -51,6 +50,7 @@ struct RecordPage {
       this.recordModel.startRecorder(fdNumber, () => {
         console.info(`${TAG}startRecorder callback success`)
         this.millisecond = 0
+        this.isRecording = true
       })
     })
   }
@@ -74,16 +74,17 @@ struct RecordPage {
           .fontColor(Color.Black)
           .fontSize(35)
         Row() {
+          Blank().layoutWeight(5)
           Button({ type: ButtonType.Circle, stateEffect: true }) {
             Rect({ width: 20, height: 20 }).fill(Color.Red).radius(5)
           }
           .size({ width: 70, height: 70 })
-          .margin({ left: '45%' })
           .backgroundColor('#FFFFFF')
           .onClick(() => {
+            router.back()
             this.finish()
           })
-
+          Blank().layoutWeight(2)
           Button({ type: ButtonType.Circle, stateEffect: true }) {
             Image(this.isRecording ? $r('app.media.ic_pause') : $r('app.media.ic_play'))
               .objectFit(ImageFit.Contain)
@@ -91,7 +92,6 @@ struct RecordPage {
           }
           .size({ width: 60, height: 60 })
           .backgroundColor('#FFFFFF')
-          .margin({ left: '17%' })
           .onClick(() => {
             let callback = function(){
               this.isRecording = !this.isRecording
@@ -102,6 +102,7 @@ struct RecordPage {
               this.recordModel.resume(callback)
             }
           })
+          Blank().layoutWeight(2)
         }
         .width('100%')
         .layoutWeight(1)

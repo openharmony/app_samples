@@ -31,6 +31,7 @@ export struct RenameDialog {
       TextInput({ placeholder: 'input name', text: this.record.fileName })
         .type(InputType.Normal)
         .placeholderColor(Color.Gray)
+        .maxLength(18)
         .fontSize(19)
         .onChange((value: string) => {
           this.newName = value

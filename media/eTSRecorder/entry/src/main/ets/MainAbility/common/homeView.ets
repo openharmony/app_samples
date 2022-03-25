@@ -150,6 +150,7 @@ export struct HomeView {
         .backgroundColor('#FFFFFF')
         .margin(10)
         .onClick(() => {
+          this.leftSliderIndex = -1
           this.fileManager.createFile((fileName, file, addDate) => {
             router.push({
               params: { fileName: fileName, file: file, addDate: addDate },
