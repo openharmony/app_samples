@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSWeb"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "search",
+      "value": "搜索"
+    },
+    {
+      "name": "browse_history",
+      "value": "浏览记录"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    }
+  ]
+}

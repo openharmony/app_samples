@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSWeb"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "search",
+      "value": "search"
+    },
+    {
+      "name": "browse_history",
+      "value": "browse history"
+    },   {
+      "name": "sure",
+      "value": "Sure"
+    }
+
+  ]
+}
