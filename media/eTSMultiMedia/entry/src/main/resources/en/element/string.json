@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSMultiMedia"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSMultiMedia Ability"
+    },
+    {
+      "name": "delete_file",
+      "value": "Delete this file?"
+    },
+    {
+      "name": "rename_file",
+      "value": "Rename this file"
+    },
+    {
+      "name": "yes",
+      "value": "OK"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "save",
+      "value": "Save"
+    },
+    {
+      "name": "rename_placeholder",
+      "value": "Input new name"
+    },
+    {
+      "name": "photo",
+      "value": "Photo"
+    },
+    {
+      "name": "video",
+      "value": "Video"
+    },
+    {
+      "name": "album_empty",
+      "value": "The album is empty"
+    }
+  ]
+}
