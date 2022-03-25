@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "CalleeAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "CalleeAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "Start_Callee_Ability",
+      "value": "启动Callee Ability"
+    },
+    {
+      "name": "Get_Caller",
+      "value": "获取Caller"
+    },
+    {
+      "name": "Release_Caller",
+      "value": "释放Caller"
+    },
+    {
+      "name": "Caller_CallWithResult",
+      "value": "通过Call调用发送消息"
+    },
+    {
+      "name": "Input_Placeholder",
+      "value": "输入待发送的消息"
+    }
+  ]
+}
