@@ -1,0 +1,112 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Application account management"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "back",
+      "value": "return"
+    },
+    {
+      "name": "username",
+      "value": "username: "
+    },
+    {
+      "name": "password",
+      "value": "password: "
+    },
+    {
+      "name": "register",
+      "value": "register"
+    },
+    {
+      "name": "login",
+      "value": "Login"
+    },
+    {
+      "name": "music",
+      "value": "Music"
+    },
+    {
+      "name": "video",
+      "value": "Video"
+    },
+    {
+      "name": "map",
+      "value": "Map"
+    },
+    {
+      "name": "register_login",
+      "value": "Register or Login"
+    },
+    {
+      "name": "appname",
+      "value": "Appname: "
+    },
+    {
+      "name": "password_message",
+      "value": "Username and password inconsistent"
+    },
+    {
+      "name": "password_error",
+      "value": "The passwords entered twice inconsistent "
+    },
+    {
+      "name": "close",
+      "value": "Close"
+    },
+    {
+      "name": "email",
+      "value": "Email: "
+    },
+    {
+      "name": "signature",
+      "value": "Signature: "
+    },
+    {
+      "name": "confirm_password",
+      "value": "Confirm Password: "
+    },
+    {
+      "name": "setting",
+      "value": "Setup is complete"
+    },
+    {
+      "name": "account",
+      "value": "Account Info"
+    },
+    {
+      "name": "modify",
+      "value": "Modify Info"
+    },
+    {
+      "name": "application",
+      "value": "Switch APP"
+    },
+    {
+      "name": "delete",
+      "value": "Delete Account"
+    },
+    {
+      "name": "warning",
+      "value": "Warning"
+    },
+    {
+      "name": "confirm",
+      "value": "Confirm"
+    },
+    {
+      "name": "delete_account",
+      "value": "You are deleting your account"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    }
+  ]
+}
