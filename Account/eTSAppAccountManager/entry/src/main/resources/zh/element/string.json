@@ -1,0 +1,112 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "应用账号管理"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "back",
+      "value": "返回"
+    },
+    {
+      "name": "username",
+      "value": "用户名: "
+    },
+    {
+      "name": "password",
+      "value": "密码: "
+    },
+    {
+      "name": "register",
+      "value": "注册"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "music",
+      "value": "音乐"
+    },
+    {
+      "name": "video",
+      "value": "视频"
+    },
+    {
+      "name": "map",
+      "value": "地图"
+    },
+    {
+      "name": "register_login",
+      "value": "注册/登录"
+    },
+    {
+      "name": "appname",
+      "value": "应用名: "
+    },
+    {
+      "name": "password_message",
+      "value": "用户名与密码不一致"
+    },
+    {
+      "name": "password_error",
+      "value": "两次输入密码不一致"
+    },
+    {
+      "name": "close",
+      "value": "关闭"
+    },
+    {
+      "name": "email",
+      "value": "邮箱: "
+    },
+    {
+      "name": "signature",
+      "value": "个性签名: "
+    },
+    {
+      "name": "confirm_password",
+      "value": "确认密码: "
+    },
+    {
+      "name": "setting",
+      "value": "设置完成"
+    },
+    {
+      "name": "account",
+      "value": "账户信息"
+    },
+    {
+      "name": "modify",
+      "value": "修改信息"
+    },
+    {
+      "name": "application",
+      "value": "切换应用"
+    },
+    {
+      "name": "delete",
+      "value": "删除账号"
+    },
+    {
+      "name": "warning",
+      "value": "警告"
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "delete_account",
+      "value": "您正在删除账号"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    }
+  ]
+}
