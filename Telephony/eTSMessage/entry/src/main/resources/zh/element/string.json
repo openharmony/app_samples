@@ -1,0 +1,80 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSMessage"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "contact",
+      "value": "联系人"
+    },
+    {
+      "name": "sim",
+      "value": "SIM卡"
+    },
+    {
+      "name": "full_name",
+      "value": "姓名"
+    },
+    {
+      "name": "telephone",
+      "value": "电话"
+    },
+    {
+      "name": "save",
+      "value": "保存联系人"
+    },
+    {
+      "name": "manager",
+      "value": "管理"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "show_name",
+      "value": "姓名:"
+    },
+    {
+      "name": "show_telephone",
+      "value": "电话:"
+    },
+    {
+      "name": "message_service",
+      "value": "信息服务"
+    },
+    {
+      "name": "new_contact",
+      "value": "新建联系人"
+    },
+    {
+      "name": "message",
+      "value": "短信"
+    },
+    {
+      "name": "title_dialog",
+      "value": "输入错误"
+    },
+    {
+      "name": "message_dialog",
+      "value": "姓名和电话号码不能为空"
+    },
+    {
+      "name": "determine",
+      "value": "确定"
+    },
+    {
+      "name": "no_sim",
+      "value": "无SIM卡"
+    },
+    {
+      "name": "insert_sim",
+      "value": "请插入SIM卡"
+    }
+  ]
+}
