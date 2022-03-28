@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.samples.CallApplication",
+    "bundleName": "ohos.samples.CallApplication",
     "vendor": "example",
     "versionCode": 1000000,
     "versionName": "1.0.0",

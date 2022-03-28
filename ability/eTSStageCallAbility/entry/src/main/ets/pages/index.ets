@@ -20,7 +20,9 @@ import ButtonClickModel from '../model/ButtonClickModel'
 struct Index {
   private buttonRes: Array<Resource> = [
     $r('app.string.Start_Callee_Ability'),
+    $r('app.string.Start_Remote_Ability'),
     $r('app.string.Get_Caller'),
+    $r('app.string.Get_Remote_Caller'),
     $r('app.string.Release_Caller'),
     $r('app.string.Caller_CallWithResult')
   ]
@@ -54,12 +56,18 @@ struct Index {
                 this.buttonClickModel.onButtonStartSecondAbility()
                 break
               case 1:
-                this.buttonClickModel.onButtonGetCaller()
+                this.buttonClickModel.onButtonStartRemoteAbility()
                 break
               case 2:
-                this.buttonClickModel.onButtonRelease()
+                this.buttonClickModel.onButtonGetCaller()
                 break
               case 3:
+                this.buttonClickModel.onButtonGetRemoteCaller()
+                break
+              case 4:
+                this.buttonClickModel.onButtonRelease()
+                break
+              case 5:
                 this.buttonClickModel.onButtonCallWithResult(this.originMsg, (after) => {
                   this.backMsg = after
                 })

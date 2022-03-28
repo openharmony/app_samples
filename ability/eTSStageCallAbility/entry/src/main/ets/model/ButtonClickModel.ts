@@ -19,7 +19,23 @@ import Logger from '../model/Logger'
 const TAG: string = '[ButtonClickModel]'
 
 let context = globalThis.mainAbilityContext
+let dmClass = globalThis.dmClass
 const MSG_SEND_METHOD: string = 'CallSendMsg'
+
+function getRemoteDeviceId() {
+    Logger.log(TAG, 'getRemoteDeviceId start');
+    if (typeof dmClass === 'object' && dmClass != null) {
+        let list = dmClass.getTrustedDeviceListSync();
+        if (!list || !list.length) {
+            Logger.log(TAG, 'getRemoteDeviceId err: list is null');
+            return;
+        }
+        Logger.log(TAG, `MainAbility onButtonClick getRemoteDeviceId success: ${(list[0].deviceId).str}`);
+        return list[0].deviceId;
+    } else {
+        Logger.log(TAG, 'MainAbility onButtonClick getRemoteDeviceId err: dmClass is null');
+    }
+}
 
 export default class ButtonClickModel {
     caller = undefined
@@ -29,12 +45,26 @@ export default class ButtonClickModel {
     async onButtonStartSecondAbility() {
         try {
             await context.startAbility({
-                bundleName: "com.samples.CallApplication",
+                bundleName: "ohos.samples.CallApplication",
                 abilityName: "CalleeAbility"
             })
             Logger.log(TAG, 'start callee ability succeed')
         } catch (error) {
             Logger.error(TAG, `start callee ability failed with ${error.code}`)
+        }
+    }
+
+    // 跨设备启动一个Ability
+    async onButtonStartRemoteAbility() {
+        try {
+            await context.startAbility({
+                deviceId: getRemoteDeviceId(),
+                bundleName: "ohos.samples.CallApplication",
+                abilityName: "MainAbility"
+            })
+            Logger.log(TAG, 'start remote ability succeed')
+        } catch (error) {
+            Logger.error(TAG, `start remote ability failed with ${error.code}`)
         }
     }
 
@@ -54,7 +84,7 @@ export default class ButtonClickModel {
     async onButtonGetCaller() {
         try {
             this.caller = await context.startAbilityByCall({
-                bundleName: 'com.samples.CallApplication',
+                bundleName: 'ohos.samples.CallApplication',
                 abilityName: 'CalleeAbility'
             })
             if (this.caller === undefined) {
@@ -65,6 +95,25 @@ export default class ButtonClickModel {
             this.regOnRelease(this.caller)
         } catch (error) {
             Logger.error(TAG, `get caller failed with ${error}`)
+        }
+    }
+
+    // 以call调用的形式跨设备启动CalleeAbility，获取caller通信接口。若CalleeAbility未运行，会将CallAbility拉起并在后台运行。
+    async onButtonGetRemoteCaller() {
+        try {
+            this.caller = await context.startAbilityByCall({
+                deviceId: getRemoteDeviceId(),
+                bundleName: 'ohos.samples.CallApplication',
+                abilityName: 'CalleeAbility'
+            })
+            if (this.caller === undefined) {
+                Logger.error(TAG, 'get remote caller failed')
+                return
+            }
+            Logger.log(TAG, 'get remote caller success')
+            this.regOnRelease(this.caller)
+        } catch (error) {
+            Logger.error(TAG, `get remote caller failed with ${error}`)
         }
     }
 
