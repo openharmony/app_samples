@@ -1,0 +1,13 @@
+{
+  "name": "mylauncher",
+  "version": "1.0.0",
+  "ohos": {
+    "org": "huawei",
+    "buildTool": "hvigor",
+    "directoryLevel": "project"
+  },
+  "dependencies": {
+    "@ohos/hvigor": "1.0.4-rc",
+    "@ohos/hvigor-ohos-plugin": "1.0.4-rc"
+  }
+}
