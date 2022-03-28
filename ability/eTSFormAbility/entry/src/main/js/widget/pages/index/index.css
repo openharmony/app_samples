@@ -1,0 +1,36 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img {
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.container-inner {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+}
+
+.title {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    text-overflow: ellipsis;
+    max-lines: 1;
+}
+
+.detail_text {
+    font-size: 16px;
+    color: white;
+    opacity: 0.66;
+    text-overflow: ellipsis;
+    max-lines: 1;
+    margin-top: 6px;
+}

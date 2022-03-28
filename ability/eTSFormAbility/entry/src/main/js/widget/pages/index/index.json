@@ -1,0 +1,15 @@
+{
+  "data": {
+    "temperature": "0",
+    "time": "00:00:00"
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "abilityName": "ohos.samples.FormApplication.FormAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}
