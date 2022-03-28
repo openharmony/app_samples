@@ -1,0 +1,55 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/AbilityStage.ts",
+    "description": "$string:entry_desc",
+    "mainElement": "MainAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "wearable",
+      "car",
+      "tv",
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "uiSyntax": "ets",
+    "abilities": [
+      {
+        "name": "MainAbility",
+        "srcEntrance": "./ets/MainAbility/MainAbility.ts",
+        "description": "$string:MainAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:MainAbility_label",
+        "visible": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home",
+            ],
+            "actions": [
+              "action.system.home",
+            ],
+          },
+        ],
+      },
+    ],
+    "extensionAbilities": [
+      {
+        "name": "ServiceExtAbility",
+        "icon": "$media:icon",
+        "description": "service",
+        "type": "service",
+        "visible": true,
+        "srcEntrance": "./ets/ServiceExtAbility/ServiceExtAbility.ts"
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED",
+      }
+    ]
+  },
+}

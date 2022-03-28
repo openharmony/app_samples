@@ -1,0 +1,92 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "service test"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "main ability"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "local main ability test"
+    },
+    {
+      "name": "state_unconnected",
+      "value": "unconnected"
+    },
+    {
+      "name": "state_start_ability",
+      "value": "ability is started"
+    },
+    {
+      "name": "state_connect_ability",
+      "value": "ability is connected"
+    },
+    {
+      "name": "state_disconnect_ability",
+      "value": "ability is disconnected"
+    },
+    {
+      "name": "state_start_ability_error",
+      "value": "start ability error"
+    },
+    {
+      "name": "state_connect_ability_error",
+      "value": "connect ability error"
+    },
+    {
+      "name": "state_disconnect_ability_error",
+      "value": "disconnect ability error"
+    },
+    {
+      "name": "opt_start_ability",
+      "value": "start ability"
+    },
+    {
+      "name": "opt_connect_ability",
+      "value": "connect ability"
+    },
+    {
+      "name": "opt_disconnect_ability",
+      "value": "disconnect ability"
+    },
+    {
+      "name": "tips_current_state",
+      "value": "current state"
+    },
+    {
+      "name": "tips_step",
+      "value": "step"
+    },
+    {
+      "name": "tips_start",
+      "value": "start ability and return state"
+    },
+    {
+      "name": "tips_connect",
+      "value": "trans to service add"
+    },
+    {
+      "name": "tips_enter_two_number",
+      "value": "enter two number"
+    },
+    {
+      "name": "tips_connect_first_value",
+      "value": "first number"
+    },
+    {
+      "name": "tips_connect_second_value",
+      "value": "second number"
+    },
+    {
+      "name": "tips_connect_end",
+      "value": "connect success and return value"
+    },
+    {
+      "name": "tips_return_result",
+      "value": "remote return value"
+    }
+  ]
+}

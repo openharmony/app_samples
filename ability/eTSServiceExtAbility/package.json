@@ -1,0 +1,16 @@
+{
+  "name": "etsserviceextability",
+  "version": "1.0.0",
+  "ohos": {
+    "org": "huawei",
+    "buildTool": "hvigor",
+    "directoryLevel": "project"
+  },
+  "dependencies": {
+    "@ohos/hvigor": "1.0.3-rc",
+    "@ohos/hvigor-base": "1.0.3-rc",
+    "@ohos/hvigor-log": "1.0.3-rc",
+    "@ohos/hvigor-ohos-plugin": "1.0.3-rc",
+    "@ohos/sdkmanager-common": "1.1.1"
+  }
+}
