@@ -12,9 +12,11 @@
 
 ## 目录<a name="sectionMenu"></a>
 - Basic
+  - [`eTSContainer:`语言基础类库---线性容器ArrayList（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSContainer)
   - [`eTSScreenshot:`基础功能-屏幕截图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSScreenshot)
 - Account
-  - [`eTSDistributeAccount:`账号管理-分布式账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSDistributeAccount)  
+  - [`eTSAppAccountManager:`账号管理-应用账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSAppAccountManager)
+  - [`eTSDistributeAccount:`账号管理-分布式账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSDistributeAccount)
 - Communication
   - [`eTSRPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSRPC)
   - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSWlan) 
@@ -24,6 +26,7 @@
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/ability/JsDistributedMusicPlayer)
   - [`eTSDataAbility:`DataAbility的创建与访问（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSDataAbility)
   - [`eTSServiceAbility:`ServiceAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSServiceAbility)
+  - [`eTSStageCallAbility:`StageAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSStageCallAbility)
 - common
   - [`AirQuality:`空气质量（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/AirQuality)
   - [`Clock:`时钟（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Clock)
@@ -48,11 +51,14 @@
   - [`JsAudioPlayer:`音频播放和管理（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
   - [`eTSRecorder:`录音机（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/eTSRecorder)
+  - [`eTSMultiMedia:`相机和媒体库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/eTSMultiMedia)
 - DFX
   - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/DFX/JsDotTest)
 - Telephony
   - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
-  - [`eTSRadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSRadioTech)	
+  - [`eTSMessage:`电话服务-短信服务（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSMessage)
+  - [`eTSRadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSRadioTech)
+  - [`eTSSimManager:`电话服务-SIM卡管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSSimManager)
 - thread
   - [`JsWorker:`启动一个worker（JS）](https://gitee.com/openharmony/app_samples/tree/master/thread/JsWorker)
 - CompleteApps
