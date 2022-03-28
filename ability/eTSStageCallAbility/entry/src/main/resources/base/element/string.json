@@ -25,8 +25,16 @@
       "value": "启动Callee Ability"
     },
     {
+      "name": "Start_Remote_Ability",
+      "value": "启动Remote Ability"
+    },
+    {
       "name": "Get_Caller",
       "value": "获取Caller"
+    },
+    {
+      "name": "Get_Remote_Caller",
+      "value": "获取Remote Caller"
     },
     {
       "name": "Release_Caller",
