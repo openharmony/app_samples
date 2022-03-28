@@ -17,6 +17,8 @@ import featureAbility from '@ohos.ability.featureAbility';
 import prompt from '@system.prompt';
 import rpc from "@ohos.rpc";
 import RemoteDeviceModel from '../../model/RemoteDeviceModel.ets';
+import abilityAccessCtrl from "@ohos.abilityAccessCtrl";
+import bundle from '@ohos.bundle';
 
 enum Operation {
   AuthDeviceOperation,
@@ -24,12 +26,12 @@ enum Operation {
   ContinueAbilityOperation,
   ConnectRemoteServiceOperation,
 }
-var connectedAbility;
-var localDeviceId = "";
-var mRemote;
-var remoteDeviceModel = new RemoteDeviceModel;
+let connectedAbility;
+let localDeviceId = "";
+let mRemote;
+let remoteDeviceModel = new RemoteDeviceModel;
 let discovereDeviceIdList = [];
-let DeviceIdList = [];
+let deviceIdList = [];
 let mOperation = Operation.AuthDeviceOperation;
 
 function RegisterDeviceListCallback() {
@@ -41,12 +43,12 @@ function RegisterDeviceListCallback() {
     console.info('[dmsDemo] discoveredDeviceSize =' + discoveredDeviceSize);
     console.info('[dmsDemo] deviceSize =' + deviceSize);
     discovereDeviceIdList.length = 0;
-    for (var i = 0; i < discoveredDeviceSize; i++) {
+    for (let i = 0; i < discoveredDeviceSize; i++) {
       discovereDeviceIdList.push(remoteDeviceModel.discoverList[i].deviceId);
     }
-    DeviceIdList.length = 0;
-    for (var i = 0; i < deviceSize; i++) {
-      DeviceIdList.push(remoteDeviceModel.deviceList[i].deviceId);
+    deviceIdList.length = 0;
+    for (let i = 0; i < deviceSize; i++) {
+      deviceIdList.push(remoteDeviceModel.deviceList[i].deviceId);
     }
     console.info('[dmsDemo] RegisterDeviceListCallback on remote device updated, count=' + deviceSize);
     if (deviceSize === 0) {
@@ -92,10 +94,40 @@ function AuthDevice(deviceId) {
   console.info('[dmsDemo] AuthDevice end');
 }
 
+async function requestPermission() {
+  console.info('requestPermission begin');
+  let array: Array<string> = ["ohos.permission.DISTRIBUTED_DATASYNC"];
+  let tokenID = undefined;
+  const appInfo = await bundle.getApplicationInfo('ohos.samples.etsDemo', 0, 100);
+  tokenID = appInfo.accessTokenId;
+  const atManager = abilityAccessCtrl.createAtManager();
+  let requestPermissions: Array<string> = [];
+  for (let i = 0;i < array.length; i++) {
+    let result = await atManager.verifyAccessToken(tokenID, array[i]);
+    console.info("verifyAccessToken result:" + JSON.stringify(result));
+    if (result == abilityAccessCtrl.GrantStatus.PERMISSION_GRANTED) {
+    } else {
+      requestPermissions.push(array[i]);
+    }
+  }
+  console.info("requestPermissions:" + JSON.stringify(requestPermissions));
+  if (requestPermissions.length == 0 || requestPermissions == []) {
+    return;
+  }
+  let context = featureAbility.getContext();
+  context.requestPermissionsFromUser(requestPermissions, 1, (data)=>{
+    console.info("data:" + JSON.stringify(data));
+    console.info("data requestCode:" + data.requestCode);
+    console.info("data permissions:" + data.permissions);
+    console.info("data authResults:" + data.authResults);
+  });
+  console.info('requestPermission end');
+}
+
 function onStartLocalAbility() {
   console.info('[dmsDemo] onStartLocalAbility begin');
   console.info('[dmsDemo] onStartLocalAbility deviceId is ' + localDeviceId);
-  var wantValue = {
+  let wantValue = {
     deviceId: localDeviceId,
     bundleName: 'ohos.samples.etsDemo',
     abilityName: 'ohos.samples.etsDemo.LocalAbility',
@@ -118,8 +150,8 @@ function onStartRemoteAbility(deviceId) {
     return;
   }
   console.info('[dmsDemo] onStartRemoteAbility deviceId is ' + deviceId);
-  var params;
-  var wantValue = {
+  let params;
+  let wantValue = {
     bundleName: 'ohos.samples.etsDemo',
     abilityName: 'ohos.samples.etsDemo.RemoteAbility',
     deviceId: deviceId,
@@ -318,7 +350,7 @@ struct CustomDialogExample2 {
   build() {
     Column() {
       List({ space: 10, initialIndex: 0 }) {
-        ForEach(DeviceIdList, (item) => {
+        ForEach(deviceIdList, (item) => {
           ListItem() {
             Row() {
               Text(item)
@@ -356,6 +388,11 @@ struct Index {
     cancel: this.existApp,
     autoCancel: true
   })
+  private aboutToAppear(): void  {
+    requestPermission();
+  }
+  private aboutToDisappear(): void {
+  }
   onCancel() {
     console.info('[dmsDemo] Callback when onCancel button is clicked');
   }
@@ -420,7 +457,7 @@ struct Index {
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         mOperation = Operation.StartRemoteAbilityOperation;
-        console.log('[dmsDemo] DeviceIdList length:' + DeviceIdList.length);
+        console.log('[dmsDemo] deviceIdList length:' + deviceIdList.length);
         this.dialogController2.open();
       }).width(400).height(30)
 
@@ -448,7 +485,7 @@ struct Index {
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         mOperation = Operation.ConnectRemoteServiceOperation;
-        console.log('[dmsDemo] DeviceIdList length:' + DeviceIdList.length);
+        console.log('[dmsDemo] deviceIdList length:' + deviceIdList.length);
         this.dialogController2.open();
       }).width(400).height(30)
 
