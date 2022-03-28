@@ -157,6 +157,7 @@ export default {
                 });
             }
             self.deviceList = list;
+            this.$element('showDialog').close()
             this.$element('showDialog').show();
         });
     },

@@ -42,7 +42,7 @@
         "type": "page",
         "srcPath": "default",
         "srcLanguage": "js",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "js": [
