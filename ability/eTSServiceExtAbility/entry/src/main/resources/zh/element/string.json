@@ -1,0 +1,92 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "服务测试"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "主页"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "本地服务测试"
+    },
+    {
+      "name": "state_unconnected",
+      "value": "未连接"
+    },
+    {
+      "name": "state_start_ability",
+      "value": "已启动服务"
+    },
+    {
+      "name": "state_connect_ability",
+      "value": "已连接服务"
+    },
+    {
+      "name": "state_disconnect_ability",
+      "value": "已断开服务"
+    },
+    {
+      "name": "state_start_ability_error",
+      "value": "启动服务失败"
+    },
+    {
+      "name": "state_connect_ability_error",
+      "value": "连接服务失败"
+    },
+    {
+      "name": "state_disconnect_ability_error",
+      "value": "断开服务失败"
+    },
+    {
+      "name": "opt_start_ability",
+      "value": "启动服务"
+    },
+    {
+      "name": "opt_connect_ability",
+      "value": "连接服务"
+    },
+    {
+      "name": "opt_disconnect_ability",
+      "value": "断开服务"
+    },
+    {
+      "name": "tips_current_state",
+      "value": "当前状态"
+    },
+    {
+      "name": "tips_step",
+      "value": "步骤"
+    },
+    {
+      "name": "tips_start",
+      "value": "启动服务返回状态"
+    },
+    {
+      "name": "tips_connect",
+      "value": "传入服务做累加操作"
+    },
+    {
+      "name": "tips_enter_two_number",
+      "value": "输入两个数字"
+    },
+    {
+      "name": "tips_connect_first_value",
+      "value": "第一个数字"
+    },
+    {
+      "name": "tips_connect_second_value",
+      "value": "第二个数字"
+    },
+    {
+      "name": "tips_connect_end",
+      "value": "连接成功后会返回运算结果"
+    },
+    {
+      "name": "tips_return_result",
+      "value": "远程返回数据"
+    }
+  ]
+}
