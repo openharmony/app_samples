@@ -66,7 +66,7 @@
   - [`AstronautsGame:`太空人避障游戏（C++）](https://gitee.com/openharmony/app_samples/tree/master/CompleteApps/AstronautsGame)
 - ETSUI
   - [`eTSCanvas:`画布组件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSCanvas)
-  - [`eTSCustomComponent:`组件化（eTS）](https://gitee.com/zhangxinlogo/app_samples/tree/master/ETSUI/eTSCustomComponent)
+  - [`eTSCustomComponent:`组件化（eTS）](ETSUI/eTSCustomComponent)
   - [`EtsProcess:`进程信息（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/EtsProcess)
   - [`eTSBuildCommonView:`创建简单视图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSBuildCommonView)
   - [`eTSDefiningPageLayoutAndConnection:`页面布局和连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSDefiningPageLayoutAndConnection)
