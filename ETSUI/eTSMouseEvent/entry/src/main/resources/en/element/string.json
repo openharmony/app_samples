@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSMouseEvent"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "game_over",
+      "value": "Game Over"
+    },
+    {
+      "name": "restart",
+      "value": "Restart"
+    },
+    {
+      "name": "exit",
+      "value": "Exit"
+    },
+    {
+      "name": "surplus",
+      "value": "Number of remaining mines:"
+    },
+    {
+      "name": "win",
+      "value": "Congratulations on your victory"
+    }
+  ]
+}

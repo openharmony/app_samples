@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSMouseEvent"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "game_over",
+      "value": "游戏结束"
+    },
+    {
+      "name": "restart",
+      "value": "再来一局"
+    },
+    {
+      "name": "exit",
+      "value": "退出游戏"
+    },
+    {
+      "name": "surplus",
+      "value": "剩余地雷数："
+    },
+    {
+      "name": "win",
+      "value": "恭喜你获得胜利"
+    }
+  ]
+}
