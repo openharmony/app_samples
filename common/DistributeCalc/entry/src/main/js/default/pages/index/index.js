@@ -58,25 +58,12 @@ export default {
             }
         });
     },
-    async grantPermission() {
+    grantPermission() {
         console.info('Calc[IndexPage] grantPermission')
         let context = featureAbility.getContext()
-        let bundleFlag = 0
-        let tokenId = undefined
-        let userId = 100
-        let appInfo = await bundle.getApplicationInfo('com.example.distributedcalc', bundleFlag, userId)
-        tokenId = appInfo.accessTokenId
-        console.info(`Calc[IndexPage] grantPermission,tokenId=${tokenId}`)
-        let atManager = abilityAccessCtrl.createAtManager()
-
-        let result = await atManager.verifyAccessToken(tokenId, 'ohos.permission.DISTRIBUTED_DATASYNC')
-        console.info(`Calc[IndexPage] grantPermission,verifyPermission,result=${result}`)
-        if (result == abilityAccessCtrl.GrantStatus.PERMISSION_DENIED) {
-            console.info(`Calc[IndexPage] grantPermission,verifyPermission,result=PERMISSION_DENIED`)
-            context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function (result) {
-                console.info(`Calc[IndexPage] grantPermission,requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
-            })
-        }
+        context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function (result) {
+            console.info(`Calc[IndexPage] grantPermission,requestPermissionsFromUser,result.requestCode=${result.requestCode}`)
+        })
     },
     dataChange(key, value) {
         console.log('Calc[IndexPage] dataChange isDistributed = ' + this.isDistributed);
