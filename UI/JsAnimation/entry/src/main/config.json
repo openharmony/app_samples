@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.jsanimation",
     "vendor": "samples",
+    "bundleName": "ohos.samples.jsanimation",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,18 +9,10 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.jsanimation",
-    "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
       "phone"
     ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
     "abilities": [
       {
         "skills": [
@@ -39,18 +31,27 @@
         "name": ".MainAbility",
         "srcLanguage": "js",
         "icon": "$media:icon",
-        "description": "$string:description_mainability",
+        "description": "$string:MainAbility_desc",
         "formsEnabled": false,
-        "label": "$string:entry_MainAbility",
+        "label": "$string:MainAbility_label",
         "type": "page",
         "launchType": "standard"
       }
     ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.jsanimation",
+    "srcPath": "",
+    "name": ".entry",
     "js": [
       {
         "pages": [
           "pages/index/index",
-          "pages/index/setPage/setPage"
+          "pages/setPage/setPage"
         ],
         "name": ".MainAbility",
         "window": {

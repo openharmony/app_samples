@@ -1,0 +1,13 @@
+{
+  "apiType": 'faMode',
+  "buildOption": {
+  },
+  "targets": [
+    {
+      "name": "default",
+    },
+    {
+      "name": "ohosTest",
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -14,7 +14,7 @@
  */
 
 import router from '@system.router'
-import gallerydata from '../../i18n/gallery.json'
+import galleryData from '../../common/gallery'
 
 var i = 0
 
@@ -28,6 +28,9 @@ export default {
         endIndex: 0,
         passValue: false,
         height: '',
+        message: [],
+        imgtype: false,
+        pass: false
     },
     onInit() {
         this.passValue = this.pass
@@ -36,10 +39,10 @@ export default {
             this.repeatedlength = this.message[1]
             this.height = 375 / this.message[0]
         } else {
-            this.imgtype = gallerydata.shrink
-            this.columns = gallerydata.numColumns.orderedByDays
-            this.repeatedlength = gallerydata.itemCount
-            this.height = 375 / gallerydata.numColumns.orderedByDays
+            this.imgtype = galleryData.shrink
+            this.columns = galleryData.numColumns.orderedByDays
+            this.repeatedlength = galleryData.itemCount
+            this.height = 375 / galleryData.numColumns.orderedByDays
         }
         if (this.imgtype === true) {
             for (var i = 1;i <= 200; i++) {
@@ -59,7 +62,7 @@ export default {
     },
     redirectSetting() {
         router.push({
-            uri: 'pages/index/setPage/setPage'
+            uri: 'pages/setPage/setPage'
         })
     },
     back() {
@@ -68,20 +71,20 @@ export default {
     setColumn() {
         i++
         if (i % 3 === 0) {
-            this.columns = gallerydata.numColumns.orderedByDays
-            this.height = 375 / gallerydata.numColumns.orderedByDays
+            this.columns = galleryData.numColumns.orderedByDays
+            this.height = 375 / galleryData.numColumns.orderedByDays
         } else if (i % 3 === 1) {
-            this.columns = gallerydata.numColumns.orderedByMonths
-            this.height = 375 / gallerydata.numColumns.orderedByMonths
+            this.columns = galleryData.numColumns.orderedByMonths
+            this.height = 375 / galleryData.numColumns.orderedByMonths
         } else {
-            this.columns = gallerydata.numColumns.orderedByYears
-            this.height = 375 / gallerydata.numColumns.orderedByYears
+            this.columns = galleryData.numColumns.orderedByYears
+            this.height = 375 / galleryData.numColumns.orderedByYears
         }
     },
     redirect(e) {
         var imgsrc = e.target.attr.data
         router.push({
-            uri: 'pages/index/bigimg/bigimg',
+            uri: 'pages/bigimg/bigimg',
             params: {
                 url: imgsrc
             }
