@@ -18,7 +18,7 @@
 #include "plugin_common.h"
 #include "plugin_render.h"
 #include <EGL/egl.h>
-#include <GLES/gl3.h>
+#include <GLES3/gl3.h>
 
 EGLConfig getConfig(int version, EGLDisplay eglDisplay) {
     int attribList[] = {
@@ -31,8 +31,8 @@ EGLConfig getConfig(int version, EGLDisplay eglDisplay) {
         EGL_NONE
     };
     EGLConfig configs = NULL;
-    int numConfigs;
-    if (!eglChooseConfig(eglDisplay, attribList, &configs, 1, &numConfigs)) {
+    int configsNum;
+    if (!eglChooseConfig(eglDisplay, attribList, &configs, 1, &configsNum)) {
         LOGE("eglChooseConfig ERROR");
         return NULL;
     }
@@ -80,7 +80,7 @@ void EGLCore::GLContextInit(void* window, int w, int h)
         LOGE("EGLCore::unable to initialize display");
         return;
     }
-    // 尝试使用GLES3
+
     mEGLConfig = getConfig(3, mEGLDisplay);
     if (mEGLConfig == nullptr) {
         LOGE("EGLCore::GLContextInit config ERROR");
@@ -129,6 +129,7 @@ void EGLCore::DrawTriangle()
         1.0f, -1.0f
     };
     glViewport(0, 0, width_, height_);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(mProgramHandle);
     GLint positionHandle = glGetAttribLocation(mProgramHandle, "a_position");
@@ -138,7 +139,6 @@ void EGLCore::DrawTriangle()
     glDrawArrays(GL_TRIANGLES, 0, 3);
     glDisableVertexAttribArray(positionHandle);
 
-    // Render();
     glFlush();
     glFinish();
     eglSwapBuffers(mEGLDisplay, mEGLSurface);
@@ -161,6 +161,7 @@ void EGLCore::ChangeShape()
     };
 
     glViewport(0, 0, width_, height_);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(mProgramHandle);
     GLint positionHandle = glGetAttribLocation(mProgramHandle, "a_position");
@@ -190,6 +191,7 @@ void EGLCore::ChangeColor()
     };
 
     glViewport(0, 0, width_, height_);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(mProgramHandle);
     GLint positionHandle = glGetAttribLocation(mProgramHandle, "a_position");
@@ -211,36 +213,28 @@ GLuint EGLCore::LoadShader(GLenum type, const char *shaderSrc)
 {
     GLuint shader;
     GLint compiled;
-    // 创建shader
+
     shader = glCreateShader(type);
     if (shader == 0) {
         LOGE("LoadShader shader error");
         return 0;
     }
-    // 加载着色器的源码
-    glShaderSource(shader, 1, &shaderSrc, nullptr);
 
-    // 编译源码
+    glShaderSource(shader, 1, &shaderSrc, nullptr);
     glCompileShader(shader);
 
-    // 检查编译状态
     glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
 
     if (!compiled) {
         GLint infoLen = 0;
-        // 查询日志的长度判断是否有日志产生
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLen);
 
         if (infoLen > 1) {
-            // 分配一个足以存储日志信息的字符串
             char *infoLog = (char*)malloc(sizeof(char) * infoLen);
-            // 检索日志信息
             glGetShaderInfoLog(shader, infoLen, nullptr, infoLog);
             LOGE("Error compiling shader:\n%s\n",infoLog);
-            // 使用完成后需要释放字符串分配的内存
             free(infoLog);
         }
-        // 删除编译出错的着色器释放内存
         glDeleteShader(shader);
         return 0;
     }
@@ -254,20 +248,19 @@ GLuint EGLCore::CreateProgram(const char *vertexShader, const char *fragShader)
     GLuint program;
     GLint linked;
 
-    // 加载顶点shader
     vertex = LoadShader(GL_VERTEX_SHADER, vertexShader);
     if (vertex == 0) {
         LOGE("CreateProgram vertex error");
         return 0;
     }
-    // 加载片元着色器
+
     fragment = LoadShader(GL_FRAGMENT_SHADER, fragShader);
     if (fragment == 0) {
         LOGE("CreateProgram fragment error");
         glDeleteShader(vertex);
         return 0;
     }
-    // 创建program
+
     program = glCreateProgram();
     if (program == 0) {
         LOGE("CreateProgram program error");
@@ -275,35 +268,27 @@ GLuint EGLCore::CreateProgram(const char *vertexShader, const char *fragShader)
         glDeleteShader(fragment);
         return 0;
     }
-    // 绑定shader
+
     glAttachShader(program, vertex);
     glAttachShader(program, fragment);
-
-    // 链接program程序
     glLinkProgram(program);
-    // 检查链接状态
     glGetProgramiv(program, GL_LINK_STATUS, &linked);
+
     if (!linked) {
         LOGE("CreateProgram linked error");
         GLint infoLen = 0;
-        // 检查日志信息长度
         glGetProgramiv(program, GL_INFO_LOG_LENGTH, &infoLen);
         if (infoLen > 1) {
-            // 分配一个足以存储日志信息的字符串
             char *infoLog = (char *)malloc(sizeof(char) * infoLen);
-            // 检索日志信息
             glGetProgramInfoLog(program, infoLen, nullptr, infoLog);
             LOGE("Error linking program:\n%s\n",infoLog);
-            // 使用完成后需要释放字符串分配的内存
             free(infoLog);
         }
-        // 删除着色器释放内存
         glDeleteShader(vertex);
         glDeleteShader(fragment);
         glDeleteProgram(program);
         return 0;
     }
-    // 删除着色器释放内存
     glDeleteShader(vertex);
     glDeleteShader(fragment);
 
