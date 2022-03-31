@@ -1,12 +1,16 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
+      "name": "entry_desc",
       "value": "eTSXComponent"
     },
     {
-      "name": "description_mainability",
-      "value": "eTS_Empty Ability"
+      "name": "MainAbility_label",
+      "value": "eTSXComponent"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
     }
   ]
 }
