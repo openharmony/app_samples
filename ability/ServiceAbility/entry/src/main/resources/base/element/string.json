@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSServiceAbility"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSServiceAbility Ability"
+    },
+    {
+      "name": "description_serviceability",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "connect_service",
+      "value": "Connect service"
+    },
+    {
+      "name": "sort_string",
+      "value": "Sort the string"
+    },
+    {
+      "name": "disconnect_service",
+      "value": "Disconnect service"
+    },
+    {
+      "name": "input_placeholder",
+      "value": "Input the input string"
+    },
+    {
+      "name": "ServiceAbility1_desc",
+      "value": "hap sample empty service"
+    }
+  ]
+}
