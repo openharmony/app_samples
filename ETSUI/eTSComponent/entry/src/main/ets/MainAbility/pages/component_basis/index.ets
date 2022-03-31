@@ -15,8 +15,7 @@ const componentBasisItems = [
   { title: "Menu", uri: 'pages/component_basis/menu/menuPage' },
   { title: "Gauge", uri: 'pages/component_basis/gauge/gaugePage' },
   { title: "DataPanel", uri: 'pages/component_basis/dataPanel/dataPanelPage' },
-  { title: "Progress", uri: 'pages/component_basis/progress/progressPage' },
-  { title: "Rating", uri: 'pages/component_basis/rating/ratingPage' },
+  { title: "Progress", uri: 'pages/component_basis/progress/progressPage' },,
   { title: "TextInput", uri: 'pages/component_basis/textInput/textInputPage' },
 ]
 

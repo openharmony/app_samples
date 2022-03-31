@@ -1,4 +1,3 @@
-import lottie from 'lottie-web'
 @Entry
 @Component
 struct BlankPage {
