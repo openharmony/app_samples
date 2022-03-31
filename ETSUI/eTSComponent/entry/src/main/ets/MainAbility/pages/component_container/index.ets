@@ -5,7 +5,6 @@ const componentContainerItems = [
   { title: 'Panel', uri: 'pages/component_container/panel/panelPage' },
   { title: 'Navigator', uri: 'pages/component_container/navigator/navigatorPage' },
   { title: "Swiper", uri: 'pages/component_container/swiper/swiperPage' },
-  { title: "Grid", uri: 'pages/component_container/grid/gridIndex' },
   { title: "Stack", uri: 'pages/component_container/stack/stackPage' },
   { title: "Column", uri: 'pages/component_container/Column/ColumnPage' },
   { title: "Row", uri: 'pages/component_container/row/rowPage' },
