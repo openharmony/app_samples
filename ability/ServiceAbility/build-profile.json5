@@ -1,0 +1,40 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "material": {
+          "storePassword": "0000001C52E6E98394DD2C431FF109FB3F13DE9AB753A999C95716118E17136D67DA54BF66DBF5630B82FE54",
+          "certpath": "D:\\hap\\appl2.cer",
+          "keyAlias": "appl2",
+          "keyPassword": "0000001C2D2A3C2AA2EF815C08D36BD87EE8FC40A4D71D57ACE44B68F90A113882326D87404F29D5D1A40F4F",
+          "profile": "D:\\hap\\etsserviceability.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "D:\\hap\\appl2.p12",
+        },
+        "name": "default",
+      }
+    ],
+    "compileSdkVersion": 8,
+    "compatibleSdkVersion": 8,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default"
+      },
+    ],
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default",
+          ],
+        },
+      ],
+    },
+  ],
+}
