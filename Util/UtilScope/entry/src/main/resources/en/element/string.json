@@ -1,0 +1,132 @@
+{
+  "string": [
+    {
+      "name": "eTSUtilScope",
+      "value": "eTSUtilScope"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "age",
+      "value": "Age judgment"
+    },
+    {
+      "name": "temperature",
+      "value": "Temperature detection"
+    },
+    {
+      "name": "range",
+      "value": "Range judgment"
+    },
+    {
+      "name": "judge_age",
+      "value": "Determine whether the age is within the limit"
+    },
+    {
+      "name": "age_analyse",
+      "value": "Age analysis"
+    },
+    {
+      "name": "judge_temp",
+      "value": "Judge whether your temperature is normal"
+    },
+    {
+      "name": "temp_morning",
+      "value": "What's your temperature in the morning:"
+    },
+    {
+      "name": "temp_noon",
+      "value": "What's your temperature at noon:"
+    },
+    {
+      "name": "temp_night",
+      "value": "What's your temperature at night:"
+    },
+    {
+      "name": "judge_sleep",
+      "value": "Judge whether you have enough sleep:"
+    },
+    {
+      "name": "short_sleep",
+      "value": "What is your shortest sleep time this month:"
+    },
+    {
+      "name": "long_sleep",
+      "value": "What is your longest sleep time this month:"
+    },
+    {
+      "name": "sleep_analyse",
+      "value": "Sleep analysis"
+    },
+    {
+      "name": "sleep_time",
+      "value": "*A person's normal sleep time is 7 to 10 hours"
+    },
+    {
+      "name": "temp_analyse",
+      "value": "Temperature analysis"
+    },
+    {
+      "name": "determine",
+      "value": "determine"
+    },
+    {
+      "name": "age_message_confirm",
+      "value": "Your age meets the requirements"
+    },
+    {
+      "name": "age_message_not_confirm",
+      "value": "Sorry, your age doesn't meet the requirements"
+    },
+    {
+      "name": "temp_message_lower",
+      "value": "What's your minimum temperature today"
+    },
+    {
+      "name": "temp_message_upper",
+      "value": "What's your maximum temperature today"
+    },
+    {
+      "name": "temp_message_normal",
+      "value": "Your temperature is in the normal range"
+    },
+    {
+      "name": "temp_message_abnormal",
+      "value": "Your temperature is abnormal today. Please see a doctor as soon as possible and pay attention to your health!"
+    },
+    {
+      "name": "combine",
+      "value": "The sleep interval and the normal sleep interval are combined as"
+    },
+    {
+      "name": "interval",
+      "value": "The intersection of sleep interval and normal sleep interval is"
+    },
+    {
+      "name": "age_placeholder",
+      "value": "Please enter your age"
+    },
+    {
+      "name": "morning_placeholder",
+      "value": "Please enter your morning temperature"
+    },
+    {
+      "name": "noon_placeholder",
+      "value": "Please enter your temperature at noon"
+    },
+    {
+      "name": "night_placeholder",
+      "value": "Please enter your temperature at night"
+    },
+    {
+      "name": "enter_sleep_time",
+      "value": "Please enter sleep time"
+    },
+    {
+      "name": "upper",
+      "value": "37"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "hello": "Hello",
+    "world": "World",
+    "page": "Second Page",
+    "next": "Next Page",
+    "back": "Back"
+  },
+  "Files": {
+  }
+}

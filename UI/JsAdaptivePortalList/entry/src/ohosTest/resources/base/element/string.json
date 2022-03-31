@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "testAbility_desc",
+      "value": "the entry test ability"
+    },
+    {
+      "name": "testAbility_label",
+      "value": "the test label"
+    }
+  ]
+}
