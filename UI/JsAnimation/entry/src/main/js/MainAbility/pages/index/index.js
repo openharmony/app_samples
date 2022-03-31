@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,8 +12,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import router from '@system.router'
-import animatordata from '../../i18n/animators.json'
+import animatordata from '../../common/animators'
 
 export default {
     data: {
@@ -42,7 +43,8 @@ export default {
         videomove_2: true,
         videomove_3: true,
         imgflag: [true, true, true, true, true, true, true, true, true, true],
-        shadow: true
+        shadow: true,
+        message: []
     },
     onInit() {
         console.info( 'index'+ JSON.stringify(animatordata.videoopa))
@@ -153,7 +155,7 @@ export default {
     },
     redirect_setting(){
         router.push({
-            uri:'pages/index/setPage/setPage'
+            uri:'pages/setPage/setPage'
         })
     },
     back() {
