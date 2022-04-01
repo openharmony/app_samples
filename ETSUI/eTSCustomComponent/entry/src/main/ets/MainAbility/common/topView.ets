@@ -13,9 +13,8 @@
  * limitations under the License.
  */
 
-import { NumberList } from '../common/numberList.ets'
-import { checkExist, menuTitle } from '../util/utils.ets'
-import { DataInit, ReleaseData, addStorage, modifyStorage, getStorageList } from '../model/releaseData.ets'
+import { checkExist, menuTitle } from '../util/utils'
+import { ReleaseData, addStorage, modifyStorage, getStorageList } from '../model/releaseData'
 
 const TAG = '[Component.TopView]'
 

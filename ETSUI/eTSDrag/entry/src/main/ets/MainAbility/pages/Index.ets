@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import  HiLog  from '../model/HiLogUtil.ets'
-import { Icon, iconInit } from '../model/IconData.ets'
+import  HiLog  from '../model/HiLogUtil'
+import { Icon, iconInit } from '../model/IconData'
 
 const TAG = '[Index]'
 
-@Extend(Image) function preferFancy (imageFit: ImageFit, padding: Padding) {
+@Extend(Image) function preferFancy (imageFit: ImageFit, padding: number) {
   .width(70)
   .height(70)
   .objectFit(imageFit)
@@ -99,7 +99,7 @@ struct Index {
 
   build() {
     Column() {
-      Text($r('app.string.mouseDrag'))
+      Text($r('app.string.MainAbility_label'))
         .width('100%')
         .height(50)
         .padding(10)
@@ -112,20 +112,25 @@ struct Index {
         ForEach(this.desktopIcons, item => {
           ListItem() {
             Column() {
-              Image(item.icon).layoutWeight(1).preferFancy(ImageFit.Fill, 0)
+              Image(item.icon)
+                .width(70)
+                .height(70)
+                .padding(0)
+                .layoutWeight(1)
+                .objectFit(ImageFit.Fill)
               Text(item.name).fontSize(15).height(30).fontWeight(FontWeight.Bold)
             }
+            .width('20%')
             .height(100)
             .margin(5)
-            .width('20%')
           }
           .onDragStart((event: DragEvent, extraParams: string) => {
             this.onDesktopIconDragStart(extraParams)
           })
-        }, item => item.name)
+        }, item => JSON.stringify(item))
       }
       .width('90%')
-      .layoutWeight(1)
+      .height('80%')
       .borderRadius(30)
       .align(Alignment.Start)
       .listDirection(Axis.Horizontal)
@@ -139,11 +144,14 @@ struct Index {
           ListItem() {
             Image(item.icon)
               .margin({ left: '10%', right: '10%' })
-              .preferFancy(ImageFit.ScaleDown, 2)
+              .width(70)
+              .height(70)
+              .padding(2)
               .height('100%')
+              .objectFit(ImageFit.ScaleDown)
               .bindMenu([
                 {
-                  value: $r('app.string.remove'),
+                  value: '移除',
                   action: () => {
                     this.dockIcons.splice(index, 1)
                     this.desktopIcons.push(item)

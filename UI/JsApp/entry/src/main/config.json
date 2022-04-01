@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.jsapp",
     "vendor": "samples",
+    "bundleName": "ohos.samples.jsapp",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,19 +9,10 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.jsapp",
-    "name": ".MyApplication",
     "mainAbility": ".MainAbility",
-    "srcPath": "",
     "deviceType": [
       "phone"
     ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
     "abilities": [
       {
         "skills": [
@@ -47,6 +38,15 @@
         "launchType": "standard"
       }
     ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.jsapp",
+    "srcPath": "",
+    "name": ".entry",
     "js": [
       {
         "pages": [

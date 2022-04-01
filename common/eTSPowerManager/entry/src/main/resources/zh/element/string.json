@@ -1,12 +1,16 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
+      "name": "MainAbility_label",
       "value": "系统电源管理"
     },
     {
-      "name": "description_mainability",
-      "value": "eTS_Empty Ability"
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
     },
     {
       "name":"turnOff",

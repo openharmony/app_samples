@@ -15,7 +15,7 @@
 
 @Component
 export struct TitleBar {
-  @State webTitle: string = ''
+  @Link webTitle: string
 
   build() {
     Column() {
