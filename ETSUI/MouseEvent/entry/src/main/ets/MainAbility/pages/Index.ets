@@ -15,10 +15,10 @@
 
 import router from '@system.router';
 import HiLog from '../common/HiLog'
-import { TitleBar } from '../common/titleBar'
-import { initialize } from '../model/initialize'
-import { GameOverDialog } from '../common/Dialog';
-import { WinningGameDialog } from '../common/WinDialog';
+import { TitleBar } from '../common/TitleBar'
+import { initialize } from '../model/Initialize'
+import { GameOverDialog } from '../common/GameOverDialog';
+import { WinningGameDialog } from '../common/WinningGameDialog';
 
 const TAG = '[Index]'
 const PRESS = 1
