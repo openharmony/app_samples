@@ -13,3 +13,4 @@
 注意：页面路由需要在页面渲染完成之后才能调用，在onInit和onReady生命周期中页面还处于渲染阶段，禁止调用页面路由方法。
 
 本示例仅支持在标准系统上运行。
+本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
