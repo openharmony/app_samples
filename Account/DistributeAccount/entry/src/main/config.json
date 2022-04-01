@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.etsdistributeaccount",
     "vendor": "samples",
+    "bundleName": "ohos.samples.etsdistributeaccount",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,19 +9,11 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.etsdistributeaccount",
-    "name": ".MyApplication",
     "mainAbility": ".MainAbility",
-    "srcPath": "",
     "deviceType": [
-      "phone"
+      "phone",
+      "tablet"
     ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
     "abilities": [
       {
         "skills": [
@@ -47,6 +39,15 @@
         "launchType": "standard"
       }
     ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.entry",
+    "srcPath": "",
+    "name": ".entry",
     "js": [
       {
         "mode": {
@@ -54,8 +55,8 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/index",
-          "pages/userInterface"
+          "pages/Index",
+          "pages/UserInterface"
         ],
         "name": ".MainAbility",
         "window": {

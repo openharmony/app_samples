@@ -18,23 +18,21 @@ import router from '@system.router';
 import HiLog from '../model/HiLogUtil'
 import account_distributedAccount from '@ohos.account.distributedAccount'
 
-const TAG: string = '[Record.UserInterface]'
+const TAG: string = '[Account.UserInterface]'
 
 @Entry
 @Component
 struct UserInterface {
-  @State userName: string = router.getParams().userName
-  @State userPwd: string = router.getParams().userPwd
-  @State active: boolean = false
+  @State userName: string = <string> router.getParams().userName
+  @State password: string = <string> router.getParams().password
   @State btnText: Resource[] = [$r('app.string.exit_login'), $r('app.string.written_off')]
 
   async onBtnClick(item: Resource) {
-    HiLog.info(TAG, `this.user.name = ${this.userName}`)
-    HiLog.info(TAG, `this.user.pwd = ${this.userPwd}`)
+    prompt.showToast({ message: `name:${this.userName} ,pwd:${this.password} `, duration: 2000 })
     const accountAbility = account_distributedAccount.getDistributedAccountAbility()
     let accountInfo
     if (item === this.btnText[0]) {
-      accountInfo = { id: this.userPwd, name: this.userName, event: 'Ohos.account.event.LOGOUT' }
+      accountInfo = { id: this.password, name: this.userName.toString(), event: 'Ohos.account.event.LOGOUT' }
       accountAbility.updateOsAccountDistributedInfo(accountInfo, (err) => {
         if (err) {
           HiLog.info(TAG, `exit failed！`)
@@ -47,7 +45,7 @@ struct UserInterface {
         }
       })
     } else {
-      accountInfo = { id: this.userPwd, name: this.userName, event: 'Ohos.account.event.LOGOFF' }
+      accountInfo = { id: this.password, name: this.userName.toString(), event: 'Ohos.account.event.LOGOFF' }
       accountAbility.updateOsAccountDistributedInfo(accountInfo, (err) => {
         if (err) {
           HiLog.info(TAG, `writtenOff failed！`)

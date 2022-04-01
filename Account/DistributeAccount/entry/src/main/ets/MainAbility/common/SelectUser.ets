@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { User } from '../model/user.ets'
+import { User } from '../model/User'
 
 @Component
 export struct SelectUser {

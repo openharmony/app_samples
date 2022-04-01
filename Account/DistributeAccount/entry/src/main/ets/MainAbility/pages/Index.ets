@@ -16,39 +16,43 @@
 import prompt from '@ohos.prompt'
 import router from '@system.router';
 import HiLog from '../model/HiLogUtil'
-import { User } from '../model/user.ets'
-import { SelectUser } from '../common/selectUser.ets'
+import { User } from '../model/User'
+import { SelectUser } from '../common/SelectUser'
 import account_distributedAccount from '@ohos.account.distributedAccount'
 
-const TAG: string = '[Record.Index]'
+const TAG: string = '[Account.Index]'
 
 @Entry
 @Component
 struct Index {
-  @State user: User = { userName: '', password: '' }
+  @State user: User = new User('', '')
   @State active: boolean = false
 
-  async onLoginClick(){
+  async onLoginClick() {
     HiLog.info(TAG, `this.user = ${JSON.stringify(this.user)}`)
     HiLog.info(TAG, `this.user.name = ${this.user.userName}`)
     HiLog.info(TAG, `this.user.pwd = ${this.user.password}`)
+    prompt.showToast({ message: 'userName' + this.user.userName + ',password:' + this.user.password, duration: 2000 })
     const accountAbility = account_distributedAccount.getDistributedAccountAbility()
     let accountInfo = { id: this.user.password, name: this.user.userName, event: 'Ohos.account.event.LOGIN' }
     accountAbility.updateOsAccountDistributedInfo(accountInfo, (err) => {
       if (err) {
         HiLog.info(TAG, `login failed！`)
-        prompt.showToast({ message: `${accountInfo.name} 登录失败 `, duration: 2000 })
+        HiLog.info(TAG, `err = ${JSON.stringify(err)}`)
+        prompt.showToast({ message: `${accountInfo.name} 登录失败 err = ${JSON.stringify(err)}`, duration: 2000 })
       } else {
         HiLog.info(TAG, `login success`)
         HiLog.info(TAG, `login: data_id = ${accountInfo.id} \n data_name = ${accountInfo.name}, err: ${JSON.stringify(err)}`)
-        prompt.showToast({ message: `${accountInfo.name} 登录成功 `, duration: 500 })
-        console.log(TAG + 'user=' + JSON.stringify(this.user))
+        prompt.showToast({ message: `${accountInfo.name} 登录成功`, duration: 2000 })
+        HiLog.info(TAG, `aboutToAppear1111 this.user.name = ${JSON.stringify(this.user)}`)
         setTimeout(() => {
           router.push({
-            params: { userName: this.user.userName, userPwd: this.user.password },
-            uri: 'pages/userInterface'
+            uri: 'pages/userInterface',
+            params: {
+              userName: this.user.userName, password: this.user.password
+            }
           })
-        }, 1500)
+        }, 2000)
       }
     })
   }
