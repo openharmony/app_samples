@@ -16,8 +16,6 @@
 import router from '@system.router';
 import Logger from '../../model/Logger';
 
-const TAG: string = '[MainAbility]'
-
 async function routePage() {
   let options = {
     uri: 'pages/second'
@@ -25,7 +23,7 @@ async function routePage() {
   try {
     await router.push(options)
   } catch (err) {
-    Logger.error(TAG, `fail callback, code: ${err.code}, msg: ${err.msg}`)
+    Logger.error(`fail callback, code: ${err.code}, msg: ${err.msg}`)
   }
 }
 

@@ -15,7 +15,7 @@
     "uiSyntax": "ets",
     "abilities": [
       {
-        "name": "MainAbility",
+        "name": "ohos.samples.FormApplication.MainAbility",
         "srcEntrance": "./ets/MainAbility/MainAbility.ts",
         "description": "$string:MainAbility_desc",
         "icon": "$media:icon",

@@ -24,7 +24,6 @@ const DATA_STORAGE_PATH = "/data/storage/el2/base/haps/form_store";
 const FORM_PARAM_IDENTITY_KEY = "ohos.extra.param.key.form_identity";
 const FORM_PARAM_NAME_KEY = "ohos.extra.param.key.form_name";
 const FORM_PARAM_TEMPORARY_KEY = "ohos.extra.param.key.form_temporary";
-const TAG: string = "[FormExtension]";
 
 function getTemperature(formId: string, count: number) {
     const DECIMAL: number = 10;
@@ -62,10 +61,10 @@ async function storeFormInfo(formId: string, formName: string, tempFlag: boolean
         const storage = await dataStorage.getStorage(DATA_STORAGE_PATH);
         // put form info
         await storage.put(formId, JSON.stringify(formInfo));
-        Logger.log(TAG, `storeFormInfo, put form info successfully, formId: ${formId}`);
+        Logger.log(`storeFormInfo, put form info successfully, formId: ${formId}`);
         await storage.flush();
     } catch (err) {
-        Logger.error(TAG, `failed to storeFormInfo, err: ${JSON.stringify(err)}`);
+        Logger.error(`failed to storeFormInfo, err: ${JSON.stringify(err)}`);
     }
 }
 
@@ -79,20 +78,20 @@ async function updateTempFormInfo(formId: string) {
         const storage = await dataStorage.getStorage(DATA_STORAGE_PATH);
         // get form info
         const data = await storage.get(formId, JSON.stringify(formInfoDefault));
-        Logger.log(TAG, `updateTempFormInfo, get form info successfully, formId: ${formId}`);
+        Logger.log(`updateTempFormInfo, get form info successfully, formId: ${formId}`);
         const formInfo = JSON.parse(data.toString());
         if (!formInfo.tempFlag) {
-            Logger.log(TAG, `updateTempFormInfo, formId: ${formId} is not temporary.`);
+            Logger.log(`updateTempFormInfo, formId: ${formId} is not temporary.`);
             return;
         }
 
         formInfo.tempFlag = false;
         // update form info
         await storage.put(formId, JSON.stringify(formInfo));
-        Logger.log(TAG, `updateTempFormInfo, update form info successfully, formId: ${formId}`);
+        Logger.log(`updateTempFormInfo, update form info successfully, formId: ${formId}`);
         await storage.flush();
     } catch (err) {
-        Logger.error(TAG, `failed to updateTempFormInfo, err: ${JSON.stringify(err)}`);
+        Logger.error(`failed to updateTempFormInfo, err: ${JSON.stringify(err)}`);
     }
 }
 
@@ -106,7 +105,7 @@ async function updateForm(formId: string) {
         const storage = await dataStorage.getStorage(DATA_STORAGE_PATH);
         // get form info
         const data = await storage.get(formId, JSON.stringify(formInfoDefault));
-        Logger.log(TAG, `updateForm, get form info successfully, formId: ${formId}`);
+        Logger.log(`updateForm, get form info successfully, formId: ${formId}`);
         const formInfo = JSON.parse(data.toString());
         formInfo.updateCount = formInfo.updateCount + 1;
 
@@ -116,15 +115,15 @@ async function updateForm(formId: string) {
         };
         let formData = formBindingData.createFormBindingData(obj);
         formProvider.updateForm(formId, formData).catch((err) => {
-            Logger.error(TAG, `updateForm, err: ${JSON.stringify(err)}`);
+            Logger.error(`updateForm, err: ${JSON.stringify(err)}`);
         });
 
         // update form info
         await storage.put(formId, JSON.stringify(formInfo));
-        Logger.log(TAG, `updateForm, update form info successfully, formId: ${formId}`);
+        Logger.log(`updateForm, update form info successfully, formId: ${formId}`);
         await storage.flush();
     } catch (err) {
-        Logger.error(TAG, `failed to updateForm, err: ${JSON.stringify(err)}`);
+        Logger.error(`failed to updateForm, err: ${JSON.stringify(err)}`);
     }
 }
 
@@ -133,16 +132,16 @@ async function deleteFormInfo(formId: string) {
         const storage = await dataStorage.getStorage(DATA_STORAGE_PATH);
         // del form info
         await storage.delete(formId);
-        Logger.log(TAG, `deleteFormInfo, del form info successfully, formId: ${formId}`);
+        Logger.log(`deleteFormInfo, del form info successfully, formId: ${formId}`);
         await storage.flush();
     } catch (err) {
-        Logger.error(TAG, `failed to deleteFormInfo, err: ${JSON.stringify(err)}`);
+        Logger.error(`failed to deleteFormInfo, err: ${JSON.stringify(err)}`);
     }
 }
 
 export default class FormAbility extends FormExtension {
     onCreate(want) {
-        Logger.log(TAG, `FormAbility onCreate, want: ${JSON.stringify(want)}`);
+        Logger.log(`FormAbility onCreate, want: ${JSON.stringify(want)}`);
 
         // get form info
         let formId = want.parameters[FORM_PARAM_IDENTITY_KEY];
@@ -159,30 +158,30 @@ export default class FormAbility extends FormExtension {
     }
 
     onCastToNormal(formId) {
-        Logger.log(TAG, `FormAbility onCastToNormal, formId: ${formId}`);
+        Logger.log(`FormAbility onCastToNormal, formId: ${formId}`);
         updateTempFormInfo(formId);
     }
 
     onUpdate(formId) {
-        Logger.log(TAG, `FormAbility onUpdate, formId: ${formId}`);
+        Logger.log(`FormAbility onUpdate, formId: ${formId}`);
         updateForm(formId);
     }
 
     onVisibilityChange(newStatus) {
-        Logger.log(TAG, `FormAbility onVisibilityChange`);
+        Logger.log(`FormAbility onVisibilityChange`);
     }
 
     onEvent(formId, message) {
-        Logger.log(TAG, `FormAbility onEvent`);
+        Logger.log(`FormAbility onEvent, formId = ${formId}, message: ${JSON.stringify(message)}`);
     }
 
     onDestroy(formId) {
-        Logger.log(TAG, `FormAbility onDestroy, formId = ${formId}`);
+        Logger.log(`FormAbility onDestroy, formId = ${formId}`);
         deleteFormInfo(formId);
     }
 
     onAcquireFormState(want) {
-        Logger.log(TAG, `FormAbility onAcquireFormState`);
+        Logger.log(`FormAbility onAcquireFormState`);
         return formInfo.FormState.READY;
     }
 };

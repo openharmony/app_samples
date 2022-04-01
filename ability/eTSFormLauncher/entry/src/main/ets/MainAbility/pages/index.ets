@@ -16,8 +16,6 @@
 import formHost from '@ohos.application.formHost';
 import Logger from '../../model/Logger';
 
-const TAG: string = '[FormComponent]'
-
 @Entry
 @Component
 struct Index {
@@ -49,12 +47,12 @@ struct Index {
             .allowUpdate(true)
             .visibility(Visibility.Visible)
             .onAcquired((form) => {
-              Logger.info(TAG, `form info: ${JSON.stringify(form)}`);
+              Logger.info(`form info: ${JSON.stringify(form)}`);
               // save form id
               this.formId = form.id;
             })
             .onError((err) => {
-              Logger.error(TAG, `failed to add form, err: ${JSON.stringify(err)}`);
+              Logger.error(`failed to add form, err: ${JSON.stringify(err)}`);
             })
             .size({ width: 360, height: 180 })
         }
@@ -73,7 +71,7 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.castTempForm(this.formId.toString()).then(() => {
-            Logger.log(TAG, `castTempForm successfully, formId: ${this.formId.toString()}`);
+            Logger.log(`castTempForm successfully, formId: ${this.formId.toString()}`);
           });
         })
 
@@ -91,7 +89,7 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.requestForm(this.formId.toString()).then(() => {
-            Logger.log(TAG, `updateForm successfully, formId: ${this.formId.toString()}`);
+            Logger.log(`updateForm successfully, formId: ${this.formId.toString()}`);
           });
         })
 
@@ -109,7 +107,7 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.deleteForm(this.formId.toString()).then(() => {
-            Logger.log(TAG, `deleteForm successfully, formId: ${this.formId.toString()}`);
+            Logger.log(`deleteForm successfully, formId: ${this.formId.toString()}`);
             this.isShow = false;
           });
         })

@@ -4,8 +4,8 @@
             <image src="/common/widget.png" class="bg-img"></image>
         </div>
         <div class="container-inner">
-            <text class="title">{{ $t('strings.temperature') }}{{temperature}} ℃</text>
-            <text class="detail_text" onclick="routerEvent">{{ $t('strings.time') }} {{time}}</text>
+            <text class="title" onclick="routerEvent">{{ $t('strings.temperature') }}{{temperature}} ℃</text>
+            <text class="detail_text" onclick="messageEvent">{{ $t('strings.time') }} {{time}}</text>
         </div>
     </stack>
 </div>

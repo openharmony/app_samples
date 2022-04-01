@@ -16,37 +16,35 @@
 import Ability from '@ohos.application.Ability'
 import Logger from '../model/Logger';
 
-const TAG: string = '[MainAbility]'
-
 export default class MainAbility extends Ability {
     onCreate(want, launchParam) {
-        Logger.log(TAG, "[Demo] MainAbility onCreate")
+        Logger.log("[Demo] MainAbility onCreate")
         globalThis.abilityWant = want;
     }
 
     onDestroy() {
-        Logger.log(TAG, "[Demo] MainAbility onDestroy")
+        Logger.log("[Demo] MainAbility onDestroy")
     }
 
     onWindowStageCreate(windowStage) {
         // Main window is created, set main page for this ability
-        Logger.log(TAG, "[Demo] MainAbility onWindowStageCreate")
+        Logger.log("[Demo] MainAbility onWindowStageCreate")
 
         windowStage.setUIContent(this.context, "pages/index", null)
     }
 
     onWindowStageDestroy() {
         // Main window is destroyed, release UI related resources
-        Logger.log(TAG, "[Demo] MainAbility onWindowStageDestroy")
+        Logger.log("[Demo] MainAbility onWindowStageDestroy")
     }
 
     onForeground() {
         // Ability has brought to foreground
-        Logger.log(TAG, "[Demo] MainAbility onForeground")
+        Logger.log("[Demo] MainAbility onForeground")
     }
 
     onBackground() {
         // Ability has back to background
-        Logger.log(TAG, "[Demo] MainAbility onBackground")
+        Logger.log("[Demo] MainAbility onBackground")
     }
 };
