@@ -1,7 +1,7 @@
 {
   "app": {
+    "vendor": "samples",
     "bundleName": "ohos.samples.etsutilbase64codec",
-    "vendor": "example",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,19 +9,10 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.etsutilbase64codec",
-    "name": ".MyApplication",
     "mainAbility": ".MainAbility",
-    "srcPath": "",
     "deviceType": [
       "phone"
     ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
     "abilities": [
       {
         "skills": [
@@ -40,13 +31,22 @@
         "name": ".MainAbility",
         "srcLanguage": "ets",
         "icon": "$media:icon",
-        "description": "$string:description_mainability",
+        "description": "$string:MainAbility_desc",
         "formsEnabled": false,
-        "label": "$string:entry_MainAbility",
+        "label": "$string:MainAbility_label",
         "type": "page",
         "launchType": "standard"
       }
     ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.etsutilbase64codec",
+    "srcPath": "",
+    "name": ".entry",
     "js": [
       {
         "mode": {
@@ -54,7 +54,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/index"
+          "pages/Index"
         ],
         "name": ".MainAbility",
         "window": {

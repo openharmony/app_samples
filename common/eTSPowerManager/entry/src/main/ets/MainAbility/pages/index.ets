@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import power from '@ohos.power';
+import power from '@ohos.power'
 
 @Entry
 @Component
@@ -22,7 +22,7 @@ struct Index {
   private num: number = 0
   private buttonText: Resource[] = [$r('app.string.turnOff'), $r('app.string.restart'), $r('app.string.checkState')]
 
-  dialog(title:Resource, message:Resource) {
+  dialog(title: Resource, message: Resource) {
     AlertDialog.show(
       {
         title: title,
@@ -39,7 +39,7 @@ struct Index {
             console.info(`Callback when the second button is clicked`)
             if (title === $r('app.string.turnOff')) {
               this.window = 'Is power off'
-              power.shutdownDevice('shutdown_test');
+              power.shutdownDevice('shutdown_test')
               console.info(`power_shutdown_device_test success`)
             } else {
               this.window = 'Is to restart'
@@ -69,7 +69,7 @@ struct Index {
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Start }) {
       Row() {
-        Text($r('app.string.entry_MainAbility'))
+        Text($r('app.string.MainAbility_label'))
           .fontColor(Color.White)
           .fontSize(20)
       }

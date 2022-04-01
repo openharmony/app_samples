@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 
-import { ReleaseData, dataInit, addStorage, getDataFromStorage, getStorageList } from '../model/releaseData.ets'
-import { TopView } from '../common/topView.ets'
-import { NumberList } from '../common/numberList.ets'
-import { TabContentView } from '../common/tabContent.ets'
+import { ReleaseData, dataInit, addStorage, getDataFromStorage, getStorageList } from '../model/releaseData'
+import { TopView } from '../common/topView'
+import { NumberList } from '../common/numberList'
+import { TabContentView } from '../common/tabContent'
 
 @Entry
 @Component

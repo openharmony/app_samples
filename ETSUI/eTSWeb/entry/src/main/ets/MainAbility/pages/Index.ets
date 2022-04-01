@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import { TitleBar } from '../common/TitleBar.ets'
+import { TitleBar } from '../common/TitleBar'
 import { WebError, HttpError } from '../model/Error'
 import { HomePage } from '../common/HomePage'
 import { SearchBar } from '../common/SearchWeb'
 import { WebData, initWebData } from '../model/WebData'
-import { BottomBar } from '../common/BottomBar.ets'
+import { BottomBar } from '../common/BottomBar'
 import { WebComponent } from '../common/WebComponent'
 import { BrowseHistory } from '../common/BrowseHistory'
 
@@ -32,7 +32,7 @@ import { BrowseHistory } from '../common/BrowseHistory'
 @Entry
 @Component
 struct Index {
-//  private controller: WebController = new WebController()
+  private controller: WebController = new WebController()
   @State url: string = ''
   @State browses: string[] = []
   @State webTitle: string = '主页'
@@ -55,7 +55,7 @@ struct Index {
 
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Start }) {
-      TitleBar({ webTitle: this.webTitle })
+      TitleBar({ webTitle: $webTitle })
       SearchBar({
         url: $url,
         webState: $webState,

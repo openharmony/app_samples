@@ -1,16 +1,16 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
-      "value": "entry_MainAbility"
+      "name": "MainAbility_label",
+      "value": "Drag Function"
     },
     {
-      "name": "description_mainability",
-      "value": "eTS_Empty Ability"
+      "name": "entry_desc",
+      "value": "description"
     },
     {
-      "name": "mouseDrag",
-      "value": "Mouse Drag"
+      "name": "MainAbility_desc",
+      "value": "description"
     },
     {
       "name": "addCate",

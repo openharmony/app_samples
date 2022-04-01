@@ -1,12 +1,16 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
-      "value": "entry_MainAbility"
+      "name": "MainAbility_label",
+      "value": "Base64编解码"
     },
     {
-      "name": "description_mainability",
-      "value": "eTS_Empty Ability"
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
     },
     {
       "name": "change_str",
