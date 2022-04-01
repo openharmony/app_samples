@@ -15,13 +15,11 @@
 
 import Logger from '../model/Logger';
 
-const TAG: string = '[MainAbility]'
-
 export default {
   onCreate() {
-    Logger.info(TAG, 'Application onCreate')
+    Logger.info('Application onCreate')
   },
   onDestroy() {
-    Logger.info(TAG, 'Application onDestroy')
+    Logger.info('Application onDestroy')
   },
 }

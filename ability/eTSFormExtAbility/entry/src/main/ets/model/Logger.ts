@@ -13,22 +13,23 @@
  * limitations under the License.
  */
 
-const TAG: string = '[eTSFormExtAbility]'
-
-export default class Logger {
-    public static log(tag, log) {
-        console.log(`${TAG}.${tag}: ${log}`);
+class Logger {
+    constructor(private prefix: string) {}
+    public log(...args: any[]) {
+        console.log(`[${this.prefix}]: ${args.join('')}`)
     }
-
-    public static info(tag, info) {
-        console.info(`${TAG}.${tag}: ${info}`);
+    public info(...args: any[]) {
+        console.info(`[${this.prefix}]: ${args.join('')}`)
     }
-
-    public static debug(tag, debug) {
-        console.debug(`${TAG}.${tag}: ${debug}`);
+    public debug(...args: any[]) {
+        console.debug(`[${this.prefix}]: ${args.join('')}`)
     }
-
-    public static error(tag, error) {
-        console.error(`${TAG}.${tag}: ${error}`);
+    public warn(...args: any[]) {
+        console.warn(`[${this.prefix}]: ${args.join('')}`)
+    }
+    public error(...args: any[]) {
+        console.error(`[${this.prefix}]: ${args.join('')}`)
     }
 }
+
+export default new Logger('eTSFormExtAbility')
