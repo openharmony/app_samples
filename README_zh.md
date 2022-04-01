@@ -12,20 +12,20 @@
 
 ## 目录<a name="sectionMenu"></a>
 - Basic
-  - [`eTSContainer:`语言基础类库---线性容器ArrayList（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSContainer)
+  - [`Container:`语言基础类库---线性容器ArrayList（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/Container)
   - [`eTSScreenshot:`基础功能-屏幕截图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Basic/eTSScreenshot)
 - Account
-  - [`eTSAppAccountManager:`账号管理-应用账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSAppAccountManager)
+  - [`AppAccountManager:`账号管理-应用账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/AppAccountManager)
   - [`eTSDistributeAccount:`账号管理-分布式账号管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Account/eTSDistributeAccount)
 - Communication
-  - [`eTSRPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSRPC)
-  - [`eTSWlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/eTSWlan) 
+  - [`RPC:`通信与连接-RPC连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/RPC)
+  - [`Wlan:`WLAN（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Communication/Wlan) 
 - ability
   - [`DMS:`分布式Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/DMS)
   - [`EtsCommonEvent:`订阅公共事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/EtsCommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/ability/JsDistributedMusicPlayer)
   - [`eTSDataAbility:`DataAbility的创建与访问（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSDataAbility)
-  - [`eTSServiceAbility:`ServiceAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSServiceAbility)
+  - [`ServiceAbility:`ServiceAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/ServiceAbility)
   - [`eTSStageCallAbility:`StageAbility的创建与使用（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ability/eTSStageCallAbility)
 - common
   - [`AirQuality:`空气质量（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/AirQuality)
@@ -37,28 +37,27 @@
   - [`eTSRunninglock:`运行锁（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSRunninglock)
   - [`Flashlight:`手电筒（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）](https://gitee.com/openharmony/app_samples/tree/master/common/JsHelloWorld)
-  - [`eTSPowerManager:`系统电源管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/eTSPowerManager)
+  - [`PowerManager:`系统电源管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/common/PowerManager)
 - data
-  - [`eTSFileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSFileIo)
-  - [`eTSKvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSKvStore)
+  - [`KvStore:`分布式数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/Kvstore)
   - [`eTSLiteStorage:`轻量级存储（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSLiteStorage)
-  - [`eTSRdb:`关系型数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSRdb)
-  - [`eTSDDMQuery:`结果集与谓词（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/eTSDDMQuery)
+  - [`Rdb:`关系型数据库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/Rdb)
+  - [`DDMQuery:`结果集与谓词（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/DDMQuery)
 - device
-  - [`eTSDeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSDeviceManager)
-  - [`eTSSenSor:`传感器（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/eTSSenSor)
+  - [`DeviceManager:`设备管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/DeviceManager)
+  - [`SenSor:`传感器（eTS）](https://gitee.com/openharmony/app_samples/tree/master/device/SenSor)
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）](https://gitee.com/openharmony/app_samples/tree/master/media/JsVideo)
-  - [`eTSRecorder:`录音机（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/eTSRecorder)
-  - [`eTSMultiMedia:`相机和媒体库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/eTSMultiMedia)
+  - [`Recorder:`录音机（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/Recorder)
+  - [`MultiMedia:`相机和媒体库（eTS）](https://gitee.com/openharmony/app_samples/tree/master/media/MultiMedia)
 - DFX
   - [`JsDotTest:`测试打点（JS）](https://gitee.com/openharmony/app_samples/tree/master/DFX/JsDotTest)
 - Telephony
-  - [`eTSCall:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSCall)
-  - [`eTSMessage:`电话服务-短信服务（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSMessage)
-  - [`eTSRadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSRadioTech)
-  - [`eTSSimManager:`电话服务-SIM卡管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/eTSSimManager)
+  - [`Call:`电话服务-拨打电话（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/Call)
+  - [`Message:`电话服务-短信服务（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/Message)
+  - [`RadioTech:`电话服务-网络搜索（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/RadioTech)
+  - [`SimManager:`电话服务-SIM卡管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Telephony/SimManager)
 - thread
   - [`JsWorker:`启动一个worker（JS）](https://gitee.com/openharmony/app_samples/tree/master/thread/JsWorker)
 - CompleteApps
@@ -66,21 +65,23 @@
   - [`AstronautsGame:`太空人避障游戏（C++）](https://gitee.com/openharmony/app_samples/tree/master/CompleteApps/AstronautsGame)
 - ETSUI
   - [`eTSCanvas:`画布组件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSCanvas)
-  - [`eTSCustomComponent:`组件化（eTS）](ETSUI/eTSCustomComponent)
+  - [`CustomComponent:`组件化（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/CustomComponent)
   - [`EtsProcess:`进程信息（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/EtsProcess)
   - [`eTSBuildCommonView:`创建简单视图（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSBuildCommonView)
   - [`eTSDefiningPageLayoutAndConnection:`页面布局和连接（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSDefiningPageLayoutAndConnection)
-  - [`eTSDrag:`ArkUI-拖拽事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSDrag)
+  - [`Drag:`ArkUI-拖拽事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Drag)
   - [`eTSComponent:`Ets组件测试Demo（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSComponent)
   - [`eTSLottie:`Lottie功能展示（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSLottie) 
-  - [`eTSArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSArkUIAnimation)
-  - [`eTSMediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSMediaQuery)
+  - [`ArkUIAnimation:`Ets动画（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/ArkUIAnimation)
+  - [`MediaQuery:`Ets媒体查询（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/MediaQuery)
   - [`eTSXComponent:`ArkUI-XComponent（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/eTSXComponent)
+  - [`Web:`ArkUI-Web（eTS）](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Web)
 - FileManager
-  - [`eTSEnvironment:`目录环境（eTS）](https://gitee.com/openharmony/app_samples/tree/master/FileManager/eTSEnvironment)
+  - [`Environment:`目录环境（eTS）](https://gitee.com/openharmony/app_samples/tree/master/FileManager/Environment)
+  - [`FileIo:`文件管理（eTS）](https://gitee.com/openharmony/app_samples/tree/master/data/FileIo)
 - Notification
-  - [`eTSEmitter:`处理进程内事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/eTSEmitter)
-  - [`eTSAlarmClock:`后台代理提醒（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/eTSAlarmClock)
+  - [`Emitter:`处理进程内事件（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/Emitter)
+  - [`AlarmClock:`后台代理提醒（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Notification/AlarmClock)
 - UI
   - [`AtomicLayout:`原子布局（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/Badge)
@@ -119,11 +120,11 @@
   - [`JsComponents:`Js组件（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsComponents)
   - [`JsUserRegistration:`用户注册（JS）](https://gitee.com/openharmony/app_samples/tree/master/UI/JsUserRegistration)
 - Util
-  - [`eTSUtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilBase64Codec)
-  - [`eTSUtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilScope)
+  - [`UtilBase64Codec:`Base64编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/UtilBase64Codec)
+  - [`UtilScope:`范围判断（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/UtilScope)
   - [`eTSUtilStringCodec:`字符串编解码（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilStringCodec)
-  - [`eTSUtilLruBuffer:`缓冲区（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilLruBuffer)
-  - [`eTSUtilRationalNumber:`有理数（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilRationalNumber)
+  - [`UtilLruBuffer:`缓冲区（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/UtilLruBuffer)
+  - [`UtilRationalNumber:`有理数（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/UtilRationalNumber)
   - [`eTSUtilTypeCheck:`内置对象类型检查（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilTypeCheck)
   - [`eTSUtilUrlString:`URL字符串解析（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSUtilUrlString)
   - [`eTSXmlTextConvert:`xml文本转换（eTS）](https://gitee.com/openharmony/app_samples/tree/master/Util/eTSXmlTextConvert)

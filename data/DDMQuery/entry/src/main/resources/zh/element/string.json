@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "eTSDDMQuery"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTSKvStore Ability"
+    },
+    {
+      "name": "push",
+      "value": "添加数据"
+    },
+    {
+      "name": "resultSet",
+      "value": "查询指定字段结果集"
+    },
+    {
+      "name": "prefixKey",
+      "value": "查询指定值条目"
+    },
+    {
+      "name": "addResult",
+      "value": "与条件查询"
+    },
+    {
+      "name": "orderByDesc",
+      "value": "查询結果降序"
+    },
+    {
+      "name": "lessThan",
+      "value": "查询小于指定值"
+    }
+  ]
+}
