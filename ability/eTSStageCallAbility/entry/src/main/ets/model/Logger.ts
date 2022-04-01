@@ -16,19 +16,23 @@
 const TAG: string = '[CallSample]'
 
 export default class Logger {
-    public static log(tag, log) {
-        console.log(`${TAG}.${tag}: ${log}`);
+    public static log(tag, ...args: any[]) {
+        console.log(`${TAG}.${tag}: ${args.join('')}`)
     }
 
-    public static info(tag, info) {
-        console.info(`${TAG}.${tag}: ${info}`);
+    public static info(tag, ...args: any[]) {
+        console.info(`${TAG}.${tag}: ${args.join('')}`)
     }
 
-    public static debug(tag, debug) {
-        console.debug(`${TAG}.${tag}: ${debug}`);
+    public static debug(tag, ...args: any[]) {
+        console.debug(`${TAG}.${tag}: ${args.join('')}`)
     }
 
-    public static error(tag, error) {
-        console.error(`${TAG}.${tag}: ${error}`);
+    public static warn(tag, ...args: any[]) {
+        console.warn(`${TAG}.${tag}: ${args.join('')}`)
+    }
+
+    public static error(tag, ...args: any[]) {
+        console.error(`${TAG}.${tag}: ${args.join('')}`)
     }
 }
