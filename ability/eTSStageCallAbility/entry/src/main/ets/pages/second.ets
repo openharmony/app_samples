@@ -23,13 +23,13 @@ struct Second {
   @State message: string = 'Second Ability'
   @State receivedMsg: string = ''
 
-  private onMsgChange(eventData) {
+  private onMsgChange = (eventData) => {
     this.receivedMsg = eventData.data.receivedMsg
   }
 
   aboutToAppear() {
     var innerEvent = { eventId: EVENT_ID }
-    emitter.on(innerEvent, this.onMsgChange.bind(this))
+    emitter.on(innerEvent, this.onMsgChange)
   }
 
   build() {
