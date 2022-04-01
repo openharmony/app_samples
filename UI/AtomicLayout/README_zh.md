@@ -20,4 +20,5 @@
 
 -   隐藏能力与占比能力需在非折行的flex布局中使用。
 -   本示例支持在标准系统使用。
+-   本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
 

@@ -15,4 +15,5 @@
 ### 约束与限制<a name="section112mcpsimp"></a>
 
 本示例仅支持标准系统上运行。
+本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
 

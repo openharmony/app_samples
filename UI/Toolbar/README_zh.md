@@ -11,3 +11,4 @@
 ### 约束与限制
 
 本示例仅支持在标准系统上使用。
+本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
