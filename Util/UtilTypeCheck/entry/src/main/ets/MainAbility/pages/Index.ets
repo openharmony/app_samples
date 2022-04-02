@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import { ShowKey } from '../common/showKey.ets'
-import { CheckType } from '../common/checkType.ets'
+import { ShowKey } from '../common/ShowKey'
+import { CheckType } from '../common/CheckType'
 
 let int8Array = new Int8Array(new ArrayBuffer(8))
 let numVal = new Number(55)
-let strVal = new String('sdsddadas')
+let strVal = new String('zhangsan')
 let boolVal = new Boolean(true)
 for (let i = 0; i < int8Array.length; i++) {
   int8Array[i] = i
@@ -28,7 +28,7 @@ for (let i = 0; i < int8Array.length; i++) {
 @Component
 struct Index {
   @State checkResult: string = ''
-  @State presetValue: Array<any> = [numVal, strVal, boolVal, int8Array]
+  @State presetValue: Array<unknown> = [numVal, strVal, boolVal, int8Array]
 
   build() {
     Flex() {

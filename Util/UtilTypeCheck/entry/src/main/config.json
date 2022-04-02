@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "com.samples.etsutiltypecheck",
     "vendor": "samples",
+    "bundleName": "ohos.samples.etsutiltypecheck",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,19 +9,10 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "com.samples.etsutiltypecheck",
-    "name": ".MyApplication",
     "mainAbility": ".MainAbility",
-    "srcPath": "",
     "deviceType": [
       "phone"
     ],
-    "distro": {
-      "deliveryWithInstall": true,
-      "moduleName": "entry",
-      "moduleType": "entry",
-      "installationFree": false
-    },
     "abilities": [
       {
         "skills": [
@@ -47,6 +38,15 @@
         "launchType": "standard"
       }
     ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.etsutiltypecheck",
+    "srcPath": "",
+    "name": ".entry",
     "js": [
       {
         "mode": {
@@ -54,7 +54,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/index"
+          "pages/Index"
         ],
         "name": ".MainAbility",
         "window": {
