@@ -1,14 +1,13 @@
 {
-  // 是否在服务中心露出
-  showInCenter: true,
-  buildOption: {
-    //是否使能方舟编译
-    arkEnable: true,
+  "apiType": 'stageMode',
+  "buildOption": {
   },
-  //模块对应的产物配置
   "targets": [
     {
       "name": "default",
+    },
+    {
+      "name": "ohosTest",
     }
   ]
 }

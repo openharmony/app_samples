@@ -1,21 +1,12 @@
 {
-    "app": {
-        "bundleName": "com.example.kikakeyboard",
-        "vendor": "huawei",
-        "versionCode": 1001010,
-        "versionName": "1.1.10",
-        "debug": false,
-        "icon" : "$media:app_icon",
-        "label" : "$string:app_name",
-        "description" : "$string:description_application",
-        "distributedNotificationEnabled": true, 
-        "keepAlive" : true,
-        "singleton": true,
-		    "minAPIVersion": 8,
-		    "targetAPIVersion": 8,
-        "car": {
-            "apiCompatibleVersion": 8,
-            "singleUser": false
-         }
-    }
+  "app": {
+    "bundleName": "com.example.kikakeyboard",
+    "vendor": "example",
+    "versionCode": 1001010,
+    "versionName": "1.1.10",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name",
+    "description" : "$string:description_application",
+    "distributedNotificationEnabled": true
+  }
 }

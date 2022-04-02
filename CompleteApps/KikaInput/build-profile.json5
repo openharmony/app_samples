@@ -1,25 +1,27 @@
 {
-  app: {
-    signingConfigs: [
-    ],
-    compileSdkVersion: 9,
-    compatibleSdkVersion: 6,
-    products: [
+  "app": {
+    "signingConfigs": [],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
       {
-        name: "default",
+        "name": "default",
+        "signingConfig": "default",
       }
     ]
   },
-  modules: [
+  "modules": [
     {
-      name: "phone",
-      srcPath: "./entry",
-      target: [
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
         {
           "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
         }
       ]
     }
   ]
 }
-
