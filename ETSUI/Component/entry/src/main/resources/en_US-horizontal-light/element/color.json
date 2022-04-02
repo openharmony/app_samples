@@ -1,0 +1,20 @@
+{
+  "color": [
+    {
+      "name": "my_color_aaa",
+      "value": "#FF6347"
+    },
+    {
+      "name": "my_color_bbb",
+      "value": "#FF69B4"
+    },
+    {
+      "name": "button_color",
+      "value": "#D02090"
+    },
+    {
+      "name": "color_emphasize",
+      "value": "#8A2BE2"
+    }
+  ]
+}
