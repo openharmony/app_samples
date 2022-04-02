@@ -10,27 +10,27 @@
     },
     {
       "name": "contact_name",
-      "value": "name："
+      "value": "Name:"
     },
     {
       "name": "contact_age",
-      "value": "age："
+      "value": "Age:"
     },
     {
       "name": "contact_phone",
-      "value": "phone："
+      "value": "Phone:"
     },
     {
       "name": "button_delete",
-      "value": "delete"
+      "value": "Delete"
     },
     {
       "name": "button_confirm",
-      "value": "confirm"
+      "value": "OK"
     },
     {
       "name": "button_cancel",
-      "value": "cancel"
+      "value": "Cancel"
     },
     {
       "name": "contact_information",
@@ -38,15 +38,15 @@
     },
     {
       "name": "input_name",
-      "value": "Input the name"
+      "value": "Enter a name"
     },
     {
       "name": "input_age",
-      "value": "Input the age"
+      "value": "Enter the age"
     },
     {
       "name": "input_phone",
-      "value": "Input the phone"
+      "value": "Enter a phone"
     }
   ]
 }
