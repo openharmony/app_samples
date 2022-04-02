@@ -1,13 +1,11 @@
+// @ts-nocheck
 import {GetHardKeyValue} from './HardKeyUtils.ets'
-import inputMethodEngine from '@ohos.inputMethodEngine'
+import inputMethodEngine from '@ohos.inputmethodengine'
 import display from '@ohos.display'
-import prompt from '@system.prompt';
 import windowManager from '@ohos.window'
 import featureAbility from '@ohos.ability.featureAbility'
 import screen from '@ohos.screen'
 
-let windowWidth: number = 0
-let windowHeight: number = 0
 let InputMethodEngine = inputMethodEngine.getInputMethodEngine();
 let isDebug = false;
 
@@ -42,27 +40,12 @@ export class KeyboardController {
 
     display.getDefaultDisplay().then(dis => {
       this.inputHandle.addLog("initWindow-oncall display");
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 getDefaultDisplay1 wnd : ' + dis);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.id : ' + dis.id);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.name : ' + dis.name);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.alive : ' + dis.alive);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.state : ' + dis.state);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.refreshRate : ' + dis.refreshRate);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.rotation : ' + dis.rotation);
-      //      this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.densityDPI : ' + dis.densityDPI);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.densityPixels : ' + dis.densityPixels);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.scaledDensity : ' + dis.scaledDensity);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.xDPI : ' + dis.xDPI);
-      //            this.inputHandle.addLog('jsunittest getDefaultDisplay1 displayInfo.yDPI : ' + dis.yDPI);
       var dWidth = dis.width;
       var dHeight = dis.height;
       var navigationbar_height = dHeight * 0.07;
       var keyHeightRate = 0.47;
       var keyHeight = dHeight * keyHeightRate;
       this.inputHandle.addLog("initWindow-dWidth = " + dWidth + ";dHeight = " + dHeight + ";keyboard height = " + keyHeight + ";navibar height = " + navigationbar_height);
-
-      windowWidth = dWidth;
-      windowHeight = keyHeight;
 
       this.inputHandle.addLog(typeof (this.mContext))
       this.inputHandle.addLog('initWindow-window = ' + typeof (windowManager))
@@ -94,9 +77,6 @@ export class KeyboardController {
       var keyHeight = dHeight * keyHeightRate;
       this.inputHandle.addLog("resizeWindow-dWidth = " + dWidth + ";dHeight = " + dHeight + ";keyboard height = " + keyHeight + ";navibar height = " + navigationbar_height);
 
-      windowWidth = dWidth;
-      windowHeight = keyHeight;
-
       windowManager.find(this.windowName).then((win) => {
         win.resetSize(dWidth, keyHeight).then(() => {
           win.moveTo(0, dHeight - keyHeight - navigationbar_height).then(() => {
@@ -124,12 +104,12 @@ export class KeyboardController {
         this.onDestroy();
       }
     });
-    InputMethodEngine.on('keyboardShow', (err) => {
+    InputMethodEngine.on('keyboardShow', () => {
       this.inputHandle.addLog('keyboard show');
       this.showWindow()
     });
 
-    InputMethodEngine.on('keyboardHide', (err) => {
+    InputMethodEngine.on('keyboardHide', () => {
       this.inputHandle.addLog('keyboard hide');
       this.hideWindow();
     });

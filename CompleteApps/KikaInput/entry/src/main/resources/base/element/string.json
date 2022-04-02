@@ -1,23 +1,19 @@
 {
   "string": [
     {
-      "name": "extension_ability_name",
+      "name": "entry_desc",
       "value": "kikaInput extension"
     },
     {
-      "name": "extension_ability_descripter1",
-      "value": "1-soft input extension by kika"
+      "name": "extension_ability_descripter",
+      "value": "soft input extension by kika"
     },
     {
-      "name": "extension_ability_descripter2",
-      "value": "2-soft input extension by kika"
+      "name": "MainAbility_desc",
+      "value": "description"
     },
     {
-      "name": "phone_entry_main",
-      "value": "phone_entry_main"
-    },
-    {
-      "name": "entry_label",
+      "name": "MainAbility_label",
       "value": "kikaInput"
     }
   ]

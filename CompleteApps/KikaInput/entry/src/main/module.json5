@@ -1,49 +1,26 @@
 {
   "module": {
-    "name": "phone",
+    "name": "entry",
     "type": "entry",
     "srcEntrance": "./ets/Application/AbilityStage.ts",
-    "description": "$string:extension_ability_descripter1",
+    "description": "$string:entry_desc",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone"
+      "phone",
+      "tablet"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,
-    "uiSyntax": "ets",
     "pages": "$profile:main_pages",
+    "uiSyntax": "ets",
     "requestPermissions": [{"name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"}],
-    "abilities": [
-      {
-        "name": "MainAbility",
-        "srcEntrance": "./ets/MainAbility/MainAbility.ts",
-        "description": "$string:phone_entry_main",
-        "icon": "$media:icon",
-        "label": "$string:entry_label",
-        "visible": true,
-        "orientation": "portrait",
-        "skills": [
-          {
-            "actions": [
-              "action.system.home"
-            ],
-            "entities": [
-              "entity.system.home"
-            ]
-          }
-        ],
-      }
-    ],
     "extensionAbilities": [
       {
         "srcEntrance": "./ets/ServiceExtAbility/ServiceExtAbility.ts",
         "name": "ServiceExtAbility",
-        "icon": "$media:icon",
-        "srcLanguage": "ets",
-        "label": "$string:extension_ability_name",
-        "description": "$string:extension_ability_descripter2",
+        "label": "$string:MainAbility_label",
+        "description": "$string:extension_ability_descripter",
         "type": "service",
-        "visible": true
       }
     ]
   }

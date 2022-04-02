@@ -1,21 +1,17 @@
 {
-  "name": "ohosproject",
+  "name": "kikainput",
   "version": "1.0.0",
-  "description": "ohos project demo",
-  "main": "hvigorfile.js",
   "ohos": {
     "org": "huawei",
     "buildTool": "hvigor",
     "directoryLevel": "project"
   },
-  "scripts": {
-    "buildApp": "hvigor assembleApp -m project"
-  },
+  "description": "example description",
+  "repository": {},
   "license": "ISC",
   "dependencies": {
-    "@ohos/hvigor": "file:offline-dependency/ohos-hvigor-1.0.0.tgz",
-    "@ohos/hvigor-cli": "file:offline-dependency/ohos-hvigor-cli-1.0.0.tgz",
-    "@ohos/hvigor-ohos-plugin": "file:offline-dependency/ohos-hvigor-ohos-plugin-1.0.0.tgz",
-    "@ohos/sdk-common": "file:offline-dependency/ohos-sdk-common-1.0.0.tgz"
+    "hypium": "^1.0.0",
+    "@ohos/hvigor": "1.0.6",
+    "@ohos/hvigor-ohos-plugin": "1.0.6"
   }
 }
