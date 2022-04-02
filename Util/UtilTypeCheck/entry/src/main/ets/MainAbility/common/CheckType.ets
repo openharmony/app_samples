@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -19,11 +19,11 @@ import util from '@ohos.util'
 export struct CheckType {
   @State result: string = ' '
   @Link checkResult: string
-  @Link presetValue: Array<any>
+  @Link presetValue: Array<unknown>
 
   check(value) {
     let utilType = new util.Types()
-    let map = new Map([
+    let utilData = new Map([
       ['ArrayBuffer', utilType.isAnyArrayBuffer(value)],
       ['Int8Array', utilType.isInt8Array(value)],
       ['Number', utilType.isNumberObject(value)],
@@ -35,15 +35,15 @@ export struct CheckType {
       ['AsyncFunction', utilType.isAsyncFunction(value)],
       ['External', utilType.isExternal(value)],
       ['Float32Array', utilType.isFloat32Array(value)],
-      ['Generator', utilType.isGeneratorFunction(value)],
+      ['Generator', utilType.isGeneratorFunction(value)]
     ])
-    for (let [key, value] of map) {
-      if (value == true) {
+    for (let [key, value] of utilData) {
+      if (value === true) {
         this.result = key
         break
       }
     }
-    map = null
+    utilData = null
     return this.result
   }
 
