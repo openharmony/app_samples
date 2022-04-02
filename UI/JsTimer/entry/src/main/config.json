@@ -51,6 +51,11 @@
         ],
         "name": ".default"
       }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.SET_TIME"
+      }
     ]
   }
 }
