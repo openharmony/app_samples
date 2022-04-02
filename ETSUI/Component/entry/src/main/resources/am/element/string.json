@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "ETS_Empty Feature Ability"
+    },
+    {
+      "name": "hello",
+      "value": "Hello"
+    },
+    {
+      "name": "world",
+      "value": "World"
+    },
+    {
+      "name": "add",
+      "value": "አክል"
+    },
+    {
+      "name": "not_set",
+      "value": "አልተዘጋጀም"
+    },
+    {
+      "name": "no_contact_set",
+      "value": "ምንም እውቂያ አልተዘጋጀም"
+    },
+    {
+      "name": "add_contacts",
+      "value": "እውቂያን አክል"
+    },
+    {
+      "name": "in_the_last_day",
+      "value": "ባለፉት 24 ሰዓታት ውስጥ"
+    },
+    {
+      "name": "no_missed_calls",
+      "value": "ያመለጡ ጥሪዎች የሉም"
+    }
+  ]
+}

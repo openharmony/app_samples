@@ -47,3 +47,5 @@ device_manager
 distributedschedule_dms_fwk
 
 distributeddatamgr_datamgr
+### 约束与限制
+本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行
