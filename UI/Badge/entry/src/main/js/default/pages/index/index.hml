@@ -19,11 +19,11 @@
         <div class="content">
             <text class="title" on:click="badgeInvalidation({{ $idx }})">{{ $item.contacts }}</text>
             <text class="text" on:click="badgeInvalidation({{ $idx }})">{{ $item.message }}</text>
-            <badge style="visibility : {{ $item.visibility }}" class="badge" config="{{ badgeConfig }}"
-                   visible="true" count="{{ $item.count }}" maxcount="{{ $item.maxCount }}" placement="left"
-                   on:click="badgeInvalidation({{ $idx }})">
-                <text></text>
-            </badge>
         </div>
+        <badge style="visibility : {{ $item.visibility }}" class="badge" config="{{ badgeConfig }}"
+               visible="true" count="{{ $item.count }}" maxcount="{{ $item.maxCount }}" placement="left"
+               on:click="badgeInvalidation({{ $idx }})">
+            <text></text>
+        </badge>
     </div>
 </div>
