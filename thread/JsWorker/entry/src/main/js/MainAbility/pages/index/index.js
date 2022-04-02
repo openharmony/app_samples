@@ -25,16 +25,16 @@ export default {
     },
     onInit() {
         this.before = this.$t('strings.menus')
-        this.worker.onerror = function (data) {
+        this.worker.onerror = (data) => {
             console.info('[worker.index] on error:' + data)
         }
-        this.worker.onmessageerror = function (data) {
+        this.worker.onmessageerror = (data) => {
             console.info('[worker.index] on messageerror:' + data)
         }
-        this.worker.onexit = function (data) {
+        this.worker.onexit =  (data) => {
             console.info('[worker.index] on exit:' + data)
         }
-        this.worker.onmessage = function (e) {
+        this.worker.onmessage = (e) => {
             let data = e.data
             if (data.type == 'normal') {
                 console.info('[worker.index] normal:' + data.data)
@@ -42,14 +42,14 @@ export default {
             }
         }
     },
-    sendString: function () {
+    sendString: () => {
         let obj = {
             type: "normal", data: this.before.toString()
         }
         console.info('[worker.index] sendString:' + obj.data)
         this.worker.postMessage(obj)
     },
-    clear: function () {
+    clear:  () => {
         this.after = ""
     },
     terminate() {

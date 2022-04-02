@@ -17,12 +17,11 @@ import workers from '@ohos.worker';
 
 const parentPort = workers.parentPort
 
-parentPort.onmessageerror = function (e) {
+parentPort.onmessageerror = (e) => {
     let data = e.data
     console.info('[worker.worker] onmessageerror:' + JSON.stringify(data))
 }
-
-parentPort.onmessage = function (e) {
+parentPort.onmessage = (e) => {
     let data = e.data
     console.info('[worker.worker] onmessage:' + JSON.stringify(data))
     if (data.type == 'normal') {
