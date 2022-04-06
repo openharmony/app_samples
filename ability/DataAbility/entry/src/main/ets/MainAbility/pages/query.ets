@@ -12,12 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import router from '@system.router';
 import dataAbility from '@ohos.data.dataAbility'
-import { BASE_URI, COLUMNS, DA_HELPER } from '../model/daHelperConst'
-import { BookModel, getListFromResultSet } from '../model/bookDataModel'
-import { BookView } from '../component/bookView'
+import { BASE_URI, COLUMNS, DA_HELPER } from '../model/DaHelperConst'
+import { BookModel, getListFromResultSet } from '../model/BookDataModel'
+import { BookView } from '../component/BookView'
 
 const TAG = 'DataAbility.Query'
 
@@ -35,7 +34,9 @@ struct Query {
       this.bookList = getListFromResultSet(resultSet)
     })
   }
-
+  aboutToAppear() {
+    console.info(TAG + ' aboutToAppear')
+  }
   build() {
     Column() {
       Row() {
@@ -65,6 +66,8 @@ struct Query {
             console.info(TAG + ' query str=' + value)
             if (value !== '') {
               this.query(value)
+            }else{
+              this.bookList = []
             }
           })
         Image($r('app.media.search_gray'))

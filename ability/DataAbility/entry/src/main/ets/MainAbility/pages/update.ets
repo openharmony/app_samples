@@ -12,21 +12,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import router from '@system.router';
 import prompt from '@system.prompt';
 import dataAbility from '@ohos.data.dataAbility'
-import { BASE_URI, DA_HELPER } from '../model/daHelperConst'
-import { BookModel } from '../model/bookDataModel'
+import { BASE_URI, DA_HELPER } from '../model/DaHelperConst'
+import { BookModel } from '../model/BookDataModel'
 
 const TAG = 'DataAbility.Update'
 
 @Entry
 @Component
 struct Update {
-  private book: BookModel = router.getParams().book
+  private book: BookModel = <BookModel> router.getParams().book
 
-  updateBook() {
+  aboutToAppear() {
+    console.info(TAG + ' aboutToAppear')
+  }
+
+  updateBook = () => {
     let predicates = new dataAbility.DataAbilityPredicates()
     predicates.equalTo('id', this.book.id)
     let valuesBucket = {
@@ -35,8 +38,7 @@ struct Update {
     }
     DA_HELPER.update(BASE_URI, valuesBucket, predicates, (err, num) => {
       console.info(TAG + ' update book num=' + num)
-      router.replace({
-        uri: 'pages/index' })
+      router.back()
     })
   }
 

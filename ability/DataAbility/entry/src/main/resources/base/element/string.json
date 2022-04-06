@@ -35,6 +35,10 @@
     {
       "name": "search_placeholder",
       "value": "Please input to search"
+    },
+    {
+      "name": "DataAbility1_desc",
+      "value": "hap sample empty provider"
     }
   ]
 }

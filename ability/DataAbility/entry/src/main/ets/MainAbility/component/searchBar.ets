@@ -34,7 +34,7 @@ export struct SearchBar {
     .height(50).width('100%')
     .backgroundColor('#F5F5F5')
     .onClick(() => {
-      router.push({ uri: 'pages/query' })
+      router.push({ uri: 'pages/Query' })
     })
   }
 }

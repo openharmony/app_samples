@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { BookModel } from '../model/bookDataModel'
+import { BookModel } from '../model/BookDataModel'
 
 @Component
 export struct BookView {
