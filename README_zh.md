@@ -21,12 +21,16 @@
   - [`RPC:`通信与连接-RPC连接（eTS）（API8）](Communication/RPC)
   - [`Wlan:`WLAN（eTS）（API8）](Communication/Wlan) 
 - ability
-  - [`DMS:`分布式Demo（eTS）（API7）](master/ability/DMS)
+  - [`DMS:`分布式Demo（eTS）（API7）](ability/DMS)
   - [`CommonEvent:`订阅公共事件（eTS）（API7）](ability/CommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）（API7）](ability/JsDistributedMusicPlayer)
   - [`DataAbility:`DataAbility的创建与访问（eTS）（API8）](ability/DataAbility)
   - [`ServiceAbility:`ServiceAbility的创建与使用（eTS）（API8）](ability/ServiceAbility)
   - [`StageCallAbility:`StageAbility的创建与使用（eTS）（API8）](ability/StageCallAbility)
+  - [`FormAbility:`FA模型卡片（JS）（API8）](ability/FormAbility)
+  - [`FormExtAbility:`Stage模型卡片（eTS JS）（API9）](ability/FormExtAbility)
+  - [`FormLauncher:`卡片使用方（eTS）（API8）](ability/FormLauncher)
+  - [`ServiceExtAbility:`StageAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)  
 - common
   - [`AirQuality:`空气质量（JS）（API7）](common/AirQuality)
   - [`Clock:`时钟（JS）（API7）](common/Clock)
@@ -34,7 +38,7 @@
   - [`ECG:`心率检测（JS）（API7）](common/ECG)
   - [`Notification:`通知（eTS）（API7）](common/Notification)
   - [`ResourceManager:`资源管理器（eTS）（API7）](common/ResourceManager)
-  - [`eTSRunninglock:`运行锁（eTS）（API7）](common/eTSRunninglock)
+  - [`Runninglock:`运行锁（eTS）（API7）](common/Runninglock)
   - [`Flashlight:`手电筒（JS）（API7）](common/Flashlight)
   - [`JsHelloWorld:`你好世界（JS）（API7）](common/JsHelloWorld)
   - [`PowerManager:`系统电源管理（eTS）（API8）](common/PowerManager)
@@ -82,6 +86,7 @@
 - Notification
   - [`Emitter:`处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock:`后台代理提醒（eTS）（API8）](Notification/AlarmClock)
+  - [`Notification:`通知-订阅、发送通知（eTS）（API9）](Notification/Notification)
 - UI
   - [`AtomicLayout:`原子布局（JS）（API7）](UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）（API7）](UI/Badge)
