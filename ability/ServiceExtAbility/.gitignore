@@ -1,7 +1,0 @@
-/node_modules
-/local.properties
-/localdep
-/.idea
-/.deveco
-**/build
-package-lock.json
