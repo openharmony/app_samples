@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
  * Copyright (c) 2021 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,23 +14,28 @@
  * limitations under the License.
  */
 
-import dataAbility from '@ohos.data.dataability'
+import dataAbility from '@ohos.data.dataAbility'
 import dataRdb from '@ohos.data.rdb'
 
 const TABLE_NAME = 'book'
-const STORE_CONFIG = { name: 'book.db', encryptKey: new Uint8Array([]) }
-const SQL_CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, age INTEGER, introduction TEXT NOT NULL)'
-let rdbStore: any = undefined
-const TAG = 'DataAbility.data'
+const STORE_CONFIG = { name: 'book.db' }
+const SQL_CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, introduction TEXT NOT NULL)'
+let rdbStore: dataRdb.RdbStore = undefined
+const TAG = '[DataAbility].data'
 
 export default {
     onInitialized(abilityInfo) {
-        console.info('DataAbility onInitialized,abilityInfo=' + abilityInfo.bundleName)
-        dataRdb.getRdbStore(STORE_CONFIG, 1, (err, store) => {
-            console.info('[data]getRdbStoreThen')
-            store.executeSql(SQL_CREATE_TABLE, [])
-            rdbStore = store
-        });
+        console.info(`${TAG} DataAbility onInitialized`)
+        console.log(`${TAG} create table begin`)
+        dataRdb.getRdbStore(STORE_CONFIG, 1, (err, rdb) => {
+            if(err){
+                console.log(`${TAG} create table err = ${JSON.stringify(err)}`)
+            }
+            console.log(`${TAG} create table done`)
+            rdb.executeSql(SQL_CREATE_TABLE)
+            rdbStore = rdb
+            console.log(`${TAG} create table end`)
+        })
     },
     insert(uri, valueBucket, callback) {
         console.info(TAG + ' insert start')
@@ -40,7 +46,7 @@ export default {
         for (let i = 0;i < valueBuckets.length; i++) {
             console.info(TAG + ' batch insert i=' + i)
             if (i < valueBuckets.length - 1) {
-                rdbStore.insert(TABLE_NAME, valueBuckets[i], (num: number) => {
+                rdbStore.insert(TABLE_NAME, valueBuckets[i], (err: any, num: number) => {
                     console.info(TAG + ' batch insert ret=' + num)
                 })
             } else {

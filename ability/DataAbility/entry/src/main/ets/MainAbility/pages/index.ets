@@ -12,50 +12,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import featureAbility from '@ohos.ability.featureAbility'
 import dataAbility from '@ohos.data.dataAbility'
 import router from '@system.router'
-import { BASE_URI, COLUMNS, DA_HELPER } from '../model/daHelperConst'
-import { BookView } from '../component/bookView'
-import { BookModel, initValuesBuckets, getListFromResultSet } from '../model/bookDataModel'
-import { TitleBar } from '../component/titleBar'
-import { SearchBar } from '../component/searchBar'
-
-const TAG = 'DataAbility.Index'
+import { BASE_URI, COLUMNS, DA_HELPER } from '../model/DaHelperConst'
+import { BookView } from '../component/BookView'
+import { BookModel, initValuesBuckets, getListFromResultSet } from '../model/BookDataModel'
+import { TitleBar } from '../component/TitleBar'
+import { SearchBar } from '../component/SearchBar'
+const TAG = '[DataAbility].Index'
 let self = null
 
 @Entry
 @Component
 struct Index {
+  private daHelper: any = undefined
   @State bookList: Array<BookModel> = []
 
-  aboutToAppear() {
-    console.info(TAG + ' aboutToAppear')
-    self = this
+  onPageShow(){
     this.queryAll()
   }
 
-  queryAll() {
+  queryAll = () => {
+    console.info(TAG + ' queryAll')
     let predicates = new dataAbility.DataAbilityPredicates()
     DA_HELPER.query(BASE_URI, COLUMNS, predicates, (err, resultSet) => {
       this.bookList = getListFromResultSet(resultSet)
     })
   }
 
-  deleteCallback(book) {
+  deleteCallback = (book) =>  {
     let predicates = new dataAbility.DataAbilityPredicates()
     predicates.equalTo('id', book.id)
     DA_HELPER.delete(BASE_URI, predicates, (err, num) => {
       console.info(TAG + ' delete num=' + num)
-      self.bookList.splice(self.bookList.indexOf(book), 1)
+      this.queryAll()
     })
   }
 
-  batchInsertCallback() {
+  batchInsertCallback = () => {
     let valuesBuckets = initValuesBuckets()
     DA_HELPER.batchInsert(BASE_URI, valuesBuckets, (err, num) => {
       console.info(TAG + ' batch insert num=' + num)
-      self.queryAll()
+      this.queryAll()
     })
   }
 
@@ -70,7 +69,7 @@ struct Index {
               BookView({ book: item, deleteCallback: this.deleteCallback })
             }
             .onClick(() => {
-              router.push({ uri: 'pages/update', params: { book: item } })
+              router.push({ uri: 'pages/Update', params: { book: item } })
             })
           }, item => JSON.stringify(item))
         }
@@ -87,6 +86,7 @@ struct Index {
         .backgroundColor('#0D9FFB')
         .margin({ bottom: 150, right: 50 })
         .onClick(() => {
+          console.info(TAG + ' insert onClick')
           let valuesBuckets = { name: 'Book name', introduction: 'Book introduction' }
           DA_HELPER.insert(BASE_URI, valuesBuckets, (err, num) => {
             console.info(TAG + ' insert num=' + num)

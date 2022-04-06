@@ -30,14 +30,13 @@ export struct TitleBar {
           .textAlign(TextAlign.End)
       }
       .type(ButtonType.Normal)
+      .height('100%')
       .backgroundColor('#0D9FFB')
       .onClick(() => {
-        if (this.batchInsertCallback !== null) {
-          this.batchInsertCallback()
-        }
+        this.batchInsertCallback()
       })
     }
-    .height(50).width('100%')
+    .height('8%').width('100%')
     .backgroundColor('#0D9FFB')
     .padding({ left: 15, right: 15 })
   }
