@@ -23,7 +23,7 @@
     <div class="item-container">
         <text class="item-title">{{ $t('Strings.userName') }}</text>
         <div class="item-content">
-            <input class="input-text" placeholder="{{ $t('Strings.userNamePromt') }}" onchange="getName"></input>
+            <input class="input-text" placeholder="{{ $t('Strings.userNamePrompt') }}" onchange="getName"></input>
         </div>
     </div>
 

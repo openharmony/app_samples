@@ -18,6 +18,7 @@ import rpc from '@ohos.rpc'
 let TAG = '[eTSRPC.ReceivedData]'
 
 export class ReceivedData extends rpc.RemoteObject {
+  private resultList: Array<number> = Array.from({length: 4}, ()=> 0)
   private priceList: Map<string, number>  = new Map([
     ['potato', 4],
     ['cabbage', 2],
@@ -44,7 +45,13 @@ export class ReceivedData extends rpc.RemoteObject {
       let readIntArr = data.readStringArray()
       console.log(`${TAG} readIntArr= ${readIntArr}`)
       for (let i = 0; i < 4; i++) {
-        result += this.priceList.get(readIntArr[i]) * Number(readIntArr[i+4])
+        if(readIntArr[i] === '0') {
+          this.resultList[i] = 0
+        } else {
+          this.resultList[i] = this.priceList.get(readIntArr[i]) * Number(readIntArr[i+4])
+        }
+        console.log(`${TAG}, this.resultList= ${this.resultList}`)
+        result += this.resultList[i]
       }
       reply.writeInt(result)
       console.log(`${TAG} result= ${result}`)

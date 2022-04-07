@@ -21,7 +21,11 @@ export class ProcessData {
   getPrice(selectStuffs: Array<any>) {
     for (var i = 0; i < selectStuffs.length; i++) {
       this.priceArr[i] = selectStuffs[i].subcategory
-      this.priceArr[i+selectStuffs.length] = selectStuffs[i].count
+      if (this.priceArr[i] === '') {
+        this.priceArr[i] = '0'
+      }
+      this.priceArr[i+selectStuffs.length] = selectStuffs[i].count.toString()
+      console.log(`${TAG} priceArray[${i+selectStuffs.length}]= ${typeof(this.priceArr[i+selectStuffs.length])}`)
     }
     console.log(`${TAG} priceArray= ${this.priceArr}`)
     return this.priceArr
