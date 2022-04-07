@@ -62,6 +62,12 @@ export default {
             })
             return;
         }
+        if (this.name.length > 20) {
+            prompt.showToast({
+                message: this.$t('Strings.name_long')
+            })
+            return;
+        }
         if (this.date.length == 0) {
             prompt.showToast({
                 message: this.$t('Strings.date_null')

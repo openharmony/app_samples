@@ -25,6 +25,7 @@ const REQUEST_CODE: number = 1
 
 async function sortString(sendData: Array<string>, callback) {
   console.log(`${TAG} sortString is ${sendData}`)
+  console.log(`${TAG} sendData typeof ${typeof(sendData)}`)
   let send = new ReceivedData('send')
   let data = new rpc.MessageParcel()
   let reply = new rpc.MessageParcel()
@@ -70,7 +71,7 @@ struct Index {
 
   selectStuff(index:number, good:string, count:number) {
     console.info(`${TAG} index=  ${index}, count= ${count}, good= ${good}`)
-    this.selectStuffs[index] = { subcategory: good, count: count.toString() }
+    this.selectStuffs[index] = { subcategory: good, count: count }
   }
 
   build() {

@@ -1,10 +1,28 @@
 {
-  "strings": {
-    "hello": "您好",
-    "world": "世界",
-    "page": "第二页",
-    "next": "下一页",
-    "back": "返回"
+  "Strings": {
+    "componentName": "用户注册",
+    "gender": "性别",
+    "male": "男",
+    "female": "女",
+    "userName": "用户名",
+    "userNamePrompt": "用户名长度大于6个且小于20个字符",
+    "date": "出生日期",
+    "education": "学历",
+    "graduated": "高中毕业",
+    "bachelor": "本科",
+    "master": "硕士",
+    "doctor": "博士",
+    "register": "注册",
+
+    "name_null": "用户名为空",
+    "name_short": "用户名长度小于6",
+    "name_long": "用户名长度大于20",
+    "gender_null": "性别为空",
+    "date_null": "出生日期为空",
+    "education_null": "学历为空",
+
+    "back": "返回",
+    "success": "成功"
   },
   "Files": {
   }
