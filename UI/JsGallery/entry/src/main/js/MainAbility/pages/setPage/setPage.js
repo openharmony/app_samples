@@ -18,7 +18,7 @@ import router from "@system.router"
 export default {
     data: {
         col: 8,
-        num: 5000
+        num: 200
     },
     onInit() {
     },

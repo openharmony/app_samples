@@ -18,8 +18,8 @@ export default {
     "shrink": false,
     "numColumns": {
         "orderedByDays": 4,
-        "orderedByMonths": 4,
-        "orderedByYears": 10
+        "orderedByMonths": 8,
+        "orderedByYears": 12
     }
 }
 

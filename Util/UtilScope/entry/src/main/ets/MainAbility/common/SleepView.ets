@@ -14,7 +14,8 @@
  */
 
 import util from '@ohos.util'
-import {Temperature} from '../model/Temperature'
+import prompt from '@ohos.prompt'
+import { Temperature } from '../model/Temperature'
 
 @Component
 export struct SleepView {
@@ -22,23 +23,36 @@ export struct SleepView {
   @State longTime: number= 1
 
   sleepRange() {
+    if (this.longTime <= this.shortTime) {
+      prompt.showToast({ message: '最长睡眠时间小于或等于最短睡眠时间，请重新输入' })
+      return
+    }
     let timeLower = new Temperature(7)
     let timeUpper = new Temperature(10)
     let timeRange = new util.Scope(timeLower, timeUpper)
     let yTimeLower = new Temperature(this.shortTime)
     let yTimeUpper = new Temperature(this.longTime)
     let yTimeRange = new util.Scope(yTimeLower, yTimeUpper)
-    let union = timeRange.expand(yTimeRange)
-    let interSect = timeRange.intersect(yTimeRange)
-    let unionStr = union.toString()
-    let interSectStr = interSect.toString()
+    let message = '睡眠区间和正常的睡眠区间的并集为'
+    try {
+      message += `${timeRange.expand(yTimeRange)}`
+    } catch {
+      message += '空'
+    }
+    message += '睡眠区间和正常的睡眠区间的交集为'
+    try {
+      message += `${timeRange.intersect(yTimeRange)}`
+    } catch {
+      message += '空'
+    }
     AlertDialog.show(
       {
         title: $r('app.string.sleep_analyse'),
-        message: '睡眠区间和正常的睡眠区间的并集为' + unionStr + '睡眠区间和正常的睡眠区间的交集为' + interSectStr,
+        message: message,
         confirm: {
           value: $r('app.string.determine'),
-          action: () => {}
+          action: () => {
+          }
         },
       }
     )

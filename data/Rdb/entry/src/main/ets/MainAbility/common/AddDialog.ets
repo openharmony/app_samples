@@ -40,6 +40,7 @@ export struct AddDialog {
           .type(InputType.Normal)
           .placeholderColor(Color.Gray)
           .fontSize(19)
+          .maxLength(20)
           .margin({ left: 10 })
           .onChange((value: string) => {
             this.editStudent.name = value
