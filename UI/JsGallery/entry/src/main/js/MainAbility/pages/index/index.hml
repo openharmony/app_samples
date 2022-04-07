@@ -19,7 +19,7 @@
             <image class="icon" src="/common/arrow.png" onclick="back"></image>
         </div>
         <div class="operating">
-            <text onclick="redirectSetting">设置</text>
+            <text class="operating-text" onclick="redirectSetting">设置</text>
             <image class="colnum" src="/common/setlayout.png" onclick="setColumn"></image>
         </div>
     </div>

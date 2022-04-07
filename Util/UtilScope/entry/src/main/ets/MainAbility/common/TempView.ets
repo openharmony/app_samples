@@ -19,8 +19,8 @@ import {Temperature} from '../model/Temperature'
 @Component
 export struct TempView {
   @State tempMorning: number= 0
-  @State tempNoon: number= 1
-  @State tempNight: number= 2
+  @State tempNoon: number= 0
+  @State tempNight: number= 0
 
   alertDialog(title, message, value ) {
     AlertDialog.show(
@@ -36,25 +36,17 @@ export struct TempView {
   }
 
   tempRange() {
-    let arr = [this.tempMorning, this.tempNoon, this.tempNight]
-    arr.sort(function (a, b) {
-      return a - b
-    })
-    let max = arr[2]
-    let min = arr[0]
-    let newMax = new Temperature(max)
-    let newMin = new Temperature(min)
-    let range = new util.Scope(newMin, newMax)
-    let lower = range.getLower()
-    let upper = range.getUpper()
+    let arr = [this.tempMorning, this.tempNoon, this.tempNight].sort()
+    let max = new Temperature(arr[2])
+    let min = new Temperature(arr[0])
     let tempLower = new Temperature(36)
     let tempUpper = new Temperature(37.2)
     let standardRange = new util.Scope(tempLower, tempUpper)
-    console.log('[eTSUtilScope.TempView] lower=' + lower + '[eTSUtilScope.TempView] upper=' + upper
+    console.log('[eTSUtilScope.TempView] lower=' + min + '[eTSUtilScope.TempView] upper=' + max
     + '[eTSUtilScope.TempView] standardRange=' + standardRange)
-    if (standardRange.contains(lower) && standardRange.contains(upper)) {
-      this.alertDialog($r('app.string.temperature'), '您今天的最低体温是' + lower + '您今天的最高体温是'
-      + upper + '您的体温在正常范围', $r('app.string.determine'))
+    if (standardRange.contains(min) && standardRange.contains(max)) {
+      this.alertDialog($r('app.string.temperature'), '您今天的最低体温是' + min + '您今天的最高体温是'
+      + max + '您的体温在正常范围', $r('app.string.determine'))
     } else {
       this.alertDialog($r('app.string.temperature'), $r('app.string.temp_message_abnormal'), $r('app.string.determine'))
     }
