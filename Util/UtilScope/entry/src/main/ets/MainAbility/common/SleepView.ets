@@ -20,9 +20,12 @@ import { Temperature } from '../model/Temperature'
 @Component
 export struct SleepView {
   @State shortTime: number= 0
-  @State longTime: number= 1
+  @State longTime: number = 0
 
   sleepRange() {
+    if (this.shortTime === 0 || this.longTime === 0) {
+      prompt.showToast({ message: '请输入最短和最长睡眠时间' })
+    }
     if (this.longTime <= this.shortTime) {
       prompt.showToast({ message: '最长睡眠时间小于或等于最短睡眠时间，请重新输入' })
       return

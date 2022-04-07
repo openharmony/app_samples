@@ -23,7 +23,7 @@
             <image class="colnum" src="/common/setlayout.png" onclick="setColumn"></image>
         </div>
     </div>
-    <list id="imglist" class="list" style="columns: {{columns}};" cachedcount="100" onrequestitem="buildItem"
+    <list id="imglist" class="list" style="columns: {{columns}};" cachedcount="150" onrequestitem="buildItem"
           onscrolltop="scrollTop" onscrollbottom="scrollBottom" ontouchstart="touchStart">
         <list-item type="common" for="{{tempList}}" style="flex-direction: column;">
             <image class="imgs" src="{{$item.SourceFile}}" data="{{$item.SourceFile}}" onclick="redirect"

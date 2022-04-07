@@ -41,11 +41,9 @@ struct Index {
     this.wifiModel.getScanInfos((result) => {
       if (this.isSwitchOn) {
         this.wifiList = result
-        if (result.length === 0) {
-          setTimeout(() => {
-            this.scan()
-          }, 1000)
-        }
+        setTimeout(() => {
+          this.scan()
+        }, 2000)
       }
     })
   }
@@ -68,6 +66,7 @@ struct Index {
         }
         return
       }
+      this.isLinked = true
       this.linkedInfo = linkedInfo
     })
   }
@@ -75,12 +74,7 @@ struct Index {
   addListener() {
     wifi.on('wifiConnectionChange', state => {
       Logger.log(TAG, `wifiConnectionChange: ${state}`)
-      if (state === 1) { // 1: wifi is connected, 0:wifi is disConnected
-        this.isLinked = true
-        this.getLinkedInfo()
-        return
-      }
-      this.isLinked = false
+      this.getLinkedInfo()
     })
     wifi.on('wifiStateChange', state => {
       Logger.log(TAG, `wifiStateLisener state: ${state}`)
@@ -102,9 +96,7 @@ struct Index {
       this.isSwitchOn = true
       wifi.scan()
       this.scan()
-      if (wifi.isConnected()) {
-        this.getLinkedInfo()
-      }
+      this.getLinkedInfo()
     }
     this.addListener()
   }
