@@ -29,6 +29,7 @@ export default {
         this.num = e.text
     },
     redirect() {
+        router.clear()
         router.push({
             uri: "pages/index/index",
             params: {

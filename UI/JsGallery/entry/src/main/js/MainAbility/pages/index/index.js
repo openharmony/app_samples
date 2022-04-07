@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 
+import featureAbility from '@ohos.ability.featureAbility';
 import router from '@system.router'
 import galleryData from '../../common/gallery'
 
@@ -22,7 +23,7 @@ export default {
     data: {
         columns: 8,
         imgsrc: [],
-        repeatedlength: 5000,
+        repeatedlength: 200,
         tempList: [],
         beginIndex: 0,
         endIndex: 0,
@@ -38,27 +39,14 @@ export default {
             this.columns = this.message[0]
             this.repeatedlength = this.message[1]
             this.height = 375 / this.message[0]
+            this.imgtype = false
         } else {
             this.imgtype = galleryData.shrink
             this.columns = galleryData.numColumns.orderedByDays
             this.repeatedlength = galleryData.itemCount
             this.height = 375 / galleryData.numColumns.orderedByDays
         }
-        if (this.imgtype === true) {
-            for (var i = 1;i <= 200; i++) {
-                this.imgsrc.push({
-                    SourceFile: '/common/image/LOADPIC_' + ('0000' + i).slice(-4) + '.png',
-                    order: i
-                })
-            }
-        } else {
-            for (var j = 1;j <= 200; j++) {
-                this.imgsrc.push({
-                    SourceFile: '/common/image/LOADPIC_' + ('0000' + j).slice(-4) + '.png',
-                    order: j
-                })
-            }
-        }
+        this.refreshData()
     },
     redirectSetting() {
         router.push({
@@ -66,9 +54,11 @@ export default {
         })
     },
     back() {
-        router.back()
+        featureAbility.terminateSelf()
     },
     setColumn() {
+        this.imgtype = galleryData.shrink
+        this.refreshData()
         i++
         if (i % 3 === 0) {
             this.columns = galleryData.numColumns.orderedByDays
@@ -95,7 +85,7 @@ export default {
             return
         }
         this.beginIndex = param.begin
-        this.endIndex = param.end
+        this.endIndex = param.end > this.imgsrc.length ? this.imgsrc.length : param.end
         let tempArray = []
         for (let index = this.beginIndex;index < this.endIndex; ++index) {
             let tempIndex = index % this.imgsrc.length
@@ -103,5 +93,24 @@ export default {
             tempArray.push(tempValue)
         }
         this.tempList = tempArray
+    },
+    refreshData(){
+        this.imgsrc = []
+        if (this.imgtype === true) {
+            for (var i = 1;i <= 200; i++) {
+                this.imgsrc.push({
+                    SourceFile: '/common/image/LOADPIC_' + ('0000' + i).slice(-4) + '.png',
+                    order: i
+                })
+            }
+        } else {
+            for (var j = 1;j <= this.repeatedlength; j++) {
+                let index = j % 200 === 0 ? 200 : j % 200
+                this.imgsrc.push({
+                    SourceFile: '/common/image/LOADPIC_' + ('0000' + index).slice(-4) + '.png',
+                    order: j
+                })
+            }
+        }
     }
 }

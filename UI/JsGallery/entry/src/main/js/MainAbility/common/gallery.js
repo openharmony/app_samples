@@ -15,11 +15,11 @@
 
 export default {
     "itemCount": 200,
-    "shrink": false,
+    "shrink": true,
     "numColumns": {
-        "orderedByDays": 4,
-        "orderedByMonths": 8,
-        "orderedByYears": 12
+        "orderedByDays": 8,
+        "orderedByMonths": 12,
+        "orderedByYears": 4
     }
 }
 
