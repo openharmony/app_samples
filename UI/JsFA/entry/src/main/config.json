@@ -1,7 +1,7 @@
 {
   "app": {
     "vendor": "samples",
-    "bundleName": "ohos.samples.jsapp",
+    "bundleName": "ohos.samples.jsfa",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -44,7 +44,7 @@
       "deliveryWithInstall": true,
       "moduleName": "entry"
     },
-    "package": "ohos.samples.jsapp",
+    "package": "ohos.samples.jsfa",
     "srcPath": "",
     "name": ".entry",
     "js": [

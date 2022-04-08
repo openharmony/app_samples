@@ -65,14 +65,14 @@
 - thread
   - [`JsWorker:`启动一个worker（JS）（API7）](thread/JsWorker)
 - CompleteApps
-  - [`KikaInput:`轻量级输入法（JS）（API8）](CompleteApps/KikaInput)
+  - [`KikaInput:`轻量级输入法（JS）（API9）](CompleteApps/KikaInput)
   - [`AstronautsGame:`太空人避障游戏（C++）](CompleteApps/AstronautsGame)
 - ETSUI
   - [`Canvas:`画布组件（eTS）（API8）](ETSUI/Canvas)
   - [`CustomComponent:`组件化（eTS）（API8）](ETSUI/CustomComponent)
-  - [`Process:`进程信息（eTS）（API8）](ETSUI/Process)
-  - [`BuildCommonView:`创建简单视图（eTS）（API8）](ETSUI/BuildCommonView)
-  - [`DefiningPageLayoutAndConnection:`页面布局和连接（eTS）（API8）](ETSUI/DefiningPageLayoutAndConnection)
+  - [`Process:`进程信息（eTS）（API7）](ETSUI/Process)
+  - [`BuildCommonView:`创建简单视图（eTS）（API7）](ETSUI/BuildCommonView)
+  - [`DefiningPageLayoutAndConnection:`页面布局和连接（eTS）（API7）](ETSUI/DefiningPageLayoutAndConnection)
   - [`Drag:`ArkUI-拖拽事件（eTS）（API8）](ETSUI/Drag)
   - [`Component:`Ets组件测试Demo（eTS）（API8）](ETSUI/Component)
   - [`ArkUIAnimation:`Ets动画（eTS）（API8）](ETSUI/ArkUIAnimation)
@@ -91,7 +91,7 @@
   - [`AtomicLayout:`原子布局（JS）（API7）](UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）（API7）](UI/Badge)
   - [`International:`国际化（JS）（API7）](UI/International)
-  - [`JsApp:`购物车示例应用（JS）（API8）](UI/JsApp)  
+  - [`JsFA:`FA示例应用（JS）（API8）](UI/JsFA)  
   - [`JsShopping:`购物示例应用（JS）（API8）](UI/JsShopping)     
   - [`JSMenu:`菜单（JS）（API7）](UI/JSMenu)
   - [`JSUICustomComponent:`自定义组件（JS）（API7）](UI/JSUICustomComponent)
@@ -127,11 +127,11 @@
 - Util
   - [`UtilBase64Codec:`Base64编解码（eTS）（API8）](Util/UtilBase64Codec)
   - [`UtilScope:`范围判断（eTS）（API8）](Util/UtilScope)
-  - [`UtilStringCodec:`字符串编解码（eTS）（API8）](Util/UtilStringCodec)
+  - [`UtilStringCodec:`字符串编解码（eTS）（API7）](Util/UtilStringCodec)
   - [`UtilLruBuffer:`缓冲区（eTS）（API8）](Util/UtilLruBuffer)
   - [`UtilRationalNumber:`有理数（eTS）（API8）](Util/UtilRationalNumber)
   - [`UtilTypeCheck:`内置对象类型检查（eTS）（API8）](Util/UtilTypeCheck)
-  - [`UtilUrlString:`URL字符串解析（eTS）（API8）](Util/UtilUrlString)
+  - [`UtilUrlString:`URL字符串解析（eTS）（API7）](Util/UtilUrlString)
   - [`XmlTextConvert:`xml文本转换（eTS）（API8）](Util/XmlTextConvert)
 
 ## 使用说明<a name="section17988202503116"></a>
