@@ -21,7 +21,7 @@
                 </div>
                 <div class="div-content">
                     <text class="txt-case1-t1">{{ $t('strings.content_case1_t1') }}</text>
-                    <div class="div-button-case1">
+                    <div class="div-button-case1" >
                         <button class="button-emphasize" value="{{ $t('strings.btn_emphasize') }}"></button>
                         <button class="button-capsule" type="capsule" value="{{ $t('strings.btn_capsule') }}"></button>
                         <button class="button-loading" type="capsule" waiting="true"
