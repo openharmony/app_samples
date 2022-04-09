@@ -113,9 +113,12 @@ struct Index {
           Toggle({ type: ToggleType.Switch, isOn: this.isSwitchOn })
             .onChange((isOn: boolean) => {
               Logger.log(TAG, `wifi swtich is: ${isOn}`)
+              this.wifiList = []
               if (isOn) {
                 this.isSwitchOn = true
                 wifi.enableWifi()
+                wifi.scan()
+                this.scan()
                 return
               }
               this.isSwitchOn = false
