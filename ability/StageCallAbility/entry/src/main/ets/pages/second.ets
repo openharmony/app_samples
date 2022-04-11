@@ -20,7 +20,7 @@ const EVENT_ID: number = 1000
 @Entry
 @Component
 struct Second {
-  @State message: string = 'Second Ability'
+  @State message: string = 'Callee Ability'
   @State receivedMsg: string = ''
 
   private onMsgChange = (eventData) => {
