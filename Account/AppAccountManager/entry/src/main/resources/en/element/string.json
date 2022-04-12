@@ -10,23 +10,23 @@
     },
     {
       "name": "back",
-      "value": "return"
+      "value": "Back"
     },
     {
       "name": "username",
-      "value": "username: "
+      "value": "Username: "
     },
     {
       "name": "password",
-      "value": "password: "
+      "value": "Password: "
     },
     {
       "name": "register",
-      "value": "register"
+      "value": "Register"
     },
     {
       "name": "login",
-      "value": "Login"
+      "value": "Log in"
     },
     {
       "name": "music",
@@ -42,19 +42,19 @@
     },
     {
       "name": "register_login",
-      "value": "Register or Login"
+      "value": "Registration/Login"
     },
     {
       "name": "appname",
-      "value": "Appname: "
+      "value": "App name: "
     },
     {
       "name": "password_message",
-      "value": "Username and password inconsistent"
+      "value": "Username and password do not match."
     },
     {
       "name": "password_error",
-      "value": "The passwords entered twice inconsistent "
+      "value": "The passwords do not match."
     },
     {
       "name": "close",
@@ -70,27 +70,27 @@
     },
     {
       "name": "confirm_password",
-      "value": "Confirm Password: "
+      "value": "Confirm password: "
     },
     {
       "name": "setting",
-      "value": "Setup is complete"
+      "value": "OK"
     },
     {
       "name": "account",
-      "value": "Account Info"
+      "value": "Account info"
     },
     {
       "name": "modify",
-      "value": "Modify Info"
+      "value": "Modify info"
     },
     {
       "name": "application",
-      "value": "Switch APP"
+      "value": "Switch app"
     },
     {
       "name": "delete",
-      "value": "Delete Account"
+      "value": "Delete account"
     },
     {
       "name": "warning",
@@ -98,11 +98,11 @@
     },
     {
       "name": "confirm",
-      "value": "Confirm"
+      "value": "OK"
     },
     {
       "name": "delete_account",
-      "value": "You are deleting your account"
+      "value": "You are deleting your account."
     },
     {
       "name": "cancel",
