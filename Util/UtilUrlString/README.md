@@ -1,19 +1,19 @@
-# URL字符串解析
+# URL String Parsing
 
-### 简介
+### Introduction
 
-本示例对URL字符串的查找参数进行了增删改查的一系列操作，使得读者对URL的结构用途更加明了。
+This sample shows how to add, delete, modify, and query URL string search parameters to help you understand the URL structure and usage.
 
-### 使用说明
+### Usage
 
-1.点击**插入键值对到查询字符串**按钮，会将左面文本框的参数插入到查找参数后面。
+1. Touch **Insert key-value pair**. The parameter in the text box on the left is inserted behind the search parameter.
 
-2.点击**删除键值对**按钮，会将指定名称的键值对删除。
+2. Touch **Delete key-value pair** to delete the specified key-value pair.
 
-3.点击**获取指定名称对应的第一个值**按钮，将查找参数中该参数名对应的第一个参数值，并显示出来。
+3. Touch **Get first value** to search for and display the value of the first occurrence of the specified key.
 
-4.点击**设置键的新值**按钮，将与名称相关联的键值对全部删除，并赋予该键名一个新值。
+4. Touch **Set new value** to delete all key-value pairs associated with the key and assign a new value to the key.
 
-### 约束与限制
+### Constraints
 
-本示例仅支持在标准系统上运行。
+This sample can only be run on standard-system devices.
