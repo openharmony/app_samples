@@ -30,10 +30,10 @@ export struct ButtonComponent {
       this.textTitle = '有理数a和有理数b相等'
     }
     if (result == 1) {
-      this.textTitle = '有理数a小于有理数b'
+      this.textTitle = '有理数a大于有理数b'
     }
     if (result == -1) {
-      this.textTitle = '有理数a大于有理数b'
+      this.textTitle = '有理数a小于有理数b'
     }
   }
 

@@ -12,7 +12,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import HiLog from '../mode/HiLog'
 import StorageModel from '../mode/StorageModel'
 import reminderAgent from '@ohos.reminderAgent'
@@ -30,6 +29,13 @@ export struct CustomDatePicker {
   private countChange: (result: number) => void
   private selectedTime: Date = new Date()
   private controller: CustomDialogController
+
+  aboutToAppear(){
+    this.hour = this.selectedTime.getHours()
+    this.minute = this.selectedTime.getMinutes()
+    this.hourTest = (this.hour > 9 ? '' : '0') + this.hour
+    this.minuteTest = (this.minute > 9 ? '' : '0') + this.minute
+  }
 
   build() {
     Column() {
