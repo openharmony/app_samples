@@ -10,27 +10,27 @@
     },
     {
       "name": "distribute_account_manager",
-      "value": "Distribute Account Manager"
+      "value": "Distribute account management"
     },
     {
       "name": "password",
-      "value": "password:"
+      "value": "Password:"
     },
     {
       "name": "user_name",
-      "value": "userName:"
+      "value": "Username:"
     },
     {
       "name": "login",
-      "value": "login"
+      "value": "Log in"
     },
     {
       "name": "exit_login",
-      "value": "exit login"
+      "value": "Log out"
     },
     {
       "name": "written_off",
-      "value": "written off"
+      "value": "Deregister"
     }
   ]
 }
