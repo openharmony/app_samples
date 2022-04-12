@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 
+import prompt from '@system.prompt';
 import Information from '../model/Information'
 import Hilog from '../model/HiLog'
 
@@ -45,6 +46,7 @@ export struct AddDialog {
           .type(InputType.Normal)
           .placeholderColor(Color.Gray)
           .fontSize(19)
+          .maxLength(20)
           .onChange((value: string) => {
             this.writeInformation.name = value
           })
@@ -62,8 +64,10 @@ export struct AddDialog {
         TextInput({ placeholder: $r('app.string.input_age'), text: this.writeInformation.age.toString() })
           .layoutWeight(1)
           .type(InputType.Number)
+          .inputFilter('^[1-9][0-9]*$')
           .placeholderColor(Color.Gray)
           .fontSize(19)
+          .maxLength(3)
           .margin({ right: 10 })
           .onChange((value: string) => {
             this.writeInformation.age = +value
@@ -82,8 +86,10 @@ export struct AddDialog {
         TextInput({ placeholder: $r('app.string.input_phone'), text: this.writeInformation.phone })
           .layoutWeight(1)
           .type(InputType.Number)
+          .inputFilter('^1[0-9]*$')
           .placeholderColor(Color.Gray)
           .fontSize(19)
+          .maxLength(11)
           .margin({ right: 10 })
           .onChange((value: string) => {
             this.writeInformation.phone = value
@@ -101,7 +107,15 @@ export struct AddDialog {
         .backgroundColor(Color.White)
         .margin(5)
         .onClick(() => {
-          if (this.writeInformation.name && this.writeInformation.phone && this.writeInformation.age > 0) {
+          if (this.writeInformation.name === '') {
+            prompt.showToast({ message: '姓名不能为空', duration: 1000 })
+            return
+          }
+          if (this.writeInformation.age === null) {
+            prompt.showToast({ message: '年龄不能为空', duration: 1000 })
+            return
+          }
+          if (this.writeInformation.name !== '' && this.writeInformation.phone !== '' && this.writeInformation.age > 0) {
             this.isInserted = true
             Hilog.log(TAG, `isInserted= ${this.isInserted}`)
             Hilog.log(TAG, `writeInformation= ${this.writeInformation}`)
