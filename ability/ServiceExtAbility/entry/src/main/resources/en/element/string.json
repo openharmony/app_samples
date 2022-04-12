@@ -2,91 +2,91 @@
   "string": [
     {
       "name": "entry_desc",
-      "value": "service test"
+      "value": "Ability test"
     },
     {
       "name": "MainAbility_desc",
-      "value": "main ability"
+      "value": "Main ability"
     },
     {
       "name": "MainAbility_label",
-      "value": "local main ability test"
+      "value": "Local main ability test"
     },
     {
       "name": "state_unconnected",
-      "value": "unconnected"
+      "value": "Unconnected"
     },
     {
       "name": "state_start_ability",
-      "value": "ability is started"
+      "value": "The ability is started."
     },
     {
       "name": "state_connect_ability",
-      "value": "ability is connected"
+      "value": "The ability is connected."
     },
     {
       "name": "state_disconnect_ability",
-      "value": "ability is disconnected"
+      "value": "The ability is disconnected."
     },
     {
       "name": "state_start_ability_error",
-      "value": "start ability error"
+      "value": "An error occurred during ability startup."
     },
     {
       "name": "state_connect_ability_error",
-      "value": "connect ability error"
+      "value": "An error occurred during ability connection."
     },
     {
       "name": "state_disconnect_ability_error",
-      "value": "disconnect ability error"
+      "value": "An error occurred during ability disconnection."
     },
     {
       "name": "opt_start_ability",
-      "value": "start ability"
+      "value": "Start"
     },
     {
       "name": "opt_connect_ability",
-      "value": "connect ability"
+      "value": "Connect"
     },
     {
       "name": "opt_disconnect_ability",
-      "value": "disconnect ability"
+      "value": "Disconnect"
     },
     {
       "name": "tips_current_state",
-      "value": "current state"
+      "value": "State"
     },
     {
       "name": "tips_step",
-      "value": "step"
+      "value": "Step "
     },
     {
       "name": "tips_start",
-      "value": "start ability and return state"
+      "value": "State returned after ability startup"
     },
     {
       "name": "tips_connect",
-      "value": "trans to service add"
+      "value": "Passed to ability for addition"
     },
     {
       "name": "tips_enter_two_number",
-      "value": "enter two number"
+      "value": "Enter two numbers"
     },
     {
       "name": "tips_connect_first_value",
-      "value": "first number"
+      "value": "First number"
     },
     {
       "name": "tips_connect_second_value",
-      "value": "second number"
+      "value": "Second number"
     },
     {
       "name": "tips_connect_end",
-      "value": "connect success and return value"
+      "value": "Value returned after successful connection"
     },
     {
       "name": "tips_return_result",
-      "value": "remote return value"
+      "value": "Remote return value"
     }
   ]
 }
