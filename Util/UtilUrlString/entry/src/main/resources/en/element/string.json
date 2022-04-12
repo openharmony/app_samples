@@ -14,23 +14,23 @@
     },
     {
       "name": "insert",
-      "value": "Insert Key-value"
+      "value": "Insert key-value pair"
     },
     {
       "name": "delete",
-      "value": "Delete Key-value"
+      "value": "Delete key-value pair"
     },
     {
       "name": "getFirst",
-      "value": "GetFirst Key-value"
+      "value": "Get first value"
     },
     {
       "name": "setValue",
-      "value": "Set new value of key"
+      "value": "Set new value"
     },
     {
       "name": "pleaseInsert",
-      "value": "It does not exist. Please insert first"
+      "value": "It does not exist. Insert key-value pair first."
     }
   ]
 }
