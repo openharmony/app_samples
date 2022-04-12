@@ -18,9 +18,8 @@ import featureAbility from '@ohos.ability.featureAbility'
 import prompt from '@system.prompt'
 
 const writeContent = 'hello, fileIo'
-var context = featureAbility.getContext()
-var path
-var stream
+let context = featureAbility.getContext()
+let path
 context.getOrCreateLocalDir().then((e) => {
   path = e + '/files'
   console.log('EtsFileIo =' + path)
@@ -33,14 +32,21 @@ struct Index {
   @State newPath: string = ''
   @State readText: string = ''
   @State fd: number = 0
-  private options: Resource [] = [$r('app.string.create_fileIo'), $r('app.string.rename_fileIo'),
-  $r('app.string.write_fileIo'), $r('app.string.read_fileIo'), $r('app.string.delete_fileIo')]
+  private options: Resource [] = [
+    $r('app.string.create_fileIo'),
+    $r('app.string.rename_fileIo'),
+    $r('app.string.write_fileIo'),
+    $r('app.string.read_fileIo'),
+    $r('app.string.delete_fileIo')
+  ]
+ private stream: fileIo.Stream
 
   create_fileIo() {
     this.result = path + '/xxx.txt'
     this.fd = fileIo.openSync(this.result, 0o2 | 0o100, 0o666)
     prompt.showToast({ message: 'create_file success =>' + this.result, duration: 2000 })
     console.log('EtsFileIo fd =' + this.fd)
+    fileIo.close(this.fd)
   }
 
   rename_fileIo() {
@@ -50,8 +56,9 @@ struct Index {
   }
 
   write_fileIo() {
-    stream = fileIo.createStreamSync(this.newPath, "r+")
-    let writelength = stream.writeSync(writeContent, {
+    let writeFd = fileIo.openSync(this.newPath, 0o2 | 0o100, 0o666)
+    this.stream = fileIo.fdopenStreamSync(writeFd, "r+")
+    let writelength = this.stream.writeSync(writeContent, {
       offset: 0,
       length: writeContent.length,
       position: 0,
@@ -59,17 +66,21 @@ struct Index {
     })
     prompt.showToast({ message: 'write_fileIo success =>' + 'hello, fileIo', duration: 2000 })
     console.log('EtsFileIo WriteLength = ' + writelength)
+    this.stream.close()
+    fileIo.close(writeFd)
   }
 
   read_fileIo() {
-    let fdIo = fileIo.openSync(this.newPath, 0o2)
-    console.log('EtsFileIo fdIo = ' + fdIo)
+    let readFd = fileIo.openSync(this.newPath, 0o0)
+    this.stream = fileIo.fdopenStreamSync(readFd, "r")
     let buf = new ArrayBuffer(4096)
-    let length = stream.readSync(buf, { offset: 0, length: writeContent.length, position: 0 })
+    let length = this.stream.readSync(buf, { offset: 0, length: writeContent.length, position: 0 })
     this.readText = String.fromCharCode.apply(null, new Uint8Array(buf))
     prompt.showToast({ message: 'read_fileIo success', duration: 2000 })
     console.log('EtsFileIo buf = ' + this.readText)
     console.log('EtsFileIo length = ' + length)
+    this.stream.close()
+    fileIo.close(readFd)
   }
 
   delete_fileIo() {
