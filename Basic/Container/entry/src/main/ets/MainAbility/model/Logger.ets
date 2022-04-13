@@ -13,22 +13,28 @@
  * limitations under the License.
  */
 
-const TAG: string = '[eTSContainer]'
+class Logger {
+  private prefix: string
 
-export default class HiLog {
-  public static log(tag, log) {
-    console.log(`${TAG}.${tag}: ${log}`)
+  constructor(prefix: string) {
+    this.prefix = prefix
   }
 
-  public static info(tag, info) {
-    console.info(`${TAG}.${tag}: ${info}`)
+  log(...args: any[]) {
+    console.log(`[${this.prefix}].${args.join('')}`)
   }
 
-  public static debug(tag, debug) {
-    console.debug(`${TAG}.${tag}: ${debug}`)
+  info(...args: any[]) {
+    console.log(`[${this.prefix}].${args.join('')}`)
   }
 
-  public static error(tag, error) {
-    console.error(`${TAG}.${tag}: ${error}`)
+  debug(...args: any[]) {
+    console.log(`[${this.prefix}].${args.join('')}`)
+  }
+
+  error(...args: any[]) {
+    console.log(`[${this.prefix}].${args.join('')}`)
   }
 }
+
+export default new Logger('Multimedia')
