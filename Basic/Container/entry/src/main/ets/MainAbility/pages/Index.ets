@@ -15,7 +15,7 @@
 
 import { AddDialog } from '../common/AddDialog'
 import Information from '../model/Information'
-import Hilog from '../model/hilog'
+import Logger from '../model/Logger'
 import ArrayList from '@ohos.util.ArrayList'
 
 const TAG = 'index'
@@ -36,14 +36,14 @@ struct Index {
         }
         if (this.informations.isEmpty()) {
           writeInformation.id = 0
-          Hilog.log(TAG, `writeInformation.id= ${writeInformation.id}`)
+          Logger.log(`${TAG}, writeInformation.id= ${writeInformation.id}`)
         } else {
           writeInformation.id = this.informations.length
-          Hilog.log(TAG, `writeInformation.id= ${writeInformation.id}`)
+          Logger.log(`${TAG}, writeInformation.id= ${writeInformation.id}`)
         }
         this.informations.add(writeInformation)
         this.list = this.informations.convertToArray()
-        Hilog.log(TAG, `this.list= ${this.list}`)
+        Logger.log(`${TAG}, this.list= ${this.list}`)
       }
     }),
     autoCancel: true,

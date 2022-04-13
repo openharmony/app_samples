@@ -15,7 +15,7 @@
 
 import prompt from '@system.prompt';
 import Information from '../model/Information'
-import Hilog from '../model/HiLog'
+import Logger from '../model/Logger'
 
 const TAG = 'addDialog'
 
@@ -47,6 +47,7 @@ export struct AddDialog {
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .maxLength(20)
+          .inputFilter('^[A-Za-z0-9]*$')
           .onChange((value: string) => {
             this.writeInformation.name = value
           })
@@ -111,14 +112,18 @@ export struct AddDialog {
             prompt.showToast({ message: '姓名不能为空', duration: 1000 })
             return
           }
-          if (this.writeInformation.age === null) {
+          if (this.writeInformation.age === 0) {
             prompt.showToast({ message: '年龄不能为空', duration: 1000 })
+            return
+          }
+          if (this.writeInformation.phone === '') {
+            prompt.showToast({ message: '电话号码不能为空', duration: 1000 })
             return
           }
           if (this.writeInformation.name !== '' && this.writeInformation.phone !== '' && this.writeInformation.age > 0) {
             this.isInserted = true
-            Hilog.log(TAG, `isInserted= ${this.isInserted}`)
-            Hilog.log(TAG, `writeInformation= ${this.writeInformation}`)
+            Logger.log(`${TAG}, isInserted= ${this.isInserted}`)
+            Logger.log(`${TAG}, writeInformation= ${this.writeInformation}`)
             this.saveData(this.isInserted, this.writeInformation)
           }
           this.controller.close()
