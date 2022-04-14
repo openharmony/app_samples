@@ -14,11 +14,17 @@
  */
 
 import router from '@system.router'
+import Logger from '../model/Logger'
+
+const TAG = '[NavigationBar]'
 
 @Component
 export struct NavigationBar {
+  private url: string
   private flag: boolean
   private title: Resource
+  private username: string
+  private bundleName: string
 
   build() {
     Row() {
@@ -35,7 +41,32 @@ export struct NavigationBar {
           }
           .layoutWeight(1)
           .onClick(() => {
-            router.back()
+            AlertDialog.show(
+              {
+                title: $r('app.string.warning'),
+                message: $r('app.string.routerback'),
+                primaryButton: {
+                  value: $r('app.string.confirm'),
+                  action: () => {
+                    router.replace({
+                      uri: this.url,
+                      params: {
+                        bundleName: this.bundleName,
+                        username: this.username
+                      }
+                    })
+                  }
+                },
+                secondaryButton: {
+                  value: $r('app.string.cancel'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
           })
 
           Text(this.title)

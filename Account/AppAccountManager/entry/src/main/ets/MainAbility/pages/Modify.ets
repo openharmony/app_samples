@@ -21,15 +21,20 @@ import { NavigationBar } from '../common/NavigationBar'
 @Component
 struct Modify {
   private username: string = <string> router.getParams().username
-  private passWord: string = <string> router.getParams().passWord
   private bundleName: string = <string> router.getParams().bundleName
 
   build() {
     Scroll() {
       Column() {
-        NavigationBar({ title: $r('app.string.modify'), flag: true })
+        NavigationBar({
+          title: $r('app.string.modify'),
+          flag: true,
+          url: 'pages/Account',
+          username: this.username,
+          bundleName: this.bundleName
+        })
 
-        ModifyInfo({ bundleName: this.bundleName, username: this.username, passWord: this.passWord })
+        ModifyInfo({ bundleName: this.bundleName, username: this.username })
       }
     }
   }

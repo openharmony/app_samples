@@ -14,7 +14,7 @@
  */
 
 import router from '@system.router'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { AccountModel } from '../model/AccountModel'
 import { AccountData } from '../model/AccountData'
 
@@ -23,9 +23,9 @@ const TAG = '[AccountInfo]'
 @Component
 export struct AccountInfo {
   @State email: string = ''
+  @State username: string = ''
   @State signature: string = ''
   @State passWord: string = ''
-  private username: string
   private bundleName: string
   private storage: AccountData = AccountData.getInstance()
   private accountModel: AccountModel = new AccountModel()
@@ -35,22 +35,22 @@ export struct AccountInfo {
   }> = []
 
   async aboutToAppear() {
-    this.passWord = await this.accountModel.getAssociatedData(this.username, 'key')
+    this.passWord = await this.accountModel.getAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`)
     try {
-      this.email = await this.accountModel.getAccountCredential(this.username, 'email')
-      HiLogUtil.log(TAG, `getAccountCredential email is ${this.email}`)
+      this.email = await this.accountModel.getAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`)
+      Logger.info(TAG, `getAccountCredential email is ${this.email}`)
     } catch (err) {
       this.email = ''
     }
     try {
-      this.signature = await this.accountModel.getAccountExtraInfo(this.username)
-      HiLogUtil.log(TAG, `getAccountExtraInfo signature is ${this.signature}`)
+      this.signature = await this.accountModel.getAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`)
+      Logger.info(TAG, `getAccountExtraInfo signature is ${this.signature}`)
     } catch (err) {
       this.signature = ''
     }
     this.textData = [
       { title: $r('app.string.appname'), value: this.bundleName },
-      { title: $r('app.string.username'), value: this.username },
+      { title: $r('app.string.unusername'), value: this.username },
       { title: $r('app.string.email'), value: this.email },
       { title: $r('app.string.signature'), value: this.signature }
     ]
@@ -82,12 +82,11 @@ export struct AccountInfo {
           .fontColor(Color.White)
           .type(ButtonType.Capsule)
           .onClick(() => {
-            router.push({
+            router.replace({
               uri: 'pages/Modify',
               params: {
                 username: this.username,
-                bundleName: this.bundleName,
-                passWord: this.passWord
+                bundleName: this.bundleName
               }
             })
           })
@@ -99,9 +98,28 @@ export struct AccountInfo {
           .fontColor(Color.White)
           .type(ButtonType.Capsule)
           .onClick(() => {
-            router.push({
-              uri: 'pages/Index'
-            })
+            AlertDialog.show(
+              {
+                title: $r('app.string.warning'),
+                message: $r('app.string.switch_app'),
+                primaryButton: {
+                  value: $r('app.string.confirm'),
+                  action: () => {
+                    router.replace({
+                      uri: 'pages/Index'
+                    })
+                  }
+                },
+                secondaryButton: {
+                  value: $r('app.string.cancel'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
           })
 
         Button($r('app.string.delete'))
@@ -118,9 +136,8 @@ export struct AccountInfo {
                 primaryButton: {
                   value: $r('app.string.confirm'),
                   action: () => {
-                    this.accountModel.deleteAccount(this.username)
-                    this.storage.deleteStorageValue(this.username)
-                    router.push({
+                    this.storage.deleteStorageValue(this.username, this.bundleName)
+                    router.replace({
                       uri: 'pages/Login',
                       params: {
                         bundleName: this.bundleName
@@ -131,16 +148,18 @@ export struct AccountInfo {
                 secondaryButton: {
                   value: $r('app.string.cancel'),
                   action: () => {
-                    HiLogUtil.log(TAG, `AlertDialog enter`)
+                    Logger.info(TAG, `AlertDialog enter`)
                   }
                 },
                 cancel: () => {
-                  HiLogUtil.log(TAG, `AlertDialog close`)
+                  Logger.info(TAG, `AlertDialog close`)
                 }
               })
           })
       }
+      .width('100%')
+      .height('100%')
+      .layoutWeight(1)
     }
-    .layoutWeight(1)
   }
 }
