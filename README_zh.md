@@ -49,7 +49,8 @@
   - [`DDMQuery:`结果集与谓词（eTS）（API8）](data/DDMQuery)
 - device
   - [`DeviceManager:`设备管理（eTS）（API8）](device/DeviceManager)
-  - [`SenSor:`传感器（eTS）（API8）](device/SenSor)
+  - [`Sensor:`传感器（eTS）（API8）](device/Sensor)
+  - [`Vibrator:`振动（eTS）（API8）](device/Vibrator)
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）（API7）](media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）（API7）](media/JsVideo)
