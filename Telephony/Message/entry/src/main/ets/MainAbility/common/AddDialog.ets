@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
 import Contact from '../model/Contact'
-import HiLog from '../model/HiLogUtil'
 
 const TAG: string = '[AddDialog]'
 
@@ -57,10 +57,10 @@ export struct AddDialog {
           .layoutWeight(1)
           .maxLength(11)
           .type(InputType.Number)
-          .inputFilter('^1[0-9]*$')
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .margin({ left: 10 })
+          .inputFilter('^1[0-9]*$')
           .onChange((value: string) => {
             this.editContact.destinationHost = value
           })
@@ -91,11 +91,27 @@ export struct AddDialog {
         .backgroundColor(Color.White)
         .margin(5)
         .onClick(() => {
-          HiLog.info(TAG, `editContact = ${JSON.stringify(this.editContact)}`)
-          this.controller.close()
-          if (this.editContact.name !== '' || this.editContact.destinationHost !== '') {
+          Logger.info(`${TAG}, editContact = ${JSON.stringify(this.editContact)}`)
+          if (this.editContact.name == '' || this.editContact.destinationHost == '') {
+            AlertDialog.show(
+              {
+                title: $r('app.string.title_dialog'),
+                message: $r('app.string.message_dialog'),
+                confirm: {
+                  value: $r('app.string.determine'),
+                  action: () => {
+                    Logger.info(`${TAG}, AlertDialog confirm`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(`${TAG}, AlertDialog cancel`)
+                }
+              }
+            )
+          } else {
             this.action(this.editContact)
           }
+          this.controller.close()
         })
       }
       .width('100%')

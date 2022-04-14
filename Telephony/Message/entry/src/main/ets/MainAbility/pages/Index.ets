@@ -15,7 +15,7 @@
 
 import router from '@system.router'
 import Contact from '../model/Contact'
-import HiLog from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { TitleBar } from '../common/TitleBar'
 import { AddDialog } from '../common/AddDialog'
 import { grantPermission } from '../model/PermissionUtils'
@@ -46,28 +46,12 @@ struct Index {
     autoCancel: true
   })
 
-  onAccept(contact:Contact) {
-    HiLog.info(TAG, `onAccept contact:${JSON.stringify(contact)}`)
-    if (contact.name == '' || contact.destinationHost == '') {
-      AlertDialog.show(
-        {
-          title: $r('app.string.title_dialog'),
-          message: $r('app.string.message_dialog'),
-          confirm: {
-            value: $r('app.string.determine'),
-            action: () => {
-              HiLog.info(TAG, `AlertDialog confirm`)
-            }
-          },
-          cancel: () => {
-            HiLog.info(TAG, `AlertDialog cancel`)
-          }
-        }
-      )
-    } else {
-      this.contacts.unshift(contact)
-      HiLog.info(TAG, `onClick-save contacts = ${JSON.stringify(this.contacts)}`)
-    }
+  onAccept(contact: Contact) {
+    Logger.info(`${TAG}, onAccept contact:${JSON.stringify(contact)}`)
+    let newContact = new Contact(contact.name, contact.destinationHost)
+    this.contacts.unshift(newContact)
+    Logger.info(`${TAG}, onClick-save contacts = ${JSON.stringify(this.contacts)}`)
+
   }
 
   aboutToAppear() {
@@ -89,6 +73,7 @@ struct Index {
           .backgroundColor('#0D9FFB')
           .margin({ top: 20, bottom: 20 })
           .onClick(() => {
+            this.editContact = new Contact('', '')
             this.addDialogController.open()
           })
 
@@ -142,7 +127,7 @@ struct Index {
                     .margin(10)
                     .objectFit(ImageFit.Contain)
                     .onClick(() => {
-                      HiLog.info(TAG, `onClick-sms ${item.name},${item.destinationHost}`)
+                      Logger.info(`${TAG}, onClick-sms ${item.name} ${item.destinationHost}`)
                       router.push({
                         uri: 'pages/SendMessage',
                         params: {
@@ -164,7 +149,7 @@ struct Index {
           .divider({ strokeWidth: 2, color: 0xFFFFFF, startMargin: 20, endMargin: 20 })
           .onItemDelete((index: number) => {
             this.contacts.splice(index, 1)
-            HiLog.info(TAG, `onItemDelete contacts = ${JSON.stringify(this.contacts[index])}`)
+            Logger.info(`${TAG}, onItemDelete contacts = ${JSON.stringify(this.contacts[index])}`)
             return true
           })
           .width('90%')

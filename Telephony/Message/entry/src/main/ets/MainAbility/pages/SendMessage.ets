@@ -17,7 +17,7 @@ import router from '@system.router'
 import sms from '@ohos.telephony.sms'
 import Contact from '../model/Contact'
 import Message from '../model/Message'
-import HiLog from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import SmsModel from '../model/SmsModel'
 import DateTimeUtil from '../model/DateTimeUtil'
 
@@ -31,9 +31,9 @@ struct SendMessage {
   @State sendResult: string = ''
   @State serviceCenter: string = ''
   @State deliveryResult: string = ''
-  @State content: string= 'test send message'
+  @State content: string = ''
   @State messages: Array<Message> = []
-  private slotId: number= 0
+  private slotId: number = 0
   private destinationPort: number= 1000
   private contact: Contact
   private smsModel: SmsModel = new SmsModel()
@@ -41,14 +41,14 @@ struct SendMessage {
 
   aboutToAppear() {
     this.contact = <Contact> router.getParams().contact
-    HiLog.info(TAG, `aboutToAppear name = ${this.contact.name}, destinationHost = ${this.contact.destinationHost}`)
+    Logger.info(`${TAG}, aboutToAppear name = ${this.contact.name} destinationHost = ${this.contact.destinationHost}`)
     this.getData()
   }
 
   async getData() {
-    HiLog.info(TAG, `getData start`)
+    Logger.info(`${TAG}, getData start`)
     sms.getDefaultSmsSlotId((err, data) => {
-      HiLog.info(TAG, `getData getDefaultSmsSlotId: err = ${JSON.stringify(err)}, data = ${JSON.stringify(data)}`)
+      Logger.info(`${TAG}, getData getDefaultSmsSlotId: err = ${JSON.stringify(err)} data = ${JSON.stringify(data)}`)
       if (err !== undefined) {
         this.clickable = false
         if (err.code === NO_SIM_STATE) {
@@ -59,14 +59,14 @@ struct SendMessage {
         this.slotId = data
         sms.getSmscAddr(this.slotId, (err, data) => {
           this.serviceCenter = data
-          HiLog.info(TAG, `getData getSmscAddr: err = ${JSON.stringify(err)}, data = ${JSON.stringify(data)}`)
+          Logger.info(`${TAG}, getData getSmscAddr: err = ${JSON.stringify(err)} data = ${JSON.stringify(data)}`)
         })
       }
-      HiLog.info(TAG, `getData getDefaultSmsSlotId: clickable = ${this.clickable}`)
+      Logger.info(`${TAG}, getData getDefaultSmsSlotId: clickable = ${this.clickable}`)
     })
 
     this.smsModel.createMessage()
-    HiLog.info(TAG, `getData end`)
+    Logger.info(`${TAG}, getData end`)
   }
 
   showDialog() {
@@ -77,7 +77,7 @@ struct SendMessage {
         confirm: {
           value: $r('app.string.determine'),
           action: () => {
-            HiLog.info(TAG, `AlertDialog confirm`)
+            Logger.info(`${TAG}, AlertDialog confirm`)
           }
         }
       }
@@ -87,33 +87,33 @@ struct SendMessage {
   sendMessage() {
     this.smsModel.sendMessage(this.slotId, this.content, this.contact.destinationHost, this.serviceCenter, this.destinationPort,
       (err, data) => {
-        HiLog.info(TAG, `sendCallback--- data = ${JSON.stringify(data)},err = ${JSON.stringify(err)}`)
+        Logger.info(`${TAG}, sendCallback--- data = ${JSON.stringify(data)} err = ${JSON.stringify(err)}`)
         if (err !== undefined) {
           this.sendResult = 'error'
-          HiLog.info(TAG, `sendCallback--- error`)
+          Logger.info(`${TAG}, sendCallback--- error`)
         } else {
           if (data.result === sms.SendSmsResult.SEND_SMS_SUCCESS) {
             this.sendResult = ''
-            HiLog.info(TAG, `sendCallback--- success`)
+            Logger.info(`${TAG}, sendCallback--- success`)
           } else {
             this.sendResult = 'fail'
-            HiLog.info(TAG, `sendCallback--- fail`)
+            Logger.info(`${TAG}, sendCallback--- fail`)
           }
         }
         this.messages.push(new Message(this.content, this.sendResult))
-        HiLog.info(TAG, `sendCallback--- push message`)
+        Logger.info(`${TAG}, sendCallback--- push message`)
       },
       (err, data) => {
-        HiLog.info(TAG, `deliveryCallback--- data = ${JSON.stringify(data)},err = ${JSON.stringify(err)}`)
+        Logger.info(`${TAG}, deliveryCallback--- data = ${JSON.stringify(data)} err = ${JSON.stringify(err)}`)
         if (err !== undefined) {
           this.sendResult = 'error'
-          HiLog.info(TAG, `deliveryCallback--- error`)
+          Logger.info(`${TAG}, deliveryCallback--- error`)
         } else {
           this.sendResult = ''
-          HiLog.info(TAG, `deliveryCallback--- success`)
+          Logger.info(`${TAG}, deliveryCallback--- success`)
         }
       })
-    HiLog.info(TAG, `onClick sendMessage done ${JSON.stringify(this.messages)}`)
+    Logger.info(`${TAG}, onClick sendMessage done ${JSON.stringify(this.messages)}`)
   }
 
   build() {
@@ -182,7 +182,7 @@ struct SendMessage {
 
 
       Row() {
-        TextArea({ placeholder: $r('app.string.message') })
+        TextArea({ placeholder: $r('app.string.message'), text: this.content })
           .placeholderColor('#92958C')
           .placeholderFont({ size: 20, weight: 100, family: 'cursive', style: FontStyle.Normal })
           .textAlign(TextAlign.Start)
@@ -201,10 +201,11 @@ struct SendMessage {
           .margin({ right: 10 })
           .objectFit(ImageFit.Contain)
           .onClick(() => {
-            HiLog.info(TAG, `onClick sendMessage`)
-            //this.messages.push(new Message(this.content, this.sendResult))
+            Logger.info(`${TAG}, onClick sendMessage`)
+            this.messages.push(new Message(this.content, this.sendResult))
             if (this.clickable) {
               this.sendMessage()
+              this.content = ''
             } else {
               this.showDialog()
             }

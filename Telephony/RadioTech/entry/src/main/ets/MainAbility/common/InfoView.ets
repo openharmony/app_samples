@@ -13,7 +13,10 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
 import { RadioStatus } from '../model/RadioStatus'
+
+const TAG = '[InfoView]'
 
 @Component
 export struct InfoView {
@@ -29,11 +32,9 @@ export struct InfoView {
   }
 
   getSimSpn(slotId) {
-    let self = this
-    this.radioStatus.getSimSpn(slotId, (result) => {
-      let title = slotId === 0 ? 'SIM1 status' : 'SIM2 status'
-      self.simArray.push({ slotId: slotId, title: title, value: result })
-    })
+    const simSpn = this.radioStatus.getSimSpn(slotId)
+    let title = slotId === 0 ? 'SIM1 status' : 'SIM2 status'
+    this.simArray.push({ slotId: slotId, title: title, value: simSpn })
   }
 
   build() {
@@ -60,7 +61,7 @@ export struct InfoView {
         }
         .width('100%')
         .onClick(() => {
-          console.log(`PanelView()`)
+          Logger.info(`${TAG}, PanelView`)
           this.show = !this.show
           this.slotId = item.slotId
           this.title = item.title

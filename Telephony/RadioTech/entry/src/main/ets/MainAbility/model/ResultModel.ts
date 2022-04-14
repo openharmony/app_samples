@@ -13,22 +13,12 @@
  * limitations under the License.
  */
 
-const TAG: string = '[Message]'
+export class ResultModel {
+    title: string
+    value: string
 
-export default class HiLog {
-  public static log(tag, log) {
-    console.log(`${TAG}.${tag}: ${log}`)
-  }
-
-  public static info(tag, info) {
-    console.info(`${TAG}.${tag}: ${info}`)
-  }
-
-  public static debug(tag, debug) {
-    console.debug(`${TAG}.${tag}: ${debug}`)
-  }
-
-  public static error(tag, error) {
-    console.error(`${TAG}.${tag}: ${error}`)
-  }
+    constructor(title: string, value: string) {
+        this.title = title
+        this.value = value
+    }
 }

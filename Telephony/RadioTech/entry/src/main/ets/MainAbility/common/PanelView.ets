@@ -13,29 +13,43 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
 import { RadioStatus } from '../model/RadioStatus'
+import { ResultModel } from '../model/ResultModel'
+
+const TAG = '[PanelView]'
 
 @Component
 export struct PanelView {
   @Link show: boolean
   private slotId: number
   private title: string
-  @State statusArray: Array<any> = []
+  @State statusArray: Array<ResultModel> = []
   @State radioStatus: RadioStatus = new RadioStatus()
 
-  aboutToAppear() {
-    let self = this
-    this.radioStatus.getRadioTech(this.slotId, (result) => {
-      self.statusArray.push({ title: 'RadioTech', value: result })
+  async aboutToAppear() {
+    this.radioStatus.getRadioTech(this.slotId).then((radioTech) => {
+      Logger.info(`${TAG}, aboutToAppear radioTech = ${JSON.stringify(radioTech)}`)
+      let result = new ResultModel('RadioTech', JSON.stringify(radioTech))
+      this.statusArray.push(result)
     })
-    this.radioStatus.getSignalInformation(this.slotId, (result) => {
-      self.statusArray.push({ title: 'SignalInformation', value: result })
+
+    this.radioStatus.getSignalInformation(this.slotId).then((signalInformation) => {
+      Logger.info(`${TAG}, aboutToAppear signalInformation = ${JSON.stringify(signalInformation)}`)
+      let result = new ResultModel('SignalInformation', JSON.stringify(signalInformation))
+      this.statusArray.push(result)
     })
-    this.radioStatus.getNetworkSelectionMode(this.slotId, (result) => {
-      self.statusArray.push({ title: 'NetworkSelectionMode', value: result })
+
+    this.radioStatus.getNetworkSelectionMode(this.slotId).then((networkSelectionMode) => {
+      Logger.info(`${TAG}, aboutToAppear networkSelectionMode = ${JSON.stringify(networkSelectionMode)}`)
+      let result = new ResultModel('NetworkSelectionMode', JSON.stringify(networkSelectionMode))
+      this.statusArray.push(result)
     })
-    this.radioStatus.getISOCountryCodeForNetwork(this.slotId, (result) => {
-      self.statusArray.push({ title: 'ISOCountryCodeForNetwork', value: result })
+
+    this.radioStatus.getISOCountryCodeForNetwork(this.slotId).then((iSOCountryCode) => {
+      Logger.info(`${TAG}, aboutToAppear iSOCountryCode = ${JSON.stringify(iSOCountryCode)}`)
+      let result = new ResultModel('ISOCountryCodeForNetwork', JSON.stringify(iSOCountryCode))
+      this.statusArray.push(result)
     })
   }
 
@@ -65,7 +79,7 @@ export struct PanelView {
     .dragBar(true)
     .halfHeight(500)
     .onChange((value: any) => {
-      console.info(`width:${value.width},height:${value.height},mode:${value.mode}`)
+      Logger.info(`${TAG}, onChange`)
     })
     .onClick(() => {
       this.show = !this.show

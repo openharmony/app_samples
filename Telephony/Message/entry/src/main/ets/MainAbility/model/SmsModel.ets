@@ -14,7 +14,7 @@
  */
 
 import sms from '@ohos.telephony.sms'
-import HiLog from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 
 const TAG: string = `[SmsModel]`
 
@@ -23,12 +23,12 @@ export default class SmsModel {
     const specification = '3gpp'
     const pdu = [0x08, 0x91] // 以数组的形式显示协议数据单元（PDU），类型为number
     const shortMessage = await sms.createMessage(pdu, specification)
-    HiLog.info(TAG, `createMessageCallback: shortMessage = ${JSON.stringify(shortMessage)}`)
+    Logger.info(`${TAG}, createMessageCallback: shortMessage = ${JSON.stringify(shortMessage)}`)
     return shortMessage
   }
 
   sendMessage(slotId, content, destinationHost, serviceCenter, destinationPort, handleSend, handleDelivery) {
-    HiLog.info(TAG, `sendMessage start ${slotId}, ${content}, ${destinationHost}, ${serviceCenter}, ${destinationPort}`)
+    Logger.info(`${TAG}, sendMessage start ${slotId} ${content} ${destinationHost} ${serviceCenter} ${destinationPort}`)
     const options =
       {
         slotId: slotId,
@@ -37,34 +37,34 @@ export default class SmsModel {
         serviceCenter: serviceCenter,
         destinationPort: destinationPort,
         sendCallback(err, data) {
-          HiLog.info(TAG, `sendCallback: data = ${JSON.stringify(data)},err = ${JSON.stringify(err)}`)
+          Logger.info(`${TAG}, sendCallback: data = ${JSON.stringify(data)} err = ${JSON.stringify(err)}`)
           handleSend(err, data)
         },
         deliveryCallback(err, data) {
-          HiLog.info(TAG, `deliveryCallback: data = ${JSON.stringify(data)}, err = ${JSON.stringify(err)}`)
+          Logger.info(`${TAG}, deliveryCallback: data = ${JSON.stringify(data)} err = ${JSON.stringify(err)}`)
           handleDelivery(err, data)
         }
       }
 
     sms.sendMessage(options)
-    HiLog.info(TAG, `sendMessage end`)
+    Logger.info(`${TAG}, sendMessage end`)
   }
 
   async getDefaultSmsSlotId() {
     const defaultSmsSlotId = await sms.getDefaultSmsSlotId()
-    HiLog.info(TAG, `getDefaultSmsSlotId: defaultSmsSlotId = ${defaultSmsSlotId}`)
+    Logger.info(`${TAG}, getDefaultSmsSlotId: defaultSmsSlotId = ${defaultSmsSlotId}`)
     return defaultSmsSlotId
   }
 
   async setSmscAddr(slotId, smscAddr) {
     const serviceCenter = await sms.setSmscAddr(slotId, smscAddr)
-    HiLog.info(TAG, `setSmscAddr: serviceCenter = ${JSON.stringify(serviceCenter)}`)
+    Logger.info(`${TAG}, setSmscAddr: serviceCenter = ${JSON.stringify(serviceCenter)}`)
     return serviceCenter
   }
 
   async getSmscAddr(slotId) {
     const serviceCenter = await sms.getSmscAddr(slotId)
-    HiLog.info(TAG, `getSmscAddr: serviceCenter = ${JSON.stringify(serviceCenter)}`)
+    Logger.info(`${TAG}, getSmscAddr: serviceCenter = ${JSON.stringify(serviceCenter)}`)
     return serviceCenter
   }
 }

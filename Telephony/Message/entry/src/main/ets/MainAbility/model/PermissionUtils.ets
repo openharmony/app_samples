@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import HiLog from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import featureAbility from '@ohos.ability.featureAbility'
 
 const PERMISSION_NAME: string = 'ohos.permission.SEND_MESSAGES'
@@ -21,9 +21,9 @@ const TAG: string = '[Permission]'
 const requestCode: number = 3
 
 export async function grantPermission() {
-  HiLog.info(TAG, `grantPermission`)
+  Logger.info(`${TAG}, grantPermission`)
   const context = featureAbility.getContext()
   context.requestPermissionsFromUser([PERMISSION_NAME], requestCode, function (result) {
-    HiLog.info(TAG, `grantPermission, requestPermissionsFromUser, result = ${JSON.stringify(result)}`)
+    Logger.info(`${TAG}, grantPermission requestPermissionsFromUser result = ${JSON.stringify(result)}`)
   })
 }

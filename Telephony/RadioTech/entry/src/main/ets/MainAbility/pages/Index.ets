@@ -13,9 +13,13 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
 import { InfoView } from '../common/InfoView'
 import { PanelView } from '../common/PanelView'
 import { RadioStatus } from '../model/RadioStatus'
+import { ResultModel } from '../model/ResultModel'
+
+const TAG = '[Index]'
 
 @Entry
 @Component
@@ -23,16 +27,24 @@ struct Index {
   @State show: boolean = false
   @State slotId: number = 0
   @State title: string = 'SIM1 status'
-  @State networkArray: Array<any> = []
+  @State networks: Array<ResultModel> = []
   @State radioStatus: RadioStatus = new RadioStatus()
 
   aboutToAppear() {
-    let self = this
-    this.radioStatus.getNetworkState((result) => {
-      self.networkArray.push({ title: 'NetworkState', value: result })
+    let networkState = this.radioStatus.getNetworkState().then((networkState) => {
+      Logger.info(`${TAG}, aboutToAppear networkState = ${JSON.stringify(networkState)}`)
+      let result = new ResultModel('NetworkState', networkState)
+      this.networks.push(result)
     })
-    this.radioStatus.getRadioOn((result) => {
-      self.networkArray.push({ title: 'IsRadioOn', value: result })
+
+    this.radioStatus.getRadioOn().then((radioOn) => {
+      Logger.info(`${TAG}, aboutToAppear radioOn = ${JSON.stringify(radioOn)}`)
+      let result = new ResultModel('IsRadioOn', radioOn.toString())
+      this.networks.push(result)
+    }).catch(error => {
+      Logger.error(`${TAG}, aboutToAppear radioOn error->${JSON.stringify(error)}`)
+      let result = new ResultModel('IsRadioOn', `error:${JSON.stringify(error)}`)
+      this.networks.push(result)
     })
   }
 
@@ -51,7 +63,7 @@ struct Index {
           Column() {
             InfoView({ show: $show, slotId: $slotId, title: $title })
             Divider().color(Color.Grey)
-            ForEach(this.networkArray, item => {
+            ForEach(this.networks, item => {
               Column() {
                 Text(item.title)
                   .width('100%')
