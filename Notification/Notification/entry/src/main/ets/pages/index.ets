@@ -142,7 +142,7 @@ let subscriber = {
   onCancel: function (data) {
     let req = data.request;
     Logger.info(TAG, `===>onCancel callback req.id: ${req.id}`);
-    let message = `onCancel callback data: ${data}`;
+    let message = `onCancel callback data: ${req.id}`;
     prompt.showToast({ message });
   },
   onUpdate: function (data) {
@@ -169,24 +169,24 @@ let subscriber = {
 
 function subscribe() {
   //this.sub = subscriber;
-  notify.subscribe(subscriber, (err, data) => { // callback形式调用异步接口
+  notify.subscribe(subscriber, (err) => { // callback形式调用异步接口
     if (err.code) {
       Logger.error(TAG, `===>failed to subscribe because ${JSON.stringify(err)}`);
       return;
     }
-    Logger.info(TAG, `===>subscribeTest success : ${JSON.stringify(data)}`);
+    Logger.info(TAG, '===>subscribeTest success');
     let message = "subscribe success";
     prompt.showToast({ message });
   });
 }
 
 function unSubscribe() {
-  notify.unsubscribe(subscriber, (err, data) => {
+  notify.unsubscribe(subscriber, (err) => {
     if (err.code) {
       Logger.error(TAG, `===>failed to unsubscribe because ${JSON.stringify(err)}`);
       return;
     }
-    Logger.info(TAG, `===>unsubscribeTest success : ${JSON.stringify(data)}`);
+    Logger.info(TAG, '===>unsubscribeTest success');
     let message = "unsubscribe success";
     prompt.showToast({ message });
   });
