@@ -14,10 +14,18 @@
     },
     {
       "name": "username",
+      "value": "*用户名: "
+    },
+    {
+      "name": "unusername",
       "value": "用户名: "
     },
     {
       "name": "password",
+      "value": "*密码: "
+    },
+    {
+      "name": "unpassword",
       "value": "密码: "
     },
     {
@@ -50,7 +58,7 @@
     },
     {
       "name": "password_message",
-      "value": "用户名与密码不一致"
+      "value": "账号或者密码不符"
     },
     {
       "name": "password_error",
@@ -70,6 +78,10 @@
     },
     {
       "name": "confirm_password",
+      "value": "*确认密码: "
+    },
+    {
+      "name": "unconfirm_password",
       "value": "确认密码: "
     },
     {
@@ -107,6 +119,66 @@
     {
       "name": "cancel",
       "value": "取消"
+    },
+    {
+      "name": "blank",
+      "value": "用户名为空"
+    },
+    {
+      "name": "password_blank",
+      "value": "密码为空"
+    },
+    {
+      "name": "switch_app",
+      "value": "切换应用"
+    },
+    {
+      "name": "has",
+      "value": "用户名已存在"
+    },
+    {
+      "name": "userpassword",
+      "value": "新密码与之前一样"
+    },
+    {
+      "name": "routerback",
+      "value": "请确认是否退出"
+    },
+    {
+      "name": "prompt_username",
+      "value": "输入数字、字母或下划线，15位"
+    },
+    {
+      "name": "prompt_email",
+      "value": "输入邮箱格式，18位"
+    },
+    {
+      "name": "prompt_signature",
+      "value": "输入签名，18位"
+    },
+    {
+      "name": "prompt_password",
+      "value": "输入密码，6-18位"
+    },
+    {
+      "name": "prompt_confirm_password",
+      "value": "再次输入密码，6-18位"
+    },
+    {
+      "name": "min_password",
+      "value": "密码长度小于6位"
+    },
+    {
+      "name": "emailinfo",
+      "value": "邮箱格式错误"
+    },
+    {
+      "name": "register_info",
+      "value": "注册账号成功"
+    },
+    {
+      "name": "modify_info",
+      "value": "修改信息成功"
     }
   ]
 }

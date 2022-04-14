@@ -14,7 +14,7 @@
  */
 
 import router from '@system.router'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
@@ -86,7 +86,6 @@ export struct LoginInfo {
       }
       .padding({ left: 5 })
 
-
       Button($r('app.string.register'))
         .margin(10)
         .width('60%')
@@ -94,7 +93,7 @@ export struct LoginInfo {
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
         .onClick(() => {
-          router.push({
+          router.replace({
             uri: 'pages/Register',
             params: {
               bundleName: this.bundleName
@@ -109,12 +108,40 @@ export struct LoginInfo {
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
         .onClick(async () => {
-          let result = await this.storage.getStorageValue(this.name)
-          let effect = await this.storage.getStorageValue(this.bundleName)
-          HiLogUtil.log(TAG, `getStorageValue result is ${result}`)
-          HiLogUtil.log(TAG, `getStorageValue effect is ${effect}`)
-          if (result === this.password && effect === 'true') {
-            router.push({
+          let result = await this.storage.getStorageValue(this.name, this.bundleName)
+          Logger.info(TAG, `This result is ${result}`)
+          let effect = await this.storage.getStorageValue(this.bundleName, this.bundleName)
+          Logger.info(TAG, `getStorageValue effect is ${effect}`)
+          if (this.name === '') {
+            AlertDialog.show(
+              {
+                message: $r('app.string.blank'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.password === '') {
+            AlertDialog.show(
+              {
+                message: $r('app.string.password_blank'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (result === this.password && effect === 'true') {
+            router.replace({
               uri: 'pages/Account',
               params: {
                 username: this.name,
@@ -128,11 +155,11 @@ export struct LoginInfo {
                 confirm: {
                   value: $r('app.string.close'),
                   action: () => {
-                    HiLogUtil.log(TAG, `AlertDialog enter`)
+                    Logger.info(TAG, `AlertDialog enter`)
                   }
                 },
                 cancel: () => {
-                  HiLogUtil.log(TAG, `AlertDialog close`)
+                  Logger.info(TAG, `AlertDialog close`)
                 }
               })
           }

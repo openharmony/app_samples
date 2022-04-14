@@ -24,7 +24,7 @@ struct Login {
 
   build() {
     Column() {
-      NavigationBar({ title: $r('app.string.register_login'), flag: true })
+      NavigationBar({ title: $r('app.string.register_login'), flag: true, url: 'pages/Index' })
 
       LoginInfo({ bundleName: this.bundleName })
     }

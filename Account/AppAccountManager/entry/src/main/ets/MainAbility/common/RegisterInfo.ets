@@ -14,7 +14,7 @@
  */
 
 import router from '@system.router'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
@@ -22,43 +22,61 @@ const TAG = '[RegisterInfo]'
 
 @Component
 export struct RegisterInfo {
+  @State passWord: string = ''
+  @State username: string = ''
   @State emailInfo: string = ''
   @State signature: string = ''
-  @State passWord: string = ''
   @State confirmPassword: string = ''
-  private username: string
   private bundleName: string
   private storage: AccountData = AccountData.getInstance()
   private accountModel: AccountModel = new AccountModel()
   @State dataSet: Array<{
     text: Resource,
     inputType: InputType,
-    event: number
+    length: number,
+    event: number,
+    inputFilter: string,
+    promptText: Resource
   }> = [
     {
       text: $r('app.string.username'),
       inputType: InputType.Normal,
-      event: 0
+      length: 15,
+      event: 0,
+      inputFilter: '^[A-Za-z0-9_]+$',
+      promptText: $r('app.string.prompt_username')
     },
     {
       text: $r('app.string.email'),
       inputType: InputType.Email,
-      event: 1
+      length: 18,
+      event: 1,
+      inputFilter: '',
+      promptText: $r('app.string.prompt_email')
     },
     {
       text: $r('app.string.signature'),
       inputType: InputType.Normal,
-      event: 2
+      length: 18,
+      event: 2,
+      inputFilter: '',
+      promptText: $r('app.string.prompt_signature')
     },
     {
       text: $r('app.string.password'),
       inputType: InputType.Password,
-      event: 3
+      length: 18,
+      event: 3,
+      inputFilter: '',
+      promptText: $r('app.string.prompt_password')
     },
     {
       text: $r('app.string.confirm_password'),
       inputType: InputType.Password,
-      event: 4
+      length: 18,
+      event: 4,
+      inputFilter: '',
+      promptText: $r('app.string.prompt_confirm_password')
     }
   ]
 
@@ -86,41 +104,51 @@ export struct RegisterInfo {
             .width('25%')
             .textAlign(TextAlign.End)
             .backgroundColor('#ffffff')
-          TextInput({ placeholder: 'xxxxx' })
-            .margin(10)
-            .width('55%')
-            .fontSize(20)
-            .maxLength(20)
-            .type(item.inputType)
-            .fontWeight(FontWeight.Bold)
-            .placeholderFont({ size: 16, weight: FontWeight.Normal })
-            .onChange((value: string) => {
-              switch (item.event) {
-                case 0:
-                  this.username = value
-                  HiLogUtil.log(TAG, `addAccount enter`)
-                  this.accountModel.addAccount(this.username)
-                  break
-                case 1:
-                  this.emailInfo = value
-                  HiLogUtil.log(TAG, `setAccountCredential enter`)
-                  this.accountModel.setAccountCredential(this.username, 'email', this.emailInfo)
-                  break
-                case 2:
-                  this.signature = value
-                  HiLogUtil.log(TAG, `setAccountExtraInfo enter`)
-                  this.accountModel.setAccountExtraInfo(this.username, this.signature)
-                  break
-                case 3:
-                  this.passWord = value
-                  break
-                case 4:
-                  this.confirmPassword = value
-                  break
-                default:
-                  break
-              }
-            })
+          Column() {
+            Text(item.promptText)
+              .fontSize(14)
+              .width('80%')
+              .fontColor('#ffb0b0b0')
+              .textAlign(TextAlign.Center)
+
+            TextInput({ placeholder: 'xxxxx' })
+              .margin(10)
+              .width('55%')
+              .fontSize(20)
+              .maxLength(20)
+              .type(item.inputType)
+              .maxLength(item.length)
+              .inputFilter(item.inputFilter)
+              .fontWeight(FontWeight.Bold)
+              .placeholderFont({ size: 16, weight: FontWeight.Normal })
+              .onChange((value: string) => {
+                switch (item.event) {
+                  case 0:
+                    this.username = value
+                    Logger.info(TAG, `addAccount enter ${this.username}`)
+                    this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
+                    break
+                  case 1:
+                    this.emailInfo = value
+                    Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
+                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+                    break
+                  case 2:
+                    this.signature = value
+                    Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
+                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+                    break
+                  case 3:
+                    this.passWord = value
+                    break
+                  case 4:
+                    this.confirmPassword = value
+                    break
+                  default:
+                    break
+                }
+              })
+          }
         }
         .margin(5)
       }, item => JSON.stringify(item))
@@ -131,31 +159,116 @@ export struct RegisterInfo {
         .fontSize(20)
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
-        .onClick(() => {
-          if (this.confirmPassword !== this.passWord) {
+        .onClick(async () => {
+          let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+          let result = await this.storage.hasStorageValue(this.username, this.bundleName)
+          Logger.info(TAG, `This result is ${result}`)
+          if (this.username === '') {
+            AlertDialog.show(
+              {
+                message: $r('app.string.blank'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (result) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.has'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.emailInfo !== '' && !res.test(this.emailInfo)) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.emailinfo'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.passWord === '') {
+            AlertDialog.show(
+              {
+                message: $r('app.string.password_blank'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.passWord !== '' && this.passWord.length < 6) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.min_password'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.confirmPassword !== this.passWord) {
             AlertDialog.show(
               {
                 message: $r('app.string.password_error'),
                 confirm: {
                   value: $r('app.string.close'),
                   action: () => {
-                    HiLogUtil.log(TAG, `AlertDialog enter`)
+                    Logger.info(TAG, `AlertDialog enter`)
                   }
                 },
                 cancel: () => {
-                  HiLogUtil.log(TAG, `AlertDialog close`)
+                  Logger.info(TAG, `AlertDialog close`)
                 }
               })
           } else {
-            this.accountModel.setAssociatedData(this.username, 'key', this.passWord)
-            this.storage.putStorageValue(this.username, this.passWord)
-            this.storage.putStorageValue(this.bundleName, 'true')
-            router.push({
-              uri: 'pages/Login',
-              params: {
-                bundleName: this.bundleName
-              }
-            })
+            this.accountModel.setAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`, this.passWord)
+            this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
+            this.storage.putStorageValue(this.bundleName, 'true', this.bundleName)
+            AlertDialog.show(
+              {
+                message: $r('app.string.register_info'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    router.replace({
+                      uri: 'pages/Login',
+                      params: {
+                        bundleName: this.bundleName
+                      }
+                    })
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
           }
         })
     }

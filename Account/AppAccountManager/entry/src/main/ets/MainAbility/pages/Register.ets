@@ -25,7 +25,7 @@ struct Register {
   build() {
     Scroll() {
       Column() {
-        NavigationBar({ title: $r('app.string.register'), flag: true })
+        NavigationBar({ title: $r('app.string.register'), flag: true, url: 'pages/Login', bundleName: this.bundleName })
 
         RegisterInfo({ bundleName: this.bundleName })
       }

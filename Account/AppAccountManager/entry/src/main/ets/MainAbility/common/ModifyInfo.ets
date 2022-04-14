@@ -14,7 +14,7 @@
  */
 
 import router from '@system.router'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
@@ -22,44 +22,50 @@ const TAG = '[ModifyInfo]'
 
 @Component
 export struct ModifyInfo {
+  @State passWord: string = ''
   @State emailInfo: string = ''
   @State signature: string = ''
   @State confirmPassword: string = ''
   private username: string
-  private passWord: string
   private bundleName: string
   private storage: AccountData = AccountData.getInstance()
   private accountModel: AccountModel = new AccountModel()
   @State dataSet: Array<{
     text: Resource,
     inputType: InputType,
+    length: number,
     event: number
+    promptText: Resource
   }> = [
     {
       text: $r('app.string.email'),
       inputType: InputType.Email,
-      event: 0
+      length: 18,
+      event: 0,
+      promptText: $r('app.string.prompt_email')
     },
     {
       text: $r('app.string.signature'),
       inputType: InputType.Normal,
-      event: 1
+      length: 18,
+      event: 1,
+      promptText: $r('app.string.prompt_signature')
     },
     {
-      text: $r('app.string.password'),
+      text: $r('app.string.unpassword'),
       inputType: InputType.Password,
-      event: 2
+      length: 18,
+      event: 2,
+      promptText: $r('app.string.prompt_password')
     },
     {
-      text: $r('app.string.confirm_password'),
+      text: $r('app.string.unconfirm_password'),
       inputType: InputType.Password,
-      event: 3
+      length: 18,
+      event: 3,
+      promptText: $r('app.string.prompt_confirm_password')
     }
   ]
-
-  aboutToAppear() {
-    this.confirmPassword = this.passWord
-  }
 
   build() {
     Column() {
@@ -78,7 +84,7 @@ export struct ModifyInfo {
       .margin(5)
 
       Row() {
-        Text($r('app.string.username'))
+        Text($r('app.string.unusername'))
           .margin(10)
           .fontSize(18)
           .width('25%')
@@ -91,7 +97,6 @@ export struct ModifyInfo {
       }
       .margin(5)
 
-
       ForEach(this.dataSet, item => {
         Row() {
           Text(item.text)
@@ -99,36 +104,46 @@ export struct ModifyInfo {
             .fontSize(18)
             .width('25%')
             .textAlign(TextAlign.End)
-          TextInput({ placeholder: 'xxxxx' })
-            .margin(10)
-            .width('55%')
-            .fontSize(20)
-            .maxLength(20)
-            .type(item.inputType)
-            .fontWeight(FontWeight.Bold)
-            .placeholderFont({ size: 16, weight: FontWeight.Normal })
-            .onChange((value: string) => {
-              switch (item.event) {
-                case 0:
-                  this.emailInfo = value
-                  HiLogUtil.log(TAG, `setAccountCredential enter`)
-                  this.accountModel.setAccountCredential(this.username, 'email', this.emailInfo)
-                  break
-                case 1:
-                  this.signature = value
-                  HiLogUtil.log(TAG, `setAccountExtraInfo enter`)
-                  this.accountModel.setAccountExtraInfo(this.username, this.signature)
-                  break
-                case 2:
-                  this.passWord = value
-                  break
-                case 3:
-                  this.confirmPassword = value
-                  break
-                default:
-                  break
-              }
-            })
+            .backgroundColor('#ffffff')
+          Column() {
+            Text(item.promptText)
+              .fontSize(14)
+              .width('80%')
+              .fontColor('#ffb0b0b0')
+              .textAlign(TextAlign.Center)
+
+            TextInput({ placeholder: 'xxxxx' })
+              .margin(10)
+              .width('55%')
+              .fontSize(20)
+              .maxLength(20)
+              .type(item.inputType)
+              .maxLength(item.length)
+              .fontWeight(FontWeight.Bold)
+              .placeholderFont({ size: 16, weight: FontWeight.Normal })
+              .onChange((value: string) => {
+                switch (item.event) {
+                  case 0:
+                    this.emailInfo = value
+                    Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
+                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+                    break
+                  case 1:
+                    this.signature = value
+                    Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
+                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+                    break
+                  case 2:
+                    this.passWord = value
+                    break
+                  case 3:
+                    this.confirmPassword = value
+                    break
+                  default:
+                    break
+                }
+              })
+          }
         }
         .margin(5)
       }, item => JSON.stringify(item))
@@ -139,30 +154,109 @@ export struct ModifyInfo {
         .fontSize(20)
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
-        .onClick(() => {
-          if (this.confirmPassword != this.passWord) {
+        .onClick(async () => {
+          let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+          let userPassWord = await this.storage.getStorageValue(this.username, this.bundleName)
+          Logger.info(TAG, `This userPassWord is ${userPassWord}`)
+          Logger.info(TAG, `This passWord is ${this.passWord}`)
+          if (this.emailInfo !== '' && !res.test(this.emailInfo)) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.emailinfo'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    this.emailInfo = ''
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.passWord !== '' && this.passWord.length < 6) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.min_password'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.passWord !== '' && this.passWord === userPassWord) {
+            AlertDialog.show(
+              {
+                message: $r('app.string.userpassword'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    Logger.info(TAG, `AlertDialog enter`)
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          } else if (this.confirmPassword !== this.passWord) {
             AlertDialog.show(
               {
                 message: $r('app.string.password_error'),
                 confirm: {
                   value: $r('app.string.close'),
                   action: () => {
-                    HiLogUtil.log(TAG, `AlertDialog enter`)
+                    Logger.info(TAG, `AlertDialog enter`)
                   }
                 },
                 cancel: () => {
-                  HiLogUtil.log(TAG, `AlertDialog close`)
+                  Logger.info(TAG, `AlertDialog close`)
                 }
               })
-          } else {
-            this.storage.putStorageValue(this.username, this.passWord)
-            router.push({
-              uri: 'pages/Account',
-              params: {
-                bundleName: this.bundleName,
-                username: this.username
-              }
-            })
+          } else if (this.passWord !== '' && this.confirmPassword !== '') {
+            this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
+            AlertDialog.show(
+              {
+                message: $r('app.string.modify_info'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    router.replace({
+                      uri: 'pages/Account',
+                      params: {
+                        bundleName: this.bundleName,
+                        username: this.username
+                      }
+                    })
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
+          }
+          else {
+            AlertDialog.show(
+              {
+                message: $r('app.string.modify_info'),
+                confirm: {
+                  value: $r('app.string.close'),
+                  action: () => {
+                    router.replace({
+                      uri: 'pages/Account',
+                      params: {
+                        bundleName: this.bundleName,
+                        username: this.username
+                      }
+                    })
+                  }
+                },
+                cancel: () => {
+                  Logger.info(TAG, `AlertDialog close`)
+                }
+              })
           }
         })
     }

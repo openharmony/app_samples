@@ -14,10 +14,18 @@
     },
     {
       "name": "username",
+      "value": "*username: "
+    },
+    {
+      "name": "unusername",
       "value": "username: "
     },
     {
       "name": "password",
+      "value": "*password: "
+    },
+    {
+      "name": "unpassword",
       "value": "password: "
     },
     {
@@ -50,7 +58,7 @@
     },
     {
       "name": "password_message",
-      "value": "Username and password inconsistent"
+      "value": "Account or password does not match"
     },
     {
       "name": "password_error",
@@ -70,6 +78,10 @@
     },
     {
       "name": "confirm_password",
+      "value": "*Confirm Password: "
+    },
+    {
+      "name": "unconfirm_password",
       "value": "Confirm Password: "
     },
     {
@@ -107,6 +119,66 @@
     {
       "name": "cancel",
       "value": "Cancel"
+    },
+    {
+      "name": "blank",
+      "value": "Username is null"
+    },
+    {
+      "name": "password_blank",
+      "value": "Password is null"
+    },
+    {
+      "name": "switch_app",
+      "value": "Switch app"
+    },
+    {
+      "name": "has",
+      "value": "Username already exists"
+    },
+    {
+      "name": "userpassword",
+      "value": "The new password is the same as before"
+    },
+    {
+      "name": "routerback",
+      "value": "Please confirm whether to log out"
+    },
+    {
+      "name": "prompt_username",
+      "value": "Input numbers, letters or underscores, 15 digits"
+    },
+    {
+      "name": "prompt_email",
+      "value": "Input mailbox format, 18 bits"
+    },
+    {
+      "name": "prompt_signature",
+      "value": "Input signature, 18 bits"
+    },
+    {
+      "name": "prompt_password",
+      "value": "Input password, 6-18 digits"
+    },
+    {
+      "name": "prompt_confirm_password",
+      "value": "Input the password again, 6-18 digits"
+    },
+    {
+      "name": "min_password",
+      "value": "Password length is less than 6 characters"
+    },
+    {
+      "name": "emailinfo",
+      "value": "Email format error"
+    },
+    {
+      "name": "register_info",
+      "value": "Successful account registration"
+    },
+    {
+      "name": "modify_info",
+      "value": "Modify information successfully"
     }
   ]
 }
