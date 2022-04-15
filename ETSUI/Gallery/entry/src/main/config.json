@@ -1,0 +1,164 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.etsgallery",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "ohos.sample.etsgallery",
+    "name": ".MyApplication",
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:icon",
+        "description": "$string:description_mainability",
+        "formsEnabled": false,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/index",
+          "pages/home",
+          "pages/animation/showAnimation/showAnimation",
+          "pages/animation/componentTransition/componentTransition",
+          "pages/animation/shareElementTransition/shareElementTransitionFrom",
+          "pages/animation/shareElementTransition/shareElementTransitionTo",
+          "pages/animation/traAnimation/traAnimationFrom",
+          "pages/animation/traAnimation/traAnimationTo",
+          "pages/animation/pathAnimation/pathAnimation",
+          "pages/animation/attrAnimation/attrAnimation",
+          "pages/animation/matrixTransition/matrixTransition",
+          "pages/animation/interpolation/interpolation",
+          "pages/basicComponent/blank/blank",
+          "pages/basicComponent/button/button",
+          "pages/basicComponent/checkBoxGroup/checkBoxGroup",
+          "pages/basicComponent/dataPanel/dataPanel",
+          "pages/basicComponent/divider/divider",
+          "pages/basicComponent/gauge/gauge",
+          "pages/basicComponent/image/image",
+          "pages/basicComponent/imageAnimator/imageAnimator",
+          "pages/basicComponent/marquee/marquee",
+          "pages/basicComponent/progress/progress",
+          "pages/basicComponent/qrcode/qrcode",
+          "pages/basicComponent/radio/radio",
+          "pages/basicComponent/slider/slider",
+          "pages/basicComponent/rating/rating",
+          "pages/basicComponent/text/text",
+          "pages/basicComponent/textArea/textArea",
+          "pages/basicComponent/textInput/textInput",
+          "pages/basicComponent/toggle/toggle",
+          "pages/containerComponent/alphabetIndexer/alphabetIndexer",
+          "pages/containerComponent/badge/badge",
+          "pages/containerComponent/column/column",
+          "pages/containerComponent/columnSplit/columnSplit",
+          "pages/containerComponent/flex/flex",
+          "pages/containerComponent/gridContainer/gridContainer",
+          "pages/containerComponent/navigator/navigator",
+          "pages/containerComponent/navigator/detailPage",
+          "pages/containerComponent/panel/panel",
+          "pages/containerComponent/row/row",
+          "pages/containerComponent/rowSplit/rowSplit",
+          "pages/containerComponent/scroll/scroll",
+          "pages/containerComponent/scrollBar/scrollBar",
+          "pages/containerComponent/sideBarContainer/sideBarContainer",
+          "pages/containerComponent/stack/stack",
+          "pages/containerComponent/swiper/swiper",
+          "pages/containerComponent/tabs/tabs",
+          "pages/containerComponent/navigation/navigation",
+          "pages/drawComponent/circlePath/circlePath",
+          "pages/uiStateManagement/management/index",
+          "pages/gesture/basicGesture",
+          "pages/colorPicker/setColor",
+          "pages/template/template",
+          "pages/canvas/canvas",
+          "pages/containerComponent/template/containerComponentTemplate",
+          "pages/commonProperties/layoutWeight/layoutWeight",
+          "pages/commonProperties/position/position",
+          "pages/commonProperties/border/border",
+          "pages/commonProperties/background/background",
+          "pages/commonProperties/polymorphicStyle/polymorphicStyle",
+          "pages/commonProperties/polymorphicStyle/shoppingCar",
+          "pages/commonProperties/colorGradient/colorGradient",
+          "pages/containerComponent/stepper/stepper",
+          "pages/commonProperties/boxModel/boxModel",
+          "pages/containerComponent/counter/counter",
+          "pages/containerComponent/list/list",
+          "pages/commonProperties/overlay/overlay",
+          "pages/commonProperties/shapeClip/shapeClip",
+          "pages/commonProperties/dialog/dialog",
+          "pages/commonProperties/popup/popup",
+          "pages/commonProperties/menu/menu",
+          "pages/commonProperties/transform/transform",
+          "pages/basicComponent/select/select",
+          "pages/uiStateManagement/management/appStorage",
+          "pages/uiStateManagement/categoriesManagement/foodDetail",
+          "pages/uiStateManagement/categoriesManagement/application",
+          "pages/renderControlSyntax/conditionalRendering/conditionalRendering",
+          "pages/renderControlSyntax/lazyForEach/lazyForEach",
+          "pages/renderControlSyntax/conditionsLoops/conditionsLoops",
+          "pages/generalEvent/clickEvent",
+          "pages/generalEvent/touchEvent",
+          "pages/generalEvent/dragEvent",
+          "pages/generalEvent/keyEvent",
+          "pages/generalEvent/mouseEvent",
+          "pages/generalEvent/appearEvent",
+          "pages/generalEvent/clickBall",
+          "pages/generalEvent/gestureLock",
+          "pages/canvasComponent/canvas",
+          "pages/gesture/swipeGesture",
+          "pages/gesture/gestureMethod",
+          "pages/commonProperties/focus/focus",
+          "pages/containerComponent/gridComputed/gridComputed",
+          "pages/generalEvent/keybordEvent",
+          "pages/basicComponent/textClock/textClock",
+          "pages/basicComponent/textTimer/textTimer",
+          "pages/basicComponent/textPicker/textPicker",
+          "pages/media/video/video",
+          "pages/media/web/browser",
+          "pages/basicComponent/loadingProgress/loadingProgress"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}

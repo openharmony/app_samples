@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "EtsGallery"
+    },
+    {
+      "name": "description_mainability",
+      "value": "ETS_Empty Ability"
+    },
+    {
+      "name": "first_description",
+      "value": "ArkUI是一套构建分布式应用界面的声明式UI开发框架。它使用极简的UI信息语法、丰富的UI组件、以及实时界面预览工具，帮助您提升HarmonyOS应用界面开发效率30%。您只需使用一套TS/JS API，就能在多个HarmonyOS设备上提供生动而流畅的用户界面体验。"
+    }
+  ]
+}

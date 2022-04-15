@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .center{
+       margin-top: 10%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    .center .logo{
+        padding: .625rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+</style>
+<body>
+<div class="center" id="test">
+    <div class="logo">
+        <img src="./baidu.png" alt="" width="100%">
+
+    </div>
+    <p>百度</p>
+</div>
+<script>
+        function test() {
+            var btn=document.querySelector('.center')
+            btn.addEventListener('click',()=>{
+                window.open('https://m.baidu.com/')
+            })
+        }
+</script>
+</body>
+</html>
