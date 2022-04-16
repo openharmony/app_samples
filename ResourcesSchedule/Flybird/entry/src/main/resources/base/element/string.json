@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "connect_service",
+      "value": "Connect service"
+    },
+    {
+      "name": "disconnect_service",
+      "value": "Disconnect service"
+    },
+    {
+      "name": "set_alarm",
+      "value": "set game alarm"
+    },
+    {
+      "name": "set_calendar",
+      "value": "ser game calendar"
+    },
+    {
+      "name": "entry_MainAbility",
+      "value": "Fly Bird"
+    },
+    {
+      "name": "input_placeholder",
+      "value": "Input the input string"
+    },
+    {
+      "name": "ServiceAbility_desc",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "start_game",
+      "value": "start game"
+    }
+  ]
+}
