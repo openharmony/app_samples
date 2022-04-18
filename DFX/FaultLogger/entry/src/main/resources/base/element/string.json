@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "FaultLogger"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "FaultLogger"
+    },
+    {
+      "name": "create_fault",
+      "value": "Create Fault"
+    },
+    {
+      "name": "select_fault_type",
+      "value": "Please select an fault type"
+    },
+    {
+      "name": "sure",
+      "value": "OK"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "catch_js_fault",
+      "value": "Catch JS_FAULT info"
+    },
+    {
+      "name": "catch_cpp_fault",
+      "value": "Catch CPP_FAULT info"
+    },
+    {
+      "name": "catch_app_freeze_fault",
+      "value": "Catch APP_FREEZE info"
+    },
+    {
+      "name": "catch_all_fault",
+      "value": "Catch NO_SPECIFIC info"
+    }
+  ]
+}

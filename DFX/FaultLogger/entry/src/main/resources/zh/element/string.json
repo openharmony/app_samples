@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "FaultLogger"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "FaultLogger"
+    },
+    {
+      "name": "select_fault_type",
+      "value": "请选择异常类型"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "create_fault",
+      "value": "构造异常"
+    },
+    {
+      "name": "catch_js_fault",
+      "value": "获取JS_FAULT异常"
+    },
+    {
+      "name": "catch_cpp_fault",
+      "value": "获取CPP_FAULT异常"
+    },
+    {
+      "name": "catch_app_freeze_fault",
+      "value": "获取APP_FREEZE异常"
+    },
+    {
+      "name": "catch_all_fault",
+      "value": "获取NO_SPECIFIC异常"
+    }
+  ]
+}
