@@ -75,6 +75,22 @@
     {
       "name": "insert_sim",
       "value": "请插入SIM卡"
+    },
+    {
+      "name": "no_message",
+      "value": "无信息"
+    },
+    {
+      "name": "input_message",
+      "value": "请输入信息"
+    },
+    {
+      "name": "repeat_contact",
+      "value": "重复联系人"
+    },
+    {
+      "name": "exist_contact",
+      "value": "联系人已存在"
     }
   ]
 }
