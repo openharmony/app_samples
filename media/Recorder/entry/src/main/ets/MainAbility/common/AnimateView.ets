@@ -24,8 +24,8 @@ export struct AnimateView {
   @State timeAdd: number = 0
   @State translate: string = '-0.2%'
   @State translateText: string = '-1%'
-  @State @Watch('onPlayChange') isPlay: boolean = false
-  @State @Watch('onResetChange') isReset: boolean = false
+  @Prop @Watch('onPlayChange') isPlay: boolean
+  @Prop @Watch('onResetChange') isReset: boolean
 
   onPlayChange() {
     console.info(`${TAG} onPlayChange`)

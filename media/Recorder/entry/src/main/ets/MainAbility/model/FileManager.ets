@@ -15,9 +15,9 @@
 import dataStorage from '@ohos.data.storage'
 import process from '@ohos.process'
 import fileIo from '@ohos.fileio'
+import featureAbility from '@ohos.ability.featureAbility'
 
-export const PATH = '/data/accounts/account_0/appdata/ohos.samples.etsrecorder/files/'
-
+export let PATH: string = ''
 const TAG = '[Record.FileManager]'
 
 export class FileManager {
@@ -28,8 +28,13 @@ export class FileManager {
   }
 
   initStorage() {
-    this.storage = dataStorage.getStorageSync(PATH + '/myStore')
-    console.info(`${TAG}create store success`)
+    let context = featureAbility.getContext()
+    context.getFilesDir().then(path=>{
+      PATH = path + '/'
+      console.info(`${TAG}create store PATH=${PATH}`)
+      this.storage = dataStorage.getStorageSync(path + '/myStore')
+      console.info(`${TAG}create store success`)
+    })
   }
 
   putToStore(recordList) {
@@ -90,7 +95,7 @@ export class FileManager {
       + this.tempNum(Time.getDate()) + "_" + this.tempNum(Time.getHours())
       + this.tempNum(Time.getMinutes()) + this.tempNum(Time.getSeconds())
     let file = PATH + fileName + ".wav"
-    let child = process.runCmd("touch " + file + ";chmod -R 777 /data/accounts/account_0/appdata/ohos.samples.etsrecorder/files/")
+    let child = process.runCmd("touch " + file + ";chmod -R 777 " + PATH)
     let result = child.wait()
     result.then(() => {
       callback(fileName, file, addDate)
