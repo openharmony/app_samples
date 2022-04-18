@@ -26,7 +26,7 @@
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）（API7）](ability/JsDistributedMusicPlayer)
   - [`DataAbility:`DataAbility的创建与访问（eTS）（API8）](ability/DataAbility)
   - [`ServiceAbility:`ServiceAbility的创建与使用（eTS）（API8）](ability/ServiceAbility)
-  - [`StageCallAbility:`StageAbility的创建与使用（eTS）（API8）](ability/StageCallAbility)
+  - [`StageCallAbility:`StageAbility的创建与使用（eTS）（API9）](ability/StageCallAbility)
   - [`FormAbility:`FA模型卡片（JS）（API8）](ability/FormAbility)
   - [`FormExtAbility:`Stage模型卡片（eTS JS）（API9）](ability/FormExtAbility)
   - [`FormLauncher:`卡片使用方（eTS）（API8）](ability/FormLauncher)

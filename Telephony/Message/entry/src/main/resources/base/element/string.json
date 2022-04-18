@@ -74,7 +74,23 @@
     },
     {
       "name": "insert_sim",
-      "value": "please insert sim card "
+      "value": "please insert sim card"
+    },
+    {
+      "name": "no_message",
+      "value": "no message"
+    },
+    {
+      "name": "input_message",
+      "value": "please input message"
+    },
+    {
+      "name": "repeat_contact",
+      "value": "repeat contact"
+    },
+    {
+      "name": "exist_contact",
+      "value": "The contact already exists"
     }
   ]
 }

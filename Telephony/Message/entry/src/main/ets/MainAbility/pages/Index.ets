@@ -46,12 +46,43 @@ struct Index {
     autoCancel: true
   })
 
-  onAccept(contact: Contact) {
-    Logger.info(`${TAG}, onAccept contact:${JSON.stringify(contact)}`)
-    let newContact = new Contact(contact.name, contact.destinationHost)
-    this.contacts.unshift(newContact)
-    Logger.info(`${TAG}, onClick-save contacts = ${JSON.stringify(this.contacts)}`)
+  judgeRepeat(contact: Contact) {
+    Logger.info(`${TAG}, judgeRepeat start`)
+    for (let i = 0; i < this.contacts.length; i++) {
+      if (this.contacts[i].name === contact.name && this.contacts[i].destinationHost === contact.destinationHost) {
+        Logger.info(`${TAG}, judgeRepeat ${this.contacts[i]}`)
+        Logger.info(`${TAG}, judgeRepeat return true`)
+        return true
+      }
+    }
+    Logger.info(`${TAG}, judgeRepeat return false`)
+    return false
+  }
 
+  onAccept(contact: Contact) {
+    Logger.info(`${TAG}, onAccept contact = ${JSON.stringify(contact)}`)
+    let result = this.judgeRepeat(contact)
+    Logger.info(`${TAG}, onAccept result = ${JSON.stringify(result)}`)
+    if (result === false) {
+      let newContact = new Contact(contact.name, contact.destinationHost)
+      this.contacts.unshift(newContact)
+      Logger.info(`${TAG}, onAccept-save contacts = ${JSON.stringify(this.contacts)}`)
+    } else {
+      Logger.info(`${TAG}, onAccept AlertDialog`)
+      AlertDialog.show(
+        {
+          title: $r('app.string.repeat_contact'),
+          message: $r('app.string.exist_contact'),
+          confirm: {
+            value: $r('app.string.determine'),
+            action: () => {
+              Logger.info(`${TAG}, judgeRepeat AlertDialog confirm`)
+            }
+          }
+        }
+      )
+      Logger.info(`${TAG}, onAccept result ==== true`)
+    }
   }
 
   aboutToAppear() {

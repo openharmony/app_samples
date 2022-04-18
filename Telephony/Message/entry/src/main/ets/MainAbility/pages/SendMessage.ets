@@ -27,7 +27,7 @@ const NO_SIM_STATE: number = -1
 @Entry
 @Component
 struct SendMessage {
-  @State clickable: boolean = true
+  @State clickable: boolean = false
   @State sendResult: string = ''
   @State serviceCenter: string = ''
   @State deliveryResult: string = ''
@@ -77,7 +77,7 @@ struct SendMessage {
         confirm: {
           value: $r('app.string.determine'),
           action: () => {
-            Logger.info(`${TAG}, AlertDialog confirm`)
+            Logger.info(`${TAG}, insert sim AlertDialog confirm`)
           }
         }
       }
@@ -202,12 +202,29 @@ struct SendMessage {
           .objectFit(ImageFit.Contain)
           .onClick(() => {
             Logger.info(`${TAG}, onClick sendMessage`)
-            this.messages.push(new Message(this.content, this.sendResult))
-            if (this.clickable) {
-              this.sendMessage()
-              this.content = ''
+            if (this.content === '') {
+              Logger.info(`${TAG}, onClick this.content===''`)
+              this.clickable = false
+              AlertDialog.show(
+                {
+                  title: $r('app.string.no_message'),
+                  message: $r('app.string.input_message'),
+                  confirm: {
+                    value: $r('app.string.determine'),
+                    action: () => {
+                      Logger.info(`${TAG}, input message AlertDialog confirm`)
+                    }
+                  }
+                }
+              )
             } else {
-              this.showDialog()
+              if (this.clickable) {
+                this.messages.push(new Message(this.content, this.sendResult))
+                this.sendMessage()
+                this.content = ''
+              } else {
+                this.showDialog()
+              }
             }
           })
       }
