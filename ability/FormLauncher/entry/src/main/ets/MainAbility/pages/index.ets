@@ -15,6 +15,7 @@
 
 import formHost from '@ohos.application.formHost';
 import Logger from '../../model/Logger';
+import prompt from '@ohos.prompt';
 
 @Entry
 @Component
@@ -71,6 +72,10 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.castTempForm(this.formId.toString()).then(() => {
+            prompt.showToast({
+              message: 'Transform success',
+              duration: 1000,
+            });
             Logger.log(`castTempForm successfully, formId: ${this.formId.toString()}`);
           });
         })
@@ -89,6 +94,10 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.requestForm(this.formId.toString()).then(() => {
+            prompt.showToast({
+              message: 'Update success',
+              duration: 1000,
+            });
             Logger.log(`updateForm successfully, formId: ${this.formId.toString()}`);
           });
         })
@@ -107,6 +116,10 @@ struct Index {
         .height('5%')
         .onClick(() => {
           formHost.deleteForm(this.formId.toString()).then(() => {
+            prompt.showToast({
+              message: 'Delete success',
+              duration: 1000,
+            });
             Logger.log(`deleteForm successfully, formId: ${this.formId.toString()}`);
             this.isShow = false;
           });
