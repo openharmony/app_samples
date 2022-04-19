@@ -69,6 +69,8 @@ struct Game {
   @State TAG1: string = "BUNDLE_ACTIVE";
   @State historyTime: number = 0;
   @State pipeLength: number = 125;
+  @State isChange: boolean = false;
+
   draw = () => {
     let id = router.getParams()['id']
     let fg
@@ -142,6 +144,10 @@ struct Game {
     else {
       ctx.fillText(`historyTime : 0 min 0 s`, 10, this.cvsHeigth - 10);
     }
+    if(this.isChange == true) {
+      clearTimeout(timeId);
+    }
+
     setTimeout(this.draw, this.sleep);
   }
 
@@ -226,6 +232,12 @@ struct Game {
 
   moveUp() {
     this.bY -= 20;
+  }
+
+  onBackPress(){
+    this.isChange = true;
+    router.back();
+    return true;
   }
 
   showHistoryScore() {
