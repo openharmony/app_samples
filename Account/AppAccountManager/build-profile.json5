@@ -5,9 +5,10 @@
     "compatibleSdkVersion": 8,
     "products": [
       {
-        "name": "default"
-      },
-    ],
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
   },
   "modules": [
     {
