@@ -22,7 +22,7 @@ export struct CheckType {
   @Link presetValue: Array<unknown>
 
   check(value) {
-    let utilType = new util.Types()
+    let utilType = new util.types()
     let utilData = new Map([
       ['ArrayBuffer', utilType.isAnyArrayBuffer(value)],
       ['Int8Array', utilType.isInt8Array(value)],
