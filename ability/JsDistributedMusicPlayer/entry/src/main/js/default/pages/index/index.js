@@ -18,8 +18,6 @@ import RemoteDeviceModel from '../../../model/RemoteDeviceModel.js';
 import PlayerModel from '../../../model/PlayerModel.js';
 import KvStoreModel from '../../../model/KvStoreModel.js';
 import display from '@ohos.display';
-import bundle from '@ohos.bundle';
-import abilityAccessCtrl from '@ohos.abilityAccessCtrl';
 
 function getShownTimer(ms) {
     var seconds = Math.floor(ms / 1000);
@@ -244,7 +242,7 @@ export default {
         if (this.playerModel.isPlaying) {
             this.playerModel.pause();
         } else {
-            this.playerModel.preLoad(this.playerModel.index, () => {
+            this.playerModel.preLoad(0, () => {
                 this.playerModel.play(-1, true);
             });
         }
