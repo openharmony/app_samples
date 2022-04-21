@@ -15,7 +15,6 @@
 
 import media from '@ohos.multimedia.media';
 import fileIO from '@ohos.fileio';
-import mediaLibrary from '@ohos.multimedia.medialibrary';
 
 export
 
@@ -46,29 +45,23 @@ export default class PlayerModel {
 
     constructor() {
         this.#player = media.createAudioPlayer();
+        this.initAudioPlayer()
         console.info('MusicPlayer[PlayerModel] createAudioPlayer=' + this.#player);
     }
 
     initAudioPlayer() {
         console.info('MusicPlayer[PlayerModel] initAudioPlayer begin');
-        this.#player.on('error', (err, action) => {
-            console.error(`MusicPlayer[PlayerModel] player error: ${err.code}`);
+        this.#player.on('error', () => {
+            console.error(`MusicPlayer[PlayerModel] player error`);
         });
         let self = this;
-        this.#player.on('finish', (err, action) => {
-            if (err) {
-                console.error(`MusicPlayer[PlayerModel] error returned in finish() callback`);
-                return;
-            }
+        this.#player.on('finish', () => {
             console.log('MusicPlayer[PlayerModel] finish() callback is called');
+            self.seek(0)
             self.notifyPlayingStatus(false);
         });
-        this.#player.on('timeUpdate', (err, action) => {
-            if (err) {
-                console.error(`MusicPlayer[PlayerModel] error returned in timeUpdate() callback`);
-                return;
-            }
-            console.log('MusicPlayer[PlayerModel] timeUpdate() callback is called, ' + JSON.stringify(action))
+        this.#player.on('timeUpdate', () => {
+            console.log('MusicPlayer[PlayerModel] timeUpdate() callback is called')
         });
         console.info('MusicPlayer[PlayerModel] initAudioPlayer end');
     }
@@ -102,39 +95,13 @@ export default class PlayerModel {
     getPlaylist(callback) {
         // generate play list
         console.info('MusicPlayer[PlayerModel] generatePlayList');
-        var helper = mediaLibrary.getMediaLibraryHelper();
-        const args = {
-            selections: 'audio',
-            selectionArgs: ['audioalbum'],
-        };
         let self = this;
         console.info('MusicPlayer[PlayerModel] getAudioAssets begin');
         self.playlist = new Playlist();
         self.playlist.audioFiles = [];
         self.playlist.audioFiles[0] = new Song('dynamic.wav', 'system/etc/dynamic.wav', 0);
         self.playlist.audioFiles[1] = new Song('demo.wav', 'system/etc/demo.wav', 0);
-        helper.getAudioAssets(args, (error, value) => {
-            console.info('MusicPlayer[PlayerModel] getAudioAssets callback entered');
-            if (error) {
-                console.info('MusicPlayer[PlayerModel] getAudioAssets returned an error' + error.message);
-            }
-            if (value == undefined) {
-                console.info('MusicPlayer[PlayerModel] getAudioAssets, There are no images in ' + args.selections + ' folder');
-            } else if (value != undefined) {
-                console.info('MusicPlayer[PlayerModel] getAudioAssets result.length = ' + value.length);
-                var beginIndex = self.playlist.audioFiles.length;
-                for (var i = 0; i < value.length; i++) {
-                    var index = beginIndex + i;
-                    self.playlist.audioFiles[index] = new Song();
-                    self.playlist.audioFiles[index].name = value[i].name;
-                    self.playlist.audioFiles[index].fileUri = value[i].URI;
-                    self.playlist.audioFiles[index].duration = 0;
-                    console.info('MusicPlayer[PlayerModel] getAudioAssets result ' + i + ', name=' +
-                    self.playlist.audioFiles[index].name + ',URI=' + self.playlist.audioFiles[index].fileUri);
-                }
-            }
-            callback();
-        });
+        callback();
         console.info('MusicPlayer[PlayerModel] getAudioAssets end');
     }
 
