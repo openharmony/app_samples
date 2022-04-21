@@ -51,6 +51,8 @@
   - [`DeviceManager:`设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor:`传感器（eTS）（API8）](device/Sensor)
   - [`Vibrator:`振动（eTS）（API8）](device/Vibrator)
+- Graphics
+  - [`JsWebGL:`WebGL(eTS)（API8）](Graphics/JsWebGL)
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）（API7）](media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）（API7）](media/JsVideo)
@@ -58,6 +60,7 @@
   - [`MultiMedia:`相机和媒体库（eTS）（API9）](media/MultiMedia)
 - DFX
   - [`JsDotTest:`测试打点（JS）（API7）](DFX/JsDotTest)
+  - [`FaultLogger:`故障日志获取（eTS）（API8）](DFX/FaultLogger)
 - Telephony
   - [`Call:`电话服务-拨打电话（eTS）（API8）](Telephony/Call)
   - [`Message:`电话服务-短信服务（eTS）（API8）](Telephony/Message)
@@ -81,6 +84,7 @@
   - [`XComponent:`ArkUI-XComponent（eTS）（API8）](ETSUI/XComponent)
   - [`MouseEvent:`ArkUI-鼠标事件（eTS）（API8）](ETSUI/MouseEvent)
   - [`Web:`ArkUI-Web（eTS）（API8）](ETSUI/Web)
+  - [`Gallery:`组件集合（eTS）（API8）](ETSUI/Gallery)
 - FileManager
   - [`Environment:`目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo:`文件管理（eTS）（API8）](FileManager/FileIo)
@@ -88,6 +92,8 @@
   - [`Emitter:`处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock:`后台代理提醒（eTS）（API8）](Notification/AlarmClock)
   - [`Notification:`通知-订阅、发送通知（eTS）（API9）](Notification/Notification)
+- ResourcesSchedule
+  - [`Flybird:`文档管理（eTS）（API9）](ResourcesSchedule/Flybird)
 - UI
   - [`AtomicLayout:`原子布局（JS）（API7）](UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）（API7）](UI/Badge)
