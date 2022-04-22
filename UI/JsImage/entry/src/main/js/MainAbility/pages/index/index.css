@@ -16,17 +16,20 @@
 @import "../../common/css/common.css";
 
 .image-style {
-   justify-content: center;
-   align-content: center;
+    justify-content: center;
+    align-content: center;
 }
+
 .image-size {
     width: 500px;
     height: 500px;
 }
-.btn{
+
+.btn {
     width: 500px;
     height: 200px;
 }
+
 .txt {
     width: 500px;
     height: 200px;
@@ -61,9 +64,11 @@
     from {
         transform: scaleX(1);
     }
+
     50% {
         transform: scaleX(1.5);
     }
+
     to {
         transform: scaleX(1);
     }
@@ -73,9 +78,11 @@
     from {
         transform: rotate(0deg);
     }
+
     50% {
         transform: rotate(180deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -85,9 +92,11 @@
     from {
         transform: rotateX(0deg);
     }
+
     50% {
         transform: rotateX(180deg);
     }
+
     to {
         transform: rotateX(360deg);
     }
@@ -97,9 +106,11 @@
     from {
         transform: rotateY(0deg);
     }
+
     50% {
         transform: rotateY(180deg);
     }
+
     to {
         transform: rotateY(360deg);
     }

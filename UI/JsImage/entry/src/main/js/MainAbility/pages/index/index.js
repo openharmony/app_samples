@@ -17,15 +17,15 @@ export default {
     data: {
         componentName: 'Image',
         srcImage: 'common/test.png',
-        width:'',
-        height:'',
-        scaleX:'',
-        rotate:'',
-        rotateX:'',
-        rotateY:'',
+        width: '',
+        height: '',
+        scaleX: '',
+        rotate: '',
+        rotateX: '',
+        rotateY: '',
     },
 
-    onInit: function() {
+    onInit: function () {
         var img = new Image();
         img.src = this.srcImage;
         img.onload = function () {
@@ -36,27 +36,27 @@ export default {
         };
     },
 
-    onload: function(data) {
+    onload: function (data) {
         this.width = data.width;
         this.height = data.height;
     },
 
-    onScalex: function() {
+    onScalex: function () {
         this.scaleX = "";
         this.scaleX = "scaleX";
     },
 
-    onRotate: function() {
+    onRotate: function () {
         this.rotate = "";
         this.rotate = "rotate";
     },
 
-    onRotateX: function() {
+    onRotateX: function () {
         this.rotateX = "";
         this.rotateX = "rotateX";
     },
 
-    onRotateY: function() {
+    onRotateY: function () {
         this.rotateY = "";
         this.rotateY = "rotateY";
     },

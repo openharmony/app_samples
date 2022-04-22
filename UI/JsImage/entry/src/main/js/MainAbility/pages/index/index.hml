@@ -13,37 +13,37 @@
  limitations under the License.
  -->
 
-<div class ="container">
+<div class="container">
     <div class="page-title-wrap">
-        <text class="page-title">{{componentName}}</text>
+        <text class="page-title">{{ componentName }}</text>
     </div>
 
     <input type="button" class="btn" onclick="onScalex" value="ScaleX_Image"/>
     <div class="image-style">
-        <div class="item {{scaleX}}">
-            <image class="image-size" src="{{srcImage}}" width="500px" height="500px" oncomplete="onload"/>
+        <div class="item {{ scaleX }}">
+            <image class="image-size" src="{{ srcImage }}" oncomplete="onload"/>
         </div>
     </div>
-    <text class="text">Width:{{width}}px;   Hight:{{height}}px</text>
+    <text class="text">Width:{{ width }}px;   Hight:{{ height }}px</text>
 
-    <input type="button" class="btn" onclick="onRotate"  value="Rotate_Image"/>
+    <input type="button" class="btn" onclick="onRotate" value="Rotate_Image"/>
     <div class="image-style">
-        <div class="item {{rotate}}">
-            <image class="image-size" src="{{srcImage}}" style="width: 500px; height: 500px;"></image>
+        <div class="item {{ rotate }}">
+            <image class="image-size" src="{{ srcImage }}" style="width : 500px; height : 500px;"></image>
         </div>
     </div>
 
     <input type="button" class="btn" onclick="onRotateX" value="RotateX_Image"/>
     <div class="image-style">
-        <div class="item {{rotateX}}">
-            <image class="image-size" src="{{srcImage}}"></image>
+        <div class="item {{ rotateX }}">
+            <image class="image-size" src="{{ srcImage }}"></image>
         </div>
     </div>
 
     <input type="button" class="btn" onclick="onRotateY" value="RotateY_Image"/>
     <div class="image-style">
-        <div class="item {{rotateY}}">
-            <image class="image-size" src="{{srcImage}}"></image>
+        <div class="item {{ rotateY }}">
+            <image class="image-size" src="{{ srcImage }}"></image>
         </div>
     </div>
 </div>

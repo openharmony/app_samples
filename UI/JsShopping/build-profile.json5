@@ -1,19 +1,6 @@
 {
   "app": {
-    "signingConfigs": [
-      {
-        "name": "default",
-        "material": {
-          "storeFile": 'D:\\HAP_Sign\\app.p12',
-          "storePassword": '0000001B7487E1B8A1AB71E74289B6B796C8B8CBCFA57389EE1D481B9539790C0EDCD94D8596ACE15CD084',
-          "keyAlias": 'app',
-          "keyPassword": '0000001BE6C77DD51658B104A0A492AEEA75B4116C38D616645C52BE40C53E11EE9D4ED72A4EBB40815B8C',
-          "signAlg": 'SHA256withECDSA',
-          "profile": 'D:\\HAP_Sign\\Profile\\jsshopping.p7b',
-          "certpath": 'D:\\HAP_Sign\\app.cer'
-        }
-      }
-    ],
+    "signingConfigs": [],
     "compileSdkVersion": 8,
     "compatibleSdkVersion": 8,
     "products": [
