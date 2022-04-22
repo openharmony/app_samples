@@ -13,7 +13,7 @@
 ## 目录<a name="sectionMenu"></a>
 - Basic
   - [`Container:`语言基础类库---线性容器ArrayList（eTS）（API8）](Basic/Container)
-  - [`Screenshot:`基础功能-屏幕截图（eTS）（API8）](Basic/Screenshot)
+  - [`Screenshot:`基础功能-屏幕截图（eTS）（API9）](Basic/Screenshot)
 - Account
   - [`AppAccountManager:`账号管理-应用账号管理（eTS）（API8）](Account/AppAccountManager)
   - [`DistributeAccount:`账号管理-分布式账号管理（eTS）（API8）](Account/DistributeAccount)
@@ -92,6 +92,9 @@
   - [`Emitter:`处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock:`后台代理提醒（eTS）（API8）](Notification/AlarmClock)
   - [`Notification:`通知-订阅、发送通知（eTS）（API9）](Notification/Notification)
+- Preset
+  - [`Clock:`简单时钟（eTS）（API9）](Preset/Clock)
+  - [`FlishLight:`手电筒（eTS）（API8）](Preset/FlishLight)
 - ResourcesSchedule
   - [`Flybird:`文档管理（eTS）（API9）](ResourcesSchedule/Flybird)
 - UI

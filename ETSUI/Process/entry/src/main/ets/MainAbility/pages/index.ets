@@ -86,7 +86,7 @@ struct Index {
           .margin({ top: 15 })
           .onClick(() => {
             console.info('[EtsProcess]send signal')
-            var pres = process.getPid
+            var pres = process.pid
             var result = process.kill(pres, 28)
             if (result === true) {
               this.result = 'succeed'
