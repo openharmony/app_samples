@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "数据请求"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "parameter",
+      "value": "设置参数"
+    },
+    {
+      "name": "submit",
+      "value": "查询"
+    },
+    {
+      "name": "clear",
+      "value": "清除"
+    },
+    {
+      "name": "stop",
+      "value": "停止"
+    },
+    {
+      "name": "add",
+      "value": "增加"
+    },
+    {
+      "name": "reduce",
+      "value": "减少"
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "web",
+      "value": "请输入网址"
+    }
+  ]
+}
