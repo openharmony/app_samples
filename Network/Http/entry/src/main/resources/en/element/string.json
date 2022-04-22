@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Data Request"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "parameter",
+      "value": "Setting parameter"
+    },
+    {
+      "name": "submit",
+      "value": "Submit"
+    },
+    {
+      "name": "clear",
+      "value": "clear"
+    },
+    {
+      "name": "stop",
+      "value": "Stop"
+    },
+    {
+      "name": "add",
+      "value": "Add"
+    },
+    {
+      "name": "reduce",
+      "value": "Reduce"
+    },
+    {
+      "name": "confirm",
+      "value": "Confirm"
+    },
+    {
+      "name": "web",
+      "value": "Please enter URL"
+    }
+  ]
+}
