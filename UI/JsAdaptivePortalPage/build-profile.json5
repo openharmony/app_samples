@@ -5,7 +5,7 @@
     "compatibleSdkVersion": 9,
     "products": [
       {
-        "name": "default"
+        "name": "default",
         "signingConfig": "default",
       }
     ]
