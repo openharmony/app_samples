@@ -28,12 +28,6 @@ const TAG: string = '[Index]'
   .textAlign(textAlign)
 }
 
-@Extend(TextInput) function fancyInput () {
-  .width('60%')
-  .fontSize(20)
-  .fontWeight(FontWeight.Bold)
-}
-
 @Entry
 @Component
 struct Index {
