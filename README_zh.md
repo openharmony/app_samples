@@ -15,14 +15,13 @@
   - [`Container:`语言基础类库---线性容器ArrayList（eTS）（API8）](Basic/Container)
   - [`Screenshot:`基础功能-屏幕截图（eTS）（API9）](Basic/Screenshot)
 - Account
-  - [`AppAccountManager:`账号管理-应用账号管理（eTS）（API8）](Account/AppAccountManager)
-  - [`DistributeAccount:`账号管理-分布式账号管理（eTS）（API8）](Account/DistributeAccount)
+  - [`AppAccountManager:`帐号管理-应用帐号管理（eTS）（API8）](Account/AppAccountManager)
+  - [`DistributeAccount:`帐号管理-分布式帐号管理（eTS）（API8）](Account/DistributeAccount)
 - Communication
   - [`RPC:`通信与连接-RPC连接（eTS）（API8）](Communication/RPC)
   - [`Wlan:`WLAN（eTS）（API8）](Communication/Wlan) 
 - ability
   - [`DMS:`分布式Demo（eTS）（API7）](ability/DMS)
-  - [`CommonEvent:`订阅公共事件（eTS）（API7）](ability/CommonEvent)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）（API7）](ability/JsDistributedMusicPlayer)
   - [`DataAbility:`DataAbility的创建与访问（eTS）（API8）](ability/DataAbility)
   - [`ServiceAbility:`ServiceAbility的创建与使用（eTS）（API8）](ability/ServiceAbility)
@@ -89,6 +88,7 @@
   - [`Environment:`目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo:`文件管理（eTS）（API8）](FileManager/FileIo)
 - Notification
+  - [`CommonEvent:`订阅公共事件（eTS）（API7）](Notification/CommonEvent)
   - [`Emitter:`处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock:`后台代理提醒（eTS）（API8）](Notification/AlarmClock)
   - [`Notification:`通知-订阅、发送通知（eTS）（API9）](Notification/Notification)
