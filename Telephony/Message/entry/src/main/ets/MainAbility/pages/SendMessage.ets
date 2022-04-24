@@ -101,6 +101,7 @@ struct SendMessage {
           }
         }
         this.messages.push(new Message(this.content, this.sendResult))
+        this.content = ''
         Logger.info(`${TAG}, sendCallback--- push message`)
       },
       (err, data) => {
@@ -219,9 +220,7 @@ struct SendMessage {
               )
             } else {
               if (this.clickable) {
-                this.messages.push(new Message(this.content, this.sendResult))
                 this.sendMessage()
-                this.content = ''
               } else {
                 this.showDialog()
               }
