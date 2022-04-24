@@ -18,5 +18,5 @@
 ### 约束与限制
 
 1、本示例仅支持标准系统上运行。
-2、本示例为Stage模型，仅支持API version 9。
+2、本示例为Stage模型，从API version 9开始支持。
 3、本示例需DevEco Studio版本为 3.0 Canary7及以上。

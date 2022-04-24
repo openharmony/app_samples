@@ -2,7 +2,7 @@
 
 ### 简介
 
- 此Demo展示ets项目中如何使用screenshot接口获取屏幕截图。
+ 此Demo展示eTS项目中如何使用screenshot接口获取屏幕截图。
 
 ### 使用说明
 
@@ -14,4 +14,4 @@
 
 1、本示例仅支持标准系统上运行。
 
-2、本示例仅支持API version 9。
+2、本示例从API version 9开始支持。
