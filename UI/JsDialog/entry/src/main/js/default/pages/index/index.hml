@@ -21,18 +21,20 @@
     <stack class="content-container">
         <list class="list" divider="true">
             <list-item clickeffect="false" for="{{ listItem }}" class="todo-item">
-                <div class="item-container">
-                    <div class="item-row">
-                        <text class="item-text">{{ $t('strings.name') }}</text>
-                        <text class="item-text">{{ $item.name }}</text>
+                <div class="todo-item-child">
+                    <div class="item-container">
+                        <div class="item-row">
+                            <text class="item-text">{{ $t('strings.name') }}</text>
+                            <text class="item-text">{{ $item.name }}</text>
+                        </div>
+                        <div class="item-row">
+                            <text class="item-text">{{ $t('strings.phone') }}</text>
+                            <text class="item-text">{{ $item.phone }}</text>
+                        </div>
                     </div>
-                    <div class="item-row">
-                        <text class="item-text">{{ $t('strings.phone') }}</text>
-                        <text class="item-text">{{ $item.phone }}</text>
-                    </div>
+                    <input class="item-btn" type="button" onclick="showDeleteDialog($item)">{{ $t('strings.delete') }}
+                    </input>
                 </div>
-                <input class="item-btn" type="button" onclick="showDeleteDialog($item)">{{ $t('strings.delete') }}
-                </input>
             </list-item>
         </list>
 

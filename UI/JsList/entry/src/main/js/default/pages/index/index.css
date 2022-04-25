@@ -51,6 +51,16 @@
     height: 145px;
 }
 
+.list-item-child {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: flex-start;
+    height: 145px;
+}
+
 .list-left {
     width: 20%;
     radius: 10px;
