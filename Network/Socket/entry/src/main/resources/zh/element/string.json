@@ -1,0 +1,53 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Socket"
+    },
+    {
+      "name": "confirm",
+      "value": "确定"
+    },
+    {
+      "name": "input_roomNumber",
+      "value": "输入房间号"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "create_room",
+      "value": "创建房间"
+    },
+    {
+      "name": "send_message",
+      "value": "发送"
+    },
+    {
+      "name": "classmate_fengzi",
+      "value": "蚊子同学"
+    },
+    {
+      "name": "classmate_wenzi",
+      "value": "风子同学"
+    },
+    {
+      "name": "online",
+      "value": "在线"
+    },
+    {
+      "name": "offline",
+      "value": "离线"
+    }
+
+  ]
+}
