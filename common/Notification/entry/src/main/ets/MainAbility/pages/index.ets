@@ -55,13 +55,10 @@ struct Index {
             .backgroundColor('#0D9FFB')
             .onClick(() => {
               console.info('[notification] addSlot')
-
-              function addSlotCallBack() {
+              notify.addSlot(notify.SlotType.CONTENT_INFORMATION, () => {
                 console.info("[notification]==========================>addSlotCallBack=======================>");
                 prompt.showToast({ message: 'Add slot succeed' })
-              }
-
-              notify.addSlot(notify.SlotType.CONTENT_INFORMATION, addSlotCallBack)
+              })
             })
 
             Button() {
