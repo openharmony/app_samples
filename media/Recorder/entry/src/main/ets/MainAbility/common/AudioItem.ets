@@ -23,7 +23,7 @@ export struct AudioItem {
   private clickItem: (record: Record, operate: string) => void
   private checkItem: () => void
   @State translateLeft: number = 0
-  @State translateRight: number = -120
+  @State translateRight: number = -125
   @State imgRes: Resource = $r('app.media.uncheck')
   @Link checkState: boolean
   @Link @Watch('leftSliderChange') leftSliderIndex: number
@@ -32,13 +32,13 @@ export struct AudioItem {
     animateTo({ duration: 500, curve: Curve.Linear }, () => {
       if (this.index !== this.leftSliderIndex) {
         this.translateLeft = 0
-        this.translateRight = -120
+        this.translateRight = -125
       } else {
         if (this.translateLeft < 0) {
           this.translateLeft = 0
-          this.translateRight = -120
+          this.translateRight = -125
         } else {
-          this.translateLeft = -120
+          this.translateLeft = -125
           this.translateRight = 0
         }
       }
@@ -83,7 +83,7 @@ export struct AudioItem {
       }
       .layoutWeight(1)
       .padding({ top: 10, bottom: 10, left: 10, right: 10 })
-      .margin({ left: 15, top: 15 })
+      .margin({ left: 15, top: 15, right: 5})
       .backgroundColor('#FFFFFF')
       .borderRadius(20)
 
