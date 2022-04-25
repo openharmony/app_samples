@@ -43,7 +43,7 @@ struct Index {
       });
       mgr.getString(0x1000000, (error, value) => {
         console.log('ResourceManager:getString capability error=' + error + ',value=' + value);
-         if (error != null) {
+        if (error != null) {
           return
         }
         this.capability = value

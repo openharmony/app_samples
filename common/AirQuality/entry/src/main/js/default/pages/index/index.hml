@@ -60,8 +60,8 @@ limitations under the License.
                             <text class="gas-value">150</text>
                         </div>
                     </div>
-                    <div style="width: 100%; justify-content: center;">
-                    <input class="btn" type="button" onclick="openDetail" value="{{ $t('strings.history') }}"></input>
+                    <div style="width : 100%; justify-content : center;">
+                        <input class="btn" type="button" onclick="openDetail" value="{{ $t('strings.history') }}"></input>
                     </div>
                     <div class="footer">
                         <text class="update-time">{{ $t('strings.update_time') }}</text>
