@@ -25,6 +25,7 @@ export struct SleepView {
   sleepRange() {
     if (this.shortTime === 0 || this.longTime === 0) {
       prompt.showToast({ message: '请输入最短和最长睡眠时间' })
+      return
     }
     if (this.longTime <= this.shortTime) {
       prompt.showToast({ message: '最长睡眠时间小于或等于最短睡眠时间，请重新输入' })

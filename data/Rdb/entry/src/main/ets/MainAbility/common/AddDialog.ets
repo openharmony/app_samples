@@ -97,17 +97,20 @@ export struct AddDialog {
         .onClick(() => {
           console.info(`[Rdb.dialog] editStudent = ${JSON.stringify(this.editStudent)}`)
           console.info(`[Rdb.dialog] isInsert = ${this.isInsert}`)
-          if (this.editStudent.name == ''){
+          if (this.editStudent.name === ''){
             prompt.showToast({ message: '姓名不能为空', duration: 1000 })
             return
           }
-          if (this.editStudent.age <= 0) {
-            prompt.showToast({ message: '年龄要大于0', duration: 1000 })
-            return
-          }
-          this.controller.close()
-          if (this.editStudent.name !== '' || this.editStudent.age > 0 || this.editStudent.phone !== '') {
+          if (this.editStudent.age > 0) {
+            if(this.editStudent.phone === ''){
+              prompt.showToast({ message: '电话不能为空', duration: 1000 })
+              return
+            }
+            this.controller.close()
             this.action(this.isInsert, this.editStudent)
+          } else {
+            prompt.showToast({ message: '年龄不能为空', duration: 1000 })
+            return
           }
         })
 
