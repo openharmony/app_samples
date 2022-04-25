@@ -22,4 +22,4 @@
     <text class="title">{{ result }}</text>
     <button class="btn" value="{{ $t('strings.ja') }}" on:click="ja"></button>
     <text class="title">{{ result2 }}</text>
-</div>
+</div> 
