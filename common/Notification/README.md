@@ -1,4 +1,4 @@
-# EtsNotification
+# eTSNotification
 
 ### Introduction
 
@@ -18,6 +18,6 @@ This sample shows how to create and delete a slot in eTS, and how to publish and
 
 ### Constraints
 
-This sample can only be run on standard-system devices.
-This sample is an API 7 project built and run using DevEco Studio 3.0 Beta2 for HarmonyOS.
+1.This sample can only be run on standard-system devices.
+2.This sample is an API 7 project built and run using DevEco Studio 3.0 Beta2 for HarmonyOS.
 

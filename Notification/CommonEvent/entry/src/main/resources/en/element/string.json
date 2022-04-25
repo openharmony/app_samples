@@ -2,11 +2,11 @@
   "string": [
     {
       "name": "entry_MainAbility",
-      "value": "EtsCommonEvent"
+      "value": "eTSCommonEvent"
     },
     {
       "name": "description_mainability",
-      "value": "EtsCommonEvent Ability"
+      "value": "eTSCommonEvent Ability"
     },
     {
       "name": "create_subscriber",

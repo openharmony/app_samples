@@ -16,39 +16,55 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item" on:click="svgOnClick1">
-            <stack class="stack">
-                <text class="text">{{ $t('strings.svg1') }}</text>
-                <div class="go">
-                    <image class="arrow" src="../../common/images/arrow.png"></image>
-                </div>
-            </stack>
-            <div style="width: 100%;height: 2px;background-color: dodgerblue;margin-top: 5px;"></div>
+            <div>
+                <stack class="stack">
+                    <text class="text">{{ $t('strings.svg1') }}</text>
+                    <div class="go">
+                        <image class="arrow" src="../../common/images/arrow.png"></image>
+                    </div>
+                </stack>
+            </div>
         </list-item>
+        <list-item>
+            <div style="width : 100%; height : 2px; background-color : #1E90FF; margin-top : 5px;"></div>
+        </list-item>
+
+
         <list-item class="list-item" on:click="svgOnClick2">
-            <stack class="stack">
-                <text class="text">{{ $t('strings.svg2') }}</text>
-                <div class="go">
-                    <image class="arrow" src="../../common/images/arrow.png"></image>
-                </div>
-            </stack>
-            <div style="width: 100%;height: 2px;background-color: dodgerblue;"></div>
+            <div>
+                <stack class="stack">
+                    <text class="text">{{ $t('strings.svg2') }}</text>
+                    <div class="go">
+                        <image class="arrow" src="../../common/images/arrow.png"></image>
+                    </div>
+                </stack>
+            </div>
+        </list-item>
+        <list-item>
+            <div style="width : 100%; height : 2px; background-color : #1E90FF;"></div>
         </list-item>
         <list-item class="list-item" on:click="svgOnClick3">
-            <stack class="stack">
-                <text class="text">{{ $t('strings.svg3') }}</text>
-                <div class="go">
-                    <image class="arrow" src="../../common/images/arrow.png"></image>
-                </div>
-            </stack>
-            <div style="width: 100%;height: 2px;background-color: dodgerblue;"></div>
+            <div>
+                <stack class="stack">
+                    <text class="text">{{ $t('strings.svg3') }}</text>
+                    <div class="go">
+                        <image class="arrow" src="../../common/images/arrow.png"></image>
+                    </div>
+                </stack>
+            </div>
+        </list-item>
+        <list-item>
+            <div style="width : 100%; height : 2px; background-color : #1E90FF;"></div>
         </list-item>
         <list-item class="list-item" on:click="svgOnClick4">
-            <stack class="stack">
-                <text class="text">{{ $t('strings.svg4') }}</text>
-                <div class="go">
-                    <image class="arrow" src="../../common/images/arrow.png"></image>
-                </div>
-            </stack>
+            <div>
+                <stack class="stack">
+                    <text class="text">{{ $t('strings.svg4') }}</text>
+                    <div class="go">
+                        <image class="arrow" src="../../common/images/arrow.png"></image>
+                    </div>
+                </stack>
+            </div>
         </list-item>
     </list>
 </div>

@@ -10,7 +10,7 @@ This sample shows how to create and use the widget provider in the FA model.
 
 2. The following figure shows the widget style. When the widget is updated, the temperature and time on the widget change.
 
-![eTSFormExample](screenshots/eTSFormExample.png)
+![eTSFormExample](screenshots/eTSFormExample2.png)
 
 ### Constraints
 

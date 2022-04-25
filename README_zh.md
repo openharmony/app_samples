@@ -12,7 +12,7 @@
 
 ## 目录<a name="sectionMenu"></a>
 - Basic
-  - [`Container:`语言基础类库---线性容器ArrayList（eTS）（API8）](Basic/Container)
+  - [`Container:`语言基础类库-线性容器ArrayList（eTS）（API8）](Basic/Container)
   - [`Screenshot:`基础功能-屏幕截图（eTS）（API9）](Basic/Screenshot)
 - Account
   - [`AppAccountManager:`帐号管理-应用帐号管理（eTS）（API8）](Account/AppAccountManager)
@@ -29,7 +29,7 @@
   - [`FormAbility:`FA模型卡片（JS）（API8）](ability/FormAbility)
   - [`FormExtAbility:`Stage模型卡片（eTS JS）（API9）](ability/FormExtAbility)
   - [`FormLauncher:`卡片使用方（eTS）（API8）](ability/FormLauncher)
-  - [`ServiceExtAbility:`StageAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)  
+  - [`ServiceExtAbility:`StageCallAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)  
 - common
   - [`AirQuality:`空气质量（JS）（API7）](common/AirQuality)
   - [`Clock:`时钟（JS）（API7）](common/Clock)
@@ -77,9 +77,9 @@
   - [`BuildCommonView:`创建简单视图（eTS）（API7）](ETSUI/BuildCommonView)
   - [`DefiningPageLayoutAndConnection:`页面布局和连接（eTS）（API7）](ETSUI/DefiningPageLayoutAndConnection)
   - [`Drag:`ArkUI-拖拽事件（eTS）（API8）](ETSUI/Drag)
-  - [`Component:`Ets组件测试Demo（eTS）（API8）](ETSUI/Component)
-  - [`ArkUIAnimation:`Ets动画（eTS）（API8）](ETSUI/ArkUIAnimation)
-  - [`MediaQuery:`Ets媒体查询（eTS）（API8）](ETSUI/MediaQuery)
+  - [`Component:`eTS组件测试Demo（eTS）（API8）](ETSUI/Component)
+  - [`ArkUIAnimation:`eTS动画（eTS）（API8）](ETSUI/ArkUIAnimation)
+  - [`MediaQuery:`eTS媒体查询（eTS）（API8）](ETSUI/MediaQuery)
   - [`XComponent:`ArkUI-XComponent（eTS）（API8）](ETSUI/XComponent)
   - [`MouseEvent:`ArkUI-鼠标事件（eTS）（API8）](ETSUI/MouseEvent)
   - [`Web:`ArkUI-Web（eTS）（API8）](ETSUI/Web)
@@ -97,6 +97,7 @@
   - [`FlishLight:`手电筒（eTS）（API8）](Preset/FlishLight)
 - ResourcesSchedule
   - [`Flybird:`文档管理（eTS）（API9）](ResourcesSchedule/Flybird)
+  - [`News:`文档管理（eTS）（API9）](ResourcesSchedule/News)
 - UI
   - [`AtomicLayout:`原子布局（JS）（API7）](UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）（API7）](UI/Badge)
@@ -112,7 +113,7 @@
   - [`JsCanvas:`画布组件（JS）（API7）](UI/JsCanvas)
   - [`JsDevice:`设备信息（JS）（API7）](UI/JsDevice)
   - [`JsDialog:`页面弹窗（JS）（API7）](UI/JsDialog)
-  - [`JsGrid:`栅格组件（JS）（API7）](UI/JsGrid)
+  - [`JsGrid:`栅格布局（JS）（API7）](UI/JsGrid)
   - [`JsList:`商品列表（JS）（API7）](UI/JsList)
   - [`JsPanel:`内容展示面板（JS）（API7）](UI/JsPanel)
   - [`JsRouter:`页面路由（JS）（API7）](UI/JsRouter)

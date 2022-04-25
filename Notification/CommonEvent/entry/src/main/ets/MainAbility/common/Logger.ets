@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-const TAG: string = "[EtsCommonEvent]"
+const TAG: string = "[eTSCommonEvent]"
 
 export default class Logger {
   public static log(tag, log) {
