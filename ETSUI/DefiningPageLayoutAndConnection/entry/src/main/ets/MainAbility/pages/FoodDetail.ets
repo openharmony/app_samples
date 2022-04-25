@@ -39,7 +39,6 @@ struct PageTitle {
 @Component
 struct FoodImageDisplay {
   private foodItem: FoodData
-
   build() {
     Stack({ alignContent: Alignment.BottomStart }) {
       Image(this.foodItem.image)
@@ -57,8 +56,7 @@ struct FoodImageDisplay {
 @Component
 struct ContentTable {
   private foodItem: FoodData
-
-  @Builder IngredientItem(title: string, name: string, value: string) {
+  @Builder IngredientItem(title:string, name: string, value: string) {
     Flex() {
       Text(title)
         .fontSize(17.4)
@@ -74,7 +72,6 @@ struct ContentTable {
       .layoutWeight(2)
     }
   }
-
   build() {
     Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Start }) {
       this.IngredientItem('Calories', 'Calories', this.foodItem.calories + 'kcal')
@@ -91,19 +88,13 @@ struct ContentTable {
 @Entry
 @Component
 struct FoodDetail {
-  private foodItem: FoodData = undefined
-
-  aboutToAppear() {
-    this.foodItem = <FoodData> router.getParams().foodId
-  }
-
+  private foodItem: FoodData = router.getParams().foodId
   build() {
     Column() {
       Stack({ alignContent: Alignment.TopStart }) {
         FoodImageDisplay({ foodItem: this.foodItem })
         PageTitle()
       }
-
       ContentTable({ foodItem: this.foodItem })
     }
     .alignItems(HorizontalAlign.Center)
