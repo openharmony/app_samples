@@ -1,0 +1,32 @@
+apply plugin: 'com.huawei.ohos.app'
+
+ohos {
+    compileSdkVersion 7
+    supportSystem "standard"
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.0.3.2'
+        classpath 'com.huawei.ohos:decctest:1.2.6.0'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}
