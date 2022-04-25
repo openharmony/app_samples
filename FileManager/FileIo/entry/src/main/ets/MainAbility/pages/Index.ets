@@ -22,7 +22,7 @@ let context = featureAbility.getContext()
 let path
 context.getOrCreateLocalDir().then((e) => {
   path = e + '/files'
-  console.log('EtsFileIo =' + path)
+  console.log('FileIo =' + path)
 })
 
 @Entry
@@ -45,12 +45,12 @@ struct Index {
     this.result = path + '/xxx.txt'
     this.fd = fileIo.openSync(this.result, 0o2 | 0o100, 0o666)
     prompt.showToast({ message: 'create_file success =>' + this.result, duration: 2000 })
-    console.log('EtsFileIo fd =' + this.fd)
+    console.log('FileIo fd =' + this.fd)
     fileIo.close(this.fd)
   }
 
   rename_fileIo() {
-    this.newPath = path + '/EtsFileIo.txt'
+    this.newPath = path + '/FileIo.txt'
     fileIo.renameSync(this.result, this.newPath)
     prompt.showToast({ message: 'rename_file success =>' + this.newPath, duration: 2000 })
   }
@@ -65,7 +65,7 @@ struct Index {
       encoding: 'utf-8'
     })
     prompt.showToast({ message: 'write_fileIo success =>' + 'hello, fileIo', duration: 2000 })
-    console.log('EtsFileIo WriteLength = ' + writelength)
+    console.log('FileIo WriteLength = ' + writelength)
     this.stream.close()
     fileIo.close(writeFd)
   }
@@ -77,8 +77,8 @@ struct Index {
     let length = this.stream.readSync(buf, { offset: 0, length: writeContent.length, position: 0 })
     this.readText = String.fromCharCode.apply(null, new Uint8Array(buf))
     prompt.showToast({ message: 'read_fileIo success', duration: 2000 })
-    console.log('EtsFileIo buf = ' + this.readText)
-    console.log('EtsFileIo length = ' + length)
+    console.log('FileIo buf = ' + this.readText)
+    console.log('FileIo length = ' + length)
     this.stream.close()
     fileIo.close(readFd)
   }

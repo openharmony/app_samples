@@ -6,12 +6,12 @@
 
 ### 使用说明
 
-1、点击"SIM1 status"，弹出面板显示卡1的无线接入技术、注册网络信号强度信息列表、选网模式、ISO国家码，
-  再次点击面板消失， 点击"SIM2 status"显示同理。
+1.点击**SIM1 status**，弹出面板显示卡1的无线接入技术、注册网络信号强度信息列表、选网模式、ISO国家码，
+  再次点击面板消失， 点击**SIM2 status**显示同理。
 
-2、"NetworkState"显示网络状态相关信息。
+2.**NetworkState**显示网络状态相关信息。
 
-3、"IsRadioOn"显示Radio是否打开，true为打开，false为关闭。
+3.**IsRadioOn**显示Radio是否打开，true为打开，false为关闭。
 
 ### 约束与限制
 
