@@ -13,8 +13,9 @@
   limitations under the License.
 -->
 <stack class="container">
-    <div id="lightContainer" onclick="changeMode" style="background-color: {{ lightShow == true ? 'white' : 'black' }};">
-        <image class="backImage" src="/common/A017_001.png" />
-        <text class="textStyle" style="color: {{ lightShow == true ? 'black' : 'white' }};">{{ time }}</text>
+    <div id="lightContainer" onclick="changeMode"
+         style="background-color : {{ lightShow == true ? 'white' : 'black' }};">
+        <image class="backImage" src="/common/A017_001.png"/>
+        <text class="textStyle" style="color : {{ lightShow == true ? 'black' : 'white' }};">{{ time }}</text>
     </div>
 </stack>

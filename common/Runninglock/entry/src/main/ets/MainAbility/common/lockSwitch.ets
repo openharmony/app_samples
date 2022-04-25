@@ -12,8 +12,8 @@ export struct LockSwitch {
       Text($r("app.string.sleepLockSwitch"))
         .fontSize(20)
         .fontColor('#0D9FFB')
-        .width('50%')
-        .margin({ left: 30 })
+        .width('30%')
+        .margin({ left: '22%' })
         .fontWeight(FontWeight.Bold)
       Toggle({ type: ToggleType.Switch, isOn: this.islock })
         .width(70)
@@ -32,12 +32,10 @@ export struct LockSwitch {
                 lock.unlock()
                 this.output = $r("app.string.turnSleep")
                 this.isComTime = true
-                lock.done();
               }
             })
             .catch(error => {
               console.log('create runningLock test error: ' + error);
-              lock.done();
             })
         })
     }
