@@ -16,20 +16,24 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item">
-            <text class="text">{{ 'polyline:' }}</text>
-            <svg width="700" height="420" fill="white" stroke="blue" stroke-width="5">
-                <polyline points="10,200 160,50 160,170 310,30" fill="red"></polyline>
-                <polyline points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
-                </polyline>
-            </svg>
+            <div>
+                <text class="text">{{ 'polyline:' }}</text>
+                <svg width="700" height="420" fill="white" stroke="blue" stroke-width="5">
+                    <polyline points="10,200 160,50 160,170 310,30" fill="red"></polyline>
+                    <polyline points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
+                    </polyline>
+                </svg>
+            </div>
         </list-item>
         <list-item class="list-item">
-            <text class="text">{{ 'polygon:' }}</text>
-            <svg fill="white" stroke="blue" stroke-width="5" width="700" height="420">
-                <polygon points="10,200 160,50 160,170 310,30" fill="red"></polygon>
-                <polygon points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
-                </polygon>
-            </svg>
+            <div>
+                <text class="text">{{ 'polygon:' }}</text>
+                <svg fill="white" stroke="blue" stroke-width="5" width="700" height="420">
+                    <polygon points="10,200 160,50 160,170 310,30" fill="red"></polygon>
+                    <polygon points="10,400 160,220 160,340 310,150" stroke-dasharray="10 5" stroke-dashoffset="3">
+                    </polygon>
+                </svg>
+            </div>
         </list-item>
     </list>
 </div>

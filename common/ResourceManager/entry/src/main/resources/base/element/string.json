@@ -2,11 +2,11 @@
   "string": [
     {
       "name": "entry_MainAbility",
-      "value": "EtsResourceManager"
+      "value": "eTSResourceManager"
     },
     {
       "name": "description_mainability",
-      "value": "EtsResourceManager Ability"
+      "value": "eTSResourceManager Ability"
     },
     {
       "name": "title",

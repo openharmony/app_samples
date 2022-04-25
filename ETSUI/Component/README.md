@@ -1,6 +1,6 @@
 
 
-#  Ets组件测试Demo
+#  eTS组件测试Demo
 
 ### 简介
 
