@@ -1,0 +1,15 @@
+{
+	"devDependencies": {},
+	"name": "etsdistributedrdb",
+	"ohos": {
+		"org": "huawei",
+		"directoryLevel": "project",
+		"buildTool": "hvigor"
+	},
+	"version": "1.0.0",
+	"dependencies": {
+		"@ohos/hvigor-ohos-plugin": "1.0.6",
+		"hypium": "^1.0.0",
+		"@ohos/hvigor": "1.0.6"
+	}
+}

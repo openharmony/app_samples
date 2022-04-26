@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "check_device",
+      "value": "选择设备"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "搜索联系人"
+    },
+    {
+      "name": "select_all",
+      "value": "全选"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "quit",
+      "value": "退出"
+    },
+    {
+      "name": "male",
+      "value": "男"
+    },
+    {
+      "name": "female",
+      "value": "女"
+    },
+    {
+      "name": "gender",
+      "value": "性别:"
+    },
+    {
+      "name": "name",
+      "value": "姓名"
+    },
+    {
+      "name": "phone",
+      "value": "电话"
+    },
+    {
+      "name": "remark",
+      "value": "备注"
+    },
+    {
+      "name": "automatic",
+      "value": "自动同步"
+    },
+    {
+      "name": "manual",
+      "value": "手动同步"
+    },
+    {
+      "name": "setting",
+      "value": "设置"
+    },
+    {
+      "name": "connect",
+      "value": "连接设备"
+    },
+    {
+      "name": "delete_contact",
+      "value": "删除所选联系人?"
+    }
+  ]
+}
