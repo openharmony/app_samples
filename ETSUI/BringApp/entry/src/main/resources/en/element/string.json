@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "BringApp"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "camera",
+      "value": "Camera"
+    },
+    {
+      "name": "gallery",
+      "value": "Gallery"
+    },
+    {
+      "name": "contacts",
+      "value": "Contacts"
+    },
+    {
+      "name": "message",
+      "value": "Message"
+    },
+    {
+      "name": "flash",
+      "value": "FlashLight"
+    },
+    {
+      "name": "air",
+      "value": "AirQuality"
+    },
+    {
+      "name": "music",
+      "value": "Music"
+    },
+    {
+      "name": "clock",
+      "value": "Clock"
+    }
+  ]
+}

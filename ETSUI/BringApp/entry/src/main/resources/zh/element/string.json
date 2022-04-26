@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "拉起系统应用示例"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "camera",
+      "value": "相机"
+    },
+    {
+      "name": "gallery",
+      "value": "图库"
+    },
+    {
+      "name": "contacts",
+      "value": "联系人"
+    },
+    {
+      "name": "message",
+      "value": "短信"
+    },
+    {
+      "name": "flash",
+      "value": "手电筒"
+    },
+    {
+      "name": "air",
+      "value": "空气质量"
+    },
+    {
+      "name": "music",
+      "value": "音乐"
+    },
+    {
+      "name": "clock",
+      "value": "时钟"
+    }
+  ]
+}
