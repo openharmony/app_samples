@@ -17,6 +17,7 @@ import { ReleaseData, addStorage, modifyStorage,getStorageList } from '../model/
 import { getTextColor, checkExist, menuTitle } from '../util/utils'
 import { nearRelease, hotRelease, classicRelease } from '../util/actionUtils'
 import { VideoOperation } from '../common/videoOperation'
+import Logger from '../model/Logger'
 
 const TAG = '[Component.TabContentView]'
 
@@ -36,12 +37,6 @@ export struct TabContentView {
   private boxList: Array<ReleaseData> = []
   private topTabs: string[] = ['近日发布会', '热门发布会', '经典发布会']
 
-  aboutToAppear() {
-    this.nearList = nearRelease(this.releaseList)
-    this.hotList = hotRelease(this.releaseList)
-    this.classicList = classicRelease(this.releaseList)
-  }
-
   releaseChange() {
     this.ContentRefresh(this.releaseList)
   }
@@ -49,68 +44,65 @@ export struct TabContentView {
   ContentRefresh(release: Array<ReleaseData>) {
     switch (this.topTabIndex) {
       case 0:
-        this.nearList = nearRelease(this.releaseList)
+        this.nearList = nearRelease(release)
         break
       case 1:
-        this.hotList = hotRelease(this.releaseList)
+        this.hotList = hotRelease(release)
         break
       case 2:
-        this.classicList = classicRelease(this.releaseList)
+        this.classicList = classicRelease(release)
         break
       default:
         break
     }
   }
 
-  browseOnClick(data:ReleaseData) {
-    let browse = getStorageList('browse')
-    let exist = checkExist(data, browse)
-    if (exist !== true) {
+  browseOnClick(data: ReleaseData) {
+    let exist = checkExist(data.title, this.broMenu)
+    if (!exist) {
       addStorage(data, 'browse')
       let browseList = getStorageList('browse')
       this.broMenu = menuTitle(browseList)
-      console.info(`${TAG} browseList= ${JSON.stringify(browseList)} \n browseList.length= ${browseList.length}`)
+      Logger.info(TAG, `browseList= ${JSON.stringify(browseList)} \n browseList.length= ${browseList.length}`)
     }
   }
 
-  reservationOnClick(data:ReleaseData) {
-    data.isRes = !data.isRes
+  reservationOnClick(data: ReleaseData) {
     let i = this.releaseList.indexOf(data)
-    console.info(`${TAG} i= ${JSON.stringify(i)}`)
+    data.isRes = !data.isRes
+    Logger.info(TAG, `i= ${JSON.stringify(i)}`)
     this.releaseList[i] = data
+    data.resImg = data.isRes ? $r('app.media.focus') : $r('app.media.nofocus')
     modifyStorage(data, i, 'release')
-    if (data.isRes === false) {
+
+    if (!data.isRes) {
       let j = this.reservationList.indexOf(data)
       this.reservationList.splice(j, 1)
     } else {
       this.reservationList.push(data)
     }
-    data.resImg = data.isRes == false ? $r('app.media.nofocus') : $r('app.media.focus')
     this.resMenu = menuTitle(this.reservationList)
-    console.info(`${TAG} reservationList= ${JSON.stringify(this.reservationList)} \n reservationList.length= ${this.reservationList.length}`)
-    let list = this.releaseList
-    this.releaseList = []
-    this.releaseList = list
-    this.ContentRefresh(this.releaseList)
+    Logger.info(TAG, `reservationList= ${JSON.stringify(this.reservationList)} \n reservationList.length= ${this.reservationList.length}`)
   }
 
-  collectionOnClick(data:ReleaseData) {
-    data.isCollect = !data.isCollect
+  collectionOnClick(data: ReleaseData) {
     let i = this.releaseList.indexOf(data)
+    data.isCollect = !data.isCollect
     this.releaseList[i] = data
+    Logger.info(TAG, `releaseList= ${JSON.stringify(this.releaseList)} \n releaseList.length= ${this.releaseList.length}`)
+    data.collectImg = data.isCollect ? $r('app.media.iscolloect') : $r('app.media.nocollect')
     modifyStorage(data, i, 'release')
-    if (data.isCollect === false) {
+    if (!data.isCollect) {
       let j = this.collectionList.indexOf(data)
       this.collectionList.splice(j, 1)
     } else {
       this.collectionList.push(data)
     }
-    data.collectImg = data.isCollect == false ? $r('app.media.nocollect') : $r('app.media.iscolloect')
     this.colMenu = menuTitle(this.collectionList)
-    console.info(`${TAG} collectionList= ${JSON.stringify(this.collectionList)} \n collectionList.length= ${this.collectionList.length}`)
+    Logger.info(TAG, `collectionList= ${JSON.stringify(this.collectionList)} \n collectionList.length= ${this.collectionList.length}`)
   }
 
-  @Builder imageTextOfRow(image:Resource, data:string) {
+  @Builder imageTextOfRow(image: Resource, data: string) {
     Row() {
       Image(image).objectFit(ImageFit.Contain).width(25)
       Text(data).fontSize(15).margin({ left: 3 })
@@ -118,25 +110,25 @@ export struct TabContentView {
   }
 
   @Builder ContentView(releaseA: Array<ReleaseData>) {
-    ForEach(releaseA, (item, index) => {
+    ForEach(releaseA, (item) => {
       Row() {
         Image($r('app.media.cover'))
           .width('30%').height(90)
           .objectFit(ImageFit.Fill)
-          .onClick(function(){
+          .onClick(() => {
             this.browseOnClick(item)
             this.ContentRefresh(releaseA)
-          }.bind(this))
+          })
         Column() {
           Text(item.title).width('90%').fontSize(20).fontWeight(FontWeight.Bold)
           Text(item.date).width('90%').fontSize(15).margin({ top: 10 })
-          VideoOperation({ info: item, collectClick: function(){
+          VideoOperation({ info: item, collectClick: () => {
             this.collectionOnClick(item)
             this.ContentRefresh(releaseA)
-          }.bind(this), publishClick: function(){
+          }, publishClick: () => {
             this.reservationOnClick(item)
             this.ContentRefresh(releaseA)
-          }.bind(this) })
+          } })
         }
         .width('70%')
       }
@@ -155,17 +147,17 @@ export struct TabContentView {
             .fontWeight(FontWeight.Bold)
             .textAlign(TextAlign.Center)
             .fontColor(getTextColor(index, this.topTabIndex))
-            .onClick(function(){
-              console.info(`${TAG} topTabs[index]= ${this.topTabs[index]}`)
-              console.info(`${TAG} index= ${index.toString()}`)
+            .onClick(() => {
+              Logger.info(TAG, `topTabs[index]= ${this.topTabs[index]}`)
+              Logger.info(TAG, `index= ${index.toString()}`)
               this.topTabIndex = index
-              console.info(`${TAG} topTabIndex= ${this.topTabIndex}`)
+              Logger.info(TAG, `topTabIndex = ${this.topTabIndex}`)
               if (index === this.topTabIndex) {
                 this.controller.changeIndex(this.topTabIndex)
               } else {
-                console.info(`${TAG} error`)
+                Logger.info(TAG, `error`)
               }
-            }.bind(this))
+            })
         }, item => item)
       }
       .width('100%')
@@ -202,11 +194,12 @@ export struct TabContentView {
         }
       }
       .barHeight(0)
-      .scrollable(true)
       .vertical(false)
+      .scrollable(true)
       .animationDuration(1000)
       .onChange((index: number) => {
         this.topTabIndex = index
+        this.releaseChange()
       })
     }
     .width('100%')

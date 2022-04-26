@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { ReleaseData } from '../model/releaseData.ets'
+import { ReleaseData } from '../model/releaseData'
 
 export function getTextColor(number, index) {
   if (number == index) {
@@ -23,7 +23,7 @@ export function getTextColor(number, index) {
   }
 }
 
-export function checkExist(data: ReleaseData, list: Array<ReleaseData>) {
+export function checkExist(data: string, list: string[]) {
   for (let i in list) {
     if (list[i] === data) {
       return true

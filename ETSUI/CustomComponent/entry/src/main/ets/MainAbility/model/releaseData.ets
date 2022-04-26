@@ -15,6 +15,7 @@
 
 import dataStorage from '@ohos.data.storage'
 import featureAbility from '@ohos.ability.featureAbility'
+import Logger from '../model/Logger'
 
 const TAG = '[Component.ReleaseData]'
 
@@ -397,8 +398,8 @@ export function getDataFromStorage(callback) {
     storage = dataStorage.getStorageSync(path2);
     let releaseStr = storage.getSync('release', '')
     let browseStr = storage.getSync('browse', '')
-    console.log(`${TAG} getDateFromStorage reservation= ${releaseStr} `) //模板字符串
-    console.log(`${TAG} getDateFromStorage browse= ${browseStr}`)
+    Logger.info(TAG, `getDateFromStorage reservation= ${releaseStr}`)
+    Logger.info(TAG, `getDateFromStorage browse= ${browseStr}`)
     if (releaseStr === '' && browseStr != '') {
       releaseStr = []
     } else if (releaseStr !== '' && browseStr === '') {
