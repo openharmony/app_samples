@@ -70,6 +70,13 @@
     align-items: center;
 }
 
+.todo-item-child {
+    width: 100%;
+    margin-top: 2px;
+    flex-direction: row;
+    align-items: center;
+}
+
 .item-container {
     width: 80%;
     flex-direction: column;
