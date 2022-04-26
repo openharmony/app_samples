@@ -14,7 +14,7 @@
  */
 
 import prompt from '@ohos.prompt'
-import router from '@system.router';
+import router from '@system.router'
 import HiLog from '../model/HiLogUtil'
 import account_distributedAccount from '@ohos.account.distributedAccount'
 
