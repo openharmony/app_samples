@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DistributedRdb"
+    },
+    {
+      "name": "check_device",
+      "value": "Check device"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "Search contact"
+    },
+    {
+      "name": "select_all",
+      "value": "Select all"
+    },
+    {
+      "name": "delete",
+      "value": "Delete"
+    },
+    {
+      "name": "sure",
+      "value": "OK"
+    },
+    {
+      "name": "quit",
+      "value": "Quit"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    },
+    {
+      "name": "gender",
+      "value": "Gender:"
+    },
+    {
+      "name": "name",
+      "value": "name"
+    },
+    {
+      "name": "phone",
+      "value": "phone"
+    },
+    {
+      "name": "remark",
+      "value": "remark"
+    },
+    {
+      "name": "automatic",
+      "value": "Automatic synchronization"
+    },
+    {
+      "name": "manual",
+      "value": "Manual synchronization"
+    },
+    {
+      "name": "setting",
+      "value": "Setting"
+    },
+    {
+      "name": "connect",
+      "value": "Connect device"
+    },
+    {
+      "name": "delete_contact",
+      "value": "Delete the selected contacts?"
+    }
+  ]
+}
