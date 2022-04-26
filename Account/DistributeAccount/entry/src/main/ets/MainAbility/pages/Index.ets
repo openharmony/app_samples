@@ -14,7 +14,7 @@
  */
 
 import prompt from '@ohos.prompt'
-import router from '@system.router';
+import router from '@ohos.router';
 import HiLog from '../model/HiLogUtil'
 import { User } from '../model/User'
 import { SelectUser } from '../common/SelectUser'
@@ -47,7 +47,7 @@ struct Index {
         HiLog.info(TAG, `aboutToAppear1111 this.user.name = ${JSON.stringify(this.user)}`)
         setTimeout(() => {
           router.push({
-            uri: 'pages/userInterface',
+            url: 'pages/UserInterface',
             params: {
               userName: this.user.userName, password: this.user.password
             }
