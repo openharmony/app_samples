@@ -36,17 +36,17 @@ export struct VideoOperation {
           Image(this.info.collectImg).objectFit(ImageFit.Contain).width(25)
           Text($r('app.string.collection')).fontSize(15).margin({ left: 3 })
         }.layoutWeight(1).height('100%')
-        .onClick(function(){
+        .onClick(() => {
           this.collectClick()
-        }.bind(this))
+        })
       } else {
         Row() {
           Image(this.info.resImg).objectFit(ImageFit.Contain).width(25)
           Text($r('app.string.appointment')).fontSize(15).margin({ left: 3 })
         }.layoutWeight(1).height('100%')
-        .onClick(function(){
+        .onClick(() => {
           this.publishClick()
-        }.bind(this))
+        })
       }
     }
     .width('90%').height(30)

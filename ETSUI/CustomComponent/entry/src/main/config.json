@@ -35,7 +35,7 @@
         "formsEnabled": false,
         "label": "$string:MainAbility_label",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "distro": {
@@ -54,8 +54,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/index",
-          "pages/second"
+          "pages/index"
         ],
         "name": ".MainAbility",
         "window": {

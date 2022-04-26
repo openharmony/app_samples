@@ -17,6 +17,10 @@ import { ReleaseData, dataInit, addStorage, getDataFromStorage, getStorageList }
 import { TopView } from '../common/topView'
 import { NumberList } from '../common/numberList'
 import { TabContentView } from '../common/tabContent'
+import { menuTitle } from '../util/utils'
+import Logger from '../model/Logger'
+
+const TAG = '[Component.Index]'
 
 @Entry
 @Component
@@ -30,29 +34,37 @@ struct Index {
   @State collectionList: Array<ReleaseData> = []
 
   aboutToAppear() {
-    getDataFromStorage(function(){
+    getDataFromStorage(() => {
       this.releaseList = getStorageList('release')
       this.browseList = getStorageList('browse')
+      this.broMenu = menuTitle(this.browseList)
       this.checkisEmptyOfRelease()
+      Logger.info(TAG, `this.releaseList = +${JSON.stringify(this.releaseList)}\n releaseList=+${this.releaseList.length.toString()}`)
       this.reservationInit()
       this.collectionInit()
-    }.bind(this))
+    })
   }
 
   reservationInit() {
     for (let i in this.releaseList) {
       if (this.releaseList[i].isRes === true) {
-        this.reservationList.push(this.reservationList[i])
+        this.reservationList.push(this.releaseList[i])
       }
     }
+    Logger.info(TAG, `this.reservationList = ${JSON.stringify(this.reservationList)}`)
+    this.resMenu = menuTitle(this.reservationList)
+    Logger.info(TAG, `this.resmenu = ${JSON.stringify(this.resMenu)}`)
   }
 
   collectionInit() {
-    for (let i in this.collectionList) {
-      if (this.collectionList[i].isCollect === true) {
-        this.collectionList.push(this.collectionList[i])
+    for (let i in this.releaseList) {
+      if (this.releaseList[i].isCollect === true) {
+        this.collectionList.push(this.releaseList[i])
       }
     }
+    Logger.info(TAG, `this.collectionList = ${JSON.stringify(this.collectionList)}`)
+    this.colMenu = menuTitle(this.collectionList)
+    Logger.info(TAG, `this.colmenu = ${JSON.stringify(this.colMenu)}`)
   }
 
   checkisEmptyOfRelease() {

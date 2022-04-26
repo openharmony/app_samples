@@ -15,6 +15,7 @@
 
 import { checkExist, menuTitle } from '../util/utils'
 import { ReleaseData, addStorage, modifyStorage, getStorageList } from '../model/releaseData'
+import Logger from '../model/Logger'
 
 const TAG = '[Component.TopView]'
 
@@ -48,14 +49,12 @@ struct CustomContainer {
       .width('80%')
       .height(30)
       .margin({ top: 10 })
-
       this.closeContent()
     }
   }
 }
 
 @Builder
-
 function specificParam(img: Resource, imgText: Resource) {
   Row() {
     Image(img)
@@ -102,32 +101,31 @@ export struct TopView {
   }
 
   browseOnClick(data:ReleaseData) {
-    let browse = getStorageList('browse')
-    let exist = checkExist(data, browse)
+    let exist = checkExist(data.title, this.broMenu)
     if (exist !== true) {
       addStorage(data, 'browse')
       let browseList = getStorageList('browse')
       this.broMenu = menuTitle(browseList)
-      console.info(`${TAG} browseList= ${JSON.stringify(browseList)} \n ${TAG} browseList.length= ${browseList.length.toString()}`)
+      Logger.info(TAG,`browseList= ${JSON.stringify(browseList)} \n browseList.length= ${browseList.length.toString()}`)
     }
   }
 
   reservationOnClick(data:ReleaseData) {
-    console.info('[fengzi]data = ' + JSON.stringify(data))
+    Logger.info(TAG,`data = ${JSON.stringify(data)}`)
     data.isRes = !data.isRes
     let i = this.releaseList.indexOf(data)
     this.releaseList[i] = data
+    data.resImg = data.isRes == false ? $r('app.media.nofocus') : $r('app.media.focus')
     modifyStorage(data, i, 'release')
-    console.info('[fengzi]releaseList=' + JSON.stringify(this.releaseList))
-    if (data.isRes === false) {
+    Logger.info(TAG,`releaseList = ${JSON.stringify(this.releaseList)}`)
+    if (!data.isRes) {
       let j = this.reservationList.indexOf(data)
       this.reservationList.splice(j, 1)
     } else {
       this.reservationList.push(data)
     }
-    data.resImg = data.isRes == false ? $r('app.media.nofocus') : $r('app.media.focus')
     this.resMenu = menuTitle(this.reservationList)
-    console.info(`${TAG} reservationList= ${JSON.stringify(this.reservationList)} \n ${TAG} reservationList.length= ${this.reservationList.length.toString()}`)
+    Logger.info(TAG,`reservationList = ${JSON.stringify(this.reservationList)} \n reservationList.length = ${this.reservationList.length.toString()}`)
     this.viewList()
     let list = this.releaseList
     this.releaseList = []
@@ -153,10 +151,10 @@ export struct TopView {
               .width(100)
               .height(30)
               .margin({ top: 7 })
-              .onClick(function(){
-                console.info('guojin item.isRelease=' + item.isRelease);
+              .onClick(()=>{
+                Logger.info(TAG,`guojin item.isRelease = ${item.isRelease}`)
                 item.isRelease === true ? this.browseOnClick(item) : this.reservationOnClick(item)
-              }.bind(this))
+              })
             }
           }
           .width('100%')

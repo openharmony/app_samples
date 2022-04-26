@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
+
 const TAG = '[Component.numberList]'
 
 @Component
@@ -31,26 +33,25 @@ export struct NumberList {
       {
         value: menu[0],
         action: () => {
-          console.info(`${TAG} handle Menu1 select`)
+          Logger.info(TAG, `handle Menu1 select`)
         }
       },
       {
         value: menu[1],
         action: () => {
-          console.info(`${TAG} handle Menu2 select`)
+          Logger.info(TAG, `handle Menu2 select`)
         }
       },
       {
         value: menu[2],
         action: () => {
-          console.info(`${TAG} handle Menu3 select`)
+          Logger.info(TAG, `handle Menu3 select`)
         }
       }
     ])
   }
 
   build() {
-
     Row() {
       this.columnOfBindMenu(this.resMenu, $r('app.string.appointment'))
       this.columnOfBindMenu(this.colMenu, $r('app.string.collection'))

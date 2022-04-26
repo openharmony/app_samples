@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { ReleaseData } from '../model/releaseData.ets'
+import { ReleaseData } from '../model/releaseData'
 
 export function nearRelease(release: Array<ReleaseData>) {
   let nearList = []
