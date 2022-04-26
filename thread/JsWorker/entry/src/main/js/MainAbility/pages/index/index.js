@@ -12,9 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import worker from '@ohos.worker'
 
+const TAG = 'JsWorker.index'
+
+const str2ab = function(str) {
+  let buf = new ArrayBuffer(str.length*2)
+  let bufView = new Uint16Array(buf)
+  let strLen = str.length
+  for(let i = 0;i< strLen;i++) {
+    bufView[i] = str.charCodeAt(i)
+  }
+}
 export default {
     data: {
         before: "",
@@ -24,33 +33,37 @@ export default {
         })
     },
     onInit() {
+        console.info(`${TAG} on onInit`)
         this.before = this.$t('strings.menus')
-        this.worker.onerror = (data) => {
-            console.info('[worker.index] on error:' + data)
+        this.worker.onerror =  (data) => {
+            console.info(`${TAG} on error: ${JSON.stringify(data)}`)
         }
         this.worker.onmessageerror = (data) => {
-            console.info('[worker.index] on messageerror:' + data)
+            console.info(`${TAG} on messageerror: ${JSON.stringify(data)}`)
         }
         this.worker.onexit =  (data) => {
-            console.info('[worker.index] on exit:' + data)
+            console.info(`${TAG} on exit: ${JSON.stringify(data)}`)
         }
-        this.worker.onmessage = (e) => {
+        this.worker.onmessage =  (e) => {
             let data = e.data
-            if (data.type == 'normal') {
-                console.info('[worker.index] normal:' + data.data)
+            if (data.objType == 'normal') {
+                console.info(`${TAG} normal: ${data.data}`)
                 this.after = data.data
             }
         }
     },
-    sendString: () => {
+
+    sendString() {
+        console.info(`${TAG} sendString`)
         let obj = {
-            type: "normal", data: this.before.toString()
+            objType: "normal",
+            data: this.before.toString()
         }
-        console.info('[worker.index] sendString:' + obj.data)
+        console.info(`${TAG} sendString: ${obj.data}`)
         this.worker.postMessage(obj)
     },
-    clear:  () => {
-        this.after = ""
+    clear() {
+        this.after = ''
     },
     terminate() {
         this.worker.terminate()

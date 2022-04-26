@@ -13,22 +13,23 @@
  * limitations under the License.
  */
 
-import workers from '@ohos.worker';
+import workers from '@ohos.worker'
 
 const parentPort = workers.parentPort
+const TAG = 'JsWorker.worker'
 
-parentPort.onmessageerror = (e) => {
+parentPort.onmessageerror = function (e) {
     let data = e.data
-    console.info('[worker.worker] onmessageerror:' + JSON.stringify(data))
+    console.info(`${TAG} onmessageerror:${JSON.stringify(data)}`)
 }
-parentPort.onmessage = (e) => {
+parentPort.onmessage = function (e) {
     let data = e.data
-    console.info('[worker.worker] onmessage:' + JSON.stringify(data))
-    if (data.type == 'normal') {
+    console.info(`${TAG} onmessage:${JSON.stringify(data)}`)
+    if (data.objType == 'normal') {
         let obj = data.data
-        console.info('[worker.worker] postMessage obj:' + obj)
+        console.info(`${TAG} postMessage obj: ${obj}`)
         let after = obj.split(",").sort()
-        console.info('[worker.worker] postMessage after:' + after)
+        console.info(`${TAG} postMessage after: ${after}`)
         data.data = after
         parentPort.postMessage(data)
     }

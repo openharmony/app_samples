@@ -41,6 +41,13 @@
     flex-direction: column;
 }
 
+.content-child {
+    width: 100%;
+    padding: 15px;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
 .btn {
     width: 90%;
     height: 90px;

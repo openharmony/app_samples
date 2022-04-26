@@ -17,12 +17,14 @@ limitations under the License.
     <text class="title">{{ $t('strings.title') }}</text>
     <list>
         <list-item class="content" clickeffect="false">
-            <text class="tip">{{ $t('strings.tip_before') }}</text>
-            <text class="text">{{ before }}</text>
-            <text class="tip">{{ $t('strings.tip_after') }}</text>
-            <text class="text">{{ after }}</text>
-            <input class="btn" type="button" value="{{ $t('strings.send_string') }}" onclick="sendString"></input>
-            <input class="btn" type="button" value="{{ $t('strings.clear') }}" onclick="clear"></input>
+            <div  class="content-child">
+                <text class="tip">{{ $t('strings.tip_before') }}</text>
+                <text class="text">{{ before }}</text>
+                <text class="tip">{{ $t('strings.tip_after') }}</text>
+                <text class="text">{{ after }}</text>
+                <input class="btn" type="button" value="{{ $t('strings.send_string') }}" onclick="sendString"></input>
+                <input class="btn" type="button" value="{{ $t('strings.clear') }}" onclick="clear"></input>
+            </div>
         </list-item>
     </list>
 </div>
