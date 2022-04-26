@@ -1,4 +1,4 @@
-# ArkUI - Animation
+# Animation
 
 ## Introduction
 

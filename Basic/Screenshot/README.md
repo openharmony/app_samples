@@ -1,4 +1,4 @@
-# Basic Function - Screenshot
+# Screenshot
 
 ### Introduction
 
@@ -12,4 +12,6 @@
 
 ### Constraints
 
-This sample can only be run on standard-system devices.
+1. This sample can only be run on standard-system devices.
+
+2. This sample is supported since API version 9.

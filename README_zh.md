@@ -12,13 +12,13 @@
 
 ## 目录<a name="sectionMenu"></a>
 - Basic
-  - [`Container:`语言基础类库-线性容器ArrayList（eTS）（API8）](Basic/Container)
-  - [`Screenshot:`基础功能-屏幕截图（eTS）（API9）](Basic/Screenshot)
+  - [`Container:`线性容器ArrayList（eTS）（API8）](Basic/Container)
+  - [`Screenshot:`屏幕截图（eTS）（API9）](Basic/Screenshot)
 - Account
-  - [`AppAccountManager:`帐号管理-应用帐号管理（eTS）（API8）](Account/AppAccountManager)
-  - [`DistributeAccount:`帐号管理-分布式帐号管理（eTS）（API8）](Account/DistributeAccount)
+  - [`AppAccountManager:`应用帐号管理（eTS）（API8）](Account/AppAccountManager)
+  - [`DistributeAccount:`分布式帐号管理（eTS）（API8）](Account/DistributeAccount)
 - Communication
-  - [`RPC:`通信与连接-RPC连接（eTS）（API8）](Communication/RPC)
+  - [`RPC:`RPC连接（eTS）（API8）](Communication/RPC)
   - [`Wlan:`WLAN（eTS）（API8）](Communication/Wlan) 
 - ability
   - [`DMS:`分布式Demo（eTS）（API7）](ability/DMS)
@@ -61,10 +61,10 @@
   - [`JsDotTest:`测试打点（JS）（API7）](DFX/JsDotTest)
   - [`FaultLogger:`故障日志获取（eTS）（API8）](DFX/FaultLogger)
 - Telephony
-  - [`Call:`电话服务-拨打电话（eTS）（API8）](Telephony/Call)
-  - [`Message:`电话服务-短信服务（eTS）（API8）](Telephony/Message)
-  - [`RadioTech:`电话服务-网络搜索（eTS）（API8）](Telephony/RadioTech)
-  - [`SimManager:`电话服务-SIM卡管理（eTS）（API8）](Telephony/SimManager)
+  - [`Call:`拨打电话（eTS）（API8）](Telephony/Call)
+  - [`Message:`短信服务（eTS）（API8）](Telephony/Message)
+  - [`RadioTech:`网络搜索（eTS）（API8）](Telephony/RadioTech)
+  - [`SimManager:`SIM卡管理（eTS）（API8）](Telephony/SimManager)
 - thread
   - [`JsWorker:`启动一个worker（JS）（API7）](thread/JsWorker)
 - CompleteApps
@@ -76,13 +76,13 @@
   - [`Process:`进程信息（eTS）（API7）](ETSUI/Process)
   - [`BuildCommonView:`创建简单视图（eTS）（API7）](ETSUI/BuildCommonView)
   - [`DefiningPageLayoutAndConnection:`页面布局和连接（eTS）（API7）](ETSUI/DefiningPageLayoutAndConnection)
-  - [`Drag:`ArkUI-拖拽事件（eTS）（API8）](ETSUI/Drag)
+  - [`Drag:`拖拽事件（eTS）（API8）](ETSUI/Drag)
   - [`Component:`eTS组件测试Demo（eTS）（API8）](ETSUI/Component)
   - [`ArkUIAnimation:`eTS动画（eTS）（API8）](ETSUI/ArkUIAnimation)
   - [`MediaQuery:`eTS媒体查询（eTS）（API8）](ETSUI/MediaQuery)
-  - [`XComponent:`ArkUI-XComponent（eTS）（API8）](ETSUI/XComponent)
-  - [`MouseEvent:`ArkUI-鼠标事件（eTS）（API8）](ETSUI/MouseEvent)
-  - [`Web:`ArkUI-Web（eTS）（API8）](ETSUI/Web)
+  - [`XComponent:`XComponent（eTS）（API8）](ETSUI/XComponent)
+  - [`MouseEvent:`鼠标事件（eTS）（API8）](ETSUI/MouseEvent)
+  - [`Web:`Web（eTS）（API8）](ETSUI/Web)
   - [`Gallery:`组件集合（eTS）（API8）](ETSUI/Gallery)
 - FileManager
   - [`Environment:`目录环境（eTS）（API8）](FileManager/Environment)

@@ -33,7 +33,7 @@ struct Index {
           .padding({ left: 20 })
         Scroll() {
           Column() {
-            TextInput({ placeholder: $r('app.string.input_hint') })
+            TextInput({ placeholder: $r('app.string.input_hint'), text: this.input })
               .type(InputType.Number)
               .placeholderColor(Color.Grey)
               .placeholderFont({ size: 20, weight: FontWeight.Normal, family: "sans-serif", style: FontStyle.Normal })

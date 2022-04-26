@@ -1,4 +1,4 @@
-# ArkUI-XComponent
+# XComponent
 
 ## 简介
 

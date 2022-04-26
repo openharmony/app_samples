@@ -1,4 +1,4 @@
-#  ArkUI – Drag Event
+# Drag Event
 
 ### Introduction
 

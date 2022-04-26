@@ -1,4 +1,4 @@
-# Telephony - SMS
+# SMS
 
 ### Introduction
 
