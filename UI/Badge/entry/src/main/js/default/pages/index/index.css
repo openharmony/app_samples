@@ -18,6 +18,8 @@
     flex-direction: column;
     align-items: center;
     background-color: #F2F3F5;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .item {
@@ -25,8 +27,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    margin-right: 12px;
-    margin-left: 12px;
     margin-bottom: 2px;
     background-color: white;
 }
@@ -52,8 +52,8 @@
     height: 100%;
     width: 15%;
     left: 85%;
-    badgeSize: 30px;
-    textSize: 22fp
+    badgeSize: 35px;
+    text-size: 17px;
 }
 
 .title {
