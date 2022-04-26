@@ -1,4 +1,4 @@
-# Telephony - SIM Management
+# SIM Management
 
 ## Introduction
 

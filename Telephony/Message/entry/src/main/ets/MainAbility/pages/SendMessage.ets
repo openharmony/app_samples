@@ -158,6 +158,7 @@ struct SendMessage {
                 .fontColor(Color.Red)
                 .margin({ top: 20, right: 10 })
                 .textAlign(TextAlign.Center)
+                .textOverflow({ overflow: TextOverflow.None })
               Column() {
                 Text(`${this.dateTimeUtil.getDate()}  ${this.dateTimeUtil.getTime()}`)
                   .width('70%')
@@ -205,7 +206,6 @@ struct SendMessage {
             Logger.info(`${TAG}, onClick sendMessage`)
             if (this.content === '') {
               Logger.info(`${TAG}, onClick this.content===''`)
-              this.clickable = false
               AlertDialog.show(
                 {
                   title: $r('app.string.no_message'),

@@ -1,4 +1,4 @@
-# Language Base Class Library - Linear Container ArrayList
+# Linear Container ArrayList
 
 ### Introduction
 

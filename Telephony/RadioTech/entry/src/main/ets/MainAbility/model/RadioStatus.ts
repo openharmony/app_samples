@@ -26,7 +26,7 @@ export class RadioStatus {
     async getSimSpn(slotId: number) {
         const simSpn = await sim.getSimSpn(slotId)
         Logger.info(`${TAG}, getSimSpn radioTech = ${simSpn}`)
-        this.setResult(simSpn)
+        return simSpn
     }
 
     async getRadioTech(slotId: number) {
@@ -49,7 +49,7 @@ export class RadioStatus {
         Logger.info(`${TAG}, getNetworkSelectionMode networkSelectionMode start`)
         const networkSelectionMode = await radio.getNetworkSelectionMode(slotId)
         Logger.info(`${TAG}, getNetworkSelectionMode networkSelectionMode = ${networkSelectionMode}`)
-        this.setResult(networkSelectionMode)
+        return networkSelectionMode
     }
 
     async getISOCountryCodeForNetwork(slotId: number) {
@@ -86,13 +86,5 @@ export class RadioStatus {
         const radioOn = await radio.isRadioOn()
         Logger.info(`${TAG}, getRadioOn radioOn = ${radioOn}`)
         return JSON.stringify(radioOn)
-    }
-
-    setResult(data) {
-        if (typeof (JSON.stringify(data)) == `undefined`) {
-            return 'not available'
-        } else {
-            return data
-        }
     }
 }

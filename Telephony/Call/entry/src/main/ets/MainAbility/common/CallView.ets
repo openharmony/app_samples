@@ -35,6 +35,7 @@ export struct CallView {
           if (this.src == this.on) {
             this.src = this.off
           } else {
+            this.output = ''
             this.src = this.on
             call.dial(this.input, { extras: false }, (err, data) => {
               this.output = this.output + `dial: ${JSON.stringify(data)}\n`
@@ -65,6 +66,7 @@ export struct CallView {
               this.output = this.output + `formatPhoneNumberToE164: ${JSON.stringify(data)}\n`
               Logger.info(`${TAG}, callback: formatPhoneNumberToE164 err->${JSON.stringify(err)} data->${JSON.stringify(data)}`)
             })
+            this.input = ''
           }
         })
         .onFinish(() => {
