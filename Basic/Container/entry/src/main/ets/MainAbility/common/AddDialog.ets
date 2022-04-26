@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt'
 import Information from '../model/Information'
 import Logger from '../model/Logger'
 
@@ -112,7 +112,7 @@ export struct AddDialog {
             prompt.showToast({ message: '姓名不能为空', duration: 1000 })
             return
           }
-          if (this.writeInformation.age === 0) {
+          if (this.writeInformation.age < 1 || isNaN(this.writeInformation.age)) {
             prompt.showToast({ message: '年龄不能为空', duration: 1000 })
             return
           }
