@@ -1,0 +1,29 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "BackGroundTaskManager"
+    },
+    {
+      "name": "description_serviceability",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "fileName",
+      "value": "xxx.txt"
+    },
+    {
+      "name": "download",
+      "value": "下载"
+    }
+
+  ]
+}
