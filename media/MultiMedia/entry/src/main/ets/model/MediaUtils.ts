@@ -18,7 +18,7 @@ import Logger from '../model/Logger'
 
 export default class MediaUtils {
     private tag: string = 'MediaUtils'
-    private mediaTest = mediaLibrary.getMediaLibrary()
+    private mediaTest: mediaLibrary.MediaLibrary = mediaLibrary.getMediaLibrary(globalThis.abilityContext)
     private static instance: MediaUtils = new MediaUtils()
 
     public static getInstance() {
@@ -33,9 +33,9 @@ export default class MediaUtils {
         let dateTimeUtil = new DateTimeUtil()
         let name = `${dateTimeUtil.getDate()}_${dateTimeUtil.getTime()}`
         let displayName = `${info.prefix}${name}${info.suffix}`
-        Logger.log(this.tag, `displayName = ${displayName},mediaType = ${mediaType}`)
+        Logger.info(this.tag, `displayName = ${displayName},mediaType = ${mediaType}`)
         let publicPath = await this.mediaTest.getPublicDirectory(info.directory)
-        Logger.log(this.tag, `publicPath = ${publicPath}`)
+        Logger.info(this.tag, `publicPath = ${publicPath}`)
         let dataUri = await this.mediaTest.createAsset(mediaType, displayName, publicPath)
         return dataUri
     }
@@ -49,7 +49,7 @@ export default class MediaUtils {
                 selectionArgs: [args],
             }
             const fetchFileResult = await this.mediaTest.getFileAssets(fetchOp)
-            Logger.log(this.tag, `fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
+            Logger.info(this.tag, `fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
             const fileAsset = await fetchFileResult.getAllObject()
             return fileAsset[0]
         }
@@ -57,7 +57,7 @@ export default class MediaUtils {
 
     async getFdPath(fileAsset: any) {
         let fd = await fileAsset.open('Rw')
-        Logger.log(this.tag, `fd = ${fd}`)
+        Logger.info(this.tag, `fd = ${fd}`)
         return fd
     }
 
@@ -73,14 +73,14 @@ export default class MediaUtils {
     }
 
     async getFileAssetsFromType(mediaType: number) {
-        Logger.log(this.tag, `getFileAssetsFromType,mediaType = ${mediaType}`)
+        Logger.info(this.tag, `getFileAssetsFromType,mediaType = ${mediaType}`)
         let fileKeyObj = mediaLibrary.FileKey
         let fetchOp = {
             selections: `${fileKeyObj.MEDIA_TYPE}=?`,
             selectionArgs: [`${mediaType}`],
         }
         const fetchFileResult = await this.mediaTest.getFileAssets(fetchOp)
-        Logger.log(this.tag, `getFileAssetsFromType,fetchFileResult.count = ${fetchFileResult.getCount()}`)
+        Logger.info(this.tag, `getFileAssetsFromType,fetchFileResult.count = ${fetchFileResult.getCount()}`)
         let fileAssets = []
         if (fetchFileResult.getCount() > 0) {
             fileAssets = await fetchFileResult.getAllObject()
@@ -89,7 +89,7 @@ export default class MediaUtils {
     }
 
     async getAlbums() {
-        Logger.log(this.tag, 'getAlbums begin')
+        Logger.info(this.tag, 'getAlbums begin')
         let albums = []
         const [ files, images, videos, audios ] = await Promise.all([
             this.getFileAssetsFromType(mediaLibrary.MediaType.FILE),
@@ -114,29 +114,29 @@ export default class MediaUtils {
 
     deleteFile(media: any) {
         let uri = media.uri
-        Logger.log(this.tag, `deleteFile,uri = ${uri}`)
+        Logger.info(this.tag, `deleteFile,uri = ${uri}`)
         return this.mediaTest.deleteAsset(uri)
     }
 
     onDateChange(callback: () => void) {
         this.mediaTest.on('albumChange', () => {
-            Logger.log(this.tag, 'albumChange called')
+            Logger.info(this.tag, 'albumChange called')
             callback()
         })
         this.mediaTest.on('imageChange', () => {
-            Logger.log(this.tag, 'imageChange called')
+            Logger.info(this.tag, 'imageChange called')
             callback()
         })
         this.mediaTest.on('audioChange', () => {
-            Logger.log(this.tag, 'audioChange called')
+            Logger.info(this.tag, 'audioChange called')
             callback()
         })
         this.mediaTest.on('videoChange', () => {
-            Logger.log(this.tag, 'videoChange called')
+            Logger.info(this.tag, 'videoChange called')
             callback()
         })
         this.mediaTest.on('fileChange', () => {
-            Logger.log(this.tag, 'fileChange called')
+            Logger.info(this.tag, 'fileChange called')
             callback()
         })
     }

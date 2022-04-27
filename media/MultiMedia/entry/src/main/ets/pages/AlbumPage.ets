@@ -32,13 +32,13 @@ struct AlbumPage {
   @State selectMedia: mediaLibrary.FileAsset = undefined
 
   btnAction(operate, index) {
-    Logger.log(this.tag, `btnAction callback,operate: ${operate}, index: ${index}`)
+    Logger.info(this.tag, `btnAction callback,operate: ${operate}, index: ${index}`)
     this.selectMedia = this.mediaList[index]
     if (operate === 'delete') {
       this.deleteMedia(() => {
         let deleteResult = this.mediaUtils.deleteFile(this.selectMedia)
         deleteResult.then(() => {
-          Logger.log(this.tag, 'deleteFile callback')
+          Logger.info(this.tag, 'deleteFile callback')
           this.mediaList.splice(index, 1)
         }).catch(err => {
           Logger.error(this.tag, `deleteFile err,err: ${err}`)
@@ -56,14 +56,14 @@ struct AlbumPage {
   }
 
   renameMedia(title) {
-    Logger.log(this.tag, `renameMedia newName = ${this.selectMedia.displayName}`)
+    Logger.info(this.tag, `renameMedia newName = ${this.selectMedia.displayName}`)
     this.selectMedia.title = title
     this.selectMedia.commitModify(err => {
       if (err !== undefined) {
-        Logger.log(this.tag, `commitModify,err: ${err}`)
+        Logger.info(this.tag, `commitModify,err: ${err}`)
         return
       }
-      Logger.log(this.tag, 'commitModify success')
+      Logger.info(this.tag, 'commitModify success')
       this.renameDialogController.close()
       this.refreshData()
     })
@@ -94,7 +94,7 @@ struct AlbumPage {
     this.mediaList = []
     let fileAsset = this.mediaUtils.getFileAssetsFromType(this.mediaType)
     fileAsset.then(fileList => {
-      Logger.log(this.tag, 'getFileList callback')
+      Logger.info(this.tag, 'getFileList callback')
       this.mediaList = fileList
     }).catch(err => {
       Logger.error(this.tag, `getFileList err,err = ${err}`)
@@ -102,7 +102,7 @@ struct AlbumPage {
   }
 
   aboutToAppear() {
-    Logger.log(this.tag, `mediaType=${this.mediaType}`)
+    Logger.info(this.tag, `mediaType=${this.mediaType}`)
     this.refreshData()
   }
 
@@ -114,6 +114,22 @@ struct AlbumPage {
           ListItem() {
             MediaItem({ media: item, index: index, btnAction: this.btnAction.bind(this) })
           }
+          .onClick(() => {
+            if (item.mediaType === mediaLibrary.MediaType.VIDEO) {
+              Logger.info(this.tag, `onClick,item.id=${item.id}`)
+              globalThis.abilityContext.startAbility({
+                  bundleName: 'ohos.samples.videoplayer',
+                  abilityName: 'PlayAbility',
+                  deviceId: "",
+                  parameters: {
+                    fileId: item.id
+                  }
+                }, (error) => {
+                  Logger.info(this.tag, `error.code = ${error.code}`)
+                }
+              )
+            }
+          })
         }, item => item.title)
       }
       .layoutWeight(1)

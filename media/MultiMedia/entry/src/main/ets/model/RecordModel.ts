@@ -32,41 +32,41 @@ export default class RecordModel {
     initAudioRecorder(handleStateChange: () => void) {
         this.release();
         this.audioRecorder = media.createAudioRecorder()
-        Logger.log(this.tag, 'create audioRecorder success')
+        Logger.info(this.tag, 'create audioRecorder success')
         this.audioRecorder.on('prepare', () => {
-            Logger.log(this.tag, 'setCallback  prepare case callback is called')
+            Logger.info(this.tag, 'setCallback  prepare case callback is called')
             this.audioRecorder.start()
         })
         this.audioRecorder.on('start', () => {
-            Logger.log(this.tag, 'setCallback start case callback is called')
+            Logger.info(this.tag, 'setCallback start case callback is called')
             handleStateChange()
         })
         this.audioRecorder.on('stop', () => {
-            Logger.log(this.tag, 'audioRecorder stop called')
+            Logger.info(this.tag, 'audioRecorder stop called')
             this.audioRecorder.release()
         })
         this.audioRecorder.on('pause', () => {
-            Logger.log(this.tag, 'audioRecorder pause finish')
+            Logger.info(this.tag, 'audioRecorder pause finish')
             handleStateChange()
         })
         this.audioRecorder.on('resume', () => {
-            Logger.log(this.tag, 'audioRecorder resume finish')
+            Logger.info(this.tag, 'audioRecorder resume finish')
             handleStateChange()
         })
     }
 
     release() {
         if (typeof (this.audioRecorder) !== `undefined`) {
-            Logger.log(this.tag, 'audioRecorder  release')
+            Logger.info(this.tag, 'audioRecorder  release')
             this.audioRecorder.release()
             this.audioRecorder = undefined
         }
     }
 
     startRecorder(pathName: string) {
-        Logger.log(this.tag, `startRecorder, pathName = ${pathName}`)
+        Logger.info(this.tag, `startRecorder, pathName = ${pathName}`)
         if (typeof (this.audioRecorder) !== 'undefined') {
-            Logger.log(this.tag, 'start prepare')
+            Logger.info(this.tag, 'start prepare')
             audioConfig.uri = pathName
             this.audioRecorder.prepare(audioConfig)
         } else {
@@ -75,14 +75,14 @@ export default class RecordModel {
     }
 
     pause() {
-        Logger.log(this.tag, 'audioRecorder pause called')
+        Logger.info(this.tag, 'audioRecorder pause called')
         if (typeof (this.audioRecorder) !== `undefined`) {
             this.audioRecorder.pause()
         }
     }
 
     resume() {
-        Logger.log(this.tag, 'audioRecorder resume called')
+        Logger.info(this.tag, 'audioRecorder resume called')
         if (typeof (this.audioRecorder) !== `undefined`) {
             this.audioRecorder.resume()
         }

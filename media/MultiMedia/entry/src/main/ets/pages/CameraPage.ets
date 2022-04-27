@@ -36,7 +36,7 @@ struct CameraPage {
 
   aboutToAppear() {
     this.surfaceId = this.mXComponentController.getXComponentSurfaceId()
-    Logger.log(this.tag, `aboutToAppear,surfaceId=${this.surfaceId}`)
+    Logger.info(this.tag, `aboutToAppear,surfaceId=${this.surfaceId}`)
     this.cameraTest.setTakePictureCallback(this.handleTakePicture)
   }
 
@@ -54,12 +54,12 @@ struct CameraPage {
 
   async refreshVideoState() {
     if (this.isRecording) {
-      Logger.log(this.tag, 'stopVideo begin')
+      Logger.info(this.tag, 'stopVideo begin')
       await this.cameraTest.stopVideo()
       this.isRecording = false
       this.videoThumbnail = $r('app.media.video_poster')
     } else {
-      Logger.log(this.tag, 'startVideo begin')
+      Logger.info(this.tag, 'startVideo begin')
       await this.cameraTest.startVideo(this.surfaceId)
       this.isRecording = true
     }
@@ -67,7 +67,7 @@ struct CameraPage {
 
   handleTakePicture = (thumbnail: string) => {
     this.imgThumbnail = thumbnail
-    Logger.log(this.tag, `takePicture end , thumbnail: ${this.imgThumbnail}`)
+    Logger.info(this.tag, `takePicture end , thumbnail: ${this.imgThumbnail}`)
   }
 
   async changeToPhotoMode() {
@@ -90,10 +90,10 @@ struct CameraPage {
           controller: this.mXComponentController
         })
           .onLoad(() => {
-            Logger.log(this.tag, 'onLoad is called')
+            Logger.info(this.tag, 'onLoad is called')
             this.mXComponentController.setXComponentSurfaceSize({ surfaceWidth: 2048, surfaceHeight: 1536 })
             this.surfaceId = this.mXComponentController.getXComponentSurfaceId()
-            Logger.log(this.tag, `onLoad surfaceId: ${this.surfaceId}`)
+            Logger.info(this.tag, `onLoad surfaceId: ${this.surfaceId}`)
             this.curModel = CameraMode.MODE_PHOTO
             this.cameraTest.initCamera(this.surfaceId)
           })
@@ -148,7 +148,7 @@ struct CameraPage {
               .margin({ left: 50 })
               .onClick(() => {
                 if (this.curModel === CameraMode.MODE_PHOTO) {
-                  Logger.log(this.tag, 'takePicture begin')
+                  Logger.info(this.tag, 'takePicture begin')
                   prompt.showToast({ message: '拍照中...', duration: 1000 })
                   this.cameraTest.takePicture()
                 } else if (this.curModel === CameraMode.MODE_VIDEO) {

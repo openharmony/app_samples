@@ -16,7 +16,7 @@ import router from '@system.router'
 
 @Component
 export default struct TitleBar {
-  private title: string | Resource = $r('app.string.entry_MainAbility')
+  private title: string | Resource = $r('app.string.MainAbility_label')
   private hasBackPress: boolean = false
 
   aboutToAppear() {

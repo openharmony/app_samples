@@ -27,9 +27,9 @@ struct DocumentPage {
   @State fileContent: string = ''
 
   async saveFile() {
-    Logger.log(this.tag, 'saveFile')
+    Logger.info(this.tag, 'saveFile')
     let fd = await this.mediaUtils.createFile(mediaLibrary.MediaType.FILE)
-    Logger.log(this.tag, `fd = ${fd}`)
+    Logger.info(this.tag, `fd = ${fd}`)
     await fileIo.write(fd, this.fileContent)
     await fileIo.close(fd)
     router.back()
@@ -57,7 +57,7 @@ struct DocumentPage {
       .width(200)
       .margin({ top: 10 })
       .onClick(() => {
-        Logger.log(this.tag, 'saveFile onClick')
+        Logger.info(this.tag, 'saveFile onClick')
         this.saveFile()
       })
     }

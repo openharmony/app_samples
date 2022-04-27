@@ -1,12 +1,16 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
+      "name": "MainAbility_label",
       "value": "eTS多媒体"
     },
     {
-      "name": "description_mainability",
+      "name": "MainAbility_desc",
       "value": "eTS多媒体 Ability"
+    },
+    {
+      "name": "entry_desc",
+      "value": "eTSMultiMedia Ability"
     },
     {
       "name": "delete_file",
