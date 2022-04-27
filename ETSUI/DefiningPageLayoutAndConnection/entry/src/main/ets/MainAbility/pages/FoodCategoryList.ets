@@ -20,6 +20,7 @@ import { initializeOnStartup } from '../model/FoodDataModels'
 @Component
 struct FoodListItem {
   private foodItem: FoodData
+
   build() {
     Navigator({ target: 'pages/FoodDetail' }) {
       Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
@@ -32,6 +33,7 @@ struct FoodListItem {
         }
         .backgroundColor('#FFf1f3f5')
         .margin({ right: 16 })
+
         Text(this.foodItem.name)
           .fontSize(14)
           .flexGrow(1)
@@ -49,6 +51,7 @@ struct FoodListItem {
 @Component
 struct FoodList {
   private foodItems: FoodData[]
+
   build() {
     Column() {
       Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
@@ -58,6 +61,7 @@ struct FoodList {
       }
       .height('7%')
       .backgroundColor('#FFf1f3f5')
+
       List() {
         ForEach(this.foodItems, item => {
           ListItem() {
@@ -72,6 +76,7 @@ struct FoodList {
 @Component
 struct FoodGridItem {
   private foodItem: FoodData
+
   build() {
     Column() {
       Row() {
@@ -80,6 +85,7 @@ struct FoodGridItem {
           .height(152)
           .width('100%')
       }.backgroundColor('#FFf1f3f5')
+
       Flex({ justifyContent: FlexAlign.Start, alignItems: ItemAlign.Center }) {
         Text(this.foodItem.name)
           .fontSize(14)
@@ -136,6 +142,7 @@ struct FoodGrid {
 @Component
 struct FoodCategory {
   private foodItems: FoodData[]
+
   build() {
     Stack() {
       Tabs() {

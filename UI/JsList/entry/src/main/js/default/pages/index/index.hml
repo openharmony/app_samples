@@ -21,17 +21,19 @@
             <!--展开后-->
                 <list-item type="item" >
                     <div class="item-group-child">
-                        <list scrollbar="auto" class="list-wrapper" scrollbaroffset="spring" scrollpage="true"
+                        <list scrollbar="auto" class="list-wrapper" scrollpage="true"
                               divider="true" shapemode="rect" updateeffect="true" chainanimation="false">
                             <list-item class="list-item" for="{{ category.product }}" onclick="onClick">
-                                <div class="list-left">
-                                    <image class="list-img" src="{{ $item.img }}"></image>
-                                </div>
-                                <div class="list-right">
-                                    <text class="list-model">{{ $item.model }}</text>
-                                    <text class="list-type">{{ $item.type }}</text>
-                                    <text class="list-info">{{ $item.info }}</text>
-                                </div>
+                               <div class="list-item-child">
+                                   <div class="list-left">
+                                       <image class="list-img" src="{{ $item.img }}"></image>
+                                   </div>
+                                   <div class="list-right">
+                                       <text class="list-model">{{ $item.model }}</text>
+                                       <text class="list-type">{{ $item.type }}</text>
+                                       <text class="list-info">{{ $item.info }}</text>
+                                   </div>
+                               </div>
                             </list-item>
                         </list>
                     </div>

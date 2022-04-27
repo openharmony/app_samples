@@ -2,11 +2,11 @@
   "string": [
     {
       "name": "entry_MainAbility",
-      "value": "eTSProcess"
+      "value": "EtsProcess"
     },
     {
       "name": "description_mainability",
-      "value": "eTSProcess Ability"
+      "value": "EtsProcess Ability"
     },
     {
       "name": "uptime",
