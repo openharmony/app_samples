@@ -14,7 +14,7 @@
  */
 
 import Prompt from '@system.prompt';
-import {Good, addGood} from '../model/product'
+import { Good, addGood } from '../model/product'
 
 @Component
 export struct Goods {

@@ -14,17 +14,17 @@
  */
 
 import media from '@ohos.multimedia.media';
+import fileIo from '@ohos.fileio'
 
 export
-
 class Playlist {
     constructor() {
     }
 
     audioFiles = [];
 }
-export
 
+export
 class Song {
     constructor(name, fileUri, duration) {
         this.name = name;
@@ -32,6 +32,7 @@ class Song {
         this.duration = duration;
     }
 }
+
 export default class PlayerModel {
     isPlaying = false;
     playlist = new Playlist;
@@ -44,29 +45,21 @@ export default class PlayerModel {
 
     constructor() {
         this.#player = media.createAudioPlayer();
+        this.initAudioPlayer()
         console.info('MusicPlayer[PlayerModel] createAudioPlayer=' + this.#player);
     }
 
     initAudioPlayer() {
         console.info('MusicPlayer[PlayerModel] initAudioPlayer begin');
-        this.#player.on('error', (err, action) => {
-            console.error(`MusicPlayer[PlayerModel] player error: ${err.code}`);
+        this.#player.on('error', () => {
+            console.error(`MusicPlayer[PlayerModel] player error`);
         });
-        let self = this;
-        this.#player.on('finish', (err, action) => {
-            if (err) {
-                console.error(`MusicPlayer[PlayerModel] error returned in finish() callback`);
-                return;
-            }
+        this.#player.on('finish', () => {
             console.log('MusicPlayer[PlayerModel] finish() callback is called');
-            self.notifyPlayingStatus(false);
+            this.notifyPlayingStatus(false);
         });
-        this.#player.on('timeUpdate', (err, action) => {
-            if (err) {
-                console.error(`MusicPlayer[PlayerModel] error returned in timeUpdate() callback`);
-                return;
-            }
-            console.log('MusicPlayer[PlayerModel] timeUpdate() callback is called, ' + JSON.stringify(action))
+        this.#player.on('timeUpdate', () => {
+            console.log('MusicPlayer[PlayerModel] timeUpdate() callback is called ')
         });
         console.info('MusicPlayer[PlayerModel] initAudioPlayer end');
     }
@@ -100,16 +93,13 @@ export default class PlayerModel {
     getPlaylist(callback) {
         // generate play list
         console.info('MusicPlayer[PlayerModel] generatePlayList');
-        const args = {
-            selections: 'audio',
-            selectionArgs: ['audioalbum'],
-        };
-        let self = this;
+
         console.info('MusicPlayer[PlayerModel] getAudioAssets begin');
-        self.playlist = new Playlist();
-        self.playlist.audioFiles = [];
-        self.playlist.audioFiles[0] = new Song('dynamic.wav', 'file://system/etc/dynamic.wav', 0);
-        self.playlist.audioFiles[1] = new Song('demo.wav', 'file://system/etc/demo.wav', 0);
+        this.playlist = new Playlist();
+        this.playlist.audioFiles = [];
+        this.playlist.audioFiles[0] = new Song('dynamic.wav', 'system/etc/dynamic.wav', 0);
+        this.playlist.audioFiles[1] = new Song('demo.wav', 'system/etc/demo.wav', 0);
+        callback()
         console.info('MusicPlayer[PlayerModel] getAudioAssets end');
     }
 
@@ -161,38 +151,44 @@ export default class PlayerModel {
             return 0;
         }
         this.index = index;
-        var source = this.playlist.audioFiles[index].fileUri;
-        if (typeof (source) === 'undefined') {
-            console.error('MusicPlayer[PlayerModel] preLoad ignored, source=' + source);
-            return;
-        }
-        console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' begin');
-        console.info('MusicPlayer[PlayerModel] state=' + this.#player.state);
-        let self = this;
-        if (source === this.#player.src && this.#player.state != 'idle') {
-            console.info('MusicPlayer[PlayerModel] preLoad finished. src not changed');
-            callback();
-        } else if (this.#player.state === 'idle') {
-            this.#player.on('dataLoad', () => {
-                console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+
+        let uri = this.playlist.audioFiles[index].fileUri
+        fileIo.open(uri, (err, fdNumber) => {
+            let fdPath = 'fd://'
+            let source = fdPath + fdNumber
+
+            if (typeof (source) === 'undefined') {
+                console.error('MusicPlayer[PlayerModel] preLoad ignored, source=' + source);
+                return;
+            }
+            console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' begin');
+            console.info('MusicPlayer[PlayerModel] state=' + this.#player.state);
+            let self = this;
+            if (source === this.#player.src && this.#player.state != 'idle') {
+                console.info('MusicPlayer[PlayerModel] preLoad finished. src not changed');
                 callback();
-            });
-            console.info('MusicPlayer[PlayerModel] player.src=' + source);
-            this.#player.src = source;
-        } else {
-            this.notifyPlayingStatus(false);
-            this.cancelTimer();
-            console.info('MusicPlayer[PlayerModel] player.reset');
-            self.#player.reset();
-            console.info('MusicPlayer[PlayerModel] player.reset done, state=' + self.#player.state);
-            self.#player.on('dataLoad', () => {
-                console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
-                callback();
-            });
-            console.info('MusicPlayer[PlayerModel] player.src=' + source);
-            self.#player.src = source;
-        }
-        console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' end');
+            } else if (this.#player.state === 'idle') {
+                this.#player.on('dataLoad', () => {
+                    console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+                    callback();
+                });
+                console.info('MusicPlayer[PlayerModel] player.src=' + source);
+                this.#player.src = source;
+            } else {
+                this.notifyPlayingStatus(false);
+                this.cancelTimer();
+                console.info('MusicPlayer[PlayerModel] player.reset');
+                self.#player.reset();
+                console.info('MusicPlayer[PlayerModel] player.reset done, state=' + self.#player.state);
+                self.#player.on('dataLoad', () => {
+                    console.info('MusicPlayer[PlayerModel] dataLoad callback, state=' + self.#player.state);
+                    callback();
+                });
+                console.info('MusicPlayer[PlayerModel] player.src=' + source);
+                self.#player.src = source;
+            }
+            console.info('MusicPlayer[PlayerModel] preLoad ' + source + ' end');
+        })
     }
 
     getDuration() {
