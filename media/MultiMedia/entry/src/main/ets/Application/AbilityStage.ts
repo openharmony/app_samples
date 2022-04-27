@@ -12,12 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import AbilityStage from "@ohos.application.AbilityStage"
+import Logger from '../model/Logger'
 
-export default {
-  onCreate() {
-    console.info('Application onCreate')
-  },
-  onDestroy() {
-    console.info('Application onDestroy')
-  },
+export default class MyAbilityStage extends AbilityStage {
+    onCreate() {
+        Logger.info('MyAbilityStage', 'onCreate')
+    }
 }

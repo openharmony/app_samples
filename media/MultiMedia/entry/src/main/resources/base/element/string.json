@@ -1,11 +1,15 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
+      "name": "MainAbility_label",
       "value": "eTSMultiMedia"
     },
     {
-      "name": "description_mainability",
+      "name": "MainAbility_desc",
+      "value": "eTSMultiMedia Ability"
+    },
+    {
+      "name": "entry_desc",
       "value": "eTSMultiMedia Ability"
     },
     {

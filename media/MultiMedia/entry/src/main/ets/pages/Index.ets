@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 import router from '@system.router'
+import Logger from '../model/Logger'
 import TitleBar from '../view/TitleBar'
-import grantPermission from '../../mainability/model/permissionutils'
 import MediaUtils from '../model/MediaUtils'
 import { MediaView } from '../view/MediaView'
 
@@ -22,6 +22,14 @@ export default interface Album {
   albumName: string,
   count: string
 }
+
+const PERMISSIONS: Array<string> = [
+  'ohos.permission.CAMERA',
+  'ohos.permission.MICROPHONE',
+  'ohos.permission.READ_MEDIA',
+  'ohos.permission.WRITE_MEDIA',
+  'ohos.permission.MEDIA_LOCATION']
+const TAG: string = 'Index'
 
 @Entry
 @Component
@@ -34,8 +42,9 @@ struct Index {
     this.albums = await this.mediaUtils.getAlbums()
   }
 
-  aboutToAppear() {
-    grantPermission()
+  async aboutToAppear() {
+    await globalThis.abilityContext.requestPermissionsFromUser(PERMISSIONS)
+    Logger.info(TAG, 'grantPermission,requestPermissionsFromUser')
   }
 
   onPageShow() {

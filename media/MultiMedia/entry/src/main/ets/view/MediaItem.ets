@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
+import { getDurationString } from '../model/TimeUtils'
 
 @Component
 export struct MediaItem {
@@ -63,6 +64,12 @@ export struct MediaItem {
           .width('100%')
           .fontSize(22)
           .margin({ top: 10 })
+        if(this.media.mediaType ===  mediaLibrary.MediaType.VIDEO) {
+          Text(getDurationString(this.media.duration))
+            .width('100%')
+            .fontSize(22)
+            .margin({ top: 10 })
+        }
       }
       .margin({ left: 10 })
       .layoutWeight(1)
