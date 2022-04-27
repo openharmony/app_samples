@@ -47,7 +47,8 @@
                 <text class="slider-value">15</text>
             </div>
             <div class="close-panel">
-                <button class="panel-btn" type="capsule" value="{{$t('strings.close')}}" onclick="closePanel"></button>
+                <button class="panel-btn" type="capsule" value="{{ $t('strings.close') }}" onclick="closePanel">
+                </button>
             </div>
         </div>
     </panel>

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import {Good, deleteGood, clearGoodShop, getShopCart} from '../model/product'
+import { Good, deleteGood, clearGoodShop, getShopCart } from '../model/product'
 
 @Component
 export struct ShoppingCart {
@@ -26,6 +26,7 @@ export struct ShoppingCart {
   aboutToAppear() {
     this.cartNum = this.shopList.length
     this.getPriceCount()
+    console.info('[fengzi]shopList=' + JSON.stringify(this.shopList) + '\nshopList.length=' + this.shopList.length.toString())
   }
 
   getPriceCount() {
@@ -40,6 +41,7 @@ export struct ShoppingCart {
     Column() {
       Image($r('app.media.close'))
         .width(40)
+        .height(40)
         .objectFit(ImageFit.ScaleDown)
         .alignSelf(ItemAlign.Start)
         .margin({ left: 5, top: 5 })
@@ -81,35 +83,41 @@ export struct ShoppingCart {
       }.width('100%').height(35)
 
       List() {
-        ForEach(this.shopList, item => {
+        ForEach(this.shopList, (item, index) => {
           ListItem() {
             Row() {
+              if (this.editFlag) {
+                Image($r('app.media.delete'))
+                  .width(20)
+                  .height(20)
+                  .margin({ left: 20 })
+                  .objectFit(ImageFit.Fill)
+                  .onClick(() => {
+                    deleteGood(this.shopList[index])
+                    this.shopList = getShopCart()
+                    this.cartNum--
+                    this.getPriceCount()
+                    this.editFlag = false
+                  })
+              }
               Text(item.name)
                 .width('50%')
                 .fontSize(18)
                 .textAlign(TextAlign.Center)
               Text('￥' + item.price)
-                .width('50%')
+                .width('40%')
                 .fontSize(18)
-                .textAlign(TextAlign.Center)
                 .fontColor(Color.Red)
-            }
+                .textAlign(TextAlign.Center)
+            }.margin({ top: 30 })
           }.editable(true)
-        }, item => item.name)
+        }, item => JSON.stringify(item))
       }
-      .padding({ right: 10 })
-      .edgeEffect(EdgeEffect.None) // 滑动到边缘无效果
-      .editMode(this.editFlag)
-      .onItemDelete((index: number) => {
-        deleteGood(this.shopList[index])
-        this.shopList = getShopCart()
-        this.cartNum--
-        this.getPriceCount()
-        this.editFlag = false
-        return true
-      })
+      .height(285)
       .width('100%')
-      .height(85)
+      .padding({ right: 10 })
+      .editMode(false)
+      .edgeEffect(EdgeEffect.None) // 滑动到边缘无效果
 
       Row() {
         Text($r("app.string.totalPrice"))
@@ -122,7 +130,8 @@ export struct ShoppingCart {
           .textAlign(TextAlign.Center)
           .fontColor(Color.Red)
       }.height(35)
-    }.width('90%').height(200)
+    }.width('90%')
+    .height(400)
     .backgroundColor(Color.White)
     .border({ width: 2, radius: 10, color: Color.Black })
   }

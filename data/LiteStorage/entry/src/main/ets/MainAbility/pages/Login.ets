@@ -13,9 +13,9 @@
  * limitations under the License.
  */
 
-import {Goods} from '../common/goods.ets'
-import {ShoppingCart} from '../common/shopcart.ets'
-import {Good, GoodInit, getShopCartFromStorage, getShopCart} from '../model/product'
+import { Goods } from '../common/goods'
+import { ShoppingCart } from '../common/shopcart'
+import { Good, GoodInit, getShopCartFromStorage, getShopCart } from '../model/product'
 
 @Entry
 @Component
@@ -28,7 +28,7 @@ struct Shopping {
   aboutToAppear() {
     getShopCartFromStorage()
     this.goodsList = GoodInit()
-    console.info('goodsList' + this.goodsList.length)
+    console.info('goodsList:' + this.goodsList.length)
     setTimeout(() => {
       this.cartNum = getShopCart().length
     }, 500)
@@ -46,7 +46,7 @@ struct Shopping {
             .padding({ left: 10, top: 10 })
 
           Badge({
-            value: this.cartNum.toString(),
+            count: this.cartNum,
             maxCount: 5,
             position: 0,
             style: { color: Color.Black, fontSize: 16, badgeSize: 20, badgeColor: Color.Red }
@@ -83,7 +83,6 @@ struct Shopping {
         .rowsGap(10)
         .padding(10)
         .margin({ bottom: 50 })
-
       }.height('100%')
 
       if (this.show) {

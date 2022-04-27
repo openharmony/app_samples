@@ -1,7 +1,5 @@
 # JsVideo
 
-
-
 ### Introduction
 
  This sample shows how to use the JS UI component **\<video>** to implement video playback. You can play a video and pause the playback through the control bar of the **\<video>** component.

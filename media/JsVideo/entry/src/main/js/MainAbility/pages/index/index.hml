@@ -17,13 +17,13 @@ limitations under the License.
         <image class="image" src="/common/images/bg-tv.jpg"></image>
         <video id="video"
                class="video"
-               src="{{url}}"
+               src="{{ url }}"
                autoplay="{{ autoplay }}"
                poster="/common/images/bg-tv.jpg"
                controls="{{ controlShow }}"
                loop="{{ loop }}"
-               starttime="{{startTime}}}"
-               speed="{{speed}}"
+               starttime="{{ startTime }}}"
+               speed="{{ speed }}"
                on:prepared="prepared"
                on:start="start"
                on:pause="pause"
@@ -31,7 +31,7 @@ limitations under the License.
                on:seeked="seeked"
                on:timeupdate="timeupdate"
                on:longpress="longPress"
-               on:click="onClick" >
+               on:click="onClick">
         </video>
     </stack>
 
