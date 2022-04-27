@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "VideoPlayer"
+    },
+    {
+      "name": "PlayAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "PlayAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "local_videos",
+      "value": "本地视频"
+    }
+  ]
+}
