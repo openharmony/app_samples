@@ -14,7 +14,7 @@
  */
 
 import sim from '@ohos.telephony.sim'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 
 const TAG = '[SimView]'
 const card1 = 0
@@ -30,19 +30,19 @@ export struct SimView {
     let color: string
     try {
       let result = await sim.getDefaultVoiceSlotId()
-      HiLogUtil.log(TAG, `color result is ${result}`)
+      Logger.info(TAG, `color result is ${result}`)
       color = result === num ? '#0D9FFB' : '#FFFFFF'
-      HiLogUtil.log(TAG, `color is ${JSON.stringify(color)}`)
+      Logger.info(TAG, `color is ${JSON.stringify(color)}`)
     } catch (err) {
       color = '#FFFFFF'
-      HiLogUtil.log(TAG, `err is ${JSON.stringify(err)}, color fail is ${JSON.stringify(color)}`)
+      Logger.info(TAG, `err is ${JSON.stringify(err)} color fail is ${JSON.stringify(color)}`)
     }
     return color
   }
 
   async aboutToAppear() {
     [this.sim1Color, this.sim2Color] = await Promise.all([this.getDefaultVoice(card1), this.getDefaultVoice(card2)])
-    HiLogUtil.log(TAG, `sim1Color is ${this.sim1Color}, sim2Color is ${this.sim2Color}`)
+    Logger.info(TAG, `sim1Color is ${this.sim1Color} sim2Color is ${this.sim2Color}`)
   }
 
   build() {

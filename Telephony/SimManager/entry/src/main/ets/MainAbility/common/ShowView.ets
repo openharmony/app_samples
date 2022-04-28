@@ -14,7 +14,7 @@
  */
 ``
 import sim from '@ohos.telephony.sim'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 
 const TAG = '[ShowView]'
 
@@ -22,37 +22,54 @@ const TAG = '[ShowView]'
 export struct ShowView {
   @State simState: Resource = undefined
   @State results: Array<unknown> = []
+  @State simTitle: Resource = undefined
   private slotId: number
-  private simTitle: Resource = null
   controller: CustomDialogController
 
   async simResult() {
-    HiLogUtil.log(TAG, `getResult this.slotId ${this.slotId}`)
+    Logger.info(TAG, `getResult this.slotId ${this.slotId}`)
     this.simTitle = this.slotId === 0 ? $r('app.string.sim1_state') : $r('app.string.sim2_state')
     let result = await sim.isSimActive(this.slotId)
     this.simState = result ? $r('app.string.sim_activation') : $r('app.string.sim_inactivated')
   }
 
   async getSimData() {
-    let data: Array<string | Resource> = new Array(3)
-    try {
-      data = await Promise.all([
-        sim.getSimSpn(this.slotId), sim.getISOCountryCodeForSim(this.slotId), sim.getSimOperatorNumeric(this.slotId)
-      ])
-    } catch (err) {
-      data = data.fill($r('app.string.err'))
-      HiLogUtil.log(TAG, `getSimData err is ${JSON.stringify(err)}, getSimData data fail, data is ${JSON.stringify(data)}`)
+    let data: Array<string | Resource> = new Array(3).fill('')
+    Logger.info(TAG, `data = ${JSON.stringify(data)}`)
+    try{
+      data[0] = await sim.getSimSpn(this.slotId)
+      Logger.info(TAG, `data = ${JSON.stringify(data[0])}`)
+    } catch(err) {
+      data[0] = $r('app.string.err')
+      Logger.info(TAG, `data = ${JSON.stringify(data[0])} err = ${JSON.stringify(err)}`)
     }
+    try{
+      data[1] = await sim.getISOCountryCodeForSim(this.slotId)
+      Logger.info(TAG, `data = ${JSON.stringify(data[1])}`)
+    } catch(err) {
+      data[1] = $r('app.string.err')
+      Logger.info(TAG, `data = ${JSON.stringify(data[1])} err = ${JSON.stringify(err)}`)
+    }
+    try{
+      data[2] = await sim.getSimOperatorNumeric(this.slotId)
+      Logger.info(TAG, `data = ${JSON.stringify(data[2])}`)
+    } catch(err) {
+      data[2] = $r('app.string.err')
+      Logger.info(TAG, `data = ${JSON.stringify(data[2])} err = ${JSON.stringify(err)}`)
+    }
+    Logger.info(TAG, `data is ${JSON.stringify(data)}`)
     return data
   }
 
   async aboutToAppear() {
     await this.simResult()
     let result = await this.getSimData()
+    Logger.info(TAG, `result = ${JSON.stringify(result)}`)
     this.results = [
       { title: $r('app.string.spn'), value: result[0] }, { title: $r('app.string.iso'), value: result[1] },
       { title: $r('app.string.plmn'), value: result[2] }
     ]
+    Logger.info(TAG, `results = ${JSON.stringify(this.results)}`)
   }
 
   build() {
@@ -88,7 +105,7 @@ export struct ShowView {
     .alignItems(HorizontalAlign.Start)
     .onClick(() => {
       this.controller.close()
-      HiLogUtil.log(TAG, ` CustomDialog close`)
+      Logger.info(TAG, ` CustomDialog close`)
     })
   }
 }

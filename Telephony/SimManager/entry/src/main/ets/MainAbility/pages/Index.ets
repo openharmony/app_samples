@@ -13,14 +13,20 @@
  * limitations under the License.
  */
 
+import Logger from '../model/Logger'
 import { InfoView } from '../common/InfoView'
-import { PermissionUtils } from '../model/PermissionUtils'
+import featureAbility from '@ohos.ability.featureAbility'
+
+const TAG = '[Index]'
 
 @Entry
 @Component
 struct Index {
   aboutToAppear() {
-    PermissionUtils()
+    let context = featureAbility.getContext()
+    context.requestPermissionsFromUser(['ohos.permission.GET_TELEPHONY_STATE'], 666, function (result) {
+      Logger.info(TAG, `grantPermission requestPermissionsFromUser result.requestCode = ${result}`)
+    })
   }
 
   build() {
