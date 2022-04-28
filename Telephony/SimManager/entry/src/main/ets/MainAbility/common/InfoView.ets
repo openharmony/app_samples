@@ -14,7 +14,7 @@
  */
 
 import sim from '@ohos.telephony.sim'
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { SimView } from '../common/SimView'
 import { CallView } from '../common/CallView'
 import { Show } from '../common/Show'
@@ -35,9 +35,9 @@ export struct InfoView {
 
   async getColor(slotId: number) {
     let result = await sim.hasSimCard(slotId)
-    HiLogUtil.log(TAG, `color result is ${result}`)
+    Logger.info(TAG, `color result is ${result}`)
     let color = result ? '#0D9FFB' : '#FFFFFF'
-    HiLogUtil.log(TAG, `color is ${JSON.stringify(color)}`)
+    Logger.info(TAG, `color is ${JSON.stringify(color)}`)
     return color
   }
 
@@ -45,7 +45,7 @@ export struct InfoView {
     let flagText: Resource
     try {
       let result = await sim.getSimState(slotId)
-      HiLogUtil.log(TAG, `getSimState is ${result}`)
+      Logger.info(TAG, `getSimState is ${result}`)
       switch (result) {
         case sim.SimState.SIM_STATE_UNKNOWN:
           flagText = $r('app.string.unknown')
@@ -66,10 +66,10 @@ export struct InfoView {
           flagText = $r('app.string.loaded')
           break
       }
-      HiLogUtil.log(TAG, `flagText is ${JSON.stringify(flagText)}`)
+      Logger.info(TAG, `flagText is ${JSON.stringify(flagText)}`)
     } catch (err) {
       flagText = $r('app.string.err')
-      HiLogUtil.log(TAG, `err is ${JSON.stringify(err)}, flagText is ${JSON.stringify(flagText)}`)
+      Logger.info(TAG, `err is ${JSON.stringify(err)} flagText is ${JSON.stringify(flagText)}`)
     }
     return flagText
   }
@@ -79,7 +79,7 @@ export struct InfoView {
       this.getColor(card1), this.getColor(card2), this.getTextData(card1), this.getTextData(card2)
     ])
     this.flag = true
-    HiLogUtil.log(TAG, `sim1Text is ${JSON.stringify(this.sim1Text)}, sim2Text is ${JSON.stringify(this.sim2Text)}`)
+    Logger.info(TAG, `sim1Text is ${JSON.stringify(this.sim1Text)} sim2Text is ${JSON.stringify(this.sim2Text)}`)
   }
 
   build() {

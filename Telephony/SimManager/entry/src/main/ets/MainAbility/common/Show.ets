@@ -12,23 +12,23 @@
  * See the License for the specific language governing permissions and
  */
 
-import HiLogUtil from '../model/HiLogUtil'
+import Logger from '../model/Logger'
 import { ShowView } from '../common/ShowView'
 
 const TAG = '[Show]'
 
 @Component
 export struct Show {
-  private slotId: number = 0
-  private simColor: string = ''
-  private simCard: Resource = undefined
-  private simText: Resource = undefined
-  private simTitle: Resource = undefined
+  private slotId: number = undefined
+  private simColor: string = undefined
+  @State simCard: Resource = undefined
+  @State simText: Resource = undefined
+  @State simTitle: Resource = undefined
   dialogController: CustomDialogController = new CustomDialogController({
     builder: ShowView({ slotId: this.slotId }), autoCancel: true, alignment: DialogAlignment.Center })
 
   aboutToAppear() {
-    HiLogUtil.log(TAG, `simText is ${JSON.stringify(this.simText)}, simColor is ${this.simColor}`)
+    Logger.info(TAG, `simText is ${JSON.stringify(this.simText)} simColor is ${this.simColor}`)
   }
 
   build() {
@@ -76,7 +76,7 @@ export struct Show {
       .padding({ top: 6, left: 5, right: 5, bottom: 6 })
       .onClick(() => {
         this.dialogController.open()
-        HiLogUtil.log(TAG, `CustomDialog start`)
+        Logger.info(TAG, `CustomDialog start`)
       })
     }
   }
