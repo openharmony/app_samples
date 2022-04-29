@@ -16,7 +16,7 @@
 import featureAbility from '@ohos.ability.featureAbility';
 import prompt from '@system.prompt';
 import rpc from "@ohos.rpc";
-import RemoteDeviceModel from '../../model/RemoteDeviceModel.ets';
+import RemoteDeviceModel from '../../model/RemoteDeviceModel';
 import abilityAccessCtrl from "@ohos.abilityAccessCtrl";
 import bundle from '@ohos.bundle';
 
@@ -42,11 +42,11 @@ function RegisterDeviceListCallback() {
     let deviceSize = remoteDeviceModel.deviceList.length;
     console.info('[dmsDemo] discoveredDeviceSize =' + discoveredDeviceSize);
     console.info('[dmsDemo] deviceSize =' + deviceSize);
-    discovereDeviceIdList.length = 0;
+    discovereDeviceIdList = [];
     for (let i = 0; i < discoveredDeviceSize; i++) {
       discovereDeviceIdList.push(remoteDeviceModel.discoverList[i].deviceId);
     }
-    deviceIdList.length = 0;
+    deviceIdList = [];
     for (let i = 0; i < deviceSize; i++) {
       deviceIdList.push(remoteDeviceModel.deviceList[i].deviceId);
     }
@@ -115,7 +115,7 @@ async function requestPermission() {
     return;
   }
   let context = featureAbility.getContext();
-  context.requestPermissionsFromUser(requestPermissions, 1, (data)=>{
+  context.requestPermissionsFromUser(requestPermissions, 1, (err,data)=>{
     console.info("data:" + JSON.stringify(data));
     console.info("data requestCode:" + data.requestCode);
     console.info("data permissions:" + data.permissions);
@@ -128,7 +128,6 @@ function onStartLocalAbility() {
   console.info('[dmsDemo] onStartLocalAbility begin');
   console.info('[dmsDemo] onStartLocalAbility deviceId is ' + localDeviceId);
   let wantValue = {
-    deviceId: localDeviceId,
     bundleName: 'ohos.samples.etsDemo',
     abilityName: 'ohos.samples.etsDemo.LocalAbility',
   };
@@ -320,14 +319,14 @@ struct CustomDialogExample1 {
           ListItem() {
             Row() {
               Text(item)
-                .width('87%').height(50).fontSize(10)
+                .width('87%').height(50).fontSize(15)
                 .textAlign(TextAlign.Center).borderRadius(10).backgroundColor(0xFFFFFF)
                 .onClick(() => {
                   console.log('[dmsDemo] Text Item onClick:' + item);
                   callFunction(item);
                   this.controller.close();
                 })
-              Radio({value:item})
+              Radio({group:'', value:item})
                 .onChange((isChecked) => {
                   console.log('[dmsDemo] Radio Item:' + item + ' onChange isChecked:' + isChecked);
                   callFunction(item);
@@ -361,7 +360,7 @@ struct CustomDialogExample2 {
                   callFunction(item);
                   this.controller.close();
                 })
-              Radio({value:item})
+              Radio({group:'', value:item})
                 .onChange((isChecked) => {
                   console.log('[dmsDemo] Radio Item:' + item + ' onChange isChecked:' + isChecked);
                   callFunction(item);
@@ -388,10 +387,10 @@ struct Index {
     cancel: this.existApp,
     autoCancel: true
   })
-  private aboutToAppear(): void  {
+  aboutToAppear(): void  {
     requestPermission();
   }
-  private aboutToDisappear(): void {
+  aboutToDisappear(): void {
   }
   onCancel() {
     console.info('[dmsDemo] Callback when onCancel button is clicked');
@@ -407,100 +406,104 @@ struct Index {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
       Button() {
         Text('RegisterDeviceListCallback')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         RegisterDeviceListCallback();
-      }).width(400).height(30)
+      }).width('90%').height(50)
 
       Button() {
         Text('AuthDevice')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         mOperation = Operation.AuthDeviceOperation;
         console.log('[dmsDemo] discovereDeviceIdList length:' + discovereDeviceIdList.length);
-        this.dialogController1.open();
-      }).width(400).height(30)
+        if(discovereDeviceIdList.length >0) {
+          this.dialogController1.open();
+        }else{
+          prompt.showToast({message:'already Authed or no discovereDevice '})
+        }
+      }).width('90%').height(50)
 
       Button() {
         Text('StartLocalAbility')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         onStartLocalAbility();
-      }).width(400).height(30)
+      }).width('90%').height(50)
 
       Button() {
         Text('StartRemoteAbility')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         mOperation = Operation.StartRemoteAbilityOperation;
         console.log('[dmsDemo] deviceIdList length:' + deviceIdList.length);
         this.dialogController2.open();
-      }).width(400).height(30)
+      }).width('90%').height(50)
 
       Button() {
         Text('ConnectLocalService')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         onConnectLocalService();
-      }).width(400).height(30)
+      }).width('90%').height(50)
 
       Button() {
         Text('ConnectRemoteService')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         mOperation = Operation.ConnectRemoteServiceOperation;
         console.log('[dmsDemo] deviceIdList length:' + deviceIdList.length);
         this.dialogController2.open();
-      }).width(400).height(30)
+      }).width('90%').height(50)
 
       Button() {
         Text('DisConnectService')
-          .fontSize(20)
+          .fontSize(22)
           .fontWeight(FontWeight.Bold)
       }.type(ButtonType.Capsule)
       .margin({
-        top: 20
+        top: 15
       })
       .backgroundColor('#0D9FFB')
       .onClick(() => {
         onDisconnectService();
-      }).width(400).height(30)
+      }).width('90%').height(50)
     }
     .width('100%')
     .height('100%')
