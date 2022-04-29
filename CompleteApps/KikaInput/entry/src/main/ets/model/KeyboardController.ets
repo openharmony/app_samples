@@ -1,16 +1,20 @@
-// @ts-nocheck
-import {GetHardKeyValue} from './HardKeyUtils.ets'
+import { GetHardKeyValue } from './HardKeyUtils.ets'
 import inputMethodEngine from '@ohos.inputmethodengine'
+import settings from '@ohos.settings';
 import display from '@ohos.display'
 import windowManager from '@ohos.window'
 import featureAbility from '@ohos.ability.featureAbility'
-import screen from '@ohos.screen'
 
 let InputMethodEngine = inputMethodEngine.getInputMethodEngine();
 let isDebug = false;
 
 export class KeyboardController {
   private TAG: string= 'KeyboardController-';
+  private readonly uri = 'dataability:///com.ohos.settingsdata.DataAbility'
+  private helper: any = null
+  private getValueRes: string = "1"
+  private nonBarPosition: number = 0
+  private barPosition: number = 0
   mContext
   WINDOW_TYPE_INPUT_METHOD_FLOAT= 2105
   windowName = 'imeWindow';
@@ -21,6 +25,11 @@ export class KeyboardController {
   constructor(context) {
     this.inputHandle.addLog('constructor')
     this.mContext = context;
+    this.helper = featureAbility.acquireDataAbilityHelper(this.mContext, this.uri)
+  }
+
+  public getValue(settingDataKey: string) {
+    this.getValueRes = settings.getValueSync(this.helper, settingDataKey, "1")
   }
 
   public onCreate(): void {
@@ -37,14 +46,22 @@ export class KeyboardController {
 
   private initWindow(): void {
     this.inputHandle.addLog('initWindow')
-
     display.getDefaultDisplay().then(dis => {
       this.inputHandle.addLog("initWindow-oncall display");
       var dWidth = dis.width;
       var dHeight = dis.height;
       var navigationbar_height = dHeight * 0.07;
       var keyHeightRate = 0.47;
+      if (dWidth == 1080 && dHeight == 2376) {
+        navigationbar_height = 105
+        keyHeightRate = 0.35
+      } else if (dWidth == 2560 && dHeight == 1600) {
+        navigationbar_height = 85
+        keyHeightRate = 0.5
+      }
       var keyHeight = dHeight * keyHeightRate;
+      this.barPosition = dHeight - keyHeight - navigationbar_height
+      this.nonBarPosition = dHeight - keyHeight
       this.inputHandle.addLog("initWindow-dWidth = " + dWidth + ";dHeight = " + dHeight + ";keyboard height = " + keyHeight + ";navibar height = " + navigationbar_height);
 
       this.inputHandle.addLog(typeof (this.mContext))
@@ -52,8 +69,8 @@ export class KeyboardController {
       windowManager.create(this.mContext, this.windowName, this.WINDOW_TYPE_INPUT_METHOD_FLOAT).then((win) => {
         win.setWindowMode(102).then(() => {
           win.resetSize(dWidth, keyHeight).then(() => {
-            win.moveTo(0, dHeight - keyHeight - navigationbar_height).then(() => {
-              win.loadContent('pages/service/pages/index').then(() => {
+            win.moveTo(0, this.barPosition).then(() => {
+              win.loadContent('pages/index').then(() => {
                 this.inputHandle.addLog('loadContent finished')
                 //                this.showWindow()
               })
@@ -90,7 +107,7 @@ export class KeyboardController {
   private registerListener(): void {
     this.inputHandle.addLog('registerListener')
 
-    screen.on('change', (screenEvent) => {
+    display.on('change', (screenEvent) => {
       this.inputHandle.addLog('screenChangeEvent');
       this.resizeWindow()
     });
@@ -240,11 +257,20 @@ export class KeyboardController {
   }
 
   private showWindow() {
+    try {
+      this.getValue('settings.display.navigationbar_status')
+    } catch (err) {
+      console.log("get value failed" + err)
+      return
+    }
+    console.log('current navigation state is' + this.getValueRes)
     this.inputHandle.addLog('showWindow');
     windowManager.find(this.windowName).then((win) => {
-      win.show().then(() => {
-        this.inputHandle.addLog('showWindow finish');
-        this.isKeyboardShow = true;
+      win.moveTo(0, this.getValueRes == '1' ? this.barPosition : this.nonBarPosition).then(() => {
+        win.show().then(() => {
+          this.inputHandle.addLog('showWindow finish');
+          this.isKeyboardShow = true;
+        })
       })
     })
   }
