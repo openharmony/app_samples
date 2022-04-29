@@ -1,0 +1,84 @@
+{
+  "float": [
+    {
+      "name": "basic_button_width",
+      "value": "112vp"
+    },
+    {
+      "name": "basic_button_height",
+      "value": "66vp"
+    },
+    {
+      "name": "feature_picSize",
+      "value": "32vp"
+    },
+    {
+      "name": "switch_button_width",
+      "value": "167vp"
+    },
+    {
+      "name": "return_picSize",
+      "value": "32vp"
+    },
+    {
+      "name": "return_button_widthType_1",
+      "value": "292vp"
+    },
+    {
+      "name": "return_button_widthType_2",
+      "value": "292vp"
+    },
+    {
+      "name": "space_button_width_1",
+      "value": "490vp"
+    },
+    {
+      "name": "space_button_width_2",
+      "value": "362vp"
+    },
+    {
+      "name": "padding_top",
+      "value": "16vp"
+    },
+    {
+      "name": "padding_bottom",
+      "value": "12vp"
+    },
+    {
+      "name": "padding_left_right",
+      "value": "26vp"
+    },
+    {
+      "name": "downMenu_height",
+      "value": "62vp"
+    },
+    {
+      "name": "downMenu_pic_width",
+      "value": "32vp"
+    },
+    {
+      "name": "downMenu_pic_height",
+      "value": "16vp"
+    },
+    {
+      "name": "downMenu_width",
+      "value": "62vp"
+    },
+    {
+      "name": "litter_number_fontSize",
+      "value": "10fp"
+    },
+    {
+      "name": "en_fontSize",
+      "value": "32fp"
+    },
+    {
+      "name": "switch_number_fontSize",
+      "value": "24fp"
+    },
+    {
+      "name": "number_1234_fontSize",
+      "value": "21fp"
+    }
+  ]
+}

@@ -8,21 +8,34 @@ struct keyItemNumber {
   private keyValue: keySourceListType
   @Link upper: number
 
+  @Styles pressedStyles() {
+    .backgroundColor("#AEB3BD")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#ffffff")
+  }
+
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceAround }) {
-      Text(this.keyValue.title).fontSize(12).fontColor('gray')
-
+      Text(this.keyValue.title)
+        .fontSize($r('app.float.litter_number_fontSize'))
+        .fontColor(0x606060)
+        .fontWeight(FontWeight.Lighter)
       if (this.upper === 0) {
-        Text(this.keyValue.content).fontSize(20).fontColor('black')
+        Text(this.keyValue.content)
+          .fontSize($r('app.float.en_fontSize'))
+          .fontColor('#000')
+          .fontWeight(FontWeight.Regular)
       } else {
-        Text(this.keyValue.upperContent).fontSize(20).fontColor('black')
+        Text(this.keyValue.upperContent)
+          .fontSize($r('app.float.en_fontSize'))
+          .fontColor('#000')
+          .fontWeight(FontWeight.Regular)
       }
-
     }
     .backgroundColor('#ffffff')
-    .borderRadius(6)
-    .width('8%')
-    .height('90%')
+    .borderRadius(4)
     .padding({ top: '5%', bottom: '5%' })
     .onClick(() => {
       if (this.upper === 0) {
@@ -34,6 +47,12 @@ struct keyItemNumber {
         InputHandler.getInstance().insertText(this.keyValue.upperContent);
       }
     })
+    .width($r('app.float.basic_button_width'))
+    .height($r('app.float.basic_button_height'))
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
+    })
   }
 }
 
@@ -43,17 +62,31 @@ struct keyItem {
   private keyValue: keySourceListType
   private color: string
 
+  @Styles pressedStyles() {
+    .backgroundColor("#AEB3BD")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#ffffff")
+  }
+
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Text(this.keyValue.content).fontSize(20).fontColor('black')
+      Text(this.keyValue.content)
+        .fontSize($r('app.float.en_fontSize'))
+        .fontColor('black')
     }
-    .backgroundColor(this.color)
-    .borderRadius(6)
-    .width('8%')
-    .height('90%')
+    .backgroundColor('#fff')
+    .borderRadius(4)
+    .width($r('app.float.basic_button_width'))
+    .height($r('app.float.basic_button_height'))
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
     .padding({ top: '5%', bottom: '5%' })
     .onClick(() => {
       InputHandler.getInstance().insertText(this.keyValue.content);
+    })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
     })
   }
 }
@@ -64,14 +97,20 @@ struct keyItemGray {
   private keyValue: string
   @Link menuType: number
 
+  @Styles pressedStyles() {
+    .backgroundColor("#868b95")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#a8abb7")
+  }
+
   build() {
     Stack() {
-      Text(this.keyValue).fontSize(14).fontColor('black')
+      Text(this.keyValue).fontSize($r('app.float.switch_number_fontSize')).fontColor('black')
     }
     .backgroundColor('#a8abb7')
-    .width('13%')
-    .borderRadius(6)
-    .height(45)
+    .borderRadius(4)
     .onClick(() => {
       if (this.keyValue === "?123") {
         this.menuType = 1
@@ -81,17 +120,42 @@ struct keyItemGray {
         this.menuType = 0
       }
     })
+    .height($r('app.float.basic_button_height'))
+    .width($r('app.float.switch_button_width'))
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
+    })
   }
 }
 
 //删除组件
 @Component
 struct deleteItem {
+  @Styles pressedStyles() {
+    .backgroundColor("#868b95")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#a8abb7")
+  }
+
   build() {
     Stack() {
-      Image($rawfile('delete.png')).width(25).height(22)
-    }.backgroundColor('#a8abb7').width('13%').borderRadius(6).onClick(() => {
+      Image($rawfile('delete.svg'))
+        .width($r('app.float.feature_picSize'))
+        .height($r('app.float.feature_picSize'))
+    }
+    .backgroundColor('#a8abb7')
+    .borderRadius(4)
+    .onClick(() => {
       InputHandler.getInstance().deleteForward(1);
+    })
+    .width($r('app.float.switch_button_width'))
+    .height($r('app.float.basic_button_height'))
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
     })
   }
 }
@@ -99,16 +163,32 @@ struct deleteItem {
 //返回组件
 @Component
 struct returnItem {
+  private returnWidth: any
+
+  @Styles pressedStyles() {
+    .backgroundColor("#868b95")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#a8abb7")
+  }
+
   build() {
     Stack() {
-      Image($rawfile('return.png')).width(25).height(22)
+      Image($rawfile('return.svg'))
+        .width($r('app.float.return_picSize'))
+        .height($r('app.float.return_picSize'))
     }
     .backgroundColor('#a8abb7')
-    .width('16%')
-    .borderRadius(6)
-    .height(45)
+    .width(this.returnWidth)
+    .borderRadius(4)
+    .height($r('app.float.basic_button_height'))
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
     .onClick(() => {
       InputHandler.getInstance().sendKeyFunction();
+    })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
     })
   }
 }
@@ -116,18 +196,32 @@ struct returnItem {
 //空格组件
 @Component
 struct spaceItem {
-  private spaceWith: string
+  private spaceWith: any
+
+  @Styles pressedStyles() {
+    .backgroundColor("#AEB3BD")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#ffffff")
+  }
 
   build() {
     Stack() {
-      Text('space').fontSize(12).fontColor('black')
+      Text('space')
+        .fontSize($r('app.float.en_fontSize'))
+        .fontColor('black')
     }
     .backgroundColor('#ffffff')
     .width(this.spaceWith)
-    .borderRadius(6)
-    .height(45)
+    .borderRadius(4)
+    .height($r('app.float.basic_button_height'))
     .onClick(() => {
       InputHandler.getInstance().insertText(' ');
+    })
+    .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+    .stateStyles({
+      normal: this.normalStyles, pressed: this.pressedStyles
     })
   }
 }
@@ -139,17 +233,25 @@ struct keyMenu {
   @State public upper: number= 0
   @Link menuType: number
 
+  @Styles pressedStyles() {
+    .backgroundColor("#868b95")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#a8abb7")
+  }
+
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.keyList.slice(0, 10), (item: keySourceListType) => {
           keyItemNumber({ keyValue: item, upper: $upper })
         }, (item: keySourceListType) => item.content)
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         Stack() {
         }.width('4%').height(0)
 
@@ -159,16 +261,18 @@ struct keyMenu {
         Stack() {
         }.width('4%').height(0)
       }
-      .margin({ top: 10, bottom: 10 })
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         Stack() {
-          Image($rawfile(this.upper === 1 ? 'shift light.png' : this.upper === 2 ? 'shift light long.png' : 'shift.png'))
-            .width(25)
-            .height(22)
-        }.backgroundColor('#a8abb7').width('13%').borderRadius(6).onClick(() => {
+          Image($rawfile(this.upper === 1 ? 'shift light.svg' : this.upper === 2 ? 'shift light long.svg' : 'shift.svg'))
+            .width($r('app.float.feature_picSize'))
+            .height($r('app.float.feature_picSize'))
+        }
+        .backgroundColor('#a8abb7')
+        .borderRadius(4)
+        .onClick(() => {
           if (this.upper === 0) {
             this.upper = 1
           } else if (this.upper === 1) {
@@ -177,29 +281,42 @@ struct keyMenu {
             this.upper = 0
           }
         })
+        .height($r('app.float.basic_button_height'))
+        .width($r('app.float.switch_button_width'))
+        .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+        .stateStyles({
+          normal: this.normalStyles, pressed: this.pressedStyles
+        })
+
 
         ForEach(this.keyList.slice(19), (item: keySourceListType) => {
           keyItemNumber({ keyValue: item, upper: $upper })
         }, (item: keySourceListType) => item.content)
         deleteItem()
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '?123', menuType: $menuType })
         keyItem({ keyValue: { content: ',', title: ',', upperContent: ',' }, color: '#a8abb7' })
-        spaceItem({ spaceWith: '45%' })
+        spaceItem({ spaceWith: $r('app.float.space_button_width_1') })
 
         keyItem({ keyValue: { content: '.', title: '.', upperContent: '.' }, color: '#a8abb7' })
-        returnItem()
+        returnItem({ returnWidth: $r('app.float.return_button_widthType_1') })
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
     }
     .width('100%')
     .height('100%')
+    .padding({
+      top: $r('app.float.padding_top'),
+      bottom: $r('app.float.padding_bottom'),
+      left: $r('app.float.padding_left_right'),
+      right: $r('app.float.padding_left_right')
+    })
   }
 }
 
@@ -209,9 +326,17 @@ struct numberMenu {
   private numberList: sourceListType[]
   @Link menuType: number
 
+  @Styles pressedStyles() {
+    .backgroundColor("#AEB3BD")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#ffffff")
+  }
+
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.numberList.slice(0, 10), (item: sourceListType) => {
           keyItem({
             keyValue: { content: item.content, title: item.content, upperContent: item.content },
@@ -219,10 +344,10 @@ struct numberMenu {
           })
         }, (item: sourceListType) => item.content)
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.numberList.slice(10, 20), (item: sourceListType) => {
           keyItem({
             keyValue: { content: item.content, title: item.content, upperContent: item.content },
@@ -230,10 +355,10 @@ struct numberMenu {
           })
         }, (item: sourceListType) => item.content)
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '=/\<', menuType: $menuType })
         ForEach(this.numberList.slice(20), (item: sourceListType) => {
           keyItem({
@@ -243,25 +368,39 @@ struct numberMenu {
         }, (item: sourceListType) => item.content)
         deleteItem()
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: 'ABC', menuType: $menuType })
         keyItem({ keyValue: { content: '_', title: '_', upperContent: '_' }, color: '#a8abb7' })
         keyItem({ keyValue: { content: ',', title: ',', upperContent: ',' }, color: '#a8abb7' })
         Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-          Text('12').fontSize(14).fontColor('black')
-          Text('34').fontSize(14).fontColor('black')
-        }.backgroundColor('#a8abb7').borderRadius(6).width('8%').height(45)
+          Text('12').fontSize($r('app.float.number_1234_fontSize')).fontColor('black')
+          Text('34').fontSize($r('app.float.number_1234_fontSize')).fontColor('black')
+        }
+        .backgroundColor('#fff')
+        .borderRadius(4)
+        .width($r('app.float.basic_button_width'))
+        .height($r('app.float.basic_button_height'))
+        .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+        .stateStyles({
+          normal: this.normalStyles, pressed: this.pressedStyles
+        })
 
-        spaceItem({ spaceWith: '25%' })
+        spaceItem({ spaceWith: $r('app.float.space_button_width_2') })
         keyItem({ keyValue: { content: '.', title: '.', upperContent: '.' }, color: '#a8abb7' })
-        returnItem()
+        returnItem({ returnWidth: $r('app.float.return_button_widthType_2') })
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
     }
+    .padding({
+      top: $r('app.float.padding_top'),
+      bottom: $r('app.float.padding_bottom'),
+      left: $r('app.float.padding_left_right'),
+      right: $r('app.float.padding_left_right')
+    })
   }
 }
 
@@ -271,9 +410,17 @@ struct symbolMenu {
   private symbolList: sourceListType[]
   @Link menuType: number
 
+  @Styles pressedStyles() {
+    .backgroundColor("#AEB3BD")
+  }
+
+  @Styles normalStyles() {
+    .backgroundColor("#ffffff")
+  }
+
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.symbolList.slice(0, 10), (item: sourceListType) => {
           keyItem({
             keyValue: { content: item.content, title: item.content, upperContent: item.content },
@@ -281,10 +428,10 @@ struct symbolMenu {
           })
         }, (item: sourceListType) => item.content)
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.symbolList.slice(10, 20), (item: sourceListType) => {
           keyItem({
             keyValue: { content: item.content, title: item.content, upperContent: item.content },
@@ -292,10 +439,10 @@ struct symbolMenu {
           })
         }, (item: sourceListType) => item.content)
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '?123', menuType: $menuType })
         ForEach(this.symbolList.slice(20), (item: sourceListType) => {
           keyItem({
@@ -305,26 +452,40 @@ struct symbolMenu {
         }, (item: sourceListType) => item.content)
         deleteItem()
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
 
 
-      Flex({ justifyContent: FlexAlign.SpaceBetween }) {
+      Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: 'ABC', menuType: $menuType })
         keyItem({ keyValue: { content: '<', title: '<', upperContent: '<' }, color: '#a8abb7' })
         keyItem({ keyValue: { content: '>', title: '>', upperContent: '>' }, color: '#a8abb7' })
         Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-          Text('12').fontSize(14).fontColor('black')
-          Text('34').fontSize(14).fontColor('black')
-        }.backgroundColor('#a8abb7').borderRadius(6).width('8%').height(45)
+          Text('12').fontSize($r('app.float.number_1234_fontSize')).fontColor('black')
+          Text('34').fontSize($r('app.float.number_1234_fontSize')).fontColor('black')
+        }
+        .backgroundColor('#fff')
+        .borderRadius(4)
+        .width($r('app.float.basic_button_width'))
+        .height($r('app.float.basic_button_height'))
+        .shadow({ radius: 1, color: '#76787c', offsetY: 3 })
+        .stateStyles({
+          normal: this.normalStyles, pressed: this.pressedStyles
+        })
 
-        spaceItem({ spaceWith: '25%' })
+        spaceItem({ spaceWith: $r('app.float.space_button_width_2') })
         keyItem({ keyValue: { content: '.', title: '.', upperContent: '.' }, color: '#a8abb7' })
-        returnItem()
+        returnItem({ returnWidth: $r('app.float.return_button_widthType_2') })
       }
-      .width('96%')
+      .width('100%')
       .height('25%')
     }
+    .padding({
+      top: $r('app.float.padding_top'),
+      bottom: $r('app.float.padding_bottom'),
+      left: $r('app.float.padding_left_right'),
+      right: $r('app.float.padding_left_right')
+    })
   }
 }
 
@@ -334,12 +495,23 @@ struct downMenu {
   build() {
     Flex({ justifyContent: FlexAlign.End, alignItems: ItemAlign.Center }) {
       Stack() {
-        Image($rawfile('down.png')).width(25).height(25).onClick(() => {
-          InputHandler.getInstance().hideKeyboardSelf();
-        })
-      }.width('16%').borderRadius(6).height('100%')
-
-    }.width('100%').height('10%').padding('2%').backgroundColor('#ffffff')
+        Image($rawfile('down.svg'))
+          .width($r('app.float.downMenu_pic_width'))
+          .height($r('app.float.downMenu_pic_height'))
+          .onClick(() => {
+            InputHandler.getInstance().hideKeyboardSelf();
+          })
+      }
+      .width($r('app.float.downMenu_width'))
+      .borderRadius(4)
+      .height('100%')
+    }
+    .width('100%')
+    .height($r('app.float.downMenu_height'))
+    .padding(1)
+    .backgroundColor('#ffffff')
+    .borderColor('#000000CC')
+    .borderWidth(0.5)
   }
 }
 
@@ -351,7 +523,7 @@ struct Index {
   private symbolList: sourceListType[]= symbolSourceListData
   @State menuType: number= 0
 
-  private onBackPress(): boolean{
+  onBackPress(): boolean{
     console.info('kikaInput onBackPress');
     InputHandler.getInstance().hideKeyboardSelf();
     return true;
@@ -371,9 +543,8 @@ struct Index {
           }
 
         }.width('100%')
-        .height('90%')
-        .backgroundColor('#cdd0d7')
-
+        .height('85%')
+        .backgroundColor('#D5D7DD')
       }.height('100%')
     }
   }
