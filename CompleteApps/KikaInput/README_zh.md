@@ -1,4 +1,4 @@
-# kikainput
+# 轻量级输入法
 
 ## 简介
 kikainput是一个轻量级的输入法应用，支持在运行OpenHarmony OS的智能终端上。
