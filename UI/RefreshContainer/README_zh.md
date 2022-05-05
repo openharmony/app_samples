@@ -1,4 +1,4 @@
-# 下拉刷新容器<a name="ZH-CN_TOPIC_0000001129815618"></a>
+# 下拉刷新容器
 
 ### 简介<a name="section104mcpsimp"></a>
 

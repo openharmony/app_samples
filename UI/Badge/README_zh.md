@@ -1,4 +1,4 @@
-# 事件标记控件<a name="ZH-CN_TOPIC_0000001172354593"></a>
+# 事件标记控件
 
 ### 简介<a name="section104mcpsimp"></a>
 

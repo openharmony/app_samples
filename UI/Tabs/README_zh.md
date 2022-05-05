@@ -1,4 +1,4 @@
-# Tabs容器<a name="ZH-CN_TOPIC_0000001180157673"></a>
+# 页签容器
 
 ### 简介<a name="section104mcpsimp"></a>
 

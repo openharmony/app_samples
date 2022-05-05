@@ -1,4 +1,4 @@
-# StepNavigator<a name="EN-US_TOPIC_0000001133948524"></a>
+# StepNavigator
 
 ### Introduction<a name="section104mcpsimp"></a>
 

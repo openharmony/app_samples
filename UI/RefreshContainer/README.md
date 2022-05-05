@@ -1,4 +1,4 @@
-# RefreshContainer<a name="EN-US_TOPIC_0000001129815618"></a>
+# RefreshContainer
 
 ### Introduction<a name="section104mcpsimp"></a>
 
