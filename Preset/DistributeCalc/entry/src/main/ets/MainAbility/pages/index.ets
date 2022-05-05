@@ -1,0 +1,168 @@
+/*
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import { ButtonComponent } from '../common/ButtonComponent'
+import { ButtonComponentTwo } from '../common/ButtonComponentTwo'
+import { InPutComponent } from '../common/InPutComponent'
+import { TitleBar } from '../common/TitleBar'
+import mediaQuery from '@ohos.mediaquery'
+import { create, all } from 'mathjs'
+import featureAbility from '@ohos.ability.featureAbility'
+import { KvStoreModel } from '../model/KvStoreModel'
+import { RemoteDeviceModel } from '../model/RemoteDeviceModel'
+import Logger from '../model/Logger'
+
+const TAG = 'Index'
+const math = create(all)
+const EXIT = 'exit'
+let kvStoreModel: KvStoreModel = new KvStoreModel()
+let DATA_CHANGE = 'dataChange'
+
+@Entry
+@Component
+struct Index {
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
+  @State isLand: boolean = false
+  @State result: string = ''
+  @State @Watch('dataChange') expression: string = ''
+  @State dialogShow: boolean = false
+  @State isDistributed: boolean = false
+  private remoteDeviceModel: RemoteDeviceModel = new RemoteDeviceModel()
+  onLand = (mediaQueryResult) => {
+    Logger.info(TAG, `onLand: mediaQueryResult.matches= ${mediaQueryResult.matches}`)
+    if (mediaQueryResult.matches) {
+      this.isLand = true
+    } else {
+      this.isLand = false
+    }
+  }
+
+  dataChange() {
+    Logger.info(TAG, `dataChange`)
+    kvStoreModel.put(DATA_CHANGE, this.expression)
+  }
+
+  isOperator(operator) {
+    return (
+      operator === '+' || operator === '-' || operator === '*' || operator === '/'
+    )
+  }
+
+  onInputValue = (value) => {
+    Logger.info(TAG, `value = ${value}`)
+    if (value == 'C') {
+      this.expression = ''
+      this.result = ''
+      return
+    }
+    if (value == '') {
+      this.expression = this.expression.substr(0, this.expression.length - 1)
+      this.result = JSON.stringify(math.evaluate(this.expression))
+      return
+    }
+    if (this.isOperator(value)) {
+      if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
+        this.expression = this.expression.substr(0, this.expression.length - 1)
+        this.expression += value
+      } else {
+        this.expression += value
+      }
+      return
+    }
+    if (value == '=') {
+      this.result = ''
+      if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
+        this.expression = JSON.stringify(math.evaluate(this.expression.substr(0, this.expression.length - 1)))
+      } else {
+        this.expression = JSON.stringify(math.evaluate(this.expression))
+      }
+      return
+    }
+    this.expression += value
+    this.result = JSON.stringify(math.evaluate(this.expression))
+  }
+
+  aboutToAppear() {
+    let context = featureAbility.getContext()
+    context.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], 666, function (result) {
+      Logger.info(TAG, `grantPermission,requestPermissionsFromUser,result= ${result}`)
+    })
+    this.listener.on('change', this.onLand)
+    featureAbility.getWant((error, want) => {
+      Logger.error(TAG, `featureAbility.getWant error = ${JSON.stringify(error)}`)
+      Logger.info(TAG, `featureAbility.getWant = ${JSON.stringify(want.parameters)}`)
+      if (want.parameters.isFA === 'FA') {
+        this.isDistributed = true
+      }
+    })
+    kvStoreModel.setOnMessageReceivedListener(DATA_CHANGE, (value) => {
+      Logger.info(TAG, `DATA_CHANGE ${value}`)
+      if (this.isDistributed) {
+        if (value.search(EXIT) != -1) {
+          Logger.info(TAG, `EXIT ${EXIT}`)
+          featureAbility.terminateSelf((error) => {
+            Logger.error(TAG, `terminateSelf finished, error= ${error}`)
+          });
+        } else {
+          this.expression = value
+          if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
+            this.result = JSON.stringify(math.evaluate(this.expression.substr(0, this.expression.length - 1)))
+          } else {
+            this.result = JSON.stringify(math.evaluate(this.expression))
+          }
+        }
+      }
+    })
+  }
+
+  startAbilityCallBack(key) {
+    Logger.info(TAG, `startAbilityCallBack ${key}`)
+    if (DATA_CHANGE === key) {
+      kvStoreModel.put(DATA_CHANGE, this.expression)
+    }
+    if (EXIT === key) {
+      kvStoreModel.put(DATA_CHANGE, EXIT)
+    }
+  }
+
+  build() {
+    Column() {
+      TitleBar({
+        isLand: this.isLand,
+        startAbilityCallBack: this.startAbilityCallBack,
+        remoteDeviceModel: this.remoteDeviceModel,
+        isDistributed: $isDistributed,
+        dialogShow: $dialogShow
+      })
+
+      if (this.isLand) {
+        Row() {
+          InPutComponent({ isLand: this.isLand, result: $result, expression: $expression })
+          ButtonComponentTwo({ isLand: this.isLand, onInputValue: this.onInputValue })
+        }
+        .width('100%')
+        .layoutWeight(1)
+      } else {
+        Column() {
+          InPutComponent({ isLand: this.isLand, result: $result, expression: $expression })
+          ButtonComponent({ isLand: this.isLand, onInputValue: this.onInputValue })
+        }
+        .width('100%')
+      }
+    }
+    .width('100%')
+    .height('100%')
+  }
+}

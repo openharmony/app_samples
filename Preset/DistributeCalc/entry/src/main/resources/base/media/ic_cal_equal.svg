@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127px" height="234px" viewBox="0 0 127 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_cal_equal</title>
+    <defs>
+        <rect id="path-1" x="-8" y="-12" width="110" height="226" rx="25"></rect>
+        <filter x="-28.0%" y="-12.5%" width="155.9%" height="126.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="" transform="translate(-337.000000, -710.000000)">
+            <g id="ic_cal_equal" transform="translate(354.000000, 726.000000)">
+                <g id="矩形备份-25">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#007DFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="编组-4" transform="translate(31.000000, 93.000000)" fill="#FFFFFF">
+                    <path d="M1.5,3.29842932 L28.5,3.29842932 C29.328375,3.29842932 30,2.55999346 30,1.64921466 C30,0.738435864 29.328375,0 28.5,0 L1.5,0 C0.67125,0 0,0.738435864 0,1.64921466 C0,2.55999346 0.67125,3.29842932 1.5,3.29842932" id="Fill-1"></path>
+                    <path d="M28.5,10.7015707 L1.5,10.7015707 C0.67125,10.7015707 0,11.4400065 0,12.3507853 C0,13.2615641 0.67125,14 1.5,14 L28.5,14 C29.328375,14 30,13.2615641 30,12.3507853 C30,11.4400065 29.328375,10.7015707 28.5,10.7015707" id="Fill-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

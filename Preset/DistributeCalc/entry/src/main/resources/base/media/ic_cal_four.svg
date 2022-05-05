@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="94px" viewBox="0 0 93 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_cal_four</title>
+    <g id="calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分布式计算器_A端_计算器首页" transform="translate(-32.000000, -619.000000)" fill="#000000">
+            <g id="ic_cal_four" transform="translate(32.000000, 619.390000)">
+                <rect id="矩形备份-20" fill-opacity="0.05" x="0" y="0" width="93" height="93" rx="21"></rect>
+                <polygon id="4" fill-rule="nonzero" opacity="0.599999964" points="52.9924812 61.61 52.9924812 54.5280328 58 54.5280328 58 51.1619126 52.9924812 51.1619126 52.9924812 42.2438798 48.9774436 42.2438798 48.9774436 51.1619126 38.6917293 51.1619126 51.1428571 29.61 46.7669173 29.61 34 51.8176503 34 54.5280328 48.9774436 54.5280328 48.9774436 61.61"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
