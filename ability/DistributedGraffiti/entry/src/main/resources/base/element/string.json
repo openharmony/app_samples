@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "分布式涂鸦"
+    },
+    {
+      "name": "ServiceAbility_desc",
+      "value": "description"
+    }
+  ]
+}
