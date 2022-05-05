@@ -29,7 +29,8 @@
   - [`FormAbility:`FA模型卡片（JS）（API8）](ability/FormAbility)
   - [`FormExtAbility:`Stage模型卡片（eTS JS）（API9）](ability/FormExtAbility)
   - [`FormLauncher:`卡片使用方（eTS）（API8）](ability/FormLauncher)
-  - [`ServiceExtAbility:`StageExtAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)  
+  - [`ServiceExtAbility:`StageExtAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)
+  - [`DistributedGraffiti:`分布式涂鸦（eTS）（API8）](ability\DistributedGraffiti)  
 - common
   - [`AirQuality:`空气质量（JS）（API8）](common/AirQuality)
   - [`Clock:`时钟（JS）（API8）](common/Clock)
@@ -46,6 +47,7 @@
   - [`LiteStorage:`轻量级存储（eTS）（API8）](data/LiteStorage)
   - [`Rdb:`关系型数据库（eTS）（API8）](data/Rdb)
   - [`DDMQuery:`结果集与谓词（eTS）（API8）](data/DDMQuery)
+  - [`DistributedRdb:`分布式关系型数据库（eTS）（API8）](data/DistributedRdb)
 - device
   - [`DeviceManager:`设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor:`传感器（eTS）（API8）](device/Sensor)
@@ -57,6 +59,8 @@
   - [`JsVideo:`视频播放（JS）（API8）](media/JsVideo)
   - [`Recorder:`录音机（eTS）（API8）](media/Recorder)
   - [`MultiMedia:`相机和媒体库（eTS）（API9）](media/MultiMedia)
+  - [`VideoPlayer:`视频播放（eTS）（API9）](media/VideoPlayer)
+  - [`JsRecorder:`录音机（JS）（API8）](media/JSRecorder)
 - DFX
   - [`JsDotTest:`测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger:`故障日志获取（eTS）（API8）](DFX/FaultLogger)
@@ -84,6 +88,7 @@
   - [`MouseEvent:`鼠标事件（eTS）（API8）](ETSUI/MouseEvent)
   - [`Web:`Web（eTS）（API8）](ETSUI/Web)
   - [`Gallery:`组件集合（eTS）（API8）](ETSUI/Gallery)
+  - [`BringApp:`拉起系统应用（eTS）（API8）](ETSUI/BringApp)
 - FileManager
   - [`Environment:`目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo:`文件管理（eTS）（API8）](FileManager/FileIo)
@@ -92,12 +97,19 @@
   - [`Emitter:`处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock:`后台代理提醒（eTS）（API8）](Notification/AlarmClock)
   - [`Notification:`订阅、发送通知（eTS）（API9）](Notification/Notification)
+- Network
+  - [`Http:`数据请求（eTS）（API8）](Network/Http)
+  - [`Socket:`Socket 连接（eTS）（API8）](Network/Socket)
+
+
 - Preset
   - [`Clock:`简单时钟（eTS）（API9）](Preset/Clock)
   - [`FlishLight:`手电筒（eTS）（API8）](Preset/FlishLight)
+  - [`DistributeCalc:`分布式计算器（eTS）（API8）](Preset/DistributeCalc)
 - ResourcesSchedule
   - [`Flybird:`文档管理（eTS）（API9）](ResourcesSchedule/Flybird)
   - [`News:`文档管理（eTS）（API9）](ResourcesSchedule/News)
+  - [`BackgroundTaskManager:`后台任务管理（eTS）（API8）](ResourcesSchedule/BackgroundTaskManager)
 - UI
   - [`AtomicLayout:`原子布局（JS）（API8）](UI/AtomicLayout)
   - [`Badge:`事件标记控件（JS）（API8）](UI/Badge)
