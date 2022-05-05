@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="93px" viewBox="0 0 93 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_cal_point</title>
+    <g id="calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分布式计算器_A端_计算器首页" transform="translate(-247.000000, -833.000000)" fill="#000000">
+            <g id="ic_cal_point" transform="translate(247.000000, 833.000000)">
+                <rect id="矩形备份-26" fill-opacity="0.05" x="0" y="0" width="93" height="93" rx="21"></rect>
+                <path d="M39.4778761,64 C40.1858407,64 40.7831858,63.7557471 41.2699115,63.2672414 C41.7566372,62.7787356 42,62.1896552 42,61.5 C42,60.8103448 41.7566372,60.2212644 41.2699115,59.7327586 C40.7831858,59.2442529 40.1858407,59 39.4778761,59 C38.79941,59 38.2168142,59.2442529 37.7300885,59.7327586 C37.2433628,60.2212644 37,60.8103448 37,61.5 C37,62.1609195 37.2433628,62.7428161 37.7300885,63.2456897 C38.2168142,63.7485632 38.79941,64 39.4778761,64 Z" id="." fill-rule="nonzero" opacity="0.599999964"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="93px" viewBox="0 0 93 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_cal_plus</title>
+    <g id="calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分布式计算器_A端_计算器首页" transform="translate(-355.000000, -618.000000)" fill="#007DFF">
+            <g id="ic_cal_plus" transform="translate(355.000000, 618.000000)">
+                <rect id="矩形备份-21" fill-opacity="0.1" x="0" y="0" width="93" height="93" rx="21"></rect>
+                <g id="编组-5" transform="translate(31.000000, 32.000000)">
+                    <rect id="矩形复制" x="0" y="13.2954545" width="30" height="3.40909091" rx="1.5"></rect>
+                    <path d="M1.5,13.3333333 L28.5,13.3333333 C29.3284271,13.3333333 30,14.0049062 30,14.8333333 L30,15.1666667 C30,15.9950938 29.3284271,16.6666667 28.5,16.6666667 L1.5,16.6666667 C0.671572875,16.6666667 7.67068418e-14,15.9950938 7.63833441e-14,15.1666667 L7.63833441e-14,14.8333333 C7.65039356e-14,14.0049062 0.671572875,13.3333333 1.5,13.3333333 Z" id="矩形复制" transform="translate(15.000000, 15.000000) rotate(90.000000) translate(-15.000000, -15.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
