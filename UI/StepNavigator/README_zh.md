@@ -1,4 +1,4 @@
-# 步骤导航器<a name="ZH-CN_TOPIC_0000001133948524"></a>
+# 步骤导航器
 
 ### 简介<a name="section104mcpsimp"></a>
 

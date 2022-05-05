@@ -1,4 +1,4 @@
-# 原子布局<a name="ZH-CN_TOPIC_0000001126159786"></a>
+# 原子布局
 
 ### 简介<a name="section104mcpsimp"></a>
 

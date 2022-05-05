@@ -1,4 +1,4 @@
-# 滑动容器<a name="ZH-CN_TOPIC_0000001179772111"></a>
+# 内容滑动容器
 
 ### 简介<a name="section104mcpsimp"></a>
 

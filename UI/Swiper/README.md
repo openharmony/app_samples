@@ -1,4 +1,4 @@
-# Swiper<a name="EN-US_TOPIC_0000001179772111"></a>
+# Swiper
 
 ### Introduction<a name="section104mcpsimp"></a>
 

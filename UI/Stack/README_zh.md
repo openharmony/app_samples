@@ -1,4 +1,4 @@
-# Stack容器<a name="ZH-CN_TOPIC_0000001134118202"></a>
+# 堆叠容器
 
 ### 简介<a name="section104mcpsimp"></a>
 

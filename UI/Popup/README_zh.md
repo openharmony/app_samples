@@ -1,4 +1,4 @@
-# JS气泡<a name="ZH-CN_TOPIC_0000001175858131"></a>
+# 气泡
 
 ### 简介<a name="section104mcpsimp"></a>
 

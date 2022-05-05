@@ -1,4 +1,4 @@
-# Stack<a name="EN-US_TOPIC_0000001134118202"></a>
+# Stack
 
 ### Introduction<a name="section104mcpsimp"></a>
 

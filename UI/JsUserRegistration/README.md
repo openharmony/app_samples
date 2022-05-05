@@ -1,4 +1,4 @@
-# User Registration (JavaScript)
+# User Registration
 
 ### Introduction
 
