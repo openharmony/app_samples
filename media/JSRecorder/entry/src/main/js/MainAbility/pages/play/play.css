@@ -1,0 +1,82 @@
+/*
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F3F5;
+}
+
+.app-title {
+    width: 100%;
+    height: 8%;
+    align-items: center;
+}
+
+.back-image {
+    width: 35vp;
+    height: 35vp;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.body {
+    height: 80%;
+    flex-direction: column;
+}
+
+.slider_time {
+    height: 15vp;
+    width: 120%
+}
+
+.record {
+    width: 100%;
+    height: 25%;
+}
+
+.text-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+.text-top {
+    font-size: 54fp;
+}
+
+.text {
+    font-size: 32fp;
+    opacity: 0.5;
+}
+
+.btn-div {
+    width: 100%;
+    height: 12%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0vp;
+}
+
+.btn {
+    width: 72vp;
+    height: 72vp;
+}
+

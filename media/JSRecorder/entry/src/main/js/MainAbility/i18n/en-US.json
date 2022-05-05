@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "recorder": "Recorder",
+    "rename": "Rename",
+    "del": "delete",
+    "fileName":"File Name",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "isDel": "Whether to delete the recording data",
+    "newName": "Please enter a new file name"
+  }
+}

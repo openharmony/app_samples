@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "recorder": "录音机",
+    "rename": "重命名",
+    "del": "删除",
+    "fileName":"文件名",
+    "confirm": "确认",
+    "cancel": "取消",
+    "isDel": "是否删除该录音数据",
+    "newName": "请输入文件新名称"
+  }
+}
