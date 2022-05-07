@@ -126,17 +126,14 @@ export struct RegisterInfo {
                   case 0:
                     this.username = value
                     Logger.info(TAG, `addAccount enter ${this.username}`)
-                    this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
                     break
                   case 1:
                     this.emailInfo = value
                     Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
-                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
                     break
                   case 2:
                     this.signature = value
                     Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
-                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
                     break
                   case 3:
                     this.passWord = value
@@ -163,6 +160,9 @@ export struct RegisterInfo {
           let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
           let result = await this.storage.hasStorageValue(this.username, this.bundleName)
           Logger.info(TAG, `This result is ${result}`)
+          await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
+          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
           if (this.username === '') {
             AlertDialog.show(
               {
