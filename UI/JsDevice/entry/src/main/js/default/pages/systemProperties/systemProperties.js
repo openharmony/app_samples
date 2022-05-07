@@ -13,15 +13,16 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import systemParameter from '@ohos.systemParameter';
 
 let self = null
+
 export default {
     data: {
         results: ''
     },
-    onInit(){
+    onInit() {
         self = this
     },
     setKey() {

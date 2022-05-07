@@ -13,16 +13,16 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
-    data: {
-    },
+    data: {},
     onInit() {
     },
 
     jumpSharedTargetPage() {
         router.push({
-            uri: "pages/transitions/sharedtargetpage/sharedtargetpage",
+            url: 'pages/transitions/sharedtargetpage/sharedtargetpage',
         });
     }
 }

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {
@@ -22,15 +22,23 @@ export default {
         this.title = this.$t('strings.world');
     },
     svgOnClick1() {
-        router.push({uri:'pages/svg1/svg1'})
+        router.push({
+            url: 'pages/svg1/svg1'
+        })
     },
     svgOnClick2() {
-        router.push({uri:'pages/svg2/svg2'})
+        router.push({
+            url: 'pages/svg2/svg2'
+        })
     },
     svgOnClick3() {
-        router.push({uri:'pages/svg3/svg3'})
+        router.push({
+            url: 'pages/svg3/svg3'
+        })
     },
     svgOnClick4() {
-        router.push({uri:'pages/svg4/svg4'})
+        router.push({
+            url: 'pages/svg4/svg4'
+        })
     }
 }

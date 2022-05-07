@@ -13,27 +13,27 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
-    data: {
-    },
+    data: {},
     onInit() {
     },
-    onClickElement(){
+    onClickElement() {
         router.push({
-            uri: "pages/transitions/sharedelement/sharedelement"
+            url: 'pages/transitions/sharedelement/sharedelement'
         })
     },
 
     onClickCard() {
         router.push({
-            uri: "pages/transitions/cardtransition/cardtransition"
+            url: 'pages/transitions/cardtransition/cardtransition'
         })
     },
 
     onClickCustomTransition() {
         router.push({
-            uri: "pages/transitions/customtransition/customtransition"
+            url: 'pages/transitions/customtransition/customtransition'
         })
     }
 }

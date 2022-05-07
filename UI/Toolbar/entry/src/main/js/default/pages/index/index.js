@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {
@@ -22,17 +22,17 @@ export default {
     onInit() {
         for (var i = 1; i <= 15; i++) {
             var item = {
-                uri: "pages/toolbar/index",
+                url: 'pages/toolbar/index',
                 title: this.$t('strings.the') + i + this.$t('strings.chapter'),
                 id: i
             }
             this.list.push(item);
         }
     },
-    jumpPage(id, uri) {
+    jumpPage(id, url) {
         var cardId = this.$element(id).attr.id
         router.push({
-            uri: uri,
+            url: url,
             params: {
                 ref: cardId
             }

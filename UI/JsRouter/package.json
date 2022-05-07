@@ -1,7 +1,7 @@
 {
 	"license": "ISC",
 	"devDependencies": {},
-	"name": "js",
+	"name": "jsdevice",
 	"ohos": {
 		"org": "huawei",
 		"directoryLevel": "project",

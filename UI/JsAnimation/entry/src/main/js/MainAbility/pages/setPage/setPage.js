@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
-import prompt from '@system.prompt'
+import router from '@ohos.router'
+import prompt from '@ohos.prompt'
 
 export default {
     data: {
@@ -64,7 +64,7 @@ export default {
                 buttons: [
                     {
                         text: '确定',
-                        color:'#000000'
+                        color: '#000000'
                     },
                 ],
                 success: function () {
@@ -73,7 +73,7 @@ export default {
             })
         } else {
             router.push({
-                uri: 'pages/index/index',
+                url: 'pages/index/index',
                 params: {
                     message: [this.videonumopa, this.videonummove, this.num],
                     pass: true

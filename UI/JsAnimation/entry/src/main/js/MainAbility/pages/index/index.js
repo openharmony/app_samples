@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import animatordata from '../../common/animators'
 
 export default {
@@ -47,7 +47,7 @@ export default {
         message: []
     },
     onInit() {
-        console.info( 'index'+ JSON.stringify(animatordata.videoopa))
+        console.info('index' + JSON.stringify(animatordata.videoopa))
         this.pass = this.pass;
         if (this.pass === true) {
             if (this.message[0] == 1) {
@@ -90,7 +90,7 @@ export default {
         }
     },
     onReady() {
-        setInterval(()=>{
+        setInterval(() => {
             ++this.i;
             if (this.i % 2 === 0) {
                 this.video2 = '';
@@ -151,11 +151,11 @@ export default {
                 this.flag1 = true;
                 this.flag2 = false;
             }
-        },5000);
+        }, 5000);
     },
-    redirect_setting(){
+    redirect_setting() {
         router.push({
-            uri:'pages/setPage/setPage'
+            url: 'pages/setPage/setPage'
         })
     },
     back() {

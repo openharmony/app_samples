@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt'
-import router from '@system.router'
+import prompt from '@ohos.prompt'
+import router from '@ohos.router'
 
 export default {
     data: {
@@ -90,7 +90,7 @@ export default {
         }
 
         router.push({
-            uri: 'pages/success/success'
+            url: 'pages/success/success'
         })
     }
 }

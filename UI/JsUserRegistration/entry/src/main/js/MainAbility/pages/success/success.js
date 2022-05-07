@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 
 export default {
     data: {},
 
     onBack() {
         router.push({
-            uri: 'pages/index/index'
+            url: 'pages/index/index'
         })
     }
 }

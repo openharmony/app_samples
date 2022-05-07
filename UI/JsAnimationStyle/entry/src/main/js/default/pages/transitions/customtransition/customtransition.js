@@ -13,16 +13,16 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
-    data: {
-    },
+    data: {},
     onInit() {
     },
 
     onClickCustomTarget() {
         router.push({
-            uri: "pages/transitions/customtarget/customtarget"
+            url: 'pages/transitions/customtarget/customtarget'
         })
     }
 }

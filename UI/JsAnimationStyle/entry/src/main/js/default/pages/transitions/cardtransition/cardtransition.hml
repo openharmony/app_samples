@@ -19,7 +19,7 @@
     </div>
     <list style="width:340px;height:600px;flex-direction:column;justify-content:center;align-items:center">
         <list-item type="listItem" class="item"  for="list" id="{{$item.id}}"
-                   onclick="jumpPage({{$item.id}}, {{$item.uri}})">
+                   onclick="jumpPage({{$item.id}}, {{$item.url}})">
             <text style="margin-left: 10px; font-size: 23px;">{{$item.title}}</text>
         </list-item>
     </list>

@@ -7,8 +7,8 @@
       {
         "name": "default",
         "signingConfig": "default",
-      },
-    ],
+      }
+    ]
   },
   "modules": [
     {
@@ -18,10 +18,10 @@
         {
           "name": "default",
           "applyToProducts": [
-            "default",
-          ],
-        },
-      ],
-    },
-  ],
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
 }
