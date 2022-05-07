@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import TitleBar from '../view/TitleBar'
 import MediaUtils from '../model/MediaUtils'
@@ -87,15 +87,15 @@ struct Index {
         if (this.operateVisible) {
           this.OperateBtn($r('app.media.icon_camera'), 0, { x: 0, y: '-120%' }, () => {
             this.operateVisible = !this.operateVisible
-            router.push({ uri: 'pages/CameraPage' })
+            router.push({ url: 'pages/CameraPage' })
           })
           this.OperateBtn($r('app.media.icon_record'), 0, { x: '-120%', y: 0 }, () => {
             this.operateVisible = !this.operateVisible
-            router.push({ uri: 'pages/RecordPage' })
+            router.push({ url: 'pages/RecordPage' })
           })
           this.OperateBtn($r('app.media.icon_document'), 0, { x: 0, y: '120%' }, () => {
             this.operateVisible = !this.operateVisible
-            router.push({ uri: 'pages/DocumentPage' })
+            router.push({ url: 'pages/DocumentPage' })
           })
         }
       }

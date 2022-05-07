@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import Album from '../pages/Index'
 
 @Component
@@ -42,7 +42,7 @@ export struct MediaView {
           .onClick(() => {
             if (item.count > 0) {
               router.push({
-                uri: 'pages/AlbumPage',
+                url: 'pages/AlbumPage',
                 params: { albumName: item.albumName, mediaType: item.mediaType }
               })
             } else {

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import MediaUtils from '../model/MediaUtils'
 import { MediaItem } from '../view/MediaItem'
@@ -24,8 +24,8 @@ import TitleBar from '../view/TitleBar'
 @Component
 struct AlbumPage {
   private tag: string = 'AlbumPage'
-  private albumName: string = <string> router.getParams().albumName
-  private mediaType: number = <number> router.getParams().mediaType
+  private albumName: string = <string> router.getParams()['albumName']
+  private mediaType: number = <number> router.getParams()['mediaType']
   private mediaUtils: MediaUtils = MediaUtils.getInstance()
   private renameDialogController: CustomDialogController = null
   @State mediaList: Array<mediaLibrary.FileAsset> = []

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import { NavigationBar } from "../../../common/components/navigationBar"
 import { ChangeData } from './foodData';
 
@@ -166,7 +166,7 @@ struct ApplicationSample {
               .width('100%')
               .onClick(() => {
                 router.push({
-                  uri: 'pages/uiStateManagement/categoriesManagement/foodDetail',
+                  url: 'pages/uiStateManagement/categoriesManagement/foodDetail',
                   params: { foodIndex: index }
                 })
               })

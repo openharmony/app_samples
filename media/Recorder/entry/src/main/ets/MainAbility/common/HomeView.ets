@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import { TitleBar } from '../common/TitleBar'
 import { CheckTitle } from '../common/CheckTitle'
 import { Record } from '../model/Record'
@@ -154,7 +154,7 @@ export struct HomeView {
           this.fileManager.createFile((fileName, file, addDate) => {
             router.push({
               params: { fileName: fileName, file: file, addDate: addDate },
-              uri: 'pages/RecordPage' })
+              url: 'pages/RecordPage' })
           })
         })
       }

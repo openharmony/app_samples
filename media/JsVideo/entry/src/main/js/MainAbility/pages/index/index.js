@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import prompt from '@system.prompt';
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
   data: {
@@ -78,6 +78,6 @@ export default {
   },
   // 长按视频
   longPress(){
-    router.replace({uri:'pages/index/index'})
+    router.replace({url:'pages/index/index'})
   }
 };

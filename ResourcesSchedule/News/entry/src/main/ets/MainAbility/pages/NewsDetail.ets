@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import { NewsDetailTitle } from './NewsDetailTitle'
 import { NewsData } from './NewsData/NewsData'
 
 @Entry
 @Component
 struct NewsDetail {
-  private newsItem: NewsData = router.getParams().data1 as NewsData
+  private newsItem: NewsData = router.getParams()['data1'] as NewsData
 
   build() {
     Column() {
@@ -38,7 +38,7 @@ struct NewsDetail {
                 .margin({ left: 5, right: 5, top: 5 })
                 .onClick(() => {
                   router.push({
-                    uri: 'pages/FullImagePage',
+                    url: 'pages/FullImagePage',
                     params: ({ data1: this.newsItem.image })
                   })
                 })

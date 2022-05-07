@@ -14,7 +14,7 @@
  */
 
 import { NavigationBar } from "../../../common/components/navigationBar"
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -52,7 +52,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Top, color: '#FFF6CD46' }
               })
             })
@@ -68,7 +68,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Bottom, color: '#ee94b4' }
               })
             })
@@ -83,7 +83,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Left, color: '#996666' }
               })
             })
@@ -98,7 +98,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Right, color: '#FF1CBCBC' }
               })
             })
@@ -114,7 +114,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Left, color: '#ee94b4' }
               })
             })
@@ -129,7 +129,7 @@ struct TraAnimationFromSample {
             .backgroundColor('#FFFFFF')
             .onClick(() => {
               router.push({
-                uri: 'pages/animation/traAnimation/traAnimationTo',
+                url: 'pages/animation/traAnimation/traAnimationTo',
                 params: { type: SlideEffect.Bottom, color: '#ee94b4', angle: this.angle }
               })
             })

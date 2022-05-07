@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import router from '@system.router'
+import router from '@ohos.router'
 import DateTimeUtil from '../model/DateTimeUtil'
 import MediaUtils from '../model/MediaUtils'
 import RecordModel from '../model/RecordModel'

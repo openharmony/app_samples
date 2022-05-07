@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import HiLog from '../common/HiLog'
 import { TitleBar } from '../common/TitleBar'
 import { initialize } from '../model/Initialize'
@@ -58,7 +58,7 @@ struct Index {
 
   onAccept() {
     router.replace({
-      uri: 'pages/index'
+      url: 'pages/index'
     })
   }
 

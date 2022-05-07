@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import { NewsData } from './NewsData/NewsData'
 
 @Entry
@@ -40,7 +40,7 @@ export struct NewsListItem {
     }
     .onClick(() => {
       router.push({
-        uri: 'pages/NewsDetail',
+        url: 'pages/NewsDetail',
         params: ({ data1: this.newsItem })
       })
     })

@@ -1,16 +1,16 @@
 {
-	"license": "ISC",
-	"devDependencies": {
-		"@types/libhello.so": "file:./src/main/cpp/types/libhello"
+	"license":"ISC",
+	"devDependencies":{
+		"@types/libhello.so":"file:./src/main/cpp/types/libhello"
 	},
-	"name": "entry",
-	"ohos": {
-		"org": "huawei",
-		"directoryLevel": "module",
-		"buildTool": "hvigor"
+	"name":"entry",
+	"ohos":{
+		"org":"huawei",
+		"directoryLevel":"module",
+		"buildTool":"hvigor"
 	},
-	"description": "example description",
-	"repository": {},
-	"version": "1.0.0",
-	"dependencies": {}
+	"description":"example description",
+	"repository":{},
+	"version":"1.0.0",
+	"dependencies":{}
 }

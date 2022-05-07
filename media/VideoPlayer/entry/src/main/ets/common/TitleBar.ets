@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 
 @Component
 export default struct TitleBar {
@@ -21,6 +21,7 @@ export default struct TitleBar {
 
   aboutToAppear() {
     this.hasBackPress = parseInt(router.getLength(), 10) > 0
+    console.log(router.getLength())
   }
 
   build() {

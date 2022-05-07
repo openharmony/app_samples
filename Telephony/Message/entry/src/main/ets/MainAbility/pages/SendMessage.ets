@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import sms from '@ohos.telephony.sms'
 import Contact from '../model/Contact'
 import Message from '../model/Message'
@@ -40,7 +40,7 @@ struct SendMessage {
   private dateTimeUtil: DateTimeUtil = new DateTimeUtil()
 
   aboutToAppear() {
-    this.contact = <Contact> router.getParams().contact
+    this.contact = <Contact> router.getParams()['contact']
     Logger.info(`${TAG}, aboutToAppear name = ${this.contact.name} destinationHost = ${this.contact.destinationHost}`)
     this.getData()
   }
