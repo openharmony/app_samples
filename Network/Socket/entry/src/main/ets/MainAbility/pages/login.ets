@@ -15,7 +15,7 @@
 
 import prompt from '@system.prompt';
 import wifi from '@ohos.wifi';
-import router from '@system.router';
+import router from '@ohos.router';
 import { resolveIP } from '../Utils/util'
 import socket from '@ohos.net.socket';
 
@@ -67,7 +67,7 @@ struct Login{
       }
       if(str === '确认'){
         router.push({
-          uri:'pages/index',
+          url:'pages/index',
           params: {address: oppositeAddr.address, port: oppositeAddr.port }
         })
       }
@@ -142,7 +142,7 @@ struct Login{
                   console.info("[fengzi]send"+JSON.stringify(err))
                 })
                 router.push({
-                  uri:'pages/index',
+                  url:'pages/index',
                   params: {address: oppositeAddr.address, port: oppositeAddr.port }
                 })
               }).backgroundColor(0xffffff).fontColor(Color.Red)

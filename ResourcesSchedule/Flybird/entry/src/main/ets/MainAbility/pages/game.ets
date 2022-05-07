@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 // @ts-nocheck
-import router from '@system.router';
+import router from '@ohos.router';
 import bundleState from '@ohos.bundleState';
 import logger from '../utils/logger'
 

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import prompt from '@system.prompt'
 import { ServiceModel } from '../model/ServiceModel'
 import { TitleBar } from '../component/TitleBar'
@@ -27,7 +27,7 @@ const TAG = "flybirdDebug"
 
 async function routePage() {
   let options = {
-    uri: 'pages/selects'
+    url: 'pages/selects'
   }
   try {
     await router.push(options)

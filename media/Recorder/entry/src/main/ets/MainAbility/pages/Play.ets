@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import { Record } from '../model/Record'
 import { TitleBar } from '../common/TitleWithBack'
 import { PlayView } from '../common/PlayView'
@@ -21,7 +21,7 @@ import { AudioModel } from '../model/AudioModel'
 @Entry
 @Component
 struct Play {
-  private record: Record = <Record> router.getParams().recorder
+  private record: Record = <Record> router.getParams()['recorder']
   private audioModel: AudioModel = new AudioModel()
 
   aboutToAppear() {

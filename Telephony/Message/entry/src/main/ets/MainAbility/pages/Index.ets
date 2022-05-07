@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import Contact from '../model/Contact'
 import Logger from '../model/Logger'
 import { TitleBar } from '../common/TitleBar'
@@ -154,7 +154,7 @@ struct Index {
                     .onClick(() => {
                       Logger.info(`${TAG}, onClick-sms ${item.name} ${item.destinationHost}`)
                       router.push({
-                        uri: 'pages/SendMessage',
+                        url: 'pages/SendMessage',
                         params: {
                           contact: item
                         }

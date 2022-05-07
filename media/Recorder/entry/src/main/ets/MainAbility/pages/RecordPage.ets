@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import { TitleBar } from '../common/TitleWithBack'
 import { AnimateView } from '../common/AnimateView'
 import { FileManager } from '../model/FileManager'
@@ -25,9 +25,9 @@ const TAG = '[Recorder.Record]'
 @Entry
 @Component
 struct RecordPage {
-  private fileName: string = <string> router.getParams().fileName
-  private file: string = <string> router.getParams().file
-  private addDate: string = <string> router.getParams().addDate
+  private fileName: string = <string> router.getParams()['fileName']
+  private file: string = <string> router.getParams()['file']
+  private addDate: string = <string> router.getParams()['addDate']
   private recordModel: RecordModel = new RecordModel()
   private fileManager: FileManager = new FileManager()
   private millisecond: number = 0
@@ -40,6 +40,7 @@ struct RecordPage {
       let recorder = new Record(this.fileName, this.file, this.addDate, this.duration, false)
       this.fileManager.putFile(recorder)
     }.bind(this))
+
   }
 
   aboutToAppear() {

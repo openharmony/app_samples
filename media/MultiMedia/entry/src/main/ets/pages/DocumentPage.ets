@@ -14,7 +14,7 @@
  */
 import fileIo from '@ohos.fileio'
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import MediaUtils from '../model/MediaUtils'
 import TitleBar from '../view/TitleBar'

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import emitter from '@ohos.events.emitter'
 import { CustomText }  from '../common/CustomText'
 import { getData } from '../model/Good'

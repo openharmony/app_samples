@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import featureAbility from '@ohos.ability.featureAbility'
-import router from '@system.router'
+import router from '@ohos.router'
 import mediaQuery from '@ohos.mediaquery'
 import { Record } from '../model/Record'
 import { HomeView } from '../common/HomeView'
@@ -58,7 +58,7 @@ struct Index {
       if (!this.isLand) {
         router.push({
           params: { recorder: recorder },
-          uri: 'pages/Play' })
+          url: 'pages/Play' })
       } else {
         if (this.record.fileName != recorder.fileName) {
           this.audioModel.initAudioPlayer(recorder.filePath, true)

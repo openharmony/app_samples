@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import { ChangeData } from './foodData'
 
 @Component

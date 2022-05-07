@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import { NavigationBar } from "../../../common/components/navigationBar"
 
 @Entry
@@ -24,7 +24,7 @@ struct DetailPageSample {
     Column() {
       NavigationBar({ title: 'Detail' })
 
-      Text('getParnms:' + router.getParams().text)
+      Text('getParnms:' + router.getParams()['text'])
         .width('100%')
         .textAlign(TextAlign.Center)
         .fontSize(20)

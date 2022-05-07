@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import mediaQuery from '@ohos.mediaquery'
 import { TitleBar } from '../common/TitleBar'
 import { newsList, getNew } from '../model/New'
@@ -67,7 +67,7 @@ struct Index {
               if (!this.isLand) {
                 router.push({
                   params: { title: item.title, newId: item.newId },
-                  uri: 'pages/New' })
+                  url: 'pages/New' })
               } else {
                 this.currentNew = getNew(item.newId)
               }

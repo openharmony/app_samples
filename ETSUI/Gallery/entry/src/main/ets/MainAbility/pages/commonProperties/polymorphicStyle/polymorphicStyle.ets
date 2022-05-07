@@ -14,13 +14,13 @@
  */
 
 
-import router from '@system.router';
+import router from '@ohos.router';
 import {GetColor} from "../../../common/components/getColor"
 import {NavigationBar} from "../../../common/components/navigationBar"
 
 async function routePageShoppingCar() {
   let options = {
-    uri: 'pages/commonProperties/polymorphicStyle/shoppingCar'
+    url: 'pages/commonProperties/polymorphicStyle/shoppingCar'
   }
   try {
     await router.push(options)

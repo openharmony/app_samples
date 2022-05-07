@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -24,7 +24,7 @@ struct IndexSample {
     animateTo({
       duration: 3000,
       onFinish: () => {
-        router.replace({ uri: 'pages/home' })
+        router.replace({ url: 'pages/home' })
       }
     }, () => {
       this.opacity = 1;

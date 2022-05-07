@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 import { NewView } from '../common/NewView'
 import { getNew } from '../model/New'
 import { TitleBar } from '../common/TitleWithBack'
@@ -20,8 +20,8 @@ import { TitleBar } from '../common/TitleWithBack'
 @Entry
 @Component
 struct New {
-  private newId: number = <number> router.getParams().newId
-  private title: string = <string> router.getParams().title
+  private newId: number = <number> router.getParams()['newId']
+  private title: string = <string> router.getParams()['title']
   @State currentNew: { newId: number,content: Resource, img: Resource } = undefined
 
   aboutToAppear() {

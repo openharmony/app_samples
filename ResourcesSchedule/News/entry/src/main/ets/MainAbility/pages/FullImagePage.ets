@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
 struct FullImagePage {
-  private imageItem: Resource = router.getParams().data1 as Resource
+  private imageItem: Resource = router.getParams()['data1'] as Resource
   @State private leftMargin: number = 0
   @State private leftNum: number = 0
   @State private changeDistance: number = 0
