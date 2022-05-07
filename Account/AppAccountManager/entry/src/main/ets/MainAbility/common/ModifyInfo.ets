@@ -126,12 +126,10 @@ export struct ModifyInfo {
                   case 0:
                     this.emailInfo = value
                     Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
-                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
                     break
                   case 1:
                     this.signature = value
                     Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
-                    this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
                     break
                   case 2:
                     this.passWord = value
@@ -159,6 +157,8 @@ export struct ModifyInfo {
           let userPassWord = await this.storage.getStorageValue(this.username, this.bundleName)
           Logger.info(TAG, `This userPassWord is ${userPassWord}`)
           Logger.info(TAG, `This passWord is ${this.passWord}`)
+          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
           if (this.emailInfo !== '' && !res.test(this.emailInfo)) {
             AlertDialog.show(
               {
