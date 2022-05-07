@@ -13,13 +13,13 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {},
     onClick(type) {
         router.push({
-            uri: "pages/" + type +"/index"
+            url: 'pages/' + type +'/index'
         })
     }
 }

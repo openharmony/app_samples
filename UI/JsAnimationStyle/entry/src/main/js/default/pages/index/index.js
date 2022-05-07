@@ -13,34 +13,34 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
-    data: {
-    },
+    data: {},
     onInit() {
     },
 
     onClickAnimationStyle() {
         router.push({
-            uri: "pages/animation/index/index"
+            url: 'pages/animation/index/index'
         })
     },
 
     onClickGradientStyle() {
         router.push({
-            uri: "pages/gradient/index"
+            url: 'pages/gradient/index'
         })
     },
 
     onClickTransitionStyle() {
         router.push({
-            uri: "pages/transitions/index/index"
+            url: 'pages/transitions/index/index'
         })
     },
 
     onClickCustomFontStyle() {
         router.push({
-            uri: "pages/customfont/index"
+            url: 'pages/customfont/index'
         })
     }
 }

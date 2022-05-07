@@ -13,17 +13,17 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     onMenuClick() {
         router.push({
-            uri: "pages/menu/index"
+            url: 'pages/menu/index'
         })
     },
     onSelectClick() {
         router.push({
-            uri: "pages/select/index"
+            url: 'pages/select/index'
         })
     }
 }

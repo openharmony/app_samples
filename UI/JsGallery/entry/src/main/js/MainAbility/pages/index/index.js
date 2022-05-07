@@ -14,7 +14,7 @@
  */
 
 import featureAbility from '@ohos.ability.featureAbility';
-import router from '@system.router'
+import router from '@ohos.router'
 import galleryData from '../../common/gallery'
 
 var i = 0
@@ -50,7 +50,7 @@ export default {
     },
     redirectSetting() {
         router.push({
-            uri: 'pages/setPage/setPage'
+            url: 'pages/setPage/setPage'
         })
     },
     back() {
@@ -74,7 +74,7 @@ export default {
     redirect(e) {
         var imgsrc = e.target.attr.data
         router.push({
-            uri: 'pages/bigimg/bigimg',
+            url: 'pages/bigimg/bigimg',
             params: {
                 url: imgsrc
             }
@@ -94,7 +94,7 @@ export default {
         }
         this.tempList = tempArray
     },
-    refreshData(){
+    refreshData() {
         this.imgsrc = []
         if (this.imgtype === true) {
             for (var i = 1;i <= 200; i++) {

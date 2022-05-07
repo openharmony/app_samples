@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 
 export default {
     props: ['bannerdata'],
@@ -23,7 +23,7 @@ export default {
     },
     redirect() {
         router.push({
-            uri: 'pages/detailPage/detail/detail',
+            url: 'pages/detailPage/detail/detail',
         });
     },
 }

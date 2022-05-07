@@ -13,21 +13,29 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
     data: {
         list: []
     },
     onInit() {
-        for(var i = 0; i < 15; i++) {
-            var item = { uri: "pages/transitions/cardtargetpage/cardtargetpage",
-                title: "this is title" + i, id: "item_" + i }
+        for (var i = 0; i < 15; i++) {
+            var item = {
+                url: 'pages/transitions/cardtargetpage/cardtargetpage',
+                title: "this is title" + i,
+                id: "item_" + i
+            }
             this.list.push(item);
         }
     },
 
-    jumpPage(id, uri) {
+    jumpPage(id, url) {
         var cardId = this.$element(id).ref;
-        router.push({ uri: uri, params : { ref : cardId } });
+        router.push({
+            url: url, params: {
+                ref: cardId
+            }
+        });
     }
 }

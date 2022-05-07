@@ -13,17 +13,17 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     finish() {
         router.push({
-            uri: "pages/homepage/index"
+            url: 'pages/homepage/index'
         })
     },
     skip() {
         router.push({
-            uri: "pages/homepage/index"
+            url: 'pages/homepage/index'
         })
 
     },

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from "@system.router"
+import router from "@ohos.router"
 
 export default {
     data: {
@@ -31,7 +31,7 @@ export default {
     redirect() {
         router.clear()
         router.push({
-            uri: "pages/index/index",
+            url: "pages/index/index",
             params: {
                 message: [this.col, this.num],
                 pass: true

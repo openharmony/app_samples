@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import prompt from '@system.prompt';
-import router from '@system.router';
+import prompt from '@ohos.prompt';
+import router from '@ohos.router';
 import detailData from '../../../common/detailData.js'
 
 let timer;
@@ -104,7 +104,7 @@ export default {
     },
     redirect() {
         router.push({
-            uri: 'pages/performance/performance',
+            url: 'pages/performance/performance',
         });
     },
     buildItem(param) {

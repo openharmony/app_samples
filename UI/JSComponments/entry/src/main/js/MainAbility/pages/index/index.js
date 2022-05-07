@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {
@@ -114,7 +114,7 @@ export default {
     },
     launch: function () {
         router.push({
-            uri: 'pages/details/details',
+            url: 'pages/details/details',
         });
     }
 }

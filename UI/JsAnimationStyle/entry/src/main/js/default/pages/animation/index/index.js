@@ -13,33 +13,33 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
+
 export default {
-    data: {
-    },
+    data: {},
     onInit() {
     },
     onClickTranslate() {
         router.push({
-            uri: "pages/animation/translate/translate"
+            url: 'pages/animation/translate/translate'
         })
     },
 
     onClickRotate() {
         router.push({
-            uri: "pages/animation/rotate/rotate"
+            url: 'pages/animation/rotate/rotate'
         })
     },
 
     onClickScale() {
         router.push({
-            uri: "pages/animation/scale/scale"
+            url: 'pages/animation/scale/scale'
         })
     },
 
     onClickComposite() {
         router.push({
-            uri: "pages/animation/compositeanimation/compositeanimation"
+            url: 'pages/animation/compositeanimation/compositeanimation'
         })
     }
 }

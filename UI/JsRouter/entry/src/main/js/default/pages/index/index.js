@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {
@@ -25,7 +25,7 @@ export default {
     },
     pushPage() {
         router.push({
-            uri: 'pages/pushPage/index',
+            url: 'pages/pushPage/index',
             params: {
                 data1:
                 this.$t('strings.value')

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 
 export default {
     data: {
@@ -20,11 +20,11 @@ export default {
     },
     onInit() {
         console.info("onInit," + JSON.stringify(this.bookNames))
-        if(JSON.stringify(this.bookNames).length<=2){
+        if (JSON.stringify(this.bookNames).length <= 2) {
             this.showTips = true
         }
     },
-    back: function(){
+    back: function () {
         router.back()
     }
 }
