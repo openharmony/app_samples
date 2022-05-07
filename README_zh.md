@@ -21,7 +21,7 @@
   - [`RPC:`RPC连接（eTS）（API8）](Communication/RPC)
   - [`Wlan:`WLAN（eTS）（API8）](Communication/Wlan) 
 - ability
-  - [`DMS:`分布式Demo（eTS）（API7）](ability/DMS)
+  - [`DMS:`分布式Demo（eTS）（API8）](ability/DMS)
   - [`JsDistributedMusicPlayer:`分布式音乐播放（JS）（API7）](ability/JsDistributedMusicPlayer)
   - [`DataAbility:`DataAbility的创建与访问（eTS）（API8）](ability/DataAbility)
   - [`ServiceAbility:`ServiceAbility的创建与使用（eTS）（API8）](ability/ServiceAbility)
@@ -163,11 +163,4 @@
 
 ## 约束与限制<a name="section18841871178"></a>
 
-1.  安装应用示例之前，请先查看"README_zh.md"文件来确认应用示例是否为stage模型，若为stage模型需要查看entry/src/main路径下的module.json5文件中的"deviceType"字段来确认该应用支持的设备类型；否则为FA模型，查看entry/src/main路径下的config.json文件中的"deviceType"字段来确认该应用示例支持的设备类型，两种模型都可尝试通过修改该字段使其可以在相应类型的设备上运行。
-4.  所有HarmonyOS相关示例已被全部迁移至[Harmony组织](https://gitee.com/harmonyos)之下的[harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples)仓中，本仓中这部分示例不再更新，并将在未来被移除。
-
-## 相关仓<a name="section741114082513"></a>
-
-1.  CAMERA\_SAMPLE\_APP组件的应用示例：[applications\_sample\_camera](https://gitee.com/openharmony/applications_sample_camera/blob/master/README_zh.md)
-2.  WIFI\_IOT\_APP组件的应用示例：[applications\_sample\_wifi\_iot](https://gitee.com/openharmony/applications_sample_wifi_iot/blob/master/README_zh.md)
-3.  HarmonyOS的应用示例：[harmonyos\_app\_samples](https://gitee.com/harmonyos/harmonyos_app_samples)
+​        安装应用示例之前，请先查看"README_zh.md"文件来确认应用示例是否为stage模型，若为stage模型需要查看entry/src/main路径下的module.json5文件中的"deviceType"字段来确认该应用支持的设备类型；否则为FA模型，查看entry/src/main路径下的config.json文件中的"deviceType"字段来确认该应用示例支持的设备类型，两种模型都可尝试通过修改该字段使其可以在相应类型的设备上运行。
