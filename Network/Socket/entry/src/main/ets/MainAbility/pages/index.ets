@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import router from '@system.router';
 import socket from '@ohos.net.socket';
 import { ChatBox } from '../model/ChatBox'

@@ -15,7 +15,7 @@
 
 import notify from '@ohos.notification';
 import wantAgent from '@ohos.wantAgent';
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import { getNotificationRequest, getNotificationId } from '../model/notificationUtils'
 import { Choose } from '../common/choose'
 

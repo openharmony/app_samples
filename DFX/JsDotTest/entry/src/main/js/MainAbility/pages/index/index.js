@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import bytrace from '@ohos.bytrace';
 import hiAppEvent from '@ohos.hiAppEvent';
 

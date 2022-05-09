@@ -17,7 +17,7 @@ import router from '@ohos.router';
 import mediaquery from '@ohos.mediaquery';
 import notify from '@ohos.notification';
 import wantAgent from '@ohos.wantAgent';
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import Logger from './utils/logger'
 
 const TAG: string = "[Notification]"

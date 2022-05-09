@@ -14,7 +14,7 @@
  */
 
 import featureAbility from '@ohos.ability.featureAbility';
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import rpc from "@ohos.rpc";
 import RemoteDeviceModel from '../../model/RemoteDeviceModel';
 import abilityAccessCtrl from "@ohos.abilityAccessCtrl";

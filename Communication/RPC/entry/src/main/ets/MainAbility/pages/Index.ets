@@ -14,7 +14,7 @@
  */
 
 import rpc from '@ohos.rpc'
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import { TitleBar } from '../common/titleBar'
 import { FlexList } from '../common/flexList'
 import { ReceivedData } from '../model/receivedData'

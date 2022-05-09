@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import Prompt from '@system.prompt';
+import Prompt from '@ohos.prompt';
 import { Good, addGood } from '../model/product'
 
 @Component

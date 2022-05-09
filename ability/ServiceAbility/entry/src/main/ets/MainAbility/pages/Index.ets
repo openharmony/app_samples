@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import rpc from "@ohos.rpc"
 import { TitleBar } from '../component/TitleBar'
 import { OperateView } from '../component/OperateView'

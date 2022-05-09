@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import wifi from '@ohos.wifi'
 import Logger from '../model/Logger'
 

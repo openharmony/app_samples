@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import router from '@system.router';
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import dataAbility from '@ohos.data.dataAbility'
 import { BASE_URI, DA_HELPER } from '../model/DaHelperConst'
 import { BookModel } from '../model/BookDataModel'

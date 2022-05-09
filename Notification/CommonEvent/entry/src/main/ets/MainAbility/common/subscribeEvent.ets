@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import commonEvent from '@ohos.commonEvent'
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import Logger from './Logger'
 
 const TAG: string = "[SubscribeEvent]"

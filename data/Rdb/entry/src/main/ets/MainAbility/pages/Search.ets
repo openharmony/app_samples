@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import dataRdb from '@ohos.data.rdb'
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import { Student } from '../model/Student'
 import { StudentView } from '../common/StudentView'
 import { SearchView } from '../common/SearchView'
