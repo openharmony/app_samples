@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import featureAbility from '@ohos.ability.featureAbility'
 import rpc from "@ohos.rpc"
 import logger from '../utils/logger'

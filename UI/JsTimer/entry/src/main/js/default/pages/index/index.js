@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 import systemTime from '@ohos.systemTime';
 
 export default {

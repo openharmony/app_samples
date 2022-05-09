@@ -14,7 +14,7 @@
  */
 
 import router from '@ohos.router';
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import { ServiceModel } from '../model/ServiceModel'
 import { TitleBar } from '../component/TitleBar'
 import { OperateView } from '../component/OperateView'

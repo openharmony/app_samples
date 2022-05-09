@@ -15,7 +15,7 @@
 
 import dataRdb from '@ohos.data.rdb'
 import featureAbility from '@ohos.ability.featureAbility'
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import { Student } from '../model/Student'
 import { STORE_CONFIG } from '../model/RdbConst'
 

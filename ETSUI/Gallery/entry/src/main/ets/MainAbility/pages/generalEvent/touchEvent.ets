@@ -14,7 +14,7 @@
  */
 
 import { NavigationBar } from "../../common/components/navigationBar"
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 
 @Entry
 @Component

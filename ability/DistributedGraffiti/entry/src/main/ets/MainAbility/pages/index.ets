@@ -18,7 +18,7 @@ import bundle from '@ohos.bundle';
 import deviceManager from "@ohos.distributedHardware.deviceManager";
 import featureAbility from '@ohos.ability.featureAbility';
 import rpc from "@ohos.rpc";
-import prompt from '@system.prompt';
+import prompt from '@ohos.prompt';
 
 let REQUEST_PERMISSION_CODE = 1;
 let CODE_CONNECT_REMOTE = 1;

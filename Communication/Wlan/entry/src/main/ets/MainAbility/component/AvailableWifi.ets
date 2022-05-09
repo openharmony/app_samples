@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import prompt from '@system.prompt'
+import prompt from '@ohos.prompt'
 import Logger from '../model/Logger'
 import { PswDialog } from '../component/PswDialog'
 import { WifiModel } from '../model/WifiModel'
