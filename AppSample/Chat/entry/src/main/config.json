@@ -1,0 +1,84 @@
+{
+  "app": {
+    "vendor": "example",
+    "bundleName": "ohos.samples.chat",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:chat",
+        "description": "$string:MainAbility_desc",
+        "formsEnabled": false,
+        "label": "$string:MainAbility_label",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "com.example.entry",
+    "srcPath": "",
+    "name": ".entry",
+    "js": [
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/Index",
+          "pages/AddFriendsPage",
+          "pages/ChatDetailPage",
+          "pages/ChatListPage",
+          "pages/ChatNewsPage",
+          "pages/DiscoverPage",
+          "pages/CreateGroupChatPage",
+          "pages/MsgBase",
+          "pages/FriendsMomentsPage",
+          "pages/FriendsPage",
+          "pages/FullImagePage",
+          "pages/SearchPage",
+          "pages/Setting",
+          "pages/SettingPage",
+          "pages/SwitchControl",
+          "pages/SwitchPage",
+          "pages/UserInfo"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}
