@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import mediaquery from '@system.mediaquery';
+import mediaquery from '@ohos.mediaquery';
 
 export default {
     data: {
@@ -38,12 +38,8 @@ export default {
         isTabletLandscape: false
     },
     onInit() {
-        this.regMediaQuery();
-    },
-    regMediaQuery() {
-        let mq = mediaquery.matchMedia('(min-aspect-ratio: 1)');
-        mq.addListener((data) => {
-            this.isTabletLandscape = data.matches;
-        });
+        mediaquery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)').on("change", (data) => {
+            this.isTabletLandscape = data.matches
+        })
     }
 }
