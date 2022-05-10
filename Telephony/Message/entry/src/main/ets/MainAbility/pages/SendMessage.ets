@@ -171,7 +171,7 @@ struct SendMessage {
                   .padding({ top: 20, bottom: 20, left: 20 })
                   .borderRadius(20)
                   .backgroundColor('#6bcfcdce')
-                  .textOverflow({ overflow: TextOverflow.Ellipsis })
+                  .textOverflow({ overflow: TextOverflow.None })
               }
               .alignSelf(ItemAlign.End)
             }

@@ -18,7 +18,7 @@
 <element name="recommended" src="../recommended/recommended.hml"></element>
 <element name="commoditys" src="../commoditys/commoditys.hml"></element>
 <div class="container">
-    <list class="list">
+    <list scrolleffect='no' class="list">
         <list-item type="top_nav" class="list-good">
             <navbar navbardata="{{ Home.navbarData }}" icon="{{ Home.searchbarIcon }}"></navbar>
         </list-item>

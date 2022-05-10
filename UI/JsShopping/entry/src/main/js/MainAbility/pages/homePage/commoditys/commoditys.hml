@@ -30,16 +30,16 @@
             </text>
         </tab-bar>
         <tab-content>
-            <div>
+            <div class="tab-content">
                 <productList></productList>
             </div>
-            <div>
+            <div class="tab-content">
                 <productList></productList>
             </div>
-            <div>
+            <div class="tab-content">
                 <productList></productList>
             </div>
-            <div>
+            <div class="tab-content">
                 <productList></productList>
             </div>
         </tab-content>

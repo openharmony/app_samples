@@ -15,7 +15,7 @@
 <div class="container">
     <list class="listDatas" scrollbar="auto" shapemode="rect" scrolleffect="spring" cachedcount="10"
           onrequestitem="buildItem" beginindex="{{ this.beginIndex }}" endindex="{{ this.endIndex }}"
-          repeatedlength="5040">
+          repeatedlength="40">
         <list-item type="productAlone" class="content-item" for="{{ tempList }}">
             <div class="itemlist">
                 <image class="img" src="{{ $item.uri }}"></image>
