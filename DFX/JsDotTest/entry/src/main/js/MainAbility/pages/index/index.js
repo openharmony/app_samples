@@ -14,7 +14,7 @@
  */
 
 import prompt from '@ohos.prompt';
-import bytrace from '@ohos.bytrace';
+import hiTraceMeter from '@ohos.hiTraceMeter';
 import hiAppEvent from '@ohos.hiAppEvent';
 
 export default {
@@ -40,18 +40,18 @@ export default {
         });
     },
 
-    bytrace: function () {
-        bytrace.startTrace("start TestFunc", 1)
+    hiTraceMeter: function () {
+        hiTraceMeter.startTrace("start TestFunc", 1)
         let sum = 0;
-        bytrace.traceByValue("start TestNum", sum)
+        hiTraceMeter.traceByValue("start TestNum", sum)
         for (let index = 0; index < 1000; index++) {
             sum = sum + index;
         }
-        bytrace.traceByValue("finish TestNum", sum)
+        hiTraceMeter.traceByValue("finish TestNum", sum)
         prompt.showToast({
             message: "finish add"
         })
-        bytrace.finishTrace("finish TestFunc", 1);
+        hiTraceMeter.finishTrace("finish TestFunc", 1);
     },
 
     switchChange(e) {
