@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 
 const TAG = '[NavigationBar]'
@@ -49,7 +49,7 @@ export struct NavigationBar {
                   value: $r('app.string.confirm'),
                   action: () => {
                     router.replace({
-                      uri: this.url,
+                      url: this.url,
                       params: {
                         bundleName: this.bundleName,
                         username: this.username

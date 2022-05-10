@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 
 @Component
 export struct BundleInfo {
@@ -55,7 +55,7 @@ export struct BundleInfo {
         .backgroundColor('#f6f6f6')
         .onClick(() => {
           router.replace({
-            uri: 'pages/Login',
+            url: 'pages/Login',
             params: {
               bundleName: item.name
             }

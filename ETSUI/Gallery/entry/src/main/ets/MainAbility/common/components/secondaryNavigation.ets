@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 import { SECOND_NAV_LIST } from '../../model/constant'
 
 
@@ -49,7 +49,7 @@ export struct SecondaryNavigation {
           .editable(true)
           .onClick(() => {
             router.push({
-              uri: item.uri
+              url: item.url
             })
           })
         })

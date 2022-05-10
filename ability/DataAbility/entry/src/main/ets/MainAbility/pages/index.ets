@@ -14,7 +14,7 @@
  */
 import featureAbility from '@ohos.ability.featureAbility'
 import dataAbility from '@ohos.data.dataAbility'
-import router from '@system.router'
+import router from '@ohos.router'
 import { BASE_URI, COLUMNS, DA_HELPER } from '../model/DaHelperConst'
 import { BookView } from '../component/BookView'
 import { BookModel, initValuesBuckets, getListFromResultSet } from '../model/BookDataModel'
@@ -69,7 +69,7 @@ struct Index {
               BookView({ book: item, deleteCallback: this.deleteCallback })
             }
             .onClick(() => {
-              router.push({ uri: 'pages/Update', params: { book: item } })
+              router.push({ url: 'pages/Update', params: { book: item } })
             })
           }, item => JSON.stringify(item))
         }

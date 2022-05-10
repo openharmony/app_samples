@@ -14,7 +14,7 @@
  */
 
 //  使用示例：基础组件marquee组件
-import router from '@system.router';
+import router from '@ohos.router';
 import { GetColor } from './getColor'
 
 @Component

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import { AccountModel } from '../model/AccountModel'
 import { AccountData } from '../model/AccountData'
@@ -83,7 +83,7 @@ export struct AccountInfo {
           .type(ButtonType.Capsule)
           .onClick(() => {
             router.replace({
-              uri: 'pages/Modify',
+              url: 'pages/Modify',
               params: {
                 username: this.username,
                 bundleName: this.bundleName
@@ -106,7 +106,7 @@ export struct AccountInfo {
                   value: $r('app.string.confirm'),
                   action: () => {
                     router.replace({
-                      uri: 'pages/Index'
+                      url: 'pages/Index'
                     })
                   }
                 },
@@ -138,7 +138,7 @@ export struct AccountInfo {
                   action: () => {
                     this.storage.deleteStorageValue(this.username, this.bundleName)
                     router.replace({
-                      uri: 'pages/Login',
+                      url: 'pages/Login',
                       params: {
                         bundleName: this.bundleName
                       }

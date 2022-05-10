@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import { Category, FoodData } from '../model/FoodData'
 import { initializeOnStartup } from '../model/FoodDataModels'
 
@@ -102,7 +102,7 @@ struct FoodGridItem {
     .height(184)
     .width('100%')
     .onClick(() => {
-      router.push({ uri: 'pages/FoodDetail', params: { foodId: this.foodItem } })
+      router.push({ url: 'pages/FoodDetail', params: { foodId: this.foodItem } })
     })
   }
 }

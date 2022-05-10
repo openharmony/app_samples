@@ -14,7 +14,7 @@
  */
 
 import prompt from '@ohos.prompt'
-import router from '@system.router'
+import router from '@ohos.router'
 import HiLog from '../model/HiLogUtil'
 import account_distributedAccount from '@ohos.account.distributedAccount'
 
@@ -23,8 +23,8 @@ const TAG: string = '[Account.UserInterface]'
 @Entry
 @Component
 struct UserInterface {
-  @State userName: string = <string> router.getParams().userName
-  @State password: string = <string> router.getParams().password
+  @State userName: string = <string> router.getParams()["userName"]
+  @State password: string = <string> router.getParams()["password"]
   @State btnText: Resource[] = [$r('app.string.exit_login'), $r('app.string.written_off')]
 
   async onBtnClick(item: Resource) {

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 import app from '@system.app';
 
 export default {
@@ -71,7 +71,7 @@ export default {
     },
     openDetail() {
         router.push({
-            uri: 'pages/second/second',
+            url: 'pages/second/second',
             params: {
                 selectedCityIndex: this.swiperPage
             }

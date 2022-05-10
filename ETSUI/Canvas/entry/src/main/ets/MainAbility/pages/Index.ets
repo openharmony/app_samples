@@ -13,17 +13,17 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 let basicList = [
-  { title: 'RenderingContext', uri: 'pages/RenderingContext' },
-  { title: 'RenderingContext1', uri: 'pages/RenderingContext1' },
-  { title: 'RenderingContext2', uri: 'pages/RenderingContext2' },
-  { title: 'TransformExample', uri: 'pages/TransformExample' },
-  { title: 'ShadowOffset', uri: 'pages/ShadowOffsetExample' },
-  { title: 'path2D', uri: 'pages/PathExample' },
-  { title: 'ImageBitmap', uri: 'pages/BitmapExample' },
-  { title: 'CanvasGradient', uri: 'pages/GradientExample' }
+  { title: 'RenderingContext', url: 'pages/RenderingContext' },
+  { title: 'RenderingContext1', url: 'pages/RenderingContext1' },
+  { title: 'RenderingContext2', url: 'pages/RenderingContext2' },
+  { title: 'TransformExample', url: 'pages/TransformExample' },
+  { title: 'ShadowOffset', url: 'pages/ShadowOffsetExample' },
+  { title: 'path2D', url: 'pages/PathExample' },
+  { title: 'ImageBitmap', url: 'pages/BitmapExample' },
+  { title: 'CanvasGradient', url: 'pages/GradientExample' }
 ]
 
 @Entry
@@ -44,7 +44,7 @@ struct Index {
           .height(50)
           .onClick(() => {
             router.push({
-              uri: item.uri
+              url: item.url
             })
           })
         }, item => item.title)
