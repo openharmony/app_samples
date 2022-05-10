@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -95,7 +95,7 @@ struct IndexExample {
         Button('OtherContext')
           .width(130).height(45)
           .onClick(() => {
-            router.push({ uri: 'pages/context' })
+            router.push({ url: 'pages/context' })
           })
         Button('back')
           .width(130).height(45).backgroundColor(Color.Orange)

@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import { RegisterInfo } from '../common/RegisterInfo'
 import { NavigationBar } from '../common/NavigationBar'
 
 @Entry
 @Component
 struct Register {
-  private bundleName: string = <string> router.getParams().bundleName
+  private bundleName: string = <string> router.getParams()["bundleName"]
 
   build() {
     Scroll() {

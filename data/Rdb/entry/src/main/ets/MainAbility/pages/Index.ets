@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import dataRdb from '@ohos.data.rdb'
-import router from '@system.router'
+import router from '@ohos.router'
 import { AddDialog } from '../common/AddDialog'
 import { StudentView } from '../common/StudentView'
 import { Student } from '../model/Student'
@@ -125,7 +125,7 @@ struct Index {
           .objectFit(ImageFit.Contain)
           .onClick(() => {
             router.push({
-              uri: 'pages/Search'
+              url: 'pages/Search'
             })
           })
       }

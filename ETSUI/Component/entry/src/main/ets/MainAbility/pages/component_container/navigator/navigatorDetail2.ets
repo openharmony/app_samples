@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
-var params = router.getParams().message
+import router from '@ohos.router';
+var params = router.getParams()["message"]
 @Entry
 @Component
 struct NavigatorDetail2 {

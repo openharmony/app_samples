@@ -13,25 +13,25 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 
 const componentBasisItems = [
-  { title: 'Button', uri: 'pages/component_basis/button/buttonPage' },
-  { title: 'Text', uri: 'pages/component_basis/text/textPage' },
-  { title: 'Span', uri: 'pages/component_basis/span/spanPage' },
-  { title: 'Image', uri: 'pages/component_basis/image/imagePage' },
-  { title: 'TextArea', uri: 'pages/component_basis/textArea/textAreaPage' },
-  { title: "Divider", uri: 'pages/component_basis/divider/dividerPage' },
-  { title: "QRCode", uri: 'pages/component_basis/qrCode/QRCodePage' },
-  { title: "Blank", uri: 'pages/component_basis/blank/blankPage' },
-  { title: "Marquee", uri: 'pages/component_basis/marquee/marqueePage' },
-  { title: "toggle", uri: 'pages/component_basis/toggle/togglePage' },
-  { title: "Slider", uri: 'pages/component_basis/slider/sliderPage' },
-  { title: "Menu", uri: 'pages/component_basis/menu/menuPage' },
-  { title: "Gauge", uri: 'pages/component_basis/gauge/gaugePage' },
-  { title: "DataPanel", uri: 'pages/component_basis/dataPanel/dataPanelPage' },
-  { title: "Progress", uri: 'pages/component_basis/progress/progressPage' },,
-  { title: "TextInput", uri: 'pages/component_basis/textInput/textInputPage' },
+  { title: 'Button', url: 'pages/component_basis/button/buttonPage' },
+  { title: 'Text', url: 'pages/component_basis/text/textPage' },
+  { title: 'Span', url: 'pages/component_basis/span/spanPage' },
+  { title: 'Image', url: 'pages/component_basis/image/imagePage' },
+  { title: 'TextArea', url: 'pages/component_basis/textArea/textAreaPage' },
+  { title: "Divider", url: 'pages/component_basis/divider/dividerPage' },
+  { title: "QRCode", url: 'pages/component_basis/qrCode/QRCodePage' },
+  { title: "Blank", url: 'pages/component_basis/blank/blankPage' },
+  { title: "Marquee", url: 'pages/component_basis/marquee/marqueePage' },
+  { title: "toggle", url: 'pages/component_basis/toggle/togglePage' },
+  { title: "Slider", url: 'pages/component_basis/slider/sliderPage' },
+  { title: "Menu", url: 'pages/component_basis/menu/menuPage' },
+  { title: "Gauge", url: 'pages/component_basis/gauge/gaugePage' },
+  { title: "DataPanel", url: 'pages/component_basis/dataPanel/dataPanelPage' },
+  { title: "Progress", url: 'pages/component_basis/progress/progressPage' },,
+  { title: "TextInput", url: 'pages/component_basis/textInput/textInputPage' },
 ]
 
 @Entry
@@ -64,7 +64,7 @@ struct component_basis {
             .borderRadius(12)
             .onClick(() => {
               router.push({
-                uri: item.uri
+                url: item.url
               })
             })
           }

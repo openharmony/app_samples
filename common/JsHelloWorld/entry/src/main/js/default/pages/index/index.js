@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 
 export default {
     data: {
@@ -24,7 +24,7 @@ export default {
     },
     onclick: function () {
         router.replace({
-            uri: "pages/second/second"
+            url: "pages/second/second"
         })
     }
 }

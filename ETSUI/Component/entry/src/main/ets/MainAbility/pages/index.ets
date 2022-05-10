@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router'
+import router from '@ohos.router'
 
 const HomeContents = [
-  { title: '基础组件', uri: 'pages/component_basis/index' },
-  { title: '容器组件', uri: 'pages/component_container/index' }
+  { title: '基础组件', url: 'pages/component_basis/index' },
+  { title: '容器组件', url: 'pages/component_container/index' }
 ]
 
 
@@ -46,7 +46,7 @@ struct HomePage {
             .borderRadius(12)
             .onClick(() => {
               router.push({
-                uri: item.uri
+                url: item.url
               })
             })
           }

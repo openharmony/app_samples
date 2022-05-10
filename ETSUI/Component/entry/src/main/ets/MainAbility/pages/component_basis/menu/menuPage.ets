@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 @Entry
 @Component
 struct menu_testcase {
@@ -47,7 +47,7 @@ struct menu_testcase {
         .width(150)
         .height(50)
         .onClick(() => {
-          router.push({ uri: 'pages/component_basis/menu/menuIndex' })
+          router.push({ url: 'pages/component_basis/menu/menuIndex' })
         })
 
     }.width(100)

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
@@ -94,7 +94,7 @@ export struct LoginInfo {
         .type(ButtonType.Capsule)
         .onClick(() => {
           router.replace({
-            uri: 'pages/Register',
+            url: 'pages/Register',
             params: {
               bundleName: this.bundleName
             }
@@ -142,7 +142,7 @@ export struct LoginInfo {
               })
           } else if (result === this.password && effect === 'true') {
             router.replace({
-              uri: 'pages/Account',
+              url: 'pages/Account',
               params: {
                 username: this.name,
                 bundleName: this.bundleName

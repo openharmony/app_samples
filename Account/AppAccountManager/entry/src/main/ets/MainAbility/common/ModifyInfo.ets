@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
@@ -224,7 +224,7 @@ export struct ModifyInfo {
                   value: $r('app.string.close'),
                   action: () => {
                     router.replace({
-                      uri: 'pages/Account',
+                      url: 'pages/Account',
                       params: {
                         bundleName: this.bundleName,
                         username: this.username
@@ -245,7 +245,7 @@ export struct ModifyInfo {
                   value: $r('app.string.close'),
                   action: () => {
                     router.replace({
-                      uri: 'pages/Account',
+                      url: 'pages/Account',
                       params: {
                         bundleName: this.bundleName,
                         username: this.username

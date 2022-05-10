@@ -13,22 +13,22 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 
 const componentContainerItems = [
 
-  { title: 'Panel', uri: 'pages/component_container/panel/panelPage' },
-  { title: 'Navigator', uri: 'pages/component_container/navigator/navigatorPage' },
-  { title: "Swiper", uri: 'pages/component_container/swiper/swiperPage' },
-  { title: "Stack", uri: 'pages/component_container/stack/stackPage' },
-  { title: "Column", uri: 'pages/component_container/Column/ColumnPage' },
-  { title: "Row", uri: 'pages/component_container/row/rowPage' },
-  { title: "flex", uri: 'pages/component_container/flex/flexPage' },
-  { title: "Scroll", uri: 'pages/component_container/scroll/scrollPage' },
-  { title: "list", uri: 'pages/component_container/list/listPage' },
-  { title: "Badge", uri: 'pages/component_container/badge/badgePage' },
-  { title: "tab", uri: 'pages/component_container/tab/tabsPage' },
-  { title: "Counter", uri: 'pages/component_container/Counter/counterPage' },
+  { title: 'Panel', url: 'pages/component_container/panel/panelPage' },
+  { title: 'Navigator', url: 'pages/component_container/navigator/navigatorPage' },
+  { title: "Swiper", url: 'pages/component_container/swiper/swiperPage' },
+  { title: "Stack", url: 'pages/component_container/stack/stackPage' },
+  { title: "Column", url: 'pages/component_container/Column/ColumnPage' },
+  { title: "Row", url: 'pages/component_container/row/rowPage' },
+  { title: "flex", url: 'pages/component_container/flex/flexPage' },
+  { title: "Scroll", url: 'pages/component_container/scroll/scrollPage' },
+  { title: "list", url: 'pages/component_container/list/listPage' },
+  { title: "Badge", url: 'pages/component_container/badge/badgePage' },
+  { title: "tab", url: 'pages/component_container/tab/tabsPage' },
+  { title: "Counter", url: 'pages/component_container/Counter/counterPage' },
 ]
 
 @Entry
@@ -61,7 +61,7 @@ struct component_container {
             .borderRadius(12)
             .onClick(() => {
               router.push({
-                uri: item.uri
+                url: item.url
               })
             })
           }

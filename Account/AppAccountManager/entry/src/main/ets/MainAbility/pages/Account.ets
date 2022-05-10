@@ -13,15 +13,15 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import { AccountInfo } from '../common/AccountInfo'
 import { NavigationBar } from '../common/NavigationBar'
 
 @Entry
 @Component
 struct Account {
-  private username: string = <string> router.getParams().username
-  private bundleName: string = <string> router.getParams().bundleName
+  private username: string = <string> router.getParams()["username"]
+  private bundleName: string = <string> router.getParams()["bundleName"]
 
   build() {
     Column() {

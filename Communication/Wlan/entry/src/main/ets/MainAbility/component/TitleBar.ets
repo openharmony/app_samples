@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Component
 export struct TitleBar {
@@ -30,7 +30,7 @@ export struct TitleBar {
       .height('90%')
       .backgroundColor('#0D9FFB')
       .onClick(() => {
-        router.push({ uri: 'pages/About' })
+        router.push({ url: 'pages/About' })
       })
     }
     .width('100%')

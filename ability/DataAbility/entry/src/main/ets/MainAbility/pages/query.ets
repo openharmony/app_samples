@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 import dataAbility from '@ohos.data.dataAbility'
 import { BASE_URI, COLUMNS, DA_HELPER } from '../model/DaHelperConst'
 import { BookModel, getListFromResultSet } from '../model/BookDataModel'
@@ -84,7 +84,7 @@ struct Query {
             BookView({ book: item, deleteCallback: null })
           }
           .onClick(() => {
-            router.push({ uri: 'pages/update', params: { book: item } })
+            router.push({ url: 'pages/update', params: { book: item } })
           })
         }, item => JSON.stringify(item))
       }

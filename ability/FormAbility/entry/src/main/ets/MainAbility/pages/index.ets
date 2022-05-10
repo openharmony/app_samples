@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import router from '@system.router';
+import router from '@ohos.router';
 import Logger from '../../model/Logger';
 
 async function routePage() {
   let options = {
-    uri: 'pages/second'
+    url: 'pages/second'
   }
   try {
     await router.push(options)

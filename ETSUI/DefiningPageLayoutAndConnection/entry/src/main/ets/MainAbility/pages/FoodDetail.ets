@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@system.router'
+import router from '@ohos.router'
 import { FoodData } from '../model/FoodData'
 
 @Component
@@ -94,7 +94,7 @@ struct FoodDetail {
   private foodItem: FoodData = undefined
 
   aboutToAppear() {
-    this.foodItem = <FoodData> router.getParams().foodId
+    this.foodItem = <FoodData> router.getParams()["foodId"]
   }
 
   build() {
