@@ -15,15 +15,18 @@
 .container {
     flex-direction: column;
     align-content: center;
+    height: 100%;
 }
 
 .searchbar {
     width: 100%;
     align-items: center;
     justify-content: center;
+    height: 10%;
 }
 
 .mainContainer {
     justify-content: center;
     width: 100%;
+    height: 90%;
 }

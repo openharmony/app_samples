@@ -15,7 +15,9 @@
 .container {
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
+
 
 .tab-bar {
     justify-content: space-between;

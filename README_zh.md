@@ -53,7 +53,7 @@
   - [`Sensor:`传感器（eTS）（API8）](device/Sensor)
   - [`Vibrator:`振动（eTS）（API8）](device/Vibrator)
 - Graphics
-  - [`JsWebGL:`WebGL(eTS)（API8）](Graphics/JsWebGL)
+  - [`JsWebGL:`WebGL(JS)（API8）](Graphics/JsWebGL)
 - media
   - [`JsAudioPlayer:`音频播放和管理（JS）（API8）](media/JsAudioPlayer)
   - [`JsVideo:`视频播放（JS）（API8）](media/JsVideo)
