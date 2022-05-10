@@ -34,7 +34,7 @@ let connectedAbility;
 class MainAbilityStub extends rpc.RemoteObject {
     callback;
 
-    constructor(des) {
+    constructor(des : any) {
         if (typeof des === 'string') {
             super(des);
         } else {
@@ -44,6 +44,18 @@ class MainAbilityStub extends rpc.RemoteObject {
 
     registerCallback(callback : any) : void {
         this.callback = callback;
+    }
+
+    addDeathRecipient(recipient : any, flags : number) : boolean {
+        return true;
+    }
+
+    removeDeathRecipient(recipient : any, flags : number) : boolean {
+        return true;
+    }
+
+    isObjectDead() : boolean {
+        return true;
     }
 
     onRemoteRequest(code : number, data : any, reply : any, options : any) : boolean {
@@ -81,9 +93,6 @@ async function requestPermission() {
   let context = featureAbility.getContext();
   context.requestPermissionsFromUser(requestPermissions, REQUEST_PERMISSION_CODE, (data)=>{
     console.info("data:" + JSON.stringify(data));
-    console.info("data requestCode:" + data.requestCode);
-    console.info("data permissions:" + data.permissions);
-    console.info("data authResults:" + data.authResults);
   });
 }
 
@@ -214,7 +223,7 @@ struct Index {
   @State x: number = 0;
   @State y: number = 0;
   @State touchType: number = 0;
-  private settings: RenderingContextSettings = new RenderingContextSettings(true, true);
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
   private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
 
   private aboutToAppear() : void {
@@ -230,7 +239,7 @@ struct Index {
     disconnectRemoteAbility();
   }
 
-  async public drawToRemote(x : number, y : number, touchType: number) : Promise<void> {
+  public async drawToRemote(x : number, y : number, touchType: number) : Promise<void> {
     if (mRemote == null) {
       console.info('mRemote is null, no need to remote');
       return;
@@ -244,7 +253,7 @@ struct Index {
     await mRemote.sendRequest(CODE_CONNECT_REMOTE, data, reply, option);
   }
 
-  async public drawFromRemote(x : number, y : number, touchType: number) : Promise<void> {
+  public async drawFromRemote(x : number, y : number, touchType: number) : Promise<void> {
     this.x = x;
     this.y = y;
     this.touchType = touchType;
