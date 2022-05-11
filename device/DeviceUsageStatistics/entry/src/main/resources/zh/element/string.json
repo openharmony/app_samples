@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "设备使用信息统计"
+    },
+    {
+      "name": "free_apps",
+      "value": "不常用应用"
+    },
+    {
+      "name": "application_duration",
+      "value": "应用使用时长"
+    },
+    {
+      "name": "application_last_used",
+      "value": "应用上一次使用时间:"
+    }
+  ]
+}
