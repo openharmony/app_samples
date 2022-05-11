@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DeviceUsageStatistics"
+    },
+    {
+      "name": "free_apps",
+      "value": "free apps"
+    },
+    {
+      "name": "application_duration",
+      "value": "application duration"
+    },
+    {
+      "name": "application_last_used",
+      "value": "application last used"
+    }
+  ]
+}
