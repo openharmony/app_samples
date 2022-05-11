@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%;">
+<style>
+    .phone {
+        justify-content:space-around;
+        display:flex;
+        margin-left:60px;
+        margin-right:60px;
+        margin-top:260px;
+        flex-wrap: wrap
+    }
+    .tablet {
+        justify-content:space-around;
+        display:flex;
+        margin-left:260px;
+        margin-right:260px;
+        margin-top:260px;
+        flex-wrap: wrap
+    }
+</style>
+<script>
+    var isPhone = false;
+    function initPhone() {
+        console.info('function init start')
+		this.isPhone = true
+		func1()
+		console.info('function init end')
+	}
+	function initPad() {
+	    this.isPhone = false
+		func1()
+	}
+    function func1() {
+       let array = [{src: "./bing.png", name:"必应", addr: "bing.com"},
+                 {src: "./58.png", name: "58同城", addr: "www.58.com"},
+                 {src: "./dianping.png", name: "大众点评", addr:"www.dianping.com"},
+                 {src: "./hao.png", name: "hao123", addr:"www.hao123.com"},
+                 {src: "./jingdong.png", name: "京东", addr:"www.jd.com"},
+                 {src: "./pinduoduo.png", name: "拼多多", addr:"www.pinduoduo.com"},
+				 {src: "./sohu.png", name:"搜狐", addr: "www.sohu.com"},
+                 {src: "./taobao.png", name:"淘宝", addr: "www.tmall.com"},
+                 {src: "./tengxun.png", name:"腾讯新闻", addr:"news.qq.com"},
+                 {src: "./yuedu.png", name:"阅读", addr:"m.zhangyue.com"},
+                 {src: "./zhihu.png", name:"知乎", addr:"www.zhihu.com"},
+                 {src: "./meituan.png", name:"美团", addr:"meituan.com"},]
+      var div = document.getElementById("test")
+      div.className = isPhone ? "phone" : "tablet"
+      for(let i = 0; i < array.length; i++) {
+        let box = document.createElement("div")
+		box.style.display = 'flex'
+		box.style.flexDirection = 'column'
+		box.style.justifyContent = 'center'
+		box.style.alignItems = 'center'
+		box.style.height = '240px'
+		box.style.minWidth = isPhone ? '240px' : '320px'
+		box.style.borderRadius = '30px'
+		box.addEventListener('touchstart', function(e){
+			box.style.backgroundColor = '#e4e4e4'
+		})
+		box.addEventListener('touchend', function(e){
+			box.style.backgroundColor = '#00000000'
+		})
+        let text = document.createElement('p')
+		text.innerHTML = array[i].name
+        text.style.fontSize = '26px'
+        text.style.fontWeight = 400
+        var image = new Image()
+        image.src = array[i].src
+        image.style.width = '96px'
+		image.style.height = '96px'
+        image.onclick = function() {
+            console.info('image.onclick')
+            etsObj.test(array[i].addr)
+        }
+        box.appendChild(image)
+        box.appendChild(text)
+        div.appendChild(box)
+      }
+
+    }
+ </script>
+<body style="height:98%;margin：0px" onload="func1()">
+<div style="display:flex;flex-direction:column;background-color:#fdfdfd;width:100%;height:100%">
+    <div id = "test"/>
+</div>
+</body >
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%;">
+<style>
+    .tablet {
+        justify-content:space-around;
+        display:flex;
+        margin-left:130px;
+        margin-right:130px;
+        margin-top:90px;
+        flex-wrap: wrap
+    }
+    .searchArea {
+        min-width: 300px;
+        font-size: 1.9rem;
+        position: relative;
+        height: 53px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+        width: 64%;
+        margin-top: 8%;
+        z-index: 4;
+    }
+    .searchFirm {
+        width: 33px;
+        height: 33px;
+        float: left;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        position: absolute;
+        left: 10px;
+        z-index: 2;
+    }
+    .searchFirmIcon {
+        width: 20px;
+        height: 20px;
+        margin: 16px auto ;
+        cursor: pointer;
+        background-position: 24px -24px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
+    .sfBaidu {
+        background-position: 0 -40px;
+    }
+
+    #searchCon {
+        height: 100%;
+        background: transparent;
+        float: left;
+        border: none;
+        margin: 0 33px 0 0;
+        width: calc(100% - 80px);
+        font-size: 18px;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        outline: none;
+    }
+</style>
+<script>
+	function initPad() {
+	    this.isPhone = false
+		func1()
+	}
+	function adapterDevice() {
+	    console.info('function adapterDevice')
+	    var v = document.querySelector('meta[name="viewport"]');
+        if (v) {
+            v.setAttribute('content', 'width=720, user-scalable=yes');
+        } else {
+            var m = document.createElement('meta');
+            m.content='width=720, user-scalable=yes'
+            m.name='viewport';
+            document.getElementsByTagName('head')[0].appendChild(m);
+        }
+	}
+    function func1() {
+        let array = [{src: "./bing.png", name:"必应", addr: "bing.com"},
+             {src: "./12306.png", name: "12306", addr: "www.12306.cn"},
+             {src: "./dianping.png", name: "大众点评", addr:"www.dianping.com"},
+             {src: "./sina.png", name: "新浪新闻", addr:"news.sina.com.cn/"},
+             {src: "./jingdong.png", name: "京东", addr:"www.jd.com"},
+             {src: "./pinduoduo.png", name: "拼多多", addr:"www.pinduoduo.com"},
+             {src: "./weibo.png", name:"微博", addr: "weibo.com/"},
+             {src: "./taobao.png", name:"淘宝", addr: "www.tmall.com"},
+             {src: "./weipinhui.png", name:"唯品会", addr:"www.vip.com"},
+             {src: "./weixin.png", name:"微信阅读", addr:"weread.qq.com"},
+             {src: "./zhihu.png", name:"知乎", addr:"www.zhihu.com"},
+             {src: "./xiecheng.png", name:"携程", addr:"www.ctrip.com"},]
+      var div = document.getElementById("test")
+      div.className = isPhone ? "phone" : "tablet"
+      for(let i = 0; i < array.length; i++) {
+        let box = document.createElement("div")
+		box.style.display = 'flex'
+		box.style.flexDirection = 'column'
+		box.style.justifyContent = 'center'
+		box.style.alignItems = 'center'
+		box.style.height = '120px'
+		box.style.minWidth = '160px'
+		box.style.borderRadius = '15px'
+		box.addEventListener('touchstart', function(e){
+			box.style.backgroundColor = '#e4e4e4'
+		})
+		box.addEventListener('touchend', function(e){
+			box.style.backgroundColor = '#00000000'
+		})
+        let text = document.createElement('p')
+		text.innerHTML = array[i].name
+        text.style.fontSize = '13px'
+        text.style.fontWeight = 400
+        var image = new Image()
+        image.src = array[i].src
+        image.style.width = '48px'
+		image.style.height = '48px'
+        image.onclick = function() {
+            console.info('image.onclick')
+            etsObj.test(array[i].addr)
+        }
+        box.appendChild(image)
+        box.appendChild(text)
+        div.appendChild(box)
+      }
+    }
+    function uploadWord() {
+        let inputDom = document.getElementById("searchCon")
+        console.info(`pad inputDom.value=${inputDom.value}`)
+        etsObj.searchWord(inputDom.value)
+    }
+ </script>
+<body style="margin：0px; background-image: url(./backgroundImg.jpg);
+    background-size:cover;height:98% padding-bottom:60px" onload="initPad()">
+<div style="display:flex;flex-direction:column;width:100%;padding-bottom:60px">
+    <div class="searchArea" style="border-radius: 20px; display: block; background-color: rgba(255, 255, 255, 0.7);flex-shrink: 0;">
+        <div class="searchFirm" style="border-bottom-left-radius: 8px; border-top-left-radius: 8px;">
+            <div class="searchFirmIcon sfBaidu" style="background-image: url(./all.png);">
+            </div>
+        </div>
+        <form autocomplete="off">
+            <input id="searchCon" type="text" style="border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px; text-align: left;">
+        </form>
+        <div style="display:flex;height: 100%; width: 33px;position: absolute; right:9px; z-index: 3;
+            align-items: center;justify-content: center;" onclick="uploadWord()">
+            <img src="./search.svg" style="width: 20px; height: 20px;">
+        </div>
+    </div>
+    <div id = "test"></div>
+</div>
+</body >
+</html>

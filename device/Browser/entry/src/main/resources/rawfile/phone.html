@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%;">
+<style>
+    .phone {
+        justify-content:space-around;
+        display:flex;
+        margin-left:30px;
+        margin-right:30px;
+        margin-top:80px;
+        flex-wrap: wrap
+    }
+    .searchArea {
+        min-width: 150px;
+        font-size: 1.9rem;
+        position: relative;
+        height: 48px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+        width: 80%;
+        margin-top: 26%;
+        z-index: 4;
+    }
+    .searchFirm {
+        width: 33px;
+        height: 33px;
+        float: left;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        position: absolute;
+        left: 15px;
+        z-index: 2;
+    }
+    .searchFirmIcon {
+        width: 20px;
+        height: 20px;
+        margin: 13px auto ;
+        cursor: pointer;
+        background-position: 24px -24px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
+    .sfBaidu {
+        background-position: 0 -40px;
+    }
+
+    #searchCon {
+        height: 100%;
+        background: transparent;
+        float: left;
+        border: none;
+        margin: 0 33px 0 0;
+        width: calc(100% - 120px);
+        font-size: 26px;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        outline: none;
+    }
+</style>
+<script>
+    var isPhone = false;
+    function initPhone() {
+        console.info('function init')
+		this.isPhone = true
+		func1()
+		console.info('function init end')
+	}
+	function initPad() {
+	    this.isPhone = false
+		func1()
+	}
+	function uploadWord() {
+        let inputDom = document.getElementById("searchCon")
+        console.info(`inputDom.value= ${inputDom.value}`)
+        etsObj.searchWord(inputDom.value)
+    }
+
+    function func1() {
+       let array = [{src: "./bing.png", name:"必应", addr: "bing.com"},
+                 {src: "./bilibili.png", name: "哔哩哔哩", addr: "www.bilibili.com"},
+                 {src: "./dianping.png", name: "大众点评", addr:"www.dianping.com"},
+                 {src: "./dongchedi.png", name:"懂车帝", addr:"www.dongchedi.com"},
+                 {src: "./jingdong.png", name: "京东", addr:"www.jd.com"},
+                 {src: "./pinduoduo.png", name: "拼多多", addr:"www.pinduoduo.com"},
+				 {src: "./sohu.png", name:"搜狐", addr: "www.sohu.com"},
+                 {src: "./weibo.png", name:"微博", addr: "weibo.com/"},
+                 {src: "./weipinhui.png", name:"唯品会", addr:"www.vip.com"},
+                 {src: "./yuedu.png", name:"阅读", addr:"m.zhangyue.com"},
+                 {src: "./zhihu.png", name:"知乎", addr:"www.zhihu.com"},
+                 {src: "./meituan.png", name:"美团", addr:"meituan.com"},]
+      var div = document.getElementById("test")
+      div.className = isPhone ? "phone" : "tablet"
+      for(let i = 0; i < array.length; i++) {
+        let box = document.createElement("div")
+		box.style.display = 'flex'
+		box.style.flexDirection = 'column'
+		box.style.justifyContent = 'center'
+		box.style.alignItems = 'center'
+		box.style.height = '120px'
+		box.style.minWidth = '120px'
+		box.style.borderRadius = '15px'
+		box.addEventListener('touchstart', function(e){
+			box.style.backgroundColor = '#e4e4e4'
+		})
+		box.addEventListener('touchend', function(e){
+			box.style.backgroundColor = '#00000000'
+		})
+        let text = document.createElement('p')
+		text.innerHTML = array[i].name
+        text.style.fontSize = '12px'
+        text.style.fontWeight = 400
+        var image = new Image()
+        image.src = array[i].src
+        image.style.width = '48px'
+		image.style.height = '48px'
+        image.onclick = function() {
+            console.info('image.onclick')
+            etsObj.test(array[i].addr)
+        }
+        box.appendChild(image)
+        box.appendChild(text)
+        div.appendChild(box)
+      }
+
+    }
+
+    function searchWord(e) {
+        console.info(`searchWord keyCode=${e.keyCode}`)
+        if (e.keyCode == 13) {
+            let inputDom = document.getElementById("searchCon")
+            console.info(`phone inputDom.value=${inputDom.value}`)
+            etsObj.searchWord(inputDom.value)
+            return true
+        }
+    }
+ </script>
+<body style="height:98%;margin：0px" onload="initPhone()">
+<div style="display:flex;flex-direction:column;background-color:#fdfdfd;width:100%;height:100%">
+    <div class="searchArea" style="border-radius: 60px; display: block; background-color: rgba(255, 255, 255, 0.7);flex-shrink: 0;">
+        <div class="searchFirm" style="border-bottom-left-radius: 8px; border-top-left-radius: 8px;">
+            <div class="searchFirmIcon sfBaidu" style="background-image: url(./all.png);">
+            </div>
+        </div>
+        <form autocomplete="off">
+            <input id="searchCon" onkeypress="return event.keyCode != 13;" type="text" autocomplete="off" onkeyup="searchWord(event)"
+                   style="border-bottom-right-radius: 8px;border-top-right-radius: 8px; text-align: left;">
+        </form>
+        <div style="display:flex;height: 100%; width: 33px;position: absolute; right:18px; z-index: 3;
+            align-items: center;justify-content: center;" onclick="uploadWord()">
+            <img src="./search.svg" style="width: 20px; height: 20px;">
+        </div>
+    </div>
+    <div id = "test"/>
+</div>
+</body >
+</html>
