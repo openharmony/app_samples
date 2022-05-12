@@ -1,0 +1,37 @@
+{
+  "data": {
+    "array": [
+      {
+        "id": 1,
+        "name": "上证指数",
+        "exponent": "3599.54",
+        "coded": "000001",
+        "per": "0.21%"
+      },
+      {
+        "id": 2,
+        "name": "上证指数",
+        "exponent": "3599.54",
+        "coded": "000001",
+        "per": "0.21%"
+      },
+      {
+        "id": 3,
+        "name": "上证指数",
+        "exponent": "3599.54",
+        "coded": "000001",
+        "per": "0.21%"
+      }
+    ]
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.adaptiveservicewidget",
+      "abilityName": "ohos.samples.adaptiveservicewidget.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}

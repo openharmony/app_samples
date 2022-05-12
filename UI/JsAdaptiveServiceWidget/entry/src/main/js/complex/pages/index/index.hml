@@ -1,0 +1,55 @@
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<div class="container">
+    <div class="region-title" >
+        <image class="left-image" src="/common/ic_gift.svg"></image>
+        <text class="left-text">{{ title }}</text>
+        <text class="right-text">{{ time }}</text>
+    </div>
+    <div class="region-plates">
+        <div for="{{ arrayPlates }}" tid="id" class="{{ $item.exponent }}">
+            <text class="exponent-text">{{ $item.name }}</text>
+            <text class="{{ $item.exponentNum }}">{{ $item.num }}</text>
+            <div class="exponent-div">
+                <text class="{{ $item.exponentFloat }}">{{ $item.float }}</text>
+                <text class="{{ $item.exponentPer }}">{{ $item.per }}</text>
+            </div>
+        </div>
+    </div>
+    <div class="region-fund">
+        <div class="row-div">
+            <text class="fund-text">{{ fundText }}</text>
+            <text class="time-text-front">{{ timeText }}</text>
+            <text class="time-text-after">{{ timeText }}</text>
+        </div>
+        <div class="region-fund-item">
+            <div class="region-row-div" for="{{ array }}" tid="id" style="display-index: {{ $item.displayIndex }};">
+                <div class="column-div">
+                    <text class="exponent-text">{{ $item.name }}</text>
+                    <text class="coded-text">{{ $item.coded }}</text>
+                </div>
+                <text class="per-text">{{ $item.perFront }}</text>
+                <text class="{{ $item.perTextAfter }}">{{ $item.perAfter }}</text>
+            </div>
+        </div>
+    </div>
+    <div class="region-bottom">
+        <div class="region-bottom-item" for="{{ arrayImage }}" tid="id">
+            <image class="region-bottom-image" src="/common/ic_add.svg"></image>
+            <text class="region-bottom-text">{{ $item.text }}</text>
+        </div>
+    </div>
+</div>
