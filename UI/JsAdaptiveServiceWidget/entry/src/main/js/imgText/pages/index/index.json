@@ -1,0 +1,59 @@
+{
+  "data": {
+    "title": "完整推荐",
+    "list": [
+      {
+        "id": 1,
+        "title": "今日美食推荐",
+        "detail": "一碗香喷喷的油泼面，回到儿时的青涩回忆",
+        "poster": "/common/poster1.png",
+        "displayIndex": 3
+      },
+      {
+        "id": 2,
+        "title": "今日电影推荐",
+        "detail": "好看的电影，每一步都令人深刻",
+        "poster": "/common/poster2.png",
+        "displayIndex": 3
+      },
+      {
+        "id": 3,
+        "title": "今日音乐推荐",
+        "detail": "一缕美妙的歌声，令人念念不忘",
+        "poster": "/common/poster2.png",
+        "displayIndex": 2
+      },
+      {
+        "id": 4,
+        "title": "今日美食推荐",
+        "detail": "一碗香喷喷的油泼面，回到儿时的青涩回忆",
+        "poster": "/common/poster2.png",
+        "displayIndex": 1
+      },
+      {
+        "id": 5,
+        "title": "今日美食推荐",
+        "detail": "一碗香喷喷的油泼面，回到儿时的青涩回忆",
+        "poster": "/common/poster2.png",
+        "displayIndex": 1
+      },
+      {
+        "id": 6,
+        "title": "今日美食推荐",
+        "detail": "一碗香喷喷的油泼面，回到儿时的青涩回忆",
+        "poster": "/common/poster2.png",
+        "displayIndex": 1
+      }
+    ]
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.adaptiveservicewidget",
+      "abilityName": "ohos.samples.adaptiveservicewidget.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}

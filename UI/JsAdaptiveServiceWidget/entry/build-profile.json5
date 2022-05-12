@@ -1,0 +1,11 @@
+{
+  "apiType": 'faMode',
+  "showInServiceCenter": true,
+  "buildOption": {
+  },
+  "targets": [
+    {
+      "name": "default",
+    }
+  ]
+}
