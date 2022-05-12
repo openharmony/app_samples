@@ -1,0 +1,23 @@
+{
+  "src": [
+    "pages/index",
+    "pages/atomicLayoutCapability/atomicLayoutCapabilityIndex",
+    "pages/atomicLayoutCapability/equipartitionCapability/equipartitionCapability",
+    "pages/atomicLayoutCapability/extensionCapability/extensionCapability1",
+    "pages/atomicLayoutCapability/extensionCapability/extensionCapability2",
+    "pages/atomicLayoutCapability/flexibleCapability/flexibleCapability1",
+    "pages/atomicLayoutCapability/flexibleCapability/flexibleCapability2",
+    "pages/atomicLayoutCapability/hiddenCapability/hiddenCapability",
+    "pages/atomicLayoutCapability/proportionCapability/proportionCapability",
+    "pages/atomicLayoutCapability/scaleCapability/scaleCapability",
+    "pages/atomicLayoutCapability/wrapCapability/wrapCapability",
+    "pages/resourceQualifier/resourceQualifier",
+    "pages/responsiveLayout/gridContainer/gridContainer",
+    "pages/responsiveLayout/responsiveLayoutIndex",
+    "pages/responsiveLayout/typicalScene/indentation/indentation",
+    "pages/responsiveLayout/typicalScene/typicalSceneIndex",
+    "pages/responsiveLayout/mediaQuery/mediaQuery",
+    "pages/responsiveLayout/typicalScene/diversion/diversion",
+    "pages/responsiveLayout/typicalScene/repeat/repeat"
+  ]
+}

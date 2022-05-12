@@ -1,0 +1,17 @@
+{
+  "src": [
+    "pages/index",
+    "pages/atomicLayoutCapability/atomicLayoutCapabilityIndex",
+    "pages/atomicLayoutCapability/equipartitionCapability/equipartitionCapability",
+    "pages/atomicLayoutCapability/extensionCapability/extensionCapability",
+    "pages/atomicLayoutCapability/flexibleCapability/flexibleCapability",
+    "pages/atomicLayoutCapability/hiddenCapability/hiddenCapability",
+    "pages/atomicLayoutCapability/proportionCapability/proportionCapability",
+    "pages/atomicLayoutCapability/scaleCapability/scaleCapability",
+    "pages/atomicLayoutCapability/wrapCapability/wrapCapability",
+    "pages/resourceQualifier/resourceQualifier",
+    "pages/responsiveLayout/gridContainer/gridContainer",
+    "pages/responsiveLayout/mediaQuery/mediaQuery",
+    "pages/responsiveLayout/typicalScene/diversion/diversion"
+  ]
+}
