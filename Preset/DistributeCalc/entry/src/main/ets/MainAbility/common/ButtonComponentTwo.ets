@@ -16,7 +16,7 @@ import { obtainImgLevel, obtainImg, obtainImgL } from '../model/ImageList'
 
 @Component
 export struct ButtonComponentTwo {
-  private isLand: boolean
+  private isLand: boolean = false
   private onInputValue: (result) => void
 
   build() {
@@ -24,7 +24,7 @@ export struct ButtonComponentTwo {
       Grid() {
         ForEach(obtainImg(), (item, index) => {
           GridItem() {
-            Image(item.Img)
+            Image(item.img)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)
@@ -39,7 +39,7 @@ export struct ButtonComponentTwo {
         ForEach(obtainImgLevel(), (item) => {
           ForEach(item, (item) => {
             GridItem() {
-              Image(item.Img)
+              Image(item.img)
                 .margin({ top: 5 })
                 .onClick(() => {
                   this.onInputValue(item.value)
@@ -50,7 +50,7 @@ export struct ButtonComponentTwo {
 
         ForEach(obtainImgL(), (item, index) => {
           GridItem() {
-            Image(item.Img)
+            Image(item.img)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)

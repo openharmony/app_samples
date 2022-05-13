@@ -105,7 +105,7 @@ export class RemoteDeviceModel {
     this.callback()
     Logger.info(TAG, 'callback finished')
     this.deviceManager.on('deviceStateChange', (data) => {
-      if (data == null) {
+      if (data === null) {
         return
       }
       Logger.info(TAG, `deviceStateChange data= ${JSON.stringify(data)}`)
@@ -125,7 +125,7 @@ export class RemoteDeviceModel {
       }
     })
     this.deviceManager.on('deviceFound', (data) => {
-      if (data == null) {
+      if (data === null) {
         return
       }
       Logger.info(TAG, `deviceFound data=${JSON.stringify(data)}`)
@@ -152,6 +152,9 @@ export class RemoteDeviceModel {
     this.callback()
   }
 
+  /**
+   * 通过SUBSCRIBE_ID搜索分布式组网内的设备
+   */
   startDeviceDiscovery() {
     SUBSCRIBE_ID = Math.floor(65536 * Math.random())
     let info = {
