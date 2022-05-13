@@ -18,6 +18,7 @@ import { TitleBar } from '../common/TitleBar'
 import { FaultDialog } from '../common/FaultDialog'
 
 const TAG: string = 'Index'
+const DIVIDER: string= '\n---------------------------------------------------\n'
 
 @Entry
 @Component
@@ -28,15 +29,16 @@ struct Index {
   private faultDialogController: CustomDialogController = null
 
   async catchFaultLog(faultType) {
-    this.message = ''
     let value = await faultLogger.querySelfFaultLog(faultType)
     if (value) {
       let len = value.length;
       if(len === 0) {
         this.message = '未获取到异常日志'
+        return
       }
+      this.message = `faultLogger num:${len} `
       for (let i = 0; i < len; i++) {
-        this.message = `Log pid: ${value[i].pid}\nLog type:${value[i].type}\n Log reason: ${value[i].reason}\n` +
+        this.message += `${DIVIDER}Log pid: ${value[i].pid}\nLog type:${value[i].type}\n Log reason: ${value[i].reason}\n` +
         `Log module: ${value[i].module}\nLog text:\n ${value[i].fullLog} `
       }
     }
