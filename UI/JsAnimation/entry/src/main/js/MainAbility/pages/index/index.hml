@@ -62,18 +62,18 @@
             <image if="{{ imgflag[9] }}" class="img {{ img9 }}" style="box-shadow : 20 20 20;"
                    src="/common/gallery/010.png"></image>
             <text class="text1" show="{{ flag1 }}">
-                Harmony OS Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony
-                OSHarmony OS
-                Harmony OSHarmony OSHarmony
+                Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony
+                Openharmony
+                Openharmony Openharmony Openharmony
             </text>
             <text class="text2" show="{{ flag2 }}">
-                Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony
-                OSHarmony OS
-                Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony
-                OSHarmony OS
-                Harmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony OSHarmony
-                OSHarmony OS
-                Harmony OSHarmony OS
+                Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony
+                Openharmony
+                Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony
+                Openharmony
+                Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony Openharmony
+                Openharmony
+                Openharmony Openharmony
             </text>
         </stack>
     </div>
