@@ -15,8 +15,8 @@
 import hilog from '@ohos.hilog'
 
 class Logger {
-  private domain: number
-  private prefix: string
+  private domain: number = 0xFF00
+  private prefix: string = ''
   private format: string = "%{public}s, %{public}s"
 
   constructor(prefix: string) {

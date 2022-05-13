@@ -15,7 +15,7 @@
 
 @Component
 export struct InPutComponent {
-  private isLand: boolean
+  private isLand: boolean = false
   @Link result: string
   @Link expression: string
 

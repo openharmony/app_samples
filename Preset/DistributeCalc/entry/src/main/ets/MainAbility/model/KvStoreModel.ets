@@ -20,8 +20,8 @@ const TAG = 'KvStoreModel'
 const STORE_ID = 'kvstore_test'
 
 export class KvStoreModel {
-  private kvManager: distributedData.KVManager
-  private kvStore: distributedData.KVStore
+  private kvManager: distributedData.KVManager = undefined
+  private kvStore: distributedData.KVStore = undefined
 
   constructor() {
   }

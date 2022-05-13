@@ -12,23 +12,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import featureAbility from '@ohos.ability.featureAbility'
+import mediaQuery from '@ohos.mediaquery'
+import Logger from '../model/Logger'
 import { ButtonComponent } from '../common/ButtonComponent'
 import { ButtonComponentTwo } from '../common/ButtonComponentTwo'
+import { create, all, MathJsStatic } from 'mathjs'
 import { InPutComponent } from '../common/InPutComponent'
-import { TitleBar } from '../common/TitleBar'
-import mediaQuery from '@ohos.mediaquery'
-import { create, all } from 'mathjs'
-import featureAbility from '@ohos.ability.featureAbility'
 import { KvStoreModel } from '../model/KvStoreModel'
 import { RemoteDeviceModel } from '../model/RemoteDeviceModel'
-import Logger from '../model/Logger'
+import { TitleBar } from '../common/TitleBar'
 
-const TAG = 'Index'
-const math = create(all)
-const EXIT = 'exit'
+const TAG: string = 'Index'
+const EXIT: string = 'exit'
+const DATA_CHANGE: string = 'dataChange'
+const MATH: MathJsStatic = create(all) // 外部库math初始化
 let kvStoreModel: KvStoreModel = new KvStoreModel()
-let DATA_CHANGE = 'dataChange'
 
 @Entry
 @Component
@@ -62,17 +61,18 @@ struct Index {
 
   onInputValue = (value) => {
     Logger.info(TAG, `value = ${value}`)
-    if (value == 'C') {
+    if (value === 'C') { // 当用户点击C按钮，表达式和运算结果归0
       this.expression = ''
       this.result = ''
       return
     }
-    if (value == '') {
+    if (value === '') { // 当用户点击删除按钮，表达式删除上一次的输入，重新运算表达式
       this.expression = this.expression.substr(0, this.expression.length - 1)
-      this.result = JSON.stringify(math.evaluate(this.expression))
+      this.result = JSON.stringify(MATH.evaluate(this.expression))
       return
     }
-    if (this.isOperator(value)) {
+    if (this.isOperator(value)) { // 当用户输入的是运算符
+      // 判断表达式最后一个字符是运算符则覆盖上一个运算符，否则表达式直接拼接
       if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
         this.expression = this.expression.substr(0, this.expression.length - 1)
         this.expression += value
@@ -81,17 +81,19 @@ struct Index {
       }
       return
     }
-    if (value == '=') {
+    if (value === '=') { // 当用户点击=按钮
       this.result = ''
+      // 判断表达式最后一个字符是运算符，运算结果需要去掉最后一个运算符运算，否则直接运算
       if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
-        this.expression = JSON.stringify(math.evaluate(this.expression.substr(0, this.expression.length - 1)))
+        this.expression = JSON.stringify(MATH.evaluate(this.expression.substr(0, this.expression.length - 1)))
       } else {
-        this.expression = JSON.stringify(math.evaluate(this.expression))
+        this.expression = JSON.stringify(MATH.evaluate(this.expression))
       }
       return
     }
+    // 输入数字，表达式直接拼接，计算运算结果
     this.expression += value
-    this.result = JSON.stringify(math.evaluate(this.expression))
+    this.result = JSON.stringify(MATH.evaluate(this.expression))
   }
 
   aboutToAppear() {
@@ -118,9 +120,9 @@ struct Index {
         } else {
           this.expression = value
           if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
-            this.result = JSON.stringify(math.evaluate(this.expression.substr(0, this.expression.length - 1)))
+            this.result = JSON.stringify(MATH.evaluate(this.expression.substr(0, this.expression.length - 1)))
           } else {
-            this.result = JSON.stringify(math.evaluate(this.expression))
+            this.result = JSON.stringify(MATH.evaluate(this.expression))
           }
         }
       }

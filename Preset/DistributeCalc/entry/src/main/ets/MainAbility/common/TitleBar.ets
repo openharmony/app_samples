@@ -12,13 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { DeviceDialog } from '../common/DeviceDialog'
-import featureAbility from '@ohos.ability.featureAbility'
-import { RemoteDeviceModel } from '../model/RemoteDeviceModel'
-import deviceManager from '@ohos.distributedHardware.deviceManager'
 import app from '@system.app'
+import deviceManager from '@ohos.distributedHardware.deviceManager'
+import featureAbility from '@ohos.ability.featureAbility'
 import Logger from '../model/Logger'
+import { DeviceDialog } from '../common/DeviceDialog'
+import { RemoteDeviceModel } from '../model/RemoteDeviceModel'
 
 const TAG = 'TitleBar'
 const DATA_CHANGE = 'dataChange'
@@ -66,7 +65,7 @@ export struct TitleBar {
   onSelectedIndexChange = (index: number) => {
     Logger.info(TAG, 'selectedIndexChange')
     this.selectedIndex = index
-    if (this.selectedIndex == 0) {
+    if (this.selectedIndex === 0) {
       Logger.info(TAG, 'stop ability')
       this.startAbilityCallBack(EXIT)
       this.isDistributed = false
@@ -98,6 +97,7 @@ export struct TitleBar {
   showDiainfo() {
     this.dialogShow = true
     this.deviceList = [];
+    // 注册监听回调，发现设备或查找到已认证设备会弹窗显示
     this.remoteDeviceModel.registerDeviceListCallback(() => {
       Logger.info(TAG, 'registerDeviceListCallback, callback entered')
       this.deviceList.push({
