@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "NativeAPI"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "game_not_start",
+      "value": "The game did not start."
+    },
+    {
+      "name": "sure",
+      "value": "OK"
+    },
+    {
+      "name": "ai_win",
+      "value": "AI win, click to start the game for another round."
+    },
+    {
+      "name": "game_over",
+      "value": "Game over, click to start the game for another round."
+    },
+    {
+      "name": "you_win",
+      "value": "Congratulations on your victory and click to start the game for another round."
+    },
+    {
+      "name": "wait",
+      "value": "Please wait."
+    },
+    {
+      "name": "ai_landed",
+      "value": "The AI has landed, please continue."
+    },
+    {
+      "name": "game_start",
+      "value": "Start game"
+    }
+  ]
+}
