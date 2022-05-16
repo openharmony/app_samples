@@ -1,0 +1,4 @@
+{
+  "name": "libchess.so",
+  "types": "./index.d.ts"
+}

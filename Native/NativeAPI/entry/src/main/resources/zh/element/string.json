@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "NativeAPI"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "game_not_start",
+      "value": "游戏未开始."
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "game_fail",
+      "value": "AI胜利,点击开始游戏再来一局."
+    },
+    {
+      "name": "game_over",
+      "value": "游戏结束,点击开始游戏再来一局."
+    },
+    {
+      "name": "you_win",
+      "value": "恭喜您游戏胜利,点击开始游戏再来一局"
+    },
+    {
+      "name": "wait",
+      "value": "请稍等."
+    },
+    {
+      "name": "ai_landed",
+      "value": "AI已落子，请继续."
+    },
+    {
+      "name": "game_start",
+      "value": "开始游戏"
+    }
+  ]
+}
