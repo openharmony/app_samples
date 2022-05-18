@@ -25,7 +25,7 @@ export struct ButtonComponent {
       Grid() {
         ForEach(obtainImgV(), (item, index) => {
           GridItem() {
-            Image(item.img)
+            Image(item.image)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)
@@ -40,7 +40,7 @@ export struct ButtonComponent {
         ForEach(obtainImgVertical(), (item) => {
           ForEach(item, (item) => {
             GridItem() {
-              Image(item.img)
+              Image(item.image)
                 .margin({ top: 5 })
                 .onClick(() => {
                   this.onInputValue(item.value)

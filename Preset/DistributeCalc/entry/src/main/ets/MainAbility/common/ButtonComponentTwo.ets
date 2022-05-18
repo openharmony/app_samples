@@ -24,7 +24,7 @@ export struct ButtonComponentTwo {
       Grid() {
         ForEach(obtainImg(), (item, index) => {
           GridItem() {
-            Image(item.img)
+            Image(item.image)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)
@@ -39,7 +39,7 @@ export struct ButtonComponentTwo {
         ForEach(obtainImgLevel(), (item) => {
           ForEach(item, (item) => {
             GridItem() {
-              Image(item.img)
+              Image(item.image)
                 .margin({ top: 5 })
                 .onClick(() => {
                   this.onInputValue(item.value)
@@ -50,7 +50,7 @@ export struct ButtonComponentTwo {
 
         ForEach(obtainImgL(), (item, index) => {
           GridItem() {
-            Image(item.img)
+            Image(item.image)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)

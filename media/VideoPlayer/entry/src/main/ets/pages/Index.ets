@@ -28,6 +28,7 @@ struct Index {
   @State mediaList: Array<mediaLibrary.FileAsset> = []
 
   async aboutToAppear() {
+    router.clear()
     Logger.info(TAG, 'aboutToAppear')
     await globalThis.abilityContext.requestPermissionsFromUser(['ohos.permission.READ_MEDIA'])
     await this.getData()

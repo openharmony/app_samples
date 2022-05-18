@@ -106,6 +106,7 @@ struct Player {
   async resetVideo() {
     await this.fileAsset.close(this.fd)
     this.fileAsset = this.mediaList[this.currentIndex]
+    this.displayName = this.fileAsset.displayName
     let fdPath = await this.prepareVideo()
     await this.videoPlayer.reset(fdPath)
     this.isPlaying = true
@@ -192,8 +193,10 @@ struct Player {
   }
 
   onPageHide() {
-    router.back()
     this.clearVideoPlayer()
+    router.replace({
+      url:'pages/Index'
+    })
   }
 
   clearVideoPlayer() {
