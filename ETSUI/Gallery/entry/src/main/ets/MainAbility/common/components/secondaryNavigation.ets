@@ -49,7 +49,7 @@ export struct SecondaryNavigation {
           .editable(true)
           .onClick(() => {
             router.push({
-              url: item.url
+              url: item.uri
             })
           })
         })

@@ -1,7 +1,7 @@
 {
   "app": {
     "vendor": "samples",
-    "bundleName": "ohos.samples.etssflashlight",
+    "bundleName": "ohos.samples.etsflashlight",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -45,7 +45,7 @@
       "deliveryWithInstall": true,
       "moduleName": "entry"
     },
-    "package": "ohos.samples.etssflashlight",
+    "package": "ohos.samples.etsflashlight",
     "srcPath": "",
     "name": ".entry",
     "js": [

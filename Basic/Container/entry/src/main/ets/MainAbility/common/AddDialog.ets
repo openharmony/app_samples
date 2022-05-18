@@ -122,8 +122,8 @@ export struct AddDialog {
           }
           if (this.writeInformation.name !== '' && this.writeInformation.phone !== '' && this.writeInformation.age > 0) {
             this.isInserted = true
-            Logger.info(`${TAG}, isInserted= ${this.isInserted}`)
-            Logger.info(`${TAG}, writeInformation= ${this.writeInformation}`)
+            Logger.info(TAG, `isInserted= ${this.isInserted}`)
+            Logger.info(TAG, `writeInformation= ${this.writeInformation}`)
             this.saveData(this.isInserted, this.writeInformation)
           }
           this.controller.close()

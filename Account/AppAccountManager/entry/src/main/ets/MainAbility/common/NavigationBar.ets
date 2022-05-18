@@ -16,7 +16,7 @@
 import router from '@ohos.router'
 import Logger from '../model/Logger'
 
-const TAG = '[NavigationBar]'
+const TAG: string = '[NavigationBar]'
 
 @Component
 export struct NavigationBar {

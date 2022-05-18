@@ -79,7 +79,9 @@ export struct Parameter {
             .fontSize(16)
             .width('26%')
             .onClick(() => {
-              this.flag -= 1
+              if (this.flag !== 1) {
+                this.flag -= 1
+              }
               this.setList()
               Logger.info(TAG, `This list is ${JSON.stringify(this.list)}`)
             })

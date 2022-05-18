@@ -18,7 +18,7 @@ import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
-const TAG = '[LoginInfo]'
+const TAG: string = '[LoginInfo]'
 
 @Component
 export struct LoginInfo {

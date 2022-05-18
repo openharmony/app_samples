@@ -36,14 +36,14 @@ struct Index {
         }
         if (this.informations.isEmpty()) {
           writeInformation.id = 0
-          Logger.info(`${TAG}, writeInformation.id= ${writeInformation.id}`)
+          Logger.info(TAG, `writeInformation.id= ${writeInformation.id}`)
         } else {
           writeInformation.id = this.informations.length
-          Logger.info(`${TAG}, writeInformation.id= ${writeInformation.id}`)
+          Logger.info(TAG, `writeInformation.id= ${writeInformation.id}`)
         }
         this.informations.add(writeInformation)
         this.list = this.informations.convertToArray()
-        Logger.info(`${TAG}, this.list= ${this.list}`)
+        Logger.info(TAG, `this.list= ${this.list}`)
       }
     }),
     autoCancel: true,

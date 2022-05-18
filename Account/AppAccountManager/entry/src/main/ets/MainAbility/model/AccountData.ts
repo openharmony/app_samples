@@ -17,11 +17,11 @@ import Logger from '../model/Logger'
 import dataStorage from '@ohos.data.storage'
 import featureAbility from '@ohos.ability.featureAbility'
 
-const TAG = '[AccountData]'
+const TAG: string = '[AccountData]'
 
 export class AccountData {
     static instance: AccountData  = null
-    private storage = null
+    private storage: dataStorage.Storage = null
     private accountData = []
 
     public static getInstance() {
@@ -69,7 +69,7 @@ export class AccountData {
 
     async getStorageValue(key: string, url: string) {
         this.storage = await this.getStorage(url)
-        let getValue: string = await this.storage.get(key, 'null')
+        let getValue: dataStorage.ValueType = await this.storage.get(key, 'null')
         Logger.info(TAG, `getStorageValue success getValue is ${JSON.stringify(getValue)}`)
         return getValue
     }

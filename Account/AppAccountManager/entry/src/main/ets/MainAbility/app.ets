@@ -13,11 +13,15 @@
  * limitations under the License.
  */
 
+import Logger from '../MainAbility/model/Logger'
+
+const TAG: string = '[Index]'
+
 export default {
   onCreate() {
-    console.info('Application onCreate')
+    Logger.info(TAG, `Application onCreate`)
   },
   onDestroy() {
-    console.info('Application onDestroy')
+    Logger.info(TAG, `Application onDestroy`)
   },
 }

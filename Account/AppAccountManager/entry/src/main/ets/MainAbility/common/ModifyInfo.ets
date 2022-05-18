@@ -18,7 +18,7 @@ import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
-const TAG = '[ModifyInfo]'
+const TAG: string = '[ModifyInfo]'
 
 @Component
 export struct ModifyInfo {
@@ -121,15 +121,21 @@ export struct ModifyInfo {
               .maxLength(item.length)
               .fontWeight(FontWeight.Bold)
               .placeholderFont({ size: 16, weight: FontWeight.Normal })
-              .onChange((value: string) => {
+              .onChange(async (value: string) => {
                 switch (item.event) {
                   case 0:
                     this.emailInfo = value
                     Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
+                    if (this.emailInfo !== '') {
+                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+                    }
                     break
                   case 1:
                     this.signature = value
                     Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
+                    if (this.signature !== '') {
+                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+                    }
                     break
                   case 2:
                     this.passWord = value
@@ -157,8 +163,6 @@ export struct ModifyInfo {
           let userPassWord = await this.storage.getStorageValue(this.username, this.bundleName)
           Logger.info(TAG, `This userPassWord is ${userPassWord}`)
           Logger.info(TAG, `This passWord is ${this.passWord}`)
-          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
-          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
           if (this.emailInfo !== '' && !res.test(this.emailInfo)) {
             AlertDialog.show(
               {
@@ -216,7 +220,7 @@ export struct ModifyInfo {
                 }
               })
           } else if (this.passWord !== '' && this.confirmPassword !== '') {
-            this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
+            await this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
             AlertDialog.show(
               {
                 message: $r('app.string.modify_info'),
