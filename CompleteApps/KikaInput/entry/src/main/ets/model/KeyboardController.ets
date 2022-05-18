@@ -56,7 +56,7 @@ export class KeyboardController {
         navigationbar_height = 105
         keyHeightRate = 0.35
       } else if (dWidth == 2560 && dHeight == 1600) {
-        navigationbar_height = 85
+        navigationbar_height = 90
         keyHeightRate = 0.5
       }
       var keyHeight = dHeight * keyHeightRate;
