@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-export class ChatBox{
-  isSend:boolean
-  message:string
-  date:string
+export class ChatBox {
+  isSend: boolean
+  message: string
+  date: string
 
-  constructor(isSend:boolean,message:string,date:string){
+  constructor(isSend: boolean, message: string, date: string) {
     this.isSend = isSend
     this.message = message
     this.date = this.date

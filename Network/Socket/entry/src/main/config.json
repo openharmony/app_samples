@@ -55,8 +55,8 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/login",
-          "pages/index"
+          "pages/Login",
+          "pages/Index"
         ],
         "name": ".MainAbility",
         "window": {

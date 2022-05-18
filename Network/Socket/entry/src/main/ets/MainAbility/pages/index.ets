@@ -13,75 +13,69 @@
  * limitations under the License.
  */
 
-import prompt from '@ohos.prompt';
-import router from '@system.router';
+import router from '@ohos.router';
 import socket from '@ohos.net.socket';
 import { ChatBox } from '../model/ChatBox'
-import { resolveIP } from '../Utils/util'
+import { resolveIP } from '../Utils/Util'
 import wifi from '@ohos.wifi';
-
+import Logger from '../model/Logger'
 
 let udp = socket.constructUDPSocketInstance()
+const TAG: string = '[Index]'
 
 let localAddr = {
-  address:resolveIP(wifi.getIpInfo().ipAddress),
-  family:1,
-  port:0
+  address: resolveIP(wifi.getIpInfo().ipAddress),
+  family: 1,
+  port: 0
 }
 
 let oppositeAddr = {
-  address:'',
-  family:1,
-  port:0
+  address: '',
+  family: 1,
+  port: 0
 }
 
 @Entry
 @Component
 struct Index {
-
-
-  @State address : string = <string> router.getParams().address
-  @State port : number = <number> router.getParams().port
-  @State user : string = ''
+  private address: string = <string> router.getParams()['address']
+  private port: number = <number> router.getParams()['port']
+  private loginCount: number = <number> router.getParams()['loginCount']
+  @State user: string = ''
   @State userImg: Resource = $r('app.media.fengzi')
   @State otherImg: Resource = $r('app.media.wenzi')
   @State chats: Array<ChatBox> = []
-  @State loginState : boolean = true
-  @State message : string = ''
-
+  @State loginState: boolean = true
+  @State message: string = ''
+  @State afterSend: boolean = false
+  @State localState: boolean = true
+  @State oppositeState: boolean = true
 
   aboutToAppear() {
-    console.info('[fengzi]push sucess!')
     oppositeAddr.address = this.address
-    console.log('[fengzi*index]oppositeAddr.address = '+oppositeAddr.address)
-    oppositeAddr.port = this.port === 8080 ? 8888 : 9999
-    console.log('[fengzi]oppositeAddr.port = '+oppositeAddr.port)
-    localAddr.port = oppositeAddr.port == 8888 ? 9999 : 8888
-    console.log('[fengzi]localAddr.port = '+localAddr.port)
-    this.user = localAddr.port == 9999 ? 'fengzi' : 'wenzi'
-    console.log('[fengzi]user = '+this.user)
-//    this.user = this.oppositeAddr == 9090 ?
+    oppositeAddr.port = this.port + this.loginCount
+    localAddr.port = (this.port === 8080 ? 9090 : 8080) + this.loginCount
+    this.user = localAddr.port === (9090 + this.loginCount) ? 'wenzi' : 'fengzi'
+    Logger.info(TAG, `this.port=${this.port}`)
+    Logger.info(TAG, `oppositeAddr.port=${oppositeAddr.port}`)
+    Logger.info(TAG, `localAddr.port=${localAddr.port}`)
     this.userImg = this.user === 'fengzi' ? $r('app.media.fengzi') : $r('app.media.wenzi')
     this.otherImg = this.user === 'fengzi' ? $r('app.media.wenzi') : $r('app.media.fengzi')
-//    localAddr.port = this.port === 8080 ? 8090 : 8080
-    console.log('[fengzi]user = '+this.user)
     this.bindOption()
   }
 
-  bindOption(){
-
+  bindOption() {
     //绑定，开始监听消息
     let promise = udp.bind(localAddr);
     promise.then(() => {
-      console.log('[fengzi] udp bind success')
+      Logger.info(TAG, 'udp bind success')
     }).catch(err => {
-      console.log('[fengzi] udp bind fail' + err)
+      Logger.info(TAG, `udp bind fail ${err}`)
     })
-    udp.on('message',  data => {
-      console.log('[fengzi]udp on 已启动')
+    udp.on('message', data => {
       if (data.message instanceof ArrayBuffer) {
         let dataView = new DataView(data.message)
-        console.log("[fengzi]【length】 length = " + dataView.byteLength)
+        Logger.info(TAG, `length = ${dataView.byteLength}`)
         let str = ""
         for (let i = 0;i < dataView.byteLength; ++i) {
           let c = String.fromCharCode(dataView.getUint8(i))
@@ -89,61 +83,129 @@ struct Index {
             str += c
           }
         }
-        console.log("[fengzi] message aray buffer:" + str)
-        //        if (str !== '') {
-        let date = new Date().getMonth() + '.' + new Date().getDay() + '-' + new Date().getHours() + ':' + new Date().getMinutes()
-        //          let receiveMessage = new ChatBox(false, str, date)
-        this.chats.push(new ChatBox(false, str, date))
-        console.info('[fengzi](on)chats=' + JSON.stringify(this.chats))
+        Logger.info(TAG, `message aray buffer:${str}`)
+
+        if (str == 'online') {
+          this.oppositeState = true
+          udp.close()
+        }
+        else if (str == 'offline') {
+          this.oppositeState = false
+          udp.close()
+        } else if (str == 'exit') {
+          udp.off('message', () => {
+          })
+          udp.close()
+          Logger.info(TAG, 'receive udp exit 2')
+          router.back()
+          Logger.info(TAG, 'receive udp exit 3')
+        } else {
+          Logger.info(TAG, `receive in Chat sucess`)
+          let date = new Date().getMonth() + '.' + new Date().getDay() + '-' + new Date().getHours() + ':' + new Date().getMinutes()
+          Logger.info(TAG, `pre:this.chats=${JSON.stringify(this.chats)}`)
+          this.chats[this.chats.length] = new ChatBox(false, str, date)
+          Logger.info(TAG, `after:this.chats=${JSON.stringify(this.chats)}`)
+        }
         str = ''
-        //        }
       } else {
-        console.log("[fengzi] message:" + data.message)
+        Logger.info(TAG, `message:${data.message}`)
       }
     })
   }
 
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Start }) {
-      Text($r('app.string.MainAbility_label'))
-        .width('100%')
-        .height(50)
-        .backgroundColor('#0D9FFB')
-        .textAlign(TextAlign.Start)
-        .fontSize(25)
-        .padding({ top: 10, left: 10 })
-        .fontColor(Color.White)
-        .fontWeight(FontWeight.Bold)
-      Text(this.user === 'fengzi' ? $r('app.string.classmate_wenzi') : $r('app.string.classmate_fengzi'))
-        .width('100%')
-        .fontSize(20)
-        .padding({top:5})
-        .backgroundColor('#e5e5e5')
-        .textAlign(TextAlign.Center)
-      Text(this.loginState === true ? $r('app.string.online') : $r('app.string.offline'))
-        .width('100%')
-        .fontSize(15)
-        .backgroundColor('#e5e5e5')
-        .textAlign(TextAlign.Center)
-        .bindMenu([
-          {
-            value:'在线',
-            action:()=>{
-              //设置为在线后，绑定本地的地址和端口
-              this.loginState = true
-//              localAddr.port = this.user === 'fengzi' ? 8090 : 8080
-              this.bindOption()
-            }
-          },
-          {
-            value:'离线',
-            action:()=>{
-              //设置为离线后，关闭udp
-              this.loginState = false
-              udp.close()
-            }
+      Row() {
+        Text($r('app.string.MainAbility_label'))
+          .textAlign(TextAlign.Start)
+          .fontSize(25)
+          .fontColor(Color.White)
+          .fontWeight(FontWeight.Bold)
+        Blank()
+        Button() {
+          Image($r('app.media.exit'))
+            .width(35)
+            .height(35)
+            .objectFit(ImageFit.Fill)
+        }.type(ButtonType.Capsule)
+        .width(100)
+        .backgroundColor('#ff50afea')
+        .onClick(() => {
+          udp.send({
+            data: 'exit',
+            address: oppositeAddr
+          }).then(data => {
+            Logger.info(TAG, `send sucess : ${data}`)
+            this.chats = []
+            udp.off('message', () => {
+            })
+            udp.close()
+            router.back()
+          }).catch(function (err) {
+            Logger.info(TAG, `TAG,send : ${JSON.stringify(err)}`)
+          })
+        })
+      }
+      .height(50)
+      .width('100%')
+      .backgroundColor('#0D9FFB')
+      .padding({ left: 10, right: 10 })
+
+      Column() {
+        Text(this.user === 'fengzi' ? $r('app.string.classmate_wenzi') : $r('app.string.classmate_fengzi'))
+          .fontSize(20)
+          .width('100%')
+          .padding({ top: 5 })
+          .textAlign(TextAlign.Center)
+        Row() {
+          Image(this.oppositeState ? $r('app.media.online') : $r('app.media.offline'))
+            .width(15)
+            .height(15)
+            .margin({ top: 3 })
+            .objectFit(ImageFit.Fill)
+            .alignSelf(ItemAlign.Start)
+          Text(this.oppositeState === true ? $r('app.string.online') : $r('app.string.offline'))
+            .fontSize(15)
+            .margin({ left: 5 })
+            .textAlign(TextAlign.Center)
+        }.padding({ top: 5 })
+      }.width('100%').height(55)
+      .backgroundColor(this.localState ? '#ffcae4f5' : '#e5e5e5')
+      .bindMenu([
+        {
+          value: '在线',
+          action: () => {
+            //设置为在线后，绑定本地的地址和端口，并向对方发送在线指令
+            this.localState = true
+            this.bindOption()
+            udp.send({
+              data: 'online',
+              address: oppositeAddr
+            }).then(data => {
+              Logger.info(TAG, `send sucess : ${data}`)
+            }).catch(function (err) {
+              Logger.info(TAG, `TAG,send : ${JSON.stringify(err)}`)
+            })
           }
-        ])
+        },
+        {
+          value: '离线',
+          action: () => {
+            //设置为离线后，先向对方发送发送离线信息，然后关闭udp
+            this.localState = false
+            this.oppositeState = false
+            udp.send({
+              data: 'offline',
+              address: oppositeAddr
+            }).then(data => {
+              Logger.info(TAG, `send sucess : ${data}`)
+            }).catch(function (err) {
+              Logger.info(TAG, `TAG,send : ${JSON.stringify(err)}`)
+            })
+            udp.close()
+          }
+        }
+      ])
 
       Column() {
         Scroll() {
@@ -152,11 +214,14 @@ struct Index {
               if (item.isSend) {
                 Row() {
                   Column() {
-                    Text(item.date).width('100%').textAlign(TextAlign.End).fontSize(15) //时间
+                    Text(item.date)
+                      .fontSize(15) //时间
+                      .width('100%')
+                      .textAlign(TextAlign.End)
                     Text(item.message)
-                      .fontSize(20)
                       .maxLines(5)
                       .padding(10)
+                      .fontSize(20)
                       .borderRadius(10)
                       .alignSelf(ItemAlign.End)
                       .backgroundColor('#ff78dd4d')
@@ -191,16 +256,17 @@ struct Index {
         .height('90%')
 
         Row() {
-          TextInput()
+          TextInput({ placeholder: this.message, text: this.message })
             .height(50)
             .fontSize(20)
             .layoutWeight(3)
             .type(InputType.Normal)
-            .margin({ left: 2, right: 2 })
             .backgroundColor(Color.White)
+            .margin({ left: 2, right: 2 })
             .onChange((value: string) => {
               this.message = value
             })
+
           Button() {
             Text($r('app.string.send_message')).fontSize(23).fontColor(Color.White)
           }
@@ -212,27 +278,28 @@ struct Index {
           .backgroundColor('#ffadf58e')
           .onClick(() => {
             let date = new Date().getMonth() + '.' + new Date().getDay() + '-' + new Date().getHours() + ':' + new Date().getMinutes()
-            let sendMessage = new ChatBox(true,this.message,date)
-
-            if (this.message !== '') {
-              this.chats.push(sendMessage)
-              console.info('[fengzi](send)chats=' + JSON.stringify(this.chats))
-              console.info('[fengzi](send)opposite_address='+oppositeAddr.address)
-              console.info('[fengzi](send)opposite_port='+oppositeAddr.port)
-              console.info('[fengzi](send)this.message='+this.message)
+            let sendMessage = new ChatBox(true, this.message, date)
+            if (this.message !== '' && this.loginState && this.oppositeState) {
               //通过udp发送this.message文本
-//              udp.bind(localAddr)
+              //udp.bind(localAddr)
               this.bindOption()
               udp.send({
-                data:this.message,
-                address:oppositeAddr
+                data: this.message,
+                address: oppositeAddr
               }).then(data => {
-                console.info("[fengzi]send sucess")
-                console.info("[fengzi]send"+data)
-              }).catch(function(err){
-                console.info("[fengzi]send"+JSON.stringify(err))
+                Logger.info(TAG, 'send sucess')
+                Logger.info(TAG, `send ${data}`)
+                Logger.info(TAG, `this.chats=${JSON.stringify(this.chats)}`)
+                this.chats[this.chats.length] = sendMessage
+                Logger.info(TAG, `(send)opposite_address=${oppositeAddr.address}`)
+                Logger.info(TAG, `(send)opposite_port=${oppositeAddr.port}`)
+                Logger.info(TAG, `(send)this.message=${this.message}`)
+                Logger.info(TAG, `this.chats=${JSON.stringify(this.chats)}`)
+              }).catch(function (err) {
+                Logger.info(TAG, `send ${JSON.stringify(err)}`)
               })
             }
+            this.message = ''
           })
         }.width('100%').height(70).backgroundColor('#f5f5f5')
       }
