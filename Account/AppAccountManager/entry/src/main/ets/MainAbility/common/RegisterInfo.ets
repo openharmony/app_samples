@@ -18,7 +18,7 @@ import Logger from '../model/Logger'
 import { AccountData } from '../model/AccountData'
 import { AccountModel } from '../model/AccountModel'
 
-const TAG = '[RegisterInfo]'
+const TAG: string = '[RegisterInfo]'
 
 @Component
 export struct RegisterInfo {
@@ -121,19 +121,28 @@ export struct RegisterInfo {
               .inputFilter(item.inputFilter)
               .fontWeight(FontWeight.Bold)
               .placeholderFont({ size: 16, weight: FontWeight.Normal })
-              .onChange((value: string) => {
+              .onChange(async (value: string) => {
                 switch (item.event) {
                   case 0:
                     this.username = value
                     Logger.info(TAG, `addAccount enter ${this.username}`)
+                    if (this.username !== '') {
+                      await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
+                    }
                     break
                   case 1:
                     this.emailInfo = value
                     Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
+                    if (this.emailInfo !== '') {
+                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+                    }
                     break
                   case 2:
                     this.signature = value
                     Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
+                    if (this.signature !== '') {
+                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+                    }
                     break
                   case 3:
                     this.passWord = value
@@ -160,9 +169,6 @@ export struct RegisterInfo {
           let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
           let result = await this.storage.hasStorageValue(this.username, this.bundleName)
           Logger.info(TAG, `This result is ${result}`)
-          await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
-          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
-          await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
           if (this.username === '') {
             AlertDialog.show(
               {
@@ -248,9 +254,9 @@ export struct RegisterInfo {
                 }
               })
           } else {
-            this.accountModel.setAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`, this.passWord)
-            this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
-            this.storage.putStorageValue(this.bundleName, 'true', this.bundleName)
+            await this.accountModel.setAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`, this.passWord)
+            await this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
+            await this.storage.putStorageValue(this.bundleName, 'true', this.bundleName)
             AlertDialog.show(
               {
                 message: $r('app.string.register_info'),

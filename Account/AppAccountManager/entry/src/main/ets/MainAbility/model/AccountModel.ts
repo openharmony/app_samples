@@ -16,8 +16,8 @@
 import Logger from '../model/Logger'
 import appAccount from '@ohos.account.appAccount'
 
-const TAG = '[AccountModel]'
-const app = appAccount.createAppAccountManager()
+const TAG: string = '[AccountModel]'
+const app: appAccount.AppAccountManager = appAccount.createAppAccountManager()
 
 export class AccountModel {
     async addAccount(username: string) {
@@ -41,13 +41,13 @@ export class AccountModel {
 
     async setAccountExtraInfo(name: string, extraInfo: string) {
         await app.setAccountExtraInfo(name, extraInfo)
-        Logger.info(TAG, `setAccountExtraInfo name: ${name} extraInfo: ${extraInfo}}`)
+        Logger.info(TAG, `setAccountExtraInfo name: ${name} extraInfo: ${extraInfo}`)
         return
     }
 
     async setAssociatedData(name: string, key: string, value: string) {
         await app.setAssociatedData(name, key, value)
-        Logger.info(TAG, `setAssociatedData name: ${name} key: ${key} value: ${value}}`)
+        Logger.info(TAG, `setAssociatedData name: ${name} key: ${key} value: ${value}`)
         return
     }
 

@@ -109,7 +109,7 @@
   - [`Socket`：Socket 连接（eTS）（API8）](Network/Socket)
 - Preset
   - [`Clock`：简单时钟（eTS）（API9）](Preset/Clock)
-  - [`FlishLight`：手电筒（eTS）（API8）](Preset/FlishLight)
+  - [`FlashLight`：手电筒（eTS）（API8）](Preset/FlashLight)
   - [`DistributeCalc`：分布式计算器（eTS）（API8）](Preset/DistributeCalc)
 - ResourcesSchedule
   - [`Flybird`：小鸟避障游戏（eTS）（API9）](ResourcesSchedule/Flybird)
