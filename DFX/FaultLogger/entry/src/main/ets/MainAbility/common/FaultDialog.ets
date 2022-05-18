@@ -14,6 +14,7 @@
  */
 import data_rdb from '@ohos.data.rdb'
 import prompt from '@ohos.prompt'
+import router from '@ohos.router'
 
 @Preview
 @CustomDialog
@@ -34,7 +35,8 @@ export struct FaultDialog {
       case 1:
         prompt.showToast({ message: '异常构造中,完成后应用会自动退出，请重新进入应用抓取异常信息' })
         setTimeout(() => {
-          data_rdb.getRdbStore(null, { name: 'test' }, 1)
+          data_rdb.getRdbStore(null, { name: null }, 1)
+          router.back()
         }, 500)
         break
       case 2:
