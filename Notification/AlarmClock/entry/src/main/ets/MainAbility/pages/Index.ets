@@ -15,7 +15,7 @@
 
 import { CustomDatePicker } from '../common/CustomDataPicker'
 import StorageModel from '../mode/StorageModel'
-import HiLog from '../mode/HiLog'
+import Logger from '../mode/Logger'
 import reminderAgent from '@ohos.reminderAgent'
 import { TitleBar } from '../common/TitleBar'
 
@@ -29,22 +29,22 @@ struct Index {
   private storage: StorageModel = StorageModel.getInstance()
   private datePicker: CustomDialogController = null
   getTest = async () => {
-    HiLog.log(TAG, `getTest`)
+    Logger.info(TAG, `getTest`)
     this.listItems = []
     let amount = await this.storage.getStorageValue('amount')
-    HiLog.log(TAG, `getTest amount + ${amount}`)
-    for (let i = 0;i <= amount; i++) {
+    Logger.info(TAG, `getTest amount = ${amount} ${typeof(amount)}`)
+    for (let i = 0;i <= parseInt(amount); i++) {
       let alarmClock = await this.storage.getStorageValue(`alarmClock${i}`)
       if (alarmClock != 'null') {
         let dataTime = JSON.parse(alarmClock).hour + ':' + JSON.parse(alarmClock).minute
         this.listItems.push({ key: `alarmClock${i}`, value: dataTime, reminderId: JSON.parse(alarmClock).reminderId })
       }
     }
-    HiLog.log(TAG, `ListItem = ${JSON.stringify(this.listItems)}`)
+    Logger.info(TAG, `ListItem = ${JSON.stringify(this.listItems)}`)
   }
 
   aboutToAppear() {
-    HiLog.log(TAG, 'aboutToAppear')
+    Logger.info(TAG, 'aboutToAppear')
     this.storage.getFromStorage().then(() => {
       this.getTest()
     })
@@ -52,7 +52,7 @@ struct Index {
 
   countChange(result) {
     this.total = result
-    HiLog.log(TAG, 'countChange')
+    Logger.info(TAG, 'countChange')
     this.getTest()
   }
 
@@ -89,12 +89,15 @@ struct Index {
                 Text($r('app.string.delete'))
                   .fontSize(30)
                   .textAlign(TextAlign.Center)
-                  .onClick(() => {
-                    HiLog.log(TAG, `key = ${item.key}`)
+                  .onClick( async () => {
+                    Logger.info(TAG, `key = ${item.key}`)
                     this.storage.deleteSync(item.key)
+                    let amount = await this.storage.getStorageValue('amount')
+                    let total =  parseInt(amount, 10) - 1
+                    this.storage.putStorageValue('amount', total)
                     this.listItems.splice(index, 1)
                     reminderAgent.cancelReminder(item.reminderId, () => {
-                      HiLog.log(TAG, `do next`)
+                      Logger.info(TAG, `do next`)
                     })
                   })
               }

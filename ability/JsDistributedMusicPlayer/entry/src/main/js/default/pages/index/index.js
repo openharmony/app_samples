@@ -242,7 +242,7 @@ export default {
         if (this.playerModel.isPlaying) {
             this.playerModel.pause();
         } else {
-            this.playerModel.preLoad(0, () => {
+            this.playerModel.preLoad(this.playerModel.index, () => {
                 this.playerModel.play(-1, true);
             });
         }
