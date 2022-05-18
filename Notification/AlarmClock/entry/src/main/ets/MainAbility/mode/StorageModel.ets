@@ -15,7 +15,7 @@
 
 import dataStorage from '@ohos.data.storage'
 import featureAbility from '@ohos.ability.featureAbility'
-import HiLog from '../mode/HiLog'
+import Logger from '../mode/Logger'
 
 const TAG = 'StorageModel'
 
@@ -48,23 +48,23 @@ export default class StorageModel {
 
   async putStorageValue(putKey: string, alarmClock) {
     let value = JSON.stringify(alarmClock)
-    HiLog.log(TAG, `putStorage ${value}`)
+    Logger.info(TAG, `${value}`)
     this.storage = await this.getStorage()
     await this.storage.put(putKey, value)
-    HiLog.info(TAG, 'put value success')
+    Logger.info(TAG, 'put value success')
     await this.storage.flush()
   }
 
   async getStorageValue(getKey: string) {
     this.storage = await this.getStorage()
-    let getValue = this.storage.get(getKey, 'null')
-    HiLog.log(TAG, getValue)
+    let getValue:string = this.storage.get(getKey, 'null')
+    Logger.info(TAG, getValue)
     return getValue
   }
 
   async deleteSync(key: string) {
     await this.storage.delete(key)
     let result = await this.storage.get(key, 'null')
-    HiLog.log(TAG,'delete success ====' + JSON.stringify(result))
+    Logger.info(TAG,`delete success = ${JSON.stringify(result)}`)
   }
 }

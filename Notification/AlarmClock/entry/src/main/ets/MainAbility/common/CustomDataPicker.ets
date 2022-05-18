@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import HiLog from '../mode/HiLog'
+import Logger from '../mode/Logger'
 import StorageModel from '../mode/StorageModel'
 import reminderAgent from '@ohos.reminderAgent'
 
@@ -57,7 +57,7 @@ export struct CustomDatePicker {
         })
           .useMilitaryTime(true)
           .onChange((date) => {
-            HiLog.info(TAG, `TimePickerResult = ${JSON.stringify(date)}`)
+            Logger.info(TAG, `TimePickerResult = ${JSON.stringify(date)}`)
             this.hour = date.hour
             this.minute = date.minute
             this.hourTest = (date.hour > 9 ? '' : '0') + date.hour
@@ -82,11 +82,11 @@ export struct CustomDatePicker {
               },
               ringDuration: 5000
             }
-            HiLog.log(TAG, `ReminderRequest = ${reminderRequest.hour}`)
+            Logger.info(TAG, `ReminderRequest = ${reminderRequest.hour}`)
             this.reminderId = await reminderAgent.publishReminder(reminderRequest)
-            HiLog.log(TAG, `reminderId = ${this.reminderId}`)
+            Logger.info(TAG, `reminderId = ${this.reminderId}`)
             let dateTime = { hour: this.hourTest, minute: this.minuteTest, reminderId: this.reminderId }
-            HiLog.log(TAG, `dateTime = ${JSON.stringify(dateTime)}`)
+            Logger.info(TAG, `dateTime = ${JSON.stringify(dateTime)}`)
             StorageModel.getInstance().putStorageValue(`alarmClock${this.total}`, dateTime)
             StorageModel.getInstance().putStorageValue('amount', this.total)
             this.total += 1
