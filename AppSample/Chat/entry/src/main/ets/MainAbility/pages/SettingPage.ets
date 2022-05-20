@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -50,7 +50,7 @@ export struct SettingPage {
           .backgroundColor(Color.White)
           .height(100)
           .onClick(() => {
-            router.push({ uri: 'pages/UserInfo' })
+            router.push({ url: 'pages/UserInfo' })
           })
           .margin({ bottom: 10 })
 
@@ -81,14 +81,14 @@ export struct SettingPage {
           }
           .margin({ bottom: 10 })
           .onClick(() => {
-            router.push({ uri: 'pages/Setting' })
+            router.push({ url: 'pages/Setting' })
           })
 
           Column() {
             SettingItemView({ image: $r('app.media.icon_me_setting'), text: '加载聊天记录' })
           }
           .onClick(() => {
-            router.push({ uri: 'pages/index' })
+            router.push({ url: 'pages/Index' })
           })
         }
       }

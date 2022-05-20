@@ -15,7 +15,7 @@
  */
 import { BasicDataSource } from '../common/BasicDataSource';
 import { ChatModel, EMContact } from './MsgBase';
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -63,7 +63,7 @@ export struct ChatListView {
             .height("100%")
             .width("100%")
             .onClick(() => {
-              router.push({ uri: 'pages/SearchPage' })
+              router.push({ url: 'pages/SearchPage' })
             })
           }
           .height(50)
@@ -163,7 +163,7 @@ struct ChatView {
         .width("100%")
         .onClick(() => {
           router.push({
-            uri: 'pages/ChatDetailPage',
+            url: 'pages/ChatDetailPage',
             params: { chatName: this.chatItem.user.userName, chatId: this.chatItem.user.userId }
           })
         })

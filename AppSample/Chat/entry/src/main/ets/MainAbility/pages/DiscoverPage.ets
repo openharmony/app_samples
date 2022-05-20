@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 import { SettingItemView } from './SettingPage';
 
 @Entry
@@ -31,7 +31,7 @@ export struct DiscoverPage {
           }
           .onClick(() => {
             router.push({
-              uri: 'pages/FriendsMomentsPage'
+              url: 'pages/FriendsMomentsPage'
             })
           })
 

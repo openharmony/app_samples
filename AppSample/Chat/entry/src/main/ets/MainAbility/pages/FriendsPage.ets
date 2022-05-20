@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@system.router';
+import router from '@ohos.router';
 import { BasicDataSource } from '../common/BasicDataSource';
 import { EMContact } from './MsgBase'
 
@@ -40,7 +40,7 @@ export struct FriendsPage {
                 .width('100%')
                 .margin({ left: 10, right: 10, top: 5, bottom: 5 })
                 .onClick(() => {
-                  router.push({ uri: 'pages/SearchPage' })
+                  router.push({ url: 'pages/SearchPage' })
                 })
 
                 Column() {
@@ -79,7 +79,7 @@ export struct FriendsPage {
               }
               .onClick(() => {
                 router.push({
-                  uri: "pages/ChatDetailPage",
+                  url: "pages/ChatDetailPage",
                   params: { chatImage: msg.userImage, chatName: msg.userName, chatId: msg.userId } })
               })
             }, (msg: EMContact) => msg.userId)

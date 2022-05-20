@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { BasicDataSource } from '../common/BasicDataSource';
-import router from '@system.router';
+import router from '@ohos.router';
 import { EMContact, MessageBase, FriendMoment } from './MsgBase'
 
 @Entry
@@ -175,7 +175,7 @@ struct MomentsImage {
         .height(70)
         .onClick(() => {
           router.push({
-            uri: 'pages/FullImagePage',
+            url: 'pages/FullImagePage',
             params: { imageStrId: this.imageStrId }
           })
         })
