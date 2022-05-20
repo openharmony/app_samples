@@ -15,7 +15,7 @@
  */
 import { ChatListView } from './ChatListPage';
 import { DiscoverPage } from './Discoverpage';
-import router from '@system.router';
+import router from '@ohos.router';
 import { SettingPage } from './SettingPage'
 import { FriendsPage } from './FriendsPage'
 
@@ -132,7 +132,7 @@ struct CustomDialogExample {
         }
         .onClick(() => {
           this.controller.close()
-          router.push({ uri: item[2] })
+          router.push({ url: item[2] })
         })
       }, (msg, index) => index.toString())
     }

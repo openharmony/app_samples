@@ -8,19 +8,19 @@
         "signingConfig": "default"
       }
     ],
-    "modules": [
-      {
-        "name": "entry",
-        "srcPath": "./entry",
-        "targets": [
-          {
-            "name": "default",
-            "applyToProducts": [
-              "default"
-            ]
-          }
-        ]
-      }
-    ],
-    "signingConfigs": []
-  }
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,7 @@
 // @ts-nocheck
 import { BasicDataSource } from '../common/BasicDataSource';
 import { MessageBase, EMContact, MessageBody, TextMessage, ImageMessage } from './MsgBase';
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -53,7 +53,7 @@ struct ChatDetailPage {
         .width("10%")
         .onClick(() => {
           router.push({
-            uri: "pages/ChatNewsPage",
+            url: "pages/ChatNewsPage",
             params: { NAME: router.getParams().chatName, IMAGEID: router.getParams().chatId }
           })
         })

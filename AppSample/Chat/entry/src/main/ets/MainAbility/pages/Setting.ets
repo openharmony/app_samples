@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Header } from "../components/Header"
-import router from '@system.router';
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -58,7 +58,7 @@ struct Setting {
           .margin({ bottom: 10 })
           .onClick(() => {
             router.push({
-              uri: "pages/SwitchPage"
+              url: "pages/SwitchPage"
             })
           })
 
