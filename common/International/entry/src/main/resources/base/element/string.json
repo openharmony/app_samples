@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "International"
+    },
+    {
+      "name": "language",
+      "value": "Language"
+    },
+    {
+      "name": "edit",
+      "value": "Edit"
+    },
+    {
+      "name": "add_language",
+      "value": "Add language"
+    },
+    {
+      "name": "added_language",
+      "value": "Added Languages"
+    },
+    {
+      "name": "language_region",
+      "value": "Language and region"
+    },
+    {
+      "name": "all_language",
+      "value": "All language"
+    },
+    {
+      "name": "select_region",
+      "value": "Select region"
+    },
+    {
+      "name": "region",
+      "value": "region"
+    },
+    {
+      "name": "suggest_region",
+      "value": "Suggest region"
+    },
+    {
+      "name": "current_region",
+      "value": "Current region"
+    },
+    {
+      "name": "all_region",
+      "value": "All region"
+    },
+    {
+      "name": "edit_language",
+      "value": "Edit language"
+    },
+    {
+      "name": "date_time",
+      "value": "Date and time"
+    },
+    {
+      "name": "date",
+      "value": "Date"
+    },
+    {
+      "name": "time",
+      "value": "Time"
+    },
+    {
+      "name": "time_zone",
+      "value": "TimeZone"
+    },
+    {
+      "name": "hours_24",
+      "value": "24-hour system"
+    },
+    {
+      "name": "shanghai",
+      "value": "ShangHai(China)"
+    },
+    {
+      "name": "new_york",
+      "value": "Eastern time (US)"
+    },
+    {
+      "name": "screen_direction",
+      "value": "Screen Direction:"
+    },
+    {
+      "name": "format_example",
+      "value": "Locale format example"
+    },
+    {
+      "name": "language_switch_tips",
+      "value": "The language switch is successful. You are about to exit the application."
+    }
+  ]
+}

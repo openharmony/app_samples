@@ -1,0 +1,17 @@
+{
+  "plural": [
+    {
+      "name": "eat_apple",
+      "value": [
+        {
+          "quantity": "one",
+          "value": "%d 苹果"
+        },
+        {
+          "quantity": "other",
+          "value": "%d 个苹果"
+        }
+      ]
+    }
+  ]
+}

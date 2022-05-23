@@ -1,0 +1,18 @@
+{
+  "strarray": [
+    {
+      "name": "operation_arr",
+      "value": [
+        {
+          "value": "Language and region"
+        },
+        {
+          "value": "Date and time"
+        },
+        {
+          "value": "Region format example"
+        }
+      ]
+    }
+  ]
+}
