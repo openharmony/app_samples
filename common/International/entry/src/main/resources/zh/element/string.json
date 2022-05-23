@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "国际化"
+    },
+    {
+      "name": "language",
+      "value": "语言"
+    },
+    {
+      "name": "edit",
+      "value": "编辑"
+    },
+    {
+      "name": "add_language",
+      "value": "添加语言"
+    },
+    {
+      "name": "added_language",
+      "value": "已添加语言"
+    },
+    {
+      "name": "language_region",
+      "value": "语言和地区"
+    },
+    {
+      "name": "all_language",
+      "value": "所有语言"
+    },
+    {
+      "name": "select_region",
+      "value": "选择地区"
+    },
+    {
+      "name": "region",
+      "value": "地区"
+    },
+    {
+      "name": "suggest_region",
+      "value": "建议地区"
+    },
+    {
+      "name": "current_region",
+      "value": "当前地区"
+    },
+    {
+      "name": "all_region",
+      "value": "所有地区"
+    },
+    {
+      "name": "edit_language",
+      "value": "编辑语言"
+    },
+    {
+      "name": "date_time",
+      "value": "日期和时间"
+    },
+    {
+      "name": "date",
+      "value": "日期"
+    },
+    {
+      "name": "time",
+      "value": "时间"
+    },
+    {
+      "name": "time_zone",
+      "value": "时区"
+    },
+    {
+      "name": "hours_24",
+      "value": "24小时制"
+    },
+    {
+      "name": "shanghai",
+      "value": "上海（中国）"
+    },
+    {
+      "name": "new_york",
+      "value": "东部时间（美国）"
+    },
+    {
+      "name": "screen_direction",
+      "value": "屏幕方向:"
+    },
+    {
+      "name": "format_example",
+      "value": "区域格式示例"
+    },
+    {
+      "name": "language_switch_tips",
+      "value": "语言切换成功，即将退出应用。"
+    }
+  ]
+}

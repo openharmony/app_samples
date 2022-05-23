@@ -1,0 +1,18 @@
+{
+  "strarray": [
+    {
+      "name": "operation_arr",
+      "value": [
+        {
+          "value": "语言和地区"
+        },
+        {
+          "value": "日期和时间"
+        },
+        {
+          "value": "区域格式示例"
+        }
+      ]
+    }
+  ]
+}
