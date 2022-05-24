@@ -1,23 +1,21 @@
-# 运行锁
+# eTS Running Lock
 
-### 简介
+### Introduction
 
-本示例展示了阻止系统休眠的运行锁功能，通过黑白色壁纸模拟息屏、亮屏状态，来展示系统的休眠状态，从而对运行锁的功能进行测试，使得该运行锁在打开后可以阻止系统休眠。
+This sample shows how to test the running lock that prevents the system from entering sleep mode. It uses the black and white wallpapers to simulate the screen-off and screen-on states.
 
-### 使用说明
+### Usage
 
-1.先点击**查询系统是否支持休眠锁**按钮，反馈系统支持的结果。
+1. Touch **Query support** to check whether the system supports the running lock.
 
-2.点击**5s后定时息屏**按钮，系统在5秒后可定时灭屏（黑色背景模拟）。
+2. Touch **Timing out screen 5s after**. The screen is turned off 5s later (simulated with a black wallpaper).
 
-2.打开锁开关，系统被阻止进入休眠状态，5秒后将会一直亮屏（白色背景模拟）。
+2. Enable the running lock. The system will be blocked from entering sleep mode. Five seconds after the setting, the screen will always on (simulated with a white wallpaper).
 
-3.关闭锁开关，系统被禁止休眠状态解除，5秒后将会到点灭屏（黑色背景模拟）。
+3. Disable the running lock. After 5 seconds, the screen turns off (simulated with a black wallpaper).
 
-4.待灭屏后，点击屏幕任意一处即可亮屏（白色背景模拟）
+4. After the screen is turned off, touch any area on the screen to turn it on (simulated with a white wallpaper).
 
-### 约束与限制
+### Constraints
 
-1.本示例仅支持在标准系统上运行。
-
-2.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
+This sample can only be run on standard-system devices.
