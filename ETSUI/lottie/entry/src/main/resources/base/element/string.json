@@ -1,0 +1,128 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "lottie"
+    },
+    {
+      "name": "select",
+      "value": "选择动画资源"
+    },
+    {
+      "name": "play_pause",
+      "value": "播放/暂停"
+    },
+    {
+      "name": "start_play",
+      "value": "开始播放"
+    },
+    {
+      "name": "speed",
+      "value": "倍速"
+    },
+    {
+      "name": "play_order",
+      "value": "播放顺序"
+    },
+    {
+      "name": "destruction_animation",
+      "value": "销毁动画"
+    },
+    {
+      "name": "display_effect",
+      "value": "通过name实现对grunt动画展示效果"
+    },
+    {
+      "name": "display_effect_this",
+      "value": "通过this实现对grunt动画展示效果"
+    },
+    {
+      "name": "stop",
+      "value": "停止"
+    },
+    {
+      "name": "pause",
+      "value": "暂停"
+    },
+    {
+      "name": "double_speed",
+      "value": "二倍速"
+    },
+    {
+      "name": "reverse_playback",
+      "value": "逆序播放"
+    },
+    {
+      "name": "five_speed",
+      "value": "五倍速"
+    },
+    {
+      "name": "fragment_cycle",
+      "value": "指定片段循环，(20,30)帧"
+    },
+    {
+      "name": "play_segments",
+      "value": "playSegments 片段循环"
+    },
+    {
+      "name": "reset_play",
+      "value": "重置播放片段"
+    },
+    {
+      "name": "float_integer",
+      "value": "去浮点显示整数"
+    },
+    {
+      "name": "cycle",
+      "value": "循环"
+    },
+    {
+      "name": "animation_stop",
+      "value": "动画停止"
+    },
+    {
+      "name": "animation_play",
+      "value": "动画播放"
+    },
+    {
+      "name": "refresh_animation",
+      "value": "刷新动画布局"
+    },
+    {
+      "name": "destruction_grunt_animation",
+      "value": "销毁grunt动画"
+    },
+    {
+      "name": "playback_position",
+      "value": "播放位置"
+    },
+    {
+      "name": "add_listen",
+      "value": "添加侦听事件"
+    },
+    {
+      "name": "delete_listen",
+      "value": "删除侦听事件"
+    },
+    {
+      "name": "delete_all_Listen",
+      "value": "删除所有侦听事件"
+    },
+    {
+      "name": "triggers_all_callbacks",
+      "value": "触发所有已设置的回调"
+    },
+    {
+      "name": "listen",
+      "value": "侦听事件"
+    }
+  ]
+}
