@@ -1,0 +1,84 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "FlipClock"
+    },
+    {
+      "name": "entry_MainAbility",
+      "value": "FlipClock"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "alarmClock",
+      "value": "alarmClock"
+    },
+    {
+      "name": "delete",
+      "value": "delete"
+    },
+    {
+      "name": "hour",
+      "value": "hour"
+    },
+    {
+      "name": "minute",
+      "value": "minute"
+    },
+    {
+      "name": "yes",
+      "value": "yes"
+    },
+    {
+      "name": "no",
+      "value": "no"
+    },
+    {
+      "name": "init_output",
+      "value": "When the sleep lock is closed, the screen can be stopped regularly"
+    },
+    {
+      "name": "control_sleepLock",
+      "value": "Lock for controlling system sleep"
+    },
+    {
+      "name": "search_support",
+      "value": "Query whether the system supports sleep lock"
+    },
+    {
+      "name": "sleepLockSwitch",
+      "value": "Sleep lock switch"
+    },
+    {
+      "name": "timingout_screen",
+      "value": "Turn off the screen regularly after 5S"
+    },
+    {
+      "name": "supportLock",
+      "value": "The system supports locks that prevent the system from hibernating"
+    },
+    {
+      "name": "unsupportLock",
+      "value": "This system does not support locks that prevent the system from hibernating"
+    },
+    {
+      "name": "stopSleep",
+      "value": "The sleep lock has been opened and the screen cannot be turned off regularly"
+    },
+    {
+      "name": "turnSleep",
+      "value": "The lock has been released, and the screen can be turned off regularly after 5S"
+    }
+  ]
+}
