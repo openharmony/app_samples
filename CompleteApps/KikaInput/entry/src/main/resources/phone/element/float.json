@@ -41,10 +41,6 @@
       "value": "12vp"
     },
     {
-      "name": "padding_bottom",
-      "value": "12vp"
-    },
-    {
       "name": "padding_left_right",
       "value": "6vp"
     },
@@ -79,6 +75,10 @@
     {
       "name": "number_1234_fontSize",
       "value": "14fp"
+    },
+    {
+      "name": "keyboard_height",
+      "value": "237vp"
     }
   ]
 }
