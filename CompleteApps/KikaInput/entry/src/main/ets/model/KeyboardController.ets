@@ -54,8 +54,8 @@ export class KeyboardController {
       var keyHeightRate = 0.47;
       if (dWidth == 1080 && dHeight == 2376) {
         navigationbar_height = 105
-        keyHeightRate = 0.35
-      } else if (dWidth == 2560 && dHeight == 1600) {
+        keyHeightRate = 35/99
+      }else if(dWidth == 2560 && dHeight == 1600){
         navigationbar_height = 90
         keyHeightRate = 0.5
       }
@@ -91,6 +91,13 @@ export class KeyboardController {
       var dHeight = dis.height;
       var navigationbar_height = dHeight * 0.07; //todo:有些产品导航栏高度为0，默认为0.07
       var keyHeightRate = 0.47;
+	  if(dWidth == 1080 && dHeight == 2376){
+        navigationbar_height = 105
+        keyHeightRate = 0.35
+      }else if(dWidth == 2560 && dHeight == 1600){
+        navigationbar_height = 90
+        keyHeightRate = 0.5
+      }
       var keyHeight = dHeight * keyHeightRate;
       this.inputHandle.addLog("resizeWindow-dWidth = " + dWidth + ";dHeight = " + dHeight + ";keyboard height = " + keyHeight + ";navibar height = " + navigationbar_height);
 

@@ -26,7 +26,7 @@
     },
     {
       "name": "return_button_widthType_2",
-      "value": "292vp"
+      "value": "167vp"
     },
     {
       "name": "space_button_width_1",
@@ -39,10 +39,6 @@
     {
       "name": "padding_top",
       "value": "16vp"
-    },
-    {
-      "name": "padding_bottom",
-      "value": "12vp"
     },
     {
       "name": "padding_left_right",
@@ -79,6 +75,10 @@
     {
       "name": "number_1234_fontSize",
       "value": "21fp"
+    },
+    {
+      "name": "keyboard_height",
+      "value": "338vp"
     }
   ]
 }

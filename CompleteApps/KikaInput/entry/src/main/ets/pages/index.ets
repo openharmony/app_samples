@@ -249,7 +249,8 @@ struct keyMenu {
         }, (item: keySourceListType) => item.content)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         Stack() {
@@ -262,7 +263,8 @@ struct keyMenu {
         }.width('4%').height(0)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         Stack() {
@@ -295,7 +297,8 @@ struct keyMenu {
         deleteItem()
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '?123', menuType: $menuType })
@@ -306,14 +309,13 @@ struct keyMenu {
         returnItem({ returnWidth: $r('app.float.return_button_widthType_1') })
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
     }
     .width('100%')
     .height('100%')
     .padding({
-      top: $r('app.float.padding_top'),
-      bottom: $r('app.float.padding_bottom'),
       left: $r('app.float.padding_left_right'),
       right: $r('app.float.padding_left_right')
     })
@@ -345,7 +347,8 @@ struct numberMenu {
         }, (item: sourceListType) => item.content)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.numberList.slice(10, 20), (item: sourceListType) => {
@@ -356,7 +359,8 @@ struct numberMenu {
         }, (item: sourceListType) => item.content)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '=/\<', menuType: $menuType })
@@ -369,7 +373,8 @@ struct numberMenu {
         deleteItem()
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: 'ABC', menuType: $menuType })
@@ -393,11 +398,10 @@ struct numberMenu {
         returnItem({ returnWidth: $r('app.float.return_button_widthType_2') })
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
     }
     .padding({
-      top: $r('app.float.padding_top'),
-      bottom: $r('app.float.padding_bottom'),
       left: $r('app.float.padding_left_right'),
       right: $r('app.float.padding_left_right')
     })
@@ -429,7 +433,8 @@ struct symbolMenu {
         }, (item: sourceListType) => item.content)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         ForEach(this.symbolList.slice(10, 20), (item: sourceListType) => {
@@ -440,7 +445,8 @@ struct symbolMenu {
         }, (item: sourceListType) => item.content)
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
         keyItemGray({ keyValue: '?123', menuType: $menuType })
@@ -453,7 +459,8 @@ struct symbolMenu {
         deleteItem()
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
 
 
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
@@ -478,11 +485,10 @@ struct symbolMenu {
         returnItem({ returnWidth: $r('app.float.return_button_widthType_2') })
       }
       .width('100%')
-      .height('25%')
+      .height($r('app.float.basic_button_height'))
+      .margin({ top: $r('app.float.padding_top') })
     }
     .padding({
-      top: $r('app.float.padding_top'),
-      bottom: $r('app.float.padding_bottom'),
       left: $r('app.float.padding_left_right'),
       right: $r('app.float.padding_left_right')
     })
@@ -543,7 +549,7 @@ struct Index {
           }
 
         }.width('100%')
-        .height('85%')
+        .height($r("app.float.keyboard_height"))
         .backgroundColor('#D5D7DD')
       }.height('100%')
     }
