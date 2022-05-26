@@ -45,12 +45,14 @@
   - [`Flashlight`：手电筒（JS）（API8）](common/Flashlight)
   - [`JsHelloWorld`：你好世界（JS）（API8）](common/JsHelloWorld)
   - [`PowerManager`：系统电源管理（eTS）（API8）](common/PowerManager)
+  - [`International`：国际化（eTS）（API8）](common/International)
 - data
   - [`KvStore`：分布式数据库（eTS）（API8）](data/Kvstore)
   - [`LiteStorage`：轻量级存储（eTS）（API8）](data/LiteStorage)
   - [`Rdb`：关系型数据库（eTS）（API8）](data/Rdb)
   - [`DDMQuery`：结果集与谓词（eTS）（API8）](data/DDMQuery)
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）](data/DistributedRdb)
+  - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
@@ -59,6 +61,7 @@
   - [`Browser`：浏览器（eTS）（API9）](device/Browser)
 - Graphics
   - [`JsWebGL`：WebGL(JS)（API8）](Graphics/JsWebGL)
+  - [`Window`：窗口(eTS)（API9）](Graphics/Window)
 - media
   - [`JsAudioPlayer`：音频播放和管理（JS）（API8）](media/JsAudioPlayer)
   - [`JsVideo`：视频播放（JS）（API8）](media/JsVideo)
@@ -96,9 +99,12 @@
   - [`BringApp`：拉起系统应用（eTS）（API8）](ETSUI/BringApp)
   - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
   - [`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
+  - [`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
 - FileManager
   - [`Environment`：目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
+- Native
+  - [`NativeAPI`：NativeAPI（eTS）（API8）](Native/NativeAPI)
 - Notification
   - [`CommonEvent`：订阅公共事件（eTS）（API8）](Notification/CommonEvent)
   - [`Emitter`：处理进程内事件（eTS）（API8）](Notification/Emitter)
