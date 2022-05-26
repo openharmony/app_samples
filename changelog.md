@@ -1,8 +1,14 @@
 # 5月5日-5月13日新增sample
-1.Shopping: 购物示例应用（eTS）（API8）https://gitee.com/openharmony/app_samples/tree/master/AppSample/Shopping
-2.Chat: 聊天示例应用（eTS）（API8）https://gitee.com/openharmony/app_samples/tree/master/AppSample/Chat 
-3.Browser: 浏览器（eTS）（API9）https://gitee.com/openharmony/app_samples/tree/master/device/Browser
-4.DeviceUsageStatistics: 设备使用信息统计（eTS）（API8）https://gitee.com/openharmony/app_samples/tree/master/device/DeviceUsageStatistics
-5.AdaptiveCapabilities: 多设备自适应能力（eTS）（API9）https://gitee.com/openharmony/app_samples/tree/master/ETSUI/AdaptiveCapabilities
-6.Game2048: 2048游戏（eTS）（API9）https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Game2048
-7.JsAdaptiveServiceWidget: 多设备自适应服务卡片（JS）（API8）https://gitee.com/openharmony/app_samples/tree/master/UI/JsAdaptiveServiceWidget
+1.[`Shopping`：购物示例应用（eTS）（API8）](AppSample/Shopping)
+2.[`Chat`：聊天示例应用（eTS）（API8）](AppSample/Chat)
+3.[`Browser`：浏览器（eTS）（API9）](device/Browser)
+4.[`DeviceUsageStatistics`：设备使用信息统计（eTS）（API8）](device/DeviceUsageStatistics)
+5.[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
+6.[`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
+7.[`JsAdaptiveServiceWidget`：多设备自适应服务卡片（JS）（API8）](UI/JsAdaptiveServiceWidget)
+# 5月13日-5月25日新增sample
+1.[`Window`：窗口(eTS)（API9）](Graphics/Window)
+2.[`Preferences`：首选项（eTS）（API9）](data/Preferences)
+3.[`NativeAPI`：NativeAPI（eTS）（API8）](Native/NativeAPI)
+4.[`International`：国际化（eTS）（API8）](common/International)
+5.[`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)

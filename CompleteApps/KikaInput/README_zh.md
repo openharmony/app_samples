@@ -82,9 +82,5 @@ kikainput是一个轻量级的输入法应用，支持在运行OpenHarmony OS的
 
 **2.配置签名文件然后进行打包**
 
-配置签名文件可以参照:[https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/configuring-openharmony-app-signature.md]()
-
-**3.把生产的签名文件上传到开发板上进行调试**
-
-具体操作可参照：[https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/installing-openharmony-app.md]()
+配置签名文件可以参照:[https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/hapsigntool-guidelines.md]
 
