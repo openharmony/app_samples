@@ -83,9 +83,6 @@ struct Query {
           ListItem() {
             BookView({ book: item, deleteCallback: null })
           }
-          .onClick(() => {
-            router.push({ url: 'pages/update', params: { book: item } })
-          })
         }, item => JSON.stringify(item))
       }
       .width('100%')
