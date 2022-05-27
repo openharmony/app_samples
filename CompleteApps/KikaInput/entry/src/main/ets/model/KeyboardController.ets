@@ -50,8 +50,8 @@ export class KeyboardController {
       this.inputHandle.addLog("initWindow-oncall display");
       var dWidth = dis.width;
       var dHeight = dis.height;
-      var navigationbar_height = dHeight * 0.07;
-      var keyHeightRate = 0.47;
+      var navigationbar_height = 75;
+      var keyHeightRate = 0.43;
       if (dWidth == 1080 && dHeight == 2376) {
         navigationbar_height = 105
         keyHeightRate = 35/99
