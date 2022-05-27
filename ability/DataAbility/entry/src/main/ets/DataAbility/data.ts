@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import featureAbility from '@ohos.ability.featureAbility';
 import dataAbility from '@ohos.data.dataAbility'
 import dataRdb from '@ohos.data.rdb'
 
@@ -27,8 +27,8 @@ export default {
     onInitialized(abilityInfo) {
         console.info(`${TAG} DataAbility onInitialized`)
         console.log(`${TAG} create table begin`)
-        dataRdb.getRdbStore(STORE_CONFIG, 1, (err, rdb) => {
-            if(err){
+        dataRdb.getRdbStore(featureAbility.getContext(), STORE_CONFIG, 1, (err, rdb) => {
+            if (err) {
                 console.log(`${TAG} create table err = ${JSON.stringify(err)}`)
             }
             console.log(`${TAG} create table done`)

@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import router from '@ohos.router';
-import prompt from '@system.prompt';
+import router from '@ohos.router'
+import prompt from '@ohos.prompt'
 import dataAbility from '@ohos.data.dataAbility'
 import { BASE_URI, DA_HELPER } from '../model/DaHelperConst'
 import { BookModel } from '../model/BookDataModel'
@@ -23,7 +23,7 @@ const TAG = 'DataAbility.Update'
 @Entry
 @Component
 struct Update {
-  private book: BookModel = <BookModel> router.getParams()["book"]
+  private book: BookModel = <BookModel> router.getParams()['book']
 
   aboutToAppear() {
     console.info(TAG + ' aboutToAppear')
