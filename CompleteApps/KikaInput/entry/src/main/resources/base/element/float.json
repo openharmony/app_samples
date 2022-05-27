@@ -79,6 +79,86 @@
     {
       "name": "keyboard_height",
       "value": "338vp"
+    },
+    {
+      "name": "rk_basic_button_width",
+      "value": "40vp"
+    },
+    {
+      "name": "rk_basic_button_height",
+      "value": "58.67vp"
+    },
+    {
+      "name": "rk_feature_picSize",
+      "value": "32vp"
+    },
+    {
+      "name": "rk_switch_button_width",
+      "value": "58.67vp"
+    },
+    {
+      "name": "rk_return_picSize",
+      "value": "37.3vp"
+    },
+    {
+      "name": "rk_return_button_widthType_1",
+      "value": "106.93vp"
+    },
+    {
+      "name": "rk_return_button_widthType_2",
+      "value": "106.93vp"
+    },
+    {
+      "name": "rk_space_button_width_1",
+      "value": "184.8vp"
+    },
+    {
+      "name": "rk_space_button_width_2",
+      "value": "88.26vp"
+    },
+    {
+      "name": "rk_padding_top",
+      "value": "16vp"
+    },
+    {
+      "name": "rk_padding_left_right",
+      "value": "8vp"
+    },
+    {
+      "name": "rk_downMenu_height",
+      "value": "56vp"
+    },
+    {
+      "name": "rk_downMenu_pic_width",
+      "value": "32vp"
+    },
+    {
+      "name": "rk_downMenu_pic_height",
+      "value": "16vp"
+    },
+    {
+      "name": "rk_downMenu_width",
+      "value": "56vp"
+    },
+    {
+      "name": "rk_litter_number_fontSize",
+      "value": "10.6fp"
+    },
+    {
+      "name": "rk_en_fontSize",
+      "value": "26.67fp"
+    },
+    {
+      "name": "rk_switch_number_fontSize",
+      "value": "21.3fp"
+    },
+    {
+      "name": "rk_number_1234_fontSize",
+      "value": "18.67fp"
+    },
+    {
+      "name": "rk_keyboard_height",
+      "value": "316vp"
     }
   ]
 }
