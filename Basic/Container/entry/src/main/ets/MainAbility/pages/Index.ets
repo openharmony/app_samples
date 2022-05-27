@@ -18,7 +18,7 @@ import Information from '../model/Information'
 import Logger from '../model/Logger'
 import ArrayList from '@ohos.util.ArrayList'
 
-const TAG = 'index'
+const TAG = '[index]'
 
 @Entry
 @Component
@@ -69,6 +69,7 @@ struct Index {
         .align(Alignment.End)
         .onClick(() => {
           this.dialogController.open()
+          Logger.info(TAG, `enter the AddDialog`)
         })
       }
       .height(100).width('100%')

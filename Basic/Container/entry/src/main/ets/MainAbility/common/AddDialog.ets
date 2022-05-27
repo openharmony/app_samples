@@ -17,14 +17,18 @@ import prompt from '@ohos.prompt'
 import Information from '../model/Information'
 import Logger from '../model/Logger'
 
-const TAG = 'addDialog'
+const TAG = '[addDialog]'
 
 @CustomDialog
 export struct AddDialog {
-  private writeInformation: Information = new Information(0, '', NaN, '')
+  @State writeInformation: Information = new Information(0, '', NaN, '')
   private isInserted: boolean = false
   private saveData: (isInserted: boolean, information: Information) => void
   private controller: CustomDialogController
+
+  aboutToAppear() {
+    Logger.info(TAG, `enter the AddDialog`)
+  }
 
   build() {
     Column() {
@@ -47,7 +51,6 @@ export struct AddDialog {
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .maxLength(20)
-          .inputFilter('^[A-Za-z0-9]*$')
           .onChange((value: string) => {
             this.writeInformation.name = value
           })
@@ -65,7 +68,7 @@ export struct AddDialog {
         TextInput({ placeholder: $r('app.string.input_age'), text: this.writeInformation.age.toString() })
           .layoutWeight(1)
           .type(InputType.Number)
-          .inputFilter('^[1-9][0-9]*$')
+          .inputFilter('^[1-9][0-9]*')
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .maxLength(3)
@@ -87,7 +90,7 @@ export struct AddDialog {
         TextInput({ placeholder: $r('app.string.input_phone'), text: this.writeInformation.phone })
           .layoutWeight(1)
           .type(InputType.Number)
-          .inputFilter('^1[0-9]*$')
+          .inputFilter('^1[0-9]*')
           .placeholderColor(Color.Gray)
           .fontSize(19)
           .maxLength(11)
