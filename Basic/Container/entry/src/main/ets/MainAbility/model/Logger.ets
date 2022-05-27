@@ -42,4 +42,4 @@ class Logger {
   }
 }
 
-export default new Logger('Container')
+export default new Logger('[Container]')
