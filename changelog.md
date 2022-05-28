@@ -6,9 +6,11 @@
 5.[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
 6.[`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
 7.[`JsAdaptiveServiceWidget`：多设备自适应服务卡片（JS）（API8）](UI/JsAdaptiveServiceWidget)
-# 5月13日-5月25日新增sample
+# 5月13日-5月28日新增sample
 1.[`Window`：窗口(eTS)（API9）](Graphics/Window)
 2.[`Preferences`：首选项（eTS）（API9）](data/Preferences)
 3.[`NativeAPI`：NativeAPI（eTS）（API8）](Native/NativeAPI)
 4.[`International`：国际化（eTS）（API8）](common/International)
 5.[`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
+6.[`FlipClock`: FlipClock（eTS）（API8）](CompleteApps/FlipClock)
+7.[`JsAnimator`: JsAnimator（Js）（API8）](UI/JsAnimator)

@@ -82,6 +82,7 @@
 - CompleteApps
   - [`KikaInput`：轻量级输入法（JS）（API9）](CompleteApps/KikaInput)
   - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
+  - [`FlipClock`：时钟（eTS）（API8）](CompleteApps/FlipClock)
 - ETSUI
   - [`Canvas`：画布组件（eTS）（API8）](ETSUI/Canvas)
   - [`CustomComponent`：组件化（eTS）（API8）](ETSUI/CustomComponent)
@@ -159,6 +160,7 @@
   - [`JSComponments`：Js组件（JS）（API8）](UI/JSComponments)
   - [`JsUserRegistration`：用户注册（JS）（API8）](UI/JsUserRegistration)
   - [`JsAdaptiveServiceWidget`：多设备自适应服务卡片（JS）（API8）](UI/JsAdaptiveServiceWidget)
+  - [`JsAnimator`：动画（JS）（API8）](UI/JsAnimator)
 - Util
   - [`UtilBase64Codec`：Base64编解码（eTS）（API8）](Util/UtilBase64Codec)
   - [`UtilScope`：范围判断（eTS）（API8）](Util/UtilScope)
