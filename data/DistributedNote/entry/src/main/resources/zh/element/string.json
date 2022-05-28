@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DistributedNote"
+    },
+    {
+      "name": "save",
+      "value": "保存"
+    },
+    {
+      "name": "clear",
+      "value": "清除"
+    },
+    {
+      "name": "add",
+      "value": "添加"
+    },
+    {
+      "name": "check_device",
+      "value": "选择设备"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "state",
+      "value": "状态: "
+    },
+    {
+      "name": "add_note",
+      "value": "添加备忘录 "
+    }
+  ]
+}

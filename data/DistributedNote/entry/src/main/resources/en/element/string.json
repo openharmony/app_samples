@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DistributedNote"
+    },
+    {
+      "name": "save",
+      "value": "Save"
+    },
+    {
+      "name": "clear",
+      "value": "Clear"
+    },
+    {
+      "name": "add",
+      "value": "Add"
+    },
+    {
+      "name": "check_device",
+      "value": "Check device"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "state",
+      "value": "State: "
+    },
+    {
+      "name": "add_note",
+      "value": "Add Note"
+    }
+  ]
+}
