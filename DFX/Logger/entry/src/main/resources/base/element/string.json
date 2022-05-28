@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Logger"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "log",
+      "value": "log"
+    }
+  ]
+}
