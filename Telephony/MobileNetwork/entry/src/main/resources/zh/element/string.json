@@ -1,0 +1,92 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "蜂窝数据"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "sim",
+      "value": "默认数据卡: "
+    },
+    {
+      "name": "simOne",
+      "value": "卡1"
+    },
+    {
+      "name": "simTwo",
+      "value": "卡2"
+    },
+    {
+      "name": "mobile",
+      "value": "移动数据: "
+    },
+    {
+      "name": "roaming",
+      "value": "漫游: "
+    },
+    {
+      "name": "flow",
+      "value": "数据流类型: "
+    },
+    {
+      "name": "connectData",
+      "value": "连接状态: "
+    },
+    {
+      "name": "none",
+      "value": "没有上行或下行数据"
+    },
+    {
+      "name": "down",
+      "value": "只有下行数据"
+    },
+    {
+      "name": "up",
+      "value": "只有上行数据"
+    },
+    {
+      "name": "upDown",
+      "value": "有上下行数据"
+    },
+    {
+      "name": "dormant",
+      "value": "没有上下行数据，底层链路处于休眠状态"
+    },
+    {
+      "name": "unknown",
+      "value": "蜂窝数据链路未知"
+    },
+    {
+      "name": "disconnect",
+      "value": "蜂窝数据链路断开"
+    },
+    {
+      "name": "connecting",
+      "value": "正在连接蜂窝数据链路"
+    },
+    {
+      "name": "connect",
+      "value": "蜂窝数据链路已连接"
+    },
+    {
+      "name": "suspended",
+      "value": "蜂窝数据链路被挂起"
+    },
+    {
+      "name": "error",
+      "value": "错误"
+    },
+    {
+      "name": "start",
+      "value": "开启"
+    },
+    {
+      "name": "end",
+      "value": "关闭"
+    }
+  ]
+}

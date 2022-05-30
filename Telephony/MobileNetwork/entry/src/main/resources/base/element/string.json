@@ -1,0 +1,92 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "MobileNetwork"
+    },
+    {
+      "name": "description_mainability",
+      "value": "eTS_Empty Ability"
+    },
+    {
+      "name": "sim",
+      "value": "Default Data Card: "
+    },
+    {
+      "name": "simOne",
+      "value": "Sim One"
+    },
+    {
+      "name": "simTwo",
+      "value": "Sim Two"
+    },
+    {
+      "name": "mobile",
+      "value": "Mobile Data: "
+    },
+    {
+      "name": "roaming",
+      "value": "Roaming: "
+    },
+    {
+      "name": "flow",
+      "value": "Data Flow Type: "
+    },
+    {
+      "name": "connectData",
+      "value": "Connect Data: "
+    },
+    {
+      "name": "none",
+      "value": "No upstream or downstream data"
+    },
+    {
+      "name": "down",
+      "value": "Only downlink data"
+    },
+    {
+      "name": "up",
+      "value": "Only upstream data"
+    },
+    {
+      "name": "upDown",
+      "value": "There is upstream and downstream data"
+    },
+    {
+      "name": "dormant",
+      "value": "There is no uplink and downlink data, and the underlying link is in a dormant state"
+    },
+    {
+      "name": "unknown",
+      "value": "Cellular data link unknown"
+    },
+    {
+      "name": "disconnect",
+      "value": "Cellular data link down"
+    },
+    {
+      "name": "connecting",
+      "value": "Connecting to cellular data link"
+    },
+    {
+      "name": "connect",
+      "value": "Cellular data link connected"
+    },
+    {
+      "name": "suspended",
+      "value": "Cellular data link is suspended"
+    },
+    {
+      "name": "error",
+      "value": "Error"
+    },
+    {
+      "name": "start",
+      "value": "Turn On"
+    },
+    {
+      "name": "end",
+      "value": "Turn Off"
+    }
+  ]
+}
