@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import Logger from './Logger'
+import prompt from '@ohos.prompt';
 
 export class WebObject {
   controller: WebController;
@@ -74,6 +75,12 @@ export class Browser {
   }
 
   addTab() {
+    if(this.webArray.length) {
+      prompt.showToast({
+        message: '页签数量已满'
+      })
+      return;
+    }
     let webController: WebController = new WebController();
     let object = new WebObject(webController, false)
     this.webControllerArray.push(object)

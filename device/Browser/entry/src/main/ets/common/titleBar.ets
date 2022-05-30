@@ -224,6 +224,7 @@ export struct WebTab {
           })
             .javaScriptAccess(true)
             .fileAccess(true)
+            .domStorageAccess(true)
             .userAgent(this.isPhone ? PHONE_USER_AGENT : PAD_USER_AGENT)
             .onPageBegin((event) => {
               Logger.info(TAG, `onPageBegin= ${JSON.stringify(event)}`)
