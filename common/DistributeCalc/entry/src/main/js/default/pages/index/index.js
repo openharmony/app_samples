@@ -18,8 +18,6 @@ import router from '@system.router';
 import RemoteDeviceModel from '../../common/RemoteDeviceModel.js';
 import featureAbility from '@ohos.ability.featureAbility';
 import {KvStoreModel} from '../../common/kvstoreModel.js';
-import bundle from '@ohos.bundle';
-import abilityAccessCtrl from '@ohos.abilityAccessCtrl';
 
 let pressedEqual = false;
 let kvStoreModel = new KvStoreModel();

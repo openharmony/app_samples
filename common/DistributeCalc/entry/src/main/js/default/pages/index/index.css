@@ -32,9 +32,6 @@
 
 .input {
     height: 60%;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
     padding-bottom: 2%;
 }
 
@@ -74,18 +71,20 @@
 
 .input-area {
     width: 100%;
+    position: relative;
 }
 
-.calc-icon1 {
-    width: 15%;
-    height: 16%;
-    object-fit: contain;
-}
-
-.calc-text-btn, .calc-op-btn, .calc-equals-btn {
+.calc-text-btn,
+.calc-op-btn,
+.calc-equals-btn {
     border-radius: 16px;
     width: 18%;
     height: 22%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-number {
     font-size: 36px;
 }
 
@@ -160,32 +159,6 @@
     height: 45%;
 }
 
-.calc-icon-row-1 {
-    top: 5%;
-}
-
-.calc-icon-row-2 {
-    top: 29%;
-}
-
-.calc-icon-row-3 {
-    top: 52%;
-}
-
-.calc-icon-row-4 {
-    top: 75%;
-}
-
-.calc-icon-col-1 {
-    left: 69%;
-    transform: translateX(-50%);
-}
-
-.calc-icon-col-2 {
-    left: 88%;
-    transform: translateX(-50%);
-}
-
 .calc-select-device-btn {
     left: 80%;
     width: 20%;
@@ -218,15 +191,9 @@
     height: 60%;
 }
 
-.calc-icon-col-3 {
-    left: 88%;
-    transform: translateX(-50%);
-    top: 63%;
-}
-
 .calc-select-device-item-cancel-btn {
     text-align: center;
-    color: #0000ff;
+    color: #00F;
     font-size: 30px;
 }
 
