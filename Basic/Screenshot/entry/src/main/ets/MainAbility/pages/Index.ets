@@ -17,22 +17,24 @@ import screenshot from '@ohos.screenshot'
 import image from '@ohos.multimedia.image'
 import { TitleBar } from '../common/TitleBar'
 import { CustomBtn } from '../common/CustomBtn'
-import { ScreenshotDialog } from '../common/ScreenshotDialog'
+import MediaUtils from '../model/MediaUtils'
+import mediaLibrary from '@ohos.multimedia.mediaLibrary'
+import fileio from '@ohos.fileio'
+import Logger from '../model/Logger'
+import prompt from '@ohos.prompt'
 
 const TAG = '[Screenshot]'
+const PERMISSIONS: Array<string> = [
+  'ohos.permission.READ_MEDIA',
+  'ohos.permission.WRITE_MEDIA',
+  'ohos.permission.CAPTURE_SCREEN']
 
 @Entry
 @Component
 struct Index {
-  @State pixelMap: image.PixelMap = undefined
-
-  private screenshotDialogController: CustomDialogController = new CustomDialogController({
-    builder: ScreenshotDialog({ pixelMap: this.pixelMap }),
-    autoCancel: true
-  })
-
+  private mediaUtil = MediaUtils.getInstance()
   getScreen = (isFullScreen) => {
-    console.info(`${TAG} getScreen,isFullScreen: ${isFullScreen}`)
+    Logger.info(`${TAG} getScreen,isFullScreen: ${isFullScreen}`)
     let screenshotOptions: screenshot.ScreenshotOptions = {
       screenRect: { left: 0, top: 0, width: 400, height: 400 },
       imageSize: { width: 400, height: 400 },
@@ -46,14 +48,30 @@ struct Index {
     }
     screenshot.save(screenshotOptions, (err, data: image.PixelMap) => {
       if (err) {
-        console.error(`${TAG}Failed to save the screenshot. Error:${JSON.stringify(err)}`)
+        Logger.info(TAG, `Failed to save the screenshot. Error:${JSON.stringify(err)}`)
       }
-      if(this.pixelMap !== undefined) {
-        this.pixelMap.release()
-      }
-      this.pixelMap = data
-      this.screenshotDialogController.open()
+      Logger.info(TAG, 'save callback')
+      this.savePicture(data)
     })
+  }
+
+  async savePicture(data) {
+    Logger.info(TAG, `savePicture`)
+    let packOpts: image.PackingOption = { format: "image/jpeg", quality: 100 }
+    let imagePackerApi = image.createImagePacker()
+    let arrayBuffer = await imagePackerApi.packing(data, packOpts)
+    let fileAsset = await this.mediaUtil.createAndGetUri(mediaLibrary.MediaType.IMAGE)
+    let fd = await fileAsset.open('Rw')
+    Logger.info(TAG, `fd=${fd}`)
+    imagePackerApi.release()
+    await fileio.write(fd, arrayBuffer)
+    await fileAsset.close(fd)
+    Logger.info(TAG, `write done`)
+    prompt.showToast({ message: '图片保存成功，请前往图库中查看', duration: 1000 })
+  }
+
+  aboutToAppear() {
+    featureAbility.getContext().requestPermissionsFromUser(PERMISSIONS, 3)
   }
 
   build() {

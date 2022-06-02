@@ -66,6 +66,12 @@
     "reqPermissions": [
       {
         "name": "ohos.permission.CAPTURE_SCREEN"
+      },
+      {
+        "name": "ohos.permission.WRITE_MEDIA"
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA"
       }
     ]
   }
