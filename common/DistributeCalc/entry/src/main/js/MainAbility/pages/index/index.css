@@ -1,0 +1,215 @@
+/*
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.calc-container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.calc-icon {
+    width: 50px;
+    height: 70%;
+    object-fit: contain;
+}
+
+.content {
+    height: 40%;
+    flex-direction: column;
+}
+
+.input {
+    height: 60%;
+    padding-bottom: 2%;
+}
+
+.calc-titlebar {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+
+.calc-back-btn {
+    left: 5%;
+}
+
+.calc-title {
+    left: 50px;
+    font-size: 28px;
+}
+
+.calc-expr, .calc-rsl {
+    padding: 0 3%;
+}
+
+.calc-expr {
+    color: #000000;
+    width: 100%;
+    font-size: 35px;
+    height: 42%;
+    margin-top: 1%;
+}
+
+.calc-rsl {
+    color: #999;
+    width: 100%;
+    font-size: 31px;
+    height: 45%;
+}
+
+.input-area {
+    width: 100%;
+    position: relative;
+}
+
+.calc-text-btn,
+.calc-op-btn,
+.calc-equals-btn {
+    border-radius: 16px;
+    width: 18%;
+    height: 22%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-number {
+    font-size: 36px;
+}
+
+.calc-text-btn {
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+.calc-text-btn:active {
+    background-color: rgb(72, 72, 72);
+}
+
+.calc-op-btn {
+    background-color: #4D3F97E9;
+    color: #FF3F97E9;
+}
+
+.calc-op-btn:active {
+    background-color: rgb(54, 76, 97);
+}
+
+.calc-equals-btn {
+    background-color: #FF006CDE;
+    color: #fff;
+}
+
+.calc-equals-btn:active {
+    background-color: rgb(38, 129, 226);
+}
+
+.calc-btn-row-1 {
+    top: 2%;
+}
+
+.calc-btn-row-2 {
+    top: 25%;
+}
+
+.calc-btn-row-3 {
+    top: 48%;
+}
+
+.calc-btn-row-4 {
+    top: 71%;
+}
+
+.calc-btn-col-1 {
+    left: 3%;
+}
+
+.calc-btn-col-2 {
+    left: 22%;
+}
+
+.calc-btn-col-3 {
+    left: 41%;
+}
+
+.calc-btn-col-4 {
+    left: 60%;
+}
+
+.calc-btn-col-5 {
+    left: 79%;
+}
+
+.calc-btn-row-span-2 {
+    width: 37%;
+}
+
+.calc-btn-col-span-2 {
+    height: 45%;
+}
+
+.calc-select-device-btn {
+    left: 80%;
+    width: 20%;
+}
+
+.calc-select-device-btn:active {
+    background-color: #FFE0E0E0;
+    border-radius: 10px;
+}
+
+.calc-select-device-dialog {
+    width: 80%;
+    height: 240px;
+}
+
+.calc-select-device-wrapper {
+    width: 95%;
+    margin-left: 5%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.calc-select-device-text {
+    width: 100%;
+    height: 20%;
+}
+
+.calc-select-device-item {
+    width: 100%;
+    height: 60%;
+}
+
+.calc-select-device-item-cancel-btn {
+    text-align: center;
+    color: #00F;
+    font-size: 30px;
+}
+
+.calc-select-device-item-title {
+    text-align: left;
+    font-size: 30px;
+}
+
+.calc-select-device-item-left {
+    width: 85%;
+    height: 100%;
+    text-align: left;
+    font-size: 30px;
+}
+
+.calc-select-device-item-right {
+    width: 40px;
+    height: 40px;
+}

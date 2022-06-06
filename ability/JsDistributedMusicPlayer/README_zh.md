@@ -36,21 +36,8 @@
 5. 打开音乐，点击左下角流转按钮，列表中会出现远端设备的id，选择远端设备id即可实现跨设备迁移播放
     ![](screenshots/device/distributed.gif)
 
-## 相关仓
-
-应用子系统
-
-multimedia_medialibrary_standard
-
-multimedia_media_standard
-
-device_manager
-
-distributedschedule_dms_fwk
-
-distributeddatamgr_datamgr
 ### 约束与限制
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
+2.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
