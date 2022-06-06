@@ -53,6 +53,7 @@
   - [`DDMQuery`：结果集与谓词（eTS）（API8）](data/DDMQuery)
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）](data/DistributedRdb)
   - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
+  - [`DistributedNote`：分布式备忘录(eTS)（API9）](data/DistributedNote)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
@@ -72,11 +73,13 @@
 - DFX
   - [`JsDotTest`：测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger`：故障日志获取（eTS）（API8）](DFX/FaultLogger)
+  - [`Logger`：日志打印(eTS)（API9）](DFX/Logger)
 - Telephony
   - [`Call`：拨打电话（eTS）（API8）](Telephony/Call)
   - [`Message`：短信服务（eTS）（API8）](Telephony/Message)
   - [`RadioTech`：网络搜索（eTS）（API8）](Telephony/RadioTech)
   - [`SimManager`：SIM卡管理（eTS）（API8）](Telephony/SimManager)
+  - [`MobileNetwork`：蜂窝数据(eTS)（API9）](Telephony/MobileNetwork)
 - thread
   - [`JsWorker`：启动一个worker（JS）（API8）](thread/JsWorker)
 - CompleteApps
