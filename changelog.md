@@ -14,3 +14,7 @@
 5.[`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
 6.[`FlipClock`: FlipClock（eTS）（API8）](CompleteApps/FlipClock)
 7.[`JsAnimator`: JsAnimator（Js）（API8）](UI/JsAnimator)
+# 5月28日-6月6日新增sample
+1.[`DistributedNote`：分布式备忘录(eTS)（API9）](data/DistributedNote)
+2.[`Logger`：日志打印(eTS)（API9）](DFX/Logger)
+3.[`MobileNetwork`：蜂窝数据(eTS)（API9）](Telephony/MobileNetwork)
