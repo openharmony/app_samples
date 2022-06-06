@@ -1,12 +1,16 @@
 {
   "string": [
     {
-      "name": "app_name",
-      "value": "音乐"
+      "name": "entry_desc",
+      "value": "description"
     },
     {
-      "name": "mainability_description",
-      "value": "Music player main page"
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "音乐"
     }
   ]
 }

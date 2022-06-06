@@ -27,4 +27,4 @@
 
 3.分布式计算功能使用的前提是分布式组网。
 
-4.本示例为api 7工程，使用DevEco Studio 3.0 Beta2 for HarmonyOS编译运行。
+4.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
