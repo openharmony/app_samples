@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "简单二维码工具"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "简单二维码工具"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "二维码"
+    },
+    {
+      "name": "input_placeholder",
+      "value": "输入内容, 二维码会自动生成"
+    },
+    {
+      "name": "save",
+      "value": "保存二维码"
+    },
+    {
+      "name": "check_qrcode_file",
+      "value": "选择二维码文件"
+    },
+    {
+      "name": "parse_qrcode",
+      "value": "解析二维码"
+    },
+    {
+      "name": "create_qrcode",
+      "value": "生成二维码"
+    }
+  ]
+}
