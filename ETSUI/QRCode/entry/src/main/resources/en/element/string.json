@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "Simple qrcode tool"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Simple qrcode tool"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "QRCode"
+    },
+    {
+      "name": "input_placeholder",
+      "value": "Enter the content, the QR code will be automatically generated"
+    },
+    {
+      "name": "save",
+      "value": "Save qrcode"
+    },
+    {
+      "name": "check_qrcode_file",
+      "value": "Check qrcode file"
+    },
+    {
+      "name": "parse_qrcode",
+      "value": "Parse qrcode"
+    },
+    {
+      "name": "create_qrcode",
+      "value": "Create qrcode"
+    }
+  ]
+}
