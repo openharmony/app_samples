@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "mission locked unlocked clear and move"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "任务管理"
+    },
+    {
+      "name": "title",
+      "value": "MissionManager"
+    },
+    {
+      "name": "get_mission_manager",
+      "value": "下拉获取系统任务信息"
+    },
+    {
+      "name": "bundle_name",
+      "value": "应用包名:"
+    },
+    {
+      "name": "running_state",
+      "value": "任务是否运行:"
+    },
+    {
+      "name": "locked_state",
+      "value": "任务是否锁定:"
+    },
+    {
+      "name": "continuable",
+      "value": "任务是否支持迁移:"
+    },
+    {
+      "name": "locked_mission",
+      "value": "锁定"
+    },
+    {
+      "name": "unlocked_mission",
+      "value": "解锁"
+    },
+    {
+      "name": "clear_mission",
+      "value": "删除"
+    },
+    {
+      "name": "move_mission",
+      "value": "移动"
+    },
+    {
+      "name": "is",
+      "value": "是"
+    },
+    {
+      "name": "no",
+      "value": "否"
+    }
+  ]
+}
