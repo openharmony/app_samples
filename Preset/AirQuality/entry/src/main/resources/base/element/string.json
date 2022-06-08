@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "AirQuality"
+    },
+    {
+      "name": "air_quality",
+      "value": "空气质量"
+    },
+    {
+      "name": "co",
+      "value": "CO"
+    },
+    {
+      "name": "so2",
+      "value": "SO2"
+    },
+    {
+      "name": "pm10",
+      "value": "PM10"
+    },
+    {
+      "name": "pm2p5",
+      "value": "PM2.5"
+    },
+    {
+      "name": "no2",
+      "value": "NO2"
+    },
+    {
+      "name": "history",
+      "value": "历史记录"
+    },
+    {
+      "name": "message_from",
+      "value": "信息来源：tianqi.com"
+    },
+    {
+      "name": "update_time",
+      "value": "更新时间："
+    },
+    {
+      "name": "aqi",
+      "value": "AQI"
+    }
+  ]
+}
