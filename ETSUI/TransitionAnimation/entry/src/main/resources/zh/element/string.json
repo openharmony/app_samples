@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "转场动画"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "转场动画"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "转场动画"
+    },
+    {
+      "name": "page_transition_bottom",
+      "value": "页面间转场：底部滑入"
+    },
+    {
+      "name": "page_transition_custom_first",
+      "value": "页面间转场：自定义1"
+    },
+    {
+      "name": "page_transition_custom_second",
+      "value": "页面间转场：自定义2"
+    },
+    {
+      "name": "component_transition",
+      "value": "组件内转场"
+    },
+    {
+      "name": "share_transition",
+      "value": "共享元素转场"
+    },
+    {
+      "name": "show",
+      "value": "显示"
+    },
+    {
+      "name": "hide",
+      "value": "隐藏"
+    },
+    {
+      "name": "share_transition_tips",
+      "value": "点击查看共享元素动效"
+    }
+  ]
+}
