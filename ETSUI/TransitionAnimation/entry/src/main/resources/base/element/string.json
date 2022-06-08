@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "Transition animation"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Transition animation"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "TransitionAnimation"
+    },
+    {
+      "name": "page_transition_bottom",
+      "value": "Inter-page transition: Slide in at the bottom"
+    },
+    {
+      "name": "page_transition_custom_first",
+      "value": "Inter-page transition: Custom first"
+    },
+    {
+      "name": "page_transition_custom_second",
+      "value": "Inter-page transition: Custom second"
+    },
+    {
+      "name": "component_transition",
+      "value": "In-component transition"
+    },
+    {
+      "name": "share_transition",
+      "value": "Share element transition"
+    },
+    {
+      "name": "show",
+      "value": "Show"
+    },
+    {
+      "name": "hide",
+      "value": "Hide"
+    },
+    {
+      "name": "share_transition_tips",
+      "value": "Click to view the shared element animation"
+    }
+  ]
+}
