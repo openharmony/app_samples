@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "npm使用"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "npm使用"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "npm"
+    },
+    {
+      "name": "first_mathjs",
+      "value": "mathjs实现生成6位验证码"
+    },
+    {
+      "name": "generate_captcha",
+      "value": "点击生成验证码"
+    },
+    {
+      "name": "next_page",
+      "value": "下一页"
+    },
+    {
+      "name": "second_dayjs",
+      "value": "dayjs实现日期计算"
+    },
+    {
+      "name": "input_math_date",
+      "value": "请输入需要计算的日期"
+    },
+    {
+      "name": "before_day",
+      "value": "向前推多少天"
+    },
+    {
+      "name": "after_day",
+      "value": "向后推多少天"
+    },
+    {
+      "name": "sure",
+      "value": "确定"
+    },
+    {
+      "name": "third_string_splicing",
+      "value": "本地库实现字符串拼接"
+    },
+    {
+      "name": "input_first_string",
+      "value": "请输入第一个字符串"
+    },
+    {
+      "name": "input_second_string",
+      "value": "请输入第二个字符串"
+    },
+    {
+      "name": "input_before_after",
+      "value": "请输入向前/向后推的天数"
+    },
+    {
+      "name": "import_library",
+      "value": "导入第三方类库"
+    }
+  ]
+}

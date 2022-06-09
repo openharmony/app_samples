@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "page_show",
+      "value": "page from npm package"
+    },
+    {
+      "name": "import_local_library",
+      "value": "导入本地库"
+    },
+    {
+      "name": "sure",
+      "value": "确认"
+    }
+  ]
+}
