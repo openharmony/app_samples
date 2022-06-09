@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "use of npm"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "use of npm"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "npm"
+    },
+    {
+      "name": "first_mathjs",
+      "value": "mathjs implementation generates six bit captcha"
+    },
+    {
+      "name": "generate_captcha",
+      "value": "Click generate verification code"
+    },
+    {
+      "name": "next_page",
+      "value": "next page"
+    },
+    {
+      "name": "second_dayjs",
+      "value": "dayjs implements date calculation"
+    },
+    {
+      "name": "input_math_date",
+      "value": "please enter the date you want to calculate"
+    },
+    {
+      "name": "before_day",
+      "value": "how many days ahead"
+    },
+    {
+      "name": "after_day",
+      "value": "how many days back"
+    },
+    {
+      "name": "sure",
+      "value": "confirm"
+    },
+    {
+      "name": "third_string_splicing",
+      "value": "local library implements string concatenation"
+    },
+    {
+      "name": "input_first_string",
+      "value": "please input the first string"
+    },
+    {
+      "name": "input_second_string",
+      "value": "please input the second string"
+    },
+    {
+      "name": "input_before_after",
+      "value": "input the number of days to push forward/backward"
+    },
+    {
+      "name": "import_library",
+      "value": "Import third-party class library"
+    }
+  ]
+}
