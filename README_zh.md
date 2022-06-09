@@ -34,6 +34,7 @@
   - [`FormLauncher`：卡片使用方（eTS）（API8）](ability/FormLauncher)
   - [`ServiceExtAbility`：StageExtAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)
   - [`DistributedGraffiti`：分布式涂鸦（eTS）（API8）](ability/DistributedGraffiti)
+  - [`MissionManager`：系统任务管理(eTS)（API9）](ability/MissionManager)
 - common
   - [`AirQuality`：空气质量（JS）（API8）](common/AirQuality)
   - [`Clock`：时钟（JS）（API8）](common/Clock)
@@ -86,6 +87,8 @@
   - [`KikaInput`：轻量级输入法（JS）（API9）](CompleteApps/KikaInput)
   - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
   - [`FlipClock`：时钟（eTS）（API8）](CompleteApps/FlipClock)
+- EngineeringCapability
+  - [`Npm`：npm的使用(eTS)（API9）](EngineeringCapability/Npm)
 - ETSUI
   - [`Canvas`：画布组件（eTS）（API8）](ETSUI/Canvas)
   - [`CustomComponent`：组件化（eTS）（API8）](ETSUI/CustomComponent)
@@ -104,6 +107,7 @@
   - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
   - [`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
   - [`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
+  - [`TransitionAnimation`：转场动画(eTS)（API9）](ETSUI/TransitionAnimation)
 - FileManager
   - [`Environment`：目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
@@ -121,6 +125,10 @@
   - [`Clock`：简单时钟（eTS）（API9）](Preset/Clock)
   - [`FlashLight`：手电筒（eTS）（API8）](Preset/FlashLight)
   - [`DistributeCalc`：分布式计算器（eTS）（API8）](Preset/DistributeCalc)
+  - [`AirQuality`：空气质量(eTS)（API9）](Preset/AirQuality)
+  - [`DistributedMusicPlayer`：分布式音乐(eTS)（API9）](Preset/DistributedMusicPlayer)
+- PackageManagement
+  - [`ZipLib`：压缩与解压(eTS)（API9）](PackageManagement/ZipLib)
 - ResourcesSchedule
   - [`Flybird`：小鸟避障游戏（eTS）（API9）](ResourcesSchedule/Flybird)
   - [`News`：新闻浏览（eTS）（API9）](ResourcesSchedule/News)
