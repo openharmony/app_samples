@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "MainAbility_label",
+      "value": "ziplib"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Call the compressed file interface"
+    },
+    {
+      "name": "zip",
+      "value": "zip"
+    },
+    {
+      "name": "unzip",
+      "value": "unzip"
+    },
+    {
+      "name": "file_name",
+      "value": "FileName"
+    },
+    {
+      "name": "file_content",
+      "value": "FileContent"
+    },
+    {
+      "name": "button_confirm",
+      "value": "confirm"
+    },
+    {
+      "name": "button_cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "input_name",
+      "value": "Please enter a name"
+    },
+    {
+      "name": "input_content",
+      "value": "Please enter the file content"
+    },
+    {
+      "name": "create_file",
+      "value": "Create File"
+    }
+  ]
+}

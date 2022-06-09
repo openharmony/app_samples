@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "MainAbility_label",
+      "value": "ziplib"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "调用压缩文件接口"
+    },
+    {
+      "name": "zip",
+      "value": "压缩"
+    },
+    {
+      "name": "unzip",
+      "value": "解压"
+    },
+    {
+      "name": "file_name",
+      "value": "文件名称"
+    },
+    {
+      "name": "file_content",
+      "value": "文件内容"
+    },
+    {
+      "name": "button_confirm",
+      "value": "确认"
+    },
+    {
+      "name": "button_cancel",
+      "value": "取消"
+    },
+    {
+      "name": "input_name",
+      "value": "请输入名称"
+    },
+    {
+      "name": "input_content",
+      "value": "请输入文件内容"
+    },
+    {
+      "name": "create_file",
+      "value": "创建文件"
+    }
+  ]
+}
