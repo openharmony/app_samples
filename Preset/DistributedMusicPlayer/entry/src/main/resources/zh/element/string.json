@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "音乐播放和数据同步"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "音乐播放和数据同步"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "用于分布式数据迁移"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "音乐"
+    },
+    {
+      "name": "choiceDevice",
+      "value": "选择设备"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    }
+  ]
+}
