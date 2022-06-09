@@ -11,6 +11,10 @@
     {
       "name": "MainAbility_desc",
       "value": "description"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "分布式数据同步"
     }
   ]
 }

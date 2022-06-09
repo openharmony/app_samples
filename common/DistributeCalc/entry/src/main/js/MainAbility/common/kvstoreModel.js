@@ -67,6 +67,14 @@ export class KvStoreModel {
         });
     }
 
+    off() {
+        if (this.kvStore !== null) {
+            this.kvStore.off('dataChange', () => {
+                console.info('[KvStoreModel]  off dataChange');
+            })
+        }
+    }
+
     setOnMessageReceivedListener(msg, refreshdata) {
         console.info('[KvStoreModel] setOnMessageReceivedListener ' + msg);
         this.createKvStore(() => {

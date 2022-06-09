@@ -20,6 +20,7 @@ import { KvStoreModel } from '../../common/kvstoreModel.js';
 
 let pressedEqual = false;
 let kvStoreModel = new KvStoreModel();
+let timerId = 0
 
 export default {
     data: {
@@ -95,7 +96,7 @@ export default {
             pressedEqual = false;
             console.log('Calc[IndexPage] data expression:' + this.expression);
         });
-        setInterval(() => {
+         timerId = setInterval(() => {
             if (this.isDistributed) {
                 let temp = this.expression;
                 this.expression = temp;
@@ -104,13 +105,17 @@ export default {
     },
     stopDataListener() {
         console.log('Calc[IndexPage] stopDataListener');
+        kvStoreModel.off()
     },
-    onDestroy() {
+    onHide() {
         this.remoteDeviceModel.unregisterDeviceListCallback();
         if (this.isDistributed && kvStoreModel != null) {
             this.stopDataListener();
             this.isDistributed = false;
         }
+        clearInterval(timerId)
+        kvStoreModel = null
+        this.remoteDeviceModel = null
     },
     showDialog() {
         console.info('Calc[IndexPage] showDialog start');

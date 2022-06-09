@@ -62,7 +62,14 @@
     ],
     "reqPermissions": [
       {
-        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
+        "reason": "$string:distributed_permission",
+        "usedScene": {
+          "ability": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
       }
     ]
   }
