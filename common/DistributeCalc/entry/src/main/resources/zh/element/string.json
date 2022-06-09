@@ -3,6 +3,10 @@
     {
       "name": "app_name",
       "value": "计算器"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "分布式数据同步"
     }
   ]
 }

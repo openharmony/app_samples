@@ -2,15 +2,19 @@
   "string": [
     {
       "name": "entry_desc",
-      "value": "description"
+      "value": "音乐播放和数据流转"
     },
     {
       "name": "MainAbility_desc",
-      "value": "description"
+      "value": "音乐播放和数据流转"
     },
     {
       "name": "MainAbility_label",
       "value": "音乐"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "分布式数据同步"
     }
   ]
 }

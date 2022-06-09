@@ -3,6 +3,10 @@
     {
       "name": "app_name",
       "value": "DistributedCalc"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "distributed data sync"
     }
   ]
 }
