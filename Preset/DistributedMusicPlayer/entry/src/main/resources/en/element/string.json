@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "music play and data circulation"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "music play and data circulation"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "Used for distributed data migration"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "music"
+    },
+    {
+      "name": "choiceDevice",
+      "value": "Select Device"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    }
+  ]
+}
