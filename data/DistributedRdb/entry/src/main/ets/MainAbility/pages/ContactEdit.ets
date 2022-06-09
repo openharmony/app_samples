@@ -73,7 +73,7 @@ struct ContactEdit {
           this.contact.gender = 1
         })
     }
-    .width('35%')
+    .width(150)
     .padding(10)
     .backgroundColor(Color.White)
   }
@@ -109,44 +109,49 @@ struct ContactEdit {
   build() {
     Column() {
       TitleBar({ hasBackPress: true, rightBtn: $r('app.media.submit'), handleRightBtn: this.handleSubmit })
-      Image($r('app.media.contact_photo'))
-        .width('30%')
-        .aspectRatio(1)
-        .objectFit(ImageFit.Fill)
-        .onClick(() => {
-          router.back()
-        })
-      Row() {
-        Text($r('app.string.gender'))
-          .fontSize(25)
-        Text(this.contact.gender === 0 ? $r('app.string.male') : $r('app.string.female'))
-          .fontSize(25)
-          .border({ width: 1, color: Color.Black })
-          .width('30%')
-          .padding(5)
-          .margin({ left: 5 })
-          .textAlign(TextAlign.Center)
-          .bindPopup(this.handleSelect, {
-            builder: this.popupBuilder,
-            placement: Placement.Bottom,
-            maskColor: 0x33000000,
-            popupColor: Color.White,
-            enableArrow: false
-          })
-          .onClick(() => {
-            this.handleSelect = !this.handleSelect
-          })
-      }
+      Scroll(){
+        Column(){
+          Image($r('app.media.contact_photo'))
+            .width('30%')
+            .aspectRatio(1)
+            .objectFit(ImageFit.Fill)
+            .onClick(() => {
+              router.back()
+            })
+          Row() {
+            Text($r('app.string.gender'))
+              .fontSize(25)
+            Text(this.contact.gender === 0 ? $r('app.string.male') : $r('app.string.female'))
+              .fontSize(25)
+              .border({ width: 1, color: Color.Black })
+              .width('30%')
+              .padding(5)
+              .margin({ left: 5 })
+              .textAlign(TextAlign.Center)
+              .bindPopup(this.handleSelect, {
+                builder: this.popupBuilder,
+                placement: Placement.Bottom,
+                maskColor: 0x33000000,
+                popupColor: Color.White,
+                enableArrow: false
+              })
+              .onClick(() => {
+                this.handleSelect = !this.handleSelect
+              })
+          }
 
-      this.InputText($r('app.media.ic_contact'), $r('app.string.name'), this.contact.name, '', 20, (value: string) => {
-        this.contact.name = value
-      })
-      this.InputText($r('app.media.ic_telephone'), $r('app.string.phone'), this.contact.phone, '^1[0-9]*$', 11, (value: string) => {
-        this.contact.phone = value
-      })
-      this.InputText($r('app.media.ic_remark'), $r('app.string.remark'), this.contact.remark, '', 50, (value: string) => {
-        this.contact.remark = value
-      })
+          this.InputText($r('app.media.ic_contact'), $r('app.string.name'), this.contact.name, '', 20, (value: string) => {
+            this.contact.name = value
+          })
+          this.InputText($r('app.media.ic_telephone'), $r('app.string.phone'), this.contact.phone, '^1[0-9]*$', 11, (value: string) => {
+            this.contact.phone = value
+          })
+          this.InputText($r('app.media.ic_remark'), $r('app.string.remark'), this.contact.remark, '', 50, (value: string) => {
+            this.contact.remark = value
+          })
+        }
+      }
+      .layoutWeight(1)
     }
     .height('100%')
     .width('100%')
