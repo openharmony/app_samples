@@ -36,7 +36,7 @@
         "formsEnabled": false,
         "label": "$string:app_name",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "distro": {

@@ -52,10 +52,10 @@ limitations under the License.
             <div class="calc-text-btn calc-btn-row-2 calc-btn-col-1" @click="handleInput('4')">
                 <text class="text-number">4</text>
             </div>
-            <div class="calc-text-btn calc-btn-row-2 calc-btn-col-2" @click="handleInput('8')">
+            <div class="calc-text-btn calc-btn-row-2 calc-btn-col-2" @click="handleInput('5')">
                 <text class="text-number">5</text>
             </div>
-            <div class="calc-text-btn calc-btn-row-2 calc-btn-col-3" @click="handleInput('9')">
+            <div class="calc-text-btn calc-btn-row-2 calc-btn-col-3" @click="handleInput('6')">
                 <text class="text-number">6</text>
             </div>
             <div class="calc-op-btn calc-btn-row-2 calc-btn-col-4" @click="handleInput('*')">
