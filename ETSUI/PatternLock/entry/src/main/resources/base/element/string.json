@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "PatternLock"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "PatternLock"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "PatternLock"
+    },
+    {
+      "name": "message_input",
+      "value": "Please input password"
+    },
+    {
+      "name": "message_input_old",
+      "value": "Please input old password"
+    },
+    {
+      "name": "message_input_new",
+      "value": "Correct password,Please input new password"
+    },
+    {
+      "name": "message_password_length_insufficient",
+      "value": "The password length needs to be greater than 5"
+    },
+    {
+      "name": "message_input_again",
+      "value": "Input password again"
+    },
+    {
+      "name": "message_not_match",
+      "value": "The password does not match the last time, please re-enter"
+    },
+    {
+      "name": "message_correct",
+      "value": "Correct password,click \"Set password\""
+    },
+    {
+      "name": "message_incorrect",
+      "value": "Incorrect password"
+    },
+    {
+      "name": "message_set_password",
+      "value": "Set password"
+    },
+    {
+      "name": "message_set_success",
+      "value": "The password is set successfully, enter the password again to unlock"
+    },
+    {
+      "name": "message_unlock",
+      "value": "Unlock successfully, welcome to the home page"
+    },
+    {
+      "name": "reset_password",
+      "value": "Reset password"
+    }
+  ]
+}
