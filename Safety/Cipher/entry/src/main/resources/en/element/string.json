@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Cipher"
+    },
+    {
+      "name": "description_mainability",
+      "value": "Encryption and Decryption Algorithms"
+    },
+    {
+      "name": "encryption",
+      "value": "Encryption"
+    },
+    {
+      "name": "decrypt",
+      "value": "Decrypt"
+    },
+    {
+      "name": "reset",
+      "value": "Reset"
+    },
+    {
+      "name": "back",
+      "value": "Back"
+    }
+  ]
+}
