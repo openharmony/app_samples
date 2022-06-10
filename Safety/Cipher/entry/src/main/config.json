@@ -1,0 +1,69 @@
+{
+  "app": {
+    "vendor": "samples",
+    "bundleName": "ohos.samples.cipher",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "default",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:icon",
+        "description": "$string:description_mainability",
+        "formsEnabled": false,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.cipher",
+    "srcPath": "",
+    "name": ".entry",
+    "js": [
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/Index",
+          "pages/Second"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}

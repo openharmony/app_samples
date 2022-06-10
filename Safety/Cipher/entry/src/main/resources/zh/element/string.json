@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "加密与解密"
+    },
+    {
+      "name": "description_mainability",
+      "value": "加解密算法"
+    },
+    {
+      "name": "encryption",
+      "value": "加密"
+    },
+    {
+      "name": "decrypt",
+      "value": "解密"
+    },
+    {
+      "name": "reset",
+      "value": "重置"
+    },
+    {
+      "name": "back",
+      "value": "返回"
+    }
+  ]
+}
