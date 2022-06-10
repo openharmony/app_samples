@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "UserAuth"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "UserAuth"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "UserAuth"
+    },
+    {
+      "name": "face_unlock",
+      "value": "Start Face Unlock"
+    },
+    {
+      "name": "cancel_auth",
+      "value": "Cancel Authentication"
+    },
+    {
+      "name": "camera_tips",
+      "value": "Align the face with the front camera and press start button to unlock the face."
+    },
+    {
+      "name": "support_auth_success",
+      "value": "check support auth success"
+    },
+    {
+      "name": "support_auth_fail",
+      "value": "check support auth fail"
+    },
+    {
+      "name": "support_auth_message",
+      "value": "Please test after entering your face on a device that supports face"
+    },
+    {
+      "name": "cancel_auth_success",
+      "value": "cancel auth success"
+    },
+    {
+      "name": "cancel_auth_fail",
+      "value": "cancel auth fail"
+    },
+    {
+      "name": "cancel_auth_message",
+      "value": "Cancel auth fail, please try again later"
+    }
+  ]
+}
