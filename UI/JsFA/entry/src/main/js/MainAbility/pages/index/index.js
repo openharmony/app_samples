@@ -18,7 +18,7 @@ export default {
         cartText: 'Add To Cart',
         cartStyle: 'cart-text',
         isCartEmpty: true,
-        descriptionFirstParagraph: 'This is the merchandise page that includes fresh fruit, meat, snacks, merchandise, and more. \nYou can pick anything you like and add it to your cart. \nYour order will arrive within 48 hours. We guarantee that we are organic and healthy. \n Feel free to ask our 24-hour online service to learn more about our platforms and products.',
+        descriptionFirstParagraph: 'This is the merchandise page that includes some smartphone. \nYou can pick anything you like and add it to your cart. \nYour order will arrive within 72 hours. make sure our logistics arrive on time. \n Feel free to ask our 24-hour online service to learn more about our platforms and products.',
         imageList: ['/common/item_000.png', '/common/item_001.png', '/common/item_002.png', '/common/item_003.png'],
     },
 
