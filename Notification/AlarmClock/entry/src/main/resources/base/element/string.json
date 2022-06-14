@@ -9,6 +9,10 @@
       "value": "eTS_Empty Ability"
     },
     {
+      "name": "agent_permission",
+      "value": "用于发布代理提醒的权限"
+    },
+    {
       "name": "alarmClock",
       "value": "闹钟"
     },

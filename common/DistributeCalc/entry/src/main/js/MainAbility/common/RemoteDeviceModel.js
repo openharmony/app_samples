@@ -64,7 +64,6 @@ export default class RemoteDeviceModel {
         this.callback();
         console.info('Calc[RemoteDeviceModel] callback finished');
 
-
         this.deviceManager.on('deviceStateChange', (data) => {
             console.info('Calc[RemoteDeviceModel] deviceStateChange data=' + JSON.stringify(data));
             switch (data.action) {
@@ -150,6 +149,9 @@ export default class RemoteDeviceModel {
 
     unregisterDeviceListCallback() {
         console.info('Calc[RemoteDeviceModel] stopDeviceDiscovery ' + SUBSCRIBE_ID);
+        if(this.deviceManager === undefined){
+          return
+        }
         this.deviceManager.stopDeviceDiscovery(SUBSCRIBE_ID);
         this.deviceManager.off('deviceStateChange');
         this.deviceManager.off('deviceFound');

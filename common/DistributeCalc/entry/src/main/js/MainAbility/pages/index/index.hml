@@ -44,10 +44,10 @@ limitations under the License.
                 <text class="text-number">9</text>
             </div>
             <div class="calc-op-btn calc-btn-row-1 calc-btn-col-4" @click="handleInput('/')">
-                <image class="calc-icon" src="/common/ic_cal_devide.png" @click="handleInput('/')"></image>
+                <image class="calc-icon" src="/common/ic_cal_devide.png"></image>
             </div>
             <div class="calc-op-btn calc-btn-row-1 calc-btn-col-5" @click="handleBackspace()">
-                <image class="calc-icon" src="/common/ic_cal_delete.png" @click="handleBackspace()"></image>
+                <image class="calc-icon" src="/common/ic_cal_delete.png"></image>
             </div>
             <div class="calc-text-btn calc-btn-row-2 calc-btn-col-1" @click="handleInput('4')">
                 <text class="text-number">4</text>
@@ -59,10 +59,10 @@ limitations under the License.
                 <text class="text-number">6</text>
             </div>
             <div class="calc-op-btn calc-btn-row-2 calc-btn-col-4" @click="handleInput('*')">
-                <image class="calc-icon" src="/common/ic_cal_multiply.png" @click="handleInput('*')"></image>
+                <image class="calc-icon" src="/common/ic_cal_multiply.png"></image>
             </div>
-            <div class="calc-op-btn calc-btn-row-2 calc-btn-col-5" @click="handleBackspace()">
-                <image class="calc-icon" src="/common/ic_cal_c.png" @click="handleClear"></image>
+            <div class="calc-op-btn calc-btn-row-2 calc-btn-col-5" @click="handleClear">
+                <image class="calc-icon" src="/common/ic_cal_c.png"></image>
             </div>
             <div class="calc-text-btn calc-btn-row-3 calc-btn-col-1" @click="handleInput('1')">
                 <text class="text-number">1</text>
@@ -74,11 +74,11 @@ limitations under the License.
                 <text class="text-number">3</text>
             </div>
             <div class="calc-op-btn calc-btn-row-3 calc-btn-col-4" @click="handleInput('-')">
-                <image class="calc-icon" src="/common/ic_cal_minus.png" @click="handleInput('-')"></image>
+                <image class="calc-icon" src="/common/ic_cal_minus.png"></image>
             </div>
             <div class="calc-equals-btn calc-btn-row-3 calc-btn-col-5 calc-btn-col-span-2"
                  @click="handleEqual">
-                <image class="calc-icon" src="/common/ic_cal_equal.png" @click="handleEqual"></image>-->
+                <image class="calc-icon" src="/common/ic_cal_equal.png"></image>
             </div>
             <div class="calc-text-btn calc-btn-row-4 calc-btn-col-1 calc-btn-row-span-2" @click="handleInput('0')">
                 <text class="text-number">0</text>
@@ -87,7 +87,7 @@ limitations under the License.
                 <text class="text-number">.</text>
             </div>
             <div class="calc-op-btn calc-btn-row-4 calc-btn-col-4" @click="handleInput('+')">
-                <image class="calc-icon" src="/common/ic_cal_plus.png" @click="handleInput('+')"></image>
+                <image class="calc-icon" src="/common/ic_cal_plus.png"></image>
             </div>
         </stack>
     </div>

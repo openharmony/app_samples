@@ -88,8 +88,8 @@ export struct CustomDatePicker {
             let dateTime = { hour: this.hourTest, minute: this.minuteTest, reminderId: this.reminderId }
             Logger.info(TAG, `dateTime = ${JSON.stringify(dateTime)}`)
             StorageModel.getInstance().putStorageValue(`alarmClock${this.total}`, dateTime)
-            StorageModel.getInstance().putStorageValue('amount', this.total)
             this.total += 1
+            StorageModel.getInstance().putStorageValue('amount', this.total)
             this.controller.close()
             this.countChange(this.total)
           })

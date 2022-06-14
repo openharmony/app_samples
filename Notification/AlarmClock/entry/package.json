@@ -1,10 +1,11 @@
 {
-  "name": "entry",
-  "version": "1.0.0",
-  "ohos": {
-    "org": "huawei",
-    "buildTool": "hvigor",
-    "directoryLevel": "module"
-  },
-  "dependencies": {}
+	"devDependencies": {},
+	"name": "entry",
+	"ohos": {
+		"org": "huawei",
+		"directoryLevel": "module",
+		"buildTool": "hvigor"
+	},
+	"version": "1.0.0",
+	"dependencies": {}
 }

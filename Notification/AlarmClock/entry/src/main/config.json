@@ -13,7 +13,7 @@
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -43,7 +43,7 @@
         "formsEnabled": false,
         "label": "$string:entry_MainAbility",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "js": [
@@ -64,7 +64,14 @@
     ],
     "reqPermissions": [
       {
-        "name": "ohos.permission.PUBLISH_AGENT_REMINDER"
+        "name": "ohos.permission.PUBLISH_AGENT_REMINDER",
+        "reason": "$string:agent_permission",
+        "usedScene": {
+          "ability": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
       }
     ]
   }
