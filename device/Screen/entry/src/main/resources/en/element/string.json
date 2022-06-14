@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Screen Property"
+    },
+    {
+      "name": "description_mainability",
+      "value": "Monitor screen changes and read screen information"
+    },
+    {
+      "name": "info",
+      "value": "Device Info"
+    },
+    {
+      "name": "id",
+      "value": "Device Id"
+    },
+    {
+      "name": "refreshRate",
+      "value": "Device RefreshRate"
+    },
+    {
+      "name": "width",
+      "value": "Device Width"
+    },
+    {
+      "name": "height",
+      "value": "Device Height"
+    },
+    {
+      "name": "add_screen",
+      "value": "Add Screen"
+    },
+    {
+      "name": "remove_screen",
+      "value": "Remove Screen"
+    }
+  ]
+}
