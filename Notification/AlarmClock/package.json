@@ -1,14 +1,16 @@
 {
-  "name": "etsalarmclock",
-  "version": "1.0.0",
-  "ohos": {
-    "org": "huawei",
-    "buildTool": "hvigor",
-    "directoryLevel": "project"
-  },
-  "dependencies": {
-    "hypium": "^1.0.0",
-    "@ohos/hvigor": "1.0.6",
-    "@ohos/hvigor-ohos-plugin": "1.0.6"
-  }
+	"devDependencies": {},
+	"name": "etsalarmclock",
+	"ohos": {
+		"org": "huawei",
+		"directoryLevel": "project",
+		"buildTool": "hvigor"
+	},
+	"version": "1.0.0",
+	"dependencies": {
+		"@ohos/hypium": "1.0.0",
+		"@ohos/hvigor-ohos-plugin": "1.1.3",
+		"hypium": "^1.0.0",
+		"@ohos/hvigor": "1.1.3"
+	}
 }

@@ -12,6 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import { calc, isOperator } from '../../common/calculator.js';
 import app from '@system.app';
 import RemoteDeviceModel from '../../common/RemoteDeviceModel.js';
@@ -20,6 +21,7 @@ import { KvStoreModel } from '../../common/kvstoreModel.js';
 
 let pressedEqual = false;
 let kvStoreModel = new KvStoreModel();
+let remoteDeviceModel = new RemoteDeviceModel()
 let timerId = 0
 
 export default {
@@ -31,7 +33,6 @@ export default {
         isFA: false,
         isPush: false,
         isDistributed: false,
-        remoteDeviceModel: new RemoteDeviceModel(),
         deviceList: []
     },
     onInit() {
@@ -73,7 +74,7 @@ export default {
         kvStoreModel.setOnMessageReceivedListener('expression', (value) => {
             console.log('Calc[IndexPage] data changed:' + value);
             if (value === 'exit') {
-                console.info('Calc[CalcPage] app exit! ');
+                console.info('Calc[CalcPage] app exit!');
                 app.terminate();
                 return;
             }
@@ -96,7 +97,7 @@ export default {
             pressedEqual = false;
             console.log('Calc[IndexPage] data expression:' + this.expression);
         });
-         timerId = setInterval(() => {
+        timerId = setInterval(() => {
             if (this.isDistributed) {
                 let temp = this.expression;
                 this.expression = temp;
@@ -108,21 +109,24 @@ export default {
         kvStoreModel.off()
     },
     onHide() {
-        this.remoteDeviceModel.unregisterDeviceListCallback();
+        remoteDeviceModel.unregisterDeviceListCallback();
         if (this.isDistributed && kvStoreModel != null) {
             this.stopDataListener();
             this.isDistributed = false;
         }
         clearInterval(timerId)
         kvStoreModel = null
-        this.remoteDeviceModel = null
+        remoteDeviceModel = undefined
     },
     showDialog() {
         console.info('Calc[IndexPage] showDialog start');
         this.deviceList = [];
-        this.remoteDeviceModel.registerDeviceListCallback(() => {
+        if (remoteDeviceModel === undefined) {
+            remoteDeviceModel = new RemoteDeviceModel()
+        }
+        remoteDeviceModel.registerDeviceListCallback(() => {
             console.info('Calc[IndexPage] registerDeviceListCallback on remote device updated, count='
-            + this.remoteDeviceModel.deviceList.length);
+            + remoteDeviceModel.deviceList.length);
             let list = [];
             list.push({
                 deviceId: '0',
@@ -131,7 +135,7 @@ export default {
                 networkId: '',
                 checked: this.selectedIndex === 0
             });
-            let tempList = this.remoteDeviceModel.discoverList.length > 0 ? this.remoteDeviceModel.discoverList : this.remoteDeviceModel.deviceList;
+            let tempList = remoteDeviceModel.discoverList.length > 0 ? remoteDeviceModel.discoverList : remoteDeviceModel.deviceList;
             for (let i = 0; i < tempList.length; i++) {
                 console.info('Calc[IndexPage] device ' + i + '/' + tempList.length
                 + ' deviceId=' + tempList[i].deviceId + ' deviceName=' + tempList[i].deviceName
@@ -151,7 +155,7 @@ export default {
     },
     cancelDialog() {
         this.$element('showDialog').close();
-        this.remoteDeviceModel.unregisterDeviceListCallback();
+        remoteDeviceModel.unregisterDeviceListCallback();
     },
 
     selectDevice(item) {
@@ -173,14 +177,14 @@ export default {
         }
         console.log('Calc[IndexPage] start ability ......');
         this.isDistributed = true;
-        if (this.remoteDeviceModel === null || this.remoteDeviceModel.discoverList.length <= 0) {
+        if (remoteDeviceModel === undefined || remoteDeviceModel.discoverList.length <= 0) {
             console.log('Calc[IndexPage] continue device:' + JSON.stringify(this.deviceList));
             this.startAbility(this.deviceList[index].deviceId);
             this.clearSelectState();
             return;
         }
         console.log('Calc[IndexPage] start ability1, needAuth');
-        this.remoteDeviceModel.authenticateDevice(this.deviceList[index], () => {
+        remoteDeviceModel.authenticateDevice(this.deviceList[index], () => {
             console.log('Calc[IndexPage] auth and online finished');
             this.startAbility(this.deviceList[index].deviceId);
         });
@@ -224,7 +228,7 @@ export default {
                 if (size) {
                     const last = this.expression.charAt(size - 1);
                     if (isOperator(last)) {
-                        this.expression = this.expression.slice(0, -1);
+                        this.expression = this.expression.substring(0, this.expression.length - 1);
                     }
                 }
             }
@@ -249,7 +253,7 @@ export default {
             this.dataChange('expression', 'clear');
         } else {
             this.isPush = false;
-            this.expression = this.expression.slice(0, -1);
+            this.expression = this.expression.substring(0, this.expression.length - 1);
             if (!this.expression.length) {
                 this.result = '';
                 console.log('Calc[IndexPage] handleBackspace2');

@@ -20,7 +20,7 @@ import Logger from '../mode/Logger'
 const TAG = 'StorageModel'
 
 export default class StorageModel {
-  static instance: StorageModel  = null
+  static instance: StorageModel = null
   private storage = null
 
   public static getInstance() {
@@ -57,14 +57,15 @@ export default class StorageModel {
 
   async getStorageValue(getKey: string) {
     this.storage = await this.getStorage()
-    let getValue:string = this.storage.get(getKey, 'null')
+    let getValue: string = await this.storage.get(getKey, 'null')
     Logger.info(TAG, getValue)
     return getValue
   }
 
   async deleteSync(key: string) {
     await this.storage.delete(key)
+    await this.storage.flush()
     let result = await this.storage.get(key, 'null')
-    Logger.info(TAG,`delete success = ${JSON.stringify(result)}`)
+    Logger.info(TAG, `delete success = ${JSON.stringify(result)}`)
   }
 }

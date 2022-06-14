@@ -32,8 +32,11 @@ struct Index {
     Logger.info(TAG, `getTest`)
     this.listItems = []
     let amount = await this.storage.getStorageValue('amount')
-    Logger.info(TAG, `getTest amount = ${amount} ${typeof(amount)}`)
-    for (let i = 0;i <= parseInt(amount); i++) {
+    Logger.info(TAG, `getTest amount = ${amount}`)
+    if(amount !== 'null'){
+      this.total =  parseInt(amount)
+    }
+    for (let i = 0;i < this.total; i++) {
       let alarmClock = await this.storage.getStorageValue(`alarmClock${i}`)
       if (alarmClock != 'null') {
         let dataTime = JSON.parse(alarmClock).hour + ':' + JSON.parse(alarmClock).minute
@@ -52,7 +55,7 @@ struct Index {
 
   countChange(result) {
     this.total = result
-    Logger.info(TAG, 'countChange')
+    Logger.info(TAG, `countChange ${this.total}`)
     this.getTest()
   }
 
@@ -92,9 +95,6 @@ struct Index {
                   .onClick( async () => {
                     Logger.info(TAG, `key = ${item.key}`)
                     this.storage.deleteSync(item.key)
-                    let amount = await this.storage.getStorageValue('amount')
-                    let total =  parseInt(amount, 10) - 1
-                    this.storage.putStorageValue('amount', total)
                     this.listItems.splice(index, 1)
                     reminderAgent.cancelReminder(item.reminderId, () => {
                       Logger.info(TAG, `do next`)
