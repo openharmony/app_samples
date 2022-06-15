@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "五子棋"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "五子棋"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "五子棋"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "select_device",
+      "value": "选择设备"
+    },
+    {
+      "name": "restart",
+      "value": "重开"
+    },
+    {
+      "name": "repentance_chess",
+      "value": "悔棋"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "分布式权限"
+    }
+  ]
+}

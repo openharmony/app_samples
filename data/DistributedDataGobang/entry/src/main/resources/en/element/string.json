@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "Gobang"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Gobang"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Gobang"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "select_device",
+      "value": "SelectDevice"
+    },
+    {
+      "name": "restart",
+      "value": "Restart"
+    },
+    {
+      "name": "repentance_chess",
+      "value": "RepentanceChess"
+    },
+    {
+      "name": "distributed_permission",
+      "value": "distributedPermission"
+    }
+  ]
+}
