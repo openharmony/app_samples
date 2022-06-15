@@ -18,10 +18,10 @@ import Logger from './Logger'
 
 const TAG: string = '[CipherModel]'
 const AES_ENCRYPT_KEY: string = 'NDM5Qjk2UjAzMEE0NzVCRjlFMkQwQkVGOFc1NkM1QkQ='
-const RSA_ENCRYPT_KEY: string = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDc7GR2MrfAoefES+wrs1ns2afT\n' +
-'eJXSfIkEHfPXG9fVFjaws1ho4KcZfsxlA0+SXvc83f2SVGCuzULmM2lxxRCtcUN/\n' +
-'h7SoaYEeluhqFimL2AEjfSwINHCLqObJkcjCfoZpE1JCehPiDOJsyT50Auc08h/4\n' +
-'jHQfanyC1nc62LqUCQIDAQAB'
+const RSA_ENCRYPT_KEY: string = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCx414QSP3RsYWYzf9mkBMiBAXo\n' +
+'6S7Lpva1fKlcuVxjoFC1iMnzD4mC0uiL4k5MNi43J64c7dbqi3qAJjdAtuwQ6NZJ\n' +
+'+Enz0RzmVFh/4yk6lmqRzuEFQqhQqSZzaLq6sq2N2G0Sv2Xl3sLvqAfe2HNm2oBw\n' +
+'jBpApTJ3TeneOo6Z5QIDAQAB'
 const RSA_DECRYPT_KEY: string = 'MIICXgIBAAKBgQCx414QSP3RsYWYzf9mkBMiBAXo6S7Lpva1fKlcuVxjoFC1iMnz\n' +
 'D4mC0uiL4k5MNi43J64c7dbqi3qAJjdAtuwQ6NZJ+Enz0RzmVFh/4yk6lmqRzuEF\n' +
 'QqhQqSZzaLq6sq2N2G0Sv2Xl3sLvqAfe2HNm2oBwjBpApTJ3TeneOo6Z5QIDAQAB\n' +
@@ -98,8 +98,8 @@ export class CipherModel {
       // base64编码后的密钥
       key: AES_ENCRYPT_KEY,
       transformation: 'AES/CBC/PKCS5Padding',
-      ivOffset: 0,
-      ivLen: 16,
+      ivOffset: '0',
+      ivLen: '16',
       success: (info) => {
         result = info
         Logger.info(TAG, `result = ${JSON.stringify(result)}`)
@@ -126,8 +126,8 @@ export class CipherModel {
       // base64编码后的密钥
       key: AES_ENCRYPT_KEY,
       transformation: 'AES/CBC/PKCS5Padding',
-      ivOffset: 0,
-      ivLen: 16,
+      ivOffset: '0',
+      ivLen: '16',
       success: (info) => {
         result = info
         Logger.info(TAG, `data = ${JSON.stringify(result)}`)

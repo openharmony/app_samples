@@ -26,7 +26,7 @@ export class Apps {
             {
                 img: $r('app.media.camera'),
                 bundleName: 'com.ohos.camera',
-                abilityName: 'com.ohos.camera.MainAbility',
+                abilityName: 'MainAbility',
                 name: $r('app.string.camera')
             },
             {
