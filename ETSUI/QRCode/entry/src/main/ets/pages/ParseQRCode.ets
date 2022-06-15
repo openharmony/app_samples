@@ -20,7 +20,7 @@ import MediaUtils from '../model/MediaUtils'
 import TitleBar from '../common/TitleBar'
 
 const TAG: string = '[ParasQRCode]'
-const QRCODE_SIZE: number = 250 // 二维码的大小
+const QRCODE_SIZE: number = px2vp(250) // 二维码的大小
 
 @Entry
 @Component
@@ -79,9 +79,31 @@ struct ParseQRCode {
             .width('90%')
             .margin({ top: 40, bottom: 40 })
           this.OperationBtn($r('app.string.check_qrcode_file'), () => {
+            // 3.2 beta分支abilityName使用com.ohos.filepicker.MainAbility
             globalThis.abilityContext.startAbilityForResult({
               bundleName: "com.ohos.filepicker",
               abilityName: "com.ohos.filepicker.MainAbility",
+              parameters: {
+                startMode: 'choose'
+              }
+            }
+            ).then(async (data) => {
+              this.result = ''
+              let result = data.want.parameters.result
+              let images = result.split(';')
+              Logger.info(TAG, `this.images = ${JSON.stringify(images)}`)
+              this.uploadQrcodeImage = await MediaUtils.getPixelMap(images[0])
+              if (this.uploadQrcodeImage === null) {
+                prompt.showToast({ message: '所选文件不是图片', duration: 1000 })
+                return
+              }
+              this.context.clearRect(0, 0, QRCODE_SIZE, QRCODE_SIZE)
+              this.context.drawImage(this.uploadQrcodeImage, 0, 0, QRCODE_SIZE, QRCODE_SIZE)
+            })
+            // 主干master分支abilityName使用MainAbility
+            globalThis.abilityContext.startAbilityForResult({
+              bundleName: "com.ohos.filepicker",
+              abilityName: "MainAbility",
               parameters: {
                 startMode: 'choose'
               }

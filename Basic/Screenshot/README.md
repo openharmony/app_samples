@@ -6,9 +6,9 @@
 
 ### Usage
 
-1. Touch **Fullscreen snapshot** to take and display a full-screen snapshot.
+1. Touch **Fullscreen snapshot** to take and sava full-screen snapshot.
 
-2. Touch **Fixed-size screenshot** to take and display a fixed-size screenshot.
+2. Touch **Fixed-size screenshot** to take and save fixed-size screenshot.
 
 ### Constraints
 

@@ -20,9 +20,9 @@ import MediaUtils from '../model/MediaUtils'
 import TitleBar from '../common/TitleBar'
 
 const TAG: string = '[CreateQRCode]'
-const QRCODE_SIZE: number = 400 // 生成二维码的大小
-const QRCODE_PADDING: number = 10 // 二维码保存时图片边距
-const QRCODE_TOP: number = 170 // 二维码保存时图片顶部距离屏幕顶部边缘距离
+const QRCODE_SIZE: number = 300 // 生成二维码的大小
+const QRCODE_PADDING: number = 50 // 二维码保存时图片边距
+const QRCODE_TOP: number = 150 // 二维码保存时图片顶部距离屏幕顶部边缘距离
 
 @Entry
 @Component
@@ -38,7 +38,10 @@ struct CreateQRCode {
         width: QRCODE_SIZE + 2 * QRCODE_PADDING,
         height: QRCODE_SIZE + 2 * QRCODE_PADDING
       },
-      imageSize: { width: QRCODE_SIZE + 2 * QRCODE_PADDING, height: QRCODE_SIZE + 2 * QRCODE_PADDING },
+      imageSize: {
+        width: QRCODE_SIZE + 2 * QRCODE_PADDING,
+        height: QRCODE_SIZE + 2 * QRCODE_PADDING
+      },
       rotation: 0,
       displayId: 0
     }
@@ -64,7 +67,7 @@ struct CreateQRCode {
       Scroll() {
         Column() {
           QRCode(this.codeStr)
-            .width(QRCODE_SIZE)
+            .width(px2vp(QRCODE_SIZE))
             .aspectRatio(1)
             .margin(40)
           TextInput({ placeholder: $r('app.string.input_placeholder'), text: this.codeStr })

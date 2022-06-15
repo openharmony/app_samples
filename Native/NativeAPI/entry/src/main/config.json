@@ -11,7 +11,7 @@
   "module": {
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone",
+      "default",
       "tablet"
     ],
     "abilities": [
@@ -36,7 +36,7 @@
         "formsEnabled": false,
         "label": "$string:MainAbility_label",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "distro": {
@@ -55,7 +55,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/index"
+          "pages/Index"
         ],
         "name": ".MainAbility",
         "window": {
