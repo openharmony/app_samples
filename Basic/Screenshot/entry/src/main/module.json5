@@ -3,7 +3,7 @@
     "name": "entry",
     "type": "entry",
     "srcEntrance": "./ets/Application/AbilityStage.ts",
-    "description": "$string:entry_desc",
+    "description": "$string:entry_MainAbility",
     "mainElement": "MainAbility",
     "deviceTypes": [
       "default",
@@ -17,13 +17,12 @@
       {
         "name": "MainAbility",
         "srcEntrance": "./ets/MainAbility/MainAbility.ts",
-        "description": "$string:MainAbility_desc",
+        "description": "$string:description_mainability",
         "icon": "$media:icon",
-        "label": "$string:MainAbility_label",
-        "visible": true,
-        "launchType": "singleton",
+        "label": "$string:entry_MainAbility",
         "startWindowIcon": "$media:icon",
         "startWindowBackground": "$color:white",
+        "visible": true,
         "skills": [
           {
             "entities": [
@@ -38,13 +37,7 @@
     ],
     "requestPermissions": [
       {
-        "name": "ohos.permission.CAMERA"
-      },
-      {
-        "name": "ohos.permission.MICROPHONE"
-      },
-      {
-        "name": "ohos.permission.MEDIA_LOCATION"
+        "name": "ohos.permission.CAPTURE_SCREEN"
       },
       {
         "name": "ohos.permission.WRITE_MEDIA"

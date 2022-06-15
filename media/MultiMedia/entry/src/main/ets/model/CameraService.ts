@@ -30,7 +30,7 @@ const CameraSize = {
     HEIGHT: 1536
 }
 
-export default class CameraService {
+class CameraService {
     private tag: string = 'CameraService'
     private static instance: CameraService = new CameraService()
     private mediaUtil = MediaUtils.getInstance()
@@ -48,7 +48,7 @@ export default class CameraService {
     private curMode = CameraMode.MODE_PHOTO
     private videoRecorder: media.VideoRecorder = undefined
     private videoOutput: camera.VideoOutput = undefined
-    private handleTakePicture: (photoUri: string) => void = () => {}
+    private handleTakePicture: (photoUri: string) => void = undefined
     private videoProfile: media.VideoRecorderProfile = {
         audioBitrate: 48000,
         audioChannels: 2,
@@ -70,45 +70,48 @@ export default class CameraService {
     }
 
     constructor() {
-        this.mReceiver = image.createImageReceiver(CameraSize.WIDTH, CameraSize.HEIGHT, 4, 8) // 宽高定位成常量
-        let buffer = new ArrayBuffer(4096)
-        this.mReceiver.on('imageArrival', async () => {
-            this.mReceiver.readNextImage((err: any, image: any) => {
+        this.mReceiver = image.createImageReceiver(CameraSize.WIDTH, CameraSize.HEIGHT, 4, 8)
+        Logger.info(this.tag, 'createImageReceiver')
+        this.mReceiver.on('imageArrival', () => {
+            Logger.info(this.tag, 'imageArrival')
+            this.mReceiver.readNextImage((err, image) => {
+                Logger.info(this.tag, 'readNextImage')
                 if (err || image === undefined) {
                     Logger.error(this.tag, 'failed to get valid image')
                     return
                 }
-                image.getComponent(4, async (errMsg: any, img: any) => {
+                image.getComponent(4, (errMsg, img) => {
+                    Logger.info(this.tag, 'getComponent')
                     if (errMsg || img === undefined) {
                         Logger.info(this.tag, 'failed to get valid buffer')
                         return
                     }
+                    let buffer = new ArrayBuffer(4096)
                     if (img.byteBuffer) {
                         buffer = img.byteBuffer
                     } else {
                         Logger.error(this.tag, 'img.byteBuffer is undefined')
                     }
-                    await image.release()
-                    let dataUri = await this.mediaUtil.createAndGetUri(mediaLibrary.MediaType.IMAGE)
-                    this.photoUri = dataUri.uri
-                    this.fileAsset = await this.mediaUtil.queryFile(dataUri)
-                    this.fd = await this.mediaUtil.getFdPath(this.fileAsset)
-                    await fileio.write(this.fd, buffer)
-                    await this.fileAsset.close(this.fd)
-                    Logger.info(this.tag, 'save image done')
-                    if (this.handleTakePicture != null) {
-                        this.handleTakePicture(this.photoUri)
-                    }
+                    this.savePicture(buffer, image)
                 })
             })
         })
     }
 
-    public static getInstance(): CameraService{
-        if (this.instance === null) {
-            this.instance = new CameraService()
+    async savePicture(buffer: ArrayBuffer, img: image.Image) {
+        Logger.info(this.tag, 'savePicture')
+        this.fileAsset = await this.mediaUtil.createAndGetUri(mediaLibrary.MediaType.IMAGE)
+        this.photoUri = this.fileAsset.uri
+        Logger.info(this.tag, `this.photoUri = ${this.photoUri}`)
+        this.fd = await this.mediaUtil.getFdPath(this.fileAsset)
+        Logger.info(this.tag, `this.fd = ${this.fd}`)
+        await fileio.write(this.fd, buffer)
+        await this.fileAsset.close(this.fd)
+        await img.release()
+        Logger.info(this.tag, 'save image done')
+        if (this.handleTakePicture) {
+            this.handleTakePicture(this.photoUri)
         }
-        return this.instance
     }
 
     async initCamera(surfaceId: number) {
@@ -144,18 +147,19 @@ export default class CameraService {
         Logger.info(this.tag, 'captureSession start')
     }
 
-    public setTakePictureCallback(callback) {
+    setTakePictureCallback(callback) {
         this.handleTakePicture = callback
     }
 
-    public async takePicture() {
+    async takePicture() {
         Logger.info(this.tag, 'takePicture')
         let photoSettings = {
-            rotation: 0,
-            quality: 1,
+            rotation: camera.ImageRotation.ROTATION_0,
+            quality: camera.QualityLevel.QUALITY_LEVEL_MEDIUM,
             location: { // 位置信息，经纬度
                 latitude: 12.9698,
-                longitude: 77.7500
+                longitude: 77.7500,
+                altitude: 1000
             },
             mirror: false
         }
@@ -163,14 +167,16 @@ export default class CameraService {
         Logger.info(this.tag, 'takePicture done')
     }
 
-    public async startVideo(surfaceId: number) {
+    async startVideo(surfaceId: number) {
         if (this.curMode === CameraMode.MODE_PHOTO) {
             await this.releaseCamera()
             this.curMode = CameraMode.MODE_VIDEO
         }
+        if (this.videoRecorder) {
+            await this.videoRecorder.release()
+        }
         Logger.info(this.tag, 'startVideo begin')
-        let dataUri = await this.mediaUtil.createAndGetUri(mediaLibrary.MediaType.VIDEO)
-        this.fileAsset = await this.mediaUtil.queryFile(dataUri)
+        this.fileAsset = await this.mediaUtil.createAndGetUri(mediaLibrary.MediaType.VIDEO)
         this.fd = await this.mediaUtil.getFdPath(this.fileAsset)
         this.videoConfig.url = `fd://${this.fd}`
         Logger.info(this.tag, `startVideo, fd=${this.fd}`)
@@ -178,9 +184,6 @@ export default class CameraService {
         this.cameraInput = await this.cameraManager.createCameraInput(this.cameraId)
         this.previewOutput = await camera.createPreviewOutput(surfaceId.toString())
         Logger.info(this.tag, 'startVideo, createPreviewOutput')
-        if (this.videoRecorder) {
-            await this.videoRecorder.release()
-        }
         this.videoRecorder = await media.createVideoRecorder()
         await this.videoRecorder.prepare(this.videoConfig)
         let videoId = await this.videoRecorder.getInputSurface()
@@ -198,7 +201,7 @@ export default class CameraService {
         Logger.info(this.tag, 'startVideo end')
     }
 
-    public async stopVideo() {
+    async stopVideo() {
         Logger.info(this.tag, 'stopVideo called')
         await this.videoRecorder.stop()
         await this.videoOutput.stop()
@@ -206,10 +209,12 @@ export default class CameraService {
         Logger.info(this.tag, 'stopVideo called')
     }
 
-    public async releaseCamera() {
+    async releaseCamera() {
         Logger.info(this.tag, 'releaseCamera')
         await this.captureSession.stop()
         await this.cameraInput.release()
         await this.captureSession.release()
     }
 }
+
+export default new CameraService()

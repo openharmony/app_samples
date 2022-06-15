@@ -10,7 +10,7 @@
 
 2.点击**启动Callee Ability**按钮，触发拉起CalleeAbility，页面显示**Callee Ability**字样。
 
-3.切换到MainMainAbility的页面，点击**获取Caller**按钮获取Caller通信接口，MainAbility为Caller调用端，CalleeAbility为被调用端。此操作不会将CalleeAbility的页面切换到前台展示。
+3.切换到MainAbility的页面，点击**获取Caller**按钮获取Caller通信接口，MainAbility为Caller调用端，CalleeAbility为被调用端。此操作不会将CalleeAbility的页面切换到前台展示。
 
 4.在输入框**输入待发送的消息**输入要传递给CalleeAbility的序列化数据，比如"play music"。
 
