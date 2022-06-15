@@ -11,7 +11,7 @@
   "module": {
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone",
+      "default",
       "tablet"
     ],
     "abilities": [
@@ -62,11 +62,6 @@
           "designWidth": 720,
           "autoDesignWidth": false
         }
-      }
-    ],
-    "reqPermissions": [
-      {
-        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
       }
     ]
   }

@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-import bundle from '@ohos.bundle'
 import prompt from '@ohos.prompt'
 import { Apps } from '../model/Apps'
 import Logger from '../model/Logger'
