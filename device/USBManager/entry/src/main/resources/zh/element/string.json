@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "USB管理"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "USB管理"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "USB管理"
+    },
+    {
+      "name": "usb_listener",
+      "value": "USB监听"
+    },
+    {
+      "name": "device_list",
+      "value": "设备列表"
+    },
+    {
+      "name": "confirm",
+      "value": "确定"
+    },
+    {
+      "name": "bus_address",
+      "value": "总线地址"
+    },
+    {
+      "name": "device_address",
+      "value": "设备地址"
+    },
+    {
+      "name": "serial",
+      "value": "序列号"
+    },
+    {
+      "name": "device_name",
+      "value": "设备名字"
+    },
+    {
+      "name": "manufacturer_name",
+      "value": "产商信息"
+    },
+    {
+      "name": "product_name",
+      "value": "产品信息"
+    },
+    {
+      "name": "version",
+      "value": "版本"
+    },
+    {
+      "name": "vendor_id",
+      "value": "厂商ID"
+    },
+    {
+      "name": "product_id",
+      "value": "产品ID"
+    },
+    {
+      "name": "device_class",
+      "value": "设备类"
+    }
+  ]
+}

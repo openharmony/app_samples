@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "USB Manager"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "USB Manager"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "USB Manager"
+    },
+    {
+      "name": "usb_listener",
+      "value": "USB Listener"
+    },
+    {
+      "name": "device_list",
+      "value": "device list"
+    },
+    {
+      "name": "confirm",
+      "value": "confirm"
+    },
+    {
+      "name": "bus_address",
+      "value": "bus address"
+    },
+    {
+      "name": "device_address",
+      "value": "device address"
+    },
+    {
+      "name": "serial",
+      "value": "serial"
+    },
+    {
+      "name": "device_name",
+      "value": "device name"
+    },
+    {
+      "name": "manufacturer_name",
+      "value": "manufacturer name"
+    },
+    {
+      "name": "product_name",
+      "value": "product name"
+    },
+    {
+      "name": "version",
+      "value": "version"
+    },
+    {
+      "name": "vendor_id",
+      "value": "vendor id"
+    },
+    {
+      "name": "product_id",
+      "value": "product id"
+    },
+    {
+      "name": "device_class",
+      "value": "device class"
+    }
+  ]
+}
