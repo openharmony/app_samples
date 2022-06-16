@@ -8,6 +8,7 @@
         "signingConfig": "default"
       }
     ],
+    "signingConfigs": []
   },
   "modules": [
     {

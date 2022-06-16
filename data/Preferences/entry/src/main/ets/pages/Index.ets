@@ -88,7 +88,7 @@ struct Index {
     Logger.info(TAG, `Get begin`)
     let theme: string = ''
     if (preferenceTheme !== null) {
-      theme = await preferenceTheme.get('theme', 'default')
+      theme = <string> await preferenceTheme.get('theme', 'default')
       return theme
     }
   }
