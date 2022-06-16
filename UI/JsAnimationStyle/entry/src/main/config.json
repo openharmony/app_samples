@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.jsanimationstyle",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -33,7 +33,7 @@
           }
         ],
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -58,7 +58,7 @@
           "pages/transitions/customtransition/customtransition",
           "pages/transitions/customtarget/customtarget"
         ],
-        "name": ".default",
+        "name": ".MainAbility",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": true

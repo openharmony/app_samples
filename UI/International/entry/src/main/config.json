@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.international",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -34,7 +34,7 @@
         ],
         "orientation": "unspecified",
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "srcPath": "default",
         "srcLanguage": "js",
         "icon": "$media:icon",
@@ -50,7 +50,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default",
+        "name": ".MainAbility",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": true

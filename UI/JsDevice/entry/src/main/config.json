@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.jsdevice",
     "name": ".MyApplication",
-    "mainAbility": "default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -34,7 +34,7 @@
         ],
         "orientation": "unspecified",
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -53,7 +53,7 @@
           "pages/systemProperties/systemProperties",
           "pages/batteryInfo/batteryInfo"
         ],
-        "name": ".default",
+        "name": ".MainAbility",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": false
