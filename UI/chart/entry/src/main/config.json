@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.chart",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -33,7 +33,7 @@
           }
         ],
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -54,7 +54,7 @@
           "pages/loading/index",
           "pages/rainbow/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }
