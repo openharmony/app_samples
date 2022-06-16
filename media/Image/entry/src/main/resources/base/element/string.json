@@ -1,0 +1,80 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Image processing"
+    },
+    {
+      "name": "description_mainability",
+      "value": "Get the local picture and picture information, rotate the picture and save it"
+    },
+    {
+      "name": "back",
+      "value": "Return"
+    },
+    {
+      "name": "more",
+      "value": "More Details"
+    },
+    {
+      "name": "width",
+      "value": "Width: "
+    },
+    {
+      "name": "height",
+      "value": "Height: "
+    },
+    {
+      "name": "bytes",
+      "value": "BytesNumber: "
+    },
+    {
+      "name": "storage",
+      "value": "Whether to save to local"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "confirm",
+      "value": "Confirm"
+    },
+    {
+      "name": "crop",
+      "value": "Crop"
+    },
+    {
+      "name": "rotate",
+      "value": "Rotate"
+    },
+    {
+      "name": "rotate_single",
+      "value": "Rotate Single"
+    },
+    {
+      "name": "save",
+      "value": "Save"
+    },
+    {
+      "name": "name",
+      "value": "Name"
+    },
+    {
+      "name": "size",
+      "value": "Size"
+    },
+    {
+      "name": "resolution",
+      "value": "Resolution"
+    },
+    {
+      "name": "path",
+      "value": "Path"
+    },
+    {
+      "name": "close",
+      "value": "Close"
+    }
+  ]
+}
