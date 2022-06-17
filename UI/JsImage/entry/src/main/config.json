@@ -11,7 +11,7 @@
   "module": {
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "abilities": [
       {
@@ -49,7 +49,9 @@
     "name": ".entry",
     "js": [
       {
-        "pages": ["pages/index/index"],
+        "pages": [
+          "pages/index/index"
+        ],
         "name": ".MainAbility",
         "window": {
           "designWidth": 720,
