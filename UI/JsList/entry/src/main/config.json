@@ -35,7 +35,7 @@
         ],
         "orientation": "unspecified",
         "visible": true,
-        "name": "..MainAbility",
+        "name": ".MainAbility",
         "srcPath": "default",
         "srcLanguage": "js",
         "icon": "$media:icon",
