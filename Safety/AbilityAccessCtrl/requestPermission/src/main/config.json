@@ -1,0 +1,24 @@
+{
+  "app": {
+    "bundleName": "ohos.samples.abilityaccessctrl",
+    "vendor": "samples",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.requestPermission",
+    "deviceType": [
+      "default",
+      "tablet"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "requestPermission",
+      "moduleType": "har"
+    },
+    "uiSyntax": "ets"
+  }
+}
