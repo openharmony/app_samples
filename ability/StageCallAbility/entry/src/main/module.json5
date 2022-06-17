@@ -6,11 +6,11 @@
     "description": "$string:entry_desc",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet",
       "wearable",
       "car",
-      "tv",
+      "tv"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,
@@ -24,16 +24,18 @@
         "icon": "$media:icon",
         "label": "$string:MainAbility_label",
         "visible": true,
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white",
         "skills": [
           {
             "entities": [
-              "entity.system.home",
+              "entity.system.home"
             ],
             "actions": [
-              "action.system.home",
-            ],
-          },
-        ],
+              "action.system.home"
+            ]
+          }
+        ]
       },
       {
         "name": "CalleeAbility",
@@ -43,12 +45,14 @@
         "icon": "$media:icon",
         "label": "$string:CalleeAbility_label",
         "visible": true,
-      },
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white"
+      }
     ],
     "requestPermissions": [
       {
         "name": "ohos.permission.DISTRIBUTED_DATASYNC"
-      },
+      }
     ]
   },
 }

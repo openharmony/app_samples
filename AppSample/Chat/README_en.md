@@ -29,4 +29,4 @@ Constraints and Limitations
 
 1. The SDK version must be 3.1.5.5 or later.
 
-2. This example requires IDE version 3.0.0.900 or higher to compile and run.
+2. This example requires IDE version 3.0.0.901 or higher to compile and run.

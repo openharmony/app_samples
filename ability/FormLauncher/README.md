@@ -21,4 +21,4 @@ This sample shows how to create and use a widget in the FA model, including crea
 ### Constraints
 
 1. This sample can only be run on standard-system devices.
-2. The IDE version used in this sample must be 3.0.0.900 or later.
+2. The IDE version used in this sample must be 3.0.0.901 or later.
