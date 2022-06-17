@@ -1,7 +1,7 @@
 {
   "app": {
     "vendor": "samples",
-    "bundleName": "ohos.samples.etslogger",
+    "bundleName": "ohos.samples.logger",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -11,7 +11,7 @@
   "module": {
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone",
+      "default",
       "tablet"
     ],
     "abilities": [
@@ -45,7 +45,7 @@
       "deliveryWithInstall": true,
       "moduleName": "entry"
     },
-    "package": "ohos.samples.etslogger",
+    "package": "ohos.samples.logger",
     "srcPath": "",
     "name": ".entry",
     "js": [

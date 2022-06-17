@@ -76,4 +76,4 @@
 
 1.支持 OpenHarmony API version 8 及以上版本。
 
-2.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。

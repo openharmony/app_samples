@@ -16,12 +16,12 @@
 import { LogLevel } from './LogLevel'
 
 export type Configure = {
-    cheese: {
-        types: string[],
-        filename?: string
-    }
-    defaults: {
-        appenders: string,
-        level: LogLevel
-    }
+  cheese: {
+    types: string[],
+    filename?: string
+  }
+  defaults: {
+    appenders: string,
+    level: LogLevel
+  }
 }

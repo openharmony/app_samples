@@ -26,13 +26,14 @@ let configure: Configure = {
     level: LogLevel.INFO
   }
 }
-logger.setConfigure(configure)
 
 export default {
   onCreate() {
+    logger.setConfigure(configure)
     logger.info(`Application onCreate`)
   },
   onDestroy() {
+    logger.setConfigure(configure)
     logger.info(`Application onDestroy`)
-  },
+  }
 }

@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.etslogger",
-    "vendor": "example",
+    "bundleName": "ohos.samples.logger",
+    "vendor": "samples",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,9 +9,9 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "com.example.logs",
+    "package": "ohos.samples.logger",
     "deviceType": [
-      "phone",
+      "default",
       "tablet"
     ],
     "distro": {
