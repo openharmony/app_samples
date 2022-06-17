@@ -21,7 +21,7 @@
       "value": "确定"
     },
     {
-      "name": "game_fail",
+      "name": "ai_win",
       "value": "AI胜利,点击开始游戏再来一局."
     },
     {

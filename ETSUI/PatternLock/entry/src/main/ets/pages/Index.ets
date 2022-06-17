@@ -28,6 +28,7 @@ struct Index {
   @State isReset: boolean = false
   @State password: Number[] = []
   @State isHasPass: boolean = true
+  @State isShowSetting: boolean = false
 
   aboutToAppear() {
     this.password = []
@@ -79,7 +80,6 @@ struct Index {
                 if (this.isReset) {
                   this.message = $r('app.string.message_input_new')
                   this.defaultPassword = 'null'
-                  PreferencesUtils.setPassword('null')
                   this.patternLockController.reset()
                   this.password = []
                   this.isHasPass = false
@@ -98,6 +98,7 @@ struct Index {
               if (this.password.toString() === input.toString()) {
                 this.password = input
                 this.message = $r('app.string.message_correct')
+                this.isShowSetting = true
               } else {
                 this.message = $r('app.string.message_not_match')
                 this.patternLockController.reset()
@@ -108,7 +109,7 @@ struct Index {
               this.patternLockController.reset()
             }
           })
-        if (!this.isHasPass) {
+        if (this.isShowSetting) {
           Button($r('app.string.message_set_password'))
             .margin(30)
             .width('60%')

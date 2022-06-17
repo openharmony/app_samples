@@ -150,7 +150,9 @@ class RdbModel {
                 , resultSet.getDouble(resultSet.getColumnIndex('gender'))
                 , resultSet.getString(resultSet.getColumnIndex('phone'))
                 , resultSet.getString(resultSet.getColumnIndex('remark')))
-            contacts.push(contact)
+            if (!contacts.includes(contact)) {
+                contacts.push(contact)
+            }
             resultSet.goToNextRow()
         }
         resultSet.close()
