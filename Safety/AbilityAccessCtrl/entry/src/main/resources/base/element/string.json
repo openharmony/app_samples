@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "AbilityAccessCtrl"
+    },
+    {
+      "name": "VerifyAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "VerifyAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "title",
+      "value": "Grant permission or not"
+    },
+    {
+      "name": "confirm",
+      "value": "confirm"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "app": {
+    "vendor": "samples",
+    "bundleName": "ohos.samples.abilityaccessctrl",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "default",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:icon",
+        "description": "$string:MainAbility_desc",
+        "formsEnabled": false,
+        "label": "$string:MainAbility_label",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "srcPath": "VerifyAbility",
+        "name": ".VerifyAbility",
+        "srcLanguage": "ets",
+        "icon": "$media:icon",
+        "description": "$string:VerifyAbility_desc",
+        "formsEnabled": false,
+        "label": "$string:VerifyAbility_label",
+        "type": "page",
+        "launchType": "singleton"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "ohos.samples.abilityaccessctrl",
+    "srcPath": "",
+    "name": ".entry",
+    "js": [
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/Index"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      },
+      {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
+        "pages": [
+          "pages/Index"
+        ],
+        "name": ".VerifyAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.GET_SENSITIVE_PERMISSIONS"
+      },
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS"
+      },
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.GRANT_SENSITIVE_PERMISSIONS"
+      },
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
+      },
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      },
+      {
+        "reason": "$string:MainAbility_desc",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.abilityaccessctrl.MainAbility"
+          ],
+          "when": "inuse"
+        },
+        "name": "ohos.permission.MICROPHONE"
+      }
+    ]
+  }
+}

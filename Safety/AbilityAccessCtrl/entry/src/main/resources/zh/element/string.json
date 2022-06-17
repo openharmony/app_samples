@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "AbilityAccessCtrl"
+    },
+    {
+      "name": "VerifyAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "VerifyAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "title",
+      "value": "是否授予权限："
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "button",
+      "value": "检测权限"
+    }
+  ]
+}
