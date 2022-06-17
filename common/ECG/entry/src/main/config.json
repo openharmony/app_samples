@@ -10,12 +10,12 @@
   "module": {
     "package": "ohos.samples.ecg",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -38,7 +38,7 @@
         "orientation": "unspecified",
         "visible": true,
         "formsEnabled": false,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:app_name",
@@ -53,7 +53,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }

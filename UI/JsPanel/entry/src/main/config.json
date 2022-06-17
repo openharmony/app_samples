@@ -10,10 +10,10 @@
   "deviceConfig": {},
   "module": {
     "package": "ohos.samples.jspanel",
-    "name": ".default",
+    "name": ".MyApplication",
     "mainAbility": ".Mainability",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -35,7 +35,7 @@
         ],
         "orientation": "unspecified",
         "visible": true,
-        "name": ".default",
+        "name": ".Mainability",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -51,7 +51,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default",
+        "name": ".Mainability",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": false

@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.popup",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -32,7 +32,7 @@
             ]
           }
         ],
-        "name": ".default",
+        "name": ".MainAbility",
         "visible": true,
         "icon": "$media:icon",
         "srcPath": "default",
@@ -48,7 +48,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }
