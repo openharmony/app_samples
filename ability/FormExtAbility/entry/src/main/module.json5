@@ -6,7 +6,7 @@
     "description": "$string:entry_desc",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet",
     ],
     "deliveryWithInstall": true,
@@ -31,6 +31,8 @@
             ],
           },
         ],
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white"
       },
     ],
     "extensionAbilities": [

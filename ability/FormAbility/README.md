@@ -15,4 +15,4 @@ This sample shows how to create and use the widget provider in the FA model.
 ### Constraints
 
 1. This sample can only be run on standard-system devices.
-2. The IDE version used in this sample must be 3.0.0.900 or later.
+2. The IDE version used in this sample must be 3.0.0.901 or later.
