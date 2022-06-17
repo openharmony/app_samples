@@ -10,12 +10,12 @@
   "module": {
     "package": "ohos.samples.jshelloworld",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "reqCapabilities": [
       "video_support"
     ],
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -38,7 +38,7 @@
         "orientation": "unspecified",
         "visible": true,
         "formsEnabled": false,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -54,7 +54,7 @@
           "pages/index/index",
           "pages/second/second"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }

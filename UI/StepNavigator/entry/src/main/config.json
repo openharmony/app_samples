@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.stepnavigator",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -33,7 +33,7 @@
           }
         ],
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -49,7 +49,7 @@
           "pages/index/index",
           "pages/homepage/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }

@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.tabs",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -33,7 +33,7 @@
           }
         ],
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -48,7 +48,7 @@
         "pages": [
           "pages/index/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }

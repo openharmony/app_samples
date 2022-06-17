@@ -10,9 +10,9 @@
   "module": {
     "package": "ohos.samples.router",
     "name": ".MyApplication",
-    "mainAbility": ".default",
+    "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -33,7 +33,7 @@
           }
         ],
         "visible": true,
-        "name": ".default",
+        "name": ".MainAbility",
         "icon": "$media:icon",
         "srcPath": "default",
         "srcLanguage": "js",
@@ -50,7 +50,7 @@
           "pages/pushPage/index",
           "pages/replacePage/index"
         ],
-        "name": ".default"
+        "name": ".MainAbility"
       }
     ]
   }
