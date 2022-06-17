@@ -46,7 +46,7 @@ struct WrapCapabilitySample {
           wrap: FlexWrap.Wrap
         }) {
           ForEach(this.imageList, (item) => {
-            Image(item).width(183).height(138).padding(10)
+            Image(item).width(px2vp(183)).height(138).padding(10)
           })
         }
         .backgroundColor('#FFFFFF')

@@ -23,7 +23,7 @@ import Logger from './utils/logger'
 const TAG: string = "[Notification]"
 async function routePage() {
   let options = {
-    uri: 'pages/second'
+    url: 'pages/second'
   }
   try {
     await router.push(options)
@@ -221,7 +221,7 @@ let notificationRequest = {
   },
   id: 0,
   label: '',
-  wantAgent: '',
+  wantAgent: undefined,
   slotType: notify.SlotType.OTHER_TYPES,
   deliveryTime: new Date().getTime()
 }

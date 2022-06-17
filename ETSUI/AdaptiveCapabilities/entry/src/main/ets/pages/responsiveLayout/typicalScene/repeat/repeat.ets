@@ -74,7 +74,7 @@ struct RepeatItemContent {
 
       Flex({ alignItems: ItemAlign.Start, direction: FlexDirection.Column, justifyContent: FlexAlign.SpaceAround }) {
         Row() {
-        }.height(10).width('100%').backgroundColor('#E4E6E8')
+        }.height(10).width('80%').backgroundColor('#E4E6E8')
 
         Row() {
         }.height(10).width('50%').backgroundColor('#E4E6E8')

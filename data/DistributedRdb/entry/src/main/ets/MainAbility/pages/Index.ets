@@ -108,6 +108,7 @@ struct Index {
 
   getData = async () => {
     Logger.info(TAG, 'getData')
+    this.contacts = []
     let predicates = new dataRdb.RdbPredicates(TABLE_NAME)
     this.contacts = await RdbModel.query(predicates)
     let syncState = await LiteStore.getValue()
@@ -175,7 +176,7 @@ struct Index {
     this.isMultiCheck = false
   }
 
-  handleBottomBtnClick= (index) => {
+  handleBottomBtnClick = (index) => {
     switch (index) {
       case 0:
         this.isSelectedAll = !this.isSelectedAll
@@ -232,6 +233,7 @@ struct Index {
               })
             }, item => item.name)
           }
+          .margin({ bottom: 130 })
           .divider({ strokeWidth: 1, color: Color.Gray, startMargin: 16, endMargin: 16 })
         }
         .padding({ left: 10, right: 10 })
