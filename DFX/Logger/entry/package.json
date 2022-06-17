@@ -1,15 +1,16 @@
 {
+  "license": "ISC",
+  "devDependencies": {},
   "name": "entry",
-  "version": "1.0.0",
   "ohos": {
     "org": "huawei",
-    "buildTool": "hvigor",
-    "directoryLevel": "module"
+    "directoryLevel": "module",
+    "buildTool": "hvigor"
   },
   "description": "example description",
   "repository": {},
-  "license": "ISC",
+  "version": "1.0.0",
   "dependencies": {
-    "@ohos/Log": "../log"
+    "@ohos/Log": "../logs"
   }
 }

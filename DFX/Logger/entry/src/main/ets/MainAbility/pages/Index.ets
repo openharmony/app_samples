@@ -17,38 +17,22 @@ import logger from '@ohos/log'
 import { LogLevel } from '@ohos/log'
 import { Configure }  from '@ohos/log'
 
-const RUN_LENGTH: number = 20 //测试日志打印运行次数常量
 let configure: Configure = {
   cheese: {
     types: ['file'],
-    filename: 'index.log'
+    filename: 'log.txt'
   },
   defaults: {
     appenders: 'Index',
     level: LogLevel.DEBUG
   }
 }
-logger.setConfigure(configure)
 
 @Entry
 @Component
 struct Index {
   aboutToAppear() {
-    for (let i = 0; i <= RUN_LENGTH; i++) {
-      if ((i < 10)) { //测试日志打印运行次数常量
-        logger.debug(`This is a debug message. Message number: ${i}`)
-      } else {
-        logger.warn(`This is a warning message. Message number: ${i}`)
-      }
-      for (let j = 0; j <= 4; j++) { //测试日志打印运行次数常量
-        if ((j < 2)) { //测试日志打印运行次数常量
-          logger.info(`This is a info message. Message number: ${j}`)
-        } else {
-          logger.fatal(`This is a fatal message. Message number: ${j}`)
-        }
-        logger.error(`This is a error message. i type of ${typeof (i)} j type of ${typeof (j)}`)
-      }
-    }
+    logger.setConfigure(configure)
   }
 
   build() {
@@ -66,9 +50,28 @@ struct Index {
       .constraintSize({ minHeight: 50 })
 
       Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-        Text($r('app.string.log'))
-          .fontSize(50)
+        Button($r('app.string.log'))
+          .fontSize(30)
+          .width('55%')
+          .height('8%')
           .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            for (let i = 0; i <= 4; i++) { //  测试日志打印运行次数常量
+              if ((i < 2)) { //  测试日志打印运行次数常量
+                logger.debug(`This is a debug message. Message number: ${i}`)
+              } else {
+                logger.warn(`This is a warning message. Message number: ${i}`)
+              }
+              for (let j = 0; j <= 4; j++) { //  测试日志打印运行次数常量
+                if ((j < 2)) { //  测试日志打印运行次数常量
+                  logger.info(`This is a info message. Message number: ${j}`)
+                } else {
+                  logger.fatal(`This is a fatal message. Message number: ${j}`)
+                }
+                logger.error(`This is a error message. i type of ${typeof (i)} j type of ${typeof (j)}`)
+              }
+            }
+          })
       }
     }
     .width('100%')
