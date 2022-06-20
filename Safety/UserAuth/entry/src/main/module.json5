@@ -32,7 +32,7 @@
           }
         ],
         "startWindowIcon": "$media:icon",
-        "startWindowBackground": "$color:color_1"
+        "startWindowBackground": "$color:white"
       }
     ],
     "requestPermissions": [
