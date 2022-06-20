@@ -12,7 +12,7 @@
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
-      "phone"
+      "default"
     ],
     "distro": {
       "deliveryWithInstall": true,

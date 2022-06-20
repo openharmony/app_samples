@@ -75,7 +75,7 @@ export class Browser {
   }
 
   addTab() {
-    if(this.webArray.length) {
+    if (this.webArray.length > 10) {
       prompt.showToast({
         message: '页签数量已满'
       })

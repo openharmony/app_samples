@@ -6,7 +6,7 @@
     "description": "$string:description_mainability",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet"
     ],
     "deliveryWithInstall": true,
@@ -21,6 +21,8 @@
         "icon": "$media:icon",
         "label": "$string:entry_MainAbility",
         "visible": true,
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white",
         "skills": [
           {
             "entities": [

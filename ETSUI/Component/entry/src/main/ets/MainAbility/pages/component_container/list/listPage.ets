@@ -156,7 +156,7 @@ struct ListPage {
           }.columnStart(0).columnEnd(3).forceRebuild(true)
 
           GridItem() {
-            Slider({ value: this.space, step: 5, min: -10, max: 100 })
+            Slider({ value: this.strokeWidth, step: 5, min: -10, max: 100 })
               .width("100%")
               .blockColor(Color.Orange)
               .onChange((e) => {
@@ -175,7 +175,7 @@ struct ListPage {
           }.columnStart(0).columnEnd(3).forceRebuild(true)
 
           GridItem() {
-            Slider({ value: this.space, step: 5, min: -10, max: 100 })
+            Slider({ value: this.startMargin, step: 5, min: -10, max: 100 })
               .width("100%")
               .blockColor(Color.Orange)
               .onChange((e) => {
@@ -195,7 +195,7 @@ struct ListPage {
           }.columnStart(0).columnEnd(3).forceRebuild(true)
 
           GridItem() {
-            Slider({ value: this.space, step: 5, min: -10, max: 100 })
+            Slider({ value: this.endMargin, step: 5, min: -10, max: 100 })
               .width("100%")
               .blockColor(Color.Orange)
               .onChange((e) => {

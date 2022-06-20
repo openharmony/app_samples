@@ -14,7 +14,7 @@
     "mainAbility": ".TestAbility",
     "srcPath": "",
     "deviceType": [
-      "phone",
+      "default",
       "tablet"
     ],
     "distro": {

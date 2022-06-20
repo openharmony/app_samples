@@ -1,18 +1,18 @@
 {
-	"license":"ISC",
-	"devDependencies":{},
-	"name":"jswebgl",
-	"ohos":{
-		"org":"huawei",
-		"directoryLevel":"project",
-		"buildTool":"hvigor"
-	},
-	"description":"example description",
-	"repository":{},
-	"version":"1.0.0",
-	"dependencies":{
-		"@ohos/hvigor-ohos-plugin":"1.0.6",
-		"hypium":"^1.0.0",
-		"@ohos/hvigor":"1.0.6"
-	}
+  "license": "ISC",
+  "devDependencies": {},
+  "name": "jswebgl",
+  "ohos": {
+    "org": "huawei",
+    "directoryLevel": "project",
+    "buildTool": "hvigor"
+  },
+  "description": "example description",
+  "repository": {},
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/hypium": "1.0.0",
+    "@ohos/hvigor-ohos-plugin": "1.1.3",
+    "@ohos/hvigor": "1.1.3"
+  }
 }
