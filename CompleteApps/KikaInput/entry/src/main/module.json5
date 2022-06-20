@@ -6,14 +6,18 @@
     "description": "$string:entry_desc",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
     "uiSyntax": "ets",
-    "requestPermissions": [{"name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"}],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
+      }
+    ],
     "extensionAbilities": [
       {
         "srcEntrance": "./ets/ServiceExtAbility/ServiceExtAbility.ts",
