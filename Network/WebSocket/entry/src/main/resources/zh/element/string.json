@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "WebSocket"
+    },
+    {
+      "name": "send_message",
+      "value": "发送"
+    },
+    {
+      "name": "server",
+      "value": "服务器"
+    },
+    {
+      "name": "connect",
+      "value": "连接"
+    },
+    {
+      "name": "me",
+      "value": "我"
+    },
+    {
+      "name": "welcome",
+      "value": "欢迎使用"
+    },
+    {
+      "name": "bind_ip",
+      "value": "绑定服务器IP地址"
+    },
+    {
+      "name": "internet_permission",
+      "value": "获取网络权限"
+    },
+    {
+      "name": "ip_placeholder",
+      "value": "例如：192.168.10.111"
+    }
+  ]
+}
