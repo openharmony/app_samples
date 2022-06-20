@@ -2,7 +2,23 @@
 
 ### 简介
 
-本示例展示了分布式数据管理中，如何通过构建query对象， 查询kvstore中的数据，获取结果集。
+本示例展示了分布式数据管理中，如何通过构建query对象， 查询kvstore中的数据，获取结果集。实现效果如下：
+
+![eTSDDMQuery](screenshots/devices/eTSDDMQuery.png)
+
+### 相关概念
+
+-   KvStoreResultSet：提供获取KVStore数据库结果集的方法，提供查询和移动数据读取位置的方法，在调用KvStoreResultSet的方法前，需要先通过KVStore构建一个KVStore实例。
+
+### 相关权限
+
+```
+本示例需要在module.json5中配置如下权限:
+
+分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
+```
+
+### 使用说明
 
 ### 使用说明
 

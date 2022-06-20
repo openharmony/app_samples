@@ -63,6 +63,7 @@ export default {
         this.ctx.stroke();
     },
     clearRect() {
+        this.ctx.fillStyle = '#000000'
         this.ctx.clearRect(0, 0, 300, 300);
     },
     textBase() {
