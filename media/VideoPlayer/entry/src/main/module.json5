@@ -6,7 +6,7 @@
     "description": "$string:entry_desc",
     "mainElement": "MainAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet"
     ],
     "deliveryWithInstall": true,
@@ -31,7 +31,9 @@
               "action.system.home"
             ]
           }
-        ]
+        ],
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white"
       },
       {
         "name": "PlayAbility",
@@ -41,6 +43,8 @@
         "label": "$string:PlayAbility_label",
         "visible": true,
         "launchType": "singleton",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white"
       }
     ],
     "requestPermissions": [

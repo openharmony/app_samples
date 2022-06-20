@@ -32,7 +32,9 @@
               "action.system.home"
             ]
           }
-        ]
+        ],
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white"
       }
     ],
     "requestPermissions": [
