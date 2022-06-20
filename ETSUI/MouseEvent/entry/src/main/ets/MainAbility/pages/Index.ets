@@ -58,7 +58,7 @@ struct Index {
 
   onAccept() {
     router.replace({
-      url: 'pages/index'
+      url: 'pages/Index'
     })
   }
 
