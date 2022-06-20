@@ -1,0 +1,72 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "bluetooth application"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "bluetooth application"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "bluetooth"
+    },
+    {
+      "name": "bluetooth",
+      "value": "bluetooth"
+    },
+    {
+      "name": "match",
+      "value": "pairing"
+    },
+    {
+      "name": "match_request",
+      "value": "Bluetooth Pairing Request"
+    },
+    {
+      "name": "available_device",
+      "value": "Available Devices"
+    },
+    {
+      "name": "paired_device",
+      "value": "Paired Devices"
+    },
+    {
+      "name": "discovery",
+      "value": "The device can be detected by nearby devices"
+    },
+    {
+      "name": "confirm",
+      "value": "confirm"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "grant_permission",
+      "value": "After paired, access to the address book and call records is granted to the paired device"
+    },
+    {
+      "name": "disconnect",
+      "value": "Disconnect?"
+    },
+    {
+      "name": "grant_use_bluetooth",
+      "value": "Apply bluetooth permission"
+    },
+    {
+      "name": "grant_discovery_bluetooth",
+      "value": "Discover bluetooth permission"
+    },
+    {
+      "name": "grant_location",
+      "value": "Obtaining location permission"
+    },
+    {
+      "name": "grant_manage_bluetooth",
+      "value": "Managing bluetooth permission"
+    }
+  ]
+}
