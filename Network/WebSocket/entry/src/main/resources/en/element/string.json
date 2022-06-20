@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "WebSocket"
+    },
+    {
+      "name": "send_message",
+      "value": "send message"
+    },
+    {
+      "name": "server",
+      "value": "Server"
+    },
+    {
+      "name": "connect",
+      "value": "Connect"
+    },
+    {
+      "name": "me",
+      "value": "Me"
+    },
+    {
+      "name": "welcome",
+      "value": "Welcome to use"
+    },
+    {
+      "name": "bind_ip",
+      "value": "Bind Server IP"
+    },
+    {
+      "name": "internet_permission",
+      "value": "get internet permission"
+    },
+    {
+      "name": "ip_placeholder",
+      "value": "eg：192.168.10.111"
+    }
+  ]
+}
