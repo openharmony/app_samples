@@ -1,0 +1,72 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "蓝牙应用"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "蓝牙应用"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "蓝牙"
+    },
+    {
+      "name": "bluetooth",
+      "value": "蓝牙"
+    },
+    {
+      "name": "match",
+      "value": "配对"
+    },
+    {
+      "name": "match_request",
+      "value": "蓝牙配对请求"
+    },
+    {
+      "name": "available_device",
+      "value": "可用设备"
+    },
+    {
+      "name": "paired_device",
+      "value": "已配对的设备"
+    },
+    {
+      "name": "discovery",
+      "value": "当前可被附近的设备发现"
+    },
+    {
+      "name": "confirm",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "grant_permission",
+      "value": "配对之后，向所配对设备授予通讯录和通话记录的访问权限"
+    },
+    {
+      "name": "disconnect",
+      "value": "断开连接？"
+    },
+    {
+      "name": "grant_use_bluetooth",
+      "value": "应用蓝牙权限"
+    },
+    {
+      "name": "grant_discovery_bluetooth",
+      "value": "发现蓝牙权限"
+    },
+    {
+      "name": "grant_location",
+      "value": "获取位置权限"
+    },
+    {
+      "name": "grant_manage_bluetooth",
+      "value": "管理蓝牙权限"
+    }
+  ]
+}
