@@ -32,13 +32,12 @@ export struct ImageGallery {
   @State imgDatas: Array<multimedia_mediaLibrary.FileAsset> = []
   private imageModel: ImageModel = new ImageModel()
 
-  aboutToAppear() {
+  async aboutToAppear() {
     let permissionState = 666 //  传递给返回结果的请求代码
-    let context = featureAbility.getContext()
-    context.requestPermissionsFromUser(PERMISSIONS, permissionState, async (result) => {
-      Logger.info(TAG, `grantPermission requestPermissionsFromUser result.requestCode = ${JSON.stringify(result)}`)
-      this.imgDatas = await this.imageModel.getAllImg()
-    })
+    let result = await globalThis.abilityContext.requestPermissionsFromUser(PERMISSIONS, permissionState)
+    Logger.info(TAG, `grantPermission requestPermissionsFromUser result.requestCode = ${JSON.stringify(result)}`)
+    this.imgDatas = await this.imageModel.getAllImg()
+    Logger.info(TAG, `this image number = ${this.imgDatas.length} uri = ${this.imgDatas[0].uri}`)
   }
 
   build() {
@@ -51,6 +50,7 @@ export struct ImageGallery {
               .aspectRatio(1)
               .objectFit(ImageFit.Cover)
               .onClick(() => {
+                Logger.info(TAG, `111111111`)
                 router.replace({
                   url: 'pages/Second',
                   params: {

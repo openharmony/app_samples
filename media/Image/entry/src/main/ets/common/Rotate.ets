@@ -55,9 +55,27 @@ export struct Rotate {
           .fontSize(16)
           .width('40%')
           .height('8%')
-          .onClick(async () => {
-            await this.imageModel.angleImgs(this.uri, this.single)
-            this.controller.close()
+          .onClick(() => {
+            AlertDialog.show(
+              {
+                message: $r('app.string.storage'),
+                primaryButton: {
+                  value: $r('app.string.cancel'),
+                  action: () => {
+                    this.controller.close()
+                  }
+                },
+                secondaryButton: {
+                  value: $r('app.string.save'),
+                  action: async () => {
+                    await this.imageModel.angleImgs(this.uri, this.single)
+                  }
+                },
+                cancel: () => {
+                  this.controller.close()
+                }
+              }
+            )
           })
 
         Button($r('app.string.cancel'))

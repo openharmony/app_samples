@@ -27,7 +27,7 @@ export struct ImageShow {
   private width: number = 0
   private imageModel: ImageModel = new ImageModel()
   private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  private canvasContext: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
   private dialogController: CustomDialogController = new CustomDialogController({
     builder: Rotate({ uri: this.uri }), autoCancel: true, alignment: DialogAlignment.Bottom
   })
@@ -43,13 +43,13 @@ export struct ImageShow {
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        Canvas(this.context)
+        Canvas(this.canvasContext)
           .margin({ top: 16 })
           .width(900)
           .height(600)
           .onReady(async () => {
             await this.getImage()
-            this.context.drawImage(this.pixel, 0, 0, 900, 600)
+            this.canvasContext.drawImage(this.pixel, 0, 0, 900, 600)
           })
       }
       .width('100%')

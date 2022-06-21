@@ -41,10 +41,6 @@
       "value": "确认"
     },
     {
-      "name": "crop",
-      "value": "裁剪"
-    },
-    {
       "name": "rotate",
       "value": "旋转"
     },
