@@ -2,7 +2,20 @@
 
 ### 简介
 
-本示例主要展示了设备使用信息情况。
+本示例主要展示了设备使用信息情况。实现效果如下：
+
+![](screenshots/devices/main.png)
+
+# 相关概念
+
+[通过指定起始和结束时间查询应用使用时长统计信息](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-deviceUsageStatistics.md#bundlestatequerybundlestateinfos-1)
+[判断指定bundleName的应用当前是否是空闲状态](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-deviceUsageStatistics.md#bundlestateisidlestate-1)
+
+### 相关权限
+
+本示例需要在module.json5中配置如下权限:
+
+应用信息权限：ohos.permission.BUNDLE_ACTIVE_INFO
 
 ### 使用说明
 

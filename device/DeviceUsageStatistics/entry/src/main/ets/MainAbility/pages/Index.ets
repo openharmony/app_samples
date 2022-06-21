@@ -30,9 +30,16 @@ struct Index {
         .fontColor(Color.White)
         .backgroundColor('#0D9FFB')
         .fontWeight(FontWeight.Bold)
-      PanelView()
-      UsageList()
-      FreeApps()
+      Scroll() {
+        Column() {
+          PanelView()
+          UsageList()
+          FreeApps()
+        }
+      }
+      .width('100%')
+      .layoutWeight(1)
+      .scrollable(ScrollDirection.Vertical)
     }
     .width('100%')
     .height('100%')

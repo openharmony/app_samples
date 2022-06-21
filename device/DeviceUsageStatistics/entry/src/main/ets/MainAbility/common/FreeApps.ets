@@ -47,29 +47,34 @@ export struct FreeApps {
         .fontWeight(FontWeight.Bold)
         .direction(Direction.Ltr)
         .margin({ bottom: 10 })
-      Scroll() {
-        Row() {
-          ForEach(this.freeApps, (item) => {
-            Column() {
-              Image(item.icon)
-                .width(70)
-                .height(70)
-                .objectFit(ImageFit.Fill)
-              Text(item.name)
-                .fontSize(10)
-                .margin({ top: 5 })
-            }
-            .width(70)
-            .height(90)
-            .margin(10)
-          }, item => item.name)
+      Column() {
+        Scroll() {
+          Row() {
+            ForEach(this.freeApps, (item) => {
+              Column() {
+                Image(item.icon)
+                  .margin({ top: 10 })
+                  .width(70)
+                  .height(70)
+                  .objectFit(ImageFit.Fill)
+                Text(item.name)
+                  .fontSize(10)
+                  .margin({ top: 5 })
+              }
+              .width(70)
+              .height(120)
+              .margin(10)
+            }, item => item.name)
+          }
+          .borderRadius(10)
+          .backgroundColor(Color.White)
         }
-        .borderRadius(10)
-        .backgroundColor(Color.White)
+        .margin(5)
+        .width('90%')
+        .scrollable(ScrollDirection.Horizontal)
       }
-      .width('90%')
+      .width('95%')
       .padding(10)
-      .scrollable(ScrollDirection.Horizontal)
-    }
+    }.margin({ top: 20 })
   }
 }
