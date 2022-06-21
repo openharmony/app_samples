@@ -14,25 +14,25 @@
  */
 
 export default {
-    data: {
-        modeFlag: "half",
-        parameter: [],
-        assurance: []
-    },
-    onInit() {
-        this.parameter = this.$t('list-parameter');
-        this.assurance = this.$t('list-assurance');
-    },
-    showParameter(e) {
-        this.$element('parameter').show()
-    },
-    closeParameter(e) {
-        this.$element('parameter').close()
-    },
-    showService(e) {
-        this.$element('service').show()
-    },
-    closeService(e) {
-        this.$element('service').close()
-    }
+  data: {
+    modeFlag: "half",
+    parameter: [],
+    assurance: []
+  },
+  onInit() {
+    this.parameter = this.$t('list-parameter');
+    this.assurance = this.$t('list-assurance');
+  },
+  showParameter(e) {
+    this.$element('parameter').show()
+  },
+  closeParameter(e) {
+    this.$element('parameter').close()
+  },
+  showService(e) {
+    this.$element('service').show()
+  },
+  closeService(e) {
+    this.$element('service').close()
+  }
 }

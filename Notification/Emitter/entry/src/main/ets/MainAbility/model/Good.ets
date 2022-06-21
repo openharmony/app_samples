@@ -29,11 +29,11 @@ export class Good {
 
 export function getData() {
   return [
-    { image: $r("app.media.huawei1"), name: 'HUAWEI nova 9 Pro', price: '¥3469.00', isCheck: false },
-    { image: $r("app.media.huawei2"), name: 'HUAWEI Mate X2', price: '¥17799.00', isCheck: false },
-    { image: $r("app.media.huawei3"), name: 'HUAWEI Mate 40 Pro', price: '¥6599.00', isCheck: false },
-    { image: $r("app.media.watch1"), name: 'HUAWEI WATCH 3 Pro', price: '¥3199.00', isCheck: false },
-    { image: $r("app.media.watch2"), name: 'HUAWEI Children\'s Watch 4X', price: '¥1098.00', isCheck: false },
-    { image: $r("app.media.watch3"), name: 'HUAWEI WATCH GT 2', price: '¥4488.00', isCheck: false }
+    { image: $r("app.media.desktop"), name: 'Desktop', price: '¥9365.00', isCheck: false },
+    { image: $r("app.media.display"), name: 'Display', price: '¥1500.00', isCheck: false },
+    { image: $r("app.media.notebook"), name: 'NoteBook', price: '¥7800.00', isCheck: false },
+    { image: $r("app.media.phone1"), name: 'Phone', price: '¥5000.00', isCheck: false },
+    { image: $r("app.media.table"), name: 'Table', price: '¥4000.00', isCheck: false },
+    { image: $r("app.media.watch"), name: 'Watch', price: '¥1999.00', isCheck: false }
   ]
 }

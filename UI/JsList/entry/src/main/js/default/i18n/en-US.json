@@ -1,33 +1,27 @@
 {
   "strings": {
-    "productList":"Product List",
+    "productList": "Product List",
     "categorylist": [
       {
         "cate": "Phones",
-        "product":[
+        "product": [
           {
-            "img":"common/image/mate.jpg",
-            "model": "Mate40 Pro+",
+            "img": "common/image/phone1.png",
+            "model": "Flagship machine",
             "type": "Phone",
-            "info": "Kirin 9000 + HarmonyOS 2.0, 5 nm SoC"
+            "info": "Beauty, as you can see"
           },
           {
-            "img":"common/image/maters.png",
-            "model": "Porsche Design HUAWEI Mate 40 RS",
+            "img": "common/image/phone2.png",
+            "model": "Flagship premium edition",
             "type": "Phone",
             "info": "Luxury Recreates Classic Shine"
           },
           {
-            "img":"common/image/matex.jpg",
-            "model": "Mate X2",
+            "img": "common/image/phone3.png",
+            "model": "Youth version",
             "type": "Phone",
             "info": "Imagine What Unfolds"
-          },
-          {
-            "img":"common/image/pfif.jpg",
-            "model":"P50 Pro",
-            "type":"Phone",
-            "info":"Snapdragon 888 + HarmonyOS 2.0, Legend Reborn"
           }
         ]
       },
@@ -35,16 +29,16 @@
         "cate": "Tablets",
         "product": [
           {
-            "img":"common/image/matepad.png",
-            "model":"MatePad Pro 12.6",
-            "type":"Tablet",
-            "info":"Kirin 9000 + HarmonyOS 2.0, Expand Your Creativity"
+            "img": "common/image/table1.png",
+            "model": "Table",
+            "type": "Tablet",
+            "info": "Redefining productivity"
           },
           {
-            "img":"common/image/matepadone.jpg",
-            "model":"MatePad 11",
-            "type":"Tablet",
-            "info":"HarmonyOS 2.0, 120 Hz refresh rate"
+            "img": "common/image/table2.png",
+            "model": "Table",
+            "type": "Tablet",
+            "info": "120 Hz refresh rate"
           }
         ]
       },
@@ -52,34 +46,28 @@
         "cate": "Smart Office",
         "product": [
           {
-            "img":"common/image/matebook.png",
-            "model":"MateBook X Pro",
-            "type":"Laptop",
-            "info":"Multi-screen collaboration"
+            "img": "common/image/notebook.png",
+            "model": "NoteBook",
+            "type": "Laptop",
+            "info": "Multi-screen collaboration"
           },
           {
-            "img":"common/image/mateview.png",
-            "model":"MateView",
-            "type":"Display",
-            "info":"Multi-screen collaboration"
+            "img": "common/image/display.png",
+            "model": "Display",
+            "type": "Display",
+            "info": "Multi-screen collaboration"
           },
           {
-            "img":"common/image/matestations.png",
-            "model":"MateStation S",
-            "type":"Desktop",
-            "info":"Multi-screen collaboration"
+            "img": "common/image/desktop.png",
+            "model": "Desktop",
+            "type": "Desktop",
+            "info": "Multi-screen collaboration"
           },
           {
-            "img":"common/image/matestationx.png",
-            "model":"MateStation X",
-            "type":"All-in-one PC",
-            "info":"Multi-screen collaboration"
-          },
-          {
-            "img":"common/image/pixlab.jpg",
-            "model":"PixLab",
-            "type":"Printer",
-            "info":"HarmonyOS 2.0, OneHop"
+            "img": "common/image/watch.png",
+            "model": "Smart Watch",
+            "type": "smartwatch",
+            "info": "All in control"
           }
         ]
       }

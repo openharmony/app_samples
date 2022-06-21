@@ -15,9 +15,9 @@
 
 @Component
 export struct CustomText {
-  @State name: string= ''
-  @State nameContent: string= ''
-  @State color: string= ''
+  @State name: string = ''
+  @State nameContent: string = ''
+  @State color: string = ''
   private resource = 'app.string.' + this.name
 
   build() {
