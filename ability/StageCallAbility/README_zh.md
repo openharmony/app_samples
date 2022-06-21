@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例展示了Stage模型启动Ability及Call功能的使用，包括拉起另一个Ability、创建Callee被调用端以及访问Callee被调用端。
+本示例展示了Stage模型启动Ability及Call功能的使用，包括拉起另一个Ability、创建Callee被调用端以及访问Callee被调用端。效果图如下：
+![](screenshots/device/image.png)
+![](screenshots/device/second.png)
+
+### 相关概念
+
+- [Ability开发](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ability/Readme-CN.md)：Ability开发。
+
+### 相关权限
+
+远程协同：ohos.permission.DISTRIBUTED_DATASYNC
 
 ### 使用说明
 
@@ -24,4 +34,4 @@
 
 2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

@@ -4,6 +4,14 @@
 
 提供日志打印类，并将日志信息保存至应用安装目录下。
 
+### 相关概念
+
+- [日志打印](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-hilog.md)：hilog日志系统，使应用/服务可以按照指定级别、标识和格式字符串输出日志内容，帮助开发者了解应用/服务的运行状态，更好地调试程序。
+
+### 相关权限
+
+不涉及
+
 ## 导入接口
 
 ```
@@ -76,4 +84,4 @@
 
 1.支持 OpenHarmony API version 8 及以上版本。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

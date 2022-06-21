@@ -1,8 +1,17 @@
-#  etsGallery
+# 组件集合
 
 ### 简介
 
-本Demo通过不同示例向用户介绍通用事件、通用属性、手势处理等不同组件的功能。
+本Demo通过不同示例向用户介绍通用事件、通用属性、手势处理等不同组件的功能。效果图如下：
+![](screenshots/devices/index.png)
+
+### 相关概念
+
+- [基于TS扩展的声明式开发范式](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/Readme-CN.md)：基于TS扩展的声明式开发范式。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -16,4 +25,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

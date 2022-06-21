@@ -2,7 +2,16 @@
 
 ## 简介
 
-本示例使用FeatureAbility接口，通过应用的包名与Ability名，拉起系统应用。
+本示例使用FeatureAbility接口，通过应用的包名与Ability名，拉起系统应用。效果图如下：
+![](screenshots/device/main.png)
+
+### 相关概念
+
+- [FeatureAbility模块](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-featureAbility.md)：FeatureAbility模块。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -12,4 +21,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

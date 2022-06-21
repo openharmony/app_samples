@@ -2,7 +2,16 @@
 
 ### 简介
 
-本示例仿postman输入API接口地址，获取相应数据，介绍数据请求接口的用法。
+本示例仿postman输入API接口地址，获取相应数据，介绍数据请求接口的用法。效果图如下：
+![](screenshots/devices/index.png)
+
+### 相关概念
+
+- [数据请求](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-http.md)：数据请求相关功能。
+
+### 相关权限
+
+网络服务：ohos.permission.INTERNET
 
 ### 使用说明
 
@@ -20,4 +29,4 @@
 
 1.本示例仅支持在标准系统上运行，运行本实例需全程联网。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

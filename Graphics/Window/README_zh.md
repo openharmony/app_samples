@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例展示了创建新窗口，将应用悬浮在其他界面，及应用分屏等功能。
+本示例展示了创建新窗口，将应用悬浮在其他界面，及应用分屏等功能。效果图如下：
+![](screenshots/devices/index.png)
+![](screenshots/devices/main.png)
+
+### 相关概念
+
+- [窗口](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-window.md)：窗口提供管理窗口的一些基础能力，包括对当前窗口的创建、销毁、各属性设置，以及对各窗口间的管理调度。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -30,4 +40,4 @@
 
 2.本示例为stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

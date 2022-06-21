@@ -4,15 +4,17 @@
 
 本示例通过构建解压，压缩文件场景，向用户展示`@ohos.zlib`接口，具体实现效果如下图。
 
-<img src="./screenshots/device/create.png" style="zoom:50%;" />
-
-<img src="./screenshots/device/main.png" alt="main" style="zoom:50%;" />
+![](screenshots/device/main.png)
 
 ### 相关概念
 
 [压缩](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-zlib.md#zlibzipfile)：通过传入的压缩文件路径与压缩后生成文件路径来对文件或目录进行压缩。
 
 [解压](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-zlib.md#zlibunzipfile)：通过传入的待解压文件路径与解压后生成文件路径来对文件或目录进行解压。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -28,6 +30,6 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 
 3.解压与压缩相关接口的入参路径必须为 `context` 相关接口获取的相对路径，目前该接口仅支持操作应用目录下的文件。
