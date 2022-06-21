@@ -71,11 +71,11 @@ export struct UsageList {
               Column() {
                 Row() {
                   Text(getAppName(item.bundleName))
-                    .width('70%')
+                    .width('60%')
                     .fontSize(25)
                     .fontWeight(FontWeight.Bold)
                   Text(hmsToString(Math.floor(item.totalTime / 1000)))
-                    .width('30%')
+                    .width('40%')
                     .fontSize(22)
                     .textAlign(TextAlign.End)
                 }
@@ -96,19 +96,17 @@ export struct UsageList {
                 }
                 .width('100%')
               }
-              .width('100%')
-              .padding({ left: 5, right: 30 })
+              .layoutWeight(1)
+              .padding({ left: 5, right: 5 })
             }
-            .width('90%')
+            .width('100%')
             .height(95)
             .margin({ bottom: 50 })
           }, item => item.bundleName)
         }
-        .padding(20)
-        .width('100%')
+        .padding(10)
         .justifyContent(FlexAlign.Start)
       }
-      .padding(20)
       .width('90%')
       .height('80%')
       .scrollBar(BarState.Off)
@@ -118,6 +116,6 @@ export struct UsageList {
     }
     .width('100%')
     .height('55%')
-    .margin({ top: 20 })
+    .margin({ top: 40 })
   }
 }

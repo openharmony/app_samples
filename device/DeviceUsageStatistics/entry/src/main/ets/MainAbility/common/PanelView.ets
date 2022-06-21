@@ -54,7 +54,7 @@ export struct PanelView {
     list.sort((a, b) => b.totalTime - a.totalTime)
     this.statisticals = list
     let topFiveTotalTime = 0
-    for (let i = 0 ;i < oftenUsed ; i++) {
+    for (let i = 0;i < oftenUsed; i++) {
       this.panelName.push(getAppName(this.statisticals[i].bundleName))
       this.panelValue.push(this.statisticals[i].totalTime)
       topFiveTotalTime += this.statisticals[i].totalTime
@@ -88,7 +88,7 @@ export struct PanelView {
       .margin({ top: 10 })
       .alignSelf(ItemAlign.Center)
     }
-    .height(250)
+    .height('30%')
     .width('100%')
   }
 }
