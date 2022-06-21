@@ -55,12 +55,15 @@
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）](data/DistributedRdb)
   - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
   - [`DistributedNote`：分布式备忘录(eTS)（API9）](data/DistributedNote)
+  - [`DistributedDataGobang`：分布式五子棋(eTS)（API9）](data/DistributedDataGobang)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
   - [`Vibrator`：振动（eTS）（API8）](device/Vibrator)
   - [`DeviceUsageStatistics`：设备使用信息统计（eTS）（API8）](device/DeviceUsageStatistics)
   - [`Browser`：浏览器（eTS）（API9）](device/Browser)
+  - [`Screen`：屏幕属性(eTS)（API9）](device/Screen)
+  - [`USBManager`：USB管理(eTS)（API8）](device/USBManager)
 - Graphics
   - [`JsWebGL`：WebGL(JS)（API8）](Graphics/JsWebGL)
   - [`Window`：窗口(eTS)（API9）](Graphics/Window)
@@ -71,10 +74,15 @@
   - [`MultiMedia`：相机和媒体库（eTS）（API9）](media/MultiMedia)
   - [`VideoPlayer`：视频播放（eTS）（API9）](media/VideoPlayer)
   - [`JsRecorder`：录音机（JS）（API8）](media/JSRecorder)
+  - [`Image`：图片处理(eTS)（API8）](media/Image)
 - DFX
   - [`JsDotTest`：测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger`：故障日志获取（eTS）（API8）](DFX/FaultLogger)
   - [`Logger`：日志打印(eTS)（API9）](DFX/Logger)
+- Safety
+  - [`UserAuth`：用户认证(eTS)（API9）](Safety/UserAuth)
+  - [`Cipher`：加解密(eTS)（API8）](Safety/Cipher)
+  - [`AbilityAccessCtrl`：访问权限控制(eTS)（API8）](Safety/AbilityAccessCtrl)
 - Telephony
   - [`Call`：拨打电话（eTS）（API8）](Telephony/Call)
   - [`Message`：短信服务（eTS）（API8）](Telephony/Message)
@@ -108,6 +116,8 @@
   - [`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
   - [`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
   - [`TransitionAnimation`：转场动画(eTS)（API9）](ETSUI/TransitionAnimation)
+  - [`PatternLock`：图案密码锁组件(eTS)（API9）](ETSUI/PatternLock)
+  - [`Search`：Search组件(eTS)（API9）](ETSUI/Search)
 - FileManager
   - [`Environment`：目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
