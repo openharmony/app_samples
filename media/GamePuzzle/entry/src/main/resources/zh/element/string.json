@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "GamePuzzle"
+    },
+    {
+      "name": "start",
+      "value": "开始"
+    },
+    {
+      "name": "restart",
+      "value": "重新开始"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "conform",
+      "value": "提交"
+    },
+    {
+      "name": "congratulations",
+      "value": "恭喜您!"
+    }
+  ]
+}
