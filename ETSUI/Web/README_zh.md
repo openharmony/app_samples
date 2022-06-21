@@ -2,7 +2,19 @@
 
 ### 简介
 
-本示例主要展示了web的功能页面。
+本示例主要展示了web的功能页面。实现效果如下：
+
+![](screenshots/devices/home.png)
+
+# 相关概念
+
+提供具有网页显示能力的Web组件。
+
+### 相关权限
+
+本示例需要在module.json5中配置如下权限:
+
+网络使用权限：ohos.permission.INTERNET
 
 ### 使用说明
 

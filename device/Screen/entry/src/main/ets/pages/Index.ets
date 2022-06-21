@@ -13,28 +13,29 @@
  * limitations under the License.
  */
 
-class Logger {
-  private prefix: string
+import { DisplayDevice } from '../common/DisplayDevice'
 
-  constructor(prefix: string) {
-    this.prefix = prefix
-  }
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Row() {
+        Text($r('app.string.entry_MainAbility'))
+          .fontSize(20)
+          .fontColor(Color.White)
+          .textAlign(TextAlign.Center)
+      }
+      .height('6%')
+      .width('100%')
+      .padding({ left: 15 })
+      .backgroundColor('#0D9FFB')
+      .constraintSize({ minHeight: 50 })
 
-  log(...args: any[]) {
-    console.log(`[${this.prefix}].${args.join(' ')}`)
-  }
-
-  info(...args: any[]) {
-    console.log(`[${this.prefix}].${args.join(' ')}`)
-  }
-
-  debug(...args: any[]) {
-    console.log(`[${this.prefix}].${args.join(' ')}`)
-  }
-
-  error(...args: any[]) {
-    console.log(`[${this.prefix}].${args.join(' ')}`)
+      DisplayDevice()
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#F1F1F1')
   }
 }
-
-export default new Logger('[eTSWeb]')

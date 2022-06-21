@@ -19,6 +19,10 @@
     {
       "name": "sure",
       "value": "确定"
+    },
+    {
+      "name": "grant_manage_internet",
+      "value": "应用需要联网"
     }
   ]
 }

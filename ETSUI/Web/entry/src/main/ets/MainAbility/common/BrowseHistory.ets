@@ -16,12 +16,12 @@
 @Component
 export struct BrowseHistory {
   @Link url: string
-  @Link isWebError: boolean
-  @Link webState: boolean
-  @Link isHttpError: boolean
-  @Link backToHome: boolean
   @Link browses: string[]
+  @Link webState: boolean
   @Link isLoading: boolean
+  @Link isWebError: boolean
+  @Link backToHome: boolean
+  @Link isHttpError: boolean
 
   build() {
     Column() {

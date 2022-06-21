@@ -19,6 +19,10 @@
     {
       "name": "sure",
       "value": "Sure"
+    },
+    {
+      "name": "grant_manage_internet",
+      "value": "need to connected to the internet"
     }
   ]
 }
