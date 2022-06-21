@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例选择应用进行注册/登录，并设置帐号相关信息，简要说明应用帐号管理相关功能。
+本示例选择应用进行注册/登录，并设置帐号相关信息，简要说明应用帐号管理相关功能。效果图如下：
+![](screenshots/device/index.png)
+![](screenshots/device/account.png)
+
+### 相关概念
+
+- [应用帐号管理](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-appAccount.md)：本模块不仅用于对应用帐号的添加、删除、查询、修改和授权，且提供帐号将数据写入磁盘和数据同步的能力。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -17,4 +27,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

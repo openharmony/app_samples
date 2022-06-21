@@ -2,7 +2,16 @@
 
 ### 简介
 
-本示例通过获取SIM卡相关信息，简要说明蜂窝数据接口相关功能。
+本示例通过获取SIM卡相关信息，简要说明蜂窝数据接口相关功能。。效果图如下：
+![](screenshots/device/index.png)
+
+### 相关概念
+
+- [网络状态](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-system-network.md)：网络状态相关功能。
+
+### 相关权限
+
+网络服务：ohos.permission.GET_NETWORK_INFO
 
 ### 使用说明
 
@@ -24,4 +33,4 @@
 
 3.本示例为Stage模型，从API version 9开始支持。
 
-4.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+4.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

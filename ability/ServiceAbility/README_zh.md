@@ -2,7 +2,16 @@
 
 ### 简介
 
-本示例展示了在eTS中ServiceAbility的创建与使用。
+本示例展示了在eTS中ServiceAbility的创建与使用。效果图如下：
+![](screenshots/device/main.png)
+
+### 相关概念
+
+- [Ability开发](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ability/Readme-CN.md)：Ability开发。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -16,4 +25,4 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

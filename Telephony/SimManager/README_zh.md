@@ -1,8 +1,18 @@
 # SIM卡管理
 
-## 简介
+### 简介
 
-本示例展示了电话服务中SIM卡相关功能，包含SIM卡的服务提供商、ISO国家码、归属PLMN号信息，以及默认语音卡功能。
+本示例展示了电话服务中SIM卡相关功能，包含SIM卡的服务提供商、ISO国家码、归属PLMN号信息，以及默认语音卡功能。效果图如下：
+![](screenshots/devices/main.png)
+
+### 相关概念
+
+- [SIM](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-sim.md)：SIM卡相关功能。
+
+### 相关权限
+
+电话权限：ohos.permission.GET_TELEPHONY_STATE
+
 
 ### 使用说明
 
@@ -20,4 +30,4 @@
 
 2.本示例仅支持在标准系统上运行。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

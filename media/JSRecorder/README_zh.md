@@ -2,7 +2,16 @@
 
 ### 简介
 
- 此Sample通过调用媒体相关接口来实现音频录制和播放的功能。
+ 此Sample通过调用媒体相关接口来实现音频录制和播放的功能。效果图如下：
+![](screenshots/device/main.png)
+
+### 相关概念
+
+- [音频录制开发指导](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/media/audio-recorder.md)：音频录制的主要工作是捕获音频信号，完成音频编码并保存到文件中，帮助开发者轻松实现音频录制功能。它允许调用者指定音频录制的采样率、声道数、编码格式、封装格式、文件路径等参数。
+
+### 相关权限
+
+麦克风权限：ohos.permission.MICROPHONE
 
 ### 使用说明
 
@@ -16,4 +25,4 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

@@ -2,7 +2,16 @@
 
 ### 简介
 
-本示例通过点击按钮触发动画，向用户展示`@ohos.animator`接口的动画的效果。
+本示例通过点击按钮触发动画，向用户展示`@ohos.animator`接口的动画的效果。效果图如下：
+![](screenshots/device/main.gif)
+
+### 相关概念
+
+- [动画](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-animator.md)：Animator类。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -20,4 +29,4 @@
 
 2.`@ohos.animator`库目前仅支持类web方式调用，ets暂不支持。
 
-3.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
