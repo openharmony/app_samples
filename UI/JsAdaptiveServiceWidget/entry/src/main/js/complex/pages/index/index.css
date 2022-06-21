@@ -37,14 +37,6 @@
     font-weight: bold;
 }
 
-.right-text {
-    font-size: 9px;
-    opacity: 0.6;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-}
-
 .region-plates {
     margin-top: 5px;
     flex-direction: row;

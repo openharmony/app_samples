@@ -1,6 +1,6 @@
 {
   "app": {
-    "vendor": "example",
+    "vendor": "samples",
     "bundleName": "ohos.samples.jswebgl",
     "version": {
       "code": 1000000,
@@ -36,7 +36,7 @@
         "formsEnabled": false,
         "label": "$string:MainAbility_label",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "distro": {
