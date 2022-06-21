@@ -41,10 +41,6 @@
       "value": "Confirm"
     },
     {
-      "name": "crop",
-      "value": "Crop"
-    },
-    {
       "name": "rotate",
       "value": "Rotate"
     },

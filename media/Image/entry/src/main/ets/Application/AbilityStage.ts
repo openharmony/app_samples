@@ -13,29 +13,13 @@
  * limitations under the License.
  */
 
-import { ImageGallery } from '../common/ImageGallery'
+import AbilityStage from '@ohos.application.AbilityStage'
+import Logger from '../model/Logger'
 
-@Entry
-@Component
-struct Index {
+const TAG: string = '[MyAbilityStage]'
 
-  build() {
-    Column() {
-      Row() {
-        Text($r('app.string.entry_MainAbility'))
-          .fontSize(20)
-          .fontColor(Color.White)
-          .textAlign(TextAlign.Center)
-      }
-      .height('6%')
-      .width('100%')
-      .padding({ left: 14 })
-      .backgroundColor('#0D9FFB')
-      .constraintSize({ minHeight: 50 })
-
-      ImageGallery()
-    }
-    .width('100%')
-    .height('100%')
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    Logger.info(TAG, `[Demo] MyAbilityStage onCreate`)
   }
 }

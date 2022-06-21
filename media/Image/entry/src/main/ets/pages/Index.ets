@@ -13,15 +13,28 @@
  * limitations under the License.
  */
 
-import Logger from './model/Logger'
+import { ImageGallery } from '../common/ImageGallery'
 
-const TAG: string = '[App]'
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Row() {
+        Text($r('app.string.entry_MainAbility'))
+          .fontSize(20)
+          .fontColor(Color.White)
+          .textAlign(TextAlign.Center)
+      }
+      .height('6%')
+      .width('100%')
+      .padding({ left: 14 })
+      .backgroundColor('#0D9FFB')
+      .constraintSize({ minHeight: 50 })
 
-export default {
-  onCreate() {
-    Logger.info(TAG, 'Application onCreate')
-  },
-  onDestroy() {
-    Logger.info(TAG, 'Application onDestroy')
-  },
+      ImageGallery()
+    }
+    .width('100%')
+    .height('100%')
+  }
 }

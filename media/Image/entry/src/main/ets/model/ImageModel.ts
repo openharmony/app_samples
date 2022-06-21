@@ -14,6 +14,7 @@
  */
 
 import fileio from '@ohos.fileio'
+import featureAbility from '@ohos.ability.featureAbility'
 import multimedia_image from '@ohos.multimedia.image'
 import multimedia_mediaLibrary from '@ohos.multimedia.mediaLibrary'
 import Logger from '../model/Logger'
@@ -23,15 +24,15 @@ const TAG: string = '[ImageModel]'
 export class ImageModel {
   async getImageFd(uri: string) {
     Logger.info(TAG, `getImageFd uri = ${uri}`)
-    let media = multimedia_mediaLibrary.getMediaLibrary()
+    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
     let fetchOp = {
       selections: '',
       selectionArgs: [],
       uri: uri
     }
-    const fetchFileResult = await media.getFileAssets(fetchOp)
+    let fetchFileResult = await media.getFileAssets(fetchOp)
     Logger.info(TAG, `getImageFd fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
-    const fileAsset = await fetchFileResult.getFirstObject()
+    let fileAsset = await fetchFileResult.getFirstObject()
     Logger.info(TAG, `getImageFd fileAsset.uri = ${fileAsset.uri}`)
     await media.release()
     return await fileAsset.open('r')
@@ -52,32 +53,32 @@ export class ImageModel {
   }
 
   async queryFile(uri: string) {
-    let media = multimedia_mediaLibrary.getMediaLibrary()
+    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
     let fetchOp = {
       selections: '',
       selectionArgs: [],
       uri: uri
     }
-    const fetchFileResult = await media.getFileAssets(fetchOp)
+    let fetchFileResult = await media.getFileAssets(fetchOp)
     Logger.info(TAG, `getImageInfo fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
     await media.release()
     return await fetchFileResult.getFirstObject()
   }
 
   async getAllImg() {
-    let media = multimedia_mediaLibrary.getMediaLibrary()
+    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
     let fileKeyObj = multimedia_mediaLibrary.FileKey
     let fetchOp = {
       selections: fileKeyObj.MEDIA_TYPE + '=?',
       selectionArgs: [multimedia_mediaLibrary.MediaType.IMAGE.toString()],
     }
-    const fetchFileResult = await media.getFileAssets(fetchOp)
+    let fetchFileResult = await media.getFileAssets(fetchOp)
     Logger.info(TAG, `getAllImg getFileAssetsFromType fetchFileResult.count = ${fetchFileResult.getCount()}`)
-    let fileAssets
-    if (fetchFileResult.getCount() > 0) {
-      fileAssets = await fetchFileResult.getAllObject()
-    }
+    let fileAssets = await fetchFileResult.getAllObject()
     Logger.info(TAG, `getAllImg result = ${JSON.stringify(fileAssets)}`)
+    for (let index = 0; index < fileAssets.length; index++) {
+      Logger.info(TAG, `fileAssets ${index} uri = ${fileAssets[index].uri}`)
+    }
     await media.release()
     return fileAssets
   }
@@ -94,7 +95,7 @@ export class ImageModel {
 
   async angleImgs(uri: string, single: number) {
     let imagePackerApi = multimedia_image.createImagePacker()
-    let media = multimedia_mediaLibrary.getMediaLibrary()
+    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
     let fd = await this.getImageFd(uri)
     Logger.info(TAG, `angleImg fd = ${fd}`)
     let fileAsset = await this.queryFile(uri)
@@ -116,6 +117,7 @@ export class ImageModel {
     let imgFd = await imgFileAsset.open('Rw')
     Logger.info(TAG, `angleImg imgFd = ${imgFd}`)
     await fileio.write(imgFd, imgData)
+    await fileio.close(imgFd)
     await fileAsset.close(imgFd)
     Logger.info(TAG, `angleImg create file success`)
     imagePackerApi.release()
