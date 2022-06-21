@@ -14,6 +14,9 @@
  */
 
 import prompt from '@ohos.prompt'
+import Logger from '../model/Logger'
+
+const TAG : string = '[SearchWeb]'
 
 @Component
 export struct SearchBar {
@@ -74,10 +77,11 @@ export struct SearchBar {
         this.isLoading = true
         this.isWebError = false
         this.isHttpError = false
+        Logger.info(TAG,`this.url=${this.url}`)
       })
     }
-    .width('100%')
     .height(50)
+    .width('100%')
     .borderRadius(15)
     .margin({ top: 10, bottom: 10 })
   }

@@ -14,6 +14,9 @@
  */
 
 import { WebData } from '../model/WebData'
+import Logger from '../model/Logger'
+
+const TAG : string = '[HomePage]'
 
 @Component
 export struct HomePage {
@@ -33,6 +36,7 @@ export struct HomePage {
               this.url = item.url
               this.webState = true
               this.backToHome = false
+              Logger.info(TAG,`this.url=${this.url}`)
             })
           Text(item.title)
             .fontSize(15)

@@ -16,6 +16,8 @@
 import Logger from '../model/Logger'
 import { WebError, HttpError } from '../model/Error'
 
+const TAG : string = '[WebComponent]'
+
 @Component
 export struct WebComponent {
   private tag: string = 'WebComponent'
@@ -29,6 +31,10 @@ export struct WebComponent {
   @Link isLoading: boolean
   @Link isWebError: boolean
   @Link isHttpError: boolean
+
+  aboutToAppear(){
+    Logger.info(TAG,`this.url=${this.url}`)
+  }
 
   build() {
     Column() {
@@ -94,6 +100,7 @@ export struct WebComponent {
             this.browses.splice(this.browses.indexOf(this.url, 0), 1)
           }
           this.browses.unshift(this.url)
+          Logger.info(TAG,`this.browses = ${JSON.stringify(this.browses)}`)
         })
         .onPageEnd(e => {
           this.isLoading = false

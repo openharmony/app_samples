@@ -11,8 +11,9 @@
   "repository": {},
   "version": "1.0.0",
   "dependencies": {
-    "@ohos/hypium": "1.0.0",
     "@ohos/hvigor-ohos-plugin": "1.1.3",
-    "@ohos/hvigor": "1.1.3"
+    "hypium": "^1.0.0",
+    "@ohos/hvigor": "1.1.3",
+    "@ohos/hypium": "1.0.0"
   }
 }
