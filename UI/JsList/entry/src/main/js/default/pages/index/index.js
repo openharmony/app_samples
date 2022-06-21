@@ -14,12 +14,12 @@
  */
 
 export default {
-    data: {
-        categorylist: [],
-    },
-    onInit() {
-        this.categorylist = this.$t('strings.categorylist')
-    },
+  data: {
+    categorylist: [],
+  },
+  onInit() {
+    this.categorylist = this.$t('strings.categorylist')
+  },
 }
 
 

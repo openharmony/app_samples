@@ -1,33 +1,27 @@
 {
   "strings": {
-    "productList":"产品列表",
+    "productList": "产品列表",
     "categorylist": [
       {
         "cate": "手机",
-        "product":[
+        "product": [
           {
-            "img":"common/image/mate.jpg",
-            "model": "Mate40Pro+",
+            "img": "common/image/phone1.png",
+            "model": "旗舰机",
             "type": "手机",
-            "info": "麒麟9000+鸿蒙2.0，5nm旗舰芯片"
+            "info": "美，如你所见"
           },
           {
-            "img":"common/image/maters.png",
-            "model": "Mate40RS保时捷设计",
+            "img": "common/image/phone2.png",
+            "model": "旗舰尊享版",
             "type": "手机",
             "info": "超跑基因，致敬时代"
           },
           {
-            "img":"common/image/matex.jpg",
-            "model": "Mate X2",
+            "img": "common/image/phone3.png",
+            "model": "青春版",
             "type": "手机",
             "info": "大展想象"
-          },
-          {
-            "img":"common/image/pfif.jpg",
-            "model":"P50Pro",
-            "type":"手机",
-            "info":"骁龙888+鸿蒙2.0，全新计算光学"
           }
         ]
       },
@@ -35,16 +29,16 @@
         "cate": "平板",
         "product": [
           {
-            "img":"common/image/matepad.png",
-            "model":"MatePadPro12.6",
-            "type":"平板",
-            "info":"麒麟9000+鸿蒙2.0，大屏生产力"
+            "img": "common/image/table1.png",
+            "model": "平板 ",
+            "type": "平板",
+            "info": "重新定义生产力"
           },
           {
-            "img":"common/image/matepadone.jpg",
-            "model":"MatePad 11",
-            "type":"平板",
-            "info":"HarmonyOS2.0，120HZ刷新率"
+            "img": "common/image/table2.png",
+            "model": "平板",
+            "type": "平板",
+            "info": "大屏生产力，120HZ刷新率"
           }
         ]
       },
@@ -52,34 +46,28 @@
         "cate": "智慧办公",
         "product": [
           {
-            "img":"common/image/matebook.png",
-            "model":"MateBook X Pro",
-            "type":"笔记本",
-            "info":"多屏协同，智慧办公"
+            "img": "common/image/notebook.png",
+            "model": "笔记本",
+            "type": "笔记本",
+            "info": "多屏协同，智慧办公"
           },
           {
-            "img":"common/image/mateview.png",
-            "model":"MateView",
-            "type":"显示器",
-            "info":"多屏协同，智慧办公"
+            "img": "common/image/display.png",
+            "model": "显示器",
+            "type": "显示器",
+            "info": "多屏协同，智慧办公"
           },
           {
-            "img":"common/image/matestations.png",
-            "model":"MateStation S",
-            "type":"台式机",
-            "info":"多屏协同，智慧办公"
+            "img": "common/image/desktop.png",
+            "model": "台式机",
+            "type": "台式机",
+            "info": "多屏协同，智慧办公"
           },
           {
-            "img":"common/image/matestationx.png",
-            "model":"MateStation X",
-            "type":"一体机",
-            "info":"多屏协同，智慧办公"
-          },
-          {
-            "img":"common/image/pixlab.jpg",
-            "model":"PixLab",
-            "type":"打印机",
-            "info":"HarmonyOS2.0，一碰智联"
+            "img": "common/image/watch.png",
+            "model": "智能手表",
+            "type": "智能手表",
+            "info": "腕上智能，尽在掌握"
           }
         ]
       }
