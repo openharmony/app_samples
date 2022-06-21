@@ -1,7 +1,6 @@
 {
   "data": {
     "title": "天天基金",
-    "time": "交易日更新净值时间：16:00-23:00",
     "fundText": "基金名称",
     "timeText": "近一周",
     "arrayPlates": [
@@ -42,7 +41,7 @@
     "array": [
       {
         "id": 1,
-        "name": "某某投资有限集团内需精选混合(LOF)",
+        "name": "某某投资集团内需精选混合(LOF)",
         "coded": 161810,
         "perFront": "2.87%",
         "perAfter": "2.87%",

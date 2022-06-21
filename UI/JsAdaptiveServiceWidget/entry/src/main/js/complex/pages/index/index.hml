@@ -17,7 +17,6 @@
     <div class="region-title" >
         <image class="left-image" src="/common/ic_gift.svg"></image>
         <text class="left-text">{{ title }}</text>
-        <text class="right-text">{{ time }}</text>
     </div>
     <div class="region-plates">
         <div for="{{ arrayPlates }}" tid="id" class="{{ $item.exponent }}">
