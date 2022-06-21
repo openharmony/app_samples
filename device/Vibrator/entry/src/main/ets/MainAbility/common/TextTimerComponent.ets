@@ -121,9 +121,7 @@ export struct TextTimerComponent {
         .backgroundColor('#0D9FFB')
         .onClick(() => {
           this.progressValue = 0
-          this.hourText = '00'
-          this.minuteText = '00'
-          this.secondText = '00'
+          this.textStr = '00:00:00'
           clearInterval(this.timerId)
         })
     }
