@@ -4,21 +4,15 @@
 
 本示例展示了用户认证中人脸识别功能。实现效果如下：
 
-<img src="screenshots/device/index.png" alt="index" style="zoom: 50%;" />
+<img src="./screenshots/device/index.png" />
 
 ### 相关概念
 
-用户认证，提供了用户认证的相关方法，包括检测认证能力、认证和取消认证等，用户可以使用人脸等生物特征信息进行认证操作。
+用户认证：提供了用户认证的相关方法，包括检测认证能力、认证和取消认证等，用户可以使用人脸等生物特征信息进行认证操作。
 
 ### 相关权限
 
-本示例需要在module.json5中配置如下权限:
-
-"requestPermissions": [
-  {
-    "name": "ohos.permission.ACCESS_BIOMETRIC"
-  }
-]
+访问生物识别权限：ohos.permission.ACCESS_BIOMETRIC
 
 ### 使用说明
 
@@ -36,4 +30,4 @@
 
 3.本示例为Stage模型，从API version 9开始支持。
 
-4.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
