@@ -29,4 +29,4 @@
 
 2.`@ohos.animator`库目前仅支持类web方式调用，ets暂不支持。
 
-3.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

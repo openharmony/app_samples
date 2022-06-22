@@ -29,4 +29,4 @@
 
 1.本示例仅支持在标准系统上运行，运行本实例需全程联网。
 
-2.本示例需要使用DevEco Studio 3.0（Beta3Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
