@@ -2,7 +2,18 @@
 
 ### 简介
 
-本示例展示了电话服务中发送短信的功能。
+本示例展示了电话服务中发送短信的功能。实现效果如下：
+<img src="./screenshots/device/create_contact.png" /><img src="./screenshots/device/save_contact.png" /><img src="./screenshots/device/send_message.png" />
+
+### 相关概念
+
+发送短信、获取发送短信的默认SIM卡槽ID、获取短信服务中心（SMSC）地址等。
+
+### 相关权限
+
+发送短信权限：ohos.permission.SEND_MESSAGES
+设置通话状态权限：ohos.permission.SET_TELEPHONY_STATE
+获取通话状态权限：ohos.permission.GET_TELEPHONY_STATE
 
 ### 使用说明
 
@@ -20,4 +31,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
