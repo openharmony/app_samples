@@ -12,6 +12,23 @@
 
 3.在工程中import jsQR from 'jsqr'导入后即可使用。
 
+实现效果如下：
+
+![create](screenshots/devices/create.png) ![paras](screenshots/devices/paras.png)
+
+### 相关概念
+
+-  QRCode：显示二维码信息组件，传入要生成二维码的字符串即可显示生成的二维码。
+-  jsqr：提供解析二维码的api，支持npm安装。
+
+### 相关权限
+
+```
+本示例需要在module.json5中配置如下权限:
+
+获取屏幕截图权限：ohos.permission.CAPTURE_SCREEN
+```
+
 ### 使用说明
 
 1.启动应用,点击**生成二维码**进入界面，在输入框中输入内容，下方显示输入内容生成的二维码。
@@ -26,6 +43,6 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例为stage模型，从API version 9开始支持。
+2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

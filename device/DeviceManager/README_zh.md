@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例展示了在eTS中DeviceManager接口的使用，包括获取授信设备列表，设备扫描，设备认证，设备状态订阅。
+本示例展示了在eTS中DeviceManager接口的使用，包括获取授信设备列表，设备扫描，设备认证，设备状态订阅。实现效果如下：
+
+![main](screenshots/device/main.png)
+
+### 相关概念
+
+- 设备管理：用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -18,4 +28,4 @@
 
 2.本示例仅支持标准系统上运行。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
