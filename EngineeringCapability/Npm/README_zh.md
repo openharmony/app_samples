@@ -3,14 +3,11 @@
 ### 简介
 
 本示例展示了npm引用第三方js类库和本地库，主要展示了mathjs、dayjs和本地库应用。实现效果如下：
-
-<img src="screenshots/device/date_page.png" style="zoom:50%;" />
-
-<img src="screenshots/device/index.png" alt="index" style="zoom:50%;" />
-
-<img src="screenshots/device/local_library.png" alt="local_library" style="zoom:50%;" />
+![](./screenshots/device/index.png)
 
 ### 相关概念
+
+npm：npm引用第三方js类库和本地库
 
 ##### 第三方js类库导入步骤
 
@@ -58,4 +55,4 @@
 
 3.本示例为Stage模型，从API version 9开始支持。
 
-4.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

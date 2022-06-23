@@ -3,6 +3,7 @@
 ### 简介
 
 本示例通过XmlSerializer生成xml文本，通过XmlPullParser解析xml文本，通过ConvertXML将xml文本转换为JavaScript对象。实现效果如下：
+
 <img src="./screenshots/device/main.png" />
 
 ### 相关概念
