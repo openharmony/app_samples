@@ -61,6 +61,7 @@ export default class StorageModel {
 
   async deleteSync(key: string) {
     await this.storage.delete(key)
+    await this.storage.flush()
     let result = await this.storage.get(key, 'null')
     return result
   }
