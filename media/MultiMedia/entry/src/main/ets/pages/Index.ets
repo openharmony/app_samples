@@ -101,7 +101,7 @@ struct Index {
       }
       .size({ width: '30%', height: '30%' })
       .translate({ x: 10 })
-      .margin({ bottom: 10 })
+      .margin({ bottom: 50 })
     }
     .width('100%')
     .height('100%')
