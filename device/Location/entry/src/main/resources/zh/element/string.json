@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "位置"
+    },
+    {
+      "name": "description_mainability",
+      "value": "定位当前位置，获取位置信息"
+    },
+    {
+      "name": "latitude",
+      "value": "纬度: "
+    },
+    {
+      "name": "longitude",
+      "value": "经度: "
+    },
+    {
+      "name": "request",
+      "value": "位置服务请求失败！"
+    },
+    {
+      "name": "location",
+      "value": "获取位置服务成功！"
+    },
+    {
+      "name": "start",
+      "value": "开启定位"
+    },
+    {
+      "name": "stop",
+      "value": "关闭定位"
+    }
+  ]
+}
