@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "上传下载"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "上传下载"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "上传下载"
+    },
+    {
+      "name": "UploadDownload",
+      "value": "上传下载"
+    },
+    {
+      "name": "choice_download_file",
+      "value": "请选择需要下载的文件"
+    },
+    {
+      "name": "choice_upload_file",
+      "value": "请选择需要上传的文件"
+    },
+    {
+      "name": "click_download",
+      "value": "点击下载"
+    },
+    {
+      "name": "click_upload",
+      "value": "点击上传"
+    },
+    {
+      "name": "upload_page",
+      "value": "上传"
+    },
+	{
+      "name": "download_success",
+      "value": "下载完成"
+    },
+    {
+      "name": "download_progress",
+      "value": "下载进度："
+    },
+    {
+      "name": "upload_progress",
+      "value": "上传进度："
+    },
+    {
+      "name": "confirm",
+      "value": "确定"
+    }
+  ]
+}
