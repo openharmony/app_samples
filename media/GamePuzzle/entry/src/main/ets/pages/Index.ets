@@ -57,9 +57,11 @@ struct Index {
   }
 
   async onImageChange() {
+    this.isRefresh = true
     this.dialogController.close()
     this.numArray = await this.ImageModel.splitPic(this.index)
     this.init()
+    this.isRefresh = false
   }
 
   init() {
@@ -111,6 +113,9 @@ struct Index {
           .margin({ top: 5 })
           .objectFit(ImageFit.Cover)
           .onClick(async () => {
+            if (this.isRefresh) {
+              return
+            }
             this.imgDatas = await this.ImageModel.getAllImg()
             this.dialogController.open()
           })

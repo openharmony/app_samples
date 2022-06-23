@@ -51,15 +51,15 @@ struct CameraPage {
     }
   }
 
-  async refreshVideoState() {
+  refreshVideoState() {
     if (this.isRecording) {
       Logger.info(this.tag, 'stopVideo begin')
-      await CameraService.stopVideo()
+      CameraService.stopVideo()
       this.isRecording = false
       this.videoThumbnail = $r('app.media.video_poster')
     } else {
       Logger.info(this.tag, 'startVideo begin')
-      await CameraService.startVideo(this.surfaceId)
+      CameraService.startVideo()
       this.isRecording = true
     }
   }
@@ -67,16 +67,6 @@ struct CameraPage {
   handleTakePicture = (thumbnail: string) => {
     this.imgThumbnail = thumbnail
     Logger.info(this.tag, `takePicture end , thumbnail: ${this.imgThumbnail}`)
-  }
-
-  async changeToPhotoMode() {
-    if (this.isRecording) {
-      await CameraService.stopVideo()
-      this.isRecording = false
-    }
-    await CameraService.initCamera(this.surfaceId)
-    this.curModel = CameraMode.MODE_PHOTO
-    this.videoThumbnail = undefined
   }
 
   build() {
@@ -90,7 +80,7 @@ struct CameraPage {
         })
           .onLoad(() => {
             Logger.info(this.tag, 'onLoad is called')
-            this.mXComponentController.setXComponentSurfaceSize({ surfaceWidth: 2048, surfaceHeight: 1536 })
+            this.mXComponentController.setXComponentSurfaceSize({ surfaceWidth: 1920, surfaceHeight: 1080 })
             this.surfaceId = this.mXComponentController.getXComponentSurfaceId()
             Logger.info(this.tag, `onLoad surfaceId: ${this.surfaceId}`)
             this.curModel = CameraMode.MODE_PHOTO
@@ -107,7 +97,12 @@ struct CameraPage {
               .onClick(() => {
                 if (this.curModel === CameraMode.MODE_VIDEO) {
                   prompt.showToast({ message: '切换中...', duration: 1000 })
-                  this.changeToPhotoMode()
+                  if (this.isRecording) {
+                    CameraService.stopVideo()
+                    this.isRecording = false
+                  }
+                  this.curModel = CameraMode.MODE_PHOTO
+                  this.videoThumbnail = undefined
                 }
               })
             Text($r('app.string.video'))
