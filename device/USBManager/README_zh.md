@@ -8,9 +8,7 @@
 
 #相关概念
 
-1.[订阅USB监听事件](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-commonEvent.md#commoneventcreatesubscriber)：通过订阅USB插入和移除的监听事件，获取接口使用状态。
-
-2.[获取USB设备列表](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-usb.md#usbgetdevices)：获取已插入的USB设备列表。
+本模块可以对USB设备进行监听和信息读取。
 
 ### 相关权限
 
@@ -30,4 +28,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
