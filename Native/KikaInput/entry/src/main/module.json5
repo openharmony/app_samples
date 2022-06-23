@@ -1,0 +1,54 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/AbilityStage.ts",
+    "description": "$string:entry_desc",
+    "mainElement": "MainAbility",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "uiSyntax": "ets",
+    "abilities": [
+      {
+        "name": "MainAbility",
+        "srcEntrance": "./ets/MainAbility/MainAbility.ts",
+        "description": "$string:MainAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:MainAbility_label",
+        "visible": true,
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white",
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "description": "中文输入法Demo",
+        "icon": "$media:app_icon",
+        "name": "InputDemoService",
+        "srcEntrance": "./ets/InputDemoService/InputDemoService.ts",
+        "type": "service",
+        "visible": true
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
+      }
+    ]
+  }
+}

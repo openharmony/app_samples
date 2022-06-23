@@ -1,0 +1,22 @@
+{
+  "apiType": 'stageMode',
+  "buildOption": {
+    // 是否使用方舟编译
+    "externalNativeOptions": {
+      "path": "./src/main/cpp/CMakeLists.txt",
+      "arguments": "-v -DOHOS_STL=c++_shared",
+      "abiFilters": [
+        "arm64-v8a",
+      ],
+      "cppFlags": "",
+    }
+  },
+  "targets": [
+    {
+      "name": "default",
+    },
+    {
+      "name": "ohosTest",
+    }
+  ]
+}
