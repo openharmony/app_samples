@@ -4,7 +4,9 @@
 
  本示例运用OpenHarmony系统提供的FA模型与相关接口展示了一个简易的时钟。 实现效果如下：
 
-![FlipClock](screenshots/devices/FlipClock.png)![CountDown](screenshots/devices/CountDown.png)
+![FlipClock](screenshots/devices/FlipClock.png)
+
+![CountDown](screenshots/devices/CountDown.png)
 
 ### 相关概念
 
@@ -12,11 +14,7 @@
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
 后台代理提醒权限：ohos.permission.PUBLISH_AGENT_REMINDER
-```
 
 ### 使用说明
 
@@ -29,4 +27,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

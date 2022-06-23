@@ -2,7 +2,17 @@
 
 ### **简介**
 
-本示例展示了list控件在商品分类列表中的应用，在listGroup里采用两个list-item分别展示了Group收缩和Group展开的两种列表形态，点击后会弹出相应的list列表。
+本示例展示了list控件在商品分类列表中的应用，在listGroup里采用两个list-item分别展示了Group收缩和Group展开的两种列表形态，点击后会弹出相应的list列表。实现效果如下：
+
+![](screenshots/device/closed.png)
+
+#相关概念
+
+List组件包含一系列相同宽度的列表项。适合连续、多行呈现同类数据，例如图片和文本。
+
+### 相关权限
+
+不涉及
 
 ### **使用说明**
 
@@ -14,4 +24,4 @@
 
 1.本示例支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

@@ -8,8 +8,7 @@
 
 # 相关概念
 
-[通过指定起始和结束时间查询应用使用时长统计信息](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-deviceUsageStatistics.md#bundlestatequerybundlestateinfos-1)
-[判断指定bundleName的应用当前是否是空闲状态](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-deviceUsageStatistics.md#bundlestateisidlestate-1)
+本模块记录了系统中各个应用的使用情况。
 
 ### 相关权限
 
@@ -27,4 +26,4 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
