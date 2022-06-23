@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "中文输入法应用"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "中文输入法"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "中文输入法"
+    },
+    {
+      "name": "ServiceExtAbility",
+      "value": "输入法服务"
+    }
+  ]
+}
