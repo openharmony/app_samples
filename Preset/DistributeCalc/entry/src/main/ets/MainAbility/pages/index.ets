@@ -36,7 +36,6 @@ struct Index {
   @State isLand: boolean = false
   @State result: string = ''
   @State @Watch('dataChange') expression: string = ''
-  @State dialogShow: boolean = false
   @State isDistributed: boolean = false
   private remoteDeviceModel: RemoteDeviceModel = new RemoteDeviceModel()
   onLand = (mediaQueryResult) => {
@@ -49,7 +48,7 @@ struct Index {
   }
 
   dataChange() {
-    Logger.info(TAG, `dataChange`)
+    Logger.info(TAG, `dataChange, expression = ${this.expression}`)
     kvStoreModel.put(DATA_CHANGE, this.expression)
   }
 
@@ -112,13 +111,17 @@ struct Index {
     kvStoreModel.setOnMessageReceivedListener(DATA_CHANGE, (value) => {
       Logger.info(TAG, `DATA_CHANGE ${value}`)
       if (this.isDistributed) {
-        if (value.search(EXIT) != -1) {
+        if (value.search(EXIT) !== -1) {
           Logger.info(TAG, `EXIT ${EXIT}`)
           featureAbility.terminateSelf((error) => {
             Logger.error(TAG, `terminateSelf finished, error= ${error}`)
           });
         } else {
-          this.expression = value
+          if (value === 'null') {
+            this.expression = ''
+          } else {
+            this.expression = value
+          }
           if (this.isOperator(this.expression.substr(this.expression.length - 1, this.expression.length))) {
             this.result = JSON.stringify(MATH.evaluate(this.expression.substr(0, this.expression.length - 1)))
           } else {
@@ -145,8 +148,7 @@ struct Index {
         isLand: this.isLand,
         startAbilityCallBack: this.startAbilityCallBack,
         remoteDeviceModel: this.remoteDeviceModel,
-        isDistributed: $isDistributed,
-        dialogShow: $dialogShow
+        isDistributed: $isDistributed
       })
 
       if (this.isLand) {

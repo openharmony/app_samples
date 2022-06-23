@@ -25,7 +25,7 @@ export struct MissionInfoComponent {
   @State missionSnapshot: image.PixelMap | undefined = undefined
   @State isOn: boolean = undefined
   @State translateLeft: number = 0
-  @State translateRight: number = -350
+  @State translateRight: number = -500
   @State panDirection: PanDirection = PanDirection.Left
   private mission: Mission
   private handlerRefresh: () => void
@@ -112,7 +112,7 @@ export struct MissionInfoComponent {
         Image(this.missionSnapshot)
           .objectFit(ImageFit.Contain)
           .size({ width: 100, height: 200 })
-          .margin({ left: 20, right: 40 })
+          .margin({ left: 20, right: 10 })
         Column() {
           this.RowOfSquareTexts($r('app.string.bundle_name'), this.mission.want.bundleName)
           this.RowOfSquareTexts($r('app.string.running_state'), this.onRunningState(this.mission.runningState))
@@ -154,12 +154,12 @@ export struct MissionInfoComponent {
           Logger.info(TAG, `PanGesture onActionStart`)
           if (this.panDirection === PanDirection.Left) {
             this.panDirection = PanDirection.Right
-            this.translateLeft = -350
+            this.translateLeft = -500
             this.translateRight = 0
           } else {
             this.panDirection = PanDirection.Left
             this.translateLeft = 0
-            this.translateRight = -350
+            this.translateRight = -500
           }
         })
     )

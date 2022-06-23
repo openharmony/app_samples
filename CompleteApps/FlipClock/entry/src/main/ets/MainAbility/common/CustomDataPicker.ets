@@ -82,8 +82,8 @@ export struct CustomDatePicker {
             this.reminderId = await reminderAgent.publishReminder(reminderRequest)
             let dateTime = { hour: this.hourTest, minute: this.minuteTest, reminderId: this.reminderId }
             StorageModel.getInstance().putStorageValue(`alarmClock${this.total}`, dateTime)
-            StorageModel.getInstance().putStorageValue('amount', this.total)
             this.total += 1
+            StorageModel.getInstance().putStorageValue('amount', this.total)
             this.controller.close()
             this.countChange(this.total)
           })

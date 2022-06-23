@@ -55,7 +55,7 @@ export struct FlipClock{
   //修改时间
   changeTime(){
     const time=new Date()
-    const hour=time.getHours()+8
+    const hour=time.getHours()
     const hourOne=Math.floor(hour/10)
     const hourTwo=hour%10
     const minutesOne=Math.floor(time.getMinutes()/10)

@@ -27,7 +27,10 @@ export struct AlarmClock {
   getTest = async () => {
     this.listItems = []
     let amount = await this.storage.getStorageValue('amount')
-    for (let i = 0;i <= amount; i++) {
+    if (amount !== 'null') {
+      this.total = parseInt(amount)
+    }
+    for (let i = 0;i <= this.total; i++) {
       let alarmClock = await this.storage.getStorageValue(`alarmClock${i}`)
       if (alarmClock != 'null') {
         let dataTime = JSON.parse(alarmClock).hour + ':' + JSON.parse(alarmClock).minute

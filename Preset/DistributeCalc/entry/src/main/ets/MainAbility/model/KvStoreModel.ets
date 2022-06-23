@@ -60,6 +60,9 @@ export class KvStoreModel {
 
   put(key, value) {
     Logger.info(TAG, `kvStore.put ${key}=${value}`)
+    if(value === '') {
+      value = 'null'
+    }
     this.kvStore.put(key, value).then((data) => {
       Logger.info(TAG, `kvStore.put ${key} finished, data= ${JSON.stringify(data)}`)
     }).catch((err) => {

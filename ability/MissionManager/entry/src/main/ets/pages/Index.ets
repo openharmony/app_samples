@@ -54,8 +54,7 @@ struct Index {
   handlerRefresh = () => {
     Logger.info(TAG, `clickCallback start`)
     this.isShow = false
-    missionManager.getMissionInfos('', NUMMAX, async (error, data) => {
-      Logger.info(TAG, `MissionInfos: ${JSON.stringify(data)}`)
+    missionManager.getMissionInfos('', NUMMAX, (error, data) => {
       this.missionInfos = []
       setTimeout(() => {
         this.missionInfos = data.map((item) => {
@@ -95,7 +94,7 @@ struct Index {
             ListItem() {
               MissionInfoComponent({ mission: item, handlerRefresh: this.handlerRefresh })
             }
-          }, item => item.bundleName)
+          }, item => item.timestamp)
         }
         .height('90%')
       }
@@ -103,5 +102,6 @@ struct Index {
       .onRefreshing(this.handlerRefresh)
     }
     .width('100%')
+    .height('100%')
   }
 }

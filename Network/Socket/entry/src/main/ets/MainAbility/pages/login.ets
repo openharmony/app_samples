@@ -55,7 +55,7 @@ struct Login {
       Logger.info(TAG, 'bind success')
     }).catch(err => {
       Logger.info(TAG, 'bind fail')
-    });
+    })
     udp.on('message', data => {
       Logger.info(TAG, `data:${JSON.stringify(data)}`)
       let buffer = data.message
@@ -73,7 +73,7 @@ struct Login {
         loginCount += 1
         router.push({
           url: 'pages/Index',
-          params: { address: oppositeAddr.address, port: oppositeAddr.port, loginCount:loginCount }
+          params: { address: oppositeAddr.address, port: oppositeAddr.port, loginCount: loginCount }
         })
       }
       else {
@@ -88,13 +88,11 @@ struct Login {
   }
 
   aboutToAppear() {
-    console.log('[fengzi]OboutToAppear 1')
     //    while (!this.ipDialog) {
     //      console.log('[fengzi]OboutToAppear 2')
     //      this.bindOption()
     //      console.log('[fengzi]OboutToAppear 3')
     //    }
-    console.log('[fengzi]OboutToAppear 4')
   }
 
   build() {
@@ -155,7 +153,7 @@ struct Login {
                 loginCount += 1
                 router.push({
                   url: 'pages/Index',
-                  params: { address: oppositeAddr.address, port: oppositeAddr.port, loginCount:loginCount }
+                  params: { address: oppositeAddr.address, port: oppositeAddr.port, loginCount: loginCount }
                 })
                 this.confirmDialog = false
               }).backgroundColor(0xffffff).fontColor(Color.Red)
@@ -259,9 +257,10 @@ struct Login {
                   data: this.roomNumber,
                   address: oppositeAddr
                 }).then(function (data) {
-                  Logger.info(TAG, `send${JSON.stringify(data)}`)
+                  Logger.info(TAG, `send success ,data = ${JSON.stringify(data)}`)
                 }).catch(function (err) {
-                  Logger.info(TAG, `send${JSON.stringify(err)}`)
+                  Logger.info(TAG, `send fail
+                   ,err = ${JSON.stringify(err)}`)
                 })
                 this.roomDialog = false
               }).backgroundColor(0xffffff).fontColor(Color.Red)
