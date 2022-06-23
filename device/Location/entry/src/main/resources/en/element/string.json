@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Location"
+    },
+    {
+      "name": "description_mainability",
+      "value": "Locate the current location and obtain location information"
+    },
+    {
+      "name": "latitude",
+      "value": "Latitude: "
+    },
+    {
+      "name": "longitude",
+      "value": "Longitude: "
+    },
+    {
+      "name": "request",
+      "value": "Request location service is failed!"
+    },
+    {
+      "name": "location",
+      "value": "This location service is success!"
+    },
+    {
+      "name": "start",
+      "value": "Start Location"
+    },
+    {
+      "name": "stop",
+      "value": "Stop Location"
+    }
+  ]
+}
