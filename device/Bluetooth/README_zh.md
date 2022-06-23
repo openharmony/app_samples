@@ -21,7 +21,6 @@
 
 蓝牙管理权限：ohos.permission.MANAGE_BLUETOOTH
 
-
 ### 使用说明
 
 1.启动应用，若蓝牙本来就打开的，系统会直接搜索周围可配对的设备，若蓝牙未打开，打开开关。
@@ -34,6 +33,6 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例为stage模型，从API version 9开始支持。
+2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

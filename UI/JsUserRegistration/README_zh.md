@@ -3,6 +3,7 @@
 ### 简介
 
 本示例通过用户注册案例来展示 JS FA 应用基本控件的使用，包括文本输入框，日期选择控件，单选按钮，下拉菜单和普通按钮等。实现效果如下：
+
 <img src="screenshots/device/user_register.png" /> <img src="screenshots/device/register_success.png" />
 
 ### 相关概念
