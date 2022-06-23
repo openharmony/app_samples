@@ -2,7 +2,26 @@
 
 ### 简介
 
-本示例展示了在eTS中WLAN的基本使用，包括禁用和启用WLAN、WLAN扫描和获取扫描结果、WLAN状态监听、WiFi连接状态监听、获取IP信息、获取国家码、判断设备是否支持WLAN相关特性。
+本示例展示了在eTS中WLAN的基本使用，包括禁用和启用WLAN、WLAN扫描和获取扫描结果、WLAN状态监听、WiFi连接状态监听、获取IP信息、获取国家码、判断设备是否支持WLAN相关特性。实现效果如下：
+
+![password](screenshots/device/password.png)
+
+### 相关概念
+
+-   WLAN：提供API实现wlan激活、扫描和连接WIFI等功能。
+
+### 相关权限
+
+```
+本示例需要在module.json5中配置如下权限:
+
+获取WLAN信息权限：ohos.permission.GET_WIFI_INFO
+获取WLAN网络信息权限：ohos.permission.GET_WIFI_INFO_INTERNAL
+允许配置WLAN设备权限：ohos.permission.SET_WIFI_INFO
+获取WLAN配置信息权限：ohos.permission.GET_WIFI_CONFIG
+允许配置WLAN配置权限：ohos.permission.SET_WIFI_CONFIG
+允许控制WLAN连接状态权限：ohos.permission.MANAGE_WIFI_CONNECTION
+```
 
 ### 使用说明
 
@@ -18,5 +37,5 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 

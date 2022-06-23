@@ -4,7 +4,7 @@
 
 本示例展示了图案密码锁组件的使用，实现了密码设置、验证和重置功能。实现效果如下：
 
-<img src="screenshots/device/input.png" alt="input" style="zoom:33%;" />
+<img src="screenshots/device/input.png"/>
 
 ### 相关概念
 
@@ -25,6 +25,6 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例为stage模型，从API version 9开始支持。
+2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

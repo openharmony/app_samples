@@ -6,6 +6,18 @@
 
 NativeAPI的使用见[NativeAPI使用指导](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/napi/napi-guidelines.md)。
 
+实现效果如下：
+
+![playing](screenshots/devices/playing.png)
+
+### 相关概念
+
+-  NativeAPI：IDE中会包含使用Native API的默认工程，使用`File`->`New`->`Create Project`创建`Native C++`模板工程。创建后在`main`目录下会包含`cpp`目录，可以使用ace_napi仓下提供的napi接口进行开发。
+
+### 相关权限
+
+不涉及
+
 ### 使用说明
 
 1.启动应用，进入应用，界面显示空的棋盘，本示例AI为黑子，用户为白子。点击**开始游戏**，AI先落子。
@@ -18,4 +30,4 @@ NativeAPI的使用见[NativeAPI使用指导](https://gitee.com/openharmony/docs/
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

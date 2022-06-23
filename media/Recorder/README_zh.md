@@ -2,7 +2,22 @@
 
 ### 简介
 
- 此Demo展示媒体服务中音频录制和播放功能的使用。
+ 此Demo展示媒体服务中音频录制和播放功能的使用。实现效果如下：
+
+![main](screenshots/device/main.png) ![record](screenshots/device/record.png)
+
+### 相关概念
+
+-  AudioRecorder：音频录制的主要工作是捕获音频信号，完成音频编码并保存到文件中，帮助开发者轻松实现音频录制功能。它允许调用者指定音频录制的采样率、声道数、编码格式、封装格式、文件路径等参数。
+-  AudioPlayer：音频播放的主要工作是将音频数据转码为可听见的音频模拟信号并通过输出设备进行播放，同时对播放任务进行管理。
+
+### 相关权限
+
+```
+本示例需要在module.json5中配置如下权限:
+
+麦克风权限：ohos.permission.MICROPHONE
+```
 
 ### 使用说明
 
@@ -18,4 +33,4 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

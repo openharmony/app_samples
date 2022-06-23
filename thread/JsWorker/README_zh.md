@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例展示了在Js中如何启动一个worker线程，并实现worker线程和宿主线程的通信。
+本示例展示了在Js中如何启动一个worker线程，并实现worker线程和宿主线程的通信。实现效果如下：
+
+![main](screenshots/device/main.png)
+
+### 相关概念
+
+- Worker：Worker是与主线程并行的独立线程。创建Worker的线程称之为宿主线程，Worker自身的线程称之为Worker线程。创建Worker传入的url文件在Worker线程中执行，可以处理耗时操作但不可以直接操作UI。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -15,4 +25,4 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
