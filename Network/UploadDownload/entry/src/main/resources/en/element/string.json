@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "upload and download"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "upload and download"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "UploadDownload"
+    },
+    {
+      "name": "UploadDownload",
+      "value": "UploadDownload"
+    },
+    {
+      "name": "choice_download_file",
+      "value": "select the file you want to download"
+    },
+    {
+      "name": "choice_upload_file",
+      "value": "select the file you want to upload"
+    },
+    {
+      "name": "click_download",
+      "value": "click to download"
+    },
+    {
+      "name": "click_upload",
+      "value": "click to upload"
+    },
+    {
+      "name": "upload_page",
+      "value": "upload page"
+    },
+    {
+      "name": "download_progress",
+      "value": "download progress："
+    },
+    {
+      "name": "upload_progress",
+      "value": "upload progress："
+    },
+	{
+      "name": "download_success",
+      "value": "download success"
+    },
+    {
+      "name": "confirm",
+      "value": "confirm"
+    }
+  ]
+}
