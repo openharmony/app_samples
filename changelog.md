@@ -35,3 +35,10 @@
 7.[`DistributedDataGobang`：分布式五子棋(eTS)（API9）](data/DistributedDataGobang)
 8.[`Image`：图片处理(eTS)（API8）](media/Image)
 9.[`AbilityAccessCtrl`：访问权限控制(eTS)（API8）](Safety/AbilityAccessCtrl)
+# 6月18日-6月24日新增sample（总计27个分类，165个sample）
+1.[`WebSocket`：WebSocket（eTS）（API8）](Network/WebSocket)
+2.[`Bluetooth`：蓝牙(eTS)（API9）](device/Bluetooth)
+3.[`GamePuzzle`：拼图(eTS)（API9）](media/GamePuzzle)
+4.[`UploadDownload`：上传下载（eTS）（API8）](Network/UploadDownload)
+5.[`KikaInput`：中文输入法（eTS）（API8）](Native/KikaInput)
+6.[`Location`：位置服务(eTS)（API9）](device/Location)
