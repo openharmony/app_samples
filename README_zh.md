@@ -64,6 +64,8 @@
   - [`Browser`：浏览器（eTS）（API9）](device/Browser)
   - [`Screen`：屏幕属性(eTS)（API9）](device/Screen)
   - [`USBManager`：USB管理(eTS)（API8）](device/USBManager)
+  - [`Bluetooth`：蓝牙(eTS)（API9）](device/Bluetooth)
+  - [`Location`：位置服务(eTS)（API9）](device/Location)
 - Graphics
   - [`JsWebGL`：WebGL(JS)（API8）](Graphics/JsWebGL)
   - [`Window`：窗口(eTS)（API9）](Graphics/Window)
@@ -75,6 +77,7 @@
   - [`VideoPlayer`：视频播放（eTS）（API9）](media/VideoPlayer)
   - [`JsRecorder`：录音机（JS）（API8）](media/JSRecorder)
   - [`Image`：图片处理(eTS)（API8）](media/Image)
+  - [`GamePuzzle`：拼图(eTS)（API9）](media/GamePuzzle)
 - DFX
   - [`JsDotTest`：测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger`：故障日志获取（eTS）（API8）](DFX/FaultLogger)
@@ -94,7 +97,7 @@
 - CompleteApps
   - [`KikaInput`：轻量级输入法（JS）（API9）](CompleteApps/KikaInput)
   - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
-  - [`FlipClock`：时钟（eTS）（API8）](CompleteApps/FlipClock)
+  - [`FlipClock`：翻页时钟（eTS）（API8）](CompleteApps/FlipClock)
 - EngineeringCapability
   - [`Npm`：npm的使用(eTS)（API9）](EngineeringCapability/Npm)
 - ETSUI
@@ -123,6 +126,7 @@
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
 - Native
   - [`NativeAPI`：NativeAPI（eTS）（API8）](Native/NativeAPI)
+  - [`KikaInput`：中文输入法（eTS）（API8）](Native/KikaInput)
 - Notification
   - [`CommonEvent`：订阅公共事件（eTS）（API8）](Notification/CommonEvent)
   - [`Emitter`：处理进程内事件（eTS）（API8）](Notification/Emitter)
@@ -131,6 +135,8 @@
 - Network
   - [`Http`：数据请求（eTS）（API8）](Network/Http)
   - [`Socket`：Socket 连接（eTS）（API8）](Network/Socket)
+  - [`WebSocket`：WebSocket（eTS）（API8）](Network/WebSocket)
+  - [`UploadDownload`：上传下载（eTS）（API8）](Network/UploadDownload)
 - Preset
   - [`Clock`：简单时钟（eTS）（API9）](Preset/Clock)
   - [`FlashLight`：手电筒（eTS）（API8）](Preset/FlashLight)
