@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import DateTimeUtil from '../model/datetimeutil'
+import DateTimeUtil from '../model/DateTimeUtil'
 import Logger from '../model/Logger'
 
 export default class MediaUtils {

@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Browser, LoadingStatus, WebObject } from '../model/browser'
-import Logger from '../model/logger'
+import { Browser, LoadingStatus, WebObject } from '../model/Browser'
+import Logger from '../model/Logger'
 
-const TAG: string = '[titleBar]'
+const TAG: string = '[TitleBar]'
 const BUTTON_WIDTH: number = 22
 const BUTTON_RADIUS: number = 4
 const DOWN_COLOR: string = '#e4e4e4'

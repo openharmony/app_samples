@@ -14,9 +14,9 @@
  */
 import mediaquery from '@ohos.mediaquery'
 import parameter from '@ohos.systemparameter'
-import { TabletTitle, BrowserTabs, WebTab } from '../common/titlebar'
-import { PhoneLayout } from '../common/phonelayout'
-import { Browser, LoadingStatus } from '../model/browser'
+import { TabletTitle, BrowserTabs, WebTab } from '../common/Titlebar'
+import { PhoneLayout } from '../common/Phonelayout'
+import { Browser, LoadingStatus } from '../model/Browser'
 import Logger from '../model/Logger'
 
 const TAG = '[index]'
