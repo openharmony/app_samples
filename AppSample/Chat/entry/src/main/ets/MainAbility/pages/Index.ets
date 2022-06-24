@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChatListView } from './ChatListPage';
-import { DiscoverPage } from './Discoverpage';
-import router from '@ohos.router';
+import router from '@ohos.router'
+import { ChatListView } from './ChatListPage'
+import { DiscoverPage } from './DiscoverPage'
 import { SettingPage } from './SettingPage'
 import { FriendsPage } from './FriendsPage'
 

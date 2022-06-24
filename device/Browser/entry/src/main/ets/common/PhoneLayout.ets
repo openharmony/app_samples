@@ -12,9 +12,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Browser } from '../model/browser'
-import { WebTab } from './titlebar'
-import Logger from '../model/logger'
+import { Browser } from '../model/Browser'
+import { WebTab } from './Titlebar'
+import Logger from '../model/Logger'
 
 const TAG: string = '[PhoneLayout]'
 const BUTTON_WIDTH: number = 22

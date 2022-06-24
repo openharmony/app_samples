@@ -16,7 +16,7 @@ import image from '@ohos.multimedia.image'
 import fileio from '@ohos.fileio'
 import prompt from '@ohos.prompt'
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import DateTimeUtil from '../model/datetimeutil'
+import DateTimeUtil from '../model/DateTimeUtil'
 import Logger from '../model/Logger'
 
 const TAG: string = '[MediaUtils]'

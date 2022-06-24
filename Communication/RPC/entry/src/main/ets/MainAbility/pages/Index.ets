@@ -15,10 +15,10 @@
 
 import rpc from '@ohos.rpc'
 import prompt from '@ohos.prompt';
-import { TitleBar } from '../common/titleBar'
-import { FlexList } from '../common/flexList'
-import { ReceivedData } from '../model/receivedData'
-import { ProcessData } from '../model/processData'
+import { TitleBar } from '../common/TitleBar'
+import { FlexList } from '../common/FlexList'
+import { ReceivedData } from '../model/ReceivedData'
+import { ProcessData } from '../model/ProcessData'
 
 let TAG: string = '[eTSRPC.Index]'
 const REQUEST_CODE: number = 1

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { CustomDialogList } from '../common/customDialogList'
+import { CustomDialogList } from '../common/CustomDialogList'
 
 let TAG = '[eTSRPC.FlexList]'
 

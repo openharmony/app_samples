@@ -90,7 +90,7 @@ struct Index {
             Row() {
               Text(item)
                 .fontSize(25)
-                .constraintSize({ maxWidth: '80%' })
+                .constraintSize({ maxWidth: '75%' })
                 .fontWeight(FontWeight.Bold)
                 .margin({ top: 20, left: 10 })
               Blank()
@@ -119,15 +119,15 @@ struct Index {
                       logger.info(TAG, `download receivedSize: ${receivedSize} , totalSize: ${totalSize}`)
                     })
 
-                    downloadTask.on('complete', () => {
+                    downloadTask.on('complete', async () => {
+                      await this.files.splice(index, 1)
+                      await this.uploads.push(item)
                       AlertDialog.show({
                         message: `${item}${downloadSuccess}`,
                         confirm: {
                           value: $r('app.string.confirm'),
-                          action: async () => {
+                          action: () => {
                             downloadTask.off('progress')
-                            await this.files.splice(index, 1)
-                            await this.uploads.push(item)
                           }
                         }
                       })

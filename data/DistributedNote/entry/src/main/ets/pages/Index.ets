@@ -20,7 +20,7 @@ import DistributedObjectModel from '../model/DistributedObjectModel'
 import Logger from '../model/Logger'
 import Note from '../model/Note'
 import NoteItem from '../common/NoteItem'
-import RemoteDeviceModel from '../model/RemoteDevicemodel'
+import RemoteDeviceModel from '../model/RemoteDeviceModel'
 import TitleBar from '../common/TitleBar'
 
 const TAG: string = 'Index'

@@ -51,7 +51,7 @@ struct Upload {
             Row() {
               Text(item)
                 .fontSize(25)
-                .constraintSize({ maxWidth: '80%' })
+                .constraintSize({ maxWidth: '75%' })
                 .fontWeight(FontWeight.Bold)
                 .margin({ top: 20, left: 10 })
               Blank()
@@ -106,7 +106,6 @@ struct Upload {
                             value: $r('app.string.confirm'),
                             action: () => {
                               this.isDialog = false
-                              this.uploads.splice(index, 1)
                               uploadTask.off('progress')
                               uploadTask.remove()
                             }
