@@ -4,7 +4,7 @@
 
 本示例展示了分布式数据管理中，如何通过构建query对象， 查询kvstore中的数据，获取结果集。实现效果如下：
 
-![eTSDDMQuery](screenshots/devices/eTSDDMQuery.png)
+![eTSDDMQuery](./screenshots/devices/eTSDDMQuery.png)
 
 ### 相关概念
 
@@ -13,7 +13,7 @@
 ### 相关权限
 
 ```
-本示例需要在module.json5中配置如下权限:
+本示例需要在config.json中配置如下权限:
 
 分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
 ```
