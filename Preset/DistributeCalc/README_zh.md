@@ -4,8 +4,25 @@
 
 本示例使用JS分布式能力实现了一个简单的计算器应用，可以进行简单的数值计算，支持远程拉起另一个计算器FA，两个FA进行协同计算。
 
--   远程拉起：通过StartAbility实现远端应用的拉起。
--   协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。
+- 远程拉起：通过StartAbility实现远端应用的拉起。
+
+- 协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。
+
+  ![](./screenshots/device/calc.png)
+
+### 相关概念
+
+数据管理实例: 用于获取KVStore的相关信息。
+
+单版本分布式数据库：继承自KVStore，不对数据所属设备进行区分，提供查询数据和同步数据的方法。
+
+### 相关权限
+
+```
+本示例需要在config.json中配置如下权限:
+
+分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
+```
 
 ### 使用说明
 
@@ -25,4 +42,4 @@
 
 2.分布式计算功能使用的前提是分布式组网。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
