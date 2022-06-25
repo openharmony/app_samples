@@ -24,17 +24,17 @@ export struct LockSwitch {
 
   build() {
     Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
-      Text('休眠')
+      Text($r('app.string.screenLight'))
         .fontSize('18vp')
       Toggle({ type: ToggleType.Switch, isOn: this.isLock })
         .onChange(() => {
           this.isLock = !(this.isLock)
-          lock.createRunningLock("running_lock_test", lock.RunningLockType.BACKGROUND)
+          lock.createRunningLock("running_lock_test", lock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
             .then(lock => {
               lock.isUsed()
               if (this.isLock === true) {
                 this.isComTime = false
-                lock.lock(1000);
+                lock.lock(86400000);
               } else {
                 lock.unlock()
                 this.isComTime = true
