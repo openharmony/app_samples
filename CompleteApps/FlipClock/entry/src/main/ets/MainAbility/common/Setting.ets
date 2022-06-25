@@ -35,7 +35,7 @@ export struct Setting {
         .strokeWidth(5)
         .color('#F1F3F5')
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
-        Text('全屏')
+        Text($r("app.string.fullScreen"))
           .fontSize('18vp')
         Toggle({ type: ToggleType.Switch, isOn: false })
           .switchPointColor(0xe5ffffff)
@@ -71,7 +71,7 @@ export struct Setting {
         .strokeWidth(5)
         .color('#F1F3F5')
       Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
-        Text('亮度')
+        Text($r("app.string.brightness"))
           .fontSize('18vp')
         Slider({
           value: this.inSetValue,

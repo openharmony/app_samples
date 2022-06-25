@@ -79,6 +79,18 @@
     {
       "name": "turnSleep",
       "value": "The lock has been released, and the screen can be turned off regularly after 5S"
+    },
+    {
+      "name": "screenLight",
+      "value": "屏幕常亮"
+    },
+    {
+      "name": "fullScreen",
+      "value": "全屏"
+    },
+    {
+      "name": "brightness",
+      "value": "亮度"
     }
   ]
 }

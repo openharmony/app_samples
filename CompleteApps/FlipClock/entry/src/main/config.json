@@ -65,6 +65,9 @@
     "reqPermissions": [
       {
         "name": "ohos.permission.PUBLISH_AGENT_REMINDER"
+      },
+      {
+        "name": "ohos.permission.RUNNING_LOCK"
       }
     ]
   }

@@ -27,7 +27,7 @@ struct Index {
   @State output: string= '熄屏'
   @State currentIndex: number= 0
   @State isComTime: boolean= true
-  private tabScrollable: boolean= true
+  private tabScrollable: boolean= false
   @StorageLink('clockTime') clockTime: any= []
   private controller: TabsController= new TabsController()
   private array: any= [

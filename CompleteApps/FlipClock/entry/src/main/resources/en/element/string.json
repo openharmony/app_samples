@@ -79,6 +79,18 @@
     {
       "name": "turnSleep",
       "value": "该锁已被解除,5s后可定时熄屏"
+    },
+    {
+      "name": "screenLight",
+      "value": "Normally on"
+    },
+    {
+      "name": "fullScreen",
+      "value": "fullScreen"
+    },
+    {
+      "name": "brightness",
+      "value": "brightness"
     }
   ]
 }
