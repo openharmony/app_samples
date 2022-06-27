@@ -95,10 +95,18 @@ export default {
   },
 
   onLongPress(item) {
+    this.oldName = item.file
+    logger.info(`${TAG} item.file= ${JSON.stringify(item.file)}`)
+    let showList = this.list.map((index) => {
+      return index.isLongPress
+    })
+    let index = showList.indexOf(true)
+    if (index !== -1) {
+      this.list[index].isLongPress = false
+    }
     if (!item.isLongPress) {
       item.isLongPress = true
     }
-    this.oldName = item.file
     logger.info(`${TAG} this.oldName= ${this.oldName}`)
   },
 
@@ -107,9 +115,17 @@ export default {
     logger.info(`${TAG} enter renameDialog`)
   },
 
-  renameDialogClose(item) {
-    this.$element('renameDialog').close()
+  renameDialogClose() {
     logger.info(`${TAG} enter renameDialogClose`)
+    let fileList = this.list.map((item) => {
+      return item.file
+    })
+    logger.info(`${TAG} fileList= ${JSON.stringify(fileList)}`)
+    let index = fileList.indexOf(this.oldName)
+    this.list[index].isLongPress = false
+    this.util.put(this.list)
+    logger.info(`${TAG} this.list[index].isLongPress= ${JSON.stringify(this.list[index])}`)
+    this.$element('renameDialog').close()
   },
 
   deleteDialog() {
@@ -117,8 +133,16 @@ export default {
     logger.info(`${TAG} enter deleteDialog`)
   },
   deleteDialogClose() {
-    this.$element('deleteDialog').close()
     logger.info(`${TAG} enter deleteDialogClose`)
+    let fileList = this.list.map((item) => {
+      return item.file
+    })
+    logger.info(`${TAG} fileList= ${JSON.stringify(fileList)}`)
+    let index = fileList.indexOf(this.oldName)
+    this.list[index].isLongPress = false
+    this.util.put(this.list)
+    logger.info(`${TAG} this.list[index].isLongPress= ${JSON.stringify(this.list[index])}`)
+    this.$element('deleteDialog').close()
   },
 
   change(e) {
@@ -146,10 +170,10 @@ export default {
     this.list[index].file = this.newName
     logger.info(`${TAG} newName= ${JSON.stringify(this.list[index].file)}`)
     logger.info(`${TAG} this.list= ${JSON.stringify(this.list)}`)
-    this.util.put(this.list)
     this.list[index].isLongPress = false
+    this.util.put(this.list)
     logger.info(`${TAG} this.list[index].isLongPress= ${JSON.stringify(this.list[index])}`)
-    this.renameDialogClose()
+    this.$element('renameDialog').close()
   },
 
   deleteFile() {
@@ -162,7 +186,7 @@ export default {
     logger.info(`${TAG} this.list= ${JSON.stringify(this.list)}`)
     this.util.put(this.list)
     logger.info(`${TAG} list= ${JSON.stringify(this.list)}`)
-    this.deleteDialogClose()
+    this.$element('deleteDialog').close()
   },
 
   jump(item) {

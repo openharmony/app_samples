@@ -5,8 +5,16 @@
       "value": "计算器"
     },
     {
+      "name": "mainability_description",
+      "value": "分布式计算器"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "分布式计算器"
+    },
+    {
       "name": "distributed_permission",
-      "value": "分布式数据同步"
+      "value": "用于计算器进行不同设备间的数据交换"
     }
   ]
 }
