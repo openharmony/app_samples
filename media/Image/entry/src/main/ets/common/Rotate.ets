@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 
+import prompt from '@ohos.prompt'
 import { ImageModel } from '../model/ImageModel'
 
 @CustomDialog
@@ -68,6 +69,10 @@ export struct Rotate {
                 secondaryButton: {
                   value: $r('app.string.save'),
                   action: async () => {
+                    this.controller.close()
+                    prompt.showToast({
+                      message: 'Save Image Success!'
+                    })
                     await this.imageModel.angleImgs(this.uri, this.single)
                   }
                 },
