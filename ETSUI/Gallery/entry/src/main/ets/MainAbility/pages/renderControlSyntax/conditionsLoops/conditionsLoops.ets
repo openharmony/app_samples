@@ -35,7 +35,6 @@ struct ConditionsLoopsSample {
 
   build() {
     Column() {
-      Flex({ justifyContent: FlexAlign.SpaceBetween, direction: FlexDirection.Column }) {
         NavigationBar({ title: '循环渲染' })
         Flex({ direction: FlexDirection.Column }) {
           Text(`${this.iconArray[this.selectedIndex].name}`)
@@ -65,11 +64,10 @@ struct ConditionsLoopsSample {
           .height('10%')
         }
         .flexGrow(1)
-      }
     }
     .height('100%')
     .backgroundColor('#F1F3F5')
-    .padding({ left: '3%', right: '3%' })
+    .padding({ left: '3%', right: '3%' ,bottom: '8%'})
   }
 
   pageTransition() {

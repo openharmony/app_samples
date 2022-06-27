@@ -14,7 +14,6 @@
  */
 
 import fileio from '@ohos.fileio'
-import featureAbility from '@ohos.ability.featureAbility'
 import multimedia_image from '@ohos.multimedia.image'
 import multimedia_mediaLibrary from '@ohos.multimedia.mediaLibrary'
 import Logger from '../model/Logger'

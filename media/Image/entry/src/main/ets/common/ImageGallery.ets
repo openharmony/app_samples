@@ -14,7 +14,6 @@
  */
 
 import router from '@ohos.router'
-import featureAbility from '@ohos.ability.featureAbility'
 import multimedia_mediaLibrary from '@ohos.multimedia.mediaLibrary'
 import Logger from '../model/Logger'
 import { ImageModel } from '../model/ImageModel'

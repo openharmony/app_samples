@@ -44,7 +44,6 @@ const BASIC = [
   { title: 'QRCode', uri: "pages/basicComponent/qrcode/qrcode" },
   { title: 'Radio', uri: "pages/basicComponent/radio/radio" },
   { title: 'Rating', uri: "pages/basicComponent/rating/rating" },
-  { title: 'Span', uri: "pages/basicComponent/text/textSpan" },
   { title: 'Slider', uri: "pages/basicComponent/slider/slider" },
   { title: 'Text', uri: "pages/basicComponent/text/text" },
   { title: 'TextArea', uri: "pages/basicComponent/textArea/textArea" },

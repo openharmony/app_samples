@@ -13,44 +13,29 @@
  * limitations under the License.
  */
 
-import multimedia_image from '@ohos.multimedia.image'
 import multimedia_mediaLibrary from '@ohos.multimedia.mediaLibrary'
 import { Rotate } from '../common/Rotate'
 import { ImageModel } from '../model/ImageModel'
 
 @Component
 export struct ImageShow {
-  @State pixel: multimedia_image.PixelMap = undefined
-  @State fileAsset: multimedia_mediaLibrary.FileAsset = undefined
+  @State pixel: multimedia_mediaLibrary.FileAsset = undefined
   private uri: string = ''
-  private height: number = 0
-  private width: number = 0
   private imageModel: ImageModel = new ImageModel()
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private canvasContext: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
   private dialogController: CustomDialogController = new CustomDialogController({
     builder: Rotate({ uri: this.uri }), autoCancel: true, alignment: DialogAlignment.Bottom
   })
 
   async aboutToAppear() {
-    this.fileAsset = await this.imageModel.queryFile(this.uri)
-  }
-
-  async getImage() {
-    this.pixel = await this.imageModel.getPixel(this.uri)
+    this.pixel = await this.imageModel.queryFile(this.uri)
   }
 
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        Canvas(this.canvasContext)
-          .margin({ top: 16 })
-          .width(900)
-          .height(600)
-          .onReady(async () => {
-            await this.getImage()
-            this.canvasContext.drawImage(this.pixel, 0, 0, 900, 600)
-          })
+        Image(this.pixel.uri)
+          .objectFit(ImageFit.Contain)
+          .margin(16)
       }
       .width('100%')
       .height('80%')
