@@ -6,15 +6,15 @@
     },
     {
       "name": "mainability_description",
-      "value": "JS_Phone_Empty Feature Ability"
+      "value": "Distributed calculator"
     },
     {
       "name": "MainAbility_desc",
-      "value": "description"
+      "value": "Distributed calculator"
     },
     {
       "name": "distributed_permission",
-      "value": "分布式数据同步"
+      "value": "Used for calculator to exchange data between different devicesUsed for calculator to exchange data between different devices"
     }
   ]
 }
