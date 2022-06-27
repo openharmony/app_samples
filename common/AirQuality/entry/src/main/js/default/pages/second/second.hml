@@ -119,7 +119,7 @@ limitations under the License.
         </list-item>
         <list-item class="list-item-chart">
             <div style="margin-top : 24px; width : 960px; height : 256px;">
-                <div class="chart-wrapper1">
+                <div class="chart-wrapper">
                     <text class="gas-name">NO2</text>
                     <div class="chart">
                         <div class="chart-item" style="height : 155px; background-color : #ff0000;"></div>

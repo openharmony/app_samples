@@ -1,7 +1,7 @@
 {
   "strings": {
-    "hello": "您好",
-    "world": "世界"
+    "select": "选择设备",
+    "localhost": "Local device"
   },
   "Files": {
   }

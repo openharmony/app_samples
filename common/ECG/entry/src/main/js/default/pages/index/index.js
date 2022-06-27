@@ -79,11 +79,15 @@ export default {
     },
     onInit() {
         this.times_minute = this.$t('strings.times_minute');
+    },
+    onShow() {
         this.startChartHeart();
         this.handleMeasureData();
     },
     onHide() {
         console.log('onHide');
+        this.clearChart()
+        this.clearTimes()
     },
     handleMeasureData() {
         this.updateElectrocarddiogram();
