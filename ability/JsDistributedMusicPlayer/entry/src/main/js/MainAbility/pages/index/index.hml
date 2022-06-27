@@ -41,7 +41,7 @@
     </div>
     <dialog id="continueAbilityDialog" class="dialog-main" oncancel="cancelDialog">
         <div class="dialog-div">
-            <text class="dialog_title_text">选择设备</text>
+            <text class="dialog_title_text">{{ $t('strings.select') }}</text>
             <list class="dialog_device_list" divider="true">
                 <list-item for="{{ deviceList }}" class="device_list_item">
                     <div>

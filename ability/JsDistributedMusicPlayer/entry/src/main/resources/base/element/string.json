@@ -14,7 +14,7 @@
     },
     {
       "name": "distributed_permission",
-      "value": "分布式数据同步"
+      "value": "用于分布式音乐进行不同设备间的数据交换"
     }
   ]
 }
