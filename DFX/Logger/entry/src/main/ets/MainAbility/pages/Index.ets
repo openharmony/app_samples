@@ -13,9 +13,9 @@
  * limitations under the License.
  */
 
-import logger from '@ohos/log'
-import { LogLevel } from '@ohos/log'
-import { Configure }  from '@ohos/log'
+import logger from '@ohos/Log'
+import { LogLevel } from '@ohos/Log'
+import { Configure }  from '@ohos/Log'
 
 let configure: Configure = {
   cheese: {
