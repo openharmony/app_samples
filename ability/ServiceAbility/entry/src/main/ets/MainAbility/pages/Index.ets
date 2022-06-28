@@ -35,11 +35,13 @@ struct Index {
       prompt.showToast({
         message: 'please connect service'
       })
+      return
     }
     if (this.beforeSortString.length === 0) {
       prompt.showToast({
         message: 'please input a string'
       })
+      return
     }
     let option: rpc.MessageOption = new rpc.MessageOption()
     let data: rpc.MessageParcel = rpc.MessageParcel.create()
