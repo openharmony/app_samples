@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import { Browser } from '../model/Browser'
-import { WebTab } from './Titlebar'
+import { WebTab } from './TitleBar'
 import Logger from '../model/Logger'
 
 const TAG: string = '[PhoneLayout]'
