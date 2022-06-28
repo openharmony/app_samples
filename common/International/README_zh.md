@@ -4,7 +4,8 @@
 
 本示例展示了i18n，intl，resourceManager在eTS中的使用，使用相关api实现系统语言和地区设置、时间和时区设置，展示了区域格式化示例。实现效果如下：
 
-![home](screenshots/devices/home.png) ![language_region](screenshots/devices/language_region.png)
+![home](screenshots/devices/home.png)
+![language_region](screenshots/devices/language_region.png)
 
 ### 相关概念
 
@@ -13,7 +14,7 @@
 ### 相关权限
 
 ```
-本示例需要在module.json5中配置如下权限:
+本示例需要在config.json中配置如下权限:
 
 更新配置权限：ohos.permission.UPDATE_CONFIGURATION
 设置时区权限：ohos.permission.SET_TIME_ZONE

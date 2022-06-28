@@ -2,7 +2,17 @@
 
 ### 简介
 
-本示例用于验证OpenHarmony的启动、跳转、滑动等场景性能体验是否响应及时、动画流畅。
+本示例用于验证OpenHarmony的启动、跳转、滑动等场景性能体验是否响应及时、动画流畅。实现效果如下：
+
+![](screenshot/Screenshot_1.jpg)
+
+### 相关概念
+
+-  页面路由：页面路由router根据页面的uri找到目标页面，从而实现跳转。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -27,14 +37,4 @@
 
 2.从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
-
-### 运行结果截图：
-
-![](screenshot/Screenshot_1.jpg)
-
-![](screenshot/Screenshot_2.jpg)
-
-![](screenshot/Screenshot_3.jpg)
-
-![](screenshot/Screenshot_4.jpg)
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

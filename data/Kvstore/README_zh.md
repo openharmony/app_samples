@@ -13,7 +13,7 @@
 ### 相关权限
 
 ```
-本示例需要在module.json5中配置如下权限:
+本示例需要在config.json中配置如下权限:
 
 分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
 ```

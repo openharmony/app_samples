@@ -2,7 +2,18 @@
 
 ### 简介
 
-本示例展示了在eTS中如何创建和删除Slot通道，如何发布和取消通知。
+本示例展示了在eTS中如何创建和删除Slot通道，如何发布和取消通知。实现效果如下：
+
+![main](screenshots/devices/main.png)
+
+### 相关概念
+
+-  发布通知：使用 Notification.publish接口发布通知。
+- NotificationRequest：设置要发布通知内容的NotificationRequest对象。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -20,4 +31,4 @@
 
 1.本示例支持标准系统上运行。
 
-2.本示例需要使用3.0.0.900及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

@@ -16,6 +16,8 @@
 
 后台代理提醒权限：ohos.permission.PUBLISH_AGENT_REMINDER
 
+运行锁权限: ohos.permission.RUNNING_LOCK
+
 ### 使用说明
 
 1. 主页面有四个底部标签栏，时钟页面展示了数字翻页时钟功能。
