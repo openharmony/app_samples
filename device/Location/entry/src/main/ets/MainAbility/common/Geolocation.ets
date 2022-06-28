@@ -27,20 +27,6 @@ export struct Geolocation {
   @State flag: boolean = false
   @State cityInfo: Resource = undefined
 
-  @Builder info(text: Resource, value: number) {
-    Row() {
-      Text(text)
-        .margin(10)
-        .fontSize(20)
-
-      Text(`${value}`)
-        .margin(10)
-        .fontSize(20)
-    }
-    .visibility(this.flag ? Visibility.Visible : Visibility.Hidden)
-    .margin(10)
-  }
-
   aboutToAppear() {
     sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, function(data){
       this.calibration = Math.round(data.alpha)
@@ -106,7 +92,6 @@ export struct Geolocation {
           .onClick(async () => {
             this.flag = true
             await this.requestLocation()
-            console.log('on')
           })
 
         Button($r('app.string.stop'))
@@ -126,8 +111,29 @@ export struct Geolocation {
         .fontSize(18)
         .visibility(this.flag ? Visibility.Visible : Visibility.None)
 
-      this.info($r('app.string.latitude'), this.latitude)
-      this.info($r('app.string.longitude'), this.longitude)
+      Row() {
+        Text($r('app.string.latitude'))
+          .margin(10)
+          .fontSize(20)
+
+        Text(`${this.latitude}`)
+          .margin(10)
+          .fontSize(20)
+      }
+      .visibility(this.flag ? Visibility.Visible : Visibility.Hidden)
+      .margin(10)
+
+      Row() {
+        Text($r('app.string.longitude'))
+          .margin(10)
+          .fontSize(20)
+
+        Text(`${this.longitude}`)
+          .margin(10)
+          .fontSize(20)
+      }
+      .visibility(this.flag ? Visibility.Visible : Visibility.Hidden)
+      .margin(10)
     }
     .width('100%')
     .height('100%')
