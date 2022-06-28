@@ -4,7 +4,7 @@
 -   [目录](#sectionMenu)
 -   [使用说明](#section17988202503116)
 -   [约束与限制](#section18841871178)
--   [相关仓](#section741114082513)
+-   [Sample提交规范](CodeCommitChecklist.md)
 
 ## 概要简介<a name="section1470103520301"></a>
 
