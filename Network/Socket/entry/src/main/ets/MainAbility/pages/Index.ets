@@ -131,6 +131,12 @@ struct Index {
         .type(ButtonType.Capsule)
         .backgroundColor('#ff50afea')
         .onClick(() => {
+          if (!this.onlineState) {
+            this.chats = []
+            udp.off('message', () => {
+            })
+            router.back()
+          }
           udp.send({
             data: 'exit',
             address: oppositeAddr
