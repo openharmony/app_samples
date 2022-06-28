@@ -1,8 +1,14 @@
-#  eTS组件测试Demo
+# 组件测试Demo
 
 ### 简介
 
-本示例展示了基础组件和容器组件的实现方式。
+本示例展示了基础组件和容器组件的实现方式。实现效果如下：
+
+![](screenshots/device/main.png)
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -24,6 +30,7 @@
     -   [TextArea](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/textArea/textAreaPage.ets)
     -   [TextInput](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/textInput/textInputPage.ets)
     -   [Toggle](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/toggle/togglePage.ets)
+	
 -   容器组件
     -   [Badge](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/badge/badgePage.ets)
     -   [Column](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/Column/ColumnPage.ets)
@@ -38,10 +45,9 @@
     -   [Stack](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/stack/stackPage.ets)
     -   [Swiper](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/swiper/swiperPage.ets)
     -   [Tabs](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/tab/tabsPage.ets)
--   
 
 ### 约束与限制
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

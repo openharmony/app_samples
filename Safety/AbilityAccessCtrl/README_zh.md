@@ -4,7 +4,8 @@
 
 本示例通过模拟应用申请权限场景，向用户展示`@ohos.abilityAccessCtrl`接口，具体实现效果如下图。
 
-<img src="./screenshots/device/dialog.png"/><img src="./screenshots/device/main.png"/>
+![](screenshot/devices/main.png)
+![](screenshot/devices/dialog.png)
 
 ### 相关权限
 
@@ -98,4 +99,6 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.工程编译前需要先执行Make Module 'entry'。
+
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

@@ -10,8 +10,18 @@
 
 3.远程绑定对端PA。
 
-详细的说明见 [ServiceAbility开发指导](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ability/fa-serviceability.md)。
+实现效果如下：
 
+![](screenshots/device/main.png)
+![](screenshots/device/tuya.png)
+
+### 相关概念
+
+-  FaultLogInfo：获取到的故障信息的数据结构。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -29,4 +39,4 @@
 
 1.本示例仅支持标准系统上运行。
 
-2.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

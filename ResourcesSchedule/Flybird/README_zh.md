@@ -2,7 +2,21 @@
 
 ### 简介
 
-本示例用于验证OpenHarmony提供的FA模型，Canvas组件、media组件做小游戏的能效是否符合预期，以及验证资源调度子系统的API接口是否符合后台规范运行的预期。
+本示例用于验证OpenHarmony提供的FA模型，Canvas组件、media组件做小游戏的能效是否符合预期，以及验证资源调度子系统的API接口是否符合后台规范运行的
+
+预期。实现效果如下：
+
+![](screenshot/snapshot1.png)
+
+![](screenshot/snapshot2.png)
+
+### 相关概念
+
+-  Canvas：提供画布组件，用于自定义绘制图形。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -26,9 +40,4 @@
 
 2.从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
-
-### 运行结果截图：
-
-![](screenshot/snapshot1.png)
-![](screenshot/snapshot2.png)
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

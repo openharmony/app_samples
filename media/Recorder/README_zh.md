@@ -14,7 +14,7 @@
 ### 相关权限
 
 ```
-本示例需要在module.json5中配置如下权限:
+本示例需要在config.json中配置如下权限:
 
 麦克风权限：ohos.permission.MICROPHONE
 ```

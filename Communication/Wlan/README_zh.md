@@ -13,7 +13,7 @@
 ### 相关权限
 
 ```
-本示例需要在module.json5中配置如下权限:
+本示例需要在config.json中配置如下权限:
 
 获取WLAN信息权限：ohos.permission.GET_WIFI_INFO
 获取WLAN网络信息权限：ohos.permission.GET_WIFI_INFO_INTERNAL
