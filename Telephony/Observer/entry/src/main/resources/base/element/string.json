@@ -1,0 +1,452 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "observer"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "订阅监听网络状态、信号状态、通话状态、蜂窝数据、sim状态等事件"
+    },
+    {
+      "name": "network_permission",
+      "value": "获取网络状态权限"
+    },
+    {
+      "name": "read_call_permission",
+      "value": "获取通话状态权限"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "observer"
+    },
+    {
+      "name": "details",
+      "value": "查看详情"
+    },
+    {
+      "name": "network_state_change",
+      "value": "订阅网络状态变化事件"
+    },
+    {
+      "name": "signal_info_change",
+      "value": "订阅信号状态变化事件"
+    },
+    {
+      "name": "callState_change",
+      "value": "订阅通话状态变化事件"
+    },
+    {
+      "name": "cellular_data_connection_state_change",
+      "value": "订阅蜂窝数据链路连接状态"
+    },
+    {
+      "name": "cellular_data_flow_change",
+      "value": "订阅蜂窝数据业务的数据流状态"
+    },
+    {
+      "name": "sim_state_change",
+      "value": "订阅sim状态更改事件"
+    },
+    {
+      "name": "detail",
+      "value": "详细信息"
+    },
+    {
+      "name": "network_registration_status",
+      "value": "网络注册状态"
+    },
+    {
+      "name": "network_state_long_operator_name",
+      "value": "注册网络的长运营商名称:"
+    },
+    {
+      "name": "network_state_short_operator_name",
+      "value": "注册网络的短运营商名称:"
+    },
+    {
+      "name": "plmn_numeric",
+      "value": "注册网络的PLMN码:"
+    },
+    {
+      "name": "is_roaming",
+      "value": "是否处于漫游状态:"
+    },
+    {
+      "name": "reg_state",
+      "value": "设备的网络注册状态:"
+    },
+    {
+      "name": "cfg_tech",
+      "value": "设备的无线接入技术:"
+    },
+    {
+      "name": "nsa_state",
+      "value": "设备的NSA网络注册状态:"
+    },
+    {
+      "name": "is_ca_active",
+      "value": "CA的状态:"
+    },
+    {
+      "name": "is_emergency",
+      "value": "此设备是否只允许拨打紧急呼叫:"
+    },
+    {
+      "name": "signal_information",
+      "value": "网络信号强度"
+    },
+    {
+      "name": "signal_type",
+      "value": "网络信号强度类型:"
+    },
+    {
+      "name": "signal_level",
+      "value": "网络信号强度等级:"
+    },
+    {
+      "name": "call_state",
+      "value": "通话状态"
+    },
+    {
+      "name": "call_state_code",
+      "value": "通话状态码:"
+    },
+    {
+      "name": "phone_number",
+      "value": "电话号码:"
+    },
+    {
+      "name": "cellular_data",
+      "value": "蜂窝数据"
+    },
+    {
+      "name": "cellular_data_connection_state",
+      "value": "蜂窝数据链路连接状态:"
+    },
+    {
+      "name": "cellular_data_flow_type",
+      "value": "蜂窝数据流类型:"
+    },
+    {
+      "name": "sim_card_status",
+      "value": "sim卡状态"
+    },
+    {
+      "name": "card_type",
+      "value": "SIM卡类型:"
+    },
+    {
+      "name": "sim_status",
+      "value": "SIM卡状态:"
+    },
+    {
+      "name": "lock_reason",
+      "value": "SIM卡锁类型:"
+    },
+    {
+      "name": "REG_STATE_NO_SERVICE",
+      "value": "设备不能使用任何服务"
+    },
+    {
+      "name": "REG_STATE_IN_SERVICE",
+      "value": "设备可以正常使用业务"
+    },
+    {
+      "name": "REG_STATE_EMERGENCY_CALL_ONLY",
+      "value": "设备只能使用紧急呼叫业务"
+    },
+    {
+      "name": "REG_STATE_POWER_OFF",
+      "value": "蜂窝无线电已关闭"
+    },
+    {
+      "name": "NA",
+      "value": "NA"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_UNKNOWN",
+      "value": "未知无线接入技术"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_GSM",
+      "value": "无线接入技术GSM"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_1XRTT",
+      "value": "无线接入技术1XRTT"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_WCDMA",
+      "value": "无线接入技术WCDMA"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_HSPA",
+      "value": "无线接入技术HSPA"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_HSPAP",
+      "value": "无线接入技术HSPAP"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_TD_SCDMA",
+      "value": "无线接入技术TDSCDMA"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_EVDO",
+      "value": "无线接入技术EVDO"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_EHRPD",
+      "value": "无线接入技术EHRPD"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_LTE",
+      "value": "无线接入技术LTE"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_LTE_CA",
+      "value": "无线接入技术LTE_CA"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_IWLAN",
+      "value": "无线接入技术IWLAN"
+    },
+    {
+      "name": "RADIO_TECHNOLOGY_NR",
+      "value": "无线接入技术NR"
+    },
+    {
+      "name": "NSA_STATE_NOT_SUPPORT",
+      "value": "设备在不支持NSA的LTE小区下处于空闲状态或连接状态"
+    },
+    {
+      "name": "NSA_STATE_NO_DETECT",
+      "value": "在支持NSA但不支持NR覆盖检测的LTE小区下，设备处于空闲状态"
+    },
+    {
+      "name": "NSA_STATE_CONNECTED_DETECT",
+      "value": "设备在LTE小区下连接到LTE网络支持NSA和NR覆盖检测"
+    },
+    {
+      "name": "NSA_STATE_IDLE_DETECT",
+      "value": "支持NSA和NR覆盖检测的LTE小区下设备处于空闲状态"
+    },
+    {
+      "name": "NSA_STATE_DUAL_CONNECTED",
+      "value": "设备在支持NSA的LTE小区下连接到LTE + NR网络"
+    },
+    {
+      "name": "NSA_STATE_SA_ATTACHED",
+      "value": "设备在5GC附着时在NG-RAN小区下空闲或连接到NG-RAN小区"
+    },
+    {
+      "name": "NETWORK_TYPE_UNKNOWN",
+      "value": "未知网络类型"
+    },
+    {
+      "name": "NETWORK_TYPE_GSM",
+      "value": "网络类型为GSM"
+    },
+    {
+      "name": "NETWORK_TYPE_CDMA",
+      "value": "网络类型为CDMA"
+    },
+    {
+      "name": "NETWORK_TYPE_WCDMA",
+      "value": "网络类型为WCDMA"
+    },
+    {
+      "name": "NETWORK_TYPE_TDSCDMA",
+      "value": "网络类型为TDSCDMA"
+    },
+    {
+      "name": "NETWORK_TYPE_LTE",
+      "value": "网络类型为LTE"
+    },
+    {
+      "name": "NETWORK_TYPE_NR",
+      "value": "网络类型为5G NR"
+    },
+    {
+      "name": "CALL_STATE_UNKNOWN",
+      "value": "无效状态"
+    },
+    {
+      "name": "CALL_STATE_IDLE",
+      "value": "没有正在进行的呼叫"
+    },
+    {
+      "name": "CALL_STATE_RINGING",
+      "value": "来电正在振铃或等待"
+    },
+    {
+      "name": "CALL_STATE_OFFHOOK",
+      "value": "至少有一个呼叫处于拨号、通话中或呼叫保持状态，并且没有新的来电振铃或等待"
+    },
+    {
+      "name": "DATA_STATE_UNKNOWN",
+      "value": "蜂窝数据链路未知"
+    },
+    {
+      "name": "DATA_STATE_DISCONNECTED",
+      "value": "蜂窝数据链路断开"
+    },
+    {
+      "name": "DATA_STATE_CONNECTING",
+      "value": "正在连接蜂窝数据链路"
+    },
+    {
+      "name": "DATA_STATE_CONNECTED",
+      "value": "蜂窝数据链路已连接"
+    },
+    {
+      "name": "DATA_STATE_SUSPENDED",
+      "value": "蜂窝数据链路被挂起"
+    },
+    {
+      "name": "DATA_FLOW_TYPE_NONE",
+      "value": "没有上行或下行数据"
+    },
+    {
+      "name": "DATA_FLOW_TYPE_DOWN",
+      "value": "只有下行数据"
+    },
+    {
+      "name": "DATA_FLOW_TYPE_UP",
+      "value": "只有上行数据"
+    },
+    {
+      "name": "DATA_FLOW_TYPE_UP_DOWN",
+      "value": "有上下行数据"
+    },
+    {
+      "name": "DATA_FLOW_TYPE_DORMANT",
+      "value": "没有上下行数据，底层链路处于休眠状态"
+    },
+    {
+      "name": "UNKNOWN_CARD",
+      "value": "未知类型"
+    },
+    {
+      "name": "SINGLE_MODE_SIM_CARD",
+      "value": "单SIM卡"
+    },
+    {
+      "name": "SINGLE_MODE_USIM_CARD",
+      "value": "单USIM卡"
+    },
+    {
+      "name": "SINGLE_MODE_RUIM_CARD",
+      "value": "单RUIM卡"
+    },
+    {
+      "name": "DUAL_MODE_CG_CARD",
+      "value": "双卡模式C+G"
+    },
+    {
+      "name": "CT_NATIONAL_ROAMING_CARD",
+      "value": "中国电信内部漫游卡"
+    },
+    {
+      "name": "CU_DUAL_MODE_CARD",
+      "value": "中国联通双模卡"
+    },
+    {
+      "name": "DUAL_MODE_TELECOM_LTE_CARD",
+      "value": "双模式电信LTE卡"
+    },
+    {
+      "name": "DUAL_MODE_UG_CARD",
+      "value": "双模式UG卡"
+    },
+    {
+      "name": "SINGLE_MODE_ISIM_CARD",
+      "value": "单一ISIM卡类型"
+    },
+    {
+      "name": "SIM_STATE_UNKNOWN",
+      "value": "SIM卡状态未知"
+    },
+    {
+      "name": "SIM_STATE_NOT_PRESENT",
+      "value": "卡槽中没有插入SIM卡"
+    },
+    {
+      "name": "SIM_STATE_LOCKED",
+      "value": "SIM卡被PIN、PUK或网络锁锁定"
+    },
+    {
+      "name": "SIM_STATE_NOT_READY",
+      "value": "SIM卡在位但无法正常工作"
+    },
+    {
+      "name": "SIM_STATE_READY",
+      "value": "SIM卡在位且工作正常"
+    },
+    {
+      "name": "SIM_STATE_LOADED",
+      "value": "SIM卡在位且所有卡文件加载完毕"
+    },
+    {
+      "name": "SIM_NONE",
+      "value": "无锁"
+    },
+    {
+      "name": "SIM_PIN",
+      "value": "PIN锁"
+    },
+    {
+      "name": "SIM_PUK",
+      "value": "PUK锁"
+    },
+    {
+      "name": "SIM_PN_PIN",
+      "value": "网络PIN锁"
+    },
+    {
+      "name": "SIM_PN_PUK",
+      "value": "网络PUK锁"
+    },
+    {
+      "name": "SIM_PU_PIN",
+      "value": "子网PIN锁"
+    },
+    {
+      "name": "SIM_PU_PUK",
+      "value": "子网PUK锁"
+    },
+    {
+      "name": "SIM_PP_PIN",
+      "value": "服务提供商PIN锁"
+    },
+    {
+      "name": "SIM_PP_PUK",
+      "value": "服务提供商PUK锁"
+    },
+    {
+      "name": "SIM_PC_PIN",
+      "value": "组织PIN锁"
+    },
+    {
+      "name": "SIM_PC_PUK",
+      "value": "组织PUK锁"
+    },
+    {
+      "name": "SIM_SIM_PIN",
+      "value": "SIM PIN锁"
+    },
+    {
+      "name": "SIM_SIM_PUK",
+      "value": "SIM PUK锁"
+    },
+    {
+      "name": "yes",
+      "value": "是"
+    },
+    {
+      "name": "no",
+      "value": "否"
+    }
+  ]
+}
