@@ -18,7 +18,6 @@
     <text class="window">{{ this.Text }}</text>
     <div class="line">
         <input class="btn" type="button" value="{{ $t('strings.event') }}" onclick="appEvent"></input>
-        <input class="btn" type="button" value="{{ $t('strings.tracking') }}" onclick="hiTraceMeter"></input>
     </div>
     <div class="line-switch">
         <text>{{ $t('strings.disable') }}</text>

@@ -14,57 +14,42 @@
  */
 
 import prompt from '@ohos.prompt';
-import hiTraceMeter from '@ohos.hiTraceMeter';
 import hiAppEvent from '@ohos.hiAppEvent';
 
 export default {
-    data: {
-        Text: ''
-    },
+  data: {
+    Text: ''
+  },
 
-    appEvent: function () {
-        hiAppEvent.write("test_event", hiAppEvent.EventType.STATISTIC, {
-            "int_data": 100, "str_data": "strValue"
-        }, (err, value) => {
-            if (err) {
-                console.error(`failed to write event because ${err.code}`);
-                this.Text = this.$t('strings.write_failed') + JSON.stringify(err)
-                return;
-            }
+  appEvent: function () {
+    hiAppEvent.write("test_event", hiAppEvent.EventType.STATISTIC, {
+      "int_data": 100, "str_data": "strValue"
+    }, (err, value) => {
+      if (err) {
+        console.error(`failed to write event because ${err.code}`);
+        this.Text = this.$t('strings.write_failed') + JSON.stringify(err)
+        return;
+      }
 
-            prompt.showToast({
-                message: "success to write event"
-            });
-            this.Text = this.$t('strings.write_success');
-            console.log(`success to write event: ${value}`);
-        });
-    },
+      prompt.showToast({
+        message: "success to write event"
+      });
+      this.Text = this.$t('strings.write_success');
+      console.log(`success to write event: ${value}`);
+    });
+  },
 
-    hiTraceMeter: function () {
-        hiTraceMeter.startTrace("start TestFunc", 1)
-        let sum = 0;
-        hiTraceMeter.traceByValue("start TestNum", sum)
-        for (let index = 0; index < 1000; index++) {
-            sum = sum + index;
-        }
-        hiTraceMeter.traceByValue("finish TestNum", sum)
-        prompt.showToast({
-            message: "finish add"
-        })
-        hiTraceMeter.finishTrace("finish TestFunc", 1);
-    },
-
-    switchChange(e) {
-        if (e.checked) {
-            hiAppEvent.configure({
-                disable: e.checked
-            });
-            this.Text = this.$t('strings.appDisabled');
-        } else {
-            hiAppEvent.configure({
-                disable: e.checked
-            });
-            this.Text = this.$t('strings.appAble')
-        }
+  switchChange(e) {
+    if (e.checked) {
+      hiAppEvent.configure({
+        disable: e.checked
+      });
+      this.Text = this.$t('strings.appDisabled');
+    } else {
+      hiAppEvent.configure({
+        disable: e.checked
+      });
+      this.Text = this.$t('strings.appAble')
     }
+  }
 }

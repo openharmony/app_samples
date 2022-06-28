@@ -12,62 +12,56 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import { NavigationBar } from "../../../common/components/navigationBar"
 import { ArrayType } from "../commonDataType/iterateArray"
 
 @Entry
 @Component
 struct ConditionsLoopsSample {
-  @State iconArray: ArrayType[] = [{
-                                     image: $r("app.media.ic_public_home"),
-                                     name: 'Home'
-                                   }, {
-                                     image: $r("app.media.ic_public_add"),
-                                     name: 'Add'
-                                   }, {
-                                     image: $r("app.media.ic_public_app"),
-                                     name: 'App'
-                                   }, {
-                                     image: $r("app.media.ic_public_albums"),
-                                     name: 'Albums'
-                                   }]
+  @State iconArray: ArrayType[] = [
+    { image: $r("app.media.ic_public_home"), name: 'Home' },
+    { image: $r("app.media.ic_public_add"), name: 'Add' },
+    { image: $r("app.media.ic_public_app"), name: 'App' },
+    { image: $r("app.media.ic_public_albums"), name: 'Albums' }
+  ]
   @State selectedIndex: number = 0
 
   build() {
     Column() {
-        NavigationBar({ title: '循环渲染' })
-        Flex({ direction: FlexDirection.Column }) {
-          Text(`${this.iconArray[this.selectedIndex].name}`)
-            .textAlign(TextAlign.Center)
-            .fontSize(30)
-            .width('100%')
-            .flexGrow(1)
-          Flex({ justifyContent: FlexAlign.SpaceAround }) {
-            ForEach(this.iconArray, (item, index) => {
-              Column() {
-                Image(this.selectedIndex == index ? item.icon : item.image)
-                  .width(25)
-                  .height(25)
-                Text(item.name)
-                  .fontSize(20)
-                  .fontColor(this.selectedIndex == index ? '#00F' : '#000')
-              }
-              .width('25%')
-              .padding({ top: 9, bottom: 5 })
-              .height(60)
-              .backgroundColor(this.selectedIndex == index ? '#ddd' : '#fff')
-              .onClick(() => {
-                this.selectedIndex = index
-              })
+      NavigationBar({ title: '循环渲染' })
+      Flex({ direction: FlexDirection.Column }) {
+        Text(`${this.iconArray[this.selectedIndex].name}`)
+          .textAlign(TextAlign.Center)
+          .fontSize(30)
+          .width('100%')
+          .flexGrow(1)
+        Flex({ justifyContent: FlexAlign.SpaceAround }) {
+          ForEach(this.iconArray, (item, index) => {
+            Column() {
+              Image(this.selectedIndex == index ? item.icon : item.image)
+                .width(25)
+                .height(25)
+              Text(item.name)
+                .fontSize(20)
+                .fontColor(this.selectedIndex == index ? '#00F' : '#000')
+            }
+            .width('25%')
+            .padding({ top: 9, bottom: 5 })
+            .height(60)
+            .backgroundColor(this.selectedIndex == index ? '#ddd' : '#fff')
+            .onClick(() => {
+              this.selectedIndex = index
             })
-          }.width('100%')
-          .height('10%')
-        }
-        .flexGrow(1)
+          })
+        }.width('100%')
+        .height('10%')
+      }
+      .flexGrow(1)
     }
     .height('100%')
     .backgroundColor('#F1F3F5')
-    .padding({ left: '3%', right: '3%' ,bottom: '8%'})
+    .padding({ left: '3%', right: '3%', bottom: '8%' })
   }
 
   pageTransition() {
