@@ -241,20 +241,25 @@ struct Game {
   }
 
   showHistoryScore() {
-    bundleState.queryBundleStateInfos(Number(this.beginTime), Number(this.endTime), (err, res) => {
-      if (err.code === 0) {
-        logger.log(this.TAG1 + "queryBundleStateInfos1 callback success,result size = " + res.length);
+    bundleState.queryBundleStateInfos(Number(this.beginTime),Number(this.endTime),(err,res) =>{
+      if(err)
+      {
+        console.log(this.TAG1 + 'queryBundleStateInfos1 callback failed,because: ' + err.code);
+      }
+      else
+      {
+        console.log(this.TAG1 + "queryBundleStateInfos1 callback success.");
         let i = 1;
-        for (let key in res) {
-          logger.log(this.TAG1 + 'queryBundleStateInfos1 callback i : ' + i);
-          logger.log(this.TAG1 + 'queryBundleStateInfos1 callback result : ' + JSON.stringify(res[key]));
-          if (res[key].bundleName.includes('flybird')) {
-            this.historyTime = res[key].abilityInFgTotalTime
+        for(let key in res)
+        {
+          console.log(this.TAG1 + 'queryBundleStateInfos1 callback i : ' + i);
+          console.log(this.TAG1 + 'queryBundleStateInfos1 callback result : ' + JSON.stringify(res[key]));
+          if(res[key].bundleName.includes('flybird'))
+          {
+            this.historyTime = res[key].abilityInFgTotalTime;
           }
           i++;
         }
-      } else {
-        logger.log(this.TAG1 + 'queryBundleStateInfos1 callback failed,because: ' + JSON.stringify(err));
       }
     })
   }
