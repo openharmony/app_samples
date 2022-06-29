@@ -1,0 +1,124 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "eTSAdaptiveCapabilities"
+    },
+    {
+      "name": "home_title",
+      "value": "页面开发一多能力"
+    },
+    {
+      "name": "resource_qualifier",
+      "value": "资源限定词"
+    },
+    {
+      "name": "atomic_capability",
+      "value": "原子布局能力"
+    },
+    {
+      "name": "responsive_layout",
+      "value": "响应式布局"
+    },
+    {
+      "name": "flex_capability_first",
+      "value": "拉伸能力1"
+    },
+    {
+      "name": "flex_capability_second",
+      "value": "拉伸能力2"
+    },
+    {
+      "name": "scaling_capability",
+      "value": "缩放能力"
+    },
+    {
+      "name": "hidden_capability",
+      "value": "隐藏能力"
+    },
+    {
+      "name": "wrap_capability",
+      "value": "折行能力"
+    },
+    {
+      "name": "equally_capability",
+      "value": "均分能力"
+    },
+    {
+      "name": "percentage_capability",
+      "value": "占比能力"
+    },
+    {
+      "name": "extension_capability_first",
+      "value": "延伸能力1"
+    },
+    {
+      "name": "extension_capability_second",
+      "value": "延伸能力2"
+    },
+    {
+      "name": "healthy_use_phone",
+      "value": "健康使用手机"
+    },
+    {
+      "name": "media_query",
+      "value": "媒体查询"
+    },
+    {
+      "name": "grid_layout",
+      "value": "栅格布局"
+    },
+    {
+      "name": "typical_scenario",
+      "value": "典型场景"
+    },
+    {
+      "name": "diversion_layout",
+      "value": "挪移布局"
+    },
+    {
+      "name": "repeat_layout",
+      "value": "重复布局"
+    },
+    {
+      "name": "indentation_layout",
+      "value": "缩进布局"
+    },
+    {
+      "name": "user_improvement",
+      "value": "用户体验改进计划"
+    },
+    {
+      "name": "user_improvement_tips",
+      "value": "用户体验改进计划通过系统、应用分析、故障诊断、提升华为的产品和服务质量。"
+    },
+    {
+      "name": "left",
+      "value": "左"
+    },
+    {
+      "name": "center",
+      "value": "中"
+    },
+    {
+      "name": "right",
+      "value": "右"
+    },
+    {
+      "name": "portrait",
+      "value": "竖屏"
+    },
+    {
+      "name": "landscape",
+      "value": "横屏"
+    }
+  ]
+}

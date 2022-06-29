@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "eTSAdaptiveCapabilities"
+    },
+    {
+      "name": "my_string",
+      "value": "tablet"
+    }
+  ]
+}
