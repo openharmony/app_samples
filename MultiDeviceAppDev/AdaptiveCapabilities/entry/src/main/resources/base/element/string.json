@@ -1,0 +1,132 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "eTSAdaptiveCapabilities"
+    },
+    {
+      "name": "my_string",
+      "value": "phone"
+    },
+    {
+      "name": "home_title",
+      "value": "Page development-Adaptive Capabilities"
+    },
+    {
+      "name": "resource_qualifier",
+      "value": "Resource qualifier"
+    },
+    {
+      "name": "atomic_capability",
+      "value": "Atomic layout capability"
+    },
+    {
+      "name": "responsive_layout",
+      "value": "Responsive layout"
+    },
+    {
+      "name": "flex_capability_first",
+      "value": "Flexible capability first"
+    },
+    {
+      "name": "flex_capability_second",
+      "value": "Flexible capability second"
+    },
+    {
+      "name": "scaling_capability",
+      "value": "Scaling capability"
+    },
+    {
+      "name": "hidden_capability",
+      "value": "Hidden capability"
+    },
+    {
+      "name": "wrap_capability",
+      "value": "Wrap capability"
+    },
+    {
+      "name": "equally_capability",
+      "value": "Equally capability"
+    },
+    {
+      "name": "percentage_capability",
+      "value": "Percentage capability"
+    },
+    {
+      "name": "extension_capability_first",
+      "value": "Extension capacity first"
+    },
+    {
+      "name": "extension_capability_second",
+      "value": "Extension capacity second"
+    },
+    {
+      "name": "healthy_use_phone",
+      "value": "Healthy use of phone"
+    },
+    {
+      "name": "media_query",
+      "value": "Media query"
+    },
+    {
+      "name": "grid_layout",
+      "value": "Grid layout"
+    },
+    {
+      "name": "typical_scenario",
+      "value": "Typical scenario"
+    },
+    {
+      "name": "diversion_layout",
+      "value": "Diversion layout"
+    },
+    {
+      "name": "repeat_layout",
+      "value": "Repeat layout"
+    },
+    {
+      "name": "indentation_layout",
+      "value": "Indentation layout"
+    },
+    {
+      "name": "user_improvement",
+      "value": "User Experience Improvement Program"
+    },
+    {
+      "name": "user_improvement_tips",
+      "value": "The User Experience Improvement Program improves huawei's product and service quality through system, application analysis, and fault diagnosis."
+    },
+    {
+      "name": "show_app_name",
+      "value": "App name"
+    },
+    {
+      "name": "left",
+      "value": "Left"
+    },
+    {
+      "name": "center",
+      "value": "Center"
+    },
+    {
+      "name": "right",
+      "value": "Right"
+    },
+    {
+      "name": "portrait",
+      "value": "Portrait"
+    },
+    {
+      "name": "landscape",
+      "value": "Landscape"
+    }
+  ]
+}
