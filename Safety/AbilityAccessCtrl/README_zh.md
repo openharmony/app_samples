@@ -4,8 +4,8 @@
 
 本示例通过模拟应用申请权限场景，向用户展示`@ohos.abilityAccessCtrl`接口，具体实现效果如下图。
 
-![](screenshot/devices/main.png)
-![](screenshot/devices/dialog.png)
+![](screenshot/device/main.png)
+![](screenshot/device/dialog.png)
 
 ### 相关权限
 

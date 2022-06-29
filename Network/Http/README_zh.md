@@ -1,9 +1,9 @@
-# 网络管理-数据请求
+# 数据请求
 
 ### 简介
 
 本示例仿postman输入API接口地址，获取相应数据，介绍数据请求接口的用法。效果图如下：
-![](screenshots/devices/index.png)
+![](screenshots/device/index.png)
 
 ### 相关概念
 

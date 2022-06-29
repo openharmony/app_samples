@@ -3,6 +3,17 @@
 ### 简介
 
 本示例展示了Stage模型卡片提供方的创建与使用。
+实现效果如下：
+
+![eTSFormExample](screenshots/eTSFormExample.png)
+
+### 相关概念
+
+-  Ability：Ability是应用所具备能力的抽象，也是应用程序的重要组成部分。Ability是系统调度应用的最小单元，是能够完成一个独立功能的组件。
+
+### 相关权限
+
+不涉及
 
 ### 使用说明
 
@@ -10,12 +21,10 @@
 
 2.卡片的样式如下图所示。当卡片更新时，卡片上的温度和时间会产生变化。
 
-![eTSFormExample](screenshots/eTSFormExample.png)
-
 ### 约束与限制
 
 1.本示例仅支持标准系统上运行。
 
 2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用3.0.0.901及以上的DevEco Studio版本才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
