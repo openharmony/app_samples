@@ -8,7 +8,7 @@
 
 本示例展示了在eTS中如何获取应用故障相关信息。实现效果如下：
 
-![](screenshots/devices/main.png)
+![](screenshots/device/main.png)
 
 ### 相关概念
 

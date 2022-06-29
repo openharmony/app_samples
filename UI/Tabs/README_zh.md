@@ -6,7 +6,7 @@
 
 实现效果如下：
 
-![](screenshots/devices/chat.png)
+![](screenshot/devices/chat.png)
 
 ### 相关概念
 
