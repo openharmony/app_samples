@@ -16,7 +16,7 @@
 #ifndef _PLUGIN_COMMON_H_
 #define _PLUGIN_COMMON_H_
 
-#include <Hilog/log.h>
+#include <hilog/log.h>
 #define APP_LOG_DOMAIN 0x0001
 #define APP_LOG_TAG "XComponent_Native"
 #define LOGI(...) ((void)OH_LOG_Print(LOG_APP, LOG_INFO, APP_LOG_DOMAIN, APP_LOG_TAG, __VA_ARGS__))

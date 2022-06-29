@@ -16,7 +16,7 @@
 #ifndef _PLUGIN_COMMON_H_
 #define _PLUGIN_COMMON_H_
 
-#include <Hilog/log.h>
+#include <hilog/log.h>
 
 #define LOGI(...) ((void)OH_LOG_Print(LOG_APP, LOG_INFO, LOG_DOMAIN, "[NativeAPI]", __VA_ARGS__))
 #define LOGD(...) ((void)OH_LOG_Print(LOG_APP, LOG_DEBUG, LOG_DOMAIN, "[NativeAPI]", __VA_ARGS__))
