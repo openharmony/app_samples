@@ -21,7 +21,7 @@ const TAG: string = 'KvStoreModel'
 
 class KvStoreModel {
   private kvManager: distributedData.KVManager
-  private kvStore: distributedData.SingleKVStore
+  private kvStore
 
   constructor() {
   }
