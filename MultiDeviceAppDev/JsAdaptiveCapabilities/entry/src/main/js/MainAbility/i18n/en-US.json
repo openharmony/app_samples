@@ -1,0 +1,32 @@
+{
+  "strings": {
+    "home_title": "Page development-Adaptive Capabilities",
+    "resource_qualifier": "Resource qualifier",
+    "atomic_layout_capability": "Atomic layout capability",
+    "responsive_layout": "Responsive layout",
+    "flex_capability_first": "Flexible capability first",
+    "flex_capability_second": "Flexible capability second",
+    "scaling_capability": "Scaling capability",
+    "hidden_capability": "Hidden capability",
+    "wrap_capability": "Wrap capability",
+    "equally_capability": "Equally capability",
+    "percentage_capability": "Percentage capability",
+    "extension_capability_first": "Extension capacity first",
+    "extension_capability_second": "Extension capacity second",
+    "fly_model": "Flay model",
+    "show_app_name": "App name",
+    "media_query": "Media query",
+    "grid_layout": "Grid layout",
+    "typical_scenario": "Typical scenario",
+    "diversion_layout": "Diversion layout",
+    "repeat_layout": "Repeat layout",
+    "indentation_layout": "Indentation layout",
+    "user_improvement": "User Experience Improvement Program",
+    "user_improvement_tips": "The User Experience Improvement Program improves huawei's product and service quality through system, application analysis, and fault diagnosis.",
+    "left": "Left",
+    "center": "Center",
+    "right": "Right",
+    "portrait": "Portrait",
+    "landscape": "Landscape"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "image": {
+    "clockFace": "common/image/tablet.png"
+  },
+  "colors": {
+    "background": "#FF77FF00",
+    "my_color": "#0000FF"
+  },
+  "strings": {
+    "textStr": "tablet"
+  },
+  "float": {
+    "my_float": "80vp"
+  }
+}

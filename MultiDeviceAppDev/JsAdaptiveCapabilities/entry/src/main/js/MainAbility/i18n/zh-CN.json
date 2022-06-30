@@ -1,0 +1,31 @@
+{
+  "strings": {
+    "home_title": "页面开发一多能力",
+    "resource_qualifier": "资源限定词",
+    "atomic_layout_capability": "原子布局能力",
+    "responsive_layout": "响应式布局",
+    "flex_capability_first": "拉伸能力1",
+    "flex_capability_second": "拉伸能力2",
+    "scaling_capability": "缩放能力",
+    "hidden_capability": "隐藏能力",
+    "wrap_capability": "折行能力",
+    "equally_capability": "均分能力",
+    "percentage_capability": "占比能力",
+    "extension_capability_first": "延伸能力1",
+    "extension_capability_second": "延伸能力2",
+    "fly_model": "飞行模式",
+    "media_query": "媒体查询",
+    "grid_layout": "栅格布局",
+    "typical_scenario": "典型场景",
+    "diversion_layout": "挪移布局",
+    "repeat_layout": "重复布局",
+    "indentation_layout": "缩进布局",
+    "user_improvement": "用户体验改进计划",
+    "user_improvement_tips": "用户体验改进计划通过系统、应用分析、故障诊断、提升华为的产品和服务质量。",
+    "left": "左",
+    "center": "中",
+    "right": "右",
+    "portrait": "竖屏",
+    "landscape": "横屏"
+  }
+}

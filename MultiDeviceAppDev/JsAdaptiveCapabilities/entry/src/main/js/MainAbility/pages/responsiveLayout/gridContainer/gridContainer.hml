@@ -1,0 +1,38 @@
+<!--
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
+<div class="container">
+    <Navigationbar title="{{ title }}"></Navigationbar>
+    <grid-container style="background-color : #F1F3F5; margin-top : 10vp;">
+        <grid-row style="height : 200px; justify-content : space-around; width : 100%;">
+            <grid-col xs="1" sm="1" md="1" lg="2" style="background-color : #66BBB2CB;">
+                <div style="align-items : center; height : 100%;">
+                    <text>{{ $t("strings.left") }}</text>
+                </div>
+            </grid-col>
+            <grid-col xs="1" sm="2" md="5" lg="7" style="background-color : #66B6C5D1;">
+                <div style="align-items : center; height : 100%;">
+                    <text>{{ $t("strings.center") }}</text>
+                </div>
+            </grid-col>
+            <grid-col xs="1" sm="1" md="2" lg="3" style="background-color : #66BBB2CB;">
+                <div style="align-items : center; height : 100%;">
+                    <text>{{ $t("strings.right") }}</text>
+                </div>
+            </grid-col>
+        </grid-row>
+    </grid-container>
+</div>

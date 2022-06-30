@@ -1,0 +1,82 @@
+{
+  "app": {
+    "vendor": "example",
+    "bundleName": "ohos.samples.jsadaptivecapabilities",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "default",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "js",
+        "icon": "$media:icon",
+        "description": "$string:MainAbility_desc",
+        "formsEnabled": false,
+        "label": "$string:MainAbility_label",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "com.example.entry",
+    "srcPath": "",
+    "name": ".entry",
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/atomicLayoutCapability/index/index",
+          "pages/atomicLayoutCapability/hiddenCapability/hiddenCapability",
+          "pages/atomicLayoutCapability/flexibleCapability/flexibleCapability2/flexibleCapability2",
+          "pages/atomicLayoutCapability/flexibleCapability/flexibleCapability1/flexibleCapability1",
+          "pages/atomicLayoutCapability/extensionCapability/extensionCapability1/extensionCapability1",
+          "pages/atomicLayoutCapability/extensionCapability/extensionCapability2/extensionCapability2",
+          "pages/atomicLayoutCapability/scaleCapability/scaleCapability",
+          "pages/atomicLayoutCapability/proportionCapability/proportionCapability",
+          "pages/atomicLayoutCapability/wrapCapability/wrapCapability",
+          "pages/atomicLayoutCapability/equipartitionCapability/equipartitionCapability",
+          "pages/responsiveLayout/index/index",
+          "pages/responsiveLayout/gridContainer/gridContainer",
+          "pages/responsiveLayout/mediaQuery/mediaQuery",
+          "pages/responsiveLayout/typicalScene/index/index",
+          "pages/responsiveLayout/typicalScene/diversion/diversion",
+          "pages/responsiveLayout/typicalScene/indentation/indentation",
+          "pages/responsiveLayout/typicalScene/repeat/repeat",
+          "pages/resourceQualifier/resourceQualifier"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}

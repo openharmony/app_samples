@@ -1,0 +1,15 @@
+{
+  "image": {
+    "clockFace": "common/image/phone.png"
+  },
+  "colors": {
+    "background": "#FF44FFEC",
+    "my_color":"#0000FF"
+  },
+  "strings": {
+    "textStr": "phone"
+  },
+  "float": {
+    "my_float": "60vp"
+  }
+}
