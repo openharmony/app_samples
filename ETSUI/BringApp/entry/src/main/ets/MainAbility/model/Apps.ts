@@ -14,63 +14,63 @@
  */
 
 export class Apps {
-    apps: Array<{
-        img: Resource,
-        bundleName: string,
-        abilityName: string,
-        name: Resource
-    }> = []
+  apps: Array<{
+    img: Resource,
+    bundleName: string,
+    abilityName: string,
+    name: Resource
+  }> = []
 
-    constructor() {
-        this.apps = [
-            {
-                img: $r('app.media.camera'),
-                bundleName: 'com.ohos.camera',
-                abilityName: 'MainAbility',
-                name: $r('app.string.camera')
-            },
-            {
-                img: $r('app.media.gallery'),
-                bundleName: 'com.ohos.photos',
-                abilityName: 'com.ohos.photos.MainAbility',
-                name: $r('app.string.gallery')
-            },
-            {
-                img: $r('app.media.contact'),
-                bundleName: 'com.ohos.contacts',
-                abilityName: 'com.ohos.contacts.MainAbility',
-                name: $r('app.string.contacts')
-            },
-            {
-                img: $r('app.media.messages'),
-                bundleName: 'com.ohos.mms',
-                abilityName: 'com.ohos.mms.MainAbility',
-                name: $r('app.string.message')
-            },
-            {
-                img: $r('app.media.falshlight'),
-                bundleName: 'ohos.samples.flashlight',
-                abilityName: 'ohos.samples.flashlight.default',
-                name: $r('app.string.flash')
-            },
-            {
-                img: $r('app.media.airquality'),
-                bundleName: 'ohos.samples.airquality',
-                abilityName: 'ohos.samples.airquality.default',
-                name: $r('app.string.air')
-            },
-            {
-                img: $r('app.media.music'),
-                bundleName: 'com.ohos.distributedmusicplayer',
-                abilityName: 'com.ohos.distributedmusicplayer.MainAbility',
-                name: $r('app.string.music')
-            },
-            {
-                img: $r('app.media.clock'),
-                bundleName: 'ohos.samples.clock',
-                abilityName: 'ohos.samples.clock.default',
-                name: $r('app.string.clock')
-            }
-        ]
-    }
+  constructor() {
+    this.apps = [
+      {
+        img: $r('app.media.camera'),
+        bundleName: 'com.ohos.camera',
+        abilityName: 'com.ohos.camera.MainAbility',
+        name: $r('app.string.camera')
+      },
+      {
+        img: $r('app.media.gallery'),
+        bundleName: 'com.ohos.photos',
+        abilityName: 'com.ohos.photos.MainAbility',
+        name: $r('app.string.gallery')
+      },
+      {
+        img: $r('app.media.contact'),
+        bundleName: 'com.ohos.contacts',
+        abilityName: 'com.ohos.contacts.MainAbility',
+        name: $r('app.string.contacts')
+      },
+      {
+        img: $r('app.media.messages'),
+        bundleName: 'com.ohos.mms',
+        abilityName: 'com.ohos.mms.MainAbility',
+        name: $r('app.string.message')
+      },
+      {
+        img: $r('app.media.falshlight'),
+        bundleName: 'ohos.samples.flashlight',
+        abilityName: 'ohos.samples.flashlight.default',
+        name: $r('app.string.flash')
+      },
+      {
+        img: $r('app.media.airquality'),
+        bundleName: 'ohos.samples.airquality',
+        abilityName: 'ohos.samples.airquality.default',
+        name: $r('app.string.air')
+      },
+      {
+        img: $r('app.media.music'),
+        bundleName: 'ohos.samples.distributedmusicplayer',
+        abilityName: 'ohos.samples.distributedmusicplayer.MainAbility',
+        name: $r('app.string.music')
+      },
+      {
+        img: $r('app.media.clock'),
+        bundleName: 'ohos.samples.clock',
+        abilityName: 'ohos.samples.clock.default',
+        name: $r('app.string.clock')
+      }
+    ]
+  }
 }
