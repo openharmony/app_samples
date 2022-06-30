@@ -69,12 +69,12 @@ export struct Decrypt {
                 if (this.algorithmType === 'RSA') {
                   this.cipherModel.rsaDecrypt(this.message, (result) => {
                     Logger.info(TAG, `this result = ${JSON.stringify(result)}`)
-                    this.info = `Decrypt result is :  ${result.data.text}`
+                    this.info = `Decrypt result is :  ${result.text}`
                   })
                 } else {
                   this.cipherModel.aesDecrypt(this.message, (result) => {
                     Logger.info(TAG, `this result = ${JSON.stringify(result)}`)
-                    this.info = `Decrypt result is :  ${result.data.text}`
+                    this.info = `Decrypt result is :  ${result.text}`
                   })
                 }
               }

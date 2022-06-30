@@ -12,8 +12,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
-<element name="microAmoy" src="../homepage/microAmoy/microAmoy.hml"></element>
-<element name="pageHome" src="../homepage/pageHome/pageHome.hml"></element>
+<element name="microAmoy" src="entry/src/main/js/MainAbility/pages/homepage/microAmoy/microAmoy.hml"></element>
+<element name="pageHome" src="entry/src/main/js/MainAbility/pages/homepage/pageHome/pageHome.hml"></element>
 <div class="container">
     <tabs class="tabs" onchange="changeTabIndex">
         <tab-content>
