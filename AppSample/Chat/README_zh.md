@@ -4,8 +4,7 @@
 
 这是一个仿聊天类应用，使用了静态布局搭建了不同的页面。为了优化内存与性能体验，在部分list场景使用了懒加载。效果图如下：
 
-![](screenshots/device/chat_home.png)
-![](screenshots/device/chat_me.png)
+![](screenshots/device/chat_home.png) ![](screenshots/device/chat_me.png)
 
 ### 相关概念
 

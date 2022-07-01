@@ -1,6 +1,6 @@
 # 拉起系统应用示例
 
-## 简介
+### 简介
 
 本示例使用FeatureAbility接口，通过应用的包名与Ability名，拉起系统应用。效果图如下：
 ![](screenshots/device/main.png)

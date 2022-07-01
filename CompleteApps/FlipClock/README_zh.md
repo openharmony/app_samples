@@ -4,9 +4,7 @@
 
  本示例运用OpenHarmony系统提供的FA模型与相关接口展示了一个简易的时钟。 实现效果如下：
 
-![FlipClock](screenshots/devices/FlipClock.png)
-
-![CountDown](screenshots/devices/CountDown.png)
+![FlipClock](screenshots/devices/FlipClock.png)  ![CountDown](screenshots/devices/CountDown.png)
 
 ### 相关概念
 

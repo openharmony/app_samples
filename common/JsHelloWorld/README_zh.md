@@ -4,8 +4,7 @@
 
 本示例适用于应用开发的初学者，为用户展示简单的JS UI界面显示和跳转。实现效果如下：
 
-![](screenshots/device/main.png)
-![](screenshots/device/second.png)
+![](screenshots/device/main.png) ![](screenshots/device/second.png)
 
 ### 相关概念
 

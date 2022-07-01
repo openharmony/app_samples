@@ -6,7 +6,7 @@
 
 本示例展示了在eTS中如何使用CommonEvent的接口完成创建订阅者、订阅公共事件、发布公共事件、取消订阅的功能。实现效果如下：
 
-![main](screenshots/device/main.PNG)
+![main](screenshots/device/main.png)
 
 ### 相关概念
 

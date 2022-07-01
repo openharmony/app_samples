@@ -4,8 +4,7 @@
 
 本示例通过屏幕的亮度变化来模拟手电筒功能，屏幕变亮模拟手电筒打开，屏幕变暗模拟手电筒关闭。实现效果如下：
 
-![](screenshots/device/light.png)
-![](screenshots/device/dark.png)
+![](screenshots/device/light.png) ![](screenshots/device/dark.png)
 
 ### 相关概念
 

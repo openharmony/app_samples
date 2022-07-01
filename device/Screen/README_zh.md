@@ -3,8 +3,7 @@
 ### 简介
 
 本示例监听屏幕数量变化，创建、销毁虚拟屏幕模拟屏幕增减，读取屏幕属性并显示。效果图如下：
-![](screenshots/device/index.png)
-![](screenshots/device/defaultInfo.png)
+![](screenshots/device/index.png)![](screenshots/device/defaultInfo.png)
 
 ### 相关概念
 
@@ -30,4 +29,6 @@
 
 2.本示例为Stage模型，从API version 9开始支持。
 
-3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+3.编译前下载最新日构建中ohos-sdk，解压并替换@ohos.screen.d.ts文件。
+
+4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

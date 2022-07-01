@@ -92,6 +92,7 @@
   - [`RadioTech`：网络搜索（eTS）（API8）](Telephony/RadioTech)
   - [`SimManager`：SIM卡管理（eTS）（API8）](Telephony/SimManager)
   - [`MobileNetwork`：蜂窝数据(eTS)（API9）](Telephony/MobileNetwork)
+  - [`Observer`：Observer(eTS)（API9）](Telephony/Observer)
 - thread
   - [`JsWorker`：启动一个worker（JS）（API8）](thread/JsWorker)
 - CompleteApps
@@ -198,6 +199,9 @@
   - [`UtilTypeCheck`：内置对象类型检查（eTS）（API8）](Util/UtilTypeCheck)
   - [`UtilUrlString`：URL字符串解析（eTS）（API8）](Util/UtilUrlString)
   - [`XmlTextConvert`：xml文本转换（eTS）（API8）](Util/XmlTextConvert)
+- MultiDeviceAppDev
+  - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/AdaptiveCapabilities)
+
 
 ## 使用说明<a name="section17988202503116"></a>
 

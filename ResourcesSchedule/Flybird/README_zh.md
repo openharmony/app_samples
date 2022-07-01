@@ -6,9 +6,7 @@
 
 预期。实现效果如下：
 
-![](screenshot/snapshot1.png)
-
-![](screenshot/snapshot2.png)
+![](screenshot/snapshot1.png) ![](screenshot/snapshot2.png)
 
 ### 相关概念
 

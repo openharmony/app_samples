@@ -4,8 +4,7 @@
 
 这是一个仿购物类应用，使用了混合的布局，包含图片、视频、文本等资源。为了优化内存与性能体验，在滑动列表场景下使用了懒加载特性，开发者可借鉴使用。效果图如下：
 
-![](screenshots/device/home1.png)
-![](screenshots/device/collect.png)
+![](screenshots/device/home1.png) ![](screenshots/device/collect.png)
 
 ### 相关概念
 

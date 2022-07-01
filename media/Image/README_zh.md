@@ -3,8 +3,7 @@
 ### 简介
 
 本示例仿照相册应用，读取本地设备中图片，获取图片信息，可对图片进行旋转操作。效果图如下：
-![](screenshots/devices/index.png)
-![](screenshots/devices/image.png)
+![](screenshots/devices/index.png) ![](screenshots/devices/image.png)
 
 ### 相关概念
 

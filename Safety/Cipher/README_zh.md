@@ -3,9 +3,7 @@
 ### 简介
 
 本示例展示了加解密算法，包括RSA加密算法与AES加密算法。效果图如下：
-![](screenshots/device/index.png)
-![](screenshots/device/encryption.png)
-![](screenshots/device/decrypt.png)
+![](screenshots/device/index.png) ![](screenshots/device/encryption.png) ![](screenshots/device/decrypt.png)
 
 ### 相关概念
 

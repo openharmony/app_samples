@@ -4,7 +4,7 @@
 
 本示例通过observer接口订阅网络状态、信号状态、通话状态、蜂窝数据、sim状态等事件，并获取状态变化返回的结果。
 
-![](./screenshots/device/observer.png)
+![](screenshots/device/observer.png)
 
 ### 相关概念
 

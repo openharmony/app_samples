@@ -3,8 +3,7 @@
 ### 简介
 
 本示例分别通过沉浸式卡片、图文卡片、宫格卡片、纯文本卡片、多维度信息卡片五种类型，展示了卡片在不同尺寸设备上的自适应能力。当卡片在极宽和极高的情况下，通过拉伸、缩放、隐藏、折行、均分等自适应能力将卡片展示出来。效果图如下：
-![](screenshots/device/main.png)
-![](screenshots/device/card.png)
+![](screenshots/device/main.png)![](screenshots/device/card.png)
 
 ### 相关概念
 

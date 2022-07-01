@@ -4,7 +4,7 @@
 
 本示例展示了用户认证中人脸识别功能。实现效果如下：
 
-<img src="./screenshots/device/index.png" />
+![](screenshots/device/index.png)
 
 ### 相关概念
 

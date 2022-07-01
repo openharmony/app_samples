@@ -1,6 +1,6 @@
 # 日志打印
 
-## 简介
+### 简介
 
 提供日志打印类，并将日志信息保存至应用安装目录下。
 
@@ -12,7 +12,7 @@
 
 不涉及
 
-## 导入接口
+##### 导入接口
 
 ```
     import logger from '@ohos/log'
@@ -20,7 +20,7 @@
     import { Configure }  from '@ohos/log'
 ```
 
-## 接口说明
+##### 接口说明
 
 1. configure参数设置
 
@@ -80,7 +80,7 @@
    //value为打印日志内容
 ```
 
-## 兼容性
+### 兼容性
 
 1.支持 OpenHarmony API version 8 及以上版本。
 

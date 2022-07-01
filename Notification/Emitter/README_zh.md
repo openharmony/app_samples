@@ -3,8 +3,7 @@
 ### 简介
 
 本示例主要展示进程内事件通知，用户通过选择对应商品并提交订单后在订单列表显示所选商品。效果图如下：
-![](screenshots/device/main.png)
-![](screenshots/device/mall.png)
+![](screenshots/device/main.png) ![](screenshots/device/mall.png)
 
 ### 相关概念
 

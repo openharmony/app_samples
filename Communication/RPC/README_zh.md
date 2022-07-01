@@ -3,8 +3,7 @@
 ### 简介
 
 本示例展示了同一设备中前后台的数据交互，用户前台选择相应的商品与数目，后台计算出结果，回传给前台展示。效果图如下：
-![](screenshots/device/main.png)
-![](screenshots/device/flexlist.png)
+![](screenshots/device/main.png) ![](screenshots/device/flexlist.png)
 
 ### 相关概念
 

@@ -12,8 +12,7 @@
 
 实现效果如下：
 
-![](screenshots/device/main.png)
-![](screenshots/device/tuya.png)
+![](screenshots/device/main.png) ![](screenshots/device/tuya.png)
 
 ### 相关概念
 

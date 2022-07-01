@@ -3,8 +3,7 @@
 ### 简介
 
 本示例展示了创建新窗口，将应用悬浮在其他界面，及应用分屏等功能。效果图如下：
-![](screenshots/devices/index.png)
-![](screenshots/devices/main.png)
+![](screenshots/devices/index.png) ![](screenshots/devices/main.png)
 
 ### 相关概念
 

@@ -3,8 +3,7 @@
 ### 简介
 
 本示例通过点击按钮触发动画，向用户展示属性动画与显示动画的效果。效果图如下：
-![](screenshots/devices/main.png)
-![](screenshots/devices/Animation.png)
+![](screenshots/devices/main.png) ![](screenshots/devices/Animation.png)
 
 ### 相关概念
 
