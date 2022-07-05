@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例展示了在eTS中ServiceExtAbility的创建与使用。实现效果如下：
+本示例展示了在ServiceExtAbility的创建与使用。实现效果如下：
 
 ![](screenshots/device/first.png) ![](screenshots/device/second.png)
 
@@ -14,7 +14,7 @@
 
 ### 相关权限
 
-不涉及
+获取包名信息权限：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 ### 使用说明
 

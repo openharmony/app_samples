@@ -12,8 +12,6 @@
 
 ### 相关权限
 
-本示例需要在module.json5中配置如下权限:
-
 应用信息权限：ohos.permission.BUNDLE_ACTIVE_INFO
 
 ### 使用说明

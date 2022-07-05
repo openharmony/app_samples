@@ -3,6 +3,7 @@
 ### 简介
 
 本示例展示了在eTS中ServiceAbility的创建与使用。效果图如下：
+
 ![](screenshots/device/main.png)
 
 ### 相关概念
@@ -11,7 +12,7 @@
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

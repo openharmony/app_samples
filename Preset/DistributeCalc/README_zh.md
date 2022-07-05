@@ -6,23 +6,21 @@
 
 - 远程拉起：通过StartAbility实现远端应用的拉起。
 
-- 协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。
+- 协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。实现效果如下：
 
   ![](./screenshots/device/calc.png)
 
 ### 相关概念
 
-数据管理实例: 用于获取KVStore的相关信息。
+数据管理实例： 用于获取KVStore的相关信息。
 
 单版本分布式数据库：继承自KVStore，不对数据所属设备进行区分，提供查询数据和同步数据的方法。
 
 ### 相关权限
 
-```
 本示例需要在config.json中配置如下权限:
 
 分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
-```
 
 ### 使用说明
 

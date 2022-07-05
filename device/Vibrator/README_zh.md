@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例模拟倒计时场景，展示振动接口的使用方法。
+本示例模拟倒计时场景，展示振动接口的使用方法。实现效果如下：
 
 ![](./screenshots/device/vibrator.png)
 
@@ -12,11 +12,7 @@
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
-振动器权限:ohos.permission.VIBRATE
-```
+振动器权限：ohos.permission.VIBRATE
 
 ### 使用说明
 

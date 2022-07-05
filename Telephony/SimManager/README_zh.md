@@ -3,6 +3,7 @@
 ### 简介
 
 本示例展示了电话服务中SIM卡相关功能，包含SIM卡的服务提供商、ISO国家码、归属PLMN号信息，以及默认语音卡功能。效果图如下：
+
 ![](screenshots/devices/main.png)
 
 ### 相关概念

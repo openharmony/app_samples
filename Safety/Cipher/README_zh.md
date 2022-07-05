@@ -3,6 +3,7 @@
 ### 简介
 
 本示例展示了加解密算法，包括RSA加密算法与AES加密算法。效果图如下：
+
 ![](screenshots/device/index.png) ![](screenshots/device/encryption.png) ![](screenshots/device/decrypt.png)
 
 ### 相关概念
@@ -13,7 +14,7 @@
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 
@@ -29,5 +30,7 @@
 
 ### 约束与限制
 
-本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+1.本示例仅支持在标准系统上运行。
+
+2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 

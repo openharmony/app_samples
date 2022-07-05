@@ -3,6 +3,7 @@
 ### 简介
 
  此Sample通过调用媒体相关接口来实现音频录制和播放的功能。效果图如下：
+
 ![](screenshots/device/main.png)
 
 ### 相关概念

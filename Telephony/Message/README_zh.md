@@ -13,7 +13,9 @@
 ### 相关权限
 
 发送短信权限：ohos.permission.SEND_MESSAGES
+
 设置通话状态权限：ohos.permission.SET_TELEPHONY_STATE
+
 获取通话状态权限：ohos.permission.GET_TELEPHONY_STATE
 
 ### 使用说明

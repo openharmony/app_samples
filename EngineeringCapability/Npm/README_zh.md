@@ -7,37 +7,37 @@
 
 ### 相关概念
 
-npm：npm引用第三方js类库和本地库
+npm：npm引用第三方js类库和本地库。
 
 ##### 第三方js类库导入步骤
 
-1.打开Terminal窗口，通过如下指令进入到entry目录
+1.打开Terminal窗口，通过如下指令进入到entry目录。
 
     cd entry
 
-2.以引入“dayjs”为例，执行以下指令进行安装
+2.以引入“dayjs”为例，执行以下指令进行安装。
 
     npm install dayjs --save
 
-3.在对应的ets文件中直接引入
+3.在对应的ets文件中直接引入。
 
     import dayjs from 'dayjs'
 
 ##### 本地库新建步骤
 
-1.右键点击工程名，选择New，选择Module，选择Ohos library方式创建，修改Module的名称，点击finish
+1.右键点击工程名，选择New，选择Module，选择Ohos library方式创建，修改Module的名称，点击finish。
 
 2.在新建的Module目录下，编辑Package.json中的“name”属性，比如：“name”：“@ohos/library”
 
-3.在entry目录下，编辑Package.json中的“dependencies”属性，新增新建的Module作为依赖，比如："@ohos/library": "../library"
+3.在entry目录下，编辑Package.json中的“dependencies”属性，新增新建的Module作为依赖，比如："@ohos/library": "../library"。
 
-4.在新建的Module目录下，编辑Index.ets，将需要export的公共组件或者接口添加进去
+4.在新建的Module目录下，编辑Index.ets，将需要export的公共组件或者接口添加进去。
 
-5.在entry目录下，在需要用到新建Module里面公共组件或者接口时，import该组件进而应用，比如：import {ThirdTitleBar} from '@ohos/library'
+5.在entry目录下，在需要用到新建Module里面公共组件或者接口时，import该组件进而应用，比如：import {ThirdTitleBar} from '@ohos/library'。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

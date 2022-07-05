@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例展示了util工具类中的有理数运算的一些方法使用。
+本示例展示了util工具类中的有理数运算的一些方法使用。实现效果如下：
 
 ![](./screenshots/device/eTSRationalNumber.png)
 

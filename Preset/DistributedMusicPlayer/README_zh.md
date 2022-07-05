@@ -4,7 +4,7 @@
 
 本示例使用fileIo获取指定音频文件，并通过AudioPlayer完成了音乐的播放完成了基本的音乐播放、暂停、上一曲、下一曲功能；并使用DeviceManager完成了分布式设备列表的显示和分布式能力完成了音乐播放状态的跨设备迁移。实现效果如下：
 
-<img src="./screenshots/device/distributedMusicPlayer.png" style="zoom:50%;" />
+<img src="./screenshots/device/distributedMusicPlayer.png"/>
 
 ### 相关概念
 

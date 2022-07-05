@@ -6,9 +6,9 @@
 
 ![](screenshots/device/disconnect.png)
 
-# 相关概念
+### 相关概念
 
-WebSocket连接:使用WebSocket建立服务器与客户端的双向连接，需要先通过createWebSocket方法创建WebSocket对象，然后通过connect方法连接到服务器。
+WebSocket连接：使用WebSocket建立服务器与客户端的双向连接，需要先通过createWebSocket方法创建WebSocket对象，然后通过connect方法连接到服务器。
 当连接成功后，客户端会收到open事件的回调，之后客户端就可以通过send方法与服务器进行通信。 当服务器发信息给客户端时，客户端会收到message事件的回调。
 当客户端不要此连接时，可以通过调用close方法主动断开连接，之后客户端会收到close事件的回调。
 

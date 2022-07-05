@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例运用OpenHarmony系统提供的Stage模型与相关接口展示了一个简易的浏览器。 
+本示例运用OpenHarmony系统提供的Stage模型与相关接口展示了一个简易的浏览器。实现效果如下： 
 
 ![](screenshots/device/home.png)
 

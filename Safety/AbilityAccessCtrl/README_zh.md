@@ -2,20 +2,15 @@
 
 ### 概要简介
 
-本示例通过模拟应用申请权限场景，向用户展示`@ohos.abilityAccessCtrl`接口，具体实现效果如下图。
+本示例通过模拟应用申请权限场景，向用户展示`@ohos.abilityAccessCtrl`接口。具体实现效果如下图：
 
 ![](screenshots/device/main.png) ![](screenshots/device/dialog.png)
 
-### 相关权限
+### 相关概念
 
-[权限检测](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-abilityAccessCtrl.md#verifyaccesstoken)：查询权限是否被被授予。
-
-[权限授予](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-abilityAccessCtrl.md#grantusergrantedpermission)：授予应用 user grant 权限。
-
+程序访问控制管理：程序访问控制提供程序的权限管理能力，包括鉴权、授权和取消授权等。
 
 ### 相关权限
-
-本示例需要在 module.json5 中配置如下权限：
 
 ```json
 "reqPermissions": [

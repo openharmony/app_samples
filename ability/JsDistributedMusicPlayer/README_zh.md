@@ -1,40 +1,39 @@
-# DistributedMusicPlayer
+# 分布式音乐播放
 
-本示例完成了基本的音乐播放、暂停、上一曲、下一曲功能，并使用分布式能力完成了音乐播放状态的跨设备迁移。
-- **音乐播放**
+### 简介
 
-    使用MediaLibrary完成本地媒体文件扫描，并通过AudioPlayer完成了音乐的播放。
-- **跨设备迁移播放**
+本示例使用fileIo获取指定音频文件，并通过AudioPlayer完成了音乐的播放完成了基本的音乐播放、暂停、上一曲、下一曲功能；并使用DeviceManager完成了分布式设备列表的显示和分布式能力完成了音乐播放状态的跨设备迁移。实现效果如下：
 
-    使用DeviceManager完成了分布式设备列表的显示
+<img src="screenshots/device/music2.png"/>
 
-    使用分布式调度以及分布式数据完成了跨设备迁移功能
+### 相关概念
 
-【运行步骤】
+音频播放：媒体子系统包含了音视频相关媒体业务，通过AudioPlayer实现音频播放的能力。
 
-1. 编译运行：参考[DevEco Studio（OpenHarmony）使用指南](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/deveco-studio-user-guide-for-openharmony.md)搭建OpenHarmony应用开发环境、并导入本工程进行编译、运行。
+数据流转：分布式数据管理为应用程序提供不同设备间数据库的分布式协同能力。通过调用分布式数据各个接口，应用程序可将数据保存到分布式数据库中，并可对分布式数据库中的数据进行增/删/改/查等各项操作。
 
-2. 运行结果截图：
+### 相关权限
 
-![](screenshots/device/main.png)
+本示例需要在config.json中配置如下权限:
 
-【分布式流转体验】
+     "requestPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
+        "reason": "$string:distributed_permission",
+        "usedScene": {
+          "abilities": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]
 
-1. 硬件准备：准备两台3516开发板，并通过网线直连
+### 使用说明
 
-2. 下载[这个临时触发的构建版本](http://download.ci.openharmony.cn/Artifacts/hispark_taurus_L2_2_2-Beta2/20210806.12/version/Artifacts-hispark_taurus_L2_2_2-Beta2-20210806.12-version-hispark_taurus_L2_2_2-Beta2.tar.gz)并烧录进两台开发板
-    * 若下载地址过期，可以参考[这个临时PR](https://gitee.com/openharmony/device_manager/pulls/8)，自行提交PR并start build触发构建
-    * 也可以[搭建标准系统源码环境](https://gitee.com/openharmony/docs/blob/master/zh-cn/device-dev/quick-start/quickstart-standard.md)，按[device_manager仓库首页指导](https://gitee.com/openharmony/device_manager)修改PIN_CODE以及PORT后，执行 `./build.sh --product-name Hi3516DV300` 编译版本后进行烧录
-3. 开发板1配置一个IP（每次重启后需要重新配置）
-    ```
-    hdc shell ifconfig eth0 192.168.1.222 netmask 255.255.255.0
-    ```
-4. 开发板2配置另外一个不一样的IP（每次重启后需要重新配置）
-    ```
-    hdc shell ifconfig eth0 192.168.1.111 netmask 255.255.255.0
-    ```
-5. 打开音乐，点击左下角流转按钮，列表中会出现远端设备的id，选择远端设备id即可实现跨设备迁移播放
-    ![](screenshots/device/distributed.gif)
+1.**音乐播放**，点击**播放**、**暂停**、上**一曲**、下**一曲**按钮可以对音乐进行操作。
+
+2.**跨设备迁移播放**，组网条件下，点击**流转**按钮，选择设备，拉起对端设备上的音乐，本端退出。
 
 ### 约束与限制
 

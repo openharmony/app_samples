@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例展示了FA模型卡片使用方的创建与使用，包括创建与展示卡片、转换卡片、更新卡片、删除卡片等功能。
+本示例展示了FA模型卡片使用方的创建与使用，包括创建与展示卡片、转换卡片、更新卡片、删除卡片等功能。实现效果如下：
 
 <img src="./screenshots/eTSFormLauncherExample.png" alt="eTSFormLauncherExample"/>
 
