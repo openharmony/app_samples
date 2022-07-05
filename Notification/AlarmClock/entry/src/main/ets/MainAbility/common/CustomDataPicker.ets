@@ -30,7 +30,7 @@ export struct CustomDatePicker {
   private selectedTime: Date = new Date()
   private controller: CustomDialogController
 
-  aboutToAppear(){
+  aboutToAppear() {
     this.hour = this.selectedTime.getHours()
     this.minute = this.selectedTime.getMinutes()
     this.hourTest = (this.hour > 9 ? '' : '0') + this.hour
@@ -67,9 +67,11 @@ export struct CustomDatePicker {
       .height('30%')
 
       Row() {
-        Text($r('app.string.yes'))
-          .fontSize('20')
-          .margin({ right: '20%' })
+        Button($r('app.string.yes'))
+          .fontSize(20)
+          .layoutWeight(1)
+          .fontColor(Color.Blue)
+          .backgroundColor('#FFFFFF')
           .onClick(async () => {
             let reminderRequest: reminderAgent.ReminderRequestAlarm = {
               reminderType: reminderAgent.ReminderType.REMINDER_TYPE_ALARM,
@@ -94,9 +96,11 @@ export struct CustomDatePicker {
             this.countChange(this.total)
           })
 
-        Text($r('app.string.no'))
-          .fontSize('20')
-          .margin({ left: '20%' })
+        Button($r('app.string.no'))
+          .fontSize(20)
+          .layoutWeight(1)
+          .fontColor(Color.Red)
+          .backgroundColor('#FFFFFF')
           .onClick(() => {
             this.controller.close()
           })

@@ -64,9 +64,11 @@ export struct CustomDatePicker {
       .height('30%')
 
       Row() {
-        Text($r('app.string.yes'))
+        Button($r('app.string.yes'))
           .fontSize('20')
-          .margin({ right: '20%' })
+          .fontColor(Color.Blue)
+          .layoutWeight(1)
+          .backgroundColor(Color.White)
           .onClick(async () => {
             let reminderRequest: reminderAgent.ReminderRequestAlarm = {
               reminderType: reminderAgent.ReminderType.REMINDER_TYPE_ALARM,
@@ -88,9 +90,11 @@ export struct CustomDatePicker {
             this.countChange(this.total)
           })
 
-        Text($r('app.string.no'))
+        Button($r('app.string.no'))
           .fontSize('20')
-          .margin({ left: '20%' })
+          .fontColor(Color.Red)
+          .backgroundColor(Color.White)
+          .layoutWeight(1)
           .onClick(() => {
             this.controller.close()
           })
