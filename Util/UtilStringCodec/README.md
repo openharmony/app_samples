@@ -1,35 +1,35 @@
-# 字符串编解码
+# String Encoding and Decoding
 
-### 简介
+### Introduction
 
-本示例对字符串进行了特定格式的输出，对错误码的内容进行了文本输出，对字符串的编码和解码做了演示结果。实现效果如下：
+This sample shows how to output strings in a specified format and obtain error messages corresponding to error codes. It also demonstrates string encoding and decoding. The sample app is as follows.
 
 ![](screenshots/device/image1.png)
 
-### 相关概念
+### Functions
 
-1.特定格式输出：可以对字符串进行特定格式的输出。
+1. Output in a specified format: You can use the app to output a string in different formats.
 
-2.错误码解析：可以根据输入的错误码获取出相应的错误信息。
+2. Error code parsing: You can input an error code in the app to obtain the corresponding error message.
 
-3.文本编解码：可以对字符串进行编码和解码的操作。
+3. Text encoding and decoding: You can use the app to encode and decode strings.
 
-### 相关权限
+### Required Permissions
 
-不涉及。
+N/A
 
-### 使用说明
+### Usage
 
-1.点击**特定格式输出**，文本框会对该字符串进行不同格式的结果输出，例如整数、浮点数、字符串等格式。
+1. Touch **Output in specified format**. Your input is then displayed in different formats, such as integer, floating point number, and string.
 
-2.点击**获取系统对应的详细信息**按钮，每行文本框输出左边的错误码所表示的具体文本意思。
+2. Touch **Obtain error details**. The error message corresponding to the error code is displayed in the text box on each line.
 
-3.点击**文本编辑器**，会对上面字符串编码后输出对应文本，并输出数据读取与写入的相关信息。
+3. Touch **Text encoder**. Your input is then encoded and displayed, together with the information about data reading and writing.
 
-4.点击**文本译码器**，会对上面编码的文本内容进行译码，输出结果为上述编码前的字符串。
+4. Touch **Text decoder**. The encoded text content is decoded, and the output displayed is the same as what you input.
 
-### 约束与限制
+### Constraints
 
-1.本示例仅支持在标准系统上运行。
+1. This sample can only be run on standard-system devices.
 
-2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+2. DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022) must be used.
