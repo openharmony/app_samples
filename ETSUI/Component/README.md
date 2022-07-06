@@ -6,9 +6,13 @@
 
 ![](screenshots/device/main.png)
 
+### 相关概念
+
+基础组件、容器组件。
+
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 
@@ -30,7 +34,7 @@
     -   [TextArea](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/textArea/textAreaPage.ets)
     -   [TextInput](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/textInput/textInputPage.ets)
     -   [Toggle](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/toggle/togglePage.ets)
-	
+
 -   容器组件
     -   [Badge](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/badge/badgePage.ets)
     -   [Column](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/Column/ColumnPage.ets)

@@ -2,7 +2,7 @@
 
 ### 简介
 
-本示例展示了在eTS中如何构建FA模型下分布式涂鸦Ability和Service，包含:
+本示例展示了如何构建FA模型下分布式涂鸦Ability和Service，包含:
 
 1.通过deviceManager提供的接口，获取设备ID（当前该接口未对三方应用开放）。
 
@@ -16,11 +16,11 @@
 
 ### 相关概念
 
--  FaultLogInfo：获取到的故障信息的数据结构。
+FaultLogInfo：获取到的故障信息的数据结构。
 
 ### 相关权限
 
-不涉及。
+允许不同设备间的数据交换：ohos.permission.DISTRIBUTED_DATASYNC
 
 ### 使用说明
 

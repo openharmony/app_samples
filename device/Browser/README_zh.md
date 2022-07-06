@@ -2,26 +2,26 @@
 
 ### 简介
 
-本示例运用OpenHarmony系统提供的Stage模型与相关接口展示了一个简易的浏览器。实现效果如下： 
+本示例运用系统提供的Stage模型与相关接口展示了一个简易的浏览器。实现效果如下： 
 
 ![](screenshots/device/home.png)
 
 ### 相关概念
 
-[系统属性](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-system-parameter.md)：系统属性相关接口概述。
+系统属性：获取或设置系统属性Key对应的值。
 
-[媒体查询](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-mediaquery.md)：媒体查询相关接口概述。
+媒体查询：设置媒体查询的查询条件，并返回对应的监听句柄。
 
 
 ### 相关权限
 
 网络服务：ohos.permission.INTERNET
 
-获取WiFi信息：ohos.permission.GET_WIFI_INFO
+获取WLAN信息：ohos.permission.GET_WIFI_INFO
 
 ### 使用说明
 
-1.连接WiFi，启动应用，展示默认页面内容。
+1.连接Wifi，启动应用，展示默认页面内容。
 
 2.点击默认页面的图标跳转到对应网页，或者在输入框输入网址，点击右侧跳转按钮跳转到对应网页。
 

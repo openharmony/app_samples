@@ -8,15 +8,15 @@
 
 ### 相关概念
 
-- [位置服务](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-geolocation.md)：位置服务相关接口，包括获取位置信息，逆地理编码等。
+位置服务：位置服务相关接口，包括获取位置信息，逆地理编码等。
 
 ### 相关权限
 
-位置服务: ohos.permission.LOCATION
+允许应用在前台运行时获取位置信息: ohos.permission.LOCATION
 
-位置服务: ohos.permission.LOCATION_IN_BACKGROUND
+允许应用在后台运行时获取位置信息: ohos.permission.LOCATION_IN_BACKGROUND
 
-传感器: ohos.permission.VIBRATE
+允许应用程序使用马达: ohos.permission.VIBRATE
 
 ### 使用说明
 

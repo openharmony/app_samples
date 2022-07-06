@@ -10,7 +10,7 @@
 
 ### 相关概念
 
-可用于EGL/OpenGLES和媒体数据写入，并显示在XComponent组件。
+XComponent：可用于EGL/OpenGLES和媒体数据写入，并显示在XComponent组件。
 
 ### 相关权限
 

@@ -7,11 +7,11 @@
 
 ### 相关概念
 
-- [Ability开发](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ability/Readme-CN.md)：Ability开发。
+Call调用：Ability Call调用是Ability能力的扩展，它为Ability提供一种能够被外部调用的能力，使Ability既能被拉起到前台展示UI，也支持Ability在后台被创建并运行。应用开发者可通过Call调用，使用IPC通信实现不同Ability之间的数据共享。
 
 ### 相关权限
 
-远程协同：ohos.permission.DISTRIBUTED_DATASYNC
+允许不同设备间的数据交换：ohos.permission.DISTRIBUTED_DATASYNC
 
 ### 使用说明
 

@@ -2,16 +2,16 @@
 
 ### 简介
 
-本Demo通过不同示例向用户介绍通用事件、通用属性、手势处理等不同组件的功能。效果图如下：
+本示例向用户介绍通用事件、通用属性、手势处理等不同组件的功能。效果图如下：
 ![](screenshots/devices/index.png)
 
 ### 相关概念
 
-- [基于TS扩展的声明式开发范式](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/Readme-CN.md)：基于TS扩展的声明式开发范式。
+组件：通用事件、通用属性、手势处理等。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

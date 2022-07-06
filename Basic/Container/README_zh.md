@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-- [线性容器ArrayList](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-arraylist.md)：ArrayList是一种线性数据结构，底层基于数组实现。
+线性容器ArrayList：ArrayList是一种线性数据结构，底层基于数组实现。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

@@ -4,7 +4,7 @@
 
 本示例展示了FA模型卡片提供方的创建与使用。
 
-![](screenshots\main.png)
+![](screenshots/main.png)
 
 ### 相关概念
 

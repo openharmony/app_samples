@@ -3,6 +3,7 @@
 ### 简介
 
 本示例展示了npm引用第三方js类库和本地库，主要展示了mathjs、dayjs和本地库应用。实现效果如下：
+
 ![](./screenshots/device/index.png)
 
 ### 相关概念
@@ -27,7 +28,7 @@ npm：npm引用第三方js类库和本地库。
 
 1.右键点击工程名，选择New，选择Module，选择Ohos library方式创建，修改Module的名称，点击finish。
 
-2.在新建的Module目录下，编辑Package.json中的“name”属性，比如：“name”：“@ohos/library”
+2.在新建的Module目录下，编辑Package.json中的“name”属性，比如：“name”：“@ohos/library”。
 
 3.在entry目录下，编辑Package.json中的“dependencies”属性，新增新建的Module作为依赖，比如："@ohos/library": "../library"。
 

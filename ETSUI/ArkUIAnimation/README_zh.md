@@ -3,17 +3,18 @@
 ### 简介
 
 本示例通过点击按钮触发动画，向用户展示属性动画与显示动画的效果。效果图如下：
+
 ![](screenshots/devices/main.png) ![](screenshots/devices/Animation.png)
 
 ### 相关概念
 
-- [属性动画](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-animatorproperty.md)：组件的通用属性发生变化时，可以创建属性动画进行渐变，提升用户体验。
+属性动画：组件的通用属性发生变化时，可以创建属性动画进行渐变，提升用户体验。
 
-- [显式动画](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-explicit-animation.md)：提供全局animateTo显式动画接口来指定由于闭包代码导致的状态变化插入过渡动效。
+显式动画：提供全局animateTo显式动画接口来指定由于闭包代码导致的状态变化插入过渡动效。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ## 使用说明
 

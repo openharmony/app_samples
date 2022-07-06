@@ -28,6 +28,10 @@ struct CartDialog {
     this.controller.close()
   }
 
+  aboutToAppear() {
+    this.getPriceCount()
+  }
+
   getPriceCount() {
     console.info('getPriceCount')
     this.priceCount = 0

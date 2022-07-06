@@ -8,12 +8,12 @@
 
 ### 相关概念
 
--  发布通知：使用 Notification.publish接口发布通知。
-- NotificationRequest：设置要发布通知内容的NotificationRequest对象。
+发布通知：使用 Notification.publish接口发布通知。
+NotificationRequest：设置要发布通知内容的NotificationRequest对象。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

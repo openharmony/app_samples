@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-- 资源管理：资源管理模块，根据当前configuration（语言，区域，横竖屏，mccmnc）和device capability（设备类型，分辨率）提供获取应用资源信息读取接口。
+资源管理：资源管理模块，根据当前configuration（语言，区域，横竖屏，mccmnc）和device capability（设备类型，分辨率）提供获取应用资源信息读取接口。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

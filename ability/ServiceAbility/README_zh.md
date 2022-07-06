@@ -2,13 +2,13 @@
 
 ### 简介
 
-本示例展示了在eTS中ServiceAbility的创建与使用。效果图如下：
+本示例展示了ServiceAbility的创建与使用。效果图如下：
 
 ![](screenshots/device/main.png)
 
 ### 相关概念
 
-- [Ability开发](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ability/Readme-CN.md)：Ability开发。
+ServiceAbility：基于Service模板的Ability（以下简称“Service”）主要用于后台运行任务（如执行音乐播放、文件下载等），但不提供用户交互界面。Service可由其他应用或Ability启动。即使用户切换到其他应用，Service仍将在后台继续运行。
 
 ### 相关权限
 

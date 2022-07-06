@@ -12,11 +12,7 @@
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
 任务管理权限：ohos.permission.MANAGE_MISSIONS
-```
 
 ### 使用说明
 

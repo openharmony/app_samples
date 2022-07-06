@@ -2,15 +2,15 @@
 
 ### 简介
 
-本示例展示了在ServiceExtAbility的创建与使用。实现效果如下：
+本示例展示了ServiceExtAbility的创建与使用。实现效果如下：
 
 ![](screenshots/device/first.png) ![](screenshots/device/second.png)
 
 ### 相关概念
 
--  FaultLogInfo：获取到的故障信息的数据结构。
+FaultLogInfo：获取到的故障信息的数据结构。
 
--  querySelfFaultLog：获取当前进程故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
+querySelfFaultLog：获取当前进程故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
 
 ### 相关权限
 

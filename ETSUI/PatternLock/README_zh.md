@@ -8,10 +8,11 @@
 
 ### 相关概念
 
-- [图案密码锁组件](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-basic-components-patternlock.md)：以宫格图案的方式输入密码，用于密码验证。手指触碰图案密码锁时开始进入输入状态，手指离开屏幕时结束输入状态并向应用返回输入的密码。
+图案密码锁组件：以宫格图案的方式输入密码，用于密码验证。手指触碰图案密码锁时开始进入输入状态，手指离开屏幕时结束输入状态并向应用返回输入的密码。
+
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

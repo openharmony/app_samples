@@ -12,7 +12,7 @@
 
 ### 相关权限
 
-账号管理权限："ohos.permission.MANAGE_LOCAL_ACCOUNTS"
+账号管理权限：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 ### 使用说明
 

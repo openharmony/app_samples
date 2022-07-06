@@ -14,20 +14,7 @@
 
 ### 相关权限
 
-本示例需要在config.json中配置如下权限:
-
-     "requestPermissions": [
-      {
-        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
-        "reason": "$string:distributed_permission",
-        "usedScene": {
-          "abilities": [
-            "MainAbility"
-          ],
-          "when": "inuse"
-        }
-      }
-    ]
+允许不同设备间的数据交换：ohos.permission.DISTRIBUTED_DATASYNC
 
 ### 使用说明
 

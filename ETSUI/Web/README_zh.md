@@ -6,13 +6,11 @@
 
 ![](screenshots/devices/home.png)
 
-# 相关概念
+### 相关概念
 
-提供具有网页显示能力的Web组件。
+Web：提供具有网页显示能力的Web组件。
 
 ### 相关权限
-
-本示例需要在module.json5中配置如下权限:
 
 网络使用权限：ohos.permission.INTERNET
 

@@ -8,12 +8,13 @@
 
 ### 相关概念
 
-- [页面间转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-page-transition-animation.md)：页面转场通过在全局pageTransition方法内配置页面入场组件和页面退场组件来自定义页面转场动效。
-- [组件内转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-component.md)：组件转场主要通过transition属性进行配置转场参数，在组件插入和删除时进行过渡动效，主要用于容器组件子组件插入删除时提升用户体验。
-- [共享元素转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-shared-elements.md)：在组件中通过sharedTransition方法设置共享元素转场，两个页面的组件配置为同一个id，则转场过程中会进行共享元素转场，配置为空字符串时不会有共享元素转场效果。
+页面间转场：页面转场通过在全局pageTransition方法内配置页面入场组件和页面退场组件来自定义页面转场动效。
+组件内转场：组件转场主要通过transition属性进行配置转场参数，在组件插入和删除时进行过渡动效，主要用于容器组件子组件插入删除时提升用户体验。
+共享元素转场：在组件中通过sharedTransition方法设置共享元素转场，两个页面的组件配置为同一个id，则转场过程中会进行共享元素转场，配置为空字符串时不会有共享元素转场效果。
+
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

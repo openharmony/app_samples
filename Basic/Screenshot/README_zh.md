@@ -8,15 +8,11 @@
 
 ### 相关概念
 
--  屏幕截图：提供获取当前屏幕截图的api，返回获取到的PixelMap信息。
+屏幕截图：提供获取当前屏幕截图的api，返回获取到的PixelMap信息。
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
 获取屏幕截图权限：ohos.permission.CAPTURE_SCREEN
-```
 
 ### 使用说明
 

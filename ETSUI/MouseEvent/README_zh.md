@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-- [鼠标输入事件](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-mouseevent.md)：设备上报的鼠标事件。
+鼠标输入事件：设备上报的鼠标事件。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

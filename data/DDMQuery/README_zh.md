@@ -8,15 +8,11 @@
 
 ### 相关概念
 
--   KvStoreResultSet：提供获取KVStore数据库结果集的方法，提供查询和移动数据读取位置的方法，在调用KvStoreResultSet的方法前，需要先通过KVStore构建一个KVStore实例。
+KvStoreResultSet：提供获取KVStore数据库结果集的方法，提供查询和移动数据读取位置的方法，在调用KvStoreResultSet的方法前，需要先通过KVStore构建一个KVStore实例。
 
 ### 相关权限
 
-```
-本示例需要在config.json中配置如下权限:
-
-分布式数据管理权限：ohos.permission.DISTRIBUTED_DATASYNC
-```
+允许不同设备间的数据交换：ohos.permission.DISTRIBUTED_DATASYNC
 
 ### 使用说明
 

@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-- [Search组件](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-basic-components-search.md)：搜索框组件，用于提供用户搜索内容的输入区域。可以设置placeholder文本样式和颜色、搜索框内文本样式，以及submit和onChange等方法触发时的操作。
+Search组件：搜索框组件，用于提供用户搜索内容的输入区域。可以设置placeholder文本样式和颜色、搜索框内文本样式，以及submit和onChange等方法触发时的操作。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

@@ -3,17 +3,18 @@
 ### 简介
 
 本示例监听屏幕数量变化，创建、销毁虚拟屏幕模拟屏幕增减，读取屏幕属性并显示。效果图如下：
+
 ![](screenshots/device/index.png)![](screenshots/device/defaultInfo.png)
 
 ### 相关概念
 
-- [屏幕属性](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-display.md)：屏幕属性接口提供获取默认display对象、获取所有display对象，开启监听、关闭监听功能。
+屏幕属性：屏幕属性接口提供获取默认display对象、获取所有display对象，开启监听、关闭监听功能。
 
-- [Screen](https://gitee.com/openharmony/interface_sdk-js/blob/master/api/@ohos.screen.d.ts)：screen接口提供创建虚拟屏幕、销毁虚拟屏幕、扩展屏幕、镜像屏幕等功能。
+Screen：screen接口提供创建虚拟屏幕、销毁虚拟屏幕、扩展屏幕、镜像屏幕等功能。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 
