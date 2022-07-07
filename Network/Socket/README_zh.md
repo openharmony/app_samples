@@ -1,4 +1,4 @@
-#  网络管理-Socket连接
+# 网络管理-Socket连接
 
 ### 简介
 
@@ -12,9 +12,8 @@ UDP Socket是面向非连接的协议，它不与对方建立连接，而是直�
 
 ### 相关权限
 
-网络权限: "ohos.permission.INTERNET"
-
-获取WIFI信息的权限: "ohos.permission.GET_WIFI_INFO"
+网络权限: ohos.permission.INTERNET
+获取WIFI信息的权限: ohos.permission.GET_WIFI_INFO
 
 ### 使用说明
 

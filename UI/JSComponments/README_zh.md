@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-[基于JS扩展的类Web开发范式](https://gitee.com/openharmony/docs/tree/master/zh-cn/application-dev/reference/arkui-js)：JavaScript相关组件。
+基于JS扩展的类Web开发范式：JavaScript相关组件。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

@@ -3,15 +3,16 @@
 ### 简介
 
 本示例主要展示进程内事件通知，用户通过选择对应商品并提交订单后在订单列表显示所选商品。效果图如下：
+
 ![](screenshots/device/main.png) ![](screenshots/device/mall.png)
 
 ### 相关概念
 
-- [Emitter](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-appAccount.md)：进程通信相关功能。
+Emitter：本模块不仅用于对应用帐号的添加、删除、查询、修改和授权，且提供帐号将数据写入磁盘和数据同步的能力。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

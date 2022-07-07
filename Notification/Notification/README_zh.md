@@ -8,15 +8,15 @@
 
 ### 相关概念
 
-- 发布通知：使用 Notification.publish接口发布通知。
+发布通知：使用 Notification.publish接口发布通知。
 
-- 订阅通知：创建订阅者并实现接收通知回调函数，可以实现监听通知的功能。
+订阅通知：创建订阅者并实现接收通知回调函数，可以实现监听通知的功能。
 
--  NotificationRequest：设置要发布通知内容的NotificationRequest对象。
+NotificationRequest：设置要发布通知内容的NotificationRequest对象。
 
 ### 相关权限
 
-不涉及
+管理通知和订阅通知: ohos.permission.NOTIFICATION_CONTROLLER,
 
 ### 使用说明
 

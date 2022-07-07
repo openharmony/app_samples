@@ -7,11 +7,11 @@
 
 ### 相关概念
 
-- [窗口](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-window.md)：窗口提供管理窗口的一些基础能力，包括对当前窗口的创建、销毁、各属性设置，以及对各窗口间的管理调度。
+窗口：窗口提供管理窗口的一些基础能力，包括对当前窗口的创建、销毁、各属性设置，以及对各窗口间的管理调度。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

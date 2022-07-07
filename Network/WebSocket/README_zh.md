@@ -14,8 +14,6 @@ WebSocket连接：使用WebSocket建立服务器与客户端的双向连接，�
 
 ### 相关权限
 
-本示例需要在module.json5中配置如下权限:
-
 网络使用权限：ohos.permission.INTERNET
 
 ### 使用说明

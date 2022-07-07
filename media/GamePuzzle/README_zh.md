@@ -8,16 +8,13 @@
 
 ### 相关概念
 
-- ImagePacker：图片打包器类，用于图片压缩和打包。在调用ImagePacker的方法前，需要先通过createImagePacker构建一个ImagePacker实例。
-- 媒体库管理：获取媒体库的实例，用于访问和修改用户等个人媒体数据信息（如音频、视频、图片、文档等）。
+ImagePacker：图片打包器类，用于图片压缩和打包。在调用ImagePacker的方法前，需要先通过createImagePacker构建一个ImagePacker实例。
+
+媒体库管理：获取媒体库的实例，用于访问和修改用户等个人媒体数据信息（如音频、视频、图片、文档等）。
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
 读取公共媒体文件权限：ohos.permission.READ_MEDIA
-```
 
 ### 使用说明
 

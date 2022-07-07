@@ -4,7 +4,7 @@
 
 本示例通过输入电话，进行电话拨打，及电话相关信息的显示。实现效果如下：
 
-<img src="./screenshots/device/call.png" />
+![](screenshots/device/call.png)
 
 ### 相关概念
 

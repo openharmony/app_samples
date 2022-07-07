@@ -2,19 +2,17 @@
 
 ### 简介
 
-本示例用于验证OpenHarmony提供的FA模型，Canvas组件、media组件做小游戏的能效是否符合预期，以及验证资源调度子系统的API接口是否符合后台规范运行的
-
-预期。实现效果如下：
+本示例用于验证OpenHarmony提供的FA模型，Canvas组件、media组件做小游戏的能效是否符合预期，以及验证资源调度子系统的API接口是否符合后台规范运行的预期。实现效果如下：
 
 ![](screenshot/snapshot1.png) ![](screenshot/snapshot2.png)
 
 ### 相关概念
 
--  Canvas：提供画布组件，用于自定义绘制图形。
+Canvas：提供画布组件，用于自定义绘制图形。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

@@ -2,21 +2,17 @@
 
 ### 简介
 
-本示例展示了在eTS中如何VideoPlayer播放视频，同时提供一个可供其他应用调用播放视频的Ability。实现效果如下：
+本示例展示了VideoPlayer播放视频，同时提供一个可供其他应用调用播放视频的Ability。实现效果如下：
 
 ![home](screenshots/devices/home.png) ![play1](screenshots/devices/play1.png)
 
 ### 相关概念
 
--  VideoPlayer：视频播放的主要工作是将视频数据转码并输出到设备进行播放，同时管理播放任务。本文将对视频播放全流程、视频切换、视频循环播放等场景开发进行介绍说明。
+VideoPlayer：视频播放的主要工作是将视频数据转码并输出到设备进行播放，同时管理播放任务。本文将对视频播放全流程、视频切换、视频循环播放等场景开发进行介绍说明。
 
 ### 相关权限
 
-```
-本示例需要在module.json5中配置如下权限:
-
 读取公共媒体文件权限：ohos.permission.READ_MEDIA
-```
 
 ### 使用说明
 

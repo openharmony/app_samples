@@ -1,17 +1,18 @@
-### WebGL
+# WebGL
 
 ### 简介
 
 本示例调用GPU资源绘制了五角星和矩形，展示WebGL相关接口的使用方法。效果图如下：
+
 ![](screenshots/main.png) ![](screenshots/index.png)
 
 ### 相关概念
 
-- [webgl](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-webgl.md)：WebGL标准图形API，对应OpenGL ES 2.0特性集。
+webgl：WebGL标准图形API，对应OpenGL ES 2.0特性集。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

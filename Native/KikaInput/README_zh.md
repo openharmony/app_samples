@@ -11,6 +11,7 @@
 [中文输入法相关库文件](https://github.com/lizhangqu/PinyinIME/tree/master/app/src/main)
 
 ### 相关权限
+
 允许应用查询其他应用的信息权限：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 ### 使用说明

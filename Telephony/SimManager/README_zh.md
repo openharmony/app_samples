@@ -8,12 +8,11 @@
 
 ### 相关概念
 
-- [SIM](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-sim.md)：SIM卡相关功能。
+SIM管理:SIM卡相关功能。
 
 ### 相关权限
 
 电话权限：ohos.permission.GET_TELEPHONY_STATE
-
 
 ### 使用说明
 

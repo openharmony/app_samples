@@ -12,8 +12,6 @@
 
 ### 相关权限
 
-本示例需要在config.json中配置如下权限:
-
 后台任务管理权限：ohos.permission.KEEP_BACKGROUND_RUNNING
 
 ### 使用说明

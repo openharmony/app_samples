@@ -4,7 +4,7 @@
 
 本示例展示了内存存储和公共文件根目录对应的内存大小。实现效果如下：
 
-<img src="./screenshots/device/main.png" />
+![](screenshots/device/main.png")
 
 ### 相关概念
 
@@ -12,7 +12,7 @@
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

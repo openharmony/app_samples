@@ -8,11 +8,11 @@
 
 ### 相关概念
 
-- CanvasRenderingContext2D：使用RenderingContext在Canvas组件上进行绘制，绘制对象可以是矩形、文本、图片等。
+CanvasRenderingContext2D：使用RenderingContext在Canvas组件上进行绘制，绘制对象可以是矩形、文本、图片等。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

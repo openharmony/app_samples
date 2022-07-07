@@ -8,11 +8,9 @@
 
 ### 相关概念
 
-@ohos.telephony.observer: 通过注册相关监听事件，来监听手机网络、信号、通话、sim卡等状态，并返回相应的结果。
+observer: 通过注册相关监听事件，来监听手机网络、信号、通话、sim卡等状态，并返回相应的结果。
 
 ### 相关权限
-
-本示例需要在module.json5中配置如下权限:
 
 获取网络状态权限:ohos.permission.GET_NETWORK_INFO
 

@@ -14,8 +14,8 @@
  */
 
 import util from '@ohos.util'
-import { SpecInput } from '../common/specInput.ets'
-import { ErrInput } from '../common/errInput.ets'
+import { SpecInput } from '../common/specInput'
+import { ErrInput } from '../common/errInput'
 
 var resArray
 

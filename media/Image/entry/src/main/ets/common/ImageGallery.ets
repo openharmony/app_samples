@@ -47,9 +47,8 @@ export struct ImageGallery {
             Image(item.uri)
               .width('100%')
               .aspectRatio(1)
-              .objectFit(ImageFit.Cover)
+              .objectFit(ImageFit.Contain)
               .onClick(() => {
-                Logger.info(TAG, `111111111`)
                 router.replace({
                   url: 'pages/Second',
                   params: {

@@ -8,7 +8,7 @@
 
 ### 相关概念
 
-- [网络状态](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-system-network.md)：网络状态相关功能。
+网络状态：网络状态相关功能。
 
 ### 相关权限
 

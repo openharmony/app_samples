@@ -3,15 +3,16 @@
 ### 简介
 
 该应用是一个体现组件动效基础能力的JS应用，包含组件的旋转、平移、显隐切换，以及组件阴影等功能。效果图如下：
+
 ![](screenshots/device/animation.png)
 
 ### 相关概念
 
-- [图形变换](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-universal-attributes-transformation.md)：图形变换。
+图形变换：包括旋转、平移、缩放等变换。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

@@ -4,7 +4,7 @@
 
 本示例展示了电话服务中发送短信的功能。实现效果如下：
 
-<img src="./screenshots/device/create_contact.png" /> <img src="./screenshots/device/save_contact.png" /> <img src="./screenshots/device/send_message.png" />
+![](screenshots/device/create_contact.png) ![](screenshots/device/save_contact.png) ![](screenshots/device/send_message.png)
 
 ### 相关概念
 

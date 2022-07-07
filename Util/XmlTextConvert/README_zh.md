@@ -4,7 +4,7 @@
 
 本示例通过XmlSerializer生成xml文本，通过XmlPullParser解析xml文本，通过ConvertXML将xml文本转换为JavaScript对象。实现效果如下：
 
-<img src="./screenshots/device/main.png" />
+![](screenshots/device/main.png)
 
 ### 相关概念
 
@@ -12,7 +12,7 @@ xml解析与生成、xml转换JavaScript。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

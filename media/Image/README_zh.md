@@ -7,42 +7,13 @@
 
 ### 相关概念
 
-- [图片处理](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-image.md)：对PixelMap读写、获取信息等操作。
+图片处理：对PixelMap读写、获取信息等操作。
 
 ### 相关权限
 
-    "reqPermissions": [
-      {
-        "name": "ohos.permission.MEDIA_LOCATION",
-        "reason": "$string:description_mainability",
-        "usedScene": {
-          "ability": [
-            "ohos.samples.image.MainAbility"
-          ],
-          "when": "inuse"
-        }
-      },
-      {
-        "name": "ohos.permission.READ_MEDIA",
-        "reason": "$string:description_mainability",
-        "usedScene": {
-          "ability": [
-            "ohos.samples.image.MainAbility"
-          ],
-          "when": "inuse"
-        }
-      },
-      {
-        "name": "ohos.permission.WRITE_MEDIA",
-        "reason": "$string:description_mainability",
-        "usedScene": {
-          "ability": [
-            "ohos.samples.image.MainAbility"
-          ],
-          "when": "inuse"
-        }
-      }
-    ]
+媒体文件位置获取权限: ohos.permission.MEDIA_LOCATION,
+媒体文件读取权限: ohos.permission.READ_MEDIA,
+媒体文件写入权限: ohos.permission.WRITE_MEDIA,
 
 ### 使用说明
 

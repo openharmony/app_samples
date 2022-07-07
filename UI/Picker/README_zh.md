@@ -10,15 +10,15 @@
 
 ### 相关概念
 
--  TextPicker：文本类滑动选择器组件。
+TextPicker：文本类滑动选择器组件。
 
--  TimePicker：选择时间的滑动选择器组件。
+TimePicker：选择时间的滑动选择器组件。
 
--  DatePicker：选择日期的滑动选择器组件。
+DatePicker：选择日期的滑动选择器组件。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 

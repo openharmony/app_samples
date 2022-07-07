@@ -12,11 +12,7 @@
 
 ### 相关权限
 
-```
-本示例需要在config.json中配置如下权限:
-
 后台代理提醒权限：ohos.permission.PUBLISH_AGENT_REMINDER
-```
 
 ### 使用说明
 

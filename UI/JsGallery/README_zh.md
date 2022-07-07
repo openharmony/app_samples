@@ -3,12 +3,12 @@
 ### 简介
 
 该应用是一个仿图库的JS应用，模拟多图片场景，使用了懒加载特性，开发者可自行添加或者更换图片资源，构建自己的多图场景。效果图如下：
-![](screenshots/device/main1.png)
-![](screenshots/device/main2.png)
+
+![](screenshots/device/main1.png) ![](screenshots/device/main2.png)
 
 ### 相关概念
 
-- [数据懒加载](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/ui/ts-rending-control-syntax-lazyforeach.md)：开发框架提供数据懒加载从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。
+数据懒加载：开发框架提供数据懒加载从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。
 
 ### 相关权限
 

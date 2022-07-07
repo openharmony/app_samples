@@ -26,21 +26,6 @@
   </div>
   <div class="content">
     <stack>
-      <video if="{{ videoopa_1 }}" id="video1_1" class="video1_1" src="/common/animator/butterfly.mp4"
-             controls="false" autoplay="true" onfinish="playComplete1"></video>
-      <video if="{{ videoopa_2 }}" id="video1_2" class="video1_2" src="/common/animator/show.mp4" controls="false"
-             autoplay="true" onfinish="playComplete1"></video>
-      <video if="{{ videoopa_3 }}" id="video1_3" class="video1_3" src="/common/animator/show.mp4" controls="false"
-             autoplay="true" onfinish="playComplete1"></video>
-      <video if="{{ videomove_1 }}" id="video2_2" class="videosmall {{ video2 }}"
-             src="/common/animator/butterfly.mp4"
-             controls="false" autoplay="true" onfinish="playComplete3"></video>
-      <video if="{{ videomove_2 }}" id="video2_3" class="videosmall {{ video3 }}"
-             src="/common/animator/butterfly.mp4"
-             controls="false" autoplay="true" onfinish="playComplete4"></video>
-      <video if="{{ videomove_3 }}" id="video2_1" class="videosmall {{ video_center }}"
-             src="/common/animator/butterfly.mp4" controls="false" autoplay="true"
-             onfinish="playComplete2"></video>
       <image if="{{ imgflag[0] }}" class="img {{ img0 }}" style="box-shadow : 0 0 20 0;"
              src="/common/gallery/001.png"></image>
       <image if="{{ imgflag[1] }}" class="img {{ img1 }}" style="box-shadow : 20 20 20;"

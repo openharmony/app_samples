@@ -3,11 +3,12 @@
 ### 简介
 
 本示例仿postman输入API接口地址，获取相应数据，介绍数据请求接口的用法。效果图如下：
+
 ![](screenshots/device/index.png)
 
 ### 相关概念
 
-- [数据请求](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-http.md)：数据请求相关功能。
+数据请求：本模块提供http数据请求能力。应用可以通过HTTP发起一个数据请求，支持常见的GET、POST、OPTIONS、HEAD、PUT、DELETE、TRACE、CONNECT方法。
 
 ### 相关权限
 

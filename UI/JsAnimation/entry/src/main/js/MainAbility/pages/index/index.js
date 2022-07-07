@@ -17,8 +17,6 @@ import router from '@ohos.router'
 
 export default {
   data: {
-    video2: 'video2_1',
-    video3: 'video3_1',
     img1: 'img1_1',
     img2: 'img2_1',
     img3: 'img3_1',
@@ -29,18 +27,10 @@ export default {
     img8: 'img8_1',
     img9: 'img9_1',
     img0: 'img0_1',
-    video_center: 'video_center1',
     flag1: true,
     flag2: false,
     i: 1,
-    video_opa: '',
     pass: false,
-    videoopa_1: true,
-    videoopa_2: true,
-    videoopa_3: true,
-    videomove_1: true,
-    videomove_2: true,
-    videomove_3: true,
     imgflag: [true, true, true, true, true, true, true, true, true, true],
     shadow: true,
     message: []
@@ -49,8 +39,6 @@ export default {
     setInterval(() => {
       ++this.i;
       if (this.i % 2 === 0) {
-        this.video2 = '';
-        this.video3 = '';
         this.img1 = '';
         this.img2 = '';
         this.img3 = '';
@@ -61,9 +49,6 @@ export default {
         this.img8 = '';
         this.img9 = '';
         this.img0 = '';
-        this.video_center = '';
-        this.video2 = 'video2_2';
-        this.video3 = 'video3_2';
         this.img1 = 'img1_2';
         this.img2 = 'img2_2';
         this.img3 = 'img3_2';
@@ -74,12 +59,9 @@ export default {
         this.img8 = 'img8_2';
         this.img9 = 'img9_2';
         this.img0 = 'img0_2';
-        this.video_center = 'video_center2';
         this.flag1 = false;
         this.flag2 = true;
       } else {
-        this.video2 = '';
-        this.video3 = '';
         this.img1 = '';
         this.img2 = '';
         this.img3 = '';
@@ -90,9 +72,6 @@ export default {
         this.img8 = '';
         this.img9 = '';
         this.img0 = '';
-        this.video_center = '';
-        this.video2 = 'video2_1';
-        this.video3 = 'video3_1';
         this.img1 = 'img1_1';
         this.img2 = 'img2_1';
         this.img3 = 'img3_1';
@@ -103,7 +82,6 @@ export default {
         this.img8 = 'img8_1';
         this.img9 = 'img9_1';
         this.img0 = 'img0_1';
-        this.video_center = 'video_center1';
         this.flag1 = true;
         this.flag2 = false;
       }
@@ -111,19 +89,5 @@ export default {
   },
   back() {
     router.back();
-  },
-  playComplete1() {
-    this.$element('video1_1').start();
-    this.$element('video1_2').start();
-    this.$element('video1_3').start();
-  },
-  playComplete2() {
-    this.$element('video2_1').start();
-  },
-  playComplete3() {
-    this.$element('video2_2').start();
-  },
-  playComplete4() {
-    this.$element('video2_3').start();
   },
 }

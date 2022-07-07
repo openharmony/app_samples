@@ -50,33 +50,6 @@ stack {
     height: 100%;
 }
 
-.video1_1 {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    animation-name: bigVideo1;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video1_2 {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    animation-name: bigVideo2;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video1_3 {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    animation-name: bigVideo3;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
 .text1 {
     font-family: Sans-serif;
     margin-top: 250px;
@@ -95,48 +68,6 @@ stack {
     font-style: italic;
     font-size: 18px;
     animation-name: Text2;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.videosmall {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.video_center1 {
-    animation-name: videocenter1;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video_center2 {
-    animation-name: videocenter2;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video2_1 {
-    animation-name: smallVideo1;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video2_2 {
-    animation-name: smallVideo2;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video3_1 {
-    animation-name: smallVideo3;
-    animation-duration: 5000ms;
-    animation-iteration-count: -1;
-}
-
-.video3_2 {
-    animation-name: smallVideo4;
     animation-duration: 5000ms;
     animation-iteration-count: -1;
 }
@@ -249,45 +180,6 @@ stack {
     animation-timing-function: ease-out;
 }
 
-@keyframes bigVideo1 {
-    from {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-@keyframes bigVideo2 {
-    from {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-@keyframes bigVideo3 {
-    from {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 @keyframes Text1 {
     from {
         transform: rotate(0deg);
@@ -304,60 +196,6 @@ stack {
 
     to {
         transform: rotate(0deg);
-    }
-}
-@keyframes videocenter1 {
-    from {
-        transform: translate(130px, 0px) rotate(0deg);
-    }
-
-    to {
-        transform: translate(130px, 560px) rotate(360deg);
-    }
-}
-@keyframes videocenter2 {
-    from {
-        transform: translate(130px, 560px) rotate(360deg);
-    }
-
-    to {
-        transform: translate(130px, 0px) rotate(0deg);
-    }
-}
-@keyframes smallVideo1 {
-    from {
-        transform: translate(0px, 0px) rotate(0deg);
-    }
-
-    to {
-        transform: translate(260px, 560px) rotate(360deg);
-    }
-}
-@keyframes smallVideo2 {
-    from {
-        transform: translate(260px, 560px) rotate(360deg);
-    }
-
-    to {
-        transform: translate(0px, 0px) rotate(0deg);
-    }
-}
-@keyframes smallVideo3 {
-    from {
-        transform: translate(260px, 0px) rotate(0deg);
-    }
-
-    to {
-        transform: translate(0px, 560px) rotate(360deg);
-    }
-}
-@keyframes smallVideo4 {
-    from {
-        transform: translate(0px, 560px) rotate(360deg);
-    }
-
-    to {
-        transform: translate(260px, 0px) rotate(0deg);
     }
 }
 @keyframes img1 {

@@ -7,11 +7,11 @@
 
 ### 相关概念
 
-- [图形变换](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-universal-attributes-transformation.md)：图形变换。
+图形变换：图片组件常见的几种动画，如：缩放，旋转，平移，渐变等。
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 使用说明
 
