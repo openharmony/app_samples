@@ -12,7 +12,19 @@ Canvas：提供画布组件，用于自定义绘制图形。
 
 ### 相关权限
 
-不涉及。
+后台持续运行: ohos.permission.KEEP_BACKGROUND_RUNNING
+
+查询其他应用的运行时间: ohos.permission.BUNDLE_ACTIVE_INFO
+
+修改音频设置: ohos.permission.MODIFY_AUDIO_SETTINGS
+
+读取媒体文件信息: ohos.permission.READ_MEDIA
+
+读取用户存储: ohos.permission.READ_USER_STORAGE
+
+写入用户存储: ohos.permission.WRITE_USER_STORAGE
+
+后台代理提醒: ohos.permission.PUBLISH_AGENT_REMINDER
 
 ### 使用说明
 

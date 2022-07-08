@@ -12,7 +12,7 @@
 
 ### 相关权限
 
-不涉及。
+控制马达振动权限：ohos.permission.VIBRATE
 
 ### 使用说明
 

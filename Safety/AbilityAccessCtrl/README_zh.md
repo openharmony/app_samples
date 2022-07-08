@@ -13,10 +13,15 @@
 ### 相关权限
 
 获取应用敏感权限: ohos.permission.GET_SENSITIVE_PERMISSIONS,
+
 撤销应用敏感权限: ohos.permission.REVOKE_SENSITIVE_PERMISSIONS,
+
 为其他应用授予敏感权限: ohos.permission.GRANT_SENSITIVE_PERMISSIONS,
+
 查询其他应用的信息: ohos.permission.GET_BUNDLE_INFO_PRIVILEGED,
+
 查询其他应用的信息: ohos.permission.GET_BUNDLE_INFO,
+
 麦克风权限: ohos.permission.MICROPHONE,
 
 ### 使用说明

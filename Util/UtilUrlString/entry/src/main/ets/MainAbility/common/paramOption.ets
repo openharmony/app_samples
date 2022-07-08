@@ -15,7 +15,7 @@
 
 import url from '@ohos.url'
 
-var urlObject = new url.URL('https://developer.harmonyos.com/?')
+var urlObject = new url.URL('https://gitee.com/openharmony')
 var paramsObject = new url.URLSearchParams(urlObject.search.slice(1))
 
 @Component

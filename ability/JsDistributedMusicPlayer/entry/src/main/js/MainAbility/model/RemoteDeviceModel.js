@@ -171,7 +171,7 @@ export default class RemoteDeviceModel {
 
     unregisterDeviceListCallback() {
         console.info('MusicPlayer[RemoteDeviceModel] stopDeviceDiscovery ' + SUBSCRIBE_ID);
-        if(Object.keys(this.#deviceManager).length === 0){
+        if(typeof (this.#deviceManager) === 'undefined'){
             return
         }
         this.#deviceManager.stopDeviceDiscovery(SUBSCRIBE_ID);

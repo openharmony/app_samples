@@ -81,6 +81,10 @@ kikainput是一个轻量级的输入法应用，支持在运行OpenHarmony OS的
 
 **模型限制:** Stage模型
 
+### 相关权限
+
+允许应用查询其他应用的信息：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
 ### 开发步骤
 
 **1.样式布局，以及逻辑修改**

@@ -29,8 +29,8 @@ const OperatorHandlers = {
 
 function getFloatNum(one, other, oprate) {
     let num = 0;
-    let s1 = one.toString();
-    let s2 = other.toString();
+    let s1 = (new String(one)).toString();
+    let s2 = (new String(other)).toString();
     let num1 = 0;
     if (s1.indexOf('.') !== -1) {
         num1 = s1.split('.')[1].length;

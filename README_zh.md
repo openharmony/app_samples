@@ -201,6 +201,7 @@
   - [`XmlTextConvert`：xml文本转换（eTS）（API8）](Util/XmlTextConvert)
 - MultiDeviceAppDev
   - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/AdaptiveCapabilities)
+  - [`JsAdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)
 
 
 ## 使用说明<a name="section17988202503116"></a>

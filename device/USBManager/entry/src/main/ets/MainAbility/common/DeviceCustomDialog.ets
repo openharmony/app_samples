@@ -64,7 +64,7 @@ export default struct DeviceCustomDialog {
       }
       .height(50)
       .width('50%')
-      .margin({ top: 20 })
+      .margin({ top: 20, bottom: 30 })
       .type(ButtonType.Capsule)
       .backgroundColor('#0D9FFB')
       .onClick(() => {

@@ -42,3 +42,7 @@
 4.[`UploadDownload`：上传下载（eTS）（API8）](Network/UploadDownload)
 5.[`KikaInput`：中文输入法（eTS）（API8）](Native/KikaInput)
 6.[`Location`：位置服务(eTS)（API9）](device/Location)
+# 6月25日-7月7日新增sample（总计28个分类，164个sample）
+1.[`Observer`：Observer(eTS)（API9）](Telephony/Observer)
+2.[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/AdaptiveCapabilities)
+3.[`JsAdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)

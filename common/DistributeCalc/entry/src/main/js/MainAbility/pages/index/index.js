@@ -109,6 +109,9 @@ export default {
         kvStoreModel.off()
     },
     onHide() {
+        if (remoteDeviceModel === undefined) {
+            return
+        }
         remoteDeviceModel.unregisterDeviceListCallback();
         if (this.isDistributed && kvStoreModel != null) {
             this.stopDataListener();

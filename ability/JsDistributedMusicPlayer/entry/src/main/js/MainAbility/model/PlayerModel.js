@@ -121,7 +121,7 @@ export default class PlayerModel {
             if (typeof (this.#intervalID) === 'undefined') {
                 let self = this;
                 this.#intervalID = setInterval(() => {
-                    if (typeof (self.#playingProgressListener) != "undefined" && self.#playingProgressListener != null) {
+                    if (typeof (self.#playingProgressListener) != "undefined" && self.#playingProgressListener != null && typeof (self.#player) != "undefined") {
                         var timeMs = self.#player.currentTime;
                         this.#currentTimeMs = timeMs;
                         if (typeof (timeMs) === 'undefined') {

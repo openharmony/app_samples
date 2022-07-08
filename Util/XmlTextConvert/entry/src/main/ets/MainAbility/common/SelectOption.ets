@@ -29,7 +29,7 @@ export struct SelectOption {
     let arrayBuffer = new ArrayBuffer(1024)
     let serializer = new xml.XmlSerializer(arrayBuffer)
     serializer.setDeclaration()
-    serializer.setNamespace('h', 'https://developer.harmonyos.com/')
+    serializer.setNamespace('h', 'https://gitee.com/openharmony')
     serializer.startElement('note')
     serializer.setAttributes('importance', 'high')
     serializer.addEmptyElement('b')

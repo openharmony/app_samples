@@ -14,7 +14,8 @@
 
 ### 相关权限
 
-不涉及。
+允许应用查询其他应用的信息：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+允许应用获取Ability Form：ohos.permission.REQUIRE_FORM
 
 ### 使用说明
 

@@ -13,31 +13,27 @@
  * limitations under the License.
  */
 
-import router from '@ohos.router';
-import mediaquery from '@ohos.mediaquery';
 import notify from '@ohos.notification';
 import wantAgent from '@ohos.wantAgent';
 import prompt from '@ohos.prompt';
 import Logger from './utils/logger'
 
 const TAG: string = "[Notification]"
-async function routePage() {
-  let options = {
-    url: 'pages/second'
-  }
-  try {
-    await router.push(options)
-  } catch (err) {
-    console.error(`fail callback, code: ${err.code}, msg: ${err.msg}`)
-  }
-}
-
-let tvFunc = null;
 
 @Entry
 @Component
 struct Index {
   @State message: string = 'Hello World'
+
+  aboutToAppear() {
+    notify.requestEnableNotification((err) => {
+      if (err.code) {
+        Logger.error(TAG, `requestEnableNotification failed ${JSON.stringify(err)}`)
+        return
+      }
+      Logger.info(TAG, 'requestEnableNotification success')
+    })
+  }
 
   build() {
     Row() {
@@ -273,13 +269,10 @@ function sendNotify() {
 }
 
 function cancelNotify() {
-  var cancelId = id - 1;
-  console.info('===>cancel notification id : ${cancelId}');
-  notify.cancel(cancelId, label, (err, data) => {
+  Logger.info(TAG, 'cancel notification')
+  notify.cancelAll((err) => {
     if (err.code) {
-      Logger.error(TAG, `===>failed to cancel because ${JSON.stringify(err)}`);
-      return;
+      Logger.error(TAG, `===>failed to cancel because ${JSON.stringify(err)}`)
     }
-    Logger.info(TAG, `===>success data : ${JSON.stringify(data)}`);
-  });
+  })
 }

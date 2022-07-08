@@ -155,9 +155,10 @@ export default {
     },
     onDestroy() {
         console.info('MusicPlayer[IndexPage] onDestroy begin');
-        if (!(Object.keys(this.playerModel).length === 0)) {
-            this.playerModel.release();
+        if (this.playerModel === undefined) {
+            return
         }
+        this.playerModel.release();
         this.remoteDeviceModel.unregisterDeviceListCallback();
         console.info('MusicPlayer[IndexPage] onDestroy end');
     },

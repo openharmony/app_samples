@@ -14,7 +14,7 @@
  */
 
 import {FirstOption} from '../common/paramOption'
-const URL_NET: string= "https://developer.harmonyos.com/?"
+const URL_NET: string= "https://gitee.com/openharmony"
 
 @Entry
 @Component
