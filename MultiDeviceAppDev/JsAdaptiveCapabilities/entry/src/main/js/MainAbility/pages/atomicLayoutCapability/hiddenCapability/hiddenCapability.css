@@ -14,52 +14,52 @@
 */
 
 .container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #F1F3F5;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F3F5;
 }
 
 image {
-    width: 48vp;
-    height: 48vp;
-    margin: 12vp 12vp;
+  width: 48vp;
+  height: 48vp;
+  margin: 12vp 12vp;
 }
 
 .box {
-    height: 96vp;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: #FFF;
-    border-radius: 16vp;
+  height: 96vp;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #FFF;
+  border-radius: 16vp;
 }
 
 .favorite {
-    display-index: 1;
+  display-index: 1;
 }
 
 .down {
-    display-index: 2;
+  display-index: 2;
 }
 
 .pause {
-    display-index: 3;
+  display-index: 3;
 }
 
 .next {
-    display-index: 2;
+  display-index: 2;
 }
 
 .list {
-    display-index: 1;
+  display-index: 1;
 }
 
 .slider {
-    width: 60%;
-    padding: 0;
-    position: absolute;
-    top: 80%;
-    left: 20%;
+  width: 60%;
+  padding: 0;
+  position: absolute;
+  top: 80%;
+  left: 20%;
 }

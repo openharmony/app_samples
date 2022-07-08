@@ -15,16 +15,16 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="body">
-        <div class="big-box" style="width : {{ width }}; height : {{ height }};">
-            <div class="box">
-                <image src="common/image/illustrator.png"></image>
-            </div>
-        </div>
-        <div class="slider" style="flex-direction : column; width : 100%;">
-            <slider min="100" max="400" value="{{ value }}" onchange="setHeight"></slider>
-            <slider min="100" max="400" value="{{ value }}" onchange="setWidth"></slider>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="body">
+    <div class="big-box" style="width : {{ width }}; height : {{ height }};">
+      <div class="box">
+        <image src="common/image/illustrator.png"></image>
+      </div>
     </div>
+    <div class="slider" style="flex-direction : column; width : 100%;">
+      <slider min="100" max="400" value="{{ value }}" onchange="setHeight"></slider>
+      <slider min="100" max="400" value="{{ value }}" onchange="setWidth"></slider>
+    </div>
+  </div>
 </div>

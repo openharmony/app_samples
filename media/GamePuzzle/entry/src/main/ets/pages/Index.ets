@@ -117,7 +117,9 @@ struct Index {
               return
             }
             this.imgDatas = await this.ImageModel.getAllImg()
-            this.dialogController.open()
+            setTimeout(() => {
+              this.dialogController.open()
+            }, 200)
           })
       }
 

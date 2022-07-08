@@ -15,22 +15,22 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="main">
-        <div class="box" style="width : {{ rate }};">
-            <div class="box-big">
-                <div class="box-small" for="{{ list }}">
-                    <image src="common/image/icon.png"></image>
-                    <text class="text">{{ $t("strings.show_app_name") }}</text>
-                </div>
-            </div>
-            <div class="box-big">
-                <div class="box-small" for="{{ list }}">
-                    <image src="common/image/icon.png"></image>
-                    <text class="text">{{ $t("strings.show_app_name") }}</text>
-                </div>
-            </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="main">
+    <div class="box" style="width : {{ rate }};">
+      <div class="box-big">
+        <div class="box-small" for="{{ list }}">
+          <image src="common/image/icon.png"></image>
+          <text class="text">{{ $t("strings.show_app_name") }}</text>
         </div>
+      </div>
+      <div class="box-big">
+        <div class="box-small" for="{{ list }}">
+          <image src="common/image/icon.png"></image>
+          <text class="text">{{ $t("strings.show_app_name") }}</text>
+        </div>
+      </div>
     </div>
-    <slider class="slider" min="30" max="60" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="30" max="60" value="{{ value }}" onchange="setValue"></slider>
 </div>

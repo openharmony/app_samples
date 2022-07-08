@@ -15,10 +15,10 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container-big">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="container1">
-        <image if="{{ isLandscape }}" style="height : 100vp; width : 100vp" src="common/image/tablet.png"></image>
-        <image else style="height : 100vp; width : 100vp" src="common/image/phone.png"></image>
-        <text class="text" style="font-size : 24vp;">{{ text }}</text>
-    </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="container1">
+    <image if="{{ isLandscape }}" style="height : 100vp; width : 100vp" src="common/image/tablet.png"></image>
+    <image else style="height : 100vp; width : 100vp" src="common/image/phone.png"></image>
+    <text class="text" style="font-size : 24vp;">{{ text }}</text>
+  </div>
 </div>

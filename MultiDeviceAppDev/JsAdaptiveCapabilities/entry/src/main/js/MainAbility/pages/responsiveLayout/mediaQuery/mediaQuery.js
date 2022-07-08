@@ -16,27 +16,23 @@
 import mediaquery from '@system.mediaquery';
 
 export default {
-    data: {
-        title: "",
-        text: "",
-        isLandscape: true
-    },
-    onInit() {
-        this.title = this.$t("strings.media_query")
-        let mMediaQueryList = mediaquery.matchMedia('(orientation: landscape)');
-        mMediaQueryList.addListener(this.orientationMatch);
-    },
-    orientationMatch(e) {
-        if (e.matches) {
-            this.text = this.$t("strings.landscape");
-            this.isLandscape = true;
-        } else {
-            this.text = this.$t("strings.portrait");
-            this.isLandscape = false;
-        }
+  data: {
+    title: "",
+    text: "",
+    isLandscape: true
+  },
+  onInit() {
+    this.title = this.$t("strings.media_query")
+    let mMediaQueryList = mediaquery.matchMedia('(orientation: landscape)');
+    mMediaQueryList.addListener(this.orientationMatch);
+  },
+  orientationMatch(e) {
+    if (e.matches) {
+      this.text = this.$t("strings.landscape");
+      this.isLandscape = true;
+    } else {
+      this.text = this.$t("strings.portrait");
+      this.isLandscape = false;
     }
+  }
 }
-
-
-
-

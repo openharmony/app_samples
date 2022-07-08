@@ -15,18 +15,18 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <grid-container style="width : 100%;">
-        <grid-row style="justify-content : center; flex-wrap : wrap;">
-            <grid-col for="{{ list }}" xs="2" sm="4" md="6" lg="8">
-                <div class="pageBox" style="width : 100%; margin : 8vp 0;">
-                    <div class="pageBox1">
-                        <div class="boxD1"></div>
-                        <div class="boxD2"></div>
-                    </div>
-                    <div class="pageBox2"></div>
-                </div>
-            </grid-col>
-        </grid-row>
-    </grid-container>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <grid-container style="width : 100%;">
+    <grid-row style="justify-content : center; flex-wrap : wrap;">
+      <grid-col for="{{ list }}" xs="2" sm="4" md="6" lg="8">
+        <div class="pageBox" style="width : 100%; margin : 8vp 0;">
+          <div class="pageBox1">
+            <div class="boxD1"></div>
+            <div class="boxD2"></div>
+          </div>
+          <div class="pageBox2"></div>
+        </div>
+      </grid-col>
+    </grid-row>
+  </grid-container>
 </div>

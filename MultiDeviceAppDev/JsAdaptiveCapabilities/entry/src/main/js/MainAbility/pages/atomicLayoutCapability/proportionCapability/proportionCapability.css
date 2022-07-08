@@ -14,51 +14,51 @@
 */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #F1F3F5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F3F5;
 }
 
 .big-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .box {
-    display: flex;
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 16vp;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 16vp;
 }
 
 image {
-    width: 48vp;
-    height: 48vp;
+  width: 48vp;
+  height: 48vp;
 }
 
 .slider {
-    width: 60%;
-    padding: 0;
-    position: absolute;
-    top: 80%;
-    left: 20%;
+  width: 60%;
+  padding: 0;
+  position: absolute;
+  top: 80%;
+  left: 20%;
 }
 
 .button-box {
-    height: 96vp;
-    display: flex;
-    flex-weight: 1;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  height: 96vp;
+  display: flex;
+  flex-weight: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .middle-button-box {
-    background-color: rgba(241, 204, 184, 0.4);
+  background-color: rgba(241, 204, 184, 0.4);
 }

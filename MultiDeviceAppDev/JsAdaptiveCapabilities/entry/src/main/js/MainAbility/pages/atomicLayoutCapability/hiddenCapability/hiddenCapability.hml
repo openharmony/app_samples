@@ -15,15 +15,15 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div style="flex-direction : column; justify-content : center; height : 100%; align-items : center;">
-        <div class="box" style="width : {{ rate }};">
-            <image class="favorite" src="common/image/favorite.png"></image>
-            <image class="down" src="common/image/down.png"></image>
-            <image class="pause" src="common/image/pause.png"></image>
-            <image class="next" src="common/image/next.png"></image>
-            <image class="list" src="common/image/list.png"></image>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div style="flex-direction : column; justify-content : center; height : 100%; align-items : center;">
+    <div class="box" style="width : {{ rate }};">
+      <image class="favorite" src="common/image/favorite.png"></image>
+      <image class="down" src="common/image/down.png"></image>
+      <image class="pause" src="common/image/pause.png"></image>
+      <image class="next" src="common/image/next.png"></image>
+      <image class="list" src="common/image/list.png"></image>
     </div>
-    <slider class="slider" min="10" max="45" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="10" max="45" value="{{ value }}" onchange="setValue"></slider>
 </div>

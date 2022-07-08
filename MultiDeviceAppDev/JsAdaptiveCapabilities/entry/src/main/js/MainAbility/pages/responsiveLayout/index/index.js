@@ -16,30 +16,27 @@
 import router from '@ohos.router';
 
 export default {
-    data: {
-        title: "",
-        content: []
-    },
-    onInit() {
-        this.title = this.$t("strings.responsive_layout");
-        this.content = [
-            {
-                title: this.$t("strings.grid_layout"), uri: "pages/responsiveLayout/gridContainer/gridContainer"
-            },
-            {
-                title: this.$t("strings.media_query"), uri: "pages/responsiveLayout/mediaQuery/mediaQuery"
-            },
-            {
-                title: this.$t("strings.typical_scenario"), uri: "pages/responsiveLayout/typicalScene/index/index"
-            }
-        ]
-    },
-    onclick: function (uri) {
-        router.push({
-            url: uri
-        });
-    }
+  data: {
+    title: "",
+    content: []
+  },
+  onInit() {
+    this.title = this.$t("strings.responsive_layout");
+    this.content = [
+      {
+        title: this.$t("strings.grid_layout"), uri: "pages/responsiveLayout/gridContainer/gridContainer"
+      },
+      {
+        title: this.$t("strings.media_query"), uri: "pages/responsiveLayout/mediaQuery/mediaQuery"
+      },
+      {
+        title: this.$t("strings.typical_scenario"), uri: "pages/responsiveLayout/typicalScene/index/index"
+      }
+    ]
+  },
+  onclick: function (uri) {
+    router.push({
+      url: uri
+    });
+  }
 }
-
-
-

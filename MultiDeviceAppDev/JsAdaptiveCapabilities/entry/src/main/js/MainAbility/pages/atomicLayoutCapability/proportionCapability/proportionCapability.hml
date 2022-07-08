@@ -15,19 +15,19 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="big-box">
-        <div class="box" style="width : {{ rate }};">
-            <div class="button-box">
-                <image src="common/image/down.png"></image>
-            </div>
-            <div class="button-box middle-button-box">
-                <image src="common/image/pause.png"></image>
-            </div>
-            <div class="button-box">
-                <image src="common/image/next.png"></image>
-            </div>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="big-box">
+    <div class="box" style="width : {{ rate }};">
+      <div class="button-box">
+        <image src="common/image/down.png"></image>
+      </div>
+      <div class="button-box middle-button-box">
+        <image src="common/image/pause.png"></image>
+      </div>
+      <div class="button-box">
+        <image src="common/image/next.png"></image>
+      </div>
     </div>
-    <slider class="slider" min="25" max="50" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="25" max="50" value="{{ value }}" onchange="setValue"></slider>
 </div>

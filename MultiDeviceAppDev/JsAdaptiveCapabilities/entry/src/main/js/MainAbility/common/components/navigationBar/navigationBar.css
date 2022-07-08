@@ -14,27 +14,27 @@
 */
 
 .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .box {
-    height: 56vp;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 56vp;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-    margin: 0 10vp;
-    width: 24vp;
-    height: 24vp;
+  margin: 0 10vp;
+  width: 24vp;
+  height: 24vp;
 }
 
 .text {
-    font-size: 20vp;
-    padding-left: 2vp;
-    font-weight: medium;
+  font-size: 20vp;
+  padding-left: 2vp;
+  font-weight: medium;
 }

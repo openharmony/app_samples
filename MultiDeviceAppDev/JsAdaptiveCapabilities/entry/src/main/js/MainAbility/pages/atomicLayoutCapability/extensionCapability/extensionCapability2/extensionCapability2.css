@@ -14,55 +14,55 @@
 */
 
 .container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #F1F3F5;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F3F5;
 }
 
 .box {
-    flex: 1;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-mid {
-    width: 100%;
-    height: 118vp;
-    padding-top: 16vp;
-    overflow: scroll;
-    border-radius: 16vp;
-    background-color: #FFF;
+  width: 100%;
+  height: 118vp;
+  padding-top: 16vp;
+  overflow: scroll;
+  border-radius: 16vp;
+  background-color: #FFF;
 }
 
 .box-small {
-    flex-direction: column;
-    width: 80vp;
-    height: 102vp;
-    align-items: center;
+  flex-direction: column;
+  width: 80vp;
+  height: 102vp;
+  align-items: center;
 }
 
 image {
-    width: 48vp;
-    height: 48vp;
-    margin: 8vp 0;
+  width: 48vp;
+  height: 48vp;
+  margin: 8vp 0;
 }
 
 .box-small text {
-    width: 64vp;
-    height: 30vp;
-    text-align: center;
-    font-size: 12fp;
-    line-height: 15vp;
-    padding-bottom: 15vp;
+  width: 64vp;
+  height: 30vp;
+  text-align: center;
+  font-size: 12fp;
+  line-height: 15vp;
+  padding-bottom: 15vp;
 }
 
 .slider {
-    width: 60%;
-    padding: 0;
-    position: absolute;
-    left: 20%;
-    top: 80%;
+  width: 60%;
+  padding: 0;
+  position: absolute;
+  left: 20%;
+  top: 80%;
 }

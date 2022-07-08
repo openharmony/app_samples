@@ -16,32 +16,29 @@
 import router from '@ohos.router';
 
 export default {
-    data: {
-        title: "",
-        content: []
-    },
-    onInit() {
-        this.title = this.$t("strings.typical_scenario");
-        this.content = [
-            {
-                title: this.$t("strings.diversion_layout"),
-                uri: "pages/responsiveLayout/typicalScene/diversion/diversion"
-            },
-            {
-                title: this.$t("strings.indentation_layout"),
-                uri: "pages/responsiveLayout/typicalScene/indentation/indentation"
-            },
-            {
-                title: this.$t("strings.repeat_layout"), uri: "pages/responsiveLayout/typicalScene/repeat/repeat"
-            }
-        ];
-    },
-    onclick: function (uri) {
-        router.push({
-            url: uri
-        });
-    }
+  data: {
+    title: "",
+    content: []
+  },
+  onInit() {
+    this.title = this.$t("strings.typical_scenario");
+    this.content = [
+      {
+        title: this.$t("strings.diversion_layout"),
+        uri: "pages/responsiveLayout/typicalScene/diversion/diversion"
+      },
+      {
+        title: this.$t("strings.indentation_layout"),
+        uri: "pages/responsiveLayout/typicalScene/indentation/indentation"
+      },
+      {
+        title: this.$t("strings.repeat_layout"), uri: "pages/responsiveLayout/typicalScene/repeat/repeat"
+      }
+    ];
+  },
+  onclick: function (uri) {
+    router.push({
+      url: uri
+    });
+  }
 }
-
-
-

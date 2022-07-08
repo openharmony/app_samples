@@ -14,15 +14,15 @@
 */
 
 export default {
-    data: {
-        title: "",
-        rate: "90%",
-        value: 90
-    },
-    onInit() {
-        this.title = this.$t("strings.flex_capability_second");
-    },
-    setValue(e) {
-        this.rate = e.value + "%";
-    }
+  data: {
+    title: "",
+    rate: "90%",
+    value: 90
+  },
+  onInit() {
+    this.title = this.$t("strings.flex_capability_second");
+  },
+  setValue(e) {
+    this.rate = e.value + "%";
+  }
 }

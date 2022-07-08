@@ -14,15 +14,15 @@
 */
 
 export default {
-    data: {
-        title: "",
-        rate: "300vp",
-        value: 300
-    },
-    onInit() {
-        this.title = this.$t("strings.wrap_capability");
-    },
-    setValue(e) {
-        this.rate = e.value + "vp";
-    }
+  data: {
+    title: "",
+    rate: "300vp",
+    value: 300
+  },
+  onInit() {
+    this.title = this.$t("strings.wrap_capability");
+  },
+  setValue(e) {
+    this.rate = e.value + "vp";
+  }
 }

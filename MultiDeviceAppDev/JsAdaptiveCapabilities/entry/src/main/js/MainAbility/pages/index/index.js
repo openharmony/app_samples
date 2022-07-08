@@ -16,28 +16,25 @@
 import router from '@ohos.router'
 
 export default {
-    data: {
-        content: []
-    },
-    onInit() {
-        this.content = [
-            {
-                title: this.$t("strings.resource_qualifier"), uri: "pages/resourceQualifier/resourceQualifier"
-            },
-            {
-                title: this.$t("strings.atomic_layout_capability"), uri: "pages/atomicLayoutCapability/index/index"
-            },
-            {
-                title: this.$t("strings.responsive_layout"), uri: "pages/responsiveLayout/index/index"
-            }
-        ];
-    },
-    onclick: function (uri) {
-        router.push({
-            url: uri
-        })
-    }
+  data: {
+    content: []
+  },
+  onInit() {
+    this.content = [
+      {
+        title: this.$t("strings.resource_qualifier"), uri: "pages/resourceQualifier/resourceQualifier"
+      },
+      {
+        title: this.$t("strings.atomic_layout_capability"), uri: "pages/atomicLayoutCapability/index/index"
+      },
+      {
+        title: this.$t("strings.responsive_layout"), uri: "pages/responsiveLayout/index/index"
+      }
+    ];
+  },
+  onclick: function (uri) {
+    router.push({
+      url: uri
+    })
+  }
 }
-
-
-

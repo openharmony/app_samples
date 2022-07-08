@@ -14,15 +14,15 @@
 */
 
 export default {
-    data: {
-        title: "",
-        rate: "50%",
-        value: 50
-    },
-    onInit() {
-        this.title = this.$t("strings.percentage_capability");
-    },
-    setValue(e) {
-        this.rate = e.value + "%";
-    }
+  data: {
+    title: "",
+    rate: "50%",
+    value: 50
+  },
+  onInit() {
+    this.title = this.$t("strings.percentage_capability");
+  },
+  setValue(e) {
+    this.rate = e.value + "%";
+  }
 }

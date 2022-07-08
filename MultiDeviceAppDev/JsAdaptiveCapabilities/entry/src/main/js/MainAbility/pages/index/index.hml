@@ -14,14 +14,14 @@
  -->
 
 <div class="container" onswipe="touchMove">
-    <text class="headline">{{ $t("strings.home_title") }}</text>
-    <list class="list">
-        <list-item class="list-item" onclick="onclick($item.uri)" for="{{ content }}">
-            <div class="box">
-                <text class="text">
-                    {{ $item.title }}
-                </text>
-            </div>
-        </list-item>
-    </list>
+  <text class="headline">{{ $t("strings.home_title") }}</text>
+  <list class="list">
+    <list-item class="list-item" onclick="onclick($item.uri)" for="{{ content }}">
+      <div class="box">
+        <text class="text">
+          {{ $item.title }}
+        </text>
+      </div>
+    </list-item>
+  </list>
 </div>

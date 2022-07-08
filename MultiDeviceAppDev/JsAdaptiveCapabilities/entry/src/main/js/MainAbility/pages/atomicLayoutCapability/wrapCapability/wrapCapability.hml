@@ -14,16 +14,16 @@
  -->
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="big-box">
-        <div class="wrap-box" style="width : {{ rate }};">
-            <image class="image" src="common/image/flexWrap1.png"></image>
-            <image class="image" src="common/image/flexWrap2.png"></image>
-            <image class="image" src="common/image/flexWrap3.png"></image>
-            <image class="image" src="common/image/flexWrap4.png"></image>
-            <image class="image" src="common/image/flexWrap5.png"></image>
-            <image class="image" src="common/image/flexWrap6.png"></image>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="big-box">
+    <div class="wrap-box" style="width : {{ rate }};">
+      <image class="image" src="common/image/flexWrap1.png"></image>
+      <image class="image" src="common/image/flexWrap2.png"></image>
+      <image class="image" src="common/image/flexWrap3.png"></image>
+      <image class="image" src="common/image/flexWrap4.png"></image>
+      <image class="image" src="common/image/flexWrap5.png"></image>
+      <image class="image" src="common/image/flexWrap6.png"></image>
     </div>
-    <slider class="slider" min="100" max="300" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="100" max="300" value="{{ value }}" onchange="setValue"></slider>
 </div>

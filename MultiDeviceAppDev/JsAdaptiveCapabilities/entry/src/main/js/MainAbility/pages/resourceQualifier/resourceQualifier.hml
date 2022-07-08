@@ -15,10 +15,10 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div style="width : 100%; height : 100%; justify-content : center; align-items : center; flex-direction : column;">
-        <text style="color : {{ $r('colors.my_color') }}; font-size : {{ $r('float.my_float') }};">{{
-            $r("strings.textStr") }}</text>
-        <image style="height : 100vp; width : 100vp;" src="{{ $r('image.clockFace') }}"></image>
-    </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div style="width : 100%; height : 100%; justify-content : center; align-items : center; flex-direction : column;">
+    <text style="color : {{ $r('colors.my_color') }}; font-size : {{ $r('float.my_float') }};">{{
+      $r("strings.textStr") }}</text>
+    <image style="height : 100vp; width : 100vp;" src="{{ $r('image.clockFace') }}"></image>
+  </div>
 </div>

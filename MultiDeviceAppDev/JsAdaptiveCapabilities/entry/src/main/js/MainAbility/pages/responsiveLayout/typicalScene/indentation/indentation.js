@@ -14,11 +14,11 @@
 */
 
 export default {
-    data: {
-        title: "",
-        list: [0, 1, 2, 3],
-    },
-    onInit() {
-        this.title = this.$t("strings.indentation_layout");
-    }
+  data: {
+    title: "",
+    list: [0, 1, 2, 3],
+  },
+  onInit() {
+    this.title = this.$t("strings.indentation_layout");
+  }
 }

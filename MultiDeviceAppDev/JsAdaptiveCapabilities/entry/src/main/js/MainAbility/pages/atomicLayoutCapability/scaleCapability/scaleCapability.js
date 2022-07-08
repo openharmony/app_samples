@@ -14,19 +14,19 @@
 */
 
 export default {
-    data: {
-        title: '',
-        width: "400vp",
-        height: "400vp",
-        value: 400
-    },
-    onInit() {
-        this.title = this.$t("strings.scaling_capability");
-    },
-    setWidth(e) {
-        this.width = e.value + "vp";
-    },
-    setHeight(e) {
-        this.height = e.value + "vp";
-    }
+  data: {
+    title: '',
+    width: "400vp",
+    height: "400vp",
+    value: 400
+  },
+  onInit() {
+    this.title = this.$t("strings.scaling_capability");
+  },
+  setWidth(e) {
+    this.width = e.value + "vp";
+  },
+  setHeight(e) {
+    this.height = e.value + "vp";
+  }
 }

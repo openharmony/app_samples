@@ -14,13 +14,10 @@
 */
 
 export default {
-    data: {
-        title: ""
-    },
-    onInit() {
-        this.title = this.$t("strings.resource_qualifier")
-    }
+  data: {
+    title: ""
+  },
+  onInit() {
+    this.title = this.$t("strings.resource_qualifier")
+  }
 }
-
-
-

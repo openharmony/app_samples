@@ -16,12 +16,12 @@
 import router from '@ohos.router'
 
 export default {
-    props: {
-        title: {
-            default: "title"
-        }
-    },
-    onclick() {
-        router.back()
+  props: {
+    title: {
+      default: "title"
     }
+  },
+  onclick() {
+    router.back()
+  }
 }

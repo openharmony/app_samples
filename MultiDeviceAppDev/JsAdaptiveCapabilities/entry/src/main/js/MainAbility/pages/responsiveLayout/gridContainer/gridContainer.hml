@@ -15,24 +15,24 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <grid-container style="background-color : #F1F3F5; margin-top : 10vp;">
-        <grid-row style="height : 200px; justify-content : space-around; width : 100%;">
-            <grid-col xs="1" sm="1" md="1" lg="2" style="background-color : #66BBB2CB;">
-                <div style="align-items : center; height : 100%;">
-                    <text>{{ $t("strings.left") }}</text>
-                </div>
-            </grid-col>
-            <grid-col xs="1" sm="2" md="5" lg="7" style="background-color : #66B6C5D1;">
-                <div style="align-items : center; height : 100%;">
-                    <text>{{ $t("strings.center") }}</text>
-                </div>
-            </grid-col>
-            <grid-col xs="1" sm="1" md="2" lg="3" style="background-color : #66BBB2CB;">
-                <div style="align-items : center; height : 100%;">
-                    <text>{{ $t("strings.right") }}</text>
-                </div>
-            </grid-col>
-        </grid-row>
-    </grid-container>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <grid-container style="background-color : #F1F3F5; margin-top : 10vp;">
+    <grid-row style="height : 200px; justify-content : space-around; width : 100%;">
+      <grid-col xs="1" sm="1" md="1" lg="2" style="background-color : #66BBB2CB;">
+        <div style="align-items : center; height : 100%;">
+          <text>{{ $t("strings.left") }}</text>
+        </div>
+      </grid-col>
+      <grid-col xs="1" sm="2" md="5" lg="7" style="background-color : #66B6C5D1;">
+        <div style="align-items : center; height : 100%;">
+          <text>{{ $t("strings.center") }}</text>
+        </div>
+      </grid-col>
+      <grid-col xs="1" sm="1" md="2" lg="3" style="background-color : #66BBB2CB;">
+        <div style="align-items : center; height : 100%;">
+          <text>{{ $t("strings.right") }}</text>
+        </div>
+      </grid-col>
+    </grid-row>
+  </grid-container>
 </div>

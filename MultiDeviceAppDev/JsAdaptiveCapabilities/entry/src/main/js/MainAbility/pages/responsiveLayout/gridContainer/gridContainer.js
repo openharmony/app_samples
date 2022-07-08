@@ -14,10 +14,10 @@
 */
 
 export default {
-    data: {
-        title: ""
-    },
-    onInit() {
-        this.title = this.$t("strings.grid_layout")
-    }
+  data: {
+    title: ""
+  },
+  onInit() {
+    this.title = this.$t("strings.grid_layout")
+  }
 }

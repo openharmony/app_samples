@@ -14,10 +14,10 @@
  -->
 
 <div class="container">
-    <div class="box" onclick="onclick">
-        <image class="image" src="../../../common/image/back.png"></image>
-        <text class="text">
-            {{ title }}
-        </text>
-    </div>
+  <div class="box" onclick="onclick">
+    <image class="image" src="../../../common/image/back.png"></image>
+    <text class="text">
+      {{ title }}
+    </text>
+  </div>
 </div>

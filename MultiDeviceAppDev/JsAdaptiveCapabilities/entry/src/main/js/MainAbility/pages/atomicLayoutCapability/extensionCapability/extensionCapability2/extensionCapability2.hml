@@ -15,14 +15,14 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="box" style="width : {{ rate }};">
-        <div class="box-mid" style="width : {{ rate }};">
-            <div for="list" class="box-small">
-                <image src="common/image/icon.png"></image>
-                <text>App name</text>
-            </div>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="box" style="width : {{ rate }};">
+    <div class="box-mid" style="width : {{ rate }};">
+      <div for="list" class="box-small">
+        <image src="common/image/icon.png"></image>
+        <text>App name</text>
+      </div>
     </div>
-    <slider class="slider" min="40" max="75" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="40" max="75" value="{{ value }}" onchange="setValue"></slider>
 </div>

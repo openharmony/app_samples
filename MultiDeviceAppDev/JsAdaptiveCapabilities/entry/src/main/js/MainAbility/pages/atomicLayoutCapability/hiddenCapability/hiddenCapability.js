@@ -14,15 +14,15 @@
 */
 
 export default {
-    data: {
-        title: "",
-        rate: "45%",
-        value: 45
-    },
-    onInit() {
-        this.title = this.$t("strings.hidden_capability");
-    },
-    setValue(e) {
-        this.rate = e.value + "%";
-    }
+  data: {
+    title: "",
+    rate: "45%",
+    value: 45
+  },
+  onInit() {
+    this.title = this.$t("strings.hidden_capability");
+  },
+  setValue(e) {
+    this.rate = e.value + "%";
+  }
 }

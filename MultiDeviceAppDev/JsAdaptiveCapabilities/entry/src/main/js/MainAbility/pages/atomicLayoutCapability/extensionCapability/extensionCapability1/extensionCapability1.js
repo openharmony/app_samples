@@ -14,16 +14,16 @@
 */
 
 export default {
-    data: {
-        title: "",
-        list: [0, 1, 2, 3, 4, 5, 6, 7],
-        rate: "300vp",
-        value: 300
-    },
-    onInit() {
-        this.title = this.$t("strings.extension_capability_first");
-    },
-    setValue(e) {
-        this.rate = e.value + "vp";
-    }
+  data: {
+    title: "",
+    list: [0, 1, 2, 3, 4, 5, 6, 7],
+    rate: "300vp",
+    value: 300
+  },
+  onInit() {
+    this.title = this.$t("strings.extension_capability_first");
+  },
+  setValue(e) {
+    this.rate = e.value + "vp";
+  }
 }

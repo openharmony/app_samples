@@ -15,16 +15,16 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="box">
-        <list class="list" style="width : {{ rate }};">
-            <list-item for="{{ list }}">
-                <div class="box-small">
-                    <image src="common/image/icon.png"></image>
-                    <text>App name</text>
-                </div>
-            </list-item>
-        </list>
-    </div>
-    <slider class="slider" min="100" max="300" value="{{ value }}" onchange="setValue"></slider>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="box">
+    <list class="list" style="width : {{ rate }};">
+      <list-item for="{{ list }}">
+        <div class="box-small">
+          <image src="common/image/icon.png"></image>
+          <text>App name</text>
+        </div>
+      </list-item>
+    </list>
+  </div>
+  <slider class="slider" min="100" max="300" value="{{ value }}" onchange="setValue"></slider>
 </div>

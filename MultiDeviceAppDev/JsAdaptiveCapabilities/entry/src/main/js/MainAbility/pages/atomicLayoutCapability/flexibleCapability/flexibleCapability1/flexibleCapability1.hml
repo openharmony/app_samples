@@ -15,13 +15,13 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div class="big-box">
-        <div class="box" style="width : {{ width }};">
-            <div class="side-box"></div>
-            <image class="center-box" src="/common/image/illustrator.png"></image>
-            <div class="side-box"></div>
-        </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div class="big-box">
+    <div class="box" style="width : {{ width }};">
+      <div class="side-box"></div>
+      <image class="center-box" src="/common/image/illustrator.png"></image>
+      <div class="side-box"></div>
     </div>
-    <slider class="slider" min="300" max="700" value="{{ value }}" onchange="setValue"></slider>
+  </div>
+  <slider class="slider" min="300" max="700" value="{{ value }}" onchange="setValue"></slider>
 </div>

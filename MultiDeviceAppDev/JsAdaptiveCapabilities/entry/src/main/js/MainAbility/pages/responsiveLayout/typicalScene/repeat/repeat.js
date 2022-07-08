@@ -16,22 +16,22 @@
 import mediaquery from '@system.mediaquery';
 
 export default {
-    data: {
-        title: "",
-        list: [0, 1, 2],
-        isWidescreen: false
-    },
-    onInit() {
-        this.title = this.$t("strings.repeat_layout")
-        var mMediaQueryList = mediaquery.matchMedia('screen and (width>1400)')
-        mMediaQueryList.addListener(this.screenMatch)
-    },
+  data: {
+    title: "",
+    list: [0, 1, 2],
+    isWidescreen: false
+  },
+  onInit() {
+    this.title = this.$t("strings.repeat_layout")
+    var mMediaQueryList = mediaquery.matchMedia('screen and (width>1400)')
+    mMediaQueryList.addListener(this.screenMatch)
+  },
 
-    screenMatch(e) {
-        if (e.matches) {
-            this.isWidescreen = true
-        } else {
-            this.isWidescreen = false
-        }
+  screenMatch(e) {
+    if (e.matches) {
+      this.isWidescreen = true
+    } else {
+      this.isWidescreen = false
     }
+  }
 }

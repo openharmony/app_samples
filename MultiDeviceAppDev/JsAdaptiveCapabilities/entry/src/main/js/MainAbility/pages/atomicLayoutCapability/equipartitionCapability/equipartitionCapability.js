@@ -14,16 +14,16 @@
 */
 
 export default {
-    data: {
-        title: "",
-        list: [0, 1, 2, 3],
-        rate: "60%",
-        value: 60
-    },
-    onInit() {
-        this.title = this.$t("strings.equally_capability");
-    },
-    setValue(e) {
-        this.rate = e.value + "%";
-    }
+  data: {
+    title: "",
+    list: [0, 1, 2, 3],
+    rate: "60%",
+    value: 60
+  },
+  onInit() {
+    this.title = this.$t("strings.equally_capability");
+  },
+  setValue(e) {
+    this.rate = e.value + "%";
+  }
 }

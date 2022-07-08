@@ -15,22 +15,22 @@
 
 <element name="NavigationBar" src="common/components/navigationBar/navigationBar"></element>
 <div class="container">
-    <Navigationbar title="{{ title }}"></Navigationbar>
-    <div style="height : 100%; width : 100%; justify-content : center; align-items : center;">
-        <grid-container>
-            <grid-row style="flex-wrap : wrap; justify-content : center; width : 100%;">
-                <grid-col xs="2" sm="4" md="4" lg="6">
-                    <image style="aspect-ratio : 1;" src="common/image/illustrator.png"></image>
-                </grid-col>
-                <grid-col xs="2" sm="4" md="4" lg="6" style="height : 200vp;">
-                    <div style="height : 100%; align-items : center;">
-                        <div class="boxText" style="height : 100vp; width : 100%;">
-                            <text class="text1">{{ $t("strings.user_improvement") }}</text>
-                            <text class="text2">{{ $t("strings.user_improvement_tips") }}</text>
-                        </div>
-                    </div>
-                </grid-col>
-            </grid-row>
-        </grid-container>
-    </div>
+  <Navigationbar title="{{ title }}"></Navigationbar>
+  <div style="height : 100%; width : 100%; justify-content : center; align-items : center;">
+    <grid-container>
+      <grid-row style="flex-wrap : wrap; justify-content : center; width : 100%;">
+        <grid-col xs="2" sm="4" md="4" lg="6">
+          <image style="aspect-ratio : 1;" src="common/image/illustrator.png"></image>
+        </grid-col>
+        <grid-col xs="2" sm="4" md="4" lg="6" style="height : 200vp;">
+          <div style="height : 100%; align-items : center;">
+            <div class="boxText" style="height : 100vp; width : 100%;">
+              <text class="text1">{{ $t("strings.user_improvement") }}</text>
+              <text class="text2">{{ $t("strings.user_improvement_tips") }}</text>
+            </div>
+          </div>
+        </grid-col>
+      </grid-row>
+    </grid-container>
+  </div>
 </div>

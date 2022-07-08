@@ -14,50 +14,50 @@
 */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    background-color: #F1F3F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  background-color: #F1F3F5;
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .big-box {
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
 }
 
 .box {
-    aspect-ratio: 1;
-    border: 2fp solid #66F1CCBB;
+  aspect-ratio: 1;
+  border: 2fp solid #66F1CCBB;
 }
 
 image {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .slider {
-    position: absolute;
-    left: 0;
-    top: 85%;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 85%;
+  align-items: center;
+  justify-content: center;
 }
 
 slider {
-    width: 60%;
+  width: 60%;
 }
 
 

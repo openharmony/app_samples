@@ -13,6 +13,8 @@
 ### 相关权限
 
 获取屏幕截图权限：ohos.permission.CAPTURE_SCREEN
+读取公共媒体文件权限：ohos.permission.READ_MEDIA
+读写公共媒体文件权限：ohos.permission.WRITE_MEDIA
 
 ### 使用说明
 

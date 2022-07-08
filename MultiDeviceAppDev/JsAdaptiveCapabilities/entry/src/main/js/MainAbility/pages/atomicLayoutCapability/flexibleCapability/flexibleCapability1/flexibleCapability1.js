@@ -14,15 +14,15 @@
 */
 
 export default {
-    data: {
-        title: "",
-        width: '700vp',
-        value: 700
-    },
-    onInit() {
-        this.title = this.$t("strings.flex_capability_first");
-    },
-    setValue(e) {
-        this.width = e.value + "vp";
-    }
+  data: {
+    title: "",
+    width: '700vp',
+    value: 700
+  },
+  onInit() {
+    this.title = this.$t("strings.flex_capability_first");
+  },
+  setValue(e) {
+    this.width = e.value + "vp";
+  }
 }

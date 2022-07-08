@@ -14,50 +14,47 @@
 */
 
 .container {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #F1F3F5;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F3F5;
 }
 
 .pageBox {
-    flex-direction: column;
-    background-color: #FFFFFF;
-    padding: 13vp;
-    border-radius: 24vp;
-    height: 128vp;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 13vp;
+  border-radius: 24vp;
+  height: 128vp;
 }
 
 .pageBox1 {
-    flex-direction: row;
-    width: 100%;
-    height: 28vp;
+  flex-direction: row;
+  width: 100%;
+  height: 28vp;
 }
 
 .boxD1 {
-    width: 25vp;
-    height: 25vp;
-    border-radius: 14vp;
-    background-color: #E4E6E8;
+  width: 25vp;
+  height: 25vp;
+  border-radius: 14vp;
+  background-color: #E4E6E8;
 }
 
 .boxD2 {
-    flex-direction: row;
-    width: 30%;
-    height: 20vp;
-    background-color: #E4E6E8;
-    margin-left: 15vp;
-    border-radius: 4vp;
+  flex-direction: row;
+  width: 30%;
+  height: 20vp;
+  background-color: #E4E6E8;
+  margin-left: 15vp;
+  border-radius: 4vp;
 }
 
 .pageBox2 {
-    flex-direction: row;
-    width: 100%;
-    height: 68vp;
-    background-color: #E4E6E8;
-    border-radius: 16vp;
-    margin-top: 12vp;
+  flex-direction: row;
+  width: 100%;
+  height: 68vp;
+  background-color: #E4E6E8;
+  border-radius: 16vp;
+  margin-top: 12vp;
 }
-
-
-
