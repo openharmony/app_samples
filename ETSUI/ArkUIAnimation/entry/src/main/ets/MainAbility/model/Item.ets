@@ -16,7 +16,7 @@
 export class Item {
   index: number = 0
   clicked: boolean = false
-  image: Resource = $r('app.media.money1')
+  image: Resource = $r('app.media.money')
 
   constructor(index: number, image: Resource, clicked: boolean) {
     this.index = index
