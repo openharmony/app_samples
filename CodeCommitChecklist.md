@@ -42,6 +42,26 @@
 ```
 25. 代码中避免出现中文字符，要使用资源代替，符合国际化开发标准；
 
+
+## 工程结构规范
+
+Sample工程，应该区分开UI、业务逻辑、数据模块，工程示例结构如下：
+
+```
+main
+|---Application // 应用级逻辑
+|---MainAbility // 元能力组件
+|---feature // 业务功能
+|   |---IndexFeature.ts // Index的业务逻辑代码
+|---pages // UI页面
+|   |---Index.ets // Index的UI界面代码
+|---model // 数据
+|   |---IndexData.ts // Index数据模型
+|   |---MockData.ts // Mock数据
+|---net // 网络
+|   |---IndexApi.ts // 网络接口
+```
+
 ## PR提交格式规范
 
 示例如下：
