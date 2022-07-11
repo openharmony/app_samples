@@ -17,6 +17,10 @@
       "value": "UploadDownload"
     },
     {
+      "name": "internet_permission",
+      "value": "get internet permission"
+    },
+    {
       "name": "choice_download_file",
       "value": "select the file you want to download"
     },

@@ -9,6 +9,10 @@
       "value": "eTS_Empty Ability"
     },
     {
+      "name": "internet_permission",
+      "value": "get internet permission"
+    },
+    {
       "name": "parameter",
       "value": "Setting parameter"
     },

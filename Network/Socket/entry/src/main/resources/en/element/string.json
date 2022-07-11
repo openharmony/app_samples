@@ -13,6 +13,14 @@
       "value": "Socket"
     },
     {
+      "name": "internet_permission",
+      "value": "get internet permission"
+    },
+    {
+      "name": "get_wifi_info_permission",
+      "value": "get internet permission"
+    },
+    {
       "name": "confirm",
       "value": "confirm"
     },

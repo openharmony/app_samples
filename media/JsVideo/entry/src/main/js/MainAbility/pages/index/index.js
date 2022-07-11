@@ -17,54 +17,60 @@ import router from '@ohos.router';
 
 export default {
   data: {
-    autoplay: false, // 是否自动播放
-    url: '/common/video/1.mp4', // 视频地址
-    controlShow: true, // 是否显示控制栏
-    loop: true, // 是否循环播放
-    startTime: 2, // 播放开始时间
-    speed: 0.3, // 播放速度
+    // 是否自动播放
+    autoplay: false,
+    // 视频地址
+    url: '/common/video/1.mp4',
+    // 是否显示控制栏
+    controlShow: true,
+    // 是否循环播放
+    loop: true,
+    // 播放开始时间
+    startTime: 2,
+    // 播放速度
+    speed: 0.3,
     isStart:false
   },
   // 视频准备完成时触发该事件
   prepared(e) {
-    this.showPrompt(this.$t('strings.video_duration') + e.duration + this.$t('strings.second'));
+    this.showPrompt(this.$t('strings.video_duration') + e.duration + this.$t('strings.second'))
   },
   // 视频开始播放
   start() {
-    this.showPrompt(this.$t('strings.video_start'));
+    this.showPrompt(this.$t('strings.video_start'))
     this.isStart = true
   },
   // 视频暂停播放
   pause() {
-    this.showPrompt(this.$t('strings.video_pause'));
+    this.showPrompt(this.$t('strings.video_pause'))
     this.isStart = false
   },
   // 视频播放完成
   finish() {
-    this.$element('confirmDialog').show();
+    this.$element('confirmDialog').show()
   },
   // 拖动进度条调用
   seeked(e) {
-    this.showPrompt(this.$t('strings.video_seeked') + e.currenttime + this.$t('strings.second'));
+    this.showPrompt(this.$t('strings.video_seeked') + e.currenttime + this.$t('strings.second'))
   },
   // 播放进度变化调用
   timeupdate(e) {
   },
   // dialog确定
   confirm() {
-    this.$element('video').start();
-    this.$element('confirmDialog').close();
+    this.$element('video').start()
+    this.$element('confirmDialog').close()
   },
   // dialog取消
   cancel() {
-    this.$element('confirmDialog').close();
+    this.$element('confirmDialog').close()
   },
   // 弹框
   showPrompt(msg) {
     prompt.showToast({
       message: msg,
       duration: 1000
-    });
+    })
   },
   // 点击视频
   onClick() {
@@ -72,7 +78,7 @@ export default {
       this.$element('video').pause()
       this.isStart = false
     }else {
-      this.$element('video').start();
+      this.$element('video').start()
       this.isStart = true
     }
   },
@@ -80,4 +86,4 @@ export default {
   longPress(){
     router.replace({url:'pages/index/index'})
   }
-};
+}

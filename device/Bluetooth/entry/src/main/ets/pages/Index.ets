@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 import bluetooth from '@ohos.bluetooth'
-import multimedia_mediaLibrary from '@ohos.multimedia.mediaLibrary'
 import logger from '../Model/Logger'
 import { TitleBar } from '../Commom/TitleBar'
 import { PinDialog } from '../Commom/PinDialog'
@@ -24,14 +23,9 @@ const TIME: number = 0 // 设备可被发现的持续时间
 @Entry
 @Component
 struct Index {
-  @State images: Array<string> = []
-  @State fileAssets: Array<multimedia_mediaLibrary.FileAsset> = []
-  @State startStatus: boolean = false
   @State isOn: boolean = false
   @State deviceList: Array<string> = []
   @State discoveryList: Array<string> = []
-  private serviceId: number = -1
-  private clientId: number = -1
   private bluetoothState: boolean = false
   private pinDialogController: CustomDialogController | null = null
   private intervalId: number = -1

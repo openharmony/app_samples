@@ -13,6 +13,14 @@
       "value": "Socket"
     },
     {
+      "name": "internet_permission",
+      "value": "获取网络权限"
+    },
+    {
+      "name": "get_wifi_info_permission",
+      "value": "获取Wifi权限"
+    },
+    {
       "name": "confirm",
       "value": "确定"
     },

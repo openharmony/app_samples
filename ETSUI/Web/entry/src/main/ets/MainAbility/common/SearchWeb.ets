@@ -51,12 +51,14 @@ export struct SearchBar {
           .type(InputType.Normal)
           .fontWeight(FontWeight.Regular)
           .placeholderFont({ size: 25, style: FontStyle.Italic })
-          .onClick(() => {
-            this.webState = false
-            this.backToHome = false
-          })
           .onChange((value: string) => {
             this.url = value
+            this.webState = false
+            if(this.url.length === 0) {
+              this.backToHome = true
+            } else {
+              this.backToHome = false
+            }
           })
       }
       .height(70)

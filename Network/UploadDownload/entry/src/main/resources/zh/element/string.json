@@ -17,6 +17,10 @@
       "value": "上传下载"
     },
     {
+      "name": "internet_permission",
+      "value": "获取网络权限"
+    },
+    {
       "name": "choice_download_file",
       "value": "请选择需要下载的文件"
     },

@@ -73,7 +73,14 @@
     ],
     "reqPermissions": [
       {
-        "name": "ohos.permission.INTERNET"
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:internet_permission",
+        "usedScene": {
+          "ability": [
+            "ohos.samples.websocket.MainAbility"
+          ],
+          "when": "always"
+        }
       }
     ]
   }
