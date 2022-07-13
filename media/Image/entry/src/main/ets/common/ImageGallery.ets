@@ -45,8 +45,7 @@ export struct ImageGallery {
         ForEach(this.imgDatas, item => {
           GridItem() {
             Image(item.uri)
-              .width('100%')
-              .aspectRatio(1)
+              .aspectRatio(1.4)
               .objectFit(ImageFit.Contain)
               .onClick(() => {
                 router.replace({
@@ -59,13 +58,15 @@ export struct ImageGallery {
           }
         }, item => item.toString())
       }
-      .margin({ top: 10, bottom: 6, left: 6, right: 6 })
+      .margin({ top: 4, bottom: 2, left: 4, right: 4 })
       .maxCount(2)
       .width('95%')
-      .height('95%')
+      .height('92%')
       .rowsGap('2%')
-      .columnsGap('2%')
+      .columnsGap('1%')
       .columnsTemplate('1fr 1fr')
     }
+    .width('100%')
+    .height('100%')
   }
 }

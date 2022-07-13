@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "ohos.samples.etsutillrubuffer",
+    "bundleName": "ohos.samples.utillrubuffer",
     "vendor": "samples",
     "version": {
       "code": 1000000,
@@ -9,7 +9,7 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.etsutillrubuffer",
+    "package": "ohos.samples.utillrubuffer",
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "srcPath": "",

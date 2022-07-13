@@ -15,7 +15,6 @@
 
 import util from '@ohos.util'
 import { SpecInput } from '../common/specInput'
-import { ErrInput } from '../common/errInput'
 
 var resArray
 
@@ -27,13 +26,6 @@ struct StrCodec {
   @State SpecStrInput_s: string = ''
   @State SpecStrInput_d: string = ''
   @State SpecStrInput_i: string = ''
-
-
-  @State err_res01:string = ''
-  @State err_res02:string = ''
-  @State err_res03:string = ''
-  @State err_res04:string = ''
-  @State err_res05:string = ''
 
   @State resen:string =''
   @State resdec:string =''
@@ -84,34 +76,6 @@ struct StrCodec {
             this.SpecStrInput_s = util.printf("%s", "HarmonyOS 3.0");
           })
           .backgroundColor("#0D9FFB")
-
-
-          Text('').width('100%').height(10).backgroundColor("#0D9FFB").margin({top:20}).border({width:2,color:"#0D9FFB"})
-
-          ErrInput({result_err: $r("app.string.num1"),errStrInput:this.err_res01})
-          ErrInput({result_err: $r("app.string.num2"),errStrInput:this.err_res02})
-          ErrInput({result_err: $r("app.string.num3"),errStrInput:this.err_res03})
-          ErrInput({result_err: $r("app.string.num4"),errStrInput:this.err_res04})
-          ErrInput({result_err: $r("app.string.num5"),errStrInput:this.err_res05})
-
-          Button(){
-            Text($r('app.string.getErrorInfo')).fontColor(Color.White).fontSize(15).fontWeight(FontWeight.Bold)
-          }
-          .margin({ top: 20 })
-          .onClick(() => {
-            var errnum_01 = 10;
-            var errnum_02 = 20;
-            var errnum_03 = 100;
-            var errnum_04 = -10;
-            var errnum_05 = 1000;
-            this.err_res01 = util.getErrorString(errnum_01);
-            this.err_res02 = util.getErrorString(errnum_02);
-            this.err_res03 = util.getErrorString(errnum_03);
-            this.err_res04 = util.getErrorString(errnum_04);
-            this.err_res05 = util.getErrorString(errnum_05);
-          })
-          .backgroundColor("#0D9FFB")
-          .width(300)
 
           Text('').width('100%').height(10).backgroundColor("#0D9FFB").margin({top:20}).border({width:2,color:"#0D9FFB"})
 

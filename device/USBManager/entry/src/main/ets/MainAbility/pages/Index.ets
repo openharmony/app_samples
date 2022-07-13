@@ -38,7 +38,6 @@ struct CustomUSBDeviceInfoDialog {
       DeviceCustomDialog({ device: this.device, onCancel: this.onCancel })
     }
     .width('80%')
-    .height('80%')
   }
 }
 

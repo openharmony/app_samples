@@ -22,7 +22,7 @@
     },
     {
       "name": "SpecString_info",
-      "value": "HarmonyOS 3.0"
+      "value": "OpenHarmony 3.0"
     },
     {
       "name": "result",
@@ -49,32 +49,8 @@
       "value": "特定格式输出"
     },
     {
-      "name": "num1",
-      "value": "10"
-    },
-    {
-      "name": "num2",
-      "value": "20"
-    },
-    {
-      "name": "num3",
-      "value": "100"
-    },
-    {
-      "name": "num4",
-      "value": "-10"
-    },
-    {
-      "name": "num5",
-      "value": "1000"
-    },
-    {
-      "name": "getErrorInfo",
-      "value": "获取系统错误码对应的详细信息"
-    },
-    {
       "name": "StringCodec_info",
-      "value": "HarmonyOS 3.0，未来有迹可循！"
+      "value": "OpenHarmony 3.0，未来有迹可循！"
     },
     {
       "name": "read",

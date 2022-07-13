@@ -1,7 +1,7 @@
 {
   "app": {
     "vendor": "samples",
-    "bundleName": "ohos.samples.etsutilbase64codec",
+    "bundleName": "ohos.samples.utilbase64codec",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -44,7 +44,7 @@
       "deliveryWithInstall": true,
       "moduleName": "entry"
     },
-    "package": "ohos.samples.etsutilbase64codec",
+    "package": "ohos.samples.utilbase64codec",
     "srcPath": "",
     "name": ".entry",
     "js": [
