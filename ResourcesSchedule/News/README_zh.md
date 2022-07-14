@@ -28,13 +28,13 @@
 
 6.主页的新闻和视频tab页可来回切换，其中视频页的视频需要将本地视频xxx.mp4通过命令推到手机中，命令如下：
   ```
-  hdc file send xxx.mp4 /data/accounts/account_0/appdata/video1.mp4 
+  hdc file send xxx.mp4 /data/video1.mp4
   ```
 
 ### 约束与限制
 
 1.本示例仅支持在标准系统上运行。
 
-2.从API version 9开始支持。
+2.从API version 8开始支持。
 
 3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

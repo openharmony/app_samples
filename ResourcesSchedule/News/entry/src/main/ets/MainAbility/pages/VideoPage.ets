@@ -20,7 +20,7 @@ export struct VideoPage {
     Scroll() {
       Column() {
         Swiper() {
-          Video({ src: '/data/accounts/account_0/appdata/video1.mp4' })
+          Video({ src: '/data/video1.mp4' })
             .width('100%')
             .height('100%')
             .autoPlay(true)

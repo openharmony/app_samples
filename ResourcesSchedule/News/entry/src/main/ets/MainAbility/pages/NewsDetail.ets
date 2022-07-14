@@ -46,7 +46,7 @@ struct NewsDetail {
             }
             Text(this.newsItem.detail)
               .fontSize(16)
-              .margin({ left: 5, right: 5, top: 5 })
+              .margin({ left: 5, right: 5, top: 5, bottom: 80 })
           }
           .alignItems(HorizontalAlign.Start)
         }
