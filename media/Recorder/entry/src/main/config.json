@@ -14,7 +14,8 @@
     "mainAbility": ".MainAbility",
     "srcPath": "",
     "deviceType": [
-      "default"
+      "default",
+      "tablet"
     ],
     "distro": {
       "deliveryWithInstall": true,
@@ -44,7 +45,7 @@
         "formsEnabled": false,
         "label": "$string:entry_MainAbility",
         "type": "page",
-        "launchType": "standard"
+        "launchType": "singleton"
       }
     ],
     "js": [

@@ -15,7 +15,7 @@
 import { Record } from '../model/Record'
 
 const TAG = '[Record.AudioItem]'
-
+const TRANSLATE: number = -130
 @Component
 export struct AudioItem {
   private record: Record = null
@@ -23,7 +23,7 @@ export struct AudioItem {
   private clickItem: (record: Record, operate: string) => void
   private checkItem: () => void
   @State translateLeft: number = 0
-  @State translateRight: number = -125
+  @State translateRight: number = TRANSLATE
   @State imgRes: Resource = $r('app.media.uncheck')
   @Link checkState: boolean
   @Link @Watch('leftSliderChange') leftSliderIndex: number
@@ -32,13 +32,13 @@ export struct AudioItem {
     animateTo({ duration: 500, curve: Curve.Linear }, () => {
       if (this.index !== this.leftSliderIndex) {
         this.translateLeft = 0
-        this.translateRight = -125
+        this.translateRight = TRANSLATE
       } else {
         if (this.translateLeft < 0) {
           this.translateLeft = 0
-          this.translateRight = -125
+          this.translateRight = TRANSLATE
         } else {
-          this.translateLeft = -125
+          this.translateLeft = TRANSLATE
           this.translateRight = 0
         }
       }
@@ -81,7 +81,7 @@ export struct AudioItem {
         }
         .width('20%')
       }
-      .layoutWeight(1)
+      .width('79%')
       .padding({ top: 10, bottom: 10, left: 10, right: 10 })
       .margin({ left: 15, top: 15, right: 5})
       .backgroundColor('#FFFFFF')
@@ -117,10 +117,11 @@ export struct AudioItem {
           this.leftSliderIndex = -1
         })
       }
-      .width(120)
+      .width('21%')
       .padding({ right: 10 })
       .margin({ left: 15, right: 15 })
     }
+    .width('120%')
     .height('15%')
     .constraintSize({ minHeight: 100 })
     .margin({ left: this.translateLeft, right: this.translateRight })

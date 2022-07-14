@@ -174,6 +174,9 @@ export default class RemoteDeviceModel {
                     'authType': 1,
                     'extraInfo': extraInfo
                 };
+                if(this.deviceManager === undefined) {
+                    return
+                }
                 this.deviceManager.authenticateDevice(device, authParam, (err, data) => {
                     if (err) {
                         console.info('Calc[RemoteDeviceModel] authenticateDevice error:' + JSON.stringify(err));
@@ -183,7 +186,6 @@ export default class RemoteDeviceModel {
                     console.info('Calc[RemoteDeviceModel] authenticateDevice succeed:' + JSON.stringify(data));
                     this.authCallback = callBack;
                 })
-
             }
         }
     }

@@ -30,7 +30,7 @@ const TAG: string = 'Index'
 struct Index {
   private dialogController?: CustomDialogController
   private selectedIndex: number = 0
-  private sessionId: string = globalThis.sessionId
+  private sessionId: string = ''
   @State devices: Array<deviceManager.DeviceInfo> = []
   @State isOnline: boolean = false
   @State notes: Array<Note> = []

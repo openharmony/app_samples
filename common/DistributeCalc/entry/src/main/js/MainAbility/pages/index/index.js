@@ -106,6 +106,9 @@ export default {
     },
     stopDataListener() {
         console.log('Calc[IndexPage] stopDataListener');
+        if(kvStoreModel === null || kvStoreModel === undefined) {
+            return
+        }
         kvStoreModel.off()
     },
     onHide() {
@@ -158,6 +161,9 @@ export default {
     },
     cancelDialog() {
         this.$element('showDialog').close();
+        if(remoteDeviceModel === undefined) {
+            return;
+        }
         remoteDeviceModel.unregisterDeviceListCallback();
     },
 
