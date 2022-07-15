@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Debug调试"
+    },
+    {
+      "name": "pss",
+      "value": "应用进程PSS内存："
+    },
+    {
+      "name": "sharedDirty",
+      "value": "进程的共享脏内存大小："
+    },
+    {
+      "name": "privateDirty",
+      "value": "进程的私有脏内存大小："
+    },
+    {
+      "name": "navigation_information",
+      "value": "请点击右上方的Debug图标按钮查看或关闭debug信息："
+    }
+  ]
+}

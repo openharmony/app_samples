@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Debug"
+    },
+    {
+      "name": "pss",
+      "value": "PSS size:"
+    },
+    {
+      "name": "sharedDirty",
+      "value": "Shared dirty memory size:"
+    },
+    {
+      "name": "privateDirty",
+      "value": "Private dirty memory size:"
+    },
+    {
+      "name": "navigation_information",
+      "value": "Please click the Debug icon button at the top right to view or close the debug information:"
+    }
+  ]
+}
