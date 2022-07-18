@@ -1,0 +1,15 @@
+{
+  "data": {
+    "jsonImage": "memory://image"
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "ohos.samples.sportshealthfa",
+      "abilityName": "MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}

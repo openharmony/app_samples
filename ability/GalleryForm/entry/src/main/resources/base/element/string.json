@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "图库"
+    },
+    {
+      "name": "entry_MainAbility",
+      "value": "GalleryForm"
+    },
+    {
+      "name": "form_Cord_desc",
+      "value": "form_description"
+    },
+    {
+      "name": "form_Cord_label",
+      "value": "图片"
+    },
+    {
+      "name": "read_media_permission",
+      "value": "允许应用读取用户外部存储中的媒体文件信息"
+    },
+    {
+      "name": "media_location_permission",
+      "value": "允许应用访问用户媒体文件中的地理位置信息"
+    },
+    {
+      "name": "write_permission",
+      "value": "允许应用读写用户外部存储中的媒体文件信息"
+    },
+    {
+      "name": "form_FormAbility_desc",
+      "value": "form_description"
+    },
+    {
+      "name": "form_FormAbility_label",
+      "value": "form_label"
+    }
+  ]
+}
