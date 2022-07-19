@@ -6,6 +6,7 @@
 5.[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
 6.[`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
 7.[`JsAdaptiveServiceWidget`：多设备自适应服务卡片（JS）（API8）](UI/JsAdaptiveServiceWidget)
+
 # 5月13日-5月28日新增sample
 1.[`Window`：窗口(eTS)（API9）](Graphics/Window)
 2.[`Preferences`：首选项（eTS）（API9）](data/Preferences)
@@ -18,14 +19,14 @@
 1.[`DistributedNote`：分布式备忘录(eTS)（API9）](data/DistributedNote)
 2.[`Logger`：日志打印(eTS)（API9）](DFX/Logger)
 3.[`MobileNetwork`：蜂窝数据(eTS)（API9）](Telephony/MobileNetwork)
-# 6月6日-6月9日新增sample (总计26个分类，150个sample)
+# 6月6日-6月9日新增sample (总计26个分类，146个sample)
 1.[`MissionManager`：系统任务管理(eTS)（API9）](ability/MissionManager)
 2.[`AirQuality`：空气质量(eTS)（API9）](Preset/AirQuality)
 3.[`TransitionAnimation`：转场动画(eTS)（API9）](ETSUI/TransitionAnimation)
 4.[`ZipLib`：压缩与解压(eTS)（API9）](PackageManagement/ZipLib)
 5.[`Npm`：npm的使用(eTS)（API9）](EngineeringCapability/Npm)
 6.[`DistributedMusicPlayer`：分布式音乐(eTS)（API9）](Preset/DistributedMusicPlayer)
-# 6月9日-6月18日新增sample (总计27个分类，159个sample)
+# 6月9日-6月18日新增sample (总计27个分类，155个sample)
 1.[`PatternLock`：图案密码锁组件(eTS)（API9）](ETSUI/PatternLock)
 2.[`UserAuth`：用户认证(eTS)（API9）](Safety/UserAuth)
 3.[`Cipher`：加解密(eTS)（API8）](Safety/Cipher)
@@ -35,7 +36,7 @@
 7.[`DistributedDataGobang`：分布式五子棋(eTS)（API9）](data/DistributedDataGobang)
 8.[`Image`：图片处理(eTS)（API8）](media/Image)
 9.[`AbilityAccessCtrl`：访问权限控制(eTS)（API8）](Safety/AbilityAccessCtrl)
-# 6月18日-6月24日新增sample（总计27个分类，165个sample）
+# 6月18日-6月24日新增sample（总计27个分类，161个sample）
 1.[`WebSocket`：WebSocket（eTS）（API8）](Network/WebSocket)
 2.[`Bluetooth`：蓝牙(eTS)（API9）](device/Bluetooth)
 3.[`GamePuzzle`：拼图(eTS)（API9）](media/GamePuzzle)
@@ -45,4 +46,8 @@
 # 6月25日-7月7日新增sample（总计28个分类，164个sample）
 1.[`Observer`：Observer(eTS)（API9）](Telephony/Observer)
 2.[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/AdaptiveCapabilities)
-3.[`JsAdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)
+3.[`JsAdaptiveCapabilities`：多设备自适应能力（JS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)
+
+# 7月8日-7月14日新增Sample（总计28个分类，163个sample）
+
+1.删除[`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)

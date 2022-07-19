@@ -20,7 +20,7 @@ import { Point, AxisModel } from '../model/AxisModel'
 export struct SmallAnimation {
   @Link mainFlag: boolean
   private point: Point = new Point(0, 0)
-  @State item: Item = new Item(0, $r('app.media.money'), false)
+  @State item: Item = new Item(0, $r('app.media.icon1'), false)
 
   build() {
     Image(this.item.image)

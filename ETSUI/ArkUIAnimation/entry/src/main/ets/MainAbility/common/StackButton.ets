@@ -18,14 +18,14 @@ import { Point, AxisModel } from '../model/AxisModel'
 import { SmallAnimation } from '../common/SmallAnimation'
 
 const IMAGE_RESOURCE: Resource[] = [
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money'),
-  $r('app.media.money')
+  $r('app.media.icon1'),
+  $r('app.media.icon2'),
+  $r('app.media.icon3'),
+  $r('app.media.icon4'),
+  $r('app.media.icon5'),
+  $r('app.media.icon6'),
+  $r('app.media.icon7'),
+  $r('app.media.icon8')
 ]
 
 @Component

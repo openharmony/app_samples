@@ -34,7 +34,7 @@
   - [`FormLauncher`：卡片使用方（eTS）（API8）](ability/FormLauncher)
   - [`ServiceExtAbility`：StageExtAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)
   - [`DistributedGraffiti`：分布式涂鸦（eTS）（API8）](ability/DistributedGraffiti)
-  - [`MissionManager`：系统任务管理(eTS)（API9）](ability/MissionManager)
+  - [`MissionManager`：系统任务管理（eTS）（API9）](ability/MissionManager)
 - common
   - [`AirQuality`：空气质量（JS）（API8）](common/AirQuality)
   - [`Clock`：时钟（JS）（API8）](common/Clock)
@@ -54,21 +54,21 @@
   - [`DDMQuery`：结果集与谓词（eTS）（API8）](data/DDMQuery)
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）](data/DistributedRdb)
   - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
-  - [`DistributedNote`：分布式备忘录(eTS)（API9）](data/DistributedNote)
-  - [`DistributedDataGobang`：分布式五子棋(eTS)（API9）](data/DistributedDataGobang)
+  - [`DistributedNote`：分布式备忘录（eTS）（API9）](data/DistributedNote)
+  - [`DistributedDataGobang`：分布式五子棋（eTS）（API9）](data/DistributedDataGobang)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
   - [`Vibrator`：振动（eTS）（API8）](device/Vibrator)
   - [`DeviceUsageStatistics`：设备使用信息统计（eTS）（API8）](device/DeviceUsageStatistics)
   - [`Browser`：浏览器（eTS）（API9）](device/Browser)
-  - [`Screen`：屏幕属性(eTS)（API9）](device/Screen)
-  - [`USBManager`：USB管理(eTS)（API8）](device/USBManager)
-  - [`Bluetooth`：蓝牙(eTS)（API9）](device/Bluetooth)
-  - [`Location`：位置服务(eTS)（API9）](device/Location)
+  - [`Screen`：屏幕属性（eTS）（API9）](device/Screen)
+  - [`USBManager`：USB管理（eTS）（API8）](device/USBManager)
+  - [`Bluetooth`：蓝牙（eTS）（API9）](device/Bluetooth)
+  - [`Location`：位置服务（eTS）（API9）](device/Location)
 - Graphics
-  - [`JsWebGL`：WebGL(JS)（API8）](Graphics/JsWebGL)
-  - [`Window`：窗口(eTS)（API9）](Graphics/Window)
+  - [`JsWebGL`：WebGL（JS）（API8）](Graphics/JsWebGL)
+  - [`Window`：窗口（eTS）（API9）](Graphics/Window)
 - media
   - [`JsAudioPlayer`：音频播放和管理（JS）（API8）](media/JsAudioPlayer)
   - [`JsVideo`：视频播放（JS）（API8）](media/JsVideo)
@@ -76,23 +76,23 @@
   - [`MultiMedia`：相机和媒体库（eTS）（API9）](media/MultiMedia)
   - [`VideoPlayer`：视频播放（eTS）（API9）](media/VideoPlayer)
   - [`JsRecorder`：录音机（JS）（API8）](media/JSRecorder)
-  - [`Image`：图片处理(eTS)（API8）](media/Image)
-  - [`GamePuzzle`：拼图(eTS)（API9）](media/GamePuzzle)
+  - [`Image`：图片处理（eTS）（API8）](media/Image)
+  - [`GamePuzzle`：拼图（eTS）（API9）](media/GamePuzzle)
 - DFX
   - [`JsDotTest`：测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger`：故障日志获取（eTS）（API8）](DFX/FaultLogger)
-  - [`Logger`：日志打印(eTS)（API9）](DFX/Logger)
+  - [`Logger`：日志打印（eTS）（API9）](DFX/Logger)
 - Safety
-  - [`UserAuth`：用户认证(eTS)（API9）](Safety/UserAuth)
-  - [`Cipher`：加解密(eTS)（API8）](Safety/Cipher)
-  - [`AbilityAccessCtrl`：访问权限控制(eTS)（API8）](Safety/AbilityAccessCtrl)
+  - [`UserAuth`：用户认证（eTS）（API9）](Safety/UserAuth)
+  - [`Cipher`：加解密（eTS）（API8）](Safety/Cipher)
+  - [`AbilityAccessCtrl`：访问权限控制（eTS）（API8）](Safety/AbilityAccessCtrl)
 - Telephony
   - [`Call`：拨打电话（eTS）（API8）](Telephony/Call)
   - [`Message`：短信服务（eTS）（API8）](Telephony/Message)
   - [`RadioTech`：网络搜索（eTS）（API8）](Telephony/RadioTech)
   - [`SimManager`：SIM卡管理（eTS）（API8）](Telephony/SimManager)
-  - [`MobileNetwork`：蜂窝数据(eTS)（API9）](Telephony/MobileNetwork)
-  - [`Observer`：Observer(eTS)（API9）](Telephony/Observer)
+  - [`MobileNetwork`：蜂窝数据（eTS）（API9）](Telephony/MobileNetwork)
+  - [`Observer`：Observer（eTS）（API9）](Telephony/Observer)
 - thread
   - [`JsWorker`：启动一个worker（JS）（API8）](thread/JsWorker)
 - CompleteApps
@@ -100,7 +100,7 @@
   - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
   - [`FlipClock`：翻页时钟（eTS）（API8）](CompleteApps/FlipClock)
 - EngineeringCapability
-  - [`Npm`：npm的使用(eTS)（API9）](EngineeringCapability/Npm)
+  - [`Npm`：npm的使用（eTS）（API9）](EngineeringCapability/Npm)
 - ETSUI
   - [`Canvas`：画布组件（eTS）（API8）](ETSUI/Canvas)
   - [`CustomComponent`：组件化（eTS）（API8）](ETSUI/CustomComponent)
@@ -116,13 +116,12 @@
   - [`Web`：Web（eTS）（API8）](ETSUI/Web)
   - [`Gallery`：组件集合（eTS）（API8）](ETSUI/Gallery)
   - [`BringApp`：拉起系统应用（eTS）（API8）](ETSUI/BringApp)
-  - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](ETSUI/AdaptiveCapabilities)
   - [`Game2048`：2048游戏（eTS）（API9）](ETSUI/Game2048)
   - [`Lottie`：Lottie（eTS）（API8）](ETSUI/Lottie)
-  - [`TransitionAnimation`：转场动画(eTS)（API9）](ETSUI/TransitionAnimation)
-  - [`PatternLock`：图案密码锁组件(eTS)（API9）](ETSUI/PatternLock)
-  - [`Search`：Search组件(eTS)（API9）](ETSUI/Search)
-  - [`QRCode`：二维码(eTS)（API9）](ETSUI/QRCode)
+  - [`TransitionAnimation`：转场动画（eTS）（API9）](ETSUI/TransitionAnimation)
+  - [`PatternLock`：图案密码锁组件（eTS）（API9）](ETSUI/PatternLock)
+  - [`Search`：Search组件（eTS）（API9）](ETSUI/Search)
+  - [`QRCode`：二维码（eTS）（API9）](ETSUI/QRCode)
 - FileManager
   - [`Environment`：目录环境（eTS）（API8）](FileManager/Environment)
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
@@ -143,10 +142,10 @@
   - [`Clock`：简单时钟（eTS）（API9）](Preset/Clock)
   - [`FlashLight`：手电筒（eTS）（API8）](Preset/FlashLight)
   - [`DistributeCalc`：分布式计算器（eTS）（API8）](Preset/DistributeCalc)
-  - [`AirQuality`：空气质量(eTS)（API9）](Preset/AirQuality)
-  - [`DistributedMusicPlayer`：分布式音乐(eTS)（API9）](Preset/DistributedMusicPlayer)
+  - [`AirQuality`：空气质量（eTS）（API9）](Preset/AirQuality)
+  - [`DistributedMusicPlayer`：分布式音乐（eTS）（API9）](Preset/DistributedMusicPlayer)
 - PackageManagement
-  - [`ZipLib`：压缩与解压(eTS)（API9）](PackageManagement/ZipLib)
+  - [`ZipLib`：压缩与解压（eTS）（API9）](PackageManagement/ZipLib)
 - ResourcesSchedule
   - [`Flybird`：小鸟避障游戏（eTS）（API9）](ResourcesSchedule/Flybird)
   - [`News`：新闻浏览（eTS）（API9）](ResourcesSchedule/News)
@@ -201,7 +200,7 @@
   - [`XmlTextConvert`：xml文本转换（eTS）（API8）](Util/XmlTextConvert)
 - MultiDeviceAppDev
   - [`AdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/AdaptiveCapabilities)
-  - [`JsAdaptiveCapabilities`：多设备自适应能力（eTS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)
+  - [`JsAdaptiveCapabilities`：多设备自适应能力（JS）（API9）](MultiDeviceAppDev/JsAdaptiveCapabilities)
 
 
 ## 使用说明<a name="section17988202503116"></a>
