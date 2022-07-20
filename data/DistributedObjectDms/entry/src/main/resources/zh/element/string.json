@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "DMS数据流转"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "DMS数据流转"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "DMS数据流转"
+    },
+    {
+      "name": "choice_device",
+      "value": "选择设备"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "data_synchronization_permission",
+      "value": "允许不同设备间的数据交换"
+    },
+    {
+      "name": "device_id",
+      "value": "号设备ID："
+    },
+    {
+      "name": "record_screen_size",
+      "value": "记录屏幕大小："
+    },
+    {
+      "name": "all_device_complete",
+      "value": "全部设备已播完"
+    },
+    {
+      "name": "offline",
+      "value": "已下线"
+    },
+    {
+      "name": "online",
+      "value": "已上线"
+    },
+    {
+      "name": "already_complete",
+      "value": "已播完"
+    },
+    {
+      "name": "start",
+      "value": "开始"
+    }
+  ]
+}

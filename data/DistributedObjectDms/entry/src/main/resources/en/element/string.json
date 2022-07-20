@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "dms data flow"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "dms data flow"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "dms"
+    },
+    {
+      "name": "choice_device",
+      "value": "select device"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "data_synchronization_permission",
+      "value": "allow data exchange between different devices"
+    },
+    {
+      "name": "device_id",
+      "value": "number of devices id："
+    },
+    {
+      "name": "record_screen_size",
+      "value": "record screen size："
+    },
+    {
+      "name": "all_device_complete",
+      "value": "all devices have finished broadcasting"
+    },
+    {
+      "name": "offline",
+      "value": "offline"
+    },
+    {
+      "name": "online",
+      "value": "online"
+    },
+    {
+      "name": "already_complete",
+      "value": "finished broadcasting"
+    },
+    {
+      "name": "start",
+      "value": "start"
+    }
+  ]
+}
