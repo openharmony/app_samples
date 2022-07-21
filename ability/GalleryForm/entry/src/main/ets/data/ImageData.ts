@@ -14,7 +14,7 @@
  */
 
 import mediaLibrary from '@ohos.multimedia.mediaLibrary'
-import Logger from './logger'
+import Logger from './Logger'
 
 const TAG: string = 'ImageData'
 

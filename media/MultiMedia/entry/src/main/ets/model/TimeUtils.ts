@@ -21,8 +21,8 @@ export function tempNum(num) {
 
 export function getDurationString(duration) {
     let hour = Math.floor(duration / (1000 * 60 * 60))
-    let minute = Math.floor(duration / (1000 * 60))
-    let second = Math.floor(duration / 1000)
+    let minute = Math.floor((duration - hour * (1000 * 60 * 60)) / (1000 * 60))
+    let second = Math.floor((duration - hour * (1000 * 60 * 60) - minute * (60 * 1000)) / 1000)
     if (hour > 0) {
         return `${tempNum(hour)}:${tempNum(minute)}:${tempNum(second)}`
     }

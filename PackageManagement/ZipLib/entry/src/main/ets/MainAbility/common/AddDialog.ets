@@ -45,6 +45,11 @@ export struct AddDialog {
     .margin({ top: '3%' })
   }
 
+  aboutToAppear(){
+    this.fileName = ''
+    this.fileContent = ''
+  }
+
   build() {
     Column() {
       Text($r('app.string.create_file'))

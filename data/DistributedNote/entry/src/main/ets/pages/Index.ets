@@ -52,7 +52,6 @@ struct Index {
 
   share() {
     Logger.info(TAG, `sessionId = ${this.sessionId}`)
-    globalThis.objectModel.distributedObject.setSessionId(this.sessionId)
     globalThis.objectModel.setChangeCallback(() => {
       this.notes = globalThis.objectModel.distributedObject.documents
       Logger.info(TAG, `changecallback,${JSON.stringify(this.notes)}`)
@@ -65,6 +64,7 @@ struct Index {
         this.isOnline = false
       }
     })
+    globalThis.objectModel.distributedObject.setSessionId(this.sessionId)
   }
 
   clearSelectState() {
