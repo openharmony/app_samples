@@ -57,8 +57,8 @@ export class ServiceModel {
     connection = featureAbility.connectAbility(
       {
         deviceId: localDeviceId,
-        bundleName: 'com.example.flybird',
-        abilityName: 'com.example.flybird.ServiceAbility',
+        bundleName: 'com.samples.flybird',
+        abilityName: 'com.samples.flybird.ServiceAbility',
       },
       {
         onConnect: this.onConnectCallback,

@@ -83,12 +83,12 @@ struct Index {
         }
       ],
       wantAgent: {
-        pkgName: "com.example.flybird",
-        abilityName: "com.example.flybird.MainAbility"
+        pkgName: "com.samples.flybird",
+        abilityName: "com.samples.flybird.MainAbility"
       },
       maxScreenWantAgent: {
-        pkgName: "com.example.flybird",
-        abilityName: "com.example.flybird.MainAbility"
+        pkgName: "com.samples.flybird",
+        abilityName: "com.samples.flybird.MainAbility"
       },
       ringDuration: 10,
       snoozeTimes: 2,
@@ -125,12 +125,12 @@ struct Index {
       repeatMonths: [1],
       repeatDays: [1],
       wantAgent: {
-        pkgName: "com.example.flybird",
-        abilityName: "com.example.flybird.MainAbility"
+        pkgName: "com.samples.flybird",
+        abilityName: "com.samples.flybird.MainAbility"
       },
       maxScreenWantAgent: {
-        pkgName: "com.example.flybird",
-        abilityName: "com.example.flybird.MainAbility"
+        pkgName: "com.samples.flybird",
+        abilityName: "com.samples.flybird.MainAbility"
       },
       ringDuration: 5,
       snoozeTimes: 2,

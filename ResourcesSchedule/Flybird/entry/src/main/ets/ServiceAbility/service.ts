@@ -80,8 +80,8 @@ class FirstServiceAbilityStub extends rpc.RemoteObject {
         let wantAgentInfo = {
             wants: [
                 {
-                    bundleName: "com.example.flybird",
-                    abilityName: "com.example.flybird.MainAbility"
+                    bundleName: "com.samples.flybird",
+                    abilityName: "com.samples.flybird.MainAbility"
                 }
             ],
             operationType:wantAgent.OperationType.START_ABILITY,
