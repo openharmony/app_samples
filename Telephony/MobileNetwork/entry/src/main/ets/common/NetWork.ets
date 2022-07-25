@@ -19,17 +19,17 @@ import { NetworkMobile } from '../model/NetworkMobile'
 const TAG: string = '[NetWork]'
 
 @Extend(Text) function simId () {
-  .margin(5)
+  .margin(4)
   .fontSize(20)
   .width('40%')
-  .textAlign(TextAlign.Center)
   .borderRadius(10)
+  .textAlign(TextAlign.Center)
 }
 
 @Component
 export struct NetWork {
-  @State cellularDataFlowType: Resource = $r('app.string.error')
   @State cellularDataState: Resource = $r('app.string.error')
+  @State cellularDataFlowType: Resource = $r('app.string.error')
   private slotId: number = -1
   private cellularData: boolean = false
   private cellularDataRoaming: boolean = false
@@ -51,16 +51,16 @@ export struct NetWork {
   @Builder dataState(text: Resource, flag: boolean) {
     Row() {
       Text(text)
-        .margin({ left: 10 })
         .fontSize(20)
         .width('55%')
+        .margin({ left: 10 })
         .textAlign(TextAlign.Start)
 
       Text(flag ? $r('app.string.start') : $r('app.string.end'))
         .fontSize(20)
+        .layoutWeight(1)
         .margin({ left: 10, right: 6 })
         .textAlign(TextAlign.Center)
-        .layoutWeight(1)
     }
     .margin(10)
     .height('8%')
@@ -69,29 +69,30 @@ export struct NetWork {
   @Builder networkState(text: Resource, state: Resource) {
     Column() {
       Text(text)
-        .margin({ left: 10, top: 16, right: 10, bottom: 10 })
         .fontSize(20)
         .width('100%')
+        .margin({ left: 10, top: 16, right: 10, bottom: 10 })
         .textAlign(TextAlign.Start)
 
       Text(state)
-        .margin({ left: 10 })
         .fontSize(18)
         .width('100%')
+        .margin({ left: 10 })
         .textAlign(TextAlign.Start)
     }
-    .alignItems(HorizontalAlign.Start)
     .margin(10)
+    .alignItems(HorizontalAlign.Start)
   }
 
   build() {
     Column() {
       Row() {
         Text($r('app.string.sim'))
-          .margin({ left: 10 })
+          .width('57%')
           .fontSize(20)
-          .width('60%')
           .textAlign(TextAlign.Start)
+          .margin({ left: 10, right: 10 })
+
         Row() {
           Text($r('app.string.simOne'))
             .simId()
@@ -110,7 +111,7 @@ export struct NetWork {
 
       Divider()
 
-      this.dataState($r('app.string.mobile'), this.cellularData)
+      this.dataState($r('app.string.mobile'), false)
 
       Divider()
 

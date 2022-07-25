@@ -81,8 +81,8 @@ export struct TitleBar {
     Logger.info(TAG, `startAbility deviceId: ${deviceId}`)
     featureAbility.startAbility({
       want: {
-        bundleName: 'ohos.samples.DistributeCalc',
-        abilityName: 'ohos.samples.DistributeCalc.MainAbility',
+        bundleName: 'ohos.samples.etsdistributecalc',
+        abilityName: 'ohos.samples.etsdistributecalc.MainAbility',
         deviceId: deviceId,
         parameters: {
           isFA: 'FA'

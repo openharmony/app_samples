@@ -32,7 +32,7 @@ export class KvStoreModel {
       return
     }
     let config = {
-      bundleName: 'ohos.samples.DistributeCalc',
+      bundleName: 'ohos.samples.etsdistributecalc',
       userInfo: {
         userId: '0',
         userType: 0

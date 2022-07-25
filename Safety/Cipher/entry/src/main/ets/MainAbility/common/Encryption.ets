@@ -29,35 +29,30 @@ export struct Encryption {
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        Row() {
           Select([{ value: 'RSA' },
                   { value: 'AES' }])
-            .margin(6)
+            .margin(4)
             .selected(0)
-            .width('30%')
             .value(this.algorithmType)
             .font({ size: 20, weight: 300, family: 'serif', style: FontStyle.Normal })
-            .selectedOptionFont({ size: 16, weight: 280, family: 'serif', style: FontStyle.Normal })
             .optionFont({ size: 16, weight: 280, family: 'serif', style: FontStyle.Normal })
+            .selectedOptionFont({ size: 16, weight: 280, family: 'serif', style: FontStyle.Normal })
             .onSelect((index: number, value: string) => {
               this.algorithmType = value
               Logger.info(TAG, `Select: ${index} value: ${value}`)
             })
 
           TextInput()
-            .margin(5)
-            .width('60%')
+            .margin(4)
+            .width('90%')
             .onChange((value: string) => {
               this.message = value
             })
-        }
-        .width('100%')
-        .margin(10)
 
         Row() {
           Button($r('app.string.encryption'))
-            .fontSize(20)
             .margin(10)
+            .fontSize(20)
             .width('45%')
             .height('6%')
             .onClick(() => {
@@ -81,8 +76,8 @@ export struct Encryption {
             })
 
           Button($r('app.string.reset'))
-            .fontSize(20)
             .margin(10)
+            .fontSize(20)
             .width('30%')
             .height('6%')
             .onClick(() => {

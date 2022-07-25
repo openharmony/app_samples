@@ -41,5 +41,5 @@ class Logger {
   }
 }
 
-export default new Logger('[DistributeCalc]')
+export default new Logger('[distributecalc]')
 

@@ -35,7 +35,7 @@ export class RemoteDeviceModel {
       return
     }
     Logger.info(TAG, 'deviceManager.createDeviceManager begin')
-    deviceManager.createDeviceManager("ohos.samples.DistributeCalc", (error, value) => {
+    deviceManager.createDeviceManager("ohos.samples.etsdistributecalc", (error, value) => {
       if (error) {
         Logger.error(TAG, `createDeviceManager failed.${error}`)
         return
@@ -188,9 +188,9 @@ export class RemoteDeviceModel {
         continue
       }
       let extraInfo = {
-        'targetPkgName': 'ohos.samples.DistributeCalc',
-        'appName': 'Distributed DistributeCalc',
-        'appDescription': 'Distributed DistributeCalc',
+        'targetPkgName': 'ohos.samples.etsdistributecalc',
+        'appName': 'Distributed distributecalc',
+        'appDescription': 'Distributed distributecalc',
         'business': '0'
       }
       let authParam = {

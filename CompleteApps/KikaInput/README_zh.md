@@ -104,3 +104,5 @@ kikainput是一个轻量级的输入法应用，支持在运行OpenHarmony OS的
 2.本示例为Stage模型，从API version 9开始支持。
 
 3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+
+4.本示例为系统输入法未适配高版本SDK，编译会失败。

@@ -29,3 +29,5 @@
 1.本示例仅支持标准系统上运行。
 
 2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+
+3.本示例所配置的权限ohos.permission.UPDATE_CONFIGURATION、ohos.permission.SET_TIME_ZONE、ohos.permission.SET_TIME均为system_basic级别(相关权限级别可通过[权限定义列表](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)查看)，需要手动配置对应级别的权限签名。

@@ -37,6 +37,7 @@ struct Index {
   @State result: string = ''
   @State @Watch('dataChange') expression: string = ''
   @State isDistributed: boolean = false
+  @State dialogShow: boolean = false
   private remoteDeviceModel: RemoteDeviceModel = new RemoteDeviceModel()
   onLand = (mediaQueryResult) => {
     Logger.info(TAG, `onLand: mediaQueryResult.matches= ${mediaQueryResult.matches}`)
@@ -148,7 +149,8 @@ struct Index {
         isLand: this.isLand,
         startAbilityCallBack: this.startAbilityCallBack,
         remoteDeviceModel: this.remoteDeviceModel,
-        isDistributed: $isDistributed
+        isDistributed: $isDistributed,
+        dialogShow: $dialogShow
       })
 
       if (this.isLand) {

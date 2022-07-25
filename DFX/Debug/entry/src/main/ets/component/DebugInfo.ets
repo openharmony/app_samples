@@ -57,7 +57,7 @@ export default struct DebugInfo {
         .margin({left: 6})
         .textAlign(TextAlign.End)
 
-      Text(`${data}`)
+      Text(`${data}KB`)
         .fontSize(20)
     }
     .width('100%')
