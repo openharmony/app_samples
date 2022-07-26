@@ -2,19 +2,19 @@
   "string": [
     {
       "name": "entry_desc",
-      "value": "description"
+      "value": "Description"
     },
     {
       "name": "MainAbility_desc",
-      "value": "description"
+      "value": "Description"
     },
     {
       "name": "MainAbility_label",
-      "value": "FlipClock"
+      "value": "Flip Clock"
     },
     {
       "name": "entry_MainAbility",
-      "value": "FlipClock"
+      "value": "Flip Clock"
     },
     {
       "name": "description_mainability",
@@ -22,75 +22,75 @@
     },
     {
       "name": "alarmClock",
-      "value": "闹钟"
+      "value": "Alarm"
     },
     {
       "name": "delete",
-      "value": "删除"
+      "value": "Delete"
     },
     {
       "name": "hour",
-      "value": "小时"
+      "value": "Hour"
     },
     {
       "name": "minute",
-      "value": "分钟"
+      "value": "Minute"
     },
     {
       "name": "yes",
-      "value": "确定"
+      "value": "OK"
     },
     {
       "name": "no",
-      "value": "取消"
+      "value": "Cancel"
     },
     {
       "name": "init_output",
-      "value": "休眠锁关闭，可定时息屏"
+      "value": "The wake lock is disabled. The screen will be turned off at the specified time."
     },
     {
       "name": "control_sleepLock",
-      "value": "控制系统休眠的锁"
+      "value": "A lock used to prevent the system from sleeping."
     },
     {
       "name": "search_support",
-      "value": "查询系统是否支持休眠锁"
+      "value": "Check whether the system supports the wake lock."
     },
     {
       "name": "sleepLockSwitch",
-      "value": "休眠锁开关"
+      "value": "Wake lock switch"
     },
     {
       "name": "timingout_screen",
-      "value": "5s后定时熄屏"
+      "value": "The screen will be turned off in 5s."
     },
     {
       "name": "supportLock",
-      "value": "本系统支持阻止系统休眠的锁"
+      "value": "The system supports the wake lock."
     },
     {
       "name": "unsupportLock",
-      "value": "本系统不支持阻止系统休眠的锁"
+      "value": "The system does not support the wake lock."
     },
     {
       "name": "stopSleep",
-      "value": "休眠锁已打开,无法定时熄屏"
+      "value": "The wake lock is enabled. The screen will not be turned off at the specified time."
     },
     {
       "name": "turnSleep",
-      "value": "该锁已被解除,5s后可定时熄屏"
+      "value": "The wake lock is disabled. The screen will be turned off in 5s."
     },
     {
       "name": "screenLight",
-      "value": "Normally on"
+      "value": "Steady on"
     },
     {
       "name": "fullScreen",
-      "value": "fullScreen"
+      "value": "Full screen"
     },
     {
       "name": "brightness",
-      "value": "brightness"
+      "value": "Brightness"
     }
   ]
 }
