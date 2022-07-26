@@ -6,43 +6,43 @@
     },
     {
       "name": "MainAbility_desc",
-      "value": "Call the compressed file interface"
+      "value": "Call the Zip API"
     },
     {
       "name": "zip",
-      "value": "zip"
+      "value": "Zip"
     },
     {
       "name": "unzip",
-      "value": "unzip"
+      "value": "Unzip"
     },
     {
       "name": "file_name",
-      "value": "FileName"
+      "value": "File name"
     },
     {
       "name": "file_content",
-      "value": "FileContent"
+      "value": "File content"
     },
     {
       "name": "button_confirm",
-      "value": "confirm"
+      "value": "OK"
     },
     {
       "name": "button_cancel",
-      "value": "cancel"
+      "value": "Cancel"
     },
     {
       "name": "input_name",
-      "value": "Please enter a name"
+      "value": "Enter a file name"
     },
     {
       "name": "input_content",
-      "value": "Please enter the file content"
+      "value": "Enter the file content"
     },
     {
       "name": "create_file",
-      "value": "Create File"
+      "value": "Create file"
     }
   ]
 }
