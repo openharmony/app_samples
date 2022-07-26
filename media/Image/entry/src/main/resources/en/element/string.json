@@ -6,15 +6,15 @@
     },
     {
       "name": "description_mainability",
-      "value": "Get the local picture and picture information, rotate the picture and save it"
+      "value": "Read images on the local device; obtain image information; rotate an image and save it."
     },
     {
       "name": "back",
-      "value": "Return"
+      "value": "Back"
     },
     {
       "name": "more",
-      "value": "More Details"
+      "value": "Details"
     },
     {
       "name": "width",
@@ -26,11 +26,11 @@
     },
     {
       "name": "bytes",
-      "value": "BytesNumber: "
+      "value": "Bytes: "
     },
     {
       "name": "storage",
-      "value": "Whether to save to local"
+      "value": "Save to local?"
     },
     {
       "name": "cancel",
@@ -38,7 +38,7 @@
     },
     {
       "name": "confirm",
-      "value": "Confirm"
+      "value": "OK"
     },
     {
       "name": "rotate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "rotate_single",
-      "value": "Rotate Single"
+      "value": "Rotation angle"
     },
     {
       "name": "save",
