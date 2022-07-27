@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "whether_to_remove",
+      "value": "Whether to remove"
+    },
+    {
+      "name": "card",
+      "value": "Card"
+    },
+    {
+      "name": "card_remove_message",
+      "value": "Press and hold the application to enter the \"FormManager\" interface to add again"
+    },
+    {
+      "name": "remove",
+      "value": "Remove"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "whether_to_remove",
+      "value": "是否移除"
+    },
+    {
+      "name": "card",
+      "value": "卡片"
+    },
+    {
+      "name": "card_remove_message",
+      "value": "通过长按应用进入\"卡片管理\"界面重新添加"
+    },
+    {
+      "name": "remove",
+      "value": "移除"
+    }
+  ]
+}
