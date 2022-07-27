@@ -19,7 +19,7 @@ struct keyItemNumber {
   }
 
   build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceAround }) {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
       Text(this.keyValue.title)
         .fontSize(inputStyle.litterNumberFontSize)
         .fontColor(0x606060)

@@ -59,7 +59,10 @@ export class KeyboardController {
         keyHeightRate = 35 / 99
       } else if (dWidth == 2376 && dHeight == 1080) {
         navigationbar_height = 90
-        keyHeightRate = 0.68
+        keyHeightRate = 0.63
+      }else if (dWidth == 2560 && dHeight == 1600) {
+        navigationbar_height = 90
+        keyHeightRate = 0.5
       }
       var keyHeight = dHeight * keyHeightRate;
       this.barPosition = dHeight - keyHeight - navigationbar_height
@@ -99,7 +102,10 @@ export class KeyboardController {
         keyHeightRate = 35 / 99
       } else if (dWidth == 2376 && dHeight == 1080) {
         navigationbar_height = 90
-        keyHeightRate = 0.68
+        keyHeightRate = 0.63
+      }else if (dWidth == 2560 && dHeight == 1600) {
+        navigationbar_height = 90
+        keyHeightRate = 0.5
       }
       var keyHeight = dHeight * keyHeightRate;
       this.inputHandle.addLog("resizeWindow-dWidth = " + dWidth + ";dHeight = " + dHeight + ";keyboard height = " + keyHeight + ";navibar height = " + navigationbar_height);
