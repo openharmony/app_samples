@@ -31,3 +31,5 @@ XComponent：可用于EGL/OpenGLES和媒体数据写入，并显示在XComponent
 2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 
 3.API8只支持32位，API9支持32位和64位；当前Demo应用使用API9，支持32位和64位版本。
+
+4.本示例需要使用特定版本的NDK编译才能正常显示。

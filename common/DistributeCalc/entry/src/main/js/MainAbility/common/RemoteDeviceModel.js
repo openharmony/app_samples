@@ -157,6 +157,7 @@ export default class RemoteDeviceModel {
         this.deviceManager.off('deviceFound');
         this.deviceManager.off('discoverFail');
         this.deviceManager.off('serviceDie');
+        this.deviceManager.release();
         this.deviceList = [];
     }
 

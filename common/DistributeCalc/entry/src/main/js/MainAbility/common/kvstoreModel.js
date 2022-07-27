@@ -14,7 +14,7 @@
  */
 import distributedData from '@ohos.data.distributedData';
 
-const STORE_ID = 'distributedCalc';
+const STORE_ID = 'distributedcalc';
 
 export class KvStoreModel {
     kvManager;

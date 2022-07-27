@@ -14,34 +14,13 @@
  */
 
 import rpc from '@ohos.rpc'
-import prompt from '@ohos.prompt';
 import { TitleBar } from '../common/TitleBar'
 import { FlexList } from '../common/FlexList'
-import { ReceivedData } from '../model/ReceivedData'
+import ReceivedData from '../model/ReceivedData'
 import { ProcessData } from '../model/ProcessData'
 
 let TAG: string = '[eTSRPC.Index]'
 const REQUEST_CODE: number = 1
-
-async function sortString(sendData: Array<string>, callback) {
-  console.log(`${TAG} sortString is ${sendData}`)
-  console.log(`${TAG} sendData typeof ${typeof(sendData)}`)
-  let send = new ReceivedData('send')
-  let data = new rpc.MessageParcel()
-  let reply = new rpc.MessageParcel()
-  let option = new rpc.MessageOption()
-  console.log(`${TAG} getCallingUid: ${send.getCallingUid()}  getCallingPid: ${send.getCallingPid()}`)
-  data.writeStringArray(sendData)
-  let descriptor = send.getInterfaceDescriptor();
-  prompt.showToast({
-    message: `descriptor ${descriptor}`,
-    duration: 2000
-  })
-  console.log(`${TAG} descriptor ${descriptor}`)
-  await send.sendRequest(REQUEST_CODE, data, reply, option)
-  callback(reply.readInt())
-  reply.reclaim()
-}
 
 @Entry
 @Component
@@ -69,9 +48,22 @@ struct Index {
   ]
   private selectStuffs: Array<any> = new Array(4).fill({ subcategory: '', count: 0 })
 
-  selectStuff(index:number, good:string, count:number) {
+  selectStuff(index: number, good: string, count: number) {
     console.info(`${TAG} index=  ${index}, count= ${count}, good= ${good}`)
     this.selectStuffs[index] = { subcategory: good, count: count }
+  }
+
+  async sortString(sendData: Array<string>) {
+    console.log(`${TAG} sortString is ${sendData}`)
+    console.log(`${TAG} sendData typeof ${typeof (sendData)}`)
+    let option: rpc.MessageOption = new rpc.MessageOption()
+    let data: rpc.MessageParcel = rpc.MessageParcel.create()
+    let reply: rpc.MessageParcel = rpc.MessageParcel.create()
+    console.log(`${TAG} getCallingUid: ${ReceivedData.getCallingUid()}  getCallingPid: ${ReceivedData.getCallingPid()}`)
+    data.writeStringArray(sendData)
+    await ReceivedData.sendRequest(REQUEST_CODE, data, reply, option)
+    this.result = reply.readInt()
+    reply.reclaim()
   }
 
   build() {
@@ -110,9 +102,7 @@ struct Index {
             .onClick(() => {
               let priceArray = this.Process.getPrice(this.selectStuffs)
               console.info(`${TAG} priceArray= ${priceArray}`)
-              sortString(priceArray, (after) => {
-                this.result = after
-              })
+              this.sortString(priceArray)
             })
         }
         .margin({ top: 20 })

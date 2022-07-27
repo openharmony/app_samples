@@ -13,30 +13,26 @@
  * limitations under the License.
  */
 
-import rpc from '@ohos.rpc'
+import rpc from "@ohos.rpc"
 
 let TAG = '[eTSRPC.ReceivedData]'
+let resultList: Array<number> = Array.from({ length: 4 }, () => 0)
+let priceList: Map<string, number> = new Map([
+  ['potato', 4],
+  ['cabbage', 2],
+  ['eggplant', 6],
+  ['apple', 8],
+  ['banana', 6],
+  ['peach', 12],
+  ['beef', 25],
+  ['chicken', 8],
+  ['pork', 12],
+  ['biscuits', 15],
+  ['candy', 20],
+  ['chips', 12]
+])
 
-export class ReceivedData extends rpc.RemoteObject {
-  private resultList: Array<number> = Array.from({length: 4}, ()=> 0)
-  private priceList: Map<string, number>  = new Map([
-    ['potato', 4],
-    ['cabbage', 2],
-    ['eggplant', 6],
-    ['apple', 8],
-    ['banana', 6],
-    ['peach', 12],
-    ['beef', 25],
-    ['chicken', 8],
-    ['pork', 12],
-    ['biscuits', 15],
-    ['candy', 20],
-    ['chips', 12]
-  ])
-
-  constructor(descriptor: string) {
-    super(descriptor)
-  }
+class ReceivedData extends rpc.RemoteObject {
 
   onRemoteRequest(code: number, data: any, reply: any, option: any) {
     console.log(`${TAG} called`)
@@ -45,13 +41,13 @@ export class ReceivedData extends rpc.RemoteObject {
       let readIntArr = data.readStringArray()
       console.log(`${TAG} readIntArr= ${readIntArr}`)
       for (let i = 0; i < 4; i++) {
-        if(readIntArr[i] === '0') {
-          this.resultList[i] = 0
+        if (readIntArr[i] === '0') {
+          resultList[i] = 0
         } else {
-          this.resultList[i] = this.priceList.get(readIntArr[i]) * Number(readIntArr[i+4])
+          resultList[i] = priceList.get(readIntArr[i]) * Number(readIntArr[i+4])
         }
-        console.log(`${TAG}, this.resultList= ${this.resultList}`)
-        result += this.resultList[i]
+        console.log(`${TAG}, this.resultList= ${resultList}`)
+        result += resultList[i]
       }
       reply.writeInt(result)
       console.log(`${TAG} result= ${result}`)
@@ -61,3 +57,5 @@ export class ReceivedData extends rpc.RemoteObject {
     return true
   }
 }
+
+export default new ReceivedData("send")
