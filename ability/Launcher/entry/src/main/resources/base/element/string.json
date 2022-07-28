@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "Simple launcher"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Simple launcher"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Launcher"
+    },
+    {
+      "name": "add_to_desktop",
+      "value": "Add to desktop"
+    },
+    {
+      "name": "get_bundle_info_permission",
+      "value": "Used to get installed application information"
+    },
+    {
+      "name": "install_bundle_info_permission",
+      "value": "Used to install or uninstall application"
+    },
+    {
+      "name": "listen_bundle_change_permission",
+      "value": "Used to listen application installation and uninstallation"
+    },
+    {
+      "name": "manage_missions_permission",
+      "value": "Used to manage recent missions"
+    },
+    {
+      "name": "request_form_permission",
+      "value": "Used to request form information"
+    }
+  ]
+}

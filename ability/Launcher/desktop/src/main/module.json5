@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "desktop",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

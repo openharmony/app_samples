@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "app_menu_open",
+      "value": "Open"
+    },
+    {
+      "name": "add_form_to_desktop",
+      "value": "Snippets"
+    },
+    {
+      "name": "remove",
+      "value": "Remove"
+    }
+  ]
+}
