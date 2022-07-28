@@ -28,4 +28,8 @@ chart：图表组件，用于呈现线形图、柱状图、量规图界面。
 
 2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 
-3.本示例为预制应用，若需安装本示例需修改/entry/src/main/config.json文件中的bundleName字段。
+3.如果安装本示例报错为error：install sign info inconsistent，则有可能本应用被设置为系统预置应用，已安装在系统中，此时需使用命令进行替换安装，并在替换安装后对设备进行重启操作，具体命令如下：
+
+hdc shell mount -o rw,remount /
+
+hdc file send ./entry-default-signed.hap /system/app/ohos.samples.airquality/Airquality_Demo.hap

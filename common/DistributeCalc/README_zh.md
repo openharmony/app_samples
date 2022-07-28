@@ -4,17 +4,17 @@
 
 本示例使用JS分布式能力实现了一个简单的计算器应用，可以进行简单的数值计算，支持远程拉起另一个计算器FA，两个FA进行协同计算。
 
-1.远程拉起：通过StartAbility实现远端应用的拉起。
+远程拉起：通过StartAbility实现远端应用的拉起。
 
-2.协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。
+协同计算：通过DistributedDataKit分布式数据框架实现异端应用的数据同步。实现效果如下：
 
-实现效果如下：
-
-![](screenshots/devices/main.png)
+![](./screenshots/devices/main.png)
 
 ### 相关概念
 
-分布式数据服务：分布式数据服务（Distributed Data Service，DDS） 为应用程序提供不同设备间数据库的分布式协同能力。通过调用分布式数据接口，应用程序将数据保存到分布式数据库中。通过结合帐号、应用和数据库三元组，分布式数据服务对属于不同应用的数据进行隔离，保证不同应用之间的数据不能通过分布式数据服务互相访问。在通过可信认证的设备间，分布式数据服务支持应用数据相互同步，为用户提供在多种终端设备上最终一致的数据访问体验。
+数据管理实例： 用于获取KVStore的相关信息。
+
+单版本分布式数据库：继承自KVStore，不对数据所属设备进行区分，提供查询数据和同步数据的方法。
 
 ### 相关权限
 
@@ -34,12 +34,18 @@
 
 ### 约束与限制
 
-1.本示例仅支持在标准系统上运行。
+1.本示例只实现简单的加减乘除功能，后续开发者可基于当前框架考虑在calc页面中实现更多的功能，如开方、立方、三角函数等科学计算功能。
 
-2.本示例只实现简单的加减乘除功能，后续开发者可基于当前框架考虑在calc页面中实现更多的功能，如开方、立方、三角函数等科学计算功能。
+2.本示例在编译前需安装三方mathjs库，具体安装步骤见[npm](https://gitee.com/openharmony/app_samples/blob/master/EngineeringCapability/Npm/README_zh.md)。
 
 3.分布式计算功能使用的前提是分布式组网。
 
 4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
 
-5.本示例为预制应用，若需安装本示例需修改/entry/src/main/config.json文件中的bundleName字段。
+5.本示例需要使用@ohos.distributedHardware.deviceManager系统权限的系统接口。使用Full SDK时需要手动从镜像站点获取，并在DevEco Studio中替换，具体操作可参考[替换指南](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/full-sdk-switch-guide.md)。
+
+6.如果安装本示例报错为error：install sign info inconsistent，则有可能本应用被设置为系统预置应用，已安装在系统中，此时需使用命令进行替换安装，并在替换安装后对设备进行重启操作，具体命令如下：
+
+hdc shell mount -o rw,remount /
+
+hdc file send ./entry-default-signed.hap /system/app/com.example.distributedcalc/Calc_Demo.hap
