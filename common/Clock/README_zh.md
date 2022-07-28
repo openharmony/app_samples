@@ -31,3 +31,7 @@ TextClock：TextClock组件通过文本将当前系统时间显示在设备上�
 hdc shell mount -o rw,remount /
 
 hdc file send ./entry-default-signed.hap /system/app/ohos.samples.clock/Clock_Demo.hap
+
+hdc shell  reboot
+
+等设备重启后即可完成应用的替换安装，无需其他操作。

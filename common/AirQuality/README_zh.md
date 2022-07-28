@@ -33,3 +33,7 @@ chart：图表组件，用于呈现线形图、柱状图、量规图界面。
 hdc shell mount -o rw,remount /
 
 hdc file send ./entry-default-signed.hap /system/app/ohos.samples.airquality/Airquality_Demo.hap
+
+hdc shell  reboot
+
+等设备重启后即可完成应用的替换安装，无需其他操作。

@@ -29,3 +29,7 @@ Stack：堆叠容器，子组件按照顺序依次入栈，后一个子组件覆
 hdc shell mount -o rw,remount /
 
 hdc file send ./entry-default-signed.hap /system/app/ohos.samples.ecg/Ecg_Demo.hap
+
+hdc shell  reboot
+
+等设备重启后即可完成应用的替换安装，无需其他操作。
