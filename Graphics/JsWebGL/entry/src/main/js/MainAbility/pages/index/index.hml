@@ -16,10 +16,11 @@
     <div class="title">
         <text>{{ $t('strings.title')}}</text>
     </div>
-
     <div class="body">
         <canvas ref="canvas1" class="canvas"></canvas>
-        <button class="btn-button" onclick="drawFivePointedStar">{{ $t('strings.pentagram') }}</button>
-        <button class="btn-button" onclick="drawRectangle">{{ $t('strings.rectangle') }}</button>
+        <div class="div">
+            <button class="btn-button" onclick="drawFivePointedStar">{{ $t('strings.pentagram') }}</button>
+            <button class="btn-button" onclick="drawRectangle">{{ $t('strings.rectangle') }}</button>
+        </div>
     </div>
 </div>

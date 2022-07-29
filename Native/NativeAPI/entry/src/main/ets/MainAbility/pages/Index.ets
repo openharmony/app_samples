@@ -12,6 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+import mediaQuery from '@ohos.mediaquery'
 import chessNapi from "libchess.so"
 import prompt from '@ohos.prompt';
 import Logger from '../model/Logger'
@@ -30,11 +32,17 @@ function initArray(size, value) {
 @Entry
 @Component
 struct Index {
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
   private settings: RenderingContextSettings = new RenderingContextSettings(true)
   private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
   @State chessboard: Array<Array<number>> = initArray(SIZE, 0)
   @State message: Resource = $r('app.string.game_not_start')
   @State @Watch('isPlayChange') isPlay: boolean = false
+  @State isLand: boolean = false
+  onLand = (mediaQueryResult) => {
+    console.info(`[eTSMediaQuery.Index]onLand: mediaQueryResult.matches=${mediaQueryResult.matches}`)
+    this.isLand = mediaQueryResult.matches
+  }
 
   getChessImg(item) {
     if (item === USER_CHESS) {
@@ -147,6 +155,10 @@ struct Index {
     }
   }
 
+  aboutToAppear() {
+    this.listener.on('change', this.onLand)
+  }
+
   build() {
     Column() {
       Row() {
@@ -160,15 +172,27 @@ struct Index {
       .padding({ left: 10, right: 10 })
       .backgroundColor('#0D9FFB')
 
-      Canvas(this.context)
-        .width('95%')
-        .aspectRatio(1)
-        .backgroundImage($r('app.media.ic_bg'))
-        .backgroundImageSize({ width: '100%', height: '100%' })
-        .onReady(() => {
-          this.drawBoard()
-        })
-        .onClick(this.putChess)
+      if (this.isLand) {
+        Canvas(this.context)
+          .height('70%')
+          .aspectRatio(1)
+          .backgroundImage($r('app.media.ic_bg'))
+          .backgroundImageSize({ width: '100%', height: '100%' })
+          .onReady(() => {
+            this.drawBoard()
+          })
+          .onClick(this.putChess)
+      } else {
+        Canvas(this.context)
+          .width('95%')
+          .aspectRatio(1)
+          .backgroundImage($r('app.media.ic_bg'))
+          .backgroundImageSize({ width: '100%', height: '100%' })
+          .onReady(() => {
+            this.drawBoard()
+          })
+          .onClick(this.putChess)
+      }
 
       if (!this.isPlay) {
         Button({ type: ButtonType.Capsule }) {

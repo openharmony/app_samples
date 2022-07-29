@@ -18,7 +18,6 @@ import Logger from './Logger'
 import PictureItem from '../model/PictureItem'
 
 const TAG = '[ImageModel]'
-const IMAGE_SIZE: number = 640 // 图片大小
 const SPLIT_COUNT: number = 3 // 图片横竖切割的份数
 export default class ImageModel {
   async getAllImg() {
@@ -44,8 +43,9 @@ export default class ImageModel {
     let imagePackerApi = image.createImagePacker()
     let fd = await imgDatas[index].open('r')
     let imageSource = image.createImageSource(fd)
+    let imageInfo = await imageSource.getImageInfo()
     Logger.info(TAG, `sizeImg createImageSource ${JSON.stringify(imageSource)}`)
-    let height = IMAGE_SIZE / (SPLIT_COUNT + 1)
+    let height = imageInfo.size.height / SPLIT_COUNT
     for (let i = 0;i < SPLIT_COUNT; i++) {
       for (let j = 0;j < SPLIT_COUNT; j++) {
         let picItem
@@ -53,12 +53,12 @@ export default class ImageModel {
           picItem = new PictureItem(9, undefined)
           imagePixelMap.push(picItem)
         } else {
-          Logger.info(TAG, `sizeImg x = ${IMAGE_SIZE / SPLIT_COUNT} y = ${height}`)
+          Logger.info(TAG, `sizeImg x = ${imageInfo.size.width / SPLIT_COUNT} y = ${height}`)
           let decodingOptions: image.DecodingOptions = {
             desiredRegion: {
               size: {
-                height: height, width: IMAGE_SIZE / SPLIT_COUNT
-              }, x: j * IMAGE_SIZE / SPLIT_COUNT, y: i * height
+                height: height, width: imageInfo.size.width / SPLIT_COUNT
+              }, x: j * imageInfo.size.width / SPLIT_COUNT, y: i * height
             }
           }
           picItem = await imageSource.createPixelMap(decodingOptions)

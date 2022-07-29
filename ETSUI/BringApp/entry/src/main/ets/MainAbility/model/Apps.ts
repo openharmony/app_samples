@@ -60,12 +60,6 @@ export class Apps {
         name: $r('app.string.air')
       },
       {
-        img: $r('app.media.music'),
-        bundleName: 'ohos.samples.distributedmusicplayer',
-        abilityName: 'ohos.samples.distributedmusicplayer.MainAbility',
-        name: $r('app.string.music')
-      },
-      {
         img: $r('app.media.clock'),
         bundleName: 'ohos.samples.clock',
         abilityName: 'ohos.samples.clock.default',

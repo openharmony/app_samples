@@ -35,6 +35,8 @@ export class DistributedDataModel {
         this.chessMapArr[i][j] = ''
       }
     }
+    this.chessX = -1
+    this.chessY = -1
   }
 
   fallChess(x: number, y: number, color: string) {

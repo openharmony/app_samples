@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-.container {
+ .container {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -21,7 +21,8 @@
 
 .title {
     width: 100%;
-    height: 5%;
+    height: 6%;
+    font-size: 20;
     flex-direction: column;
     justify-content: center;
     background-color: deepskyblue;
@@ -37,17 +38,48 @@
 }
 
 .canvas {
-    width : 500px;
-    height : 500px;
-    margin: 50px;
+    width : 70%;
+    height : 40%;
+    margin: 50px;   
     background-color : lightyellow;
 }
 
 .btn-button {
     margin: 50px;
-    height: 80px;
-    width: 240px;
+    height: 10%;
+    width: 40%;
     background-color: lightblue;
-    font-size: 20px;
+    font-size: 30px;
     text-color: blue;
+}
+
+.div {
+    flex-direction: column;
+}
+
+@media screen and (min-aspect-ratio: 0.8) {
+    .body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .canvas {
+        width: 40%;
+        height: 70%;
+        margin: 30px;
+        background-color: lightyellow;
+    }
+
+    .btn-button {
+        height: 20%;
+        width: 20%;
+        margin: 30px;
+        background-color: lightblue;
+        font-size: 20px;
+        text-color: blue;
+    }
 }

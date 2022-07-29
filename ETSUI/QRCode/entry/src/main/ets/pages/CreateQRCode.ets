@@ -20,9 +20,9 @@ import MediaUtils from '../model/MediaUtils'
 import TitleBar from '../common/TitleBar'
 
 const TAG: string = '[CreateQRCode]'
-const QRCODE_SIZE: number = 300 // 生成二维码的大小
-const QRCODE_PADDING: number = 50 // 二维码保存时图片边距
-const QRCODE_TOP: number = 150 // 二维码保存时图片顶部距离屏幕顶部边缘距离
+const QRCODE_SIZE: number = vp2px(300) // 生成二维码的大小
+const QRCODE_PADDING: number = vp2px(50) // 二维码保存时图片边距
+const QRCODE_TOP: number = vp2px(90) // 二维码保存时图片顶部距离屏幕顶部边缘距离
 
 @Entry
 @Component
