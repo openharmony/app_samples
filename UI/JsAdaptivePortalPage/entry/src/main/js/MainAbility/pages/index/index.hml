@@ -133,6 +133,51 @@
                         <div class="div-content-others">
                             <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
                         </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
+                        <div class="div-content-others">
+                            <text class="txt-show-page">{{ $t('strings.txt-show') }}</text>
+                        </div>
                     </tab-content>
                 </tabs>
             </div>

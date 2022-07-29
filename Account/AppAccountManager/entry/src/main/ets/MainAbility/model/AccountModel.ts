@@ -22,50 +22,49 @@ const app: appAccount.AppAccountManager = appAccount.createAppAccountManager()
 export class AccountModel {
     async addAccount(username: string) {
         await app.addAccount(username)
-        Logger.info(TAG, `addAccount success.`)
+        Logger.info(TAG, `addAccount success`)
         return
     }
 
     async deleteAccount(username: string) {
         await app.deleteAccount(username)
-        Logger.info(TAG, `deleteAccount username: ${username}`)
+        Logger.info(TAG, `deleteAccount success`)
         return
     }
 
     async setAccountCredential(username: string, credentialType: string, credential: string) {
         await app.setAccountCredential(username, credentialType, credential)
-        Logger.info(TAG, `setAccountCredential username: ${username} credentialType: ${credentialType},
-    credential: ${credential}}`)
+        Logger.info(TAG, `setAccountCredential success`)
         return
     }
 
     async setAccountExtraInfo(name: string, extraInfo: string) {
         await app.setAccountExtraInfo(name, extraInfo)
-        Logger.info(TAG, `setAccountExtraInfo name: ${name} extraInfo: ${extraInfo}`)
+        Logger.info(TAG, `setAccountExtraInfo success`)
         return
     }
 
     async setAssociatedData(name: string, key: string, value: string) {
         await app.setAssociatedData(name, key, value)
-        Logger.info(TAG, `setAssociatedData name: ${name} key: ${key} value: ${value}`)
+        Logger.info(TAG, `setAssociatedData success`)
         return
     }
 
     async getAccountCredential(name: string, credentialType: string) {
         let result = await app.getAccountCredential(name, credentialType)
-        Logger.info(TAG, `getAccountCredential name: ${name} credentialType: ${credentialType} result: ${result}`)
+        Logger.info(TAG, `getAccountCredential success`)
         return result
     }
 
     async getAccountExtraInfo(name: string) {
         let result = await app.getAccountExtraInfo(name)
-        Logger.info(TAG, `getAccountExtraInfo name: ${name} result: ${result}`)
+        Logger.info(TAG, `getAccountExtraInfo success`)
         return result
     }
 
     async getAssociatedData(name: string, key: string) {
         let result = await app.getAssociatedData(name, key)
-        Logger.info(TAG, `getAssociatedData name: ${name} key: ${key} result: ${result}`)
+        Logger.info(TAG, `getAssociatedData success`)
         return result
     }
 }

@@ -44,6 +44,7 @@ struct Index {
   @State screenSizeText: string = ''
   @State offlineText: string = ''
   @State onlineText: string = ''
+  @State allCompleteText: string = ''
   private deviceTag: number = 0
   private deleteDevices: Array<deviceManager.DeviceInfo> = []
   private countCallBack: number = 0
@@ -174,7 +175,7 @@ struct Index {
     if (this.deviceTag < this.devices.length - dmsConst.ONE) {
       this.startAbility(this.devices[++this.deviceTag].deviceId)
     } else if (this.deviceTag === (this.devices.length - dmsConst.ONE) && this.isShowDialog) {
-      prompt.showToast({ message: $r('app.string.all_device_complete') })
+      prompt.showToast({ message: this.allCompleteText })
       this.isShowDialog = false
       this.isStart = false
     }
@@ -188,6 +189,7 @@ struct Index {
     this.screenSizeText = await this.convertResourceToString($r('app.string.record_screen_size'))
     this.offlineText = await this.convertResourceToString($r('app.string.offline'))
     this.onlineText = await this.convertResourceToString($r('app.string.online'))
+    this.allCompleteText = await this.convertResourceToString($r('app.string.all_device_complete'))
     await this.onInit()
     if (globalThis.isFA === 'isFA') {
       this.imageTranslate = 0

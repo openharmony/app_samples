@@ -22,6 +22,7 @@ export default class MainAbility extends Ability {
     onCreate(want, launchParam) {
         Logger.info(TAG, `[Demo] MainAbility onCreate`)
         globalThis.abilityWant = want
+        globalThis.context = this.context
     }
 
     onDestroy() {

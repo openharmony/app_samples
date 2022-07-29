@@ -20,14 +20,21 @@ import { NavigationBar } from '../common/NavigationBar'
 @Entry
 @Component
 struct Account {
-  private username: string = <string> router.getParams()['username']
-  private bundleName: string = <string> router.getParams()['bundleName']
+  @State email: string = <string> router.getParams()['email']
+  @State username: string = <string> router.getParams()['username']
+  @State signature: string = <string> router.getParams()['signature']
+  @State bundleName: string = <string> router.getParams()['bundleName']
 
   build() {
     Column() {
       NavigationBar({ title: $r('app.string.account'), flag: false })
 
-      AccountInfo({ bundleName: this.bundleName, username: this.username })
+      AccountInfo({
+        email: this.email,
+        username: this.username,
+        signature: this.signature,
+        bundleName: this.bundleName
+      })
     }
     .width('100%')
     .height('100%')

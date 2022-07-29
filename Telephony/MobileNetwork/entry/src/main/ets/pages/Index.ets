@@ -14,10 +14,21 @@
  */
 
 import { NetWork } from '../common/NetWork'
+import Logger from '../model/Logger'
+
+const TAG: string = '[Index]'
+
 
 @Entry
 @Component
 struct Index {
+  async aboutToAppear() {
+    let permissionState = 666
+    globalThis.context.requestPermissionsFromUser(['ohos.permission.GET_NETWORK_INFO'], permissionState, function (result) {
+      Logger.info(TAG, `grantPermission requestPermissionsFromUser result.requestCode = ${JSON.stringify(result)}`)
+    })
+  }
+
   build() {
     Column() {
       Row() {

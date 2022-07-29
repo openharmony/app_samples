@@ -27,9 +27,6 @@ export struct RegisterInfo {
   @State emailInfo: string = ''
   @State signature: string = ''
   @State confirmPassword: string = ''
-  private bundleName: string
-  private storage: AccountData = AccountData.getInstance()
-  private accountModel: AccountModel = new AccountModel()
   @State dataSet: Array<{
     text: Resource,
     inputType: InputType,
@@ -79,6 +76,9 @@ export struct RegisterInfo {
       promptText: $r('app.string.prompt_confirm_password')
     }
   ]
+  private bundleName: string = ''
+  private storage: AccountData = AccountData.getInstance()
+  private accountModel: AccountModel = new AccountModel()
 
   build() {
     Column() {
@@ -125,21 +125,18 @@ export struct RegisterInfo {
                 switch (item.event) {
                   case 0:
                     this.username = value
-                    Logger.info(TAG, `addAccount enter ${this.username}`)
                     if (this.username !== '') {
                       await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
                     }
                     break
                   case 1:
                     this.emailInfo = value
-                    Logger.info(TAG, `setAccountCredential enter ${this.emailInfo}`)
                     if (this.emailInfo !== '') {
                       await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
                     }
                     break
                   case 2:
                     this.signature = value
-                    Logger.info(TAG, `setAccountExtraInfo enter ${this.signature}`)
                     if (this.signature !== '') {
                       await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
                     }
@@ -256,7 +253,7 @@ export struct RegisterInfo {
           } else {
             await this.accountModel.setAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`, this.passWord)
             await this.storage.putStorageValue(this.username, this.passWord, this.bundleName)
-            await this.storage.putStorageValue(this.bundleName, 'true', this.bundleName)
+            await this.storage.putStorageValue(this.bundleName, 'true', `${this.username}_${this.bundleName}`)
             AlertDialog.show(
               {
                 message: $r('app.string.register_info'),

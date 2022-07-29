@@ -20,8 +20,8 @@ import { NavigationBar } from '../common/NavigationBar'
 @Entry
 @Component
 struct Modify {
-  private username: string = <string> router.getParams()["username"]
-  private bundleName: string = <string> router.getParams()["bundleName"]
+  @State username: string = <string> router.getParams()["username"]
+  @State bundleName: string = <string> router.getParams()["bundleName"]
 
   build() {
     Scroll() {

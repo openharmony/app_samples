@@ -19,17 +19,15 @@ import { NetworkMobile } from '../model/NetworkMobile'
 const TAG: string = '[NetWork]'
 
 @Extend(Text) function simId () {
-  .margin(4)
+  .margin(5)
   .fontSize(20)
   .width('40%')
-  .borderRadius(10)
   .textAlign(TextAlign.Center)
+  .borderRadius(10)
 }
 
 @Component
 export struct NetWork {
-  @State cellularDataState: Resource = $r('app.string.error')
-  @State cellularDataFlowType: Resource = $r('app.string.error')
   private slotId: number = -1
   private cellularData: boolean = false
   private cellularDataRoaming: boolean = false
@@ -42,57 +40,34 @@ export struct NetWork {
     Logger.info(TAG, `this cellularData = ${this.cellularData}`)
     this.cellularDataRoaming = await this.netWorkMobile.isCellularDataRoamingEnabled(this.slotId)
     Logger.info(TAG, `this cellularDataRoaming = ${this.cellularDataRoaming}`)
-    this.cellularDataFlowType = await this.netWorkMobile.getCellularDataFlowType()
-    Logger.info(TAG, `this cellularDataFlowType = ${this.cellularDataFlowType}`)
-    this.cellularDataState = await this.netWorkMobile.getCellularDataState()
-    Logger.info(TAG, `this concellularDataStateectTetx = ${this.cellularDataState}`)
   }
 
   @Builder dataState(text: Resource, flag: boolean) {
     Row() {
       Text(text)
+        .margin({ left: 10 })
         .fontSize(20)
         .width('55%')
-        .margin({ left: 10 })
         .textAlign(TextAlign.Start)
 
-      Text(flag ? $r('app.string.start') : $r('app.string.end'))
+      Text(flag === true ? $r('app.string.start') : $r('app.string.end'))
         .fontSize(20)
-        .layoutWeight(1)
         .margin({ left: 10, right: 6 })
         .textAlign(TextAlign.Center)
+        .layoutWeight(1)
     }
     .margin(10)
     .height('8%')
-  }
-
-  @Builder networkState(text: Resource, state: Resource) {
-    Column() {
-      Text(text)
-        .fontSize(20)
-        .width('100%')
-        .margin({ left: 10, top: 16, right: 10, bottom: 10 })
-        .textAlign(TextAlign.Start)
-
-      Text(state)
-        .fontSize(18)
-        .width('100%')
-        .margin({ left: 10 })
-        .textAlign(TextAlign.Start)
-    }
-    .margin(10)
-    .alignItems(HorizontalAlign.Start)
   }
 
   build() {
     Column() {
       Row() {
         Text($r('app.string.sim'))
-          .width('57%')
+          .margin({ left: 10 })
           .fontSize(20)
+          .width('60%')
           .textAlign(TextAlign.Start)
-          .margin({ left: 10, right: 10 })
-
         Row() {
           Text($r('app.string.simOne'))
             .simId()
@@ -100,7 +75,7 @@ export struct NetWork {
 
           Text($r('app.string.simTwo'))
             .simId()
-            .backgroundColor(this.slotId === 0 ? undefined : '#0D9FFB')
+            .backgroundColor(this.slotId === 1 ? '#0D9FFB' : undefined)
         }
         .width('35%')
         .borderRadius(10)
@@ -111,20 +86,11 @@ export struct NetWork {
 
       Divider()
 
-      this.dataState($r('app.string.mobile'), false)
+      this.dataState($r('app.string.mobile'), this.cellularData)
 
       Divider()
 
       this.dataState($r('app.string.roaming'), this.cellularDataRoaming)
-
-      Divider()
-
-      this.networkState($r('app.string.flow'), this.cellularDataFlowType)
-
-      Divider()
-
-      this.networkState($r('app.string.connectData'), this.cellularDataState)
-
     }
     .width('100%')
     .height('100%')

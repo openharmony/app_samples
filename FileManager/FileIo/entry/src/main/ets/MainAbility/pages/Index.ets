@@ -85,6 +85,7 @@ struct Index {
 
   delete_fileIo() {
     fileIo.unlinkSync(this.newPath)
+    this.readText = ''
     prompt.showToast({ message: 'delete_file success', duration: 2000 })
   }
 

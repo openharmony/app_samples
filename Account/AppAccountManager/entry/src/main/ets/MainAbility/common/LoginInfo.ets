@@ -24,7 +24,7 @@ const TAG: string = '[LoginInfo]'
 export struct LoginInfo {
   @State name: string = ''
   @State password: string = ''
-  private bundleName: string
+  @Prop bundleName: string
   private storage: AccountData = AccountData.getInstance()
   private accountModel: AccountModel = new AccountModel()
 
@@ -109,9 +109,7 @@ export struct LoginInfo {
         .type(ButtonType.Capsule)
         .onClick(async () => {
           let result = await this.storage.getStorageValue(this.name, this.bundleName)
-          Logger.info(TAG, `This result is ${result}`)
-          let effect = await this.storage.getStorageValue(this.bundleName, this.bundleName)
-          Logger.info(TAG, `getStorageValue effect is ${effect}`)
+          let effect = await this.storage.getStorageValue(this.bundleName, `${this.name}_${this.bundleName}`)
           if (this.name === '') {
             AlertDialog.show(
               {
@@ -141,10 +139,28 @@ export struct LoginInfo {
                 }
               })
           } else if (result === this.password && effect === 'true') {
+            let email: string = ''
+            let signature: string = ''
+            try {
+              email = await this.accountModel.getAccountCredential(`${this.name}_${this.bundleName}`, `email_${this.bundleName}`)
+              Logger.info(TAG, `getAccountCredential email is ${email}`)
+            } catch (err) {
+              email = ''
+              Logger.info(TAG, `getAccountCredential failed err is ${JSON.stringify(err)}`)
+            }
+            try {
+              signature = await this.accountModel.getAccountCredential(`${this.name}_${this.bundleName}`, `signature_${this.bundleName}`)
+              Logger.info(TAG, `getAccountExtraInfo signature is ${signature}`)
+            } catch (err) {
+              signature = ''
+              Logger.info(TAG, `getAccountExtraInfo failed err is ${JSON.stringify(err)}`)
+            }
             router.replace({
               url: 'pages/Account',
               params: {
+                email: email,
                 username: this.name,
+                signature: signature,
                 bundleName: this.bundleName
               }
             })

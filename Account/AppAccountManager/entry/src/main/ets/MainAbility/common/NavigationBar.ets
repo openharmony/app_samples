@@ -20,11 +20,11 @@ const TAG: string = '[NavigationBar]'
 
 @Component
 export struct NavigationBar {
-  private url: string
-  private flag: boolean
-  private title: Resource
-  private username: string
-  private bundleName: string
+  private url: string = ''
+  private username: string = ''
+  private bundleName: string = ''
+  private flag: boolean = undefined
+  private title: Resource = undefined
 
   build() {
     Row() {

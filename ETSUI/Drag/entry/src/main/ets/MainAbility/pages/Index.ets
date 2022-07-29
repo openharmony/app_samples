@@ -37,63 +37,12 @@ struct Index {
   @State movingIcon: Icon = { icon: $r('app.media.icon'), name: '' }
   @State hanlePopup: boolean[] = [false, false, false, false]
 
-  onDesktopIconDragStart(extraParams: string) {
-    HiLog.info(TAG, `bool-onStart:extraParams = ${JSON.stringify(extraParams)}`)
-    let jsonString = JSON.parse(extraParams)
-    this.desktopDragging = true
-    this.select = jsonString.selectedIndex
-    this.movingIcon = this.desktopIcons[this.select]
-    return this.pixelMapBuilder()
-  }
-
-  onDesktopIconDragDrop(extraParams: string) {
-    HiLog.info(TAG, `bool-onDrop:extraParams = ${JSON.stringify(extraParams)}`)
-    let jsonString = JSON.parse(extraParams)
-    this.insert = jsonString.insertIndex
-    if (this.desktopDragging) {
-      this.desktopIcons.splice(this.select, 1)
-      this.desktopIcons.splice(this.insert, 0, this.movingIcon)
-      this.dockDragging = false
-      this.desktopDragging = false
-    }
-  }
-
-  onDockIconDragStart(extraParams: string) {
-    HiLog.info(TAG, `boolBottom-onStart:extraParams = ${JSON.stringify(extraParams)}`)
-    let jsonString = JSON.parse(extraParams)
-    this.dockDragging = true
-    this.select = jsonString.selectedIndex
-    this.movingIcon = this.dockIcons[this.select]
-    return this.pixelMapBuilder()
-  }
-
-  onDockIconDragDrop(extraParams: string) {
-    HiLog.info(TAG, `boolBottom-onDrop:extraParams = ${JSON.stringify(extraParams)}`)
-    let jsonString = JSON.parse(extraParams)
-    this.insert = jsonString.insertIndex
-    if (this.dockDragging) {
-      this.dockIcons.splice(this.select, 1)
-      this.dockIcons.splice(this.insert, 0, this.movingIcon)
-      this.dockDragging = false
-      this.desktopDragging = false
-    }
-    if (this.desktopDragging) {
-      this.desktopIcons.splice(this.select, 1)
-      this.dockIcons.splice(this.insert, 0, this.movingIcon)
-      this.desktopDragging = false
-      this.dockDragging = false
-    }
-  }
-
   @Builder pixelMapBuilder() {
     Column() {
-      Text(this.movingIcon.name)
-        .width('50%')
-        .height(60)
-        .fontSize(16)
-        .borderRadius(10)
-        .textAlign(TextAlign.Center)
-        .backgroundColor(Color.Yellow)
+      Image(this.movingIcon.icon)
+        .width(70)
+        .height(70)
+        .objectFit(ImageFit.Fill)
     }
   }
 
@@ -125,7 +74,12 @@ struct Index {
             .margin(5)
           }
           .onDragStart((event: DragEvent, extraParams: string) => {
-            this.onDesktopIconDragStart(extraParams)
+            HiLog.info(TAG, `bool-onStart:extraParams = ${JSON.stringify(extraParams)}`)
+            let jsonString = JSON.parse(extraParams)
+            this.desktopDragging = true
+            this.select = jsonString.selectedIndex
+            this.movingIcon = this.desktopIcons[this.select]
+            return this.pixelMapBuilder
           })
         }, item => JSON.stringify(item))
       }
@@ -136,7 +90,15 @@ struct Index {
       .listDirection(Axis.Horizontal)
       .margin({ left: 10, right: 10 })
       .onDrop((event: DragEvent, extraParams: string) => {
-        this.onDesktopIconDragDrop(extraParams)
+        HiLog.info(TAG, `bool-onDrop:extraParams = ${JSON.stringify(extraParams)}`)
+        let jsonString = JSON.parse(extraParams)
+        this.insert = jsonString.insertIndex
+        if (this.desktopDragging) {
+          this.desktopIcons.splice(this.select, 1)
+          this.desktopIcons.splice(this.insert, 0, this.movingIcon)
+          this.dockDragging = false
+          this.desktopDragging = false
+        }
       })
 
       List() {
@@ -162,9 +124,13 @@ struct Index {
                 }
               ])
           }
-
           .onDragStart((event: DragEvent, extraParams: string) => {
-            this.onDockIconDragStart(extraParams)
+            HiLog.info(TAG, `boolBottom-onStart:extraParams = ${JSON.stringify(extraParams)}`)
+            let jsonString = JSON.parse(extraParams)
+            this.dockDragging = true
+            this.select = jsonString.selectedIndex
+            this.movingIcon = this.dockIcons[this.select]
+            return this.pixelMapBuilder
           })
         }, item => JSON.stringify(item))
       }
@@ -175,7 +141,21 @@ struct Index {
       .listDirection(Axis.Horizontal)
       .margin({ bottom: 10, left: 10, right: 10 })
       .onDrop((event: DragEvent, extraParams: string) => {
-        this.onDockIconDragDrop(extraParams)
+        HiLog.info(TAG, `boolBottom-onDrop:extraParams = ${JSON.stringify(extraParams)}`)
+        let jsonString = JSON.parse(extraParams)
+        this.insert = jsonString.insertIndex
+        if (this.dockDragging) {
+          this.dockIcons.splice(this.select, 1)
+          this.dockIcons.splice(this.insert, 0, this.movingIcon)
+          this.dockDragging = false
+          this.desktopDragging = false
+        }
+        if (this.desktopDragging) {
+          this.desktopIcons.splice(this.select, 1)
+          this.dockIcons.splice(this.insert, 0, this.movingIcon)
+          this.desktopDragging = false
+          this.dockDragging = false
+        }
       })
     }
     .width('100%')

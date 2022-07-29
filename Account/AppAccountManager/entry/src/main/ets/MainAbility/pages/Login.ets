@@ -20,7 +20,7 @@ import { NavigationBar } from '../common/NavigationBar'
 @Entry
 @Component
 struct Login {
-  private bundleName: string = <string> router.getParams()["bundleName"]
+  @State bundleName: string = <string> router.getParams()["bundleName"]
 
   build() {
     Column() {

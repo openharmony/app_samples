@@ -32,14 +32,19 @@
               "action.system.home"
             ]
           }
-        ],
-        "startWindowIcon": "$media:icon",
-        "startWindowBackground": "$color:white"
+        ]
       }
     ],
     "requestPermissions": [
       {
-        "name": "ohos.permission.GET_NETWORK_INFO"
+        "name": "ohos.permission.GET_NETWORK_INFO",
+        "reason": "$string:description_mainability",
+        "usedScene": {
+          "abilities": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
       }
     ]
   }

@@ -15,65 +15,41 @@
 
 import router from '@ohos.router'
 import Logger from '../model/Logger'
-import { AccountModel } from '../model/AccountModel'
 import { AccountData } from '../model/AccountData'
 
 const TAG: string = '[AccountInfo]'
 
 @Component
 export struct AccountInfo {
-  @State email: string = ''
-  @State username: string = ''
-  @State signature: string = ''
-  @State passWord: string = ''
-  private bundleName: string
+  @Prop email: string
+  @Prop username: string
+  @Prop signature: string
+  @Prop bundleName: string
   private storage: AccountData = AccountData.getInstance()
-  private accountModel: AccountModel = new AccountModel()
-  @State textData: Array<{
-    title: Resource,
-    value: string
-  }> = []
 
-  async aboutToAppear() {
-    this.passWord = await this.accountModel.getAssociatedData(`${this.username}_${this.bundleName}`, `key_${this.bundleName}`)
-    try {
-      this.email = await this.accountModel.getAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`)
-      Logger.info(TAG, `getAccountCredential email is ${this.email}`)
-    } catch (err) {
-      this.email = ''
+  @Builder infoShow(title: Resource, value: string) {
+    Row() {
+      Text(title)
+        .margin(10)
+        .fontSize(18)
+        .width('25%')
+        .textAlign(TextAlign.End)
+      Text(value)
+        .margin(10)
+        .width('55%')
+        .fontSize(20)
+        .textAlign(TextAlign.Start)
     }
-    try {
-      this.signature = await this.accountModel.getAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`)
-      Logger.info(TAG, `getAccountExtraInfo signature is ${this.signature}`)
-    } catch (err) {
-      this.signature = ''
-    }
-    this.textData = [
-      { title: $r('app.string.appname'), value: this.bundleName },
-      { title: $r('app.string.unusername'), value: this.username },
-      { title: $r('app.string.email'), value: this.email },
-      { title: $r('app.string.signature'), value: this.signature }
-    ]
+    .padding({ left: 5 })
   }
 
   build() {
     Scroll() {
       Column() {
-        ForEach(this.textData, (item) => {
-          Row() {
-            Text(item.title)
-              .margin(10)
-              .fontSize(18)
-              .width('25%')
-              .textAlign(TextAlign.End)
-            Text(item.value)
-              .margin(10)
-              .width('55%')
-              .fontSize(20)
-              .textAlign(TextAlign.Start)
-          }
-          .padding({ left: 5 })
-        }, item => item.value.toString())
+        this.infoShow($r('app.string.appname'), this.bundleName)
+        this.infoShow($r('app.string.unusername'), this.username)
+        this.infoShow($r('app.string.email'), this.email)
+        this.infoShow($r('app.string.signature'), this.signature)
 
         Button($r('app.string.modify'))
           .margin(10)
