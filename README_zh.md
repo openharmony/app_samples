@@ -148,7 +148,6 @@
   - [`ZipLib`：压缩与解压（eTS）（API9）](PackageManagement/ZipLib)
 - ResourcesSchedule
   - [`Flybird`：小鸟避障游戏（eTS）（API9）](ResourcesSchedule/Flybird)
-  - [`News`：新闻浏览（eTS）（API9）](ResourcesSchedule/News)
   - [`BackgroundTaskManager`：后台任务管理（eTS）（API8）](ResourcesSchedule/BackgroundTaskManager)
 - UI
   - [`AtomicLayout`：原子布局（JS）（API8）](UI/AtomicLayout)

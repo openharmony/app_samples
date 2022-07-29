@@ -131,7 +131,6 @@ We provide a series of app samples to help you quickly get familiar with the API
   - [`ZipLib`：zip&unzip(eTS)（API9）](PackageManagement/ZipLib)
 - ResourcesSchedule
   - [`Flybird`：Game（eTS）（API9）](ResourcesSchedule/Flybird)
-  - [`News`：News（eTS）（API9）](ResourcesSchedule/News)
   - [`BackgroundTaskManager`：Background Task Manager（eTS）（API8）](ResourcesSchedule/BackgroundTaskManager)
 - UI
   - [`AtomicLayout`：Atomic Layout（JS）（API8）](UI/AtomicLayout)
