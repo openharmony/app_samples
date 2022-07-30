@@ -28,18 +28,30 @@ const TAG: string = '[NetWork]'
 
 @Component
 export struct NetWork {
-  private slotId: number = -1
-  private cellularData: boolean = false
-  private cellularDataRoaming: boolean = false
+  @State slotId: number = -1
+  @State cellularData: boolean = false
+  @State cellularDataRoaming: boolean = false
   private netWorkMobile: NetworkMobile = new NetworkMobile()
 
   async aboutToAppear() {
-    this.slotId = await this.netWorkMobile.getDefaultCellularDataSlotId()
-    Logger.info(TAG, `this slotid = ${this.slotId}`)
-    this.cellularData = await this.netWorkMobile.isCellularDataEnabled()
-    Logger.info(TAG, `this cellularData = ${this.cellularData}`)
-    this.cellularDataRoaming = await this.netWorkMobile.isCellularDataRoamingEnabled(this.slotId)
-    Logger.info(TAG, `this cellularDataRoaming = ${this.cellularDataRoaming}`)
+    try {
+      this.slotId = await this.netWorkMobile.getDefaultCellularDataSlotId()
+      Logger.info(TAG, `this slotid = ${this.slotId}`)
+    } catch (err) {
+      Logger.info(TAG, `this slotid get is faile err = ${JSON.stringify(err)}`)
+    }
+    try {
+      this.cellularData = await this.netWorkMobile.isCellularDataEnabled()
+      Logger.info(TAG, `this cellularData = ${this.cellularData}`)
+    } catch (err) {
+      Logger.info(TAG, `this cellularData get is faile err = ${JSON.stringify(err)}`)
+    }
+    try {
+      this.cellularDataRoaming = await this.netWorkMobile.isCellularDataRoamingEnabled(this.slotId)
+      Logger.info(TAG, `this cellularDataRoaming = ${this.cellularDataRoaming}`)
+    } catch (err) {
+      Logger.info(TAG, `this cellularDataRoaming get is faile err = ${JSON.stringify(err)}`)
+    }
   }
 
   @Builder dataState(text: Resource, flag: boolean) {

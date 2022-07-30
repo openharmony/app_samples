@@ -58,7 +58,6 @@ class MediaUtils {
             let imageResource = await image.createImageSource(fd)
             let pixelMap = await imageResource.createPixelMap()
             await imageResource.release()
-            file.close(fd)
             return pixelMap
         }
         return null

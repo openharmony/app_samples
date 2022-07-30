@@ -35,4 +35,6 @@
 
 2.本示例需外接鼠标进行验证。
 
-3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+3.本示例不支持点击tab页签，切换网页并刷新页面。
+
+4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

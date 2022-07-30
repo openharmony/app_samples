@@ -191,3 +191,31 @@
     align-items: center;
     border-radius: 27vp;
 }
+
+@media screen and (min-aspect-ratio: 0.8) {
+    .list-item-div {
+        height: 25%;
+        width: 93.3%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        justify-content: space-around;
+        background-color:#FFFFFF;
+        border-radius: 12vp;
+    }
+
+    .text-top {
+        font-size: 18px;
+        font-weight: bold;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .text {
+        font-size: 12px;
+        justify-content: center;
+        align-content: center;
+        opacity: 0.5;
+    }
+}

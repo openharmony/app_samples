@@ -16,6 +16,7 @@
 .container {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -56,7 +57,7 @@ input {
 }
 
 .setnum {
-    flex-direction: column;
+    flex-direction: row;
     width: 90%;
     justify-content: flex-start;
     margin: 10px 0px;

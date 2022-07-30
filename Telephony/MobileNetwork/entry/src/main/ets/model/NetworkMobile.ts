@@ -20,7 +20,7 @@ const TAG: string = '[NetworkMobile]'
 
 export class NetworkMobile {
   async getDefaultCellularDataSlotId() {
-    let slotId = -1
+    let slotId: number = -1
     try {
       slotId = await data.getDefaultCellularDataSlotId()
       Logger.info(TAG, `getDefaultCellularDataSlotId slotId = ${slotId}`)
@@ -31,7 +31,7 @@ export class NetworkMobile {
   }
 
   async isCellularDataEnabled() {
-    let dataEnabled = undefined
+    let dataEnabled: boolean = undefined
     try {
       dataEnabled = await data.isCellularDataEnabled()
       Logger.info(TAG, `isCellularDataEnabled dataEnabled = ${dataEnabled}`)
@@ -42,7 +42,7 @@ export class NetworkMobile {
   }
 
   async isCellularDataRoamingEnabled(slotId: number) {
-    let dataRoamingEnabled = undefined
+    let dataRoamingEnabled: boolean = undefined
     try {
       dataRoamingEnabled = await data.isCellularDataRoamingEnabled(slotId)
       Logger.info(TAG, `isCellularDataRoamingEnabled dataRoamingEnabled = ${dataRoamingEnabled}`)

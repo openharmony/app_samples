@@ -180,6 +180,108 @@ stack {
     animation-timing-function: ease-out;
 }
 
+@media screen and (min-aspect-ratio: 0.8) {
+    .img0_1 {
+        animation-name: img_Row1;
+        animation-timing-function: linear;
+    }
+
+    .img0_2 {
+        animation-name: img_Row2;
+        animation-timing-function: linear;
+    }
+
+    .img1_1 {
+        animation-name: img_Row1;
+        animation-timing-function: ease-in;
+    }
+
+    .img1_2 {
+        animation-name: img_Row2;
+        animation-timing-function: ease-in;
+    }
+
+    .img2_1 {
+        animation-name: img_Row1;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img2_2 {
+        animation-name: img_Row2;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img3_1 {
+        animation-name: img_Row3;
+        animation-timing-function: linear;
+    }
+
+    .img3_2 {
+        animation-name: img_Row4;
+        animation-timing-function: linear;
+    }
+
+    .img4_1 {
+        animation-name: img_Row3;
+        animation-timing-function: ease-in;
+    }
+
+    .img4_2 {
+        animation-name: img_Row4;
+        animation-timing-function: ease-in;
+    }
+
+    .img5_1 {
+        animation-name: img_Row5;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img5_2 {
+        animation-name: img_Row6;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img6_1 {
+        animation-name: img_Row5;
+        animation-timing-function: linear;
+    }
+
+    .img6_2 {
+        animation-name: img_Row6;
+        animation-timing-function: linear;
+    }
+
+    .img7_1 {
+        animation-name: img_Row7;
+        animation-timing-function: ease-in;
+    }
+
+    .img7_2 {
+        animation-name: img_Row8;
+        animation-timing-function: ease-in;
+    }
+
+    .img8_1 {
+        animation-name: img_Row7;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img8_2 {
+        animation-name: img_Row8;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img9_1 {
+        animation-name: img_Row7;
+        animation-timing-function: ease-out;
+    }
+
+    .img9_2 {
+        animation-name: img_Row8;
+        animation-timing-function: ease-out;
+    }
+}
+
 @keyframes Text1 {
     from {
         transform: rotate(0deg);
@@ -268,5 +370,78 @@ stack {
 
     to {
         transform: translate(260px, 0px);
+    }
+}
+
+@keyframes img_Row1 {
+    from {
+        transform: translate(0px, 0px);
+    }
+
+    to {
+        transform: translate(0px, 280px);
+    }
+}
+@keyframes img_Row2 {
+    from {
+        transform: translate(0px, 280px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes img_Row3 {
+    from {
+        transform: translate(180px, 0px);
+    }
+
+    to {
+        transform: translate(180px, 280px);
+    }
+}
+@keyframes img_Row4 {
+    from {
+        transform: translate(180px, 280px);
+    }
+
+    to {
+        transform: translate(180px, 0px);
+    }
+}
+@keyframes img_Row5 {
+    from {
+        transform: translate(0px, 0px);
+    }
+
+    to {
+        transform: translate(500px, 280px);
+    }
+}
+@keyframes img_Row6 {
+    from {
+        transform: translate(500px, 280px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes img_Row7 {
+    from {
+        transform: translate(500px, 0px);
+    }
+
+    to {
+        transform: translate(500px, 280px);
+    }
+}
+@keyframes img_Row8 {
+    from {
+        transform: translate(500px, 280px);
+    }
+
+    to {
+        transform: translate(500px, 0px);
     }
 }

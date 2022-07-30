@@ -135,15 +135,9 @@ export struct ModifyInfo {
                 switch (item.event) {
                   case 0:
                     this.emailInfo = value
-                    if (this.emailInfo !== '') {
-                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
-                    }
                     break
                   case 1:
                     this.signature = value
-                    if (this.signature !== '') {
-                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
-                    }
                     break
                   case 2:
                     this.passWord = value
@@ -167,6 +161,12 @@ export struct ModifyInfo {
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
         .onClick(async () => {
+          if (this.emailInfo !== '') {
+            await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+          }
+          if (this.signature !== '') {
+            await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+          }
           let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
           let userPassWord = await this.storage.getStorageValue(this.username, this.bundleName)
           if (this.emailInfo !== '' && !res.test(this.emailInfo)) {

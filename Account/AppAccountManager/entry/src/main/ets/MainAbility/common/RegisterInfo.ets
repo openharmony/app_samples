@@ -125,21 +125,12 @@ export struct RegisterInfo {
                 switch (item.event) {
                   case 0:
                     this.username = value
-                    if (this.username !== '') {
-                      await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
-                    }
                     break
                   case 1:
                     this.emailInfo = value
-                    if (this.emailInfo !== '') {
-                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
-                    }
                     break
                   case 2:
                     this.signature = value
-                    if (this.signature !== '') {
-                      await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
-                    }
                     break
                   case 3:
                     this.passWord = value
@@ -163,6 +154,15 @@ export struct RegisterInfo {
         .fontColor(Color.White)
         .type(ButtonType.Capsule)
         .onClick(async () => {
+          if (this.username !== '') {
+            await this.accountModel.addAccount(`${this.username}_${this.bundleName}`)
+          }
+          if (this.emailInfo !== '') {
+            await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `email_${this.bundleName}`, this.emailInfo)
+          }
+          if (this.signature !== '') {
+            await this.accountModel.setAccountCredential(`${this.username}_${this.bundleName}`, `signature_${this.bundleName}`, this.signature)
+          }
           let res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
           let result = await this.storage.hasStorageValue(this.username, this.bundleName)
           Logger.info(TAG, `This result is ${result}`)
