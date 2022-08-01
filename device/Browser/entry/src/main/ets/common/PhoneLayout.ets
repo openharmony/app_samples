@@ -124,52 +124,56 @@ export struct PhoneLayout {
   }
 
   build() {
-    Navigation() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
-        Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center }) {
-          TextInput({ placeholder: '输入网址...', text: this.browser.inputValue })
-            .placeholderFont({ size: 16, weight: 500 })
-            .fontSize(16)
-            .margin(2)
-            .height(30)
-            .onChange((value: string) => {
-              Logger.info(TAG, `onChange`)
-              this.addr = value
-            })
-            .onSubmit((enterKey: EnterKeyType) => {
-              Logger.info(TAG, `onSubmit`)
-              this.browser.webControllerArray[this.browser.tabArrayIndex].controller.loadUrl({
-                url: `https://${this.addr}`
+    Column() {
+      Navigation() {
+        Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center }) {
+          Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center }) {
+            TextInput({ placeholder: '输入网址...', text: this.browser.inputValue })
+              .placeholderFont({ size: 16, weight: 500 })
+              .fontSize(16)
+              .margin(2)
+              .height(30)
+              .onChange((value: string) => {
+                Logger.info(TAG, `onChange`)
+                this.addr = value
               })
+              .onSubmit((enterKey: EnterKeyType) => {
+                Logger.info(TAG, `onSubmit`)
+                this.browser.webControllerArray[this.browser.tabArrayIndex].controller.loadUrl({
+                  url: `https://${this.addr}`
+                })
+                this.addr = ''
+              })
+            Button({ type: ButtonType.Normal }) {
+              Image($r('app.media.submit'))
+            }
+            .margin(8)
+            .width(BUTTON_WIDTH)
+            .height(BUTTON_WIDTH)
+            .backgroundColor(this.hasDown ? DOWN_COLOR : UP_COLOR)
+            .borderRadius(BUTTON_RADIUS)
+            .flexShrink(0)
+            .onTouch((event: TouchEvent) => {
+              if (event.type === TouchType.Down) {
+                this.hasDown = true
+              } else if (event.type === TouchType.Up) {
+                this.hasDown = false
+              }
+            })
+            .onClick((event: ClickEvent) => {
+              this.browser.loadUrl(this.addr)
               this.addr = ''
             })
-          Button({ type: ButtonType.Normal }) {
-            Image($r('app.media.submit'))
           }
-          .margin(8)
-          .width(BUTTON_WIDTH)
-          .height(BUTTON_WIDTH)
-          .backgroundColor(this.hasDown ? DOWN_COLOR : UP_COLOR)
-          .borderRadius(BUTTON_RADIUS)
-          .flexShrink(0)
-          .onTouch((event: TouchEvent) => {
-            if (event.type === TouchType.Down) {
-              this.hasDown = true
-            } else if (event.type === TouchType.Up) {
-              this.hasDown = false
-            }
-          })
-          .onClick((event: ClickEvent) => {
-            this.browser.loadUrl(this.addr)
-            this.addr = ''
-          })
-        }
 
-        WebTab({ browser: $browser, isPhone: $isPhone })
+          Column() {
+            WebTab({ browser: $browser, isPhone: $isPhone })
+          }
+        }
       }
+      .hideTitleBar(true)
+      .toolBar(this.ToolBar)
+      .hideBackButton(true)
     }
-    .hideTitleBar(true)
-    .toolBar(this.ToolBar) //待手机验证
-    .hideBackButton(true)
   }
 }
