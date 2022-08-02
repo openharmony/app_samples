@@ -14,108 +14,118 @@
  */
 
 import animator from '@ohos.animator';
-import Logger from '../../common/Logger'
+import mediaQuery from '@ohos.mediaquery';
+import Logger from '../../common/Logger';
 
 const TAG = '[index]'
 
 export default {
-    data: {
-        sunLeft: 0,
-        sunBottom: 0,
-        divLeft: 600,
-        divBottom: 0,
-        isPlay: false
-    },
-    sunAnimator: null,
-    moonAnimator: null,
+  data: {
+    sunLeft: 0,
+    sunBottom: 0,
+    divLeft: 600,
+    divBottom: 0,
+    isPlay: false,
+    heightScale: 1.0,
+    listener: mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
+  },
+  sunAnimator: null,
+  moonAnimator: null,
 
-    onInit() {
-        this.sunAnimator = animator.createAnimator({
-            duration: 5000,
-            delay: 0,
-            easing: 'cubic-bezier(0.5,0.8,0.5,0.2)',
-            fill: 'none',
-            direction: 'normal',
-            iterations: 1,
-            begin: 0.0,
-            end: 600.0
-        });
+  onInit() {
+    this.sunAnimator = animator.createAnimator({
+      duration: 5000,
+      delay: 0,
+      easing: 'cubic-bezier(0.5,0.8,0.5,0.2)',
+      fill: 'none',
+      direction: 'normal',
+      iterations: 1,
+      begin: 0.0,
+      end: 600.0
+    });
 
-        this.moonAnimator = animator.createAnimator({
-            duration: 5000,
-            delay: 5000,
-            easing: 'cubic-bezier(0.5,0.8,0.5,0.2)',
-            fill: 'none',
-            direction: 'normal',
-            iterations: 1,
-            begin: 600.0,
-            end: 0.0
-        })
-    },
-    rise() {
-        Logger.info(TAG, `rise onclick the rise`)
-        this.sunAnimator.onframe = (value) => {
-            if (value > 300) {
-                this.sunBottom = 600 - value
-            } else {
-                this.sunBottom = value
-            }
-            this.sunLeft = value
-        };
-        this.sunAnimator.play();
-        Logger.info(TAG, `rais play`)
-    },
-    fall() {
-        Logger.info(TAG, `onclick the fall`)
-        this.moonAnimator.onframe = (value) => {
-            if (parseInt(value) < 300) {
-                this.divBottom = -value
-            } else {
-                this.divBottom = value - 600
-            }
-            this.divLeft = value
-        }
-        this.moonAnimator.play()
-        Logger.info(TAG, `fall play`)
-    },
-
-    start() {
-        Logger.info(TAG, `this.isPlay=${this.isPlay}`)
-        if (!this.isPlay) {
-            this.isPlay = true
-            this.rise()
-            this.fall()
-        }
-        this.moonAnimator.onfinish = () => {
-            this.isPlay = false
-        }
-    },
-
-    pause() {
-        if (this.isPlay) {
-            this.sunAnimator.pause()
-            Logger.info(TAG, `isPlay=${this.isPlay}`)
-            this.moonAnimator.pause()
-            this.isPlay = false
-        }
-    },
-
-    stop() {
-        if (this.isPlay) {
-            this.sunAnimator.finish()
-            this.moonAnimator.finish()
-            this.isPlay = false
-        }
-    },
-
-    reverse() {
-        this.sunAnimator.reverse()
-        this.moonAnimator.reverse()
-        this.sunAnimator.play()
-        this.moonAnimator.play()
-        this.isPlay = true
-        this.moonAnimator.onfinish = () => {
-            this.isPlay = false
-        }
+    this.moonAnimator = animator.createAnimator({
+      duration: 5000,
+      delay: 5000,
+      easing: 'cubic-bezier(0.5,0.8,0.5,0.2)',
+      fill: 'none',
+      direction: 'normal',
+      iterations: 1,
+      begin: 600.0,
+      end: 0.0
+    })
+    this.listener.on("change", (data) => {
+      if (data.matches) {
+        this.heightScale = 3.5
+      }else{
+        this.heightScale = 1.0
+      }
+    })
+  },
+  rise() {
+    Logger.info(TAG, `rise onclick the rise`)
+    this.sunAnimator.onframe = (value) => {
+      if (value > 300) {
+        this.sunBottom = (600 - value) / this.heightScale
+      } else {
+        this.sunBottom = value / this.heightScale
+      }
+      this.sunLeft = value
+    };
+    this.sunAnimator.play();
+    Logger.info(TAG, `rais play`)
+  },
+  fall() {
+    Logger.info(TAG, `onclick the fall`)
+    this.moonAnimator.onframe = (value) => {
+      if (parseInt(value) < 300) {
+        this.divBottom = -value / this.heightScale
+      } else {
+        this.divBottom = (value - 600) / this.heightScale
+      }
+      this.divLeft = value
     }
+    this.moonAnimator.play()
+    Logger.info(TAG, `fall play`)
+  },
+
+  start() {
+    Logger.info(TAG, `this.isPlay=${this.isPlay}`)
+    if (!this.isPlay) {
+      this.isPlay = true
+      this.rise()
+      this.fall()
+    }
+    this.moonAnimator.onfinish = () => {
+      this.isPlay = false
+    }
+  },
+
+  pause() {
+    if (this.isPlay) {
+      this.sunAnimator.pause()
+      Logger.info(TAG, `isPlay=${this.isPlay}`)
+      this.moonAnimator.pause()
+      this.isPlay = false
+    }
+  },
+
+  stop() {
+    if (this.isPlay) {
+      this.sunAnimator.finish()
+      this.moonAnimator.finish()
+      this.isPlay = false
+    }
+  },
+
+  reverse() {
+    this.sunAnimator.reverse()
+    this.moonAnimator.reverse()
+    this.sunAnimator.play()
+    this.moonAnimator.play()
+    this.isPlay = true
+    this.moonAnimator.onfinish = () => {
+      this.isPlay = false
+    }
+  }
 }

@@ -25,7 +25,7 @@ export struct Setting {
   @State flag: boolean= false
   @State inSetValue: number= 40
 
-  brightness() {
+  setBrightness() {
     brightness.setValue(this.inSetValue)
   }
 
@@ -88,7 +88,7 @@ export struct Setting {
           .selectedColor(0xCCCCCC)
           .onChange((value: number, mode: SliderChangeMode) => {
             this.inSetValue = value
-            this.brightness()
+            this.setBrightness()
           })
       }
       .height(62)

@@ -19,7 +19,7 @@
   <grid-container>
     <grid-row style="flex-wrap : wrap;">
       <grid-col for="list" xs="2" sm="4" md="4" lg="6">
-        <div style="padding : 6;">
+        <div style="padding : 6px;">
           <div class="pageBox" style="width : 100%;">
             <div class="pageBox1"></div>
             <div class="pageBox2">
@@ -31,7 +31,7 @@
       </grid-col>
       <grid-col if="{{ isWidescreen }}" for="list" sm='{"span":4,"offset":4}' md='{"span":4,"offset":4}'
                 lg='{"span":6,"offset":6}'>
-        <div style="padding : 6;">
+        <div style="padding : 6px;">
           <div class="pageBox" style="width : 100%;">
             <div class="pageBox1"></div>
             <div class="pageBox2">

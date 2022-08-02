@@ -70,9 +70,6 @@ export default {
     keyDown: function () {
         this.down = 'down keyed';
     },
-    touchCancel: function () {
-        this.touchcancel = 'canceled';
-    },
     touchEnd: function () {
         this.touchend = 'ended';
     },
@@ -95,6 +92,10 @@ export default {
         this.opacityParam = 'animation-opacity';
     },
     update() {
+        this.commentText = !this.commentText;
+    },
+    delete() {
+        this.inputValue = ''
         this.commentText = !this.commentText;
     },
     updateValue(e) {
