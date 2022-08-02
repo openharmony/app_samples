@@ -57,7 +57,8 @@ main
 |   |---Index.ets // Index的UI界面代码
 |---model // 数据
 |   |---IndexData.ts // Index数据模型
-|   |---MockData.ts // Mock数据
+|---mock // Mock数据
+|   |---MockIndexData.ts // IndexData的mock数据
 |---net // 网络
 |   |---IndexApi.ts // 网络接口
 ```
@@ -88,4 +89,5 @@ Signed-off-by: jiangwensai <jiangwensai@huawei.com>
 2. 相关概念：需要介绍本sample的主要实现原理，如使用了什么API、有什么关键性的配置和实现等等；
 3. 相关权限：介绍应用的使用权限；
 4. 使用说明：介绍应用的操作步骤和使用方法；
-5. 约束与限制：说明应用的运行操作系统版本、IDE版本、API版本等信息；
+5. 依赖： 介绍对其他sample的依赖，附上sample链接
+6. 约束与限制：说明应用的运行操作系统版本、IDE版本、API版本等信息；
