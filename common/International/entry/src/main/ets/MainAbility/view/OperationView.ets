@@ -14,14 +14,14 @@
  */
 @Component
 export default struct OperationView {
-  private key: string | Resource = ''
+  private mKey: string | Resource = ''
   private showArrow: boolean = true
   private handleClick: () => void
   @Prop value: string
 
   build() {
     Row() {
-      Text(this.key)
+      Text(this.mKey)
         .fontSize(25)
         .margin({ top: 20, bottom: 20 })
       Blank()

@@ -49,7 +49,7 @@ struct Index {
     Column() {
       TitleBar()
       ForEach(this.operations, (item, index) => {
-        OperationView({ key: item, value: '', handleClick: () => {
+        OperationView({ mKey: item, value: '', handleClick: () => {
           router.push({
             url: operationUrls[index]
           })

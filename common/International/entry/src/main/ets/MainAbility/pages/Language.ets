@@ -152,7 +152,7 @@ struct Language {
           .padding({ left: 10, right: 10 })
 
           this.LanguageView()
-          OperationView({ key: $r('app.string.add_language'), value: '', showArrow: false, handleClick: () => {
+          OperationView({ mKey: $r('app.string.add_language'), value: '', showArrow: false, handleClick: () => {
             router.push({
               url: 'pages/AddLanguage'
             })
@@ -161,7 +161,7 @@ struct Language {
             .fontSize(20).fontColor(Color.Gray)
             .width('95%')
             .margin({ top: 20 })
-          OperationView({ key: $r('app.string.current_region'), value: this.currentRegion, handleClick: () => {
+          OperationView({ mKey: $r('app.string.current_region'), value: this.currentRegion, handleClick: () => {
             router.push({
               url: 'pages/Region',
               params: {

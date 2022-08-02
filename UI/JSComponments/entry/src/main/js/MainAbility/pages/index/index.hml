@@ -43,7 +43,7 @@
                 <div if="{{ commentText }}">
                     <text class="comment-text" focusable="true">{{ inputValue }}
                     </text>
-                    <text class="comment-key" onclick="update" focusable="true">
+                    <text class="comment-key" onclick="delete" focusable="true">
                         Delete
                     </text>
                 </div>
@@ -178,10 +178,6 @@
             </div>
             <div class="gesture-text-container" ontouchend="touchEnd">
                 <text class="gesture-text-style">{{ touchend }}
-                </text>
-            </div>
-            <div class="gesture-text-container" ontouchcancel="touchCancel">
-                <text class="gesture-text-style">{{ touchcancel }}
                 </text>
             </div>
             <div class="gesture-text-container" onlongpress="longPress">

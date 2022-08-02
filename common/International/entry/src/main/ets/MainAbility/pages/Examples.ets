@@ -26,7 +26,7 @@ struct Examples {
   @State language: string = ''
   @State numberFormat: Array<string> = []
   @State pluralFormat: string = ''
-  @State direction: string = ''
+  @State mDirection: string = ''
 
   aboutToAppear() {
     this.getLanguage()
@@ -37,8 +37,8 @@ struct Examples {
 
   async getPluralFormat() {
     this.pluralFormat = await ResourceUtil.getPluralString($r('app.plural.eat_apple').id, 5)
-    this.direction = await ResourceUtil.getString($r('app.string.screen_direction').id)
-    this.direction += await ResourceUtil.getDirection()
+    this.mDirection = await ResourceUtil.getString($r('app.string.screen_direction').id)
+    this.mDirection += await ResourceUtil.getDirection()
   }
 
   getTimeDisplay() {
@@ -71,7 +71,7 @@ struct Examples {
           this.TextView(item)
         }, item => item)
         this.TextView(this.pluralFormat)
-        this.TextView(this.direction)
+        this.TextView(this.mDirection)
       }
       .width('95%')
       .padding(10)

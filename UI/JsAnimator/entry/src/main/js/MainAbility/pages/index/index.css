@@ -14,70 +14,76 @@
  */
 
 .container {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    opacity: 0.75;
-    background-color: #F2F3F5;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  background-color: #F2F3F5;
 }
 
 .title {
-    align-items: center;
-    font-size: 30fp;
-    text-align: center;
-    width: 100%;
-    height: 6%;
-    background-color: deepskyblue;
+  align-items: center;
+  font-size: 30fp;
+  text-align: center;
+  width: 100%;
+  height: 8%;
+  background-color: deepskyblue;
 }
 
 .sunAnimation {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 40%;
 }
 
 .moonAnimation {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 40%;
 }
 
 .image-sun {
-    width: 160px;
-    height: 120px;
+  width: 160px;
+  height: 120vp;
+  object-fit: contain;
 }
 
 .image-moon {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120vp;
+  object-fit: contain;
 }
 
 .divider {
-    height: 2%;
+  height: 2%;
 }
 
 .div-button {
-    height: 20%;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  height: 15%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .button {
-    height: 150px;
-    width: 150px;
+  height: 100%;
+  width: 150px;
+}
+
+.image-button {
+  object-fit: contain;
 }
 
 .button-reverse {
-    height: 135px;
-    width: 135px;
+  height: 100%;
+  width: 135px;
 }

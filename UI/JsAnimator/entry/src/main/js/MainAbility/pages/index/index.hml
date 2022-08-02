@@ -14,29 +14,29 @@
  -->
 
 <div class="container">
-    <div class="title">
-        <text>JsAnimator</text>
+  <div class="title">
+    <text>JsAnimator</text>
+  </div>
+  <div class="sunAnimation">
+    <div style="left : {{ sunLeft }}; bottom : {{ sunBottom }};" onclick="rise">
+      <image src="../../common/image/sun.png" class="image-sun"></image>
     </div>
-    <div class="sunAnimation">
-        <div style="left : {{ sunLeft }}; bottom : {{ sunBottom }};" onclick="rise">
-            <image src="../../common/image/sun.png" class="image-sun"></image>
-        </div>
+  </div>
+  <div class="moonAnimation">
+    <div style="left : {{ divLeft }}; bottom : {{ divBottom }};" onclick="fall">
+      <image src="../../common/image/moon.png" class="image-moon"></image>
     </div>
-    <div class="moonAnimation">
-        <div style="left : {{ divLeft }}; bottom : {{ divBottom }};" onclick="fall">
-            <image src="../../common/image/moon.png" class="image-moon"></image>
-        </div>
+  </div>
+  <div class="div-button">
+    <div class="button">
+      <image class="image-button" src="../../common/image/stop.png" on:click="stop"></image>
     </div>
-    <div class="div-button">
-        <div class="button">
-            <image src="../../common/image/stop.png" on:click="stop"></image>
-        </div>
-        <div class="button">
-            <image if="{{ isPlay }}" src="../../common/image/pause.png" on:click="pause"></image>
-            <image else src="../../common/image/play.png" on:click="start"></image>
-        </div>
-        <div class="button-reverse" on:click="reverse">
-            <image src="../../common/image/reset.png"></image>
-        </div>
+    <div class="button">
+      <image class="image-button" if="{{ isPlay }}" src="../../common/image/pause.png" on:click="pause"></image>
+      <image class="image-button" else src="../../common/image/play.png" on:click="start"></image>
     </div>
+    <div class="button-reverse" on:click="reverse">
+      <image class="image-button" src="../../common/image/reset.png"></image>
+    </div>
+  </div>
 </div>

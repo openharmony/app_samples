@@ -57,7 +57,7 @@ struct Index {
     }
   ]
 
-  brightness() {
+  setBrightness() {
     brightness.setValue(this.value)
   }
 
@@ -126,14 +126,14 @@ struct Index {
       .onAction((event: GestureEvent) => {
         if (0 <= event.angle) {
           this.value -= 20
-          this.brightness()
+          this.setBrightness()
         } else {
           this.value += 20
-          this.brightness()
+          this.setBrightness()
         }
         if (this.value > 255) {
           this.value = 0
-          this.brightness()
+          this.setBrightness()
         }
       })
     )

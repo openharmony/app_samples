@@ -170,7 +170,8 @@ struct FoodCategory {
           FoodGrid({ foodItems: this.foodItems.filter(item => (item.category === Category.Dessert)) })
         }.tabBar('Dessert')
       }
-      .barWidth(280)
+      .barWidth('80%')
+      .barHeight(70)
       .barMode(BarMode.Scrollable)
     }
   }

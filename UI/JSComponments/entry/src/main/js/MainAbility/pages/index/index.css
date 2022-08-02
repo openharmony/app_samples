@@ -229,8 +229,9 @@
 
 .animation-button {
     width: 200px;
+    height: 70px;
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #09ba07;
 }
 

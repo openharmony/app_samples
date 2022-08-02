@@ -70,10 +70,10 @@ struct StrCodec {
           .width(300)
           .margin({ top: 20 })
           .onClick(() => {
-            this.specStrInput_f = util.printf("%f", "HarmonyOS 3.0");
-            this.SpecStrInput_i = util.printf("%i", "HarmonyOS 3.0");
-            this.SpecStrInput_d = util.printf("%d", "HarmonyOS 3.0");
-            this.SpecStrInput_s = util.printf("%s", "HarmonyOS 3.0");
+            this.specStrInput_f = util.printf("%f", "OpenHarmony 3.0");
+            this.SpecStrInput_i = util.printf("%i", "OpenHarmony 3.0");
+            this.SpecStrInput_d = util.printf("%d", "OpenHarmony 3.0");
+            this.SpecStrInput_s = util.printf("%s", "OpenHarmony 3.0");
           })
           .backgroundColor("#0D9FFB")
 
@@ -128,8 +128,8 @@ struct StrCodec {
             var textEncoder = new  util.TextEncoder()
             var buffer = new ArrayBuffer(100)
             resArray = new Uint8Array(buffer);
-            resArray = textEncoder.encode("HarmonyOS 3.0，未来有迹可循！");
-            var resArratNum = textEncoder.encodeInto("HarmonyOS 3.0，未来有迹可循！", resArray)
+            resArray = textEncoder.encode("OpenHarmony 3.0，未来有迹可循！");
+            var resArratNum = textEncoder.encodeInto("OpenHarmony 3.0，未来有迹可循！", resArray)
             this.resen = resArray.toString();
             this.read = JSON.stringify(resArratNum.read)
             this.write = JSON.stringify(resArratNum. written)
