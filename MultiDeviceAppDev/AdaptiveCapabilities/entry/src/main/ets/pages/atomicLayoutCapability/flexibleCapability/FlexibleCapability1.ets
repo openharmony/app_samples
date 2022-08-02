@@ -15,14 +15,14 @@
 @Entry
 @Component
 struct FlexibleCapability1 {
-  @State width: number = 1000
+  @State sliderWidth: number = 1000
 
   @Builder slider() {
-    Slider({ value: this.width, min: 402, max: 1000, style: SliderStyle.OutSet })
+    Slider({ value: this.sliderWidth, min: 402, max: 1000, style: SliderStyle.OutSet })
       .blockColor(Color.White)
       .width('60%')
       .onChange((value: number) => {
-        this.width = value
+        this.sliderWidth = value
       })
       .position({ x: '20%', y: '80%' })
   }
@@ -50,7 +50,7 @@ struct FlexibleCapability1 {
             .backgroundColor('#FFFFFF')
             .flexGrow(0)
             .flexShrink(1)
-        }.width(this.width)
+        }.width(this.sliderWidth)
       }
 
       this.slider()

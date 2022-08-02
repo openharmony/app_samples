@@ -15,24 +15,24 @@
 @Entry
 @Component
 struct ScaleCapability {
-  @State width: number = 400
-  @State height: number = 400
+  @State sliderWidth: number = 400
+  @State sliderHeight: number = 400
 
   @Builder slider() {
-    Slider({ value: this.width, min: 100, max: 400, style: SliderStyle.OutSet })
+    Slider({ value: this.sliderWidth, min: 100, max: 400, style: SliderStyle.OutSet })
       .blockColor(Color.White)
       .width('60%')
       .height(50)
       .onChange((value: number) => {
-        this.width = value
+        this.sliderWidth = value
       })
       .position({ x: '20%', y: '80%' })
-    Slider({ value: this.height, min: 100, max: 400, style: SliderStyle.OutSet })
+    Slider({ value: this.sliderHeight, min: 100, max: 400, style: SliderStyle.OutSet })
       .blockColor(Color.White)
       .width('60%')
       .height(50)
       .onChange((value: number) => {
-        this.height = value
+        this.sliderHeight = value
       })
       .position({ x: '20%', y: '87%' })
   }
@@ -47,8 +47,8 @@ struct ScaleCapability {
         .border({ width: 2, color: "#66F1CCB8" })
       }
       .backgroundColor("#FFFFFF")
-      .height(this.width)
-      .width(this.height)
+      .height(this.sliderHeight)
+      .width(this.sliderWidth)
 
       this.slider()
     }
