@@ -7,21 +7,21 @@ const nativePageLifecycle = nativerender.getContext(ContextType.JSPAGE_LIFECYCLE
 @Component
 struct Index {
   private context = null;
-  private aboutToAppear(): void  {
+  aboutToAppear() {
     console.log('[LIFECYCLE-Index] aboutToAppear');
     nativePageLifecycle.aboutToAppear();
   }
-  private aboutToDisappear(): void {
+  aboutToDisappear() {
     console.log('[LIFECYCLE-Index] aboutToDisappear');
     nativePageLifecycle.aboutToDisappear();
   }
 
-  private onPageShow(): void  {
+  onPageShow() {
     console.log('[LIFECYCLE-Page] onPageShow');
     nativePageLifecycle.onPageShow();
   }
 
-  private onPageHide(): void  {
+  onPageHide() {
     console.log('[LIFECYCLE-Page] onPageHide');
     nativePageLifecycle.onPageHide();
   }

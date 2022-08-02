@@ -27,11 +27,11 @@ struct RepeatSample {
     }
   }
 
-  private aboutToAppear(): void {
+  aboutToAppear() {
     this.listener.on('change', this.onWidthChange)
   }
 
-  private aboutToDisappear(): void {
+  aboutToDisappear() {
     this.listener.off('change', this.onWidthChange)
   }
 
