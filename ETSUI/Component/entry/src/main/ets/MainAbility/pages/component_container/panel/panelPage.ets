@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
  * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +31,8 @@ struct PanelPage {
   @State fullHeight: number = 300
   @State halfHeight: number = 150
   @State miniHeight: number = 50
+  @State miniValue: boolean = true
+  @State halfValue: boolean = true
 
   build() {
     Column() {
@@ -101,6 +104,11 @@ struct PanelPage {
                 .width('100%')
                 .onClick(() => {
                   this.typeId = item
+                  if (item == 0) {
+                    this.halfValue  = false
+                  } else if (item == 2){
+                    this.miniValue = false
+                  }
                 })
             }
           }, item => item.toString())
@@ -125,6 +133,7 @@ struct PanelPage {
                 })
             }
           }, item => item.toString())
+
           GridItem() {
             Text('dragBar：')
               .fontSize(15)

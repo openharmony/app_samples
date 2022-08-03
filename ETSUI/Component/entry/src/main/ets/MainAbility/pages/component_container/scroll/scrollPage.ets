@@ -27,7 +27,7 @@ struct ScrollPage {
   @State scrollableDescribe: string[] = ['Horizontal', 'Vertical', 'None']
   @State barStateId: number = 1
   @State barState: BarState[] = [BarState.Off, BarState.On, BarState.Auto]
-  @State barStateDescribe: string[] = ['Horizontal', 'Vertical', 'None']
+  @State barStateDescribe: string[] = ['off', 'on', 'auto']
   @State colorId: number = 0
   @State color: Color[] = [Color.Green, Color.Orange, Color.Pink, Color.Yellow]
   @State colorDescribe: string[] = ['Green', 'Orange', 'Pink', 'Yellow']

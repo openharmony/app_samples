@@ -187,6 +187,9 @@ struct TextPage {
                   .width(120)
                   .onClick(() => {
                     this.textOverflowId = item
+                    if (item == 0) {
+                      this.lines = 1
+                    } else {this.lines = 5}
                   })
               }, item => item.toString())
             }

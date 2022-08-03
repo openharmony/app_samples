@@ -22,12 +22,12 @@
     -   [DataPanel](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/dataPanel/dataPanelPage.ets)
     -   [Divider](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/divider/dividerPage.ets)
     -   [Gauge](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/gauge/gaugePage.ets)
-    -   [Image](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/image/imagePage.ets)
+    <!-- -   [Image](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/image/imagePage.ets) -->
     -   [Marquee](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/marquee/marqueePage.ets)
     -   [Menu](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/menu/menuPage.ets)
     -   [Progress](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/progress/progressPage.ets)
     -   [QRCode](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/qrCode/QRCodePage.ets)
-    -   [Rating](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/rating/ratingPage.ets)
+    <!-- -   [Rating](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/rating/ratingPage.ets) -->
     -   [Span](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/span/spanPage.ets)
     -   [Slider](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/slider/sliderPage.ets)
     -   [Text](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_basis/text/textPage.ets)
@@ -40,7 +40,7 @@
     -   [Column](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/Column/ColumnPage.ets)
     -   [Counter](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/Counter/counterPage.ets)
     -   [Flex](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/flex/flexPage.ets)
-    -   [Grid](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/grid/gridPage.ets)
+    <!-- -   [Grid](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/grid/gridPage.ets) -->
     -   [List](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/list/listPage.ets)
     -   [Navigator](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/navigator/navigatorPage.ets)
     -   [Panel](https://gitee.com/openharmony/app_samples/tree/master/ETSUI/Component/entry/src/main/ets/MainAbility/pages/component_container/panel/panelPage.ets)

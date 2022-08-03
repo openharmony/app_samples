@@ -30,7 +30,7 @@ const componentBasisItems = [
   { title: "Menu", url: 'pages/component_basis/menu/menuPage' },
   { title: "Gauge", url: 'pages/component_basis/gauge/gaugePage' },
   { title: "DataPanel", url: 'pages/component_basis/dataPanel/dataPanelPage' },
-  { title: "Progress", url: 'pages/component_basis/progress/progressPage' },,
+  { title: "Progress", url: 'pages/component_basis/progress/progressPage' },
   { title: "TextInput", url: 'pages/component_basis/textInput/textInputPage' },
 ]
 
