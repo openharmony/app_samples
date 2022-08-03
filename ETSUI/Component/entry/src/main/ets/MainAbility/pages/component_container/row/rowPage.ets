@@ -21,38 +21,17 @@ struct RowPage {
   @State alignItemsId: number = 0
   @State alignItems: VerticalAlign[] = [VerticalAlign.Top, VerticalAlign.Center, VerticalAlign.Bottom]
   @State alignItemsDescribe: string[] = ['Top', 'Center', 'Bottom']
+  @State flexItemsId: number = 0
+  @State flexItems: FlexAlign[] = [FlexAlign.Center, FlexAlign.Start, FlexAlign.End]
+  @State flexItemsDescribe: string[] = ['Center', 'Start', 'End']
   @State space: number = 0
   @State useAlign: string = 'Top'
-  @State edgeId: number = 0
-  @State edge: Edge[] = [Edge.Bottom, Edge.Top, Edge.Baseline, Edge.Center, Edge.Middle]
-  @State edgeDescribe: string[] = ['Top', 'Center', 'Bottom']
-  @State offset: number = 0
+  @State flexAlign: string = 'Top'
 
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        if (this.useAlign == 'Top') {
-          Row({ space: this.space }) {
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Orange)
 
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Yellow)
-
-            Row() {
-            }.width(40).height(40).backgroundColor(Color.Green)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Red)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Pink)
-          }
-          .width(300)
-          .height(300)
-          .border({ width: 1 })
-          .alignItems(this.alignItems[this.alignItemsId])
-        } else if (this.useAlign == 'Center') {
           Row({ space: this.space }) {
             Row() {
             }.width(50).height(50).backgroundColor(Color.Orange)
@@ -73,7 +52,7 @@ struct RowPage {
           .height(300)
           .border({ width: 1 })
           .alignItems(this.alignItems[this.alignItemsId])
-        } else {
+
           Row({ space: this.space }) {
             Row() {
             }.width(50).height(50).backgroundColor(Color.Orange)
@@ -93,8 +72,7 @@ struct RowPage {
           .width(300)
           .height(300)
           .border({ width: 1 })
-          .alignItems(this.alignItems[this.alignItemsId])
-        }
+          .justifyContent(this.flexItems[this.flexItemsId])
       }
       .height('40%')
       .width('100%')
@@ -151,72 +129,16 @@ struct RowPage {
               .margin({ left: 5 })
           }.columnStart(0).columnEnd(2).forceRebuild(true)
 
-          GridItem() {
-            Button('Top')
-              .fontSize(15)
-              .width('100%')
-              .onClick(() => {
-                this.useAlign = 'Top'
-              })
-          }
-
-          GridItem() {
-            Button('Center')
-              .fontSize(15)
-              .width('100%')
-              .onClick(() => {
-                this.useAlign = 'Center'
-              })
-          }
-
-          GridItem() {
-            Button('Bottom')
-              .fontSize(15)
-              .width('100%')
-              .onClick(() => {
-                this.useAlign = 'Bottom'
-              })
-          }
-
-          GridItem() {
-            Text('Edge位置：')
-              .fontSize(15)
-              .height(40)
-              .backgroundColor(0xFAEEE0)
-              .fontWeight(FontWeight.Bolder)
-              .width('100%')
-              .margin({ left: 5 })
-          }.columnStart(0).columnEnd(2).forceRebuild(true)
-
-          ForEach(this.num3, item => {
+          ForEach(this.num1, item => {
             GridItem() {
-              Button(this.edgeDescribe[`${item}`])
+              Button(this.flexItemsDescribe[`${item}`])
                 .fontSize(15)
                 .width('100%')
                 .onClick(() => {
-                  this.edgeId = item
+                  this.flexItemsId = item
                 })
             }
           }, item => item.toString())
-
-          GridItem() {
-            Text(`offset：${this.offset}`)
-              .fontSize(15)
-              .height(40)
-              .backgroundColor(0xFAEEE0)
-              .fontWeight(FontWeight.Bolder)
-              .width('100%')
-              .margin({ left: 5 })
-          }.columnStart(0).columnEnd(2).forceRebuild(true)
-
-          GridItem() {
-            Slider({ value: this.space, step: 1, min: -10, max: 50 })
-              .blockColor(Color.Orange)
-              .width("100%")
-              .onChange((e) => {
-                this.offset = Math.round(e)
-              })
-          }.columnStart(0).columnEnd(2).forceRebuild(true)
         }
         .columnsTemplate('1fr 1fr 1fr')
         .rowsTemplate("")

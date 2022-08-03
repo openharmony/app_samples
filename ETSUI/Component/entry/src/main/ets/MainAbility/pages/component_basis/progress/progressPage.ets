@@ -20,8 +20,8 @@ struct ProgressPage {
   @State total: number = 100
   @State num1: number[] = [...Array(4).keys()]
   @State progressStyleId: number = 0
-  @State progressStyle: ProgressStyle[] = [ProgressStyle.Linear, ProgressStyle.Eclipse]
-  @State progressStyleDescribe: string[] = ['Linear', 'Eclipse', 'Circular', 'Capsule']
+  @State progressStyle: ProgressStyle[] = [ProgressStyle.Linear, ProgressStyle.Eclipse, ProgressStyle.ScaleRing,ProgressStyle.Ring]
+  @State progressStyleDescribe: string[] = ['Linear', 'Eclipse', 'Scale   Ring', 'ring']
   @State colorId: number = 0
   @State color: Color[] = [Color.Green, Color.Orange, Color.Pink, Color.Yellow]
   @State colorDescribe: string[] = ['Green', 'Orange', 'Pink', 'Yellow']

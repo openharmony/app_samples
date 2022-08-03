@@ -25,78 +25,37 @@ struct ColumnPage {
   @State alignItemsDescribe: string[] = ['Start', 'Center', 'End']
   @State space: number = 0
   @State useAlign: string = 'Start'
-  @State edgeId: number = 0
-  @State edge: Edge[] = [Edge.Start, Edge.Center, Edge.End, Edge.Middle]
-  @State edgeDescribe: string[] = ['Start', 'Center', 'End', 'Middle']
-  @State offset: number = 0
+  @State flexItemsId: number = 0
+  @State flexItems: FlexAlign[] = [FlexAlign.Center, FlexAlign.Start, FlexAlign.End]
+  @State flexItemsDescribe: string[] = ['Center', 'Start', 'End']
+  @State flexAlign: string = 'Top'
 
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        if (this.useAlign == 'Start') {
           Column({ space: this.space }) {
             Row() {
             }.width(50).height(50).backgroundColor(Color.Orange)
 
             Row() {
             }.width(50).height(50).backgroundColor(Color.Yellow)
-
-            Row() {
-            }.width(40).height(50).backgroundColor(Color.Green)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Red)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Pink)
           }
           .width(300)
           .height(300)
           .border({ width: 1 })
           .alignItems(this.alignItems[this.alignItemsId])
-        } else if (this.useAlign == 'Center') {
+
           Column({ space: this.space }) {
             Row() {
             }.width(50).height(50).backgroundColor(Color.Orange)
 
             Row() {
             }.width(50).height(50).backgroundColor(Color.Yellow)
-
-            Row() {
-            }.width(50).height(40).backgroundColor(Color.Green)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Red)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Pink)
           }
           .width(300)
           .height(300)
           .border({ width: 1 })
-          .alignItems(this.alignItems[this.alignItemsId])
-        } else {
-          Column({ space: this.space }) {
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Orange)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Yellow)
-
-            Row() {
-            }.width(50).height(40).backgroundColor(Color.Green)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Red)
-
-            Row() {
-            }.width(50).height(50).backgroundColor(Color.Pink)
-          }
-          .width(300)
-          .height(300)
-          .border({ width: 1 })
-          .alignItems(this.alignItems[this.alignItemsId])
-        }
+          .justifyContent(this.flexItems[this.flexItemsId])
       }
       .height('40%')
       .width('100%')
@@ -158,58 +117,14 @@ struct ColumnPage {
 
           ForEach(this.num1, item => {
             GridItem() {
-              Button(this.alignItemsDescribe[`${item}`])
-                .fontSize(15)
-                .width('100%')
-
-                .onClick(() => {
-                  this.alignItemsId = item
-                })
-            }
-          }, item => item.toString())
-
-          GridItem() {
-            Text('Edge位置')
-              .fontSize(15)
-              .backgroundColor(0xFAEEE0)
-              .width('100%')
-              .height(40)
-              .textAlign(TextAlign.Start)
-              .margin({ left: 20 })
-              .fontWeight(FontWeight.Bolder)
-          }.columnStart(0).columnEnd(3).forceRebuild(true)
-
-          ForEach(this.num2, item => {
-            GridItem() {
-              Button(this.edgeDescribe[`${item}`])
+              Button(this.flexItemsDescribe[`${item}`])
                 .fontSize(15)
                 .width('100%')
                 .onClick(() => {
-                  this.edgeId = item
+                  this.flexItemsId = item
                 })
             }
           }, item => item.toString())
-
-          GridItem() {
-            Text(`offset：${this.offset}`)
-              .fontSize(15)
-              .backgroundColor(0xFAEEE0)
-              .width('100%')
-              .height(40)
-              .textAlign(TextAlign.Start)
-              .margin({ left: 20 })
-              .fontWeight(FontWeight.Bolder)
-          }.columnStart(0).columnEnd(3).forceRebuild(true)
-
-          GridItem() {
-            Slider({ value: this.space, step: 1, min: -10, max: 50 })
-              .blockColor(Color.Orange)
-              .width("100%")
-              .onChange((e) => {
-                this.offset = Math.round(e)
-              })
-          }.columnStart(0).columnEnd(3).forceRebuild(true)
-
         }
         .columnsTemplate('1fr 1fr 1fr 1fr')
         .rowsTemplate("")
@@ -223,4 +138,4 @@ struct ColumnPage {
     }
     .width('100%').margin({ top: 5})
   }
-}
+} 

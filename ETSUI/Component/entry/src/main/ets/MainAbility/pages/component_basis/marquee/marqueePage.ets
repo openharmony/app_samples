@@ -18,11 +18,11 @@ import prompt from '@ohos.prompt';
 @Entry
 @Component
 struct MarqueePage {
-  @State start: boolean = true
+  @State start: boolean = false
   @State step: number = 30
-  @State loop: number = -1
+  @State loop: number = 0
   @State fromStart: boolean = true
-  @State src: string = ''
+  @State src: string = 'Running Marquee starts rolling Running Marquee starts rolling Running Marquee starts rolling Running Marquee starts rolling Running Marquee starts rolling Running Marquee starts rolling'
   @State temporary: string = ''
 
   build() {
@@ -36,6 +36,7 @@ struct MarqueePage {
             fromStart: this.fromStart,
             src: this.src
           })
+            .allowScale(false)
             .fontSize(15)
             .onStart(() => {
               prompt.showToast({
@@ -129,7 +130,7 @@ struct MarqueePage {
             .textAlign(TextAlign.Start)
             .fontWeight(FontWeight.Bolder)
           Flex({ direction: FlexDirection.Row, justifyContent: FlexAlign.Start }) {
-            Slider({ value: this.step, step: 1, min: -10, max: 100 })
+            Slider({ value: this.step, step: 1, min: 0, max: 100 })
               .blockColor(Color.Orange)
               .height(40)
               .onChange((e) => {
@@ -149,7 +150,7 @@ struct MarqueePage {
             .textAlign(TextAlign.Start)
             .fontWeight(FontWeight.Bolder)
           Flex({ direction: FlexDirection.Row, justifyContent: FlexAlign.Start }) {
-            Slider({ value: this.loop, step: 1, min: -5, max: 15 })
+            Slider({ value: this.loop, step: 1, min: 0, max: 15 })
               .height(40)
               .blockColor(Color.Orange)
               .onChange((e) => {
@@ -169,19 +170,19 @@ struct MarqueePage {
             .textAlign(TextAlign.Start)
             .fontWeight(FontWeight.Bolder)
           Flex({ direction: FlexDirection.Row, justifyContent: FlexAlign.Start}) {
-            Button('true')
+            Button('left')
               .fontSize(15)
               .margin({right:10})
               .width(90)
               .onClick(() => {
-                this.start = true
+                this.fromStart = true
               })
-            Button('false')
+            Button('right')
               .margin({right:10})
               .fontSize(15)
               .width(90)
               .onClick(() => {
-                this.start = false
+                this.fromStart = false
               })
           }
           .width('90%')
