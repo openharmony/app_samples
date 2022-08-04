@@ -31,8 +31,6 @@ struct PanelPage {
   @State fullHeight: number = 300
   @State halfHeight: number = 150
   @State miniHeight: number = 50
-  @State miniValue: boolean = true
-  @State halfValue: boolean = true
 
   build() {
     Column() {
@@ -104,11 +102,6 @@ struct PanelPage {
                 .width('100%')
                 .onClick(() => {
                   this.typeId = item
-                  if (item == 0) {
-                    this.halfValue  = false
-                  } else if (item == 2){
-                    this.miniValue = false
-                  }
                 })
             }
           }, item => item.toString())
