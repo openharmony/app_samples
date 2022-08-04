@@ -25,7 +25,7 @@ struct ShadowOffsetExample {
     Row() {
       Column() {
         Canvas(this.context)
-          .width('100%').height('40%').backgroundColor('#00ffff')
+          .width(600).height('40%').backgroundColor('#00ffff')
         Flex({ justifyContent: FlexAlign.SpaceAround }) {
           Button('shadowOffsetY')
             .width(130).height(45)
@@ -35,7 +35,7 @@ struct ShadowOffsetExample {
               this.context.shadowOffsetY = 20;
               this.context.shadowColor = 'rgb(0,0,0)'
               this.context.fillStyle = 'rgb(255,0,0)';
-              this.context.fillRect(10, 150, 100, 100);
+              this.context.fillRect(30, 150, 100, 100);
               this.context.save();
             })
           Button('shadowOffsetX')
@@ -46,7 +46,7 @@ struct ShadowOffsetExample {
               this.context.shadowOffsetX = 20;
               this.context.shadowColor = 'rgb(0,0,0)'
               this.context.fillStyle = 'rgb(255,0,0)';
-              this.context.fillRect(120, 50, 100, 100);
+              this.context.fillRect(150, 50, 100, 100);
               this.context.save();
             })
           Button('shadowBlur')
@@ -56,7 +56,7 @@ struct ShadowOffsetExample {
               this.context.shadowBlur = 50;
               this.context.shadowColor = 'rgb(0,0,0)'
               this.context.fillStyle = 'rgb(255,0,0)';
-              this.context.fillRect(220, 170, 100, 100);
+              this.context.fillRect(250, 170, 100, 100);
               this.context.save();
             })
         }.margin({ top: 10 })

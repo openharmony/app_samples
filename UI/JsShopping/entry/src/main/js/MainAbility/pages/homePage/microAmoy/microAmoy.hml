@@ -44,18 +44,18 @@
                 </div>
                 <div>
                     <image src="{{ $item.topdata.imgcenter1 }}" class="list-center1-image"></image>
-                    <text>{{ $item.topdata.textcenter }}</text>
+                    <text class="list-center1-text">{{ $item.topdata.textcenter }}</text>
                 </div>
                 <div class="list-center2">
                     <image class="list-center2-img" for="{{ $item.imgcenter }}" src="{{ $item.icon }}"></image>
                 </div>
                 <div class="list-bottom">
-                    <text>{{ $item.imgbottom.text1 }}</text>
+                    <text class="list-bottom-text">{{ $item.imgbottom.text1 }}</text>
                     <div class="list-bottom-div">
                         <image class="list-bottom-img" src="{{ $item.imgbottom.imgbottom1 }}"></image>
-                        <text>{{ $item.imgbottom.text2 }}</text>
+                        <text class="list-bottom-text">{{ $item.imgbottom.text2 }}</text>
                         <image class="list-bottom-img" src="{{ $item.imgbottom.imgbottom2 }}"></image>
-                        <text>{{ $item.imgbottom.text3 }}</text>
+                        <text class="list-bottom-text">{{ $item.imgbottom.text3 }}</text>
                     </div>
                 </div>
             </div>

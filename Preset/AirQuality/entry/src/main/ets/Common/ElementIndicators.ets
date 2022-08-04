@@ -26,14 +26,14 @@ export struct ElementIndicators {
         .fontSize(30)
         .textAlign(TextAlign.Start)
         .layoutWeight(1)
-        .margin({ left: '20%' })
+        .margin({ left: '35%' })
 
       Text(data)
         .height(35)
         .fontSize(30)
         .textAlign(TextAlign.End)
         .layoutWeight(1)
-        .margin({ right: '75%' })
+        .margin({ right: '40%' })
     }
     .margin({ top: 10 })
     .width('100%')

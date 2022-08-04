@@ -28,7 +28,7 @@ struct TransformExample {
       justifyContent: FlexAlign.Center
     }) {
       Canvas(this.context)
-        .width('100%').height('50%').backgroundColor('#00ffff')
+        .width(600).height('50%').backgroundColor('#00ffff')
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
         Button('translate')
           .width(130).height(45)

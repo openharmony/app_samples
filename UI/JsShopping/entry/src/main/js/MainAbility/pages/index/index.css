@@ -27,14 +27,18 @@
 
 .tab-item {
     width: 100%;
-    height: 100px;
+    height: 60px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .tab-item-image {
-    width: 80%;
-    height: 60%;
+    width: 50%;
+    height: 40%;
     object-fit: contain;
+}
+
+.tab-item-text{
+    font-size: 20px;
 }

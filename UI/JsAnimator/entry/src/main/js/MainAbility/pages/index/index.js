@@ -14,7 +14,7 @@
  */
 
 import animator from '@ohos.animator';
-import mediaQuery from '@ohos.mediaquery';
+import mediaQuery from '@system.mediaquery';
 import Logger from '../../common/Logger';
 
 const TAG = '[index]'
@@ -26,8 +26,7 @@ export default {
     divLeft: 600,
     divBottom: 0,
     isPlay: false,
-    heightScale: 1.0,
-    listener: mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
+    heightScale: 3.2
   },
   sunAnimator: null,
   moonAnimator: null,
@@ -54,13 +53,15 @@ export default {
       begin: 600.0,
       end: 0.0
     })
-    this.listener.on("change", (data) => {
-      if (data.matches) {
-        this.heightScale = 3.5
-      }else{
-        this.heightScale = 1.0
-      }
-    })
+    let mMediaQueryList = mediaQuery.matchMedia('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)');
+    mMediaQueryList.addListener(this.orientationMatch);
+  },
+  orientationMatch(data) {
+    if (data.matches) {
+      this.heightScale = 3.2
+    } else {
+      this.heightScale = 1.0
+    }
   },
   rise() {
     Logger.info(TAG, `rise onclick the rise`)

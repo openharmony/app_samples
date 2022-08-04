@@ -51,7 +51,7 @@ image {
 .slider {
   position: absolute;
   left: 0;
-  top: 85%;
+  top: 80%;
   align-items: center;
   justify-content: center;
 }

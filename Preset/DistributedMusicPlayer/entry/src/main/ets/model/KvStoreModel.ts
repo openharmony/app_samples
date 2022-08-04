@@ -26,14 +26,15 @@ class KvStoreModel {
   constructor() {
   }
 
-  async createKvStore(callback) {
+  async createKvStore(context, callback) {
     if (typeof (this.kvStore) === 'undefined') {
       let config = {
         bundleName: 'ohos.samples.etsdistributedmusicplayer',
         userInfo: {
           userId: '0',
           userType: 0
-        }
+        },
+        context: context
       }
       Logger.info(TAG, 'createKVManager begin')
       this.kvManager = await distributedData.createKVManager(config)
@@ -58,10 +59,10 @@ class KvStoreModel {
     }
   }
 
-  broadcastMessage(msg) {
+  broadcastMessage(context, msg) {
     Logger.info(TAG, `broadcastMessage ${msg}`)
     let num = Math.random()
-    this.createKvStore(() => {
+    this.createKvStore(context, () => {
       this.put(msg, num)
     })
   }
@@ -75,9 +76,9 @@ class KvStoreModel {
     Logger.info(TAG, `kvStore.put ${key} finished`)
   }
 
-  setOnMessageReceivedListener(msg, callback) {
+  setOnMessageReceivedListener(context, msg, callback) {
     Logger.info(TAG, `setOnMessageReceivedListener ${msg}`)
-    this.createKvStore(() => {
+    this.createKvStore(context, () => {
       Logger.info(TAG, 'kvStore.on(dataChange) begin')
       this.kvStore.on('dataChange', 1, (data) => {
         Logger.info(TAG, `dataChange, ${JSON.stringify(data)}`)

@@ -74,6 +74,7 @@ struct Index {
     logger.info(TAG, `enter aboutToAppear`)
     await globalThis.abilityContext.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'])
     this.distributedData.init()
+    let context = getContext(this)
     if (globalThis.deviceFlag) {
       this.isDistributed = true
     }
@@ -83,7 +84,7 @@ struct Index {
     }
     if (this.deviceFlag === 'B') {
       logger.info(TAG, `enter this.deviceFlag === 'B'`)
-      kvStoreModel.setOnMessageReceivedListener(DEVICE_A, (value) => {
+      kvStoreModel.setOnMessageReceivedListener(context, DEVICE_A, (value) => {
         let gameDataA = JSON.parse(value)
         this.distributedData.step = gameDataA.step
         this.distributedData.clickCount = gameDataA.clickCount
@@ -96,7 +97,7 @@ struct Index {
       })
     } else if (this.deviceFlag === 'A') {
       logger.info(TAG, `enter this.deviceFlag === 'A'`)
-      kvStoreModel.setOnMessageReceivedListener(DEVICE_B, (value) => {
+      kvStoreModel.setOnMessageReceivedListener(context, DEVICE_B, (value) => {
         let gameDataB = JSON.parse(value)
         this.fallChressInner(gameDataB.x, gameDataB.y)
         this.flushData()

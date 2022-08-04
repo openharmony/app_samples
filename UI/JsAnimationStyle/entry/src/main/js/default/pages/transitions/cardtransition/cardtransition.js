@@ -14,28 +14,40 @@
  */
 
 import router from '@ohos.router'
+import mediaQuery from '@system.mediaquery'
 
 export default {
-    data: {
-        list: []
-    },
-    onInit() {
-        for (var i = 0; i < 15; i++) {
-            var item = {
-                url: 'pages/transitions/cardtargetpage/cardtargetpage',
-                title: "this is title" + i,
-                id: "item_" + i
-            }
-            this.list.push(item);
-        }
-    },
-
-    jumpPage(id, url) {
-        var cardId = this.$element(id).ref;
-        router.push({
-            url: url, params: {
-                ref: cardId
-            }
-        });
+  data: {
+    list: [],
+    isTablet: true
+  },
+  onInit() {
+    for (var i = 0; i < 15; i++) {
+      var item = {
+        url: 'pages/transitions/cardtargetpage/cardtargetpage',
+        title: "this is title" + i,
+        id: "item_" + i
+      }
+      this.list.push(item)
     }
+    let mMediaQueryList = mediaQuery.matchMedia('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)');
+    mMediaQueryList.addListener(this.orientationMatch);
+  },
+  orientationMatch(data) {
+    this.isTablet = data.matches
+  },
+  jumpPage(id, url) {
+    var cardId = this.$element(id).ref
+    if (this.isTablet) {
+      router.push({
+        url: url
+      })
+    } else {
+      router.push({
+        url: url, params: {
+          ref: cardId
+        }
+      })
+    }
+  }
 }

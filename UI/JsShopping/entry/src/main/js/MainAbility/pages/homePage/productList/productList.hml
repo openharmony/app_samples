@@ -19,7 +19,7 @@
         <list-item type="productAlone" class="content-item" for="{{ tempList }}">
             <div class="itemlist">
                 <image class="img" src="{{ $item.uri }}"></image>
-                <text>{{ $item.title }}
+                <text class="itemlist-text">{{ $item.title }}
                 </text>
                 <div>
                     <label class="labels">

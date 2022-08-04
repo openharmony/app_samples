@@ -25,7 +25,7 @@ export class KvStoreModel {
   constructor() {
   }
 
-  createKvStore(callback) {
+  createKvStore(context, callback) {
     if ((typeof (this.kvStore) !== 'undefined')) {
       callback()
       return
@@ -35,7 +35,8 @@ export class KvStoreModel {
       userInfo: {
         userId: '0',
         userType: 0
-      }
+      },
+      context: context
     }
     logger.info(TAG, `[KvStoreModel] createKVManager begin`)
     distributedData.createKVManager(config).then((manager) => {
@@ -69,9 +70,9 @@ export class KvStoreModel {
     })
   }
 
-  setOnMessageReceivedListener(msg, callback) {
+  setOnMessageReceivedListener(context, msg, callback) {
     logger.info(TAG, `[KvStoreModel] setOnMessageReceivedListener: ${msg}`)
-    this.createKvStore(() => {
+    this.createKvStore(context, () => {
       logger.info(TAG, `[KvStoreModel] kvStore.on(dataChange) begin`)
       this.kvStore.on('dataChange', 1, (data) => {
         logger.info(TAG, `[KvStoreModelDate] dataChange, ${JSON.stringify(data)}`)

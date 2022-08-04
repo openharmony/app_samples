@@ -12,8 +12,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
-<element name="microAmoy" src="entry/src/main/js/MainAbility/pages/homePage/microAmoy/microAmoy.hml"></element>
-<element name="pageHome" src="entry/src/main/js/MainAbility/pages/homePage/pageHome/pageHome.hml"></element>
+<element name="microAmoy" src="../homePage/microAmoy/microAmoy.hml"></element>
+<element name="pageHome" src="../homePage/pageHome/pageHome.hml"></element>
 <div class="container">
     <tabs class="tabs" onchange="changeTabIndex">
         <tab-content>
@@ -27,7 +27,7 @@
         <tab-bar class="tab-bar" mode="fixed">
             <div class="tab-item" for="{{ tabbardata }}">
                 <image class="tab-item-image" src="{{ $item.show ? $item.selectedImg : $item.img }}"></image>
-                <text style="color : {{ $item.show ? $item.selectedColor : $item.color }}">{{ $item.title }}</text>
+                <text class= "tab-item-text" style="color : {{ $item.show ? $item.selectedColor : $item.color }}">{{ $item.title }}</text>
             </div>
         </tab-bar>
     </tabs>

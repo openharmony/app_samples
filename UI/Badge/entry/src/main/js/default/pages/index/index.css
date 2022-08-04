@@ -13,6 +13,10 @@
  * limitations under the License.
  */
 
+.body {
+    width: 100%;
+    height: 100%;
+}
 
 .container {
     flex-direction: column;
@@ -53,11 +57,11 @@
     width: 15%;
     left: 85%;
     badgeSize: 35px;
-    textSize: 17px;
+    textSize: 17fp;
 }
 
 .title {
-    font-size: 16px;
+    font-size: 16fp;
     color: #e6000000;
     opacity: 0.9;
     margin-top: 8px;
@@ -65,9 +69,66 @@
 }
 
 .text {
-    font-size: 14px;
+    font-size: 14fp;
     color: #99000000;
     opacity: 0.6;
     margin-top: 1px;
     margin-bottom: 8px;
+}
+
+@media screen and (min-aspect-ratio: 0.8) {
+    .body {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .container {
+        width: 35%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F2F3F5;
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .item {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px;
+        background-color: white;
+    }
+    .badge {
+        position: absolute;
+        height: 100%;
+        width: 15%;
+        left: 85%;
+        badgeSize: 16px;
+        textSize: 8px;
+    }
+
+    .title {
+        font-size: 10px;
+        color: #e6000000;
+        opacity: 0.9;
+        margin-top: 8px;
+        margin-bottom: 1px;
+    }
+
+    .text {
+        font-size: 8px;
+        color: #99000000;
+        opacity: 0.6;
+        margin-top: 1px;
+        margin-bottom: 8px;
+    }
+
+    .img {
+        height: 30px;
+        width: 30px;
+        margin-left: 12px;
+        margin-right: 12px;
+        border-radius: 20px;
+    }
 }

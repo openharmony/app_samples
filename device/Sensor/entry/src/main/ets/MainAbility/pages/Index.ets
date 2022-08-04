@@ -14,6 +14,7 @@
  */
 
 import sensor from '@ohos.sensor'
+import mediaQuery from '@ohos.mediaquery'
 
 const TAG = '[sensor]'
 
@@ -21,22 +22,28 @@ const TAG = '[sensor]'
 @Component
 struct Index {
   @State angle: number = 0
-  @State calibration: number = 0
   @State angleTest: string = '0°'
+  @State isLand: boolean = false
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
+
+  onLand = (mediaQueryResult) => {
+    console.info(`${TAG} onLand: mediaQueryResult.matches= ${mediaQueryResult.matches}`)
+    if (mediaQueryResult.matches) {
+      this.isLand = true
+    } else {
+      this.isLand = false
+    }
+  }
 
   aboutToAppear() {
+    this.listener.on('change', this.onLand)
     sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, function(data){
       console.info(`${TAG} component: on`)
       console.info(`${TAG} X-coordinate component: ${data.beta}`)
       console.info(`${TAG} Y-coordinate component: ${data.gamma}`)
       console.info(`${TAG} Z-coordinate component: ${data.alpha}`)
-      this.calibration = Math.round(data.alpha)
-      this.angle = -(this.calibration - 135)
-      if ((this.calibration - 90) < 0) {
-        this.angleTest = (270 + this.calibration) + '°'
-      } else {
-        this.angleTest = (this.calibration - 90) + '°'
-      }
+      this.angle = Math.round(data.alpha)
+      this.angleTest = this.angle + '°'
     }.bind(this), { interval: 10000000 })
   }
 
@@ -47,7 +54,7 @@ struct Index {
           .fontSize(20)
           .margin({ left: '60%' })
 
-        Image($r('app.media.compass'))
+        Image(this.isLand? $r('app.media.compass') : $r('app.media.compass_'))
           .objectFit(ImageFit.Auto)
           .rotate({
             x: 0,

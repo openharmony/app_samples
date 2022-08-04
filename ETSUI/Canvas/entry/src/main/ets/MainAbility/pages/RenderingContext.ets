@@ -27,7 +27,7 @@ struct IndexExample {
       alignItems: ItemAlign.Center,
       justifyContent: FlexAlign.Center
     }) {
-      Canvas(this.context).width('90%').height(300).backgroundColor('#00ffff')
+      Canvas(this.context).width(600).height(300).backgroundColor('#00ffff')
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
         Button('arc')
           .width(130).height(45)
@@ -41,7 +41,7 @@ struct IndexExample {
           .width(130).height(45)
           .onClick(() => {
             this.context.font = '100px sans-serif';
-            this.context.strokeText("hello World!", 100, 150);
+            this.context.strokeText("hello World!", 50, 150);
           })
       }.margin({ top: 10 })
 
@@ -87,16 +87,11 @@ struct IndexExample {
         Button('delete')
           .width(130).height(45)
           .onClick(() => {
-            this.context.clearRect(20, 20, 950, 950)
+            this.context.clearRect(0, 0, 950, 950)
           })
       }.margin({ top: 10 })
 
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
-        Button('OtherContext')
-          .width(130).height(45)
-          .onClick(() => {
-            router.push({ url: 'pages/context' })
-          })
         Button('back')
           .width(130).height(45).backgroundColor(Color.Orange)
           .onClick(() => {

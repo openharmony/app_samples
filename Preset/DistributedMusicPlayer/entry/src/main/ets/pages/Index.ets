@@ -52,6 +52,7 @@ struct Index {
   @State imageArrays: Array<Resource> = [$r('app.media.ic_hop'), $r('app.media.ic_play_previous'), $r('app.media.ic_play'), $r('app.media.ic_play_next')]
   private dialogController: CustomDialogController = null
   private remoteDeviceModel: RemoteDeviceModel = new RemoteDeviceModel()
+  private context
   onLand = (mediaQueryResult) => {
     Logger.info(TAG, `onLand: mediaQueryResult.matches= ${mediaQueryResult.matches}`)
     if (mediaQueryResult.matches) {
@@ -141,7 +142,7 @@ struct Index {
       })
     }, 3000)
 
-    KvStoreModel.setOnMessageReceivedListener(REMOTE_ABILITY_STARTED, () => {
+    KvStoreModel.setOnMessageReceivedListener(this.context, REMOTE_ABILITY_STARTED, () => {
       Logger.info(TAG, 'OnMessageReceived, terminateSelf')
       clearTimeout(timerId)
       globalThis.abilityConText.terminateSelf((error) => {
@@ -207,8 +208,8 @@ struct Index {
     let minStr: string
     let secStr: string
     let min = (seconds - sec) / SIXTY
-    sec < 10 ? secStr = '0' + sec : '' + sec
-    min < 10 ? minStr = '0' + min : '' + min
+      sec < 10 ? secStr = '0' + sec : '' + sec
+      min < 10 ? minStr = '0' + min : '' + min
     return minStr + ':' + secStr
   }
 
@@ -298,7 +299,7 @@ struct Index {
     Logger.info(TAG, 'restoreFromWant')
     let status = globalThis.abilityWant.parameters
     if (status !== null && status.uri !== null) {
-      KvStoreModel.broadcastMessage(REMOTE_ABILITY_STARTED)
+      KvStoreModel.broadcastMessage(this.context, REMOTE_ABILITY_STARTED)
       Logger.info(TAG, 'restorePlayingStatus')
       PlayerModel.restorePlayingStatus(status, (index) => {
         Logger.info(TAG, `restorePlayingStatus finished, index= ${index}`)
@@ -324,6 +325,7 @@ struct Index {
     globalThis.abilityConText.requestPermissionsFromUser(['ohos.permission.DISTRIBUTED_DATASYNC'], requestCode, function (result) {
       Logger.info(TAG, `grantPermission,requestPermissionsFromUser,result= ${result}`)
     })
+    this.context = getContext(this)
     display.getDefaultDisplay().then((dis) => {
       Logger.info(TAG, `getDefaultDisplay dis= ${JSON.stringify(dis)}`)
       let proportion = DESIGN_WIDTH / dis.width

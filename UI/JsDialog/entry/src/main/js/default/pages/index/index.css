@@ -23,21 +23,22 @@
 
 .title-bar {
     width: 100%;
-    height: 110px;
+    height: 80vp;
+    align-items: center;
     flex-direction: row;
     background-color: dodgerblue;
 }
 
 .title {
     width: 50%;
-    font-size: 55px;
+    font-size: 30fp;
     text-align: left;
     margin: 10px;
 }
 
 .btn {
     height: 100px;
-    font-size: 40px;
+    font-size: 30fp;
     background-color: dodgerblue;
     color: white;
     width: 50%;
@@ -51,8 +52,8 @@
 }
 
 .tips {
-    font-size: 40px;
-    width: 100%;
+    font-size: 30fp;
+    width: 80%;
     text-color: gray;
     text-align: center;
     margin-top: 100px;
@@ -92,33 +93,31 @@
 }
 
 .item-text {
-    font-size: 50px;
+    font-size: 30fp;
     text-align: left;
     margin: 10px;
 }
 
 .item-btn {
     width: 30%;
-    font-size: 50px;
+    font-size: 30fp;
     text-align: right;
     color: red;
     background-color: white;
 }
 
 .dialog-delete {
-    width: 90%;
-    height: 300px;
+    width: 360vp;
 }
 
 .dialog-text-delete {
-    font-size: 50px;
+    font-size: 30fp;
     text-align: center;
     width: 100%;
 }
 
 .dialog {
-    width: 90%;
-    height: 430px;
+    width: 360vp;
 }
 
 .dialog-container {
@@ -126,55 +125,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20vp;
 }
 
 .text-container {
     width: 100%;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 15px;
+    margin-top: 5vp;
 }
 
 .dialog-text {
-    font-size: 50px;
-    text-align: left;
+    height: 58vp;
+    font-size: 30fp;
+    text-align: right;
     margin: 10px;
-    width: 30%;
 }
 
 .dialog-edit {
-    width: 75%;
-    font-size: 45px;
-    height: 90px;
+    font-size: 30fp;
+    height: 60vp;
     text-color: black;
     text-align: left;
     border-width: 1px;
     border-color: black;
     border-style: solid;
     padding-left: 5px;
+    flex-weight: 1;
 }
 
 .dialog-btn {
     width: 50%;
-    height: 90px;
-    font-size: 40px;
-    margin: 10px;
+    height: 60vp;
+    font-size: 30fp;
+    margin: 5vp;
     background-color: white;
     color: blue;
 }
 
 .dialog-btn-cancel {
     width: 50%;
-    height: 90px;
-    font-size: 40px;
+    height: 60vp;
+    font-size: 30fp;
     color: red;
-    margin: 10px;
+    margin: 5vp;
     background-color: white;
 }
 
 .line {
     width: 2px;
-    height: 90px;
-    margin: 10px;
+    height: 60vp;
+    margin: 5px;
     background-color: gray;
 }

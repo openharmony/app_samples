@@ -90,6 +90,13 @@
     margin-left: 50px;
 }
 
+.value-txt {
+    color: #000000;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
 .service-div {
     width: 100%;
     margin-left: 40px;
@@ -101,4 +108,85 @@
 .btn {
     width: 90%;
     margin-top: 30px;
+}
+
+@media screen and (min-aspect-ratio: 0.8) {
+    .swip {
+        height: 50%;
+        margin-top: 20px;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .item {
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+
+    .title-txt {
+        color: #000000;
+        font-weight: bold;
+        font-size: 20fp;
+        margin-top: 15px;
+    }
+
+    .txt {
+        font-weight: bold;
+        font-size: 20fp;
+        color: cornflowerblue;
+    }
+
+    .inner-div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inner-txt {
+        color: #000000;
+        font-weight: bold;
+        font-size: 18fp;
+        margin-top: 15px;
+        margin-right: 25px;
+        width: 20%;
+    }
+
+    .list-div {
+        margin-left: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .panel-txt {
+        color: #000000;
+        font-size: 18fp;
+        margin-top: 15px;
+        margin-left: 25px;
+        width: 20%;
+    }
+
+    .value-txt {
+        color: #000000;
+        font-size: 18fp;
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+
+    .service-div {
+        width: 50%;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 50%;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+    }
 }

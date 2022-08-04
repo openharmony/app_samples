@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.etsbuildcommonview",
-    "vendor": "example",
+    "bundleName": "ohos.samples.jsvideo",
+    "vendor": "samples",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,7 +9,7 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.etsbuildcommonview",
+    "package": "ohos.samples.jsvideo",
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
@@ -34,12 +34,15 @@
           }
         ],
         "orientation": "unspecified",
+        "configChanges": [
+          "orientation"
+        ],
         "visible": true,
         "srcPath": "MainAbility",
         "name": ".MainAbility",
-        "srcLanguage": "ets",
-        "icon": "$media:Logo",
-        "description": "$string:mainability_description",
+        "srcLanguage": "js",
+        "icon": "$media:icon",
+        "description": "$string:description_mainability",
         "formsEnabled": false,
         "label": "$string:entry_MainAbility",
         "type": "page",
@@ -48,12 +51,8 @@
     ],
     "js": [
       {
-        "mode": {
-          "syntax": "ets",
-          "type": "pageAbility"
-        },
         "pages": [
-          "pages/FoodDetail"
+          "pages/index/index"
         ],
         "name": ".MainAbility",
         "window": {

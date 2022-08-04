@@ -41,8 +41,8 @@
       <div for="{{ parameter }}" class="inner-div">
         <div class="list-div">
           <text class="inner-txt">{{ $item.key }}</text>
+          <text class="panel-txt">{{ $item.value }}</text>
         </div>
-        <text class="panel-txt">{{ $item.value }}</text>
       </div>
       <button class="btn" type="capsule" value="{{ $t('strings.determine') }}" onclick="closeParameter"></button>
     </div>
@@ -54,7 +54,7 @@
         <div class="list-div">
           <text class="title-txt">{{ $item.key }}</text>
         </div>
-        <text class="panel-txt">{{ $item.value }}</text>
+        <text class="value-txt">{{ $item.value }}</text>
       </div>
       <button class="btn" type="capsule" value="{{ $t('strings.determine') }}" onclick="closeParameter"></button>
     </div>

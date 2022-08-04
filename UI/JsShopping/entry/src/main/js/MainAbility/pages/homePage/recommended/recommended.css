@@ -37,10 +37,12 @@ button {
 }
 
 .text1 {
+    font-size: 24px;
     font-weight: bolder;
 }
 
 .text2 {
+    font-size: 20px;
     margin-left: 30px;
 }
 
