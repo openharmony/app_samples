@@ -3,6 +3,7 @@
 ### 简介
 
 本示例展示了Stage模型启动Ability及Call功能的使用，包括拉起另一个Ability、创建Callee被调用端以及访问Callee被调用端。效果图如下：
+
 ![](screenshots/device/image.png) ![](screenshots/device/second.png)
 
 ### 相关概念

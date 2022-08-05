@@ -27,4 +27,6 @@
 
 1.本示例仅支持在标准系统上运行。
 
-2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+2.本示例需要插入SIM卡，目前该功能仅支持部分机型。
+
+3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

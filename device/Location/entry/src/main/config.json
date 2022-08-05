@@ -76,7 +76,7 @@
         "reason": "$string:description_mainability",
         "usedScene": {
           "ability": [
-            "ohos.samples.etsscreenshot.MainAbility"
+            "MainAbility"
           ],
           "when": "inuse"
         }
@@ -86,7 +86,7 @@
         "reason": "$string:description_mainability",
         "usedScene": {
           "ability": [
-            "ohos.samples.etsscreenshot.MainAbility"
+            "MainAbility"
           ],
           "when": "inuse"
         }
@@ -96,7 +96,7 @@
         "reason": "$string:description_mainability",
         "usedScene": {
           "ability": [
-            "ohos.samples.etsscreenshot.MainAbility"
+            "MainAbility"
           ],
           "when": "inuse"
         }

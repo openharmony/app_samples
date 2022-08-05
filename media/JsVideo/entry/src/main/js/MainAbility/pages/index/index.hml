@@ -14,7 +14,6 @@ limitations under the License.
 -->
 <div class="container" id="page">
   <stack class="video-block">
-    <image class="image" src="/common/images/bg-tv.jpg"></image>
     <video id="video"
            class="video"
            src="{{ url }}"

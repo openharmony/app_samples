@@ -32,4 +32,6 @@
 
 2.本实例需在室外开阔环境下测试，获取位置信息需2-5分钟。
 
-3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+3.位置服务功目前仅支持部分机型。
+
+4.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。

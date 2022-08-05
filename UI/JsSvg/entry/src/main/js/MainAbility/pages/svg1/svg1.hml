@@ -16,7 +16,7 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'rect:' }}</text>
                 <svg fill="white" width="700" height="400">
                     <rect width="200" height="150" x="10" y="20" stroke-width="4" stroke="blue"></rect>
@@ -29,7 +29,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'circle,ellipse:' }}</text>
                 <svg width="700" height="470">
                     <svg fill="white" width="700" height="350">
@@ -46,7 +46,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'path:' }}</text>
                 <svg width="700" height="270">
                     <path d="M 30,110 A 20,20 0,0,1 170,50 A 20,20 0,0,1 300,100 Q 300,150 150,250 Q 30,150 30,110 z"
@@ -56,7 +56,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'line:' }}</text>
                 <svg width="700" height="280">
                     <line x1="10" x2="600" y1="50" y2="50" stroke-width="4" fill="white" stroke="blue"></line>

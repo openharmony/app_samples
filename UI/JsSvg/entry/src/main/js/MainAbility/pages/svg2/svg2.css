@@ -37,6 +37,10 @@
     height: 100%;
 }
 
+.svg {
+    flex-direction: column;
+}
+
 .list-item {
     flex-direction: column;
     justify-content: center;
