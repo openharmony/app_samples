@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "upgradepopup"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "upgradepopup"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "upgradepopup"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "update_now",
+      "value": "update now"
+    },
+    {
+      "name": "update_title",
+      "value": "found new version"
+    },
+    {
+      "name": "rich_text",
+      "value": "<style>::-webkit-scrollbar {height: 0;width: 0;color: transparent;}</style>\n  <div style=\"overflow-x: hidden;height: 100%;width: 100%;\">\n  <p style=\"font-size: 28px;\">1. Local new live features, exciting content, wait for you to see</p>\n  <p style=\"font-size: 28px;\">2. The product details page has been upgraded, from the interface to a more interactive shopping experience</p>\n  <p style=\"font-size: 28px;\">3. added the scan function to enrich user experience</p>\n  <p style=\"font-size: 28px;\">4. added video playback function, picture-in-picture function</p>\n  <p style=\"font-size: 28px;\">5. added sharing function</p>\n  <p style=\"font-size: 28px;\">6. added video like function</p>\n  <p style=\"font-size: 28px;\">7. added video following function</p>\n  <p style=\"font-size: 28px;\">8. added video favorites function</p>\n  <p style=\"font-size: 28px;\">9. added positioning function</p>\n  </div>"
+    }
+  ]
+}

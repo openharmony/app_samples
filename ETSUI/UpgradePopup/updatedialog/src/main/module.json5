@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "updatedialog",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

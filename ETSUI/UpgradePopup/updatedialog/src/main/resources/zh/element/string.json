@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "升级弹窗"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "升级弹窗"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "升级弹窗"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "update_now",
+      "value": "立即升级"
+    },
+    {
+      "name": "update_title",
+      "value": "发现新版本"
+    },
+    {
+      "name": "rich_text",
+      "value": "<style>::-webkit-scrollbar {height: 0;width: 0;color: transparent;}</style>\n  <div style=\"overflow-x: hidden;height: 100%;width: 100%;\">\n  <p style=\"font-size: 28px;\">1. 本地新增直播功能，精彩内容，等你来看</p>\n  <p style=\"font-size: 28px;\">2. 商品详情页升级，从界面到交互更加流畅的购物体验</p>\n  <p style=\"font-size: 28px;\">3. 新增扫一扫功能，丰富用户体验</p>\n  <p style=\"font-size: 28px;\">4. 新增视频播放功能，画中画功能</p>\n  <p style=\"font-size: 28px;\">5. 新增分享功能</p>\n  <p style=\"font-size: 28px;\">6. 新增视频点赞功能</p>\n  <p style=\"font-size: 28px;\">7. 新增视频关注功能</p>\n  <p style=\"font-size: 28px;\">8. 新增视频收藏功能</p>\n  <p style=\"font-size: 28px;\">9. 新增定位功能</p>\n  </div>"
+    }
+  ]
+}
