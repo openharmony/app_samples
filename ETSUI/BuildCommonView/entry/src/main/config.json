@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "ohos.samples.jsvideo",
+    "bundleName": "ohos.samples.buildcommonview",
     "vendor": "samples",
     "version": {
       "code": 1000000,
@@ -9,7 +9,7 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.jsvideo",
+    "package": "ohos.samples.buildcommonview",
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
@@ -40,9 +40,9 @@
         "visible": true,
         "srcPath": "MainAbility",
         "name": ".MainAbility",
-        "srcLanguage": "js",
-        "icon": "$media:icon",
-        "description": "$string:description_mainability",
+        "srcLanguage": "ets",
+        "icon": "$media:Logo",
+        "description": "$string:mainability_description",
         "formsEnabled": false,
         "label": "$string:entry_MainAbility",
         "type": "page",
@@ -51,8 +51,12 @@
     ],
     "js": [
       {
+        "mode": {
+          "syntax": "ets",
+          "type": "pageAbility"
+        },
         "pages": [
-          "pages/index/index"
+          "pages/FoodDetail"
         ],
         "name": ".MainAbility",
         "window": {
