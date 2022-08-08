@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "navigation",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

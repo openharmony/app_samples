@@ -1,0 +1,244 @@
+{
+  "string": [
+    {
+      "name": "entry_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "classification",
+      "value": "分类"
+    },
+    {
+      "name": "guess_you_like",
+      "value": "猜你喜欢"
+    },
+    {
+      "name": "shop_cart",
+      "value": "购物车"
+    },
+    {
+      "name": "edit",
+      "value": "编辑"
+    },
+    {
+      "name": "shopping_self_support",
+      "value": "商城自营"
+    },
+    {
+      "name": "phone_name",
+      "value": "功能手机5G网速"
+    },
+    {
+      "name": "phone_size",
+      "value": "冰晶蓝,S12GB+GB"
+    },
+    {
+      "name": "phone_price",
+      "value": "￥35.8"
+    },
+    {
+      "name": "orders",
+      "value": "我的订单"
+    },
+    {
+      "name": "all_order",
+      "value": "全部订单"
+    },
+    {
+      "name": "vip_channel",
+      "value": "会员频道"
+    },
+    {
+      "name": "PointReward",
+      "value": "积分商城"
+    },
+    {
+      "name": "interaction",
+      "value": "互动有礼"
+    },
+    {
+      "name": "cardVolume",
+      "value": "红包卡卷"
+    },
+    {
+      "name": "officialService",
+      "value": "官方客服"
+    },
+    {
+      "name": "cash",
+      "value": "现金红包"
+    },
+    {
+      "name": "oldForNew",
+      "value": "以旧换新"
+    },
+    {
+      "name": "my_evaluation",
+      "value": "我的评价"
+    },
+    {
+      "name": "user_name",
+      "value": "18839****17"
+    },
+    {
+      "name": "sign_Info",
+      "value": "v0会员"
+    },
+    {
+      "name": "sign_info_address",
+      "value": "v收货地址"
+    },
+    {
+      "name": "often_see_live",
+      "value": "常看的直播"
+    },
+    {
+      "name": "read_more",
+      "value": "查看更多"
+    },
+    {
+      "name": "FavorLiveListsData_title",
+      "value": "直播中"
+    },
+    {
+      "name": "FavorLiveListsData_viewsInfo",
+      "value": "45.6万人观看"
+    },
+    {
+      "name": "tabTitleData_home",
+      "value": "首页"
+    },
+    {
+      "name": "tabTitleData_newProduct",
+      "value": "新品"
+    },
+    {
+      "name": "tabTitleData_cart",
+      "value": "购物车"
+    },
+    {
+      "name": "tabTitleData_mine",
+      "value": "我的"
+    },
+    {
+      "name": "findSearchTextData_searchText",
+      "value": "精品好礼"
+    },
+    {
+      "name": "findSearchTextData_searchTex",
+      "value": "品牌手机"
+    },
+    {
+      "name": "findSearchTextData_searchTe",
+      "value": "数码科技"
+    },
+    {
+      "name": "NavData_phone",
+      "value": "手机"
+    },
+    {
+      "name": "NavData_food",
+      "value": "视频"
+    },
+    {
+      "name": "NavData_men_wear",
+      "value": "男装"
+    },
+    {
+      "name": "NavData_sport",
+      "value": "运动"
+    },
+    {
+      "name": "NavData_home_appliances",
+      "value": "家电"
+    },
+    {
+      "name": "titleBarData_title_all",
+      "value": "全部"
+    },
+    {
+      "name": "titleBarData_title_selected",
+      "value": "精选"
+    },
+    {
+      "name": "titleBarData_title_newProduct",
+      "value": "新品"
+    },
+    {
+      "name": "titleBarData_title_benefits",
+      "value": "实惠"
+    },
+    {
+      "name": "titleBarData_content_recommend",
+      "value": "为你推荐"
+    },
+    {
+      "name": "titleBarData_content_find",
+      "value": "发现好货"
+    },
+    {
+      "name": "titleBarData_content_first_publish",
+      "value": "新品首发"
+    },
+    {
+      "name": "titleBarData_content_cheap_good",
+      "value": "便宜好货"
+    },
+    {
+      "name": "newProductTitleBarData_title_selected",
+      "value": "精选"
+    },
+    {
+      "name": "newProductTitleBarData_title_phone",
+      "value": "手机"
+    },
+    {
+      "name": "newProductTitleBarData_title_electric_appliance",
+      "value": "电器"
+    },
+    {
+      "name": "newProductTitleBarData_title_sport",
+      "value": "运动"
+    },
+    {
+      "name": "newProductTitleBarData_title_clothes",
+      "value": "服饰"
+    },
+    {
+      "name": "productData_title_device",
+      "value": "XX设备 新品优惠！"
+    },
+    {
+      "name": "productData_labels_newProduct",
+      "value": "新品"
+    },
+    {
+      "name": "productData_price",
+      "value": "￥4122"
+    },
+    {
+      "name": "orderData_title_obligation",
+      "value": "待付款"
+    },
+    {
+      "name": "orderData_title_wait_deliver",
+      "value": "待发货"
+    },
+    {
+      "name": "orderData_title_wait_receive",
+      "value": "待收货"
+    },
+    {
+      "name": "orderData_title_wait_recommend",
+      "value": "待评价"
+    },
+    {
+      "name": "orderData_title_refund",
+      "value": "退款/售后"
+    }
+  ]
+}
