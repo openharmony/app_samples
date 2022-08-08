@@ -1,0 +1,76 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Contact"
+    },
+    {
+      "name": "description_mainability",
+      "value": "Read or write contacts"
+    },
+    {
+      "name": "save",
+      "value": "保存至：手机"
+    },
+    {
+      "name": "call",
+      "value": "电话"
+    },
+    {
+      "name": "contact",
+      "value": "联系人"
+    },
+    {
+      "name": "collection",
+      "value": "收藏"
+    },
+    {
+      "name": "newContact",
+      "value": "新建联系人"
+    },
+    {
+      "name": "defaults",
+      "value": "默认"
+    },
+    {
+      "name": "phone_ring",
+      "value": "电话铃声"
+    },
+    {
+      "name": "editor",
+      "value": "编辑"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "name_card",
+      "value": "我的名片"
+    },
+    {
+      "name": "group",
+      "value": "群组"
+    },
+    {
+      "name": "editor_contact",
+      "value": "编辑联系人"
+    },
+    {
+      "name": "add_contact",
+      "value": "新增联系人"
+    },
+    {
+      "name": "import_file",
+      "value": "导入文件"
+    },
+    {
+      "name": "export_file",
+      "value": "导出文件"
+    },
+    {
+      "name": "save_phone",
+      "value": "保存至：手机"
+    }
+  ]
+}
