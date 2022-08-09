@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "animation",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}
