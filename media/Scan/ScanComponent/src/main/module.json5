@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "ScanComponent",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

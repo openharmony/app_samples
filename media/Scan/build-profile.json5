@@ -1,0 +1,44 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "certpath": "C:\\Users\\YanPei\\.ohos\\config\\openharmony\\auto_ohos_default.cer",
+          "storePassword": "0000001BA15AE4BE7DA21C8F049C26E69BFE93F265EC173BC326E4ADBF821699974BB2199D4193DEB3C486",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC4E235D9CA409843FFCABC7577EC52E83584F75518C6C22C7F86A843788C31625FCDAA101A68D1",
+          "profile": "C:\\Users\\YanPei\\.ohos\\config\\openharmony\\auto_ohos_default_com.example.scan.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\YanPei\\.ohos\\config\\openharmony\\auto_ohos_default.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ScanComponent",
+      "srcPath": "./ScanComponent"
+    }
+  ]
+}
