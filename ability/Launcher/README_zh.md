@@ -64,3 +64,4 @@
 
 5.本示例需要使用系统权限的系统接口，需要使用Full SDK编译。使用Full SDK时需要手动从镜像站点获取，并在DevEco Studio中替换，具体操作可参考[替换指南](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/full-sdk-switch-guide.md)。
 
+6.本示例当前仅实现了使用说明中的1、2、3、4个功能点，其他功能点会后续增加。
