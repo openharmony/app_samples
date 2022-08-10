@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import router from '@ohos.router';
+
 const array: Array<string> = [
   'ohos.permission.CAMERA',
   'ohos.permission.MICROPHONE',
@@ -20,11 +21,30 @@ const array: Array<string> = [
   'ohos.permission.WRITE_MEDIA',
   'ohos.permission.MEDIA_LOCATION'
 ];
+
+interface EventHub {
+  emit(event: string, ...args: Object[]): void
+}
+
+interface AbilityContext {
+  terminateSelf(): Promise<void>
+  eventHub: EventHub
+}
 @Entry
 @Component
 struct Index{
+  private contexts: AbilityContext
+  contextCaller: any
+
   async aboutToAppear(){
-    await globalThis.abilityContext.requestPermissionsFromUser(array)
+    this.contexts = getContext(this) as AbilityContext
+    let data = {
+      context: null,
+      launchWant: null
+    }
+    this.contexts.eventHub.emit("getAbilityData", data)
+    this.contextCaller = data.context // 拿到全局的context，即类似globalThis.mainAbilityContext
+    await this.contextCaller.requestPermissionsFromUser(array)
   }
   build(){
     Flex({direction:FlexDirection.Column,justifyContent:FlexAlign.Center,alignItems:ItemAlign.Center}){

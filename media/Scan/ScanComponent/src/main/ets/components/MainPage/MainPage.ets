@@ -25,6 +25,14 @@ import mediaquery from '@ohos.mediaquery';
 const TAG: string = '[ParasQRCode]'
 const QRCODE_SIZE: number = px2vp(250) // 二维码的大小
 
+interface EventHub {
+  emit(event: string, ...args: Object[]): void
+}
+
+interface AbilityContext {
+  terminateSelf(): Promise<void>
+  eventHub: EventHub
+}
 
 @Entry
 @Component
@@ -46,6 +54,8 @@ export struct ScanPage {
   @State changeState: boolean = false
   @State multiples: number = 1.3
   @State isPhone: boolean = false
+  private contexts: AbilityContext
+  contextCaller: any
   listenerIsPhone = mediaquery.matchMediaSync("(orientation:landscape)")
 
   onPortrait(mediaQueryResult) {
@@ -82,6 +92,13 @@ export struct ScanPage {
   }
 
   aboutToAppear() {
+    this.contexts = getContext(this) as AbilityContext
+    let data = {
+      context: null,
+      launchWant: null
+    }
+    this.contexts.eventHub.emit("getAbilityData", data)
+    this.contextCaller = data.context // 拿到全局的context，即类似globalThis.mainAbilityContext
     this.onPortrait(this.listenerIsPhone)
     this.surfaceId = this.mXComponentController.getXComponentSurfaceId()
     Logger.info(this.tag, `aboutToAppear,surfaceId=${this.surfaceId}`)
@@ -91,7 +108,7 @@ export struct ScanPage {
   scanInit = async () => {
     setInterval(() => {
       CameraService.takePicture()
-      prompt.showToast({ message: '五秒拍照一次', duration: 1000 })
+      prompt.showToast({ message: $r("app.string.Scan_seconds"), duration: 1000 })
     }, 3000)
     this.uploadQrcodeImage = await MediaUtils.getPixelMap(this.imgThumbnail)
     this.getDecodeInit()
@@ -123,7 +140,7 @@ export struct ScanPage {
           .width(240 * this.multiples)
           .height(240 * this.multiples)
           .margin({ top: 120 })
-        Text("将二维码放入框中,即可自动扫描").fontSize(18).fontColor(Color.White).margin({ top: 24 })
+        Text($r("app.string.Scan_text")).fontSize(18).fontColor(Color.White).margin({ top: 24 })
         Canvas(this.context)
           .width(QRCODE_SIZE)
           .aspectRatio(1)
@@ -150,7 +167,7 @@ export struct ScanPage {
           this.OperationBtn($r("app.media.scan_photo"), () => {
             this.changeState = true
             // 3.2 beta分支abilityName使用com.ohos.filepicker.MainAbility
-            globalThis.abilityContext.startAbilityForResult({
+            this.contextCaller.startAbilityForResult({
               bundleName: "com.ohos.filepicker",
               abilityName: "com.ohos.filepicker.MainAbility",
               parameters: {
@@ -163,7 +180,7 @@ export struct ScanPage {
               Logger.info(TAG, `this.images = ${JSON.stringify(images)}`)
               this.uploadQrcodeImage = await MediaUtils.getPixelMap(images[0])
               if (this.uploadQrcodeImage === null) {
-                prompt.showToast({ message: '所选文件不是图片', duration: 1000 })
+                prompt.showToast({ message: $r("app.string.Scan_file"), duration: 1000 })
                 return
               }
               this.context.clearRect(0, 0, QRCODE_SIZE, QRCODE_SIZE)
@@ -172,7 +189,7 @@ export struct ScanPage {
               this.getDecodePhoto()
             })
             // 主干master分支abilityName使用MainAbility
-            globalThis.abilityContext.startAbilityForResult({
+            this.contextCaller.startAbilityForResult({
               bundleName: "com.ohos.filepicker",
               abilityName: "MainAbility",
               parameters: {
@@ -185,7 +202,7 @@ export struct ScanPage {
               Logger.info(TAG, `this.images = ${JSON.stringify(images)}`)
               this.uploadQrcodeImage = await MediaUtils.getPixelMap(images[0])
               if (this.uploadQrcodeImage === null) {
-                prompt.showToast({ message: '所选文件不是图片', duration: 1000 })
+                prompt.showToast({ message: $r("app.string.Scan_file"), duration: 1000 })
                 return
               }
               this.context.clearRect(0, 0, QRCODE_SIZE, QRCODE_SIZE)
@@ -208,11 +225,11 @@ export struct ScanPage {
           .width(40 * this.multiples)
           .height(40 * this.multiples)
           .onClick(async () => {
-            prompt.showToast({ message: '拍照中...', duration: 1000 })
+            prompt.showToast({ message: $r("app.string.Scan_take_Photo"), duration: 1000 })
             CameraService.takePicture()
             this.uploadQrcodeImage = await MediaUtils.getPixelMap(this.imgThumbnail)
             if (this.uploadQrcodeImage === null) {
-              prompt.showToast({ message: '所选文件不是图片', duration: 1000 })
+              prompt.showToast({ message: $r("app.string.Scan_file"), duration: 1000 })
               return
             }
             Logger.info(this.tag, `takePicturessss, imageurl: ${this.imgThumbnail}`)
@@ -221,7 +238,7 @@ export struct ScanPage {
             this.getDecodeInit()
             this.showInit = true
           })
-        Text("轻触照亮").fontSize(20).fontColor(Color.White).margin({ top: 4 * this.multiples })
+        Text($r("app.string.Scan_light")).fontSize(20).fontColor(Color.White).margin({ top: 4 * this.multiples })
       }.margin({ top: 350 })
 
       // 扫一扫 文本翻译 字体设置
@@ -234,7 +251,7 @@ export struct ScanPage {
       Panel(this.showPhoto) {
         Column() {
           Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
-            Text("读取内容:")
+            Text($r("app.string.Scan_read_content"))
               .fontSize(25)
               .width('90%')
             Image($r("app.media.scan_close")).width(50).height(50).onClick(() => {
@@ -243,7 +260,7 @@ export struct ScanPage {
             })
           }.padding(20)
 
-          Text(this.resultPhoto.length === 0 ? "读取失败,请重新读取" : this.resultPhoto).fontSize(25)
+          Text(this.resultPhoto.length === 0 ? $r("app.string.Scan_read_fail") : this.resultPhoto).fontSize(25)
 
         }
       }
@@ -284,11 +301,11 @@ struct FunctionSet {
           Image($r("app.media.scans")).width(60 * this.multiples).height(60 * this.multiples)
         }
         if (this.changeTextOne) {
-          Text(this.changeTextOne ? "翻译" : "扫码").fontColor(Color.White).fontSize(20).margin({ top: 20 })
+          Text(this.changeTextOne ? $r("app.string.Scan_translate") : $r("app.string.Scan_code")).fontColor(Color.White).fontSize(20).margin({ top: 20 })
         } else if (this.changeTextTwo) {
-          Text(this.changeTextTwo ? "字体" : "扫码").fontColor(Color.White).fontSize(20).margin({ top: 20 })
+          Text(this.changeTextTwo ? $r("app.string.Scan_fonts") : $r("app.string.Scan_code")).fontColor(Color.White).fontSize(20).margin({ top: 20 })
         } else {
-          Text("扫码").fontColor(Color.White).fontSize(20).margin({ top: 20 })
+          Text($r("app.string.Scan_code")).fontColor(Color.White).fontSize(20).margin({ top: 20 })
         }
       }.margin({ top: 30 })
 
@@ -323,7 +340,7 @@ struct PanelInit {
     Panel(this.showInit) {
       Column() {
         Flex({ direction: FlexDirection.Row, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
-          Text("二维码扫描结果:")
+          Text($r("app.string.Scan_result"))
             .fontSize(25)
             .width('90%')
           Image($r("app.media.scan_close")).width(50).height(50).onClick(() => {
@@ -331,7 +348,7 @@ struct PanelInit {
           })
         }.padding(20)
 
-        Text(this.result.length === 0 ? "请选择正确的二维码" : this.result).fontSize(25)
+        Text(this.result.length === 0 ? $r("app.string.Scan_choice") : this.result).fontSize(25)
 
       }
     }

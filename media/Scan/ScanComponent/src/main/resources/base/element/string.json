@@ -3,6 +3,54 @@
     {
       "name": "page_show",
       "value": "page from npm package"
+    },
+    {
+      "name": "Scan_code",
+      "value": "扫码"
+    },
+    {
+      "name": "Scan_translate",
+      "value": "翻译"
+    },
+    {
+      "name": "Scan_fonts",
+      "value": "字体"
+    },
+    {
+      "name": "Scan_result",
+      "value": "二维码扫描结果:"
+    },
+    {
+      "name": "Scan_choice",
+      "value": "请选择正确的二维码"
+    },
+    {
+      "name": "Scan_light",
+      "value": "轻触照亮"
+    },
+    {
+      "name": "Scan_read_content",
+      "value": "读取内容"
+    },
+    {
+      "name": "Scan_read_fail",
+      "value": "读取失败,请重新读取"
+    },
+    {
+      "name": "Scan_text",
+      "value": "将二维码放入框中,即可自动扫描"
+    },
+    {
+      "name": "Scan_seconds",
+      "value": "五秒扫描一次"
+    },
+    {
+      "name": "Scan_file",
+      "value": "所选文件不是图片"
+    },
+    {
+      "name": "Scan_take_Photo",
+      "value": "拍照中..."
     }
   ]
 }

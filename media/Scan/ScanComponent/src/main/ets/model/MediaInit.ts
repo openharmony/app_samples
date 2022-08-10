@@ -111,12 +111,6 @@ export default class MediaUtils {
         return albums
     }
 
-//    deleteFile(media: any) {
-//        let uri = media.uri
-//        Logger.info(this.tag, `deleteFile,uri = ${uri}`)
-//        return this.mediaTest.deleteAsset(uri)
-//    }
-
     onDateChange(callback: () => void) {
         this.mediaTest.on('albumChange', () => {
             Logger.info(this.tag, 'albumChange called')
