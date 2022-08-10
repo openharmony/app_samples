@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "page_show",
+      "value": "page from npm package"
+    },
+    {
+      "name": "configuration",
+      "value": "服务器配置"
+    },
+    {
+      "name": "web",
+      "value": "请输入网址"
+    },
+    {
+      "name": "add",
+      "value": "增加"
+    },
+    {
+      "name": "reduce",
+      "value": "减少"
+    },
+    {
+      "name": "reset",
+      "value": "重置"
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "result",
+      "value": "服务器返回结果"
+    },
+    {
+      "name": "back",
+      "value": "返回"
+    }
+  ]
+}
