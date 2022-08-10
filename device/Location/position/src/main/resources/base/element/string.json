@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "description_mainability",
+      "value": "Locate the current location and obtain location information"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "deliver_to",
+      "value": "配送至"
+    },
+    {
+      "name": "current_positioning",
+      "value": "定位/历史访问城市"
+    },
+    {
+      "name": "xian",
+      "value": "西安"
+    },
+    {
+      "name": "domestic_hot_city",
+      "value": "国内热门城市"
+    }
+  ]
+}
