@@ -43,6 +43,10 @@
     {
       "name": "share_transition_tips",
       "value": "Click to view the shared element animation"
+    },
+    {
+      "name": "enter_animation",
+      "value": "Enter Animation"
     }
   ]
 }

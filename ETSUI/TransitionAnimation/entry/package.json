@@ -10,5 +10,7 @@
   "description": "example description",
   "repository": {},
   "version": "1.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "@ohos/enter-animation": "file:../animation"
+  }
 }

@@ -40,6 +40,7 @@ struct Index {
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Start }) {
       TitleBar()
+      this.ButtonItem($r('app.string.enter_animation'), 'pages/Home')
       this.ButtonItem($r('app.string.page_transition_bottom'), 'pages/page/BottomTransition')
       this.ButtonItem($r('app.string.page_transition_custom_first'), 'pages/page/CustomTransition')
       this.ButtonItem($r('app.string.page_transition_custom_second'), 'pages/page/CustomTransition2')
