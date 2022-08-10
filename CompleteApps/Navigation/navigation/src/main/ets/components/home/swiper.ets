@@ -20,6 +20,7 @@ import { indexData } from '../../data/homeData'
 export struct SwiperComponent {
   @State swiperData: Array<SwiperModel> = indexData
   @Prop ratio: number
+  @Prop isLand: boolean
 
   build() {
     Column() {
@@ -29,21 +30,26 @@ export struct SwiperComponent {
             Flex({ justifyContent: FlexAlign.Center }) {
               Image(item.img)
                 .objectFit(ImageFit.Fill)
-                .border({ radius: 10 * this.ratio })
+                .border({ radius: 20 * this.ratio })
             }
           }
           .clip(true)
           .params({ ratio: this.ratio })
-          .border({ radius: 10 * this.ratio })
+          .border({ radius: 20 * this.ratio })
+          .margin({ right: this.isLand ? '5vp' : 0, left: this.isLand ? '5vp' : 0 })
+          .width(this.isLand ? '48%' : '100%')
         }, item => item.toString())
       }
       .margin(2)
-      .loop(true)
-      .autoPlay(true)
-      .indicator(true)
+      .loop(this.isLand ? false : true)
+      .autoPlay(this.isLand ? false : true)
+      .indicator(this.isLand ? false : true)
+      .disableSwipe(this.isLand ? true : false)
       .borderRadius(10)
-      .margin({ right: 16, left: 16 })
+      .padding({ left: 1, right: 1 })
+      .margin({ right: this.isLand ? '1%' : 16, left: this.isLand ? '2.5%' : 16 })
       .indicatorStyle({ selectedColor: 'red', color: '#FFFFFF' })
+      .displayMode(this.isLand ? SwiperDisplayMode.AutoLinear : SwiperDisplayMode.Stretch)
     }
   }
 }

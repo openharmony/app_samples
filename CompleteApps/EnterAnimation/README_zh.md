@@ -1,10 +1,10 @@
-# 购物实例应用
+# 进场动画
 
 ### 介绍
 
 本实例展示通过设置全屏，加载图片并倒计时后进入首页面。
 
-本实例使用[页面间专场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-page-transition-animation.md)配置页面入场组件和页面退场组件来自定义页面转场动效
+本实例使用[页面间转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-page-transition-animation.md)配置页面入场组件和页面退场组件来自定义页面转场动效
 
 使用说明：
 
@@ -18,7 +18,7 @@
 
 ### 相关权限
 
-不涉及。
+不涉及
 
 ### 依赖
 

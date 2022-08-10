@@ -15,16 +15,24 @@
 
 import router from '@ohos.router'
 import window from '@ohos.window'
+import mediaQuery from '@ohos.mediaquery'
 
-const SKIP_COUNTDOWN: number = 3
+const SKIP_COUNTDOWN: number = 3 // 第一段进场动画用时3s
 
 @Entry
 @Component
 export struct TransitionsAnimation {
-  @State pageCountDown: number = 6
+  @State isLand: boolean = false
+  @State pageCountDown: number = 6 // 进场动画总用时6s
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
   gotoNav: () => void
 
+  onPortrait(mediaQueryResult) {
+    this.isLand = mediaQueryResult.matches
+  }
+
   aboutToAppear() {
+    this.listener.on('change', this.onPortrait.bind(this))
     window.getTopWindow(getContext(this)).then(result => {
       result.setFullScreen(true)
     })
@@ -59,10 +67,10 @@ export struct TransitionsAnimation {
           Row() {
             Image($r('app.media.enterAppAnimation'))
               .objectFit(ImageFit.Contain)
-              .width('80%')
+              .width(this.isLand ? '60%' : '80%')
               .aspectRatio(1.4)
           }
-          .margin({ top: '181vp' })
+          .margin({ top: this.isLand ? '10vp' : '181vp' })
 
           Column() {
             Text($r('app.string.shopping'))
@@ -72,7 +80,7 @@ export struct TransitionsAnimation {
               .fontSize(20)
               .opacity(0.6)
           }
-          .margin({ top: '200vp' })
+          .margin({ top: this.isLand ? '10vp' : '200vp' })
         }
 
         Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
@@ -86,8 +94,8 @@ export struct TransitionsAnimation {
             .fontColor('#FFFFFF')
             .margin({ left: '4vp' })
         }
-        .position({ x: '75.3%', y: '3%' })
-        .width('18.9%')
+        .position({ x: this.isLand ? '85%' : '75.3%', y: '3%' })
+        .width(this.isLand ? '10%' : '18.9%')
         .aspectRatio(2.4)
         .backgroundColor('rgba(0,0,0,0.3)')
         .borderRadius('18vp')

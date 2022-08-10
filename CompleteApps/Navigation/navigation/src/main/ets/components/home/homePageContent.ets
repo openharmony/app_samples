@@ -19,7 +19,7 @@ import { GoodsList } from '../goodslist'
 import { SwiperComponent } from './swiper'
 
 @Component
-export struct   homePageContent {
+export struct homePageContent {
   @State tabsIndex: number = 0
   @Prop isLand: boolean
   @State navData: Array<NavDataModel> = navData
@@ -32,7 +32,7 @@ export struct   homePageContent {
   build() {
     Scroll() {
       Column() {
-        SwiperComponent({ ratio: this.ratio })
+        SwiperComponent({ ratio: this.ratio, isLand: this.isLand })
           .width('100%')
           .height('30%')
         Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
@@ -61,24 +61,24 @@ export struct   homePageContent {
         // 主页下半部分商品展示--全部、精选、新品、实惠
         Tabs({ controller: this.controller }) {
           TabContent() {
-            GoodsList({isLand: this.isLand, ratio: this.ratio, url: this.url})
+            GoodsList({ isLand: this.isLand, ratio: this.ratio, url: this.url })
           }
 
           TabContent() {
-            GoodsList({isLand: this.isLand, ratio: this.ratio, url: this.url})
+            GoodsList({ isLand: this.isLand, ratio: this.ratio, url: this.url })
           }
 
           TabContent() {
-            GoodsList({isLand: this.isLand, ratio: this.ratio, url: this.url})
+            GoodsList({ isLand: this.isLand, ratio: this.ratio, url: this.url })
           }
 
           TabContent() {
-            GoodsList({isLand: this.isLand, ratio: this.ratio, url: this.url})
+            GoodsList({ isLand: this.isLand, ratio: this.ratio, url: this.url })
           }
         }
         .barWidth(0)
         .barHeight(0)
-        .height('40%')
+        .height('55%')
         .scrollable(false)
       }
     }

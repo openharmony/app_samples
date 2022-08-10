@@ -21,8 +21,6 @@ const TAG: string = 'MainAbility'
 export default class MainAbility extends Ability {
   onCreate(want, launchParam) {
     Logger.info(TAG, '[Demo] MainAbility onCreate')
-    globalThis.abilityWant = want
-    globalThis.abilityContext = this.context
     globalThis.requestPermission = async () => {
       let array: Array<string> = [
         'ohos.permission.INTERNET'

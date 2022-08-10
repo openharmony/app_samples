@@ -44,7 +44,7 @@ class Info {
 @Component
 export struct GoodsList {
   @Prop isLand: boolean
-  @State productData: Array<any> = productData
+  @State productData: Array<ProductDataModel> = productData
   @State flag: boolean = false
   private url: string
   private option: object
@@ -122,8 +122,9 @@ export struct GoodsList {
           }
           .borderRadius(10)
           .margin({ top: 3, left: 3 })
-          .padding({ top: '1.5%', bottom: '1.5%', left: '3.3%', right: '3.3%' })
           .backgroundColor(Color.White)
+          .height(this.isLand ? '120%' : undefined)
+          .padding({ top: '1.5%', bottom: '1.5%', left: '3.3%', right: '3.3%' })
           .onClick(() => {
             router.push({
               url: 'pages/detail',

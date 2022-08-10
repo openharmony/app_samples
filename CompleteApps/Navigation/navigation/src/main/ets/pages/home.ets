@@ -14,6 +14,7 @@
  */
 
 import display from '@ohos.display'
+import mediaQuery from '@ohos.mediaquery'
 import { TabTitleModel } from '../model/homeModel'
 import { tabTitleData } from '../data/homeData'
 import { MainPage } from './homePage/mainPage'
@@ -28,11 +29,17 @@ AppStorage.Link('isUpdateDialogOpen') || AppStorage.SetOrCreate('isUpdateDialogO
 @Component
 export struct NavigationHomePage {
   @State tabsIndex: number = 0
+  @State isLand: boolean = false
   @State tabTitleData: Array<TabTitleModel> = tabTitleData
   @State ratio: number = 1 // 适配屏幕所需要乘的比例，默认为1
   private url: string
   private option: object
   private controller: TabsController = new TabsController()
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
+
+  onPortrait(mediaQueryResult) {
+    this.isLand = mediaQueryResult.matches
+  }
 
   @Builder TabBarBuilder(index: number) {
     Flex({ justifyContent: FlexAlign.SpaceBetween }) {
@@ -59,6 +66,7 @@ export struct NavigationHomePage {
   }
 
   aboutToAppear() {
+    this.listener.on('change', this.onPortrait.bind(this))
     display.getAllDisplay((err, data) => {
       let aspect = data[0].width / data[0].height
       if (aspect === SCREEN_RATIO) {
@@ -79,15 +87,15 @@ export struct NavigationHomePage {
     Column() {
       Tabs({ barPosition: BarPosition.End, controller: this.controller }) {
         TabContent() {
-          MainPage({ ratio: this.ratio, url: this.url, option: this.option })
+          MainPage({ ratio: this.ratio, url: this.url, option: this.option, isLand: this.isLand })
         }.tabBar(this.TabBarBuilder(0))
 
         TabContent() {
-          NewProduct({ ratio: this.ratio, url: this.url, option: this.option })
+          NewProduct({ ratio: this.ratio, url: this.url, option: this.option, isLand: this.isLand })
         }.tabBar(this.TabBarBuilder(1))
 
         TabContent() {
-          ShopCart({ ratio: this.ratio, url: this.url, option: this.option })
+          ShopCart({ ratio: this.ratio, url: this.url, option: this.option, isLand: this.isLand })
         }.tabBar(this.TabBarBuilder(2))
 
         TabContent() {

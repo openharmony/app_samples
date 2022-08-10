@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-import mediaQuery from '@ohos.mediaquery'
 import { GoodsList } from '../../components/goodslist'
 import { newProductTitleBarModel, SwiperModel } from '../../model/homeModel'
 import { newProductTitleBarData, swiperData } from '../../data/homeData'
@@ -21,22 +20,13 @@ import { newProductTitleBarData, swiperData } from '../../data/homeData'
 @Component
 export struct NewProduct {
   @State tabsIndex: number = 0
-  @State isLand: boolean = false
   @State swiperData: Array<SwiperModel> = swiperData
   @State newProductTitleBarData: Array<newProductTitleBarModel> = newProductTitleBarData
   @Prop ratio: number
   private url: string
+  @Prop isLand: boolean
   private option: object
   private controller: TabsController = new TabsController()
-  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
-
-  onPortrait(mediaQueryResult) {
-    this.isLand = mediaQueryResult.matches
-  }
-
-  aboutToAppear() {
-    this.listener.on('change', this.onPortrait.bind(this))
-  }
 
   build() {
     Column() {

@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-import mediaQuery from '@ohos.mediaquery'
 import { NavDataModel } from '../../model/homeModel'
 import { navData } from '../../data/homeData'
 import { TitleBarComponent } from '../../components/home/titleBar'
@@ -23,20 +22,11 @@ import { homePageContent } from '../../components/home/homePageContent'
 export struct MainPage {
   @State navTabsIndex: number = 0
   @State navData: Array<NavDataModel> = navData
-  @State isLand: boolean = false
   @Prop ratio: number
   private url: string
+  @Prop isLand: boolean
   private option: object
   private navController: TabsController = new TabsController()
-  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
-
-  onPortrait(mediaQueryResult) {
-    this.isLand = mediaQueryResult.matches
-  }
-
-  aboutToAppear() {
-    this.listener.on('change', this.onPortrait.bind(this))
-  }
 
   build() {
     Flex({ direction: FlexDirection.Column }) {

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import mediaQuery from '@ohos.mediaquery'
+
 import { Cart } from '../../components/shopcart/cart'
 import { FavorGoodList } from '../../components/shopcart/favorGoodlist'
 
@@ -20,18 +20,9 @@ import { FavorGoodList } from '../../components/shopcart/favorGoodlist'
 @Component
 export struct ShopCart {
   @Prop ratio: number
-  @State isLand: boolean = false
+  @Prop isLand: boolean
   private url: string
   private option: object
-  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
-
-  onPortrait(mediaQueryResult) {
-    this.isLand = mediaQueryResult.matches
-  }
-
-  aboutToAppear() {
-    this.listener.on('change', this.onPortrait.bind(this))
-  }
 
   build() {
     Column() {
