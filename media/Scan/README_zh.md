@@ -28,18 +28,13 @@
 
 ### 相关权限
 
-```
 本示例需要在module.json5中配置如下权限:
 
-读取公共媒体文件权限：ohos.permission.READ_MEDIA
+读取公共媒体文件权限：[ohos.permission.READ_MEDIA](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
 
-相机权限 ohos.permission.CAMERA
+相机权限 [ohos.permission.CAMERA](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
 
-本地资源读取权限 ohos.permission.MEDIA_LOCATION
-
-[权限说明](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
-```
-
+本地资源读取权限 [ohos.permission.MEDIA_LOCATION](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
 
 ### 依赖
 

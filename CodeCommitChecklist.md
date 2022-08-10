@@ -105,7 +105,7 @@ Signed-off-by: jiangwensai <jiangwensai@huawei.com>
 
 	6.2 API版本、SDK版本（如果依赖Full SDK，附上替换链接），示例如下：
 
-		本示例进支持APIXX版本SDK，版本号：3.X.X.X；（如果涉及Full SDK还需加上：本涉及涉及使用系统接口：XXX，需要手动替换Full SDK才能编译通过，具体操作可参考[替换指南]。）
+		本示例仅支持APIXX版本SDK，版本号：3.X.X.X；（如果涉及Full SDK还需加上：本涉及涉及使用系统接口：XXX，需要手动替换Full SDK才能编译通过，具体操作可参考[替换指南]。）
 
 	6.3 支持的IDE版本，示例如下：
 
