@@ -1,0 +1,72 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "StageSample"
+    },
+    {
+      "name": "watch",
+      "value": "观看"
+    },
+    {
+      "name": "first_author",
+      "value": "旅游文化推荐大使"
+    },
+    {
+      "name": "first_one_name",
+      "value": "林小杰"
+    },
+    {
+      "name": "first_one_comment",
+      "value": "HDC2021，我来了！"
+    },
+    {
+      "name": "first_two_name",
+      "value": "刘小华"
+    },
+    {
+      "name": "first_two_comment",
+      "value": "HarmonyOS，加油，go go go！"
+    },
+    {
+      "name": "first_three_name",
+      "value": "吴小京"
+    },
+    {
+      "name": "first_three_comment",
+      "value": "一起冲，我看这架势，继续冲！"
+    },
+    {
+      "name": "first_four_name",
+      "value": "周小伦"
+    },
+    {
+      "name": "first_four_comment",
+      "value": "期待在HDC2021看到鸿蒙的新版本！"
+    },
+    {
+      "name": "first_five_name",
+      "value": "张小友"
+    },
+    {
+      "name": "first_five_comment",
+      "value": "张小友在线支持一波~。"
+    },
+    {
+      "name": "two_author",
+      "value": "美丽杭州西湖之声"
+    },
+    {
+      "name": "three_author",
+      "value": "加油，我的中国"
+    },
+    {
+      "name": "talk_something",
+      "value": "聊点什么吧~~"
+    },
+    {
+      "name": "in_live",
+      "value": "直播中"
+    }
+  ]
+}

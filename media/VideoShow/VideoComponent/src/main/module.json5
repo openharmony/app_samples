@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "VideoComponent",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}
