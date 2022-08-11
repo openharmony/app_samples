@@ -61,6 +61,7 @@ export struct VideoPage {
           })
           .onFinish(() => {
             this.isHidden = true
+            this.isStart = false
           })
 
         // 空白层预览

@@ -23,6 +23,7 @@ export struct smallVideo {
 
   onChanged(): void {
     if (this.isHidden) {
+      this.smallVideoController.start();
       this.smallVideoController.setCurrentTime(this.updateTime)
     }
   }

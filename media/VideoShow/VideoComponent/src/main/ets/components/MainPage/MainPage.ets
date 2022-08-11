@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import router from '@ohos.router'
+import mediaQuery from '@ohos.mediaquery';
 import { VideoPage } from "./videopage"
 import { smallVideo } from "./smallVideo"
 
@@ -28,8 +29,20 @@ export struct MainPage {
   @State activeVideo: number = 0
   @State openFirst: boolean = false
   @Provide('playTime') playNum: number = 20
+  @State isPhone: boolean = false
+  portraitFunc = null
+  listenerIsPhone = mediaQuery.matchMediaSync('(orientation:landscape)');
 
-  onScrollUpdated(): void { // 监听Scroll下滑距离  7.11改
+  onPortrait(mediaQueryResult) {
+    this.isPhone = !mediaQueryResult.matches
+  }
+
+  async aboutToAppear() {
+    this.portraitFunc = this.onPortrait.bind(this) // bind current js instance
+    this.listenerIsPhone.on('change', this.portraitFunc)
+  }
+
+  onScrollUpdated(): void { // 监听Scroll下滑距离
     if (this.isCancel) { // 判断视频右上角的X，如果点过，不再出现小窗口
       this.isDistance(this.scrollSum)
     }
@@ -69,7 +82,7 @@ export struct MainPage {
               }, item => item)
             }
             .width('100%')
-            .aspectRatio(1.12)
+            .aspectRatio(this.isPhone ? 1.12 : 3.5)
             .backgroundColor('#ffffff')
             .height(250)
             .indicator(false)
