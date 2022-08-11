@@ -10,111 +10,107 @@
     },
     {
       "name": "save",
-      "value": "保存至：手机"
+      "value": "Save to: mobile phone"
     },
     {
       "name": "search",
-      "value": "搜索联系人"
+      "value": "Searching for Contacts"
     },
     {
       "name": "contacts",
-      "value": "位联系人"
+      "value": "contacts"
     },
     {
       "name": "phone",
-      "value": "电话"
+      "value": "phone"
     },
     {
       "name": "contact",
-      "value": "联系人"
+      "value": "contact"
     },
     {
       "name": "collection",
-      "value": "收藏"
+      "value": "collection"
     },
     {
       "name": "newContact",
-      "value": "新建联系人"
+      "value": "new contact"
     },
     {
       "name": "defaults",
-      "value": "默认"
+      "value": "default"
     },
     {
       "name": "phone_ring",
-      "value": "电话铃声"
+      "value": "phone ringing"
     },
     {
       "name": "editor",
-      "value": "编辑"
+      "value": "editor"
     },
     {
       "name": "delete",
-      "value": "删除"
+      "value": "delete"
     },
     {
       "name": "name_card",
-      "value": "我的名片"
+      "value": "business card"
     },
     {
       "name": "group",
-      "value": "群组"
+      "value": "group"
     },
     {
       "name": "editor_contact",
-      "value": "编辑联系人"
+      "value": "editor contact"
     },
     {
       "name": "add_contact",
-      "value": "新增联系人"
+      "value": "add contact"
     },
     {
       "name": "import_file",
-      "value": "导入文件"
+      "value": "import file"
     },
     {
       "name": "export_file",
-      "value": "导出文件"
-    },
-    {
-      "name": "save_phone",
-      "value": "保存至：手机"
+      "value": "export file"
     },
     {
       "name": "cancel",
-      "value": "取消"
+      "value": "cancel"
     },
     {
       "name": "confirm",
-      "value": "确认"
+      "value": "confirm"
     },
     {
       "name": "warning",
-      "value": "警告"
+      "value": "warning"
     },
     {
       "name": "delete_show",
-      "value": "您正在删除该联系人，请确认是否删除"
+      "value": "You are deleting this contact. Please confirm whether to delete it"
     },
     {
       "name": "not_fill",
-      "value": "未填写"
+      "value": "not fill"
     },
     {
       "name": "name",
-      "value": "姓名"
+      "value": "name"
     },
     {
       "name": "address",
-      "value": "地址"
+      "value": "address"
     },
     {
       "name": "email",
-      "value": "邮箱"
+      "value": "email"
     },
     {
       "name": "note",
-      "value": "备注"
+      "value": "note"
     }
   ]
 }

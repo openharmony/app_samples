@@ -14,6 +14,7 @@
  */
 
 import contact from '@ohos.contact'
+import resourceManager from '@ohos.resourceManager'
 
 @Component
 export struct UpdateContact {
@@ -22,6 +23,11 @@ export struct UpdateContact {
   @State nickName: string = ''
   @State phoneNumber: string = ''
   @State postalAddress: string = ''
+  @State nameText: string = ''
+  @State emailText: string = ''
+  @State nickNameText: string = ''
+  @State phoneNumberText: string = ''
+  @State postalAddressText: string = ''
   @Link contact: contact.Contact
 
   build() {
@@ -36,11 +42,11 @@ export struct UpdateContact {
         .fontSize(20)
         .margin('2%')
 
-      this.updateContact(`姓名: ${this.name}`, $r('app.media.name'))
-      this.updateContact(`昵称: ${this.nickName}`, $r('app.media.nickname'))
-      this.updateContact(`电话: ${this.phoneNumber}`, $r('app.media.phone'))
-      this.updateContact(`邮箱: ${this.email}`, $r('app.media.email'))
-      this.updateContact(`地址: ${this.postalAddress}`, $r('app.media.address'))
+      this.updateContact(`${this.nameText}: ${this.name}`, $r('app.media.name'))
+      this.updateContact(`${this.nickNameText}: ${this.nickName}`, $r('app.media.nickname'))
+      this.updateContact(`${this.phoneNumberText}: ${this.phoneNumber}`, $r('app.media.phone'))
+      this.updateContact(`${this.emailText}: ${this.email}`, $r('app.media.email'))
+      this.updateContact(`${this.postalAddressText}: ${this.postalAddress}`, $r('app.media.address'))
     }
     .width('100%')
     .height('100%')
@@ -62,19 +68,19 @@ export struct UpdateContact {
         .placeholderFont({ size: 22, weight: 450, family: 'cursive', style: FontStyle.Normal })
         .onChange(value => {
           switch (editText) {
-            case '姓名:':
+            case `${this.nameText}:`:
               this.name = value
               break
-            case '昵称:':
+            case `${this.nickNameText}:`:
               this.nickName = value
               break
-            case '电话:':
+            case `${this.phoneNumberText}:`:
               this.phoneNumber = value
               break
-            case '邮箱:':
+            case `${this.emailText}:`:
               this.email = value
               break
-            case '地址:':
+            case `${this.postalAddressText}:`:
               this.postalAddress = value
               break
             default:
@@ -86,11 +92,17 @@ export struct UpdateContact {
     .margin({ top: 10 })
   }
 
-  aboutToAppear() {
+  async aboutToAppear() {
     this.name = this.contact.name.fullName
     this.phoneNumber = this.contact.phoneNumbers[0].phoneNumber
     this.nickName = this.contact.nickName.nickName
     this.email = this.contact.emails[0].email
     this.postalAddress = this.contact.postalAddresses[0].postalAddress
+    let resource = await resourceManager.getResourceManager()
+    this.nameText = await resource.getString($r('app.string.name').id)
+    this.emailText = await resource.getString($r('app.string.email').id)
+    this.nickNameText = await resource.getString($r('app.string.note').id)
+    this.phoneNumberText = await resource.getString($r('app.string.phone').id)
+    this.postalAddressText = await resource.getString($r('app.string.address').id)
   }
 }

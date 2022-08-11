@@ -21,7 +21,7 @@ import { Pinyin } from '../data/Pinyin'
 export struct ItemContainer {
   @State selected: number = 0
   @State routerItem: number = 0
-  @State aaa: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  @State letter: string = ''
   private pinyin: Pinyin = new Pinyin()
   private contacts: contact.Contact[] = []
   private scroller: Scroller = new Scroller()
@@ -39,11 +39,11 @@ export struct ItemContainer {
             ListItem() {
               Column() {
                 if (index === 0) {
-                  this.container(this.pinyin.getFirstLetter(item.name.fullName).toUpperCase())
+                  this.container(item.name.fullName.substr(0, 1).toUpperCase())
                 }
                 else {
-                  if (this.pinyin.getFirstLetter(item.name.fullName) !== this.pinyin.getFirstLetter(this.contacts[index - 1].name.fullName)) {
-                    this.container(this.pinyin.getFirstLetter(item.name.fullName).toUpperCase())
+                  if (item.name.fullName.substr(0, 1) !== this.contacts[index - 1].name.fullName.substr(0, 1)) {
+                    this.container(item.name.fullName.substr(0, 1).toUpperCase())
                   }
                 }
                 Row() {
@@ -67,15 +67,16 @@ export struct ItemContainer {
                 })
               }
               .width('100%')
-              .height(140)
             }
           }, item => item.toString())
         }
         .width('100%')
-        .constraintSize({ minHeight: '80%' })
-        .onScrollIndex((start: number) => {
+        .height('50%')
+        .onScrollIndex((startIndex: number, lastIndex: number) => {
           // 更新选中的字母索引
-          this.selected = start
+          this.letter = this.contacts[startIndex].name.fullName.substr(0, 1)
+            .toUpperCase()
+          this.selected = this.alphabetical.indexOf(this.letter)
         })
       }
       .width('100%')

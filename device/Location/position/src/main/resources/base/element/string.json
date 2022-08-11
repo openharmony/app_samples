@@ -2,15 +2,15 @@
   "string": [
     {
       "name": "description_mainability",
-      "value": "Locate the current location and obtain location information"
+      "value": "位置服务"
     },
     {
       "name": "MainAbility_desc",
-      "value": "description"
+      "value": "位置服务"
     },
     {
       "name": "MainAbility_label",
-      "value": "label"
+      "value": "位置服务"
     },
     {
       "name": "deliver_to",

@@ -22,9 +22,9 @@ const TAG: string = '[ContactInfo]'
 @Preview
 @Component
 export struct ContactInfo {
-  @State phone: string = ''
-  @State email: string = ''
-  @State address: string = ''
+  @State phone: string | Resource = ''
+  @State email: string | Resource = ''
+  @State address: string | Resource = ''
   private contact: contact.Contact
 
   build() {
@@ -32,7 +32,6 @@ export struct ContactInfo {
       Column() {
         Text(this.contact.name.fullName.substring(0, 1)
           .toUpperCase())
-          //Text('l')
           .width(130)
           .height(130)
           .fontSize(30)
@@ -43,14 +42,12 @@ export struct ContactInfo {
           .backgroundColor('#B6C5D1')
 
         Text(this.contact.name.fullName)
-          //Text('qazwsx')
           .fontSize(32)
           .margin({ bottom: 16 })
 
         Column() {
           Row() {
             Text(this.contact.phoneNumbers[0].phoneNumber)
-              //Text('12649643435')
               .width('50%')
               .fontSize(22)
               .margin({ left: 16 })
@@ -88,7 +85,6 @@ export struct ContactInfo {
                 .margin({ left: 16 })
             }
             .alignItems(HorizontalAlign.Start)
-            .width('30%')
 
             Blank()
               .width('52%')
@@ -151,10 +147,10 @@ export struct ContactInfo {
             .onClick(async () => {
               AlertDialog.show(
                 {
-                  title: '警告',
-                  message: '您正在删除该联系人，请确认是否删除',
+                  title: $r('app.string.warning'),
+                  message: $r('app.string.delete_show'),
                   primaryButton: {
-                    value: '确认',
+                    value: $r('app.string.confirm'),
                     action: async () => {
                       try {
                         await contact.deleteContact(this.contact.key)
@@ -168,7 +164,7 @@ export struct ContactInfo {
                     }
                   },
                   secondaryButton: {
-                    value: '取消',
+                    value: $r('app.string.cancel'),
                     action: () => {
                       Logger.info(TAG, `AlertDialog enter`)
                     }
@@ -194,17 +190,17 @@ export struct ContactInfo {
     try {
       this.phone = this.contact.phoneNumbers[0].phoneNumber
     } catch (err) {
-      this.phone = '未填写'
+      this.phone = $r('app.string.not_fill')
     }
     try {
       this.email = this.contact.emails[0].email
     } catch (err) {
-      this.email = '未填写'
+      this.email = $r('app.string.not_fill')
     }
     try {
       this.address = this.contact.postalAddresses[0].postalAddress
     } catch (err) {
-      this.address = '未填写'
+      this.address = $r('app.string.not_fill')
     }
   }
 }

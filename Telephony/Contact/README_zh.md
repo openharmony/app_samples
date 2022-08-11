@@ -2,7 +2,7 @@
 
 ### 介绍
 
-本示例模拟手机联系人实现联系人的添加、查询、修改、删除功能。
+本示例展示手机联系人功能。
 
 本示例使用[Tabs](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-container-tabs.md)容器组件设置应用整体布局,在首页面中使用[List](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-container-list.md)容器组件设置页面布局，再通过[AlphabetIndexer](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-container-alphabet-indexer.md)组件设置索引导航条。
 
@@ -24,7 +24,7 @@
 
 ### 依赖
 
-不涉及
+不涉及。
 
 ### 约束与限制
 
@@ -32,6 +32,8 @@
 
 2.本示例仅支持API9版本SDK，版本号：3.2.5.5 Beta2。
 
-3.本示例需要使用DevEco Studio 3.0 Beta4 (Build Version: 3.0.0.991, built on July 30, 2022)才可编译运行。
+3.本示例需要使用DevEco Studio 3.0 Beta4 (Build Version: 3.0.0.991， built on July 30， 2022)才可编译运行。
 
-4.本示例因接口问题，目前仅实现了联系人查询接口，可通过预置联系人应用添加联系人，再进入本示例应用查看已添加的联系人。
+4.本示例因接口问题，目前实现了联系人查询接口，可通过预置联系人应用添加联系人，再进入本应用查看已添加的联系人。
+
+5.因SDK问题，暂不支持本地编译。

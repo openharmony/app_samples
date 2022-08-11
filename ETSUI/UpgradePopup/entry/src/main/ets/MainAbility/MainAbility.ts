@@ -19,9 +19,9 @@ import Logger from '../../../../../updatedialog/src/main/ets/components/util/Log
 const TAG: string = 'MainAbility'
 
 export default class MainAbility extends Ability {
-  onCreate(want, launchParam) {
+  async onCreate(want, launchParam) {
     Logger.info(TAG, `[Demo] MainAbility onCreate`)
-    globalThis.abilityWant = want
+    await this.context.requestPermissionsFromUser(['ohos.permission.INTERNET'])
   }
 
   onDestroy() {

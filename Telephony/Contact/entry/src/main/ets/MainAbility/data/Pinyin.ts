@@ -420,7 +420,7 @@ export class Pinyin {
   }
 
 
-  //获取首字母
+  // 获取首字母
   getFirstLetter(chinese: string): string{
     let first = ''
     let pinYin = this.getPinYin(chinese)

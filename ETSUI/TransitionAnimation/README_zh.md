@@ -1,16 +1,14 @@
 # 转场动画
 
-### 简介
+### 介绍
 
 本示例展示了转场动画的使用，包括进场动画、页面间转场、组件内转场和共享元素转场。
 
-本实例使用[页面转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-page-transition-animation.md)通过在全局pageTransition方法内配置页面入场组件和页面退场组件来自定义页面转场动效。[组件转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-component.md)主要通过transition属性进行配
-置转场参数，在组件插入和删除时进行过渡动效，主要用于容器组件子组件插入删除时提升用户体验。在组件中通过sharedTransition方法设置[共享元素转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-shared-elements.md)，两个
-页面的组件配置为同一个id，则转场过程中会进行共享元素转场，配置为空字符串时不会有共享元素转场效果。
+本实例使用[页面转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-page-transition-animation.md)在全局pageTransition方法内配置页面入场组件和页面退场组件来自定义页面转场动效。[组件转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-component.md)主要通过transition属性配置转场参数，在组件插入和删除时进行过渡动效，主要用于容器组件、子组件插入删除时提升用户体验。在组件中通过sharedTransition方法设置[共享元素转场](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-transition-animation-shared-elements.md)，两个页面的组件配置为同一个id，则转场过程中会进行共享元素转场，配置为空字符串时不会有共享元素转场效果。
 
 使用说明
 
-1.店家**进场动画**，进入进场动画，当进场动画结束或跳过进场动画时返回首页。
+1.点击**进场动画**，进入进场动画，当进场动画结束或跳过进场动画时返回首页。
 
 2.点击**页面间转场：底部滑入**，进入新的页面，页面转场动画为从底部滑入，退出页面时向底部滑出。
 
@@ -24,15 +22,15 @@
 
 ### 效果预览
 
-![](screenshots/devices/index.png) ![](screenshots/devices/animation_one.png) ![](screenshots/devices/animation_two.png)
+![](screenshots/devices/animation_one.png) ![](screenshots/devices/animation_two.png)
 
 ### 相关权限
 
-不涉及
+不涉及。
 
 ### 依赖
 
-不涉及
+不涉及。
 
 ### 约束与限制
 

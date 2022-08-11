@@ -15,6 +15,7 @@
 
 import router from '@ohos.router'
 import contact from '@ohos.contact'
+import resourceManager from '@ohos.resourceManager'
 import Logger from '../data/Logger'
 import { Pinyin } from '../data/Pinyin'
 import { ItemContainer } from '../component/ItemContainer'
@@ -23,6 +24,7 @@ const TAG: string = 'Contact'
 
 @Component
 export struct Contact {
+  @State position: string = ''
   @State contactNumber: number = 0
   @State contacts: contact.Contact[] = []
   private pinyin: Pinyin = new Pinyin()
@@ -66,7 +68,7 @@ export struct Contact {
       .width('100%')
 
       Row() {
-        Text(`${this.contactNumber}位联系人`)
+        Text(`${this.contactNumber}${this.position}`)
           .fontSize(20)
           .fontColor(Color.Gray)
           .margin({ left: 32, bottom: 22 })
@@ -74,7 +76,7 @@ export struct Contact {
       .width('100%')
 
       Stack({ alignContent: Alignment.TopStart }) {
-        TextInput({ placeholder: '搜索联系人', controller: this.controller })
+        TextInput({ placeholder: $r('app.string.search'), controller: this.controller })
           .fontSize(20)
           .height(52)
           .padding({ left: 46 })
@@ -123,12 +125,14 @@ export struct Contact {
   }
 
   async aboutToAppear() {
+    let resource = await resourceManager.getResourceManager()
+    this.position = await resource.getString($r('app.string.contacts').id)
     this.contacts = await contact.queryContacts()
     this.contactNumber = this.contacts.length
     Logger.info(TAG, `this contacts is ${JSON.stringify(this.contacts)}`)
     // 对获取到的联系人数组根据姓名首字母排序
     let sortContact = this.contacts.map(function (a, b) {
-      return { index: b, value: this.pinyin.getFirstLetter(a.name.fullName), key: a.key }
+      return { index: b, value: a.name.fullName.substr(0, 1), key: a.key }
     })
     sortContact.sort(function (a, b) {
       return +(a.value > b.value) || +(a.value === b.value) - 1

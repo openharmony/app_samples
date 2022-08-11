@@ -157,10 +157,14 @@ export struct setting {
                 Http.setUrl(this.url)
                 Http.setMethod(this.method)
                 Http.setExtraData(Http.setParameter(this.keys, this.values))
-                let info = await Http.request()
-                if (info.responseCode === 200) {
-                  this.result = JSON.stringify(info.result)
-                } else {
+                try {
+                  let info = await Http.request()
+                  if (info.responseCode === 200) {
+                    this.result = JSON.stringify(info.result)
+                  } else {
+                    this.result = 'Failed'
+                  }
+                } catch (err) {
                   this.result = 'Failed'
                 }
                 this.showPage = !this.showPage

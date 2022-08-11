@@ -13,30 +13,18 @@
  * limitations under the License.
  */
 
-import mediaQuery from '@ohos.mediaquery'
 import { UpdateDialog } from '@ohos/updatedialog'
 
 @Entry
 @Component
 struct Index {
-  @State isLand: boolean = false
-  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 0.8) or (orientation: landscape)')
   private customDialogController: CustomDialogController = new CustomDialogController({
-    builder: UpdateDialog({ isLand: this.isLand }),
+    builder: UpdateDialog(),
     customStyle: true
   })
 
   async aboutToAppear() {
-    this.listener.on('change', this.onPortrait)
     this.customDialogController.open()
-  }
-
-  onPortrait = (mediaQueryResult) => {
-    if (mediaQueryResult.matches) {
-      this.isLand = true
-    } else {
-      this.isLand = false
-    }
   }
 
   build() {

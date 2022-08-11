@@ -2,15 +2,15 @@
 
 ### 介绍
 
-本示例展示了通过**CustomDialogController**类显示一个自定义的升级弹窗。
+本示例展示了通过**CustomDialogController**组件显示一个自定义的升级弹窗。
 
 本示例使用 [CustomDialogController](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-methods-custom-dialog-box.md) 组件实现自定义弹窗，用于给用户反馈升级信息。使用 [RichText](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/arkui-ts/ts-basic-components-richtext.md) 组件实现富文本的显示。
 
 使用说明： 
 
-1.进入主页，界面会弹出升级弹窗，里面显示RichText信息。 
+1.进入主页，界面会弹出升级弹窗，通过RichText显示升级相关信息。 
 
-2.点击**取消**按钮和升级按钮，弹窗会关闭。
+2.点击**取消**按钮或**立即升级**按钮，弹窗会关闭。
 
 ### 效果预览
 
@@ -18,11 +18,11 @@
 
 ### 相关权限
 
-不涉及
+允许使用网络socket：[ohos.permission.INTERNET](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
 
 ### 依赖
 
-不涉及
+不涉及。
 
 ### 约束与限制
 

@@ -11,6 +11,10 @@
     {
       "name": "MainAbility_label",
       "value": "upgradepopup"
+    },
+    {
+      "name": "internet_permission",
+      "value": "允许使用网络socket"
     }
   ]
 }

@@ -58,16 +58,16 @@ export struct Home {
         .height(32)
 
       Text(this.TabItem(index).text)
-        .fontSize(18)
+        .fontSize(16)
         .margin({ left: 10, right: 10 })
-        .fontColor(this.currentIndex === index ? '#007DFF' : '#ff000000')
+        .fontColor(this.currentIndex === index ? '#007DFF' : '#66000000')
     }
     .width('100%')
   }
 
   TabItem(index: number) {
     if (index === 0) {
-      return { image: $r('app.media.call'), text: $r('app.string.call') }
+      return { image: $r('app.media.call'), text: $r('app.string.phone') }
     } else if (index === 1) {
       return {
         image: this.currentIndex === index ? $r('app.media.contact1') : $r('app.media.contact'),

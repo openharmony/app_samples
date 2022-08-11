@@ -17,13 +17,9 @@ import bundle from '@ohos.bundle'
 import { AbilityContext } from '../model/dialogdatamodel'
 import { httpRequest, RequestResponse, RequestResponseContent } from '../net/RequestResponse'
 
-
 export class DialogFeature {
   async getRichTextData(context: AbilityContext) {
-    let richTextData = ''
-    await context.resourceManager.getString($r('app.string.rich_text').id).then(value => {
-      richTextData = value
-    })
+    let richTextData = await context.resourceManager.getString($r('app.string.rich_text').id)
     return richTextData
   }
 
@@ -33,10 +29,10 @@ export class DialogFeature {
     return currentVersion
   }
 
-  getApplicationVersion() {
+  async getApplicationVersion() {
     let bundleName = 'ohos.samples.upgradepopup'
     let bundleFlags = 1
-    return bundle.getBundleInfo(bundleName, bundleFlags)
+    return await bundle.getBundleInfo(bundleName, bundleFlags)
   }
 
   async getLastVersion() {

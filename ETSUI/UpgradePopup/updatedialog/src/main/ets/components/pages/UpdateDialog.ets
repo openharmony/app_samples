@@ -35,18 +35,17 @@ export struct UpdateDialog {
   @State richTextData: string = ''
   @State lastVersion: string = ''
   @State updateContent: string = ''
-  private isLand: boolean
   private context?: AbilityContext
   private customDialogController?: CustomDialogController
 
-  aboutToAppear() {
-    this.getData()
-  }
-
-  async getData() {
+  async aboutToAppear() {
     this.context = getContext(this) as AbilityContext
     this.richTextData = await dialogFeature.getRichTextData(this.context)
     Logger.info(TAG, `this.richTextData = ${this.richTextData}`)
+    await this.getData()
+  }
+
+  async getData() {
     try {
       this.currentVersion = await dialogFeature.getCurrentVersion()
       let requestResponseContent: RequestResponseContent = await dialogFeature.getLastVersion()
@@ -135,8 +134,8 @@ export struct UpdateDialog {
         .backgroundImage($r('app.media.update'), ImageRepeat.NoRepeat)
         .backgroundImageSize(ImageSize.Contain)
       }
-      .width((this.isLand ? '40%' : '100%'))
-      .padding({ top: (this.isLand ? 20 : 120), left: 16, right: 16 })
+      .width(504)
+      .padding({left: 16, right: 16 })
     }
     .width('100%')
     .height('100%')
