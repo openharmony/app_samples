@@ -32,7 +32,7 @@
 20. TS、JS语言缩进为2格，C++语言缩进为4格；
 21. 涉及应用截图时，图片不能包含人物、关键信息、网络等有侵权风险的资源；
 22. 工程中不要配置签名信息；
-23. 规范日志格式，统一用[Sample_包名]开头，如时钟日志，使用[Sample_Clock]；
+23. 规范日志格式，统一用[Sample_包名]开头，如时钟日志，使用[Sample_Clock]，日志打印需要使用Hilog接口；
 24. 注释“//”后要加一个空格；如果注释跟在代码后面，则“//”前要加一个空格；
 ```ts
   // 正确示例
@@ -117,11 +117,30 @@ Signed-off-by: jiangwensai <jiangwensai@huawei.com>
 
 ## UI自动化用例编写规范
 
-1. 用例命名规范为：“包名_测试类名_序号”，如“MyApp_Index_001”;
-2. 用例的开头和结尾都需要有日志打印，打印必须包括用例名称的关键字，示例：
+1. 用例命名规范为：“包名_测试功能_序号”，如“MyApp_StartAbility_001”，序号表示测试StartAbility功能的第1个用例;
+2. 用例的开头和结尾都需要有日志打印，打印必须包括用例名称的关键字，用例中每条断言语句前必须添加日志，打印参数信息，示例：
 ```ts
-  console.info("MyApp_Index_001, begin")
+  import hilog from '@ohos.hilog';
   ...
-  console.info("MyApp_Index_001, end")
+  const TAG = '[Sample_XXX]'
+  const DOMAIN = 0xF811
+  ...
+  it('MyApp_StartAbility_001', function() {
+    hilog.info(DOMAIN, TAG, "MyApp_StartAbility_001, begin")
+    ...
+    hilog.info(DOMAIN, TAG, "MyApp_StartAbility_001, code:" + code)
+    expect(0).asserEqual(code)
+    ...
+    hilog.info(DOMAIN, TAG, "MyApp_StartAbility_001, end")
+  })
 ```
-3. 用例中每条断言语句前必须添加日志，打印参数信息；
+3. 每条用例前需要添加注释；
+```ts
+  /**
+   * 介绍用例测试的功能和场景等信息
+   */
+  it('MyApp_StartAbility_001', function() {
+	// 介绍单一步骤的功能
+    ...
+  })
+```
