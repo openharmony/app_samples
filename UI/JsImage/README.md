@@ -1,4 +1,4 @@
-# Basic Animation (JavaScript)
+# Basic Animations (JavaScript)
 
 ### Introduction
 
