@@ -1,10 +1,10 @@
 {
-  "apiType": 'faMode',
+  "apiType": 'stageMode',
   "buildOption": {
   },
   "targets": [
     {
-      "name": "default",
+      "name": "default"
     },
     {
       "name": "ohosTest",

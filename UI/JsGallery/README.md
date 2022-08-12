@@ -1,8 +1,8 @@
-# Example Gallery App
+# Gallery App
 
 ### Introduction
 
-This example JS-based gallery app offers the photo browsing and editing functions. It uses the lazy loading feature to improve performance. You can add or replace image resources as needed to build your own gallery.
+This JS-based gallery app offers the image browsing functions. It uses the lazy loading feature to improve performance. You can add or replace image resources as needed to build your own gallery.
 
 ### Usage
 

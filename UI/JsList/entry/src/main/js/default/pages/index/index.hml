@@ -41,7 +41,7 @@
         </list-item>
 
       <!--收拢后-->
-        <list-item type="item" style="background-color : #87CEFA; height : 145px;" primary="true">
+        <list-item type="item" style="background-color : #87CEFA; height : 15%;" primary="true">
           <div class="item-group-child">
             <text style="margin-left : 20px;" class="list-info">{{ category.cate }}</text>
           </div>

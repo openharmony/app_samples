@@ -29,7 +29,7 @@ struct BitmapExample {
       justifyContent: FlexAlign.Center
     }) {
       Canvas(this.context)
-        .width('90%').height('40%').backgroundColor(Color.Pink)
+        .width(600).height('40%').backgroundColor(Color.Pink)
         .onReady(() => {
           this.context.imageSmoothingEnabled = false
           this.context.drawImage(this.img, 60, 50, 200, 200)

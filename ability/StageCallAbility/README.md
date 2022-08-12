@@ -21,4 +21,4 @@ This sample shows how to start an ability and use the **Call** function of the s
 ### Constraints
 
 1. This sample can only be run on standard-system devices.
-2. This sample demonstrates the stage model, which supports only API version 9.
+2. This sample is based on the stage model, which is supported from API version 9.

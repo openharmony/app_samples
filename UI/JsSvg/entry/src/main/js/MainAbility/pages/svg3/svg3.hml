@@ -16,7 +16,7 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'text:' }}</text>
                 <svg fill="white" width="700" height="320">
                     <text y="45" font-size="45" fill="blue">
@@ -48,7 +48,7 @@
 
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'tspan:' }}</text>
                 <svg fill="white" width="700" height="500">
                     <text x="20" y="50" fill="#D2691E" font-size="40">
@@ -113,7 +113,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'textPath:' }}</text>
                 <svg fill="#00FF00" width="700" height="450">
                     <path d="M40,500 Q400,400 500,180 Q500,40 200,40 Q40,40 40,160 Q40,280 180,280 Q280,280 300,200"

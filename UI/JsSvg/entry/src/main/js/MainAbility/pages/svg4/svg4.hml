@@ -16,7 +16,7 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'animate:' }}</text>
                 <svg width="700" height="250">
                     <rect x="20" y="20" width="200" height="200" fill="red" rx="0" ry="20">
@@ -63,7 +63,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'animateMotion:' }}</text>
                 <svg fill="white" width="700" height="200">
                     <path fill="none" stroke="blue" stroke-width="3"
@@ -76,7 +76,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'animateTransform:' }}</text>
                 <svg fill="white" width="700" height="400">
                     <polygon points="60,30 90,90 30,90" fill="black">
@@ -120,7 +120,6 @@
                     </polygon>
                 </svg>
             </div>
-
         </list-item>
     </list>
 </div>

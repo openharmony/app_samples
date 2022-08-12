@@ -25,7 +25,7 @@
 }
 
 .title {
-    font-size: 42px;
+    font-size: 40fp;
     color: #FFFFFF;
     opacity: 0.9;
     width: 100%;
@@ -50,24 +50,24 @@
 
 .btn {
     width: 90%;
-    height: 90px;
-    font-size: 40px;
-    margin-top: 30px;
+    height: 45vp;
+    font-size: 30fp;
+    margin-top: 20px;
     align-self: center;
 }
 
 .tip {
-    font-size: 40px;
+    font-size: 30fp;
     color: black;
     margin-top: 20px;
 }
 
 .text {
-    font-size: 40px;
+    font-size: 30fp;
     color: black;
     opacity: 0.9;
     width: 100%;
-    height: 250px;
+    height: 200vp;
     padding: 10px;
     background-color: #F0F0F0;
     margin-top: 10px;

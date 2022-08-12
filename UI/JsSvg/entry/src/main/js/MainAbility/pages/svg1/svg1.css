@@ -31,6 +31,10 @@
     height: 90px;
 }
 
+.svg {
+    flex-direction: column;
+}
+
 .list {
     flex-direction: column;
     width: 100%;

@@ -1,36 +1,28 @@
 {
   "string": [
     {
-      "name": "entry_MainAbility",
-      "value": "Location"
+      "name": "entry_desc",
+      "value": "位置服务"
     },
     {
-      "name": "description_mainability",
-      "value": "Locate the current location and obtain location information"
+      "name": "MainAbility_desc",
+      "value": "位置服务"
     },
     {
-      "name": "latitude",
-      "value": "Latitude: "
+      "name": "MainAbility_label",
+      "value": "位置服务"
     },
     {
-      "name": "longitude",
-      "value": "Longitude: "
+      "name": "internet_permission",
+      "value": "允许使用网络socket"
     },
     {
-      "name": "request",
-      "value": "Request location service is failed!"
+      "name": "location_permission",
+      "value": "允许应用在前台运行时获取位置信息"
     },
     {
-      "name": "location",
-      "value": "This location service is success!"
-    },
-    {
-      "name": "start",
-      "value": "Start Location"
-    },
-    {
-      "name": "stop",
-      "value": "Stop Location"
+      "name": "background_location_permission",
+      "value": "允许应用在后台运行时获取位置信息"
     }
   ]
 }

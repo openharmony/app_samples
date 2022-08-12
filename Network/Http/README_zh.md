@@ -1,31 +1,39 @@
-# 数据请求
+# Http
 
-### 简介
+### 介绍
 
-本示例仿postman输入API接口地址，获取相应数据，介绍数据请求接口的用法。效果图如下：
+本示例通过**TextInput**组件输入参数，**Text**组件显示返回结果。
 
-![](screenshots/device/index.png)
+本实例使用[SystemCapability.Communication.NetStack](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis/js-apis-http.md)系统能力，创建了一个HTTP请求，并根据URL地址和相关配置项，发起HTTP网络请求。
 
-### 相关概念
+使用说明：
 
-数据请求：本模块提供http数据请求能力。应用可以通过HTTP发起一个数据请求，支持常见的GET、POST、PUT、DELETE方法。
+1.启动应用可配置网络请求，设置网址、请求方式、请求参数。
+
+2.点击确认按钮，跳转请求结果页面。
+
+3.点击返回按钮，返回配置页面。
+
+4.支持将本示例中的http模块编译成tgz包。
+
+### 效果预览
+
+![](screenshots/device/index.png) ![](screenshots/device/result.png)
 
 ### 相关权限
 
-网络服务：ohos.permission.INTERNET
+允许使用Internet网络: [ohos.permission.INTERNET](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/permission-list.md)
 
-### 使用说明
+### 依赖
 
-1.在输入框中输入待查询API接口地址。
-
-2.如需设置参数，点击**设置参数**按钮跳转至参数设置页面，点击**增加**按钮增加待设置参数数目，点击**减少**按钮减少待设置参数数目，设置完成点击**确认**按钮提交参数设置。
-
-3.点击**查询**按钮，向API接口发送数据请求，返回结果显示在下方文本框中。左右滑动文本框可查看响应体与响应头。
-
-4.点击底部**清理**按钮，清空文本框中查询信息。
+不涉及。
 
 ### 约束与限制
 
-1.本示例仅支持在标准系统上运行，运行本实例需全程联网。
+1.本示例仅支持标准系统上运行，支持设备：RK3568。
 
-2.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+2.本示例仅支持API9版本SDK，版本号：3.2.5.5 Beta2。
+
+3.本示例需要使用DevEco Studio 3.0 Beta4 (Build Version: 3.0.0.991, built on July 30, 2022)才可编译运行。
+
+4.运行本示例需全程联网。

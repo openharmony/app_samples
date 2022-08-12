@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "ohos.samples.etsbuildcommonview",
-    "vendor": "example",
+    "bundleName": "ohos.samples.buildcommonview",
+    "vendor": "samples",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -9,7 +9,7 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "ohos.samples.etsbuildcommonview",
+    "package": "ohos.samples.buildcommonview",
     "name": ".MyApplication",
     "mainAbility": ".MainAbility",
     "deviceType": [
@@ -34,6 +34,9 @@
           }
         ],
         "orientation": "unspecified",
+        "configChanges": [
+          "orientation"
+        ],
         "visible": true,
         "srcPath": "MainAbility",
         "name": ".MainAbility",

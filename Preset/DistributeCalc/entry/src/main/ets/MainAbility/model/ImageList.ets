@@ -98,7 +98,7 @@ export function obtainImgV(): Array<ImageList> {
         image: $r('app.media.ic_cal_plus'), value: '+'
       },
       {
-        image: $r('app.media.ic_cal_equal'), value: '='
+        image: $r('app.media.equal'), value: '='
       }
     ]
   return list
@@ -162,7 +162,7 @@ export function obtainImg(): Array<ImageList> {
       image: $r('app.media.ic_cal_delete_c'), value: 'C'
     },
     {
-      image: $r('app.media.ic_cal_equal'), value: '='
+      image: $r('app.media.equal'), value: '='
     }
   ]
   return list

@@ -28,10 +28,19 @@ struct GradientExample {
       justifyContent: FlexAlign.Center
     }) {
       Canvas(this.context)
-        .width('100%')
+        .width(600)
         .height('40%')
         .backgroundColor('#00ffff')
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('createRadialGradient').width(130).height(45)
+          .onClick(() => {
+            var grad = this.context.createRadialGradient(130, 130, 30, 130, 130, 60)
+            grad.addColorStop(0.0, 'red');
+            grad.addColorStop(0.5, 'white');
+            grad.addColorStop(1.0, 'green');
+            this.context.fillStyle = grad;
+            this.context.fillRect(50, 30, 150, 200);
+          })
         Button('createLinearGradient').width(130).height(45)
           .onClick(() => {
             var grad = this.context.createLinearGradient(150, 0, 250, 300)
@@ -39,16 +48,7 @@ struct GradientExample {
             grad.addColorStop(0.5, 'white');
             grad.addColorStop(1.0, 'green');
             this.context.fillStyle = grad;
-            this.context.fillRect(200, 0, 150, 200);
-          })
-        Button('createRadialGradient').width(130).height(45)
-          .onClick(() => {
-            var grad = this.context.createRadialGradient(100, 100, 30, 100, 100, 60)
-            grad.addColorStop(0.0, 'red');
-            grad.addColorStop(0.5, 'white');
-            grad.addColorStop(1.0, 'green');
-            this.context.fillStyle = grad;
-            this.context.fillRect(0, 0, 150, 200);
+            this.context.fillRect(250, 30, 150, 200);
           })
       }.margin({ top: 20 })
 

@@ -43,6 +43,10 @@
     {
       "name": "share_transition_tips",
       "value": "点击查看共享元素动效"
+    },
+    {
+      "name": "enter_animation",
+      "value": "进场动画"
     }
   ]
 }

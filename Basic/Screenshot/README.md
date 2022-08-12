@@ -6,12 +6,11 @@
 
 ### Usage
 
-1. Touch **Fullscreen snapshot** to take and sava full-screen snapshot.
+1. Touch **Fullscreen snapshot** to take and display a full-screen snapshot.
 
-2. Touch **Fixed-size screenshot** to take and save fixed-size screenshot.
+2. Touch **Fixed-size screenshot** to take and display a fixed-size screenshot.
 
 ### Constraints
 
 1. This sample can only be run on standard-system devices.
-
-2. This sample is supported since API version 9.
+2.  This sample is supported since API version 9. 

@@ -19,10 +19,14 @@ import dateTimeUtil from '../Common/DateTimeUtil'
 @Component
 export struct HistoryShow {
   @State city: string = ''
+  @State updateTimeText:string = ''
   private updateTime: string = ''
 
-  aboutToAppear() {
+
+  async aboutToAppear() {
     this.updateTime = dateTimeUtil.getTime()
+    this.updateTimeText = await globalThis.abilityContext.resourceManager.getString($r('app.string.update_time'))
+    this.updateTimeText = `${this.updateTimeText}${this.updateTime}`
   }
 
   build() {
@@ -44,7 +48,7 @@ export struct HistoryShow {
       .margin({ top: 40 })
 
       Row() {
-        Text($r('app.string.update_time') + `${this.updateTime}`)
+        Text(this.updateTimeText)
           .width('100%')
           .height(35)
           .fontSize(30)

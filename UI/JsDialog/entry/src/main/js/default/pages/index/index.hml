@@ -56,7 +56,7 @@
     </dialog>
     <dialog id="showDialog" class="dialog" oncancel="cancelDialog">
         <div class="dialog-container">
-            <div class="dialog-text-container">
+            <div class="text-container">
                 <text class="dialog-text">{{ $t('strings.name') }}</text>
                 <text class="dialog-edit">{{ name }}</text>
             </div>

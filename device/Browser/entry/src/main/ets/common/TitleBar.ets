@@ -29,7 +29,10 @@ export struct TabletTitle {
   @State inputValue: string = ''
   @State arrayIndex: number = 0
   private addr: string = ''
-  private navigationButton: Array<{imageSrc: Resource, id:number}> = [
+  private navigationButton: Array<{
+    imageSrc: Resource,
+    id: number
+  }> = [
     {
       imageSrc: $r('app.media.ic_public_back'),
       id: 1
@@ -47,7 +50,10 @@ export struct TabletTitle {
       id: 4
     },
   ]
-  private actionButton: Array<{imageSrc: Resource, id:number}> = [
+  private actionButton: Array<{
+    imageSrc: Resource,
+    id: number
+  }> = [
     {
       imageSrc: $r('app.media.submit'),
       id: 5
@@ -203,7 +209,7 @@ export struct WebTab {
   testObj = {
     test: (addr) => {
       Logger.info(TAG, `addr= ${this.browser.tabArrayIndex}`)
-      this.browser.webControllerArray[this.browser.tabArrayIndex].controller.loadUrl({ url: `https://${addr}`})
+      this.browser.webControllerArray[this.browser.tabArrayIndex].controller.loadUrl({ url: `https://${addr}` })
     },
     searchWord: (word: string) => {
       Logger.info(`search word= ${word}`)
@@ -232,13 +238,15 @@ export struct WebTab {
             })
             .onPageEnd((event) => {
               Logger.info(TAG, `onPageEnd= ${JSON.stringify(event)}`)
-              this.browser.webControllerArray[item.key].controller.runJavaScript({ script: 'adapterDevice()' })
-              this.browser.loadingStatus = LoadingStatus.END
-              this.registerFunc(this.browser.webControllerArray[item.key])
-              if (event.url.startsWith('http')) {
-                this.browser.inputValue = event.url
-              } else {
-                this.browser.inputValue = ''
+              if (item.key < this.browser.webControllerArray.length && this.browser.webControllerArray[item.key].controller) {
+                this.browser.webControllerArray[item.key].controller.runJavaScript({ script: 'adapterDevice()' })
+                this.browser.loadingStatus = LoadingStatus.END
+                this.registerFunc(this.browser.webControllerArray[item.key])
+                if (event.url.startsWith('http')) {
+                  this.browser.inputValue = event.url
+                } else {
+                  this.browser.inputValue = ''
+                }
               }
             })
             .onProgressChange((event) => {

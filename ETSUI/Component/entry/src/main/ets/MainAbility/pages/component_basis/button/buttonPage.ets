@@ -105,6 +105,7 @@ struct ButtonPage {
             .margin({ top: 10, bottom: 5, right: 10 })
           }
         }
+
         Column() {
           Text('切换效果：')
             .fontSize(15)

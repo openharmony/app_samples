@@ -16,7 +16,7 @@
     <text class="title">{{ $t('strings.title') }}</text>
     <list class="list">
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'polyline:' }}</text>
                 <svg width="700" height="420" fill="white" stroke="blue" stroke-width="5">
                     <polyline points="10,200 160,50 160,170 310,30" fill="red"></polyline>
@@ -26,7 +26,7 @@
             </div>
         </list-item>
         <list-item class="list-item">
-            <div>
+            <div class="svg">
                 <text class="text">{{ 'polygon:' }}</text>
                 <svg fill="white" stroke="blue" stroke-width="5" width="700" height="420">
                     <polygon points="10,200 160,50 160,170 310,30" fill="red"></polygon>

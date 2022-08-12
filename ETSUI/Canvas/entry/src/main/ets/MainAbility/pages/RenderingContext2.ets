@@ -28,7 +28,7 @@ struct RenderingExample {
       justifyContent: FlexAlign.Center
     }) {
       Canvas(this.context)
-        .width('100%').height('50%').backgroundColor('#00ffff')
+        .width(600).height('50%').backgroundColor('#00ffff')
         .onReady(() => {
         })
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
@@ -99,6 +99,11 @@ struct RenderingExample {
             this.context.scale(2, 2);
             this.context.strokeRect(10, 10, 25, 25);
             this.context.save();
+          })
+        Button('delete')
+          .width(130).height(45)
+          .onClick(() => {
+            this.context.clearRect(0, 0, 950, 950)
           })
       }.margin({ top: 10 })
 

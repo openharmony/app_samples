@@ -39,12 +39,15 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .backgroundColor('#0D9FFB')
           .onClick(() => {
             this.result = process.uptime().toString() + 's'
             console.info('[EtsProcess]uptime=' + this.result)
           })
+
           Button() {
             Text($r('app.string.cwd'))
               .fontSize(19)
@@ -52,13 +55,16 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
             console.info('[EtsProcess]process cwd')
             this.result = process.cwd().toString()
           })
+
           Button() {
             Text($r('app.string.change_work_directory'))
               .fontSize(19)
@@ -66,7 +72,9 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
@@ -74,6 +82,7 @@ struct Index {
             process.chdir('/system')
             this.result = process.cwd().toString()
           })
+
           Button() {
             Text($r('app.string.kill'))
               .fontSize(19)
@@ -81,19 +90,22 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
             console.info('[EtsProcess]send signal')
             var pres = process.pid
-            var result = process.kill(pres, 28)
+            var result = process.kill(28, pres)
             if (result === true) {
               this.result = 'succeed'
             } else {
               this.result = 'failed'
             }
           })
+
           Button() {
             Text($r('app.string.runCmd'))
               .fontSize(19)
@@ -101,7 +113,9 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .margin({ top: 15 })
           .backgroundColor('#0D9FFB')
           .onClick(() => {
@@ -114,6 +128,7 @@ struct Index {
               console.info('[EtsProcess]runCmd result =' + val)
             })
           })
+
           Button() {
             Text($r('app.string.close_child'))
               .fontSize(19)
@@ -121,7 +136,9 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .margin({ top: 15 })
           .backgroundColor('#0D9FFB')
           .onClick(() => {
@@ -129,6 +146,7 @@ struct Index {
             child.close()
             this.result = 'close succeed'
           })
+
           Button() {
             Text($r('app.string.exit'))
               .fontSize(19)
@@ -136,13 +154,16 @@ struct Index {
               .padding({ left: 10, right: 10 })
               .width('100%')
               .textAlign(TextAlign.Center)
-          }.type(ButtonType.Capsule)
+          }
+          .type(ButtonType.Capsule)
+          .height(40)
           .backgroundColor('#0D9FFB')
           .margin({ top: 15 })
           .onClick(() => {
             console.info('[EtsProcess]process exit')
             process.exit(0)
           })
+
           Text(this.result)
             .width('100%')
             .height(100)

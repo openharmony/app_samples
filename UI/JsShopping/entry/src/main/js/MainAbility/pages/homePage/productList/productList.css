@@ -51,9 +51,13 @@
     object-fit: contain;
 }
 
+.itemlist-text {
+    font-size: 18px;
+}
+        
 .labels {
     color: #2F4F4F;
-    font-size: 25px;
+    font-size: 20px;
     border: 1px solid #000000;
     border-radius: 3px;
     padding: 2px 5px;
@@ -61,10 +65,11 @@
 
 .imgnum {
     color: #2F4F4F;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 5px;
 }
 
 .price {
     color: red;
+    font-size: 18px;
 }

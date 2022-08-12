@@ -43,6 +43,10 @@
     padding-left: 15px;
 }
 
+.svg {
+    flex-direction: column;
+}
+
 .text {
     font-size: 45px;
     color: #000000;

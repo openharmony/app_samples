@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
  * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -125,6 +126,7 @@ struct PanelPage {
                 })
             }
           }, item => item.toString())
+
           GridItem() {
             Text('dragBar：')
               .fontSize(15)

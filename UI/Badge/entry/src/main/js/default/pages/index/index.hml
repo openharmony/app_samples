@@ -12,18 +12,19 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-
-<div class="container">
-    <div for="{{ array }}" class="item" on:click="badgeInvalidation({{ $idx }})">
-        <image class="img" src="{{ $item.imgPath }}"/>
-        <div class="content">
-            <text class="title" on:click="badgeInvalidation({{ $idx }})">{{ $item.contacts }}</text>
-            <text class="text" on:click="badgeInvalidation({{ $idx }})">{{ $item.message }}</text>
+<div class="body">
+    <div class="container">
+        <div for="{{ array }}" class="item" on:click="badgeInvalidation({{ $idx }})">
+            <image class="img" src="{{ $item.imgPath }}"/>
+            <div class="content">
+                <text class="title" on:click="badgeInvalidation({{ $idx }})">{{ $item.contacts }}</text>
+                <text class="text" on:click="badgeInvalidation({{ $idx }})">{{ $item.message }}</text>
+            </div>
+            <badge style="visibility : {{ $item.visibility }}" class="badge" config="{{ badgeConfig }}"
+                   visible="true" count="{{ $item.count }}" maxcount="{{ $item.maxCount }}" placement="left"
+                   on:click="badgeInvalidation({{ $idx }})">
+                <text></text>
+            </badge>
         </div>
-        <badge style="visibility : {{ $item.visibility }}" class="badge" config="{{ badgeConfig }}"
-               visible="true" count="{{ $item.count }}" maxcount="{{ $item.maxCount }}" placement="left"
-               on:click="badgeInvalidation({{ $idx }})">
-            <text></text>
-        </badge>
     </div>
 </div>

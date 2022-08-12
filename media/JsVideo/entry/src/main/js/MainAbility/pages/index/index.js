@@ -24,9 +24,9 @@ export default {
     // 是否显示控制栏
     controlShow: true,
     // 是否循环播放
-    loop: true,
+    loop: false,
     // 播放开始时间
-    startTime: 2,
+    startTime: 0,
     // 播放速度
     speed: 0.3,
     isStart:false
@@ -46,15 +46,15 @@ export default {
     this.isStart = false
   },
   // 视频播放完成
-  finish() {
+  playFinish() {
     this.$element('confirmDialog').show()
   },
   // 拖动进度条调用
-  seeked(e) {
+  playSeeked(e) {
     this.showPrompt(this.$t('strings.video_seeked') + e.currenttime + this.$t('strings.second'))
   },
   // 播放进度变化调用
-  timeupdate(e) {
+  timeUpdate(e) {
   },
   // dialog确定
   confirm() {

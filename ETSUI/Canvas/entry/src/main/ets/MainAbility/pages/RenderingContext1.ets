@@ -26,7 +26,7 @@ struct AllRenderingExample {
       alignItems: ItemAlign.Center,
       justifyContent: FlexAlign.Center
     }) {
-      Canvas(this.context).width('100%').height(300).backgroundColor('#00ffff')
+      Canvas(this.context).width(600).height(300).backgroundColor('#00ffff')
       Flex({ justifyContent: FlexAlign.SpaceAround }) {
         Button('strokeStyle')
           .width(130).height(45)

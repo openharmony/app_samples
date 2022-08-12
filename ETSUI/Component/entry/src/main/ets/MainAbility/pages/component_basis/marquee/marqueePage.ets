@@ -36,7 +36,6 @@ struct MarqueePage {
             fromStart: this.fromStart,
             src: this.src
           })
-            .allowScale(false)
             .fontSize(15)
             .onStart(() => {
               prompt.showToast({

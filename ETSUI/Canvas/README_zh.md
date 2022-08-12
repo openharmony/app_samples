@@ -16,15 +16,17 @@ Canvas：提供画布组件，用于自定义绘制图形。
 
 ### 使用说明
 
-1.点击“RenderingContext”按钮，跳转进入RenderingContext接口查看相关的方法属性；点击按钮可查看对应的方法属性应用的效果展示。
+1.点击“RenderingContext”按钮，跳转进入RenderingContext页面查看相关的方法属性；点击按钮可查看对应的方法属性的效果展示。
 
-2.点击“Path2D”按钮，跳转进入Path2D接口查看所有相关的方法属性；点击不同按钮可查看对应的方法属性应用的效果展示。
+2.点击“TransformExample”按钮，跳转进入TransformExample页面查看相关的方法属性；点击按钮可查看对应的方法属性的效果展示。
 
-3.点击“CanvasGrident”按钮，跳转进入CanvasGrident接口可查看两种渐变方法的效果展示。
+3.点击“ShadowOffset”按钮，跳转进入ShadowOffset页面查看相关的方法属性；点击按钮可查看对应的方法属性的效果展示。
 
-4.点击“CanvasBitmap”按钮，可查看该接口方法属性的效果展示，看到相应的图片。
+4.点击“Path2D”按钮，跳转进入Path2D页面查看所有相关的方法属性；点击按钮可查看对应的方法属性的效果展示。
 
-5.以上为canva组件的四个画布接口，点击按钮可查看相关的方法属性。
+5.点击“ImageBitmap”按钮，跳转进入ImageBitmap页面查看图片效果展示。
+
+6.点击“CanvasGrident”按钮，跳转进入CanvasGrident页面可查看两种渐变方法的效果展示。
 
 
 ### 约束与限制
