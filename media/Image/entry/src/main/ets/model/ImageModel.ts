@@ -21,9 +21,9 @@ import Logger from '../model/Logger'
 const TAG: string = '[ImageModel]'
 
 export class ImageModel {
-  async getImageFd(uri: string) {
+  async getImageFd(context: any, uri: string) {
     Logger.info(TAG, `getImageFd uri = ${uri}`)
-    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
+    let media = multimedia_mediaLibrary.getMediaLibrary(context)
     let fetchOp = {
       selections: '',
       selectionArgs: [],
@@ -37,8 +37,8 @@ export class ImageModel {
     return await fileAsset.open('r')
   }
 
-  async getImageInfo(uri: string) {
-    let fd = await this.getImageFd(uri)
+  async getImageInfo(context: any, uri: string) {
+    let fd = await this.getImageFd(context, uri)
     Logger.info(TAG, `getImageInfo fd = ${fd}`)
     let imageSource = multimedia_image.createImageSource(fd)
     Logger.info(TAG, `getImageInfo createImageSource success! ${JSON.stringify(imageSource)}`)
@@ -51,21 +51,20 @@ export class ImageModel {
     return result
   }
 
-  async queryFile(uri: string) {
-    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
+  async queryFile(context: any, uri: string) {
+    let media = multimedia_mediaLibrary.getMediaLibrary(context)
     let fetchOp = {
       selections: '',
       selectionArgs: [],
       uri: uri
     }
     let fetchFileResult = await media.getFileAssets(fetchOp)
-    Logger.info(TAG, `getImageInfo fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
-    await media.release()
+    Logger.info(TAG, `queryFile fetchFileResult.getCount() = ${fetchFileResult.getCount()}`)
     return await fetchFileResult.getFirstObject()
   }
 
-  async getAllImg() {
-    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
+  async getAllImg(context: any) {
+    let media = multimedia_mediaLibrary.getMediaLibrary(context)
     let fileKeyObj = multimedia_mediaLibrary.FileKey
     let fetchOp = {
       selections: fileKeyObj.MEDIA_TYPE + '=?',
@@ -82,22 +81,22 @@ export class ImageModel {
     return fileAssets
   }
 
-  async getPixel(uri: string) {
-    let fd = await this.getImageFd(uri)
+  async getPixel(context: any, uri: string) {
+    let fd = await this.getImageFd(context, uri)
     Logger.info(TAG, `getPixel fd = ${fd}`)
     let imageSource = multimedia_image.createImageSource(fd)
     Logger.info(TAG, `getPixel createImageSource ${JSON.stringify(imageSource)}`)
-    let fileAsset = await this.queryFile(uri)
+    let fileAsset = await this.queryFile(context, uri)
     Logger.info(TAG, `getPixel width = ${fileAsset.width} height = ${fileAsset.height} uri = ${fileAsset.uri}`)
     return await imageSource.createPixelMap()
   }
 
-  async angleImgs(uri: string, single: number) {
+  async angleImgs(context: any, uri: string, single: number) {
     let imagePackerApi = multimedia_image.createImagePacker()
-    let media = multimedia_mediaLibrary.getMediaLibrary(globalThis.abilityContext)
-    let fd = await this.getImageFd(uri)
+    let media = multimedia_mediaLibrary.getMediaLibrary(context)
+    let fd = await this.getImageFd(context, uri)
     Logger.info(TAG, `angleImg fd = ${fd}`)
-    let fileAsset = await this.queryFile(uri)
+    let fileAsset = await this.queryFile(context, uri)
     let imageSource = multimedia_image.createImageSource(fd)
     Logger.info(TAG, `angleImg createImageSource ${JSON.stringify(imageSource)} width = ${fileAsset.width} height = ${fileAsset.height}`)
     let decodingOptions: multimedia_image.DecodingOptions = { rotate: single }
@@ -112,7 +111,7 @@ export class ImageModel {
     Logger.info(TAG, `angleImg data = ${time}`)
     let dataUri = await media.createAsset(multimedia_mediaLibrary.MediaType.IMAGE, `Image_${time}.jpg`, path)
     Logger.info(TAG, `angleImg dataUri = ${dataUri.uri}`)
-    let imgFileAsset = await this.queryFile(dataUri.uri)
+    let imgFileAsset = await this.queryFile(context, dataUri.uri)
     Logger.info(TAG, `angleImg imgFileAsset.uri = ${imgFileAsset.uri}`)
     let imgFd = await imgFileAsset.open('Rw')
     Logger.info(TAG, `angleImg imgFd = ${imgFd}`)

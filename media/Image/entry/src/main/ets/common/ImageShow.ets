@@ -19,7 +19,7 @@ import { ImageModel } from '../model/ImageModel'
 
 @Component
 export struct ImageShow {
-  @State pixel: multimedia_mediaLibrary.FileAsset = undefined
+  @State pixel: PixelMap = undefined
   private uri: string = ''
   private imageModel: ImageModel = new ImageModel()
   private dialogController: CustomDialogController = new CustomDialogController({
@@ -27,14 +27,15 @@ export struct ImageShow {
   })
 
   async aboutToAppear() {
-    this.pixel = await this.imageModel.queryFile(this.uri)
+    let context: any = getContext(this)
+    this.pixel = await this.imageModel.getPixel(context, this.uri)
   }
 
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-        Image(this.pixel.uri)
-          .objectFit(ImageFit.Contain)
+        Image(this.pixel)
+          .objectFit(ImageFit.Fill)
           .margin(16)
       }
       .width('100%')

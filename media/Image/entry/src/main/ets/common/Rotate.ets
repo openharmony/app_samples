@@ -73,7 +73,8 @@ export struct Rotate {
                     prompt.showToast({
                       message: 'Save Image Success!'
                     })
-                    await this.imageModel.angleImgs(this.uri, this.single)
+                    let context: any = getContext(this)
+                    await this.imageModel.angleImgs(context, this.uri, this.single)
                   }
                 },
                 cancel: () => {

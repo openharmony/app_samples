@@ -48,7 +48,7 @@ struct Second {
           .fontColor(Color.White)
           .width('15%')
           .height('100%')
-          .margin({ right: '5%' })
+          .margin({ right: '5%', left: '5%' })
           .onClick(() => {
             this.dialogController.open()
           })

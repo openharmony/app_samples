@@ -27,9 +27,10 @@ export struct ImageInfo {
   private imageModel: ImageModel = new ImageModel()
 
   async aboutToAppear() {
-    let fileAsset = await this.imageModel.queryFile(this.uri)
+    let context: any = getContext(this)
+    let fileAsset = await this.imageModel.queryFile(context, this.uri)
     let name = fileAsset.displayName
-    let result = await this.imageModel.getImageInfo(this.uri)
+    let result = await this.imageModel.getImageInfo(context, this.uri)
     let imageHeight = result[0]
     let imageWidth = result[1]
     let path = fileAsset.relativePath + name

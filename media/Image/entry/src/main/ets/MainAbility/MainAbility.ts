@@ -17,12 +17,17 @@ import Ability from '@ohos.application.Ability'
 import Logger from '../model/Logger'
 
 const TAG: string = '[MainAbility]'
+const PERMISSIONS: Array<string> =
+  [
+    'ohos.permission.MEDIA_LOCATION',
+    'ohos.permission.READ_MEDIA',
+    'ohos.permission.WRITE_MEDIA'
+  ]
 
 export default class MainAbility extends Ability {
-  onCreate(want, launchParam) {
+  async onCreate(want, launchParam) {
+    await this.context.requestPermissionsFromUser(PERMISSIONS)
     Logger.info(TAG, `[Demo] MainAbility onCreate`)
-    globalThis.abilityWant = want
-    globalThis.abilityContext = this.context
   }
 
   onDestroy() {
