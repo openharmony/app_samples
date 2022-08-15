@@ -13,6 +13,6 @@
  * limitations under the License.
  */
 
-import { DialogDataModel } from '../model/dialogdatamodel'
+import { DialogDataModel } from '../model/DialogDataModel'
 
 export const updateData: DialogDataModel = { versionName: '3.0.1', updateContent: $r('app.string.rich_text') }

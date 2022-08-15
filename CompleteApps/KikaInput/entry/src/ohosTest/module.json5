@@ -6,7 +6,7 @@
     "description": "$string:entry_test_desc",
     "mainElement": "TestAbility",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet"
     ],
     "deliveryWithInstall": true,

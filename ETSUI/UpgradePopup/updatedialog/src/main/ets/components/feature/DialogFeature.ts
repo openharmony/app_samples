@@ -14,7 +14,7 @@
  */
 
 import bundle from '@ohos.bundle'
-import { AbilityContext } from '../model/dialogdatamodel'
+import { AbilityContext } from '../model/DialogDataModel'
 import { httpRequest, RequestResponse, RequestResponseContent } from '../net/RequestResponse'
 
 export class DialogFeature {

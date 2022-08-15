@@ -34,3 +34,5 @@
 4.本示例需所有设备进行授权后退出一次再重新进入应用，所有认证设备（含主设备）均需在线，否则该示例无法正常运行。
 
 5.本示例动画运行结束之后，若要再次运行，需杀掉应用，重新打开才可再次运行。
+
+6.本示例需要使用@ohos.distributedHardware.deviceManager系统权限的系统接口。使用Full SDK时需要手动从镜像站点获取，并在DevEco Studio中替换，具体操作可参考[替换指南](https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/full-sdk-switch-guide.md)。

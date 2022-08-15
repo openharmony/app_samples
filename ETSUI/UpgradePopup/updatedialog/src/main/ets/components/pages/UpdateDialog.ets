@@ -14,9 +14,9 @@
  */
 
 import Logger  from '../util/Logger'
-import { updateData } from '../mock/dialogdata'
+import { updateData } from '../mock/DialogData'
 import { dialogFeature } from '../feature/DialogFeature'
-import { AbilityContext } from '../model/dialogdatamodel'
+import { AbilityContext } from '../model/DialogDataModel'
 import {RequestResponseContent} from '../net/RequestResponse'
 
 const TAG: string = 'UpdateDialog'

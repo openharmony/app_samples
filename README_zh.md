@@ -24,15 +24,15 @@
   - [`RPC`：RPC连接（eTS）（API8）](Communication/RPC)
   - [`Wlan`：WLAN（eTS）（API8）（Full SDK）](Communication/Wlan)
 - ability
-  - [`DMS`：分布式Demo（eTS）（API8）](ability/DMS)
-  - [`JsDistributedMusicPlayer`：分布式音乐播放（JS）（API8）](ability/JsDistributedMusicPlayer)
+  - [`DMS`：分布式Demo（eTS）（API8）（Full SDK）](ability/DMS)
+  - [`JsDistributedMusicPlayer`：分布式音乐播放（JS）（API8）（Full SDK）](ability/JsDistributedMusicPlayer)
   - [`DataAbility`：DataAbility的创建与访问（eTS）（API8）](ability/DataAbility)
   - [`ServiceAbility`：ServiceAbility的创建与使用（eTS）（API8）](ability/ServiceAbility)
-  - [`StageCallAbility`：StageCallAbility的创建与使用（eTS）（API9）](ability/StageCallAbility)
+  - [`StageCallAbility`：StageCallAbility的创建与使用（eTS）（API9）（Full SDK）](ability/StageCallAbility)
   - [`FormAbility`：FA模型卡片（JS）（API8）](ability/FormAbility)
   - [`FormExtAbility`：Stage模型卡片（eTS JS）（API9）](ability/FormExtAbility)
   - [`FormLauncher`：卡片使用方（eTS）（API8）（Full SDK）](ability/FormLauncher)
-  - [`ServiceExtAbility`：StageExtAbility的创建与使用（eTS）（API9）](ability/ServiceExtAbility)
+  - [`ServiceExtAbility`：StageExtAbility的创建与使用（eTS）（API9）（Full SDK）](ability/ServiceExtAbility)
   - [`DistributedGraffiti`：分布式涂鸦（eTS）（API8）（Full SDK）](ability/DistributedGraffiti)
   - [`MissionManager`：系统任务管理（eTS）（API9）](ability/MissionManager)
   - [`GalleryForm`：图库卡片（eTS）（API9）](ability/GalleryForm)
@@ -56,10 +56,10 @@
   - [`DDMQuery`：结果集与谓词（eTS）（API8）](data/DDMQuery)
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）（Full SDK）](data/DistributedRdb)
   - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
-  - [`DistributedNote`：分布式备忘录（eTS）（API9）](data/DistributedNote)
-  - [`DistributedDataGobang`：分布式五子棋（eTS）（API9）](data/DistributedDataGobang)
+  - [`DistributedNote`：分布式备忘录（eTS）（API9）（Full SDK）](data/DistributedNote)
+  - [`DistributedDataGobang`：分布式五子棋（eTS）（API9）（Full SDK）](data/DistributedDataGobang)
   - [`DistributedObjectDms`：分布式跑马灯（eTS）（API9）（Full SDK）](data/DistributedObjectDms)
-  - [`DistributedObjectGobang`：分布式五子棋（eTS）（API9）](data/DistributedObjectGobang)
+  - [`DistributedObjectGobang`：分布式五子棋（eTS）（API9）（Full SDK）](data/DistributedObjectGobang)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）（Full SDK）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
@@ -77,18 +77,19 @@
   - [`JsAudioPlayer`：音频播放和管理（JS）（API8）](media/JsAudioPlayer)
   - [`JsVideo`：视频播放（JS）（API8）](media/JsVideo)
   - [`Recorder`：录音机（eTS）（API8）（Full SDK）](media/Recorder)
-  - [`MultiMedia`：相机和媒体库（eTS）（API9）](media/MultiMedia)
+  - [`MultiMedia`：相机和媒体库（eTS）（API9）（Full SDK）](media/MultiMedia)
   - [`VideoPlayer`：视频播放（eTS）（API9）](media/VideoPlayer)
   - [`JsRecorder`：录音机（JS）（API8）](media/JSRecorder)
   - [`Image`：图片处理（eTS）（API8）](media/Image)
   - [`GamePuzzle`：拼图（eTS）（API9）](media/GamePuzzle)
+  - [`Scan`：媒体库相机（eTS）（API9）](media/Scan)
+  - [`VideoShow`：媒体库视频（eTS）（API9）](media/VideoShow)
 - DFX
   - [`JsDotTest`：测试打点（JS）（API8）](DFX/JsDotTest)
   - [`FaultLogger`：故障日志获取（eTS）（API8）](DFX/FaultLogger)
   - [`Logger`：日志打印（eTS）（API9）](DFX/Logger)
   - [`Debug`：Debug（eTS）（API9）](DFX/Debug)
 - Safety
-  - [`UserAuth`：用户认证（eTS）（API9）](Safety/UserAuth)
   - [`Cipher`：加解密（eTS）（API8）](Safety/Cipher)
   - [`AbilityAccessCtrl`：访问权限控制（eTS）（API8）](Safety/AbilityAccessCtrl)
 - Telephony
@@ -98,10 +99,11 @@
   - [`SimManager`：SIM卡管理（eTS）（API8）](Telephony/SimManager)
   - [`MobileNetwork`：蜂窝数据（eTS）（API9）](Telephony/MobileNetwork)
   - [`Observer`：Observer（eTS）（API9）](Telephony/Observer)
+  - [`RadioTech`：RadioTech（eTS）（API9）](Telephony/RadioTech)
 - thread
   - [`JsWorker`：启动一个worker（JS）（API8）](thread/JsWorker)
 - CompleteApps
-  - [`KikaInput`：轻量级输入法（JS）（API9）](CompleteApps/KikaInput)
+  - [`KikaInput`：轻量级输入法（JS）（API9）（Full SDK）](CompleteApps/KikaInput)
   - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
   - [`FlipClock`：翻页时钟（eTS）（API8）（Full SDK）](CompleteApps/FlipClock)
 - EngineeringCapability
@@ -127,28 +129,27 @@
   - [`PatternLock`：图案密码锁组件（eTS）（API9）](ETSUI/PatternLock)
   - [`Search`：Search组件（eTS）（API9）](ETSUI/Search)
   - [`QRCode`：二维码（eTS）（API9）](ETSUI/QRCode)
+  - [`UpgradePopup`：自定义弹窗（eTS）（API9）](ETSUI/UpgradePopup)
 - FileManager
-  - [`Environment`：目录环境（eTS）（API8）（Full SDK）](FileManager/Environment)
   - [`FileIo`：文件管理（eTS）（API8）](FileManager/FileIo)
 - Native
   - [`NativeAPI`：NativeAPI（eTS）（API8）](Native/NativeAPI)
-  - [`KikaInput`：中文输入法（eTS）（API8）](Native/KikaInput)
 - Notification
   - [`CommonEvent`：订阅公共事件（eTS）（API8）](Notification/CommonEvent)
   - [`Emitter`：处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock`：后台代理提醒（eTS）（API8）](Notification/AlarmClock)
   - [`Notification`：订阅、发送通知（eTS）（API9）](Notification/Notification)
 - Network
-  - [`Http`：数据请求（eTS）（API8）](Network/Http)
+  - [`Http`：数据请求（eTS）（API9）](Network/Http)
   - [`Socket`：Socket 连接（eTS）（API8）](Network/Socket)
-  - [`WebSocket`：WebSocket（eTS）（API8）](Network/WebSocket)
+  - [`WebSocket`：WebSocket（eTS）（API9）](Network/WebSocket)
   - [`UploadDownload`：上传下载（eTS）（API8）](Network/UploadDownload)
 - Preset
   - [`Clock`：简单时钟（eTS）（API9）](Preset/Clock)
   - [`FlashLight`：手电筒（eTS）（API8）（Full SDK）](Preset/FlashLight)
   - [`DistributeCalc`：分布式计算器（eTS）（API8）（Full SDK）](Preset/DistributeCalc)
   - [`AirQuality`：空气质量（eTS）（API9）](Preset/AirQuality)
-  - [`DistributedMusicPlayer`：分布式音乐（eTS）（API9）](Preset/DistributedMusicPlayer)
+  - [`DistributedMusicPlayer`：分布式音乐（eTS）（API9）（Full SDK）](Preset/DistributedMusicPlayer)
 - PackageManagement
   - [`ZipLib`：压缩与解压（eTS）（API9）](PackageManagement/ZipLib)
 - ResourcesSchedule

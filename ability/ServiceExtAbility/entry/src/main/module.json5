@@ -47,11 +47,6 @@
         "visible": true,
         "srcEntrance": "./ets/ServiceExtAbility/ServiceExtAbility.ts"
       }
-    ],
-    "requestPermissions": [
-      {
-        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
-      }
     ]
   },
 }
