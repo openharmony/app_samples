@@ -13,11 +13,13 @@
  * limitations under the License.
  */
 import AbilityStage from "@ohos.application.AbilityStage"
+import Log from '../model/Log'
 
+let TAG: string = 'AbilityStage->'
 export default class MyAbilityStage extends AbilityStage {
   onCreate() {
     AppStorage.SetOrCreate<number>('windowWidth', -1)
     AppStorage.SetOrCreate<number>('windowHeight', -1)
-    console.log("[Demo] MyAbilityStage onCreate")
+    Log.showInfo(TAG, "[Demo] MyAbilityStage onCreate")
   }
 }

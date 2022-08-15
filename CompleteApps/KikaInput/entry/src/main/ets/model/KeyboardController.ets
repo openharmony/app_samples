@@ -19,12 +19,12 @@ import settings from '@ohos.settings';
 import display from '@ohos.display'
 import windowManager from '@ohos.window'
 import featureAbility from '@ohos.ability.featureAbility'
+import Log from './Log'
 
 let InputMethodEngine = inputMethodEngine.getInputMethodEngine();
 let isDebug = false;
-
+let TAG: string = 'KeyboardController->';
 export class KeyboardController {
-  private TAG: string= 'KeyboardController-';
   private readonly uri = 'dataability:///com.ohos.settingsdata.DataAbility'
   private helper: any = null
   private getValueRes: string = "1"
@@ -34,6 +34,7 @@ export class KeyboardController {
   WINDOW_TYPE_INPUT_METHOD_FLOAT= 2105
   windowName = 'imeWindow';
   isSpecialKeyPress = false;
+  keySum = 0;
   isKeyboardShow = false;
   inputHandle= InputHandler.getInstance();
   mKeyboardDelegate;
@@ -56,7 +57,7 @@ export class KeyboardController {
   public onDestroy(): void {
     this.inputHandle.addLog('onDestroy')
     this.unRegisterListener();
-    featureAbility.terminateSelf();
+    this.mContext.terminateSelf();
   }
 
   private initWindow(): void {
@@ -72,11 +73,13 @@ export class KeyboardController {
       if (dWidth == 1080 && dHeight == 2376) {
         navigationbar_height = 105
         keyHeightRate = 35 / 99
+      } else if(dWidth == 720 && dHeight == 1280) {
+        navigationbar_height = 72
       } else if (dWidth == 2376 && dHeight == 1080) {
         navigationbar_height = 90
         keyHeightRate = 0.63
       }else if (dWidth == 2560 && dHeight == 1600) {
-        navigationbar_height = 90
+        navigationbar_height = 88
         keyHeightRate = 0.5
       }
       var keyHeight = dHeight * keyHeightRate;
@@ -87,12 +90,10 @@ export class KeyboardController {
       this.inputHandle.addLog(typeof (this.mContext))
       this.inputHandle.addLog('initWindow-window = ' + typeof (windowManager))
       windowManager.create(this.mContext, this.windowName, this.WINDOW_TYPE_INPUT_METHOD_FLOAT).then((win) => {
-        win.setWindowMode(102).then(() => {
-          win.resetSize(dWidth, keyHeight).then(() => {
-            win.moveTo(0, this.barPosition).then(() => {
-              win.loadContent('pages/index').then(() => {
-                this.inputHandle.addLog('loadContent finished')
-              })
+        win.resetSize(dWidth, keyHeight).then(() => {
+          win.moveTo(0, this.barPosition).then(() => {
+            win.loadContent('pages/index').then(() => {
+              this.inputHandle.addLog('loadContent finished')
             })
           })
         })
@@ -115,11 +116,13 @@ export class KeyboardController {
       if (dWidth == 1080 && dHeight == 2376) {
         navigationbar_height = 105
         keyHeightRate = 35 / 99
+      } else if(dWidth == 720 && dHeight == 1280) {
+        navigationbar_height = 72
       } else if (dWidth == 2376 && dHeight == 1080) {
         navigationbar_height = 90
         keyHeightRate = 0.63
       }else if (dWidth == 2560 && dHeight == 1600) {
-        navigationbar_height = 90
+        navigationbar_height = 88
         keyHeightRate = 0.5
       }
       var keyHeight = dHeight * keyHeightRate;
@@ -152,7 +155,7 @@ export class KeyboardController {
     })
     InputMethodEngine.on('inputStop', (imeId) => {
       this.inputHandle.addLog('keyboard inputStop: ' + JSON.stringify(imeId));
-      if (imeId == "com.example.kikakeyboardjs/ServiceExtAbility") {
+      if (imeId == "com.example.kikakeyboard/ServiceExtAbility") {
         this.onDestroy();
       }
     });
@@ -176,6 +179,7 @@ export class KeyboardController {
       }
 
       if (this.isSpecialKeyPress) {
+        this.keySum += 1;
         return false;
       }
 
@@ -183,6 +187,7 @@ export class KeyboardController {
 
       var keyValue = GetHardKeyValue(keyCode);
       if (keyValue == "") {
+        this.keySum += 1;
         this.inputHandle.addLog('OnKeyDown: unknown keyCode');
         this.isSpecialKeyPress = true;
         return false;
@@ -196,9 +201,12 @@ export class KeyboardController {
       var keyValue = GetHardKeyValue(keyCode);
 
       if (this.isSpecialKeyPress) {
-        if (keyValue == "") {
-          this.isSpecialKeyPress = false;
+        if (this.keySum > 1) {
+          this.isSpecialKeyPress = true;
+        } else {
+          this.isSpecialKeyPress = false
         }
+        this.keySum -= 1;
         return false;
       }
 
@@ -296,10 +304,10 @@ export class KeyboardController {
     try {
       this.getValue('settings.display.navigationbar_status')
     } catch (err) {
-      console.log("get value failed" + err)
+      Log.showError(TAG, "get value failed" + err)
       return
     }
-    console.log('current navigation state is' + this.getValueRes)
+    Log.showInfo(TAG, 'current navigation state is' + this.getValueRes)
     this.inputHandle.addLog('showWindow');
     windowManager.find(this.windowName).then((win) => {
       win.show().then(() => {
@@ -383,7 +391,7 @@ export class InputHandler {
   }
 
   public addLog(message): void {
-    console.info("kikaInput-js: " + message)
+    Log.showInfo(TAG, "kikaInput-js: " + message)
   }
 
   public setCursorInfo(info) {

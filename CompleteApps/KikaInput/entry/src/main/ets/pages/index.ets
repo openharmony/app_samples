@@ -16,8 +16,10 @@ import { keySourceListData, numberSourceListData, symbolSourceListData, keySourc
 } from '../model/keyboardKeyData'
 import { InputHandler } from '../model/KeyboardController'
 import styleConfiguration from '../common/styleConfiguration'
+import Log from '../model/Log'
 
 let inputStyle: any = styleConfiguration.getInputStyle()
+let TAG: string = 'index->'
 //有大小写的按键组件
 @Component
 struct keyItemNumber {
@@ -546,7 +548,7 @@ struct Index {
   @State menuType: number= 0
 
   onBackPress(): boolean{
-    console.info('kikaInput onBackPress');
+    Log.showInfo(TAG, 'kikaInput onBackPress');
     InputHandler.getInstance().hideKeyboardSelf();
     return true;
   }
