@@ -24,6 +24,8 @@ export function GetHardKeyValue(keyCode) {
     2007: "7",
     2008: "8",
     2009: "9",
+    2010: "*",
+    2011: "#",
     2012: "KEYCODE_DPAD_UP",
     2013: "KEYCODE_DPAD_DOWN",
     2014: "KEYCODE_DPAD_LEFT",
@@ -55,8 +57,17 @@ export function GetHardKeyValue(keyCode) {
     2040: "x",
     2041: "y",
     2042: "z",
+    2043: ","
+    2044: ".",
+    2050: " ",
     2055: "KEYCODE_FORWARD_DEL",
+    2058: "=",
     2071: "KEYCODE_DEL",
+    2064: "/",
+    2065: "@",
+    2066: "+",
+    2121: "(",
+    2122: ")",
   };
 
   if (keyList.hasOwnProperty(keyCode)) {
