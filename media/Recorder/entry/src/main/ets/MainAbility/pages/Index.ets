@@ -15,61 +15,53 @@
 import featureAbility from '@ohos.ability.featureAbility'
 import router from '@ohos.router'
 import mediaQuery from '@ohos.mediaquery'
-import { Record } from '../model/Record'
+import Logger from '../model/Logger'
+import MediaManager from '../model/MediaManager'
 import { HomeView } from '../common/HomeView'
 import { PlayView } from '../common/PlayView'
-import { FileManager, PATH } from '../model/FileManager'
 import { AudioModel } from '../model/AudioModel'
+import { Record } from '../model/Record'
 import { RenameDialog } from '../common/RenameDialog'
 
-let portraitFunc = null
-let TAG = '[Record.Index]'
+let TAG = '[Recorder.Index]'
 
 @Entry
 @Component
 struct Index {
-  private fileManager = new FileManager()
   private audioModel: AudioModel = new AudioModel()
   @State recordList: Array<Record> = []
   @State isLand: boolean = false
-  @State record: Record = new Record('', '', '', '', false)
-  @State renameRecord: Record = new Record('', '', '', '', false)
+  @State record: Record = new Record(undefined, false)
+  @State renameRecord: Record = undefined
   private renameDialogController: CustomDialogController = new CustomDialogController({
     builder: RenameDialog({ record: this.renameRecord, renameCallback: this.renameCallBack.bind(this) }),
     autoCancel: true
   })
-  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5)')
+  private listener = mediaQuery.matchMediaSync('screen and (min-aspect-ratio: 1.5) or (orientation: landscape)')
 
   onPortrait(mediaQueryResult) {
-    console.info(`${TAG}onPortrait: mediaQueryResult.matches=${mediaQueryResult.matches}`)
-    if (mediaQueryResult.matches) {
-      this.isLand = true
-    } else {
-      this.isLand = false
-    }
-    console.info(`${TAG}onPortrait: isLand=${this.isLand}`)
-    this.recordList = this.fileManager.getFiles()
-    console.info(`${TAG}onPortrait: recordList=${JSON.stringify(this.recordList)}`)
+    this.isLand = mediaQueryResult.matches
+    Logger.info(TAG, `onPortrait: isLand=${this.isLand}`)
   }
 
   clickItem(recorder, operate) {
-    console.info(`${TAG}clickItem: operate=${operate}`)
+    Logger.info(TAG, `clickItem: operate=${operate}`)
     if (operate === 'play') {
       if (!this.isLand) {
         router.push({
-          params: { recorder: recorder },
+          params: { fileId: recorder.fileAsset.id },
           url: 'pages/Play' })
       } else {
-        if (this.record.fileName != recorder.fileName) {
-          this.audioModel.initAudioPlayer(recorder.filePath, true)
+        if (this.record.title != recorder.title) {
           this.record = recorder
+          this.audioModel.initAudioPlayer(this.record.fileAsset, true)
         }
       }
     } else if (operate === 'delete') {
-      this.deleteDialogShow(1, function(){
+      this.deleteDialogShow(1, [recorder], function(){
         let index = this.recordList.indexOf(recorder)
         this.recordList.splice(index, 1)
-        this.fileManager.deleteFile(recorder, this.recordList)
+        MediaManager.deleteFile(recorder.fileAsset.uri)
       }.bind(this))
     } else if (operate === 'rename') {
       this.renameRecord = recorder
@@ -77,18 +69,26 @@ struct Index {
     }
   }
 
-  renameCallBack(record, newName) {
-    console.info(`${TAG}renameCallBack: newName=${newName}, oldRecord=${record.fileName}`)
-    this.fileManager.renameFile(record, newName)
-    this.recordList = this.fileManager.getFiles()
-    if (this.record.fileName == record.fileName) {
-      console.info(`${TAG}renameCallBack: renameCallBack:this.recorder == record`)
-      this.audioModel.initAudioPlayer(PATH + newName + '.wav', false)
-      this.record.fileName = newName
-    }
+  renameCallBack(newName) {
+    Logger.info(TAG, `renameCallBack: newName=${newName}`)
+    this.renameRecord.fileAsset.title = newName
+    this.renameRecord.fileAsset.commitModify(err => {
+      if (err !== undefined) {
+        Logger.info(TAG, `commitModify: err:${err}`)
+        return
+      }
+      Logger.info(TAG, `commitModify success`)
+      this.renameDialogController.close()
+      this.getAudios()
+      if (this.record.title == this.renameRecord.title) {
+        Logger.info(TAG, `renameCallBack: renameCallBack:this.recorder == record`)
+        this.audioModel.initAudioPlayer(this.renameRecord.fileAsset, false)
+        this.record.title = newName
+      }
+    })
   }
 
-  deleteDialogShow(num, deleteAction) {
+  deleteDialogShow(num, checkRecords, deleteAction) {
     let message = $r('app.string.delete_message_one')
     if (num > 1) {
       message = $r('app.string.delete_message_other')
@@ -101,9 +101,12 @@ struct Index {
           fontColor: Color.Red,
           action: () => {
             deleteAction()
-            if (this.fileManager.isDelete(this.record.fileName)) {
-              this.audioModel.finish()
-              this.record = new Record('', '', '', '', false)
+            for (let record in checkRecords) {
+              MediaManager.deleteFile(checkRecords[record].fileAsset.uri)
+              if (this.record && this.record.title === checkRecords[record].title) {
+                this.audioModel.finish()
+                this.record = new Record(undefined, false)
+              }
             }
           }
         },
@@ -117,13 +120,21 @@ struct Index {
     )
   }
 
+  getAudios = async () => {
+    this.recordList = await MediaManager.queryAllAudios()
+  }
+
   aboutToAppear() {
     let context = featureAbility.getContext()
-    context.requestPermissionsFromUser(['ohos.permission.MICROPHONE'], 3, function (result) {
-      console.info(`${TAG} grantPermission,requestPermissionsFromUser,result.requestCode=${result}`)
+    context.requestPermissionsFromUser(['ohos.permission.MICROPHONE', 'ohos.permission.WRITE_MEDIA', 'ohos.permission.READ_MEDIA'], 3, function (result) {
+      Logger.info(TAG, `grantPermission,requestPermissionsFromUser,result.requestCode=${result}`)
     })
-    portraitFunc = this.onPortrait.bind(this)
-    this.listener.on('change', portraitFunc)
+    this.listener.on('change', this.onPortrait.bind(this))
+    MediaManager.onAudioChange(this.getAudios)
+  }
+
+  onPageShow() {
+    this.getAudios()
   }
 
   build() {
@@ -135,7 +146,7 @@ struct Index {
       if (this.isLand) {
         Column() {
           Row() {
-            Text(this.record.fileName)
+            Text(this.record.title)
               .fontColor(Color.Black)
               .fontWeight(FontWeight.Bold)
               .fontSize(30)
@@ -145,7 +156,11 @@ struct Index {
           .constraintSize({ minHeight: 50 })
           .padding({ left: 20 })
 
-          PlayView({ fileName: this.record.fileName, duration: this.record.duration, audioModel: this.audioModel })
+          PlayView({
+            fileName: this.record.title,
+            duration: this.record.duration,
+            audioModel: this.audioModel
+          })
         }
         .layoutWeight(3)
       }

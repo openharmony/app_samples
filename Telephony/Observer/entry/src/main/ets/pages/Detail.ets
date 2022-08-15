@@ -23,14 +23,13 @@ const TAG: string = 'Detail'
 @Component
 export struct Detail {
   @State detailData?: DetailData = new DetailData()
-
   aboutToAppear() {
     this.detailData = <DetailData> router.getParams()['detailData']
     Logger.info(TAG, `this.detailData = ${JSON.stringify(this.detailData)}`)
   }
 
-  regState(regState) {
-    switch (regState) {
+  regState(regStateValue: number) {
+    switch (regStateValue) {
       case 0:
         return $r('app.string.REG_STATE_NO_SERVICE')
         break
@@ -49,8 +48,8 @@ export struct Detail {
     }
   }
 
-  radioTechnology(radioTechnology) {
-    switch (radioTechnology) {
+  radioTechnology(radioTechnologyValue: number) {
+    switch (radioTechnologyValue) {
       case 0:
         return $r('app.string.RADIO_TECHNOLOGY_UNKNOWN')
         break
@@ -96,8 +95,8 @@ export struct Detail {
     }
   }
 
-  nsaState(nsaState) {
-    switch (nsaState) {
+  nsaState(nsaStateValue: number) {
+    switch (nsaStateValue) {
       case 1:
         return $r('app.string.NSA_STATE_NOT_SUPPORT')
         break
@@ -122,8 +121,8 @@ export struct Detail {
     }
   }
 
-  networkType(networkType) {
-    switch (networkType) {
+  networkType(networkTypeValue: number) {
+    switch (networkTypeValue) {
       case 0:
         return $r('app.string.NETWORK_TYPE_UNKNOWN')
         break
@@ -151,8 +150,8 @@ export struct Detail {
     }
   }
 
-  callState(callState) {
-    switch (callState) {
+  callState(callStateValue: number) {
+    switch (callStateValue) {
       case -1:
         return $r('app.string.CALL_STATE_UNKNOWN')
         break
@@ -171,8 +170,8 @@ export struct Detail {
     }
   }
 
-  dataConnectState(dataConnectState) {
-    switch (dataConnectState) {
+  dataConnectState(dataConnectStateValue: number) {
+    switch (dataConnectStateValue) {
       case -1:
         return $r('app.string.DATA_STATE_UNKNOWN')
         break
@@ -194,8 +193,8 @@ export struct Detail {
     }
   }
 
-  dataFlowType(dataFlowType) {
-    switch (dataFlowType) {
+  dataFlowType(dataFlowTypeValue: number) {
+    switch (dataFlowTypeValue) {
       case 0:
         return $r('app.string.DATA_FLOW_TYPE_NONE')
         break
@@ -217,8 +216,8 @@ export struct Detail {
     }
   }
 
-  cardType(cardType) {
-    switch (cardType) {
+  cardType(cardTypeValue: number) {
+    switch (cardTypeValue) {
       case -1:
         return $r('app.string.UNKNOWN_CARD')
         break
@@ -255,8 +254,8 @@ export struct Detail {
     }
   }
 
-  simState(simState) {
-    switch (simState) {
+  simState(simStateValue: number) {
+    switch (simStateValue) {
       case 0:
         return $r('app.string.SIM_STATE_UNKNOWN')
         break
@@ -281,8 +280,8 @@ export struct Detail {
     }
   }
 
-  lockReason(lockReason) {
-    switch (lockReason) {
+  lockReason(lockReasonValue: number) {
+    switch (lockReasonValue) {
       case 0:
         return $r('app.string.SIM_NONE')
         break
@@ -328,10 +327,6 @@ export struct Detail {
     }
   }
 
-  isOrNo(isOrNo: boolean) {
-    return isOrNo ? $r('app.string.yes') : $r('app.string.no')
-  }
-
   @Builder textComponent(name: Resource, value: Resource | string) {
     Row() {
       Text(name)
@@ -372,9 +367,9 @@ export struct Detail {
               this.textComponent($r('app.string.network_state_short_operator_name'), this.detailData.networkState.shortOperatorName)
               this.textComponent($r('app.string.plmn_numeric'), this.detailData.networkState.plmnNumeric)
               this.textComponent($r('app.string.is_roaming'), JSON.stringify(this.detailData.networkState.isRoaming))
-              this.textComponent($r('app.string.reg_state'), JSON.stringify(this.detailData.networkState.regState))
-              this.textComponent($r('app.string.cfg_tech'), JSON.stringify(this.detailData.networkState.cfgTech))
-              this.textComponent($r('app.string.nsa_state'), JSON.stringify(this.detailData.networkState.nsaState))
+              this.textComponent($r('app.string.reg_state'), this.regState(this.detailData.networkState.regState))
+              this.textComponent($r('app.string.cfg_tech'), this.radioTechnology(this.detailData.networkState.cfgTech))
+              this.textComponent($r('app.string.nsa_state'), this.nsaState(this.detailData.networkState.nsaState))
               this.textComponent($r('app.string.is_ca_active'), JSON.stringify(this.detailData.networkState.isCaActive))
               this.textComponent($r('app.string.is_emergency'), JSON.stringify(this.detailData.networkState.isEmergency))
             }
@@ -387,7 +382,7 @@ export struct Detail {
               .fontSize(20)
             if (this.detailData.signalInformation) {
               ForEach(this.detailData.signalInformation, (item) => {
-                this.textComponent($r('app.string.signal_type'), JSON.stringify(item.signalType))
+                this.textComponent($r('app.string.signal_type'), this.networkType(item.signalType))
                 this.textComponent($r('app.string.signal_level'), JSON.stringify(item.signalLevel))
               }, item => JSON.stringify(item.signalLevel))
             }
@@ -398,7 +393,7 @@ export struct Detail {
           Column() {
             Text($r('app.string.call_state'))
               .fontSize(20)
-            this.textComponent($r('app.string.call_state_code'), JSON.stringify(this.detailData.callState))
+            this.textComponent($r('app.string.call_state_code'), this.callState(this.detailData.callState))
             this.textComponent($r('app.string.phone_number'), this.detailData.callNumber)
           }
           .margin({ top: 10, left: 20 })
@@ -407,8 +402,8 @@ export struct Detail {
           Column() {
             Text($r('app.string.cellular_data'))
               .fontSize(20)
-            this.textComponent($r('app.string.cellular_data_connection_state'), JSON.stringify(this.detailData.dataConnectState))
-            this.textComponent($r('app.string.cellular_data_flow_type'), JSON.stringify(this.detailData.dataFlowType))
+            this.textComponent($r('app.string.cellular_data_connection_state'), this.dataConnectState(this.detailData.dataConnectState))
+            this.textComponent($r('app.string.cellular_data_flow_type'), this.dataFlowType(this.detailData.dataFlowType))
           }
           .margin({ top: 10, left: 20 })
           .alignItems(HorizontalAlign.Start)
@@ -417,9 +412,9 @@ export struct Detail {
             Text($r('app.string.sim_card_status'))
               .fontSize(20)
             if (this.detailData.simStateData) {
-              this.textComponent($r('app.string.card_type'), JSON.stringify(this.detailData.simStateData.type))
-              this.textComponent($r('app.string.sim_status'), JSON.stringify(this.detailData.simStateData.state))
-              this.textComponent($r('app.string.lock_reason'), JSON.stringify(this.detailData.simStateData.reason))
+              this.textComponent($r('app.string.card_type'), this.cardType(this.detailData.simStateData.type))
+              this.textComponent($r('app.string.sim_status'), this.simState(this.detailData.simStateData.state))
+              this.textComponent($r('app.string.lock_reason'), this.lockReason(this.detailData.simStateData.reason))
             }
           }
           .margin({ top: 10, left: 20 })

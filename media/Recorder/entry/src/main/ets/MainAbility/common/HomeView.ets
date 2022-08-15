@@ -12,18 +12,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import router from '@ohos.router'
 import { TitleBar } from '../common/TitleBar'
-import { CheckTitle } from '../common/CheckTitle'
 import { Record } from '../model/Record'
+import { CheckTitle } from '../common/CheckTitle'
 import { AudioItem } from '../common/AudioItem'
-import { FileManager } from '../model/FileManager'
 
 @Component
 export struct HomeView {
-  private fileManager = new FileManager()
   private clickItem: (record: Record, operate: string) => void
-  private deleteDialogShow: (num: number, deleteAction: () => void) => void
+  private deleteDialogShow: (num: number, checkRecords: Record[], deleteAction: () => void) => void
   @State leftSliderIndex: number = -1
   @State checkNum: number = 0
   @Link recordList: Array<Record>
@@ -57,8 +56,7 @@ export struct HomeView {
         newRecords.push(this.recordList[i])
       }
     }
-    this.deleteDialogShow(checkRecords.length, function(){
-      this.fileManager.deleteFiles(checkRecords, newRecords)
+    this.deleteDialogShow(checkRecords.length, checkRecords, function(){
       this.recordList = newRecords
       this.checkState = false
     }.bind(this))
@@ -83,7 +81,7 @@ export struct HomeView {
               checkItem: this.checkItem.bind(this)
             })
           }
-        }, item => JSON.stringify(item))
+        }, item => item.title + item.isCheck)
       }
       .layoutWeight(1)
 
@@ -151,11 +149,7 @@ export struct HomeView {
         .margin(10)
         .onClick(() => {
           this.leftSliderIndex = -1
-          this.fileManager.createFile((fileName, file, addDate) => {
-            router.push({
-              params: { fileName: fileName, file: file, addDate: addDate },
-              url: 'pages/RecordPage' })
-          })
+          router.push({ url: 'pages/RecordPage' })
         })
       }
     }

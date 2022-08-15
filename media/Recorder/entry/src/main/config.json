@@ -69,6 +69,12 @@
     "reqPermissions": [
       {
         "name": "ohos.permission.MICROPHONE"
+      },
+      {
+        "name": "ohos.permission.WRITE_MEDIA"
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA"
       }
     ]
   }

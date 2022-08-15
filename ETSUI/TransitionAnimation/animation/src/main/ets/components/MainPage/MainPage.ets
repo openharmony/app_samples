@@ -16,6 +16,7 @@
 import router from '@ohos.router'
 import window from '@ohos.window'
 import mediaQuery from '@ohos.mediaquery'
+import { Show } from './Show'
 
 const SKIP_COUNTDOWN: number = 3 // 第一段进场动画用时3s
 
@@ -46,15 +47,6 @@ export struct TransitionsAnimation {
         clearInterval(timer) // 关闭定时器
       }
     }, 1000)
-  }
-
-  // 自定义转场
-  pageTransition() {
-    PageTransitionEnter({ duration: 1200 })
-      .slide(SlideEffect.Left)
-    PageTransitionExit({ delay: 100 })
-      .translate({ x: 100.0, y: 100.0 })
-      .opacity(0)
   }
 
   build() {

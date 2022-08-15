@@ -12,18 +12,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+import mediaLibrary from '@ohos.multimedia.mediaLibrary'
+import DateTimeUtil from '../model/DateTimeUtil'
+import MediaManager from '../model/MediaManager'
+
+const dateTimeUtil = new DateTimeUtil()
+
 export class Record {
-  fileName: string
-  addDate: string
-  filePath: string
+  fileAsset: mediaLibrary.FileAsset
+  title: string
   duration: string
   isCheck: boolean
 
-  constructor(fileName: string, filePath: string, addDate: string, duration: string, isCheck: boolean) {
-    this.fileName = fileName
-    this.filePath = filePath
-    this.addDate = addDate
-    this.duration = duration
+  constructor(fileAsset: mediaLibrary.FileAsset, isCheck: boolean) {
+    this.fileAsset = fileAsset
+    if (fileAsset) {
+      if (fileAsset.duration > 0) {
+        this.duration = dateTimeUtil.getDurationString(fileAsset.duration)
+      } else {
+        this.duration = MediaManager.getFileDuration(fileAsset.title)
+      }
+      this.title = fileAsset.title
+    } else {
+      this.duration = '00:00'
+      this.title = ''
+    }
     this.isCheck = isCheck
   }
 }

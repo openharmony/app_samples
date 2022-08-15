@@ -13,11 +13,13 @@
  * limitations under the License.
  */
 
+import Logger from '../MainAbility/model/Logger'
+
 export default {
   onCreate() {
-    console.info('Application onCreate')
+    Logger.info('app', 'Application onCreate')
   },
   onDestroy() {
-    console.info('Application onDestroy')
+    Logger.info('app', 'Application onDestroy')
   },
 }

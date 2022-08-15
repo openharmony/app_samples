@@ -12,9 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { getTimeString } from '../model/Utils'
 
-const TAG = '[Record.AnimateView]'
+import { getTimeString } from '../model/Utils'
+import Logger from '../model/Logger'
+
+const TAG = '[Recorder.AnimateView]'
 
 @Component
 export struct AnimateView {
@@ -22,26 +24,25 @@ export struct AnimateView {
   private intervalId: number = 0
   private updateTimeStr: () => void
   @State timeAdd: number = 0
-  @State translate: string = '-0.2%'
+  @State translateImage: string = '-0.2%'
   @State translateText: string = '-1%'
   @Prop @Watch('onPlayChange') isPlay: boolean
-  @Prop @Watch('onResetChange') isReset: boolean
 
   onPlayChange() {
-    console.info(`${TAG} onPlayChange`)
+    Logger.info(TAG, `onPlayChange`)
     this.animator()
   }
 
   animator() {
-    console.info(`${TAG} animator,isPlay=${this.isPlay}`)
+    Logger.info(TAG, `animator,isPlay=${this.isPlay}`)
     if (this.isPlay) {
       this.intervalId = setInterval(() => {
         this.updateTimeStr()
-        this.translate = '16.3%'
+        this.translateImage = '16.3%'
         this.translateText = '15.5%'
         this.timeAdd += 1
         animateTo({ duration: 1100, curve: Curve.Linear }, () => {
-          this.translate = '-0.2%'
+          this.translateImage = '-0.2%'
           this.translateText = '-1%'
         })
       }, 1000)
@@ -78,7 +79,7 @@ export struct AnimateView {
         .width('120%')
         .height(20)
         .objectFit(ImageFit.Fill)
-        .translate({ x: this.translate })
+        .translate({ x: this.translateImage })
     }
   }
 }

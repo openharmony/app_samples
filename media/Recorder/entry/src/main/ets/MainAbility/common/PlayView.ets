@@ -12,51 +12,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import { AnimateView } from '../common/AnimateView'
 import { AudioModel } from '../model/AudioModel'
 import { updateTime } from '../model/Utils'
+import Logger from '../model/Logger'
 
-const TAG = '[Record.PlayView]'
+const TAG = '[Recorder.PlayView]'
 
 @Component
 export struct PlayView {
   private audioModel: AudioModel = null
   private millisecond: number = 0
-  @State duration: string = ''
+  private duration: string = ''
   @State time: string = '00:00'
-  @State isReset: boolean = false
   @State isPlay: boolean = false
   @State @Watch('onFileChange') fileName: string = ''
 
   aboutToAppear() {
     console.info(`${TAG} aboutToAppear`)
-    if (this.fileName !== '') {
-      this.isPlay = true
-      this.isReset = !this.isReset
-      this.reset()
-      this.audioModel.onFinish(function(){
-        this.isPlay = false
-        this.isReset = !this.isReset
-        this.reset()
-      }.bind(this))
-    }
+    this.initAudioPlayer()
   }
 
   onFileChange() {
-    console.info(`${TAG} onFileChange,fileName=${this.fileName},audioModel.isPlay=${this.audioModel.isPlay}`)
-    if (this.fileName === '' || !this.audioModel.isPlay) {
-      this.isPlay = false
-    } else {
-      this.isPlay = true
-    }
-    this.isReset = !this.isReset
-    this.reset()
+    Logger.info(TAG, `onFileChange,fileName=${this.fileName}`)
+    this.initAudioPlayer()
+  }
+
+  initAudioPlayer() {
     if (this.fileName !== '') {
-      this.audioModel.onFinish(function(){
+      this.audioModel.play(() => {
+        this.isPlay = true
+        this.reset()
+      })
+      this.audioModel.onFinish(() => {
         this.isPlay = false
         this.reset()
-        this.isReset = !this.isReset
-      }.bind(this))
+      })
+    } else {
+      this.isPlay = false
+      this.reset()
     }
   }
 
@@ -70,9 +65,26 @@ export struct PlayView {
     this.time = updateTime(this.millisecond)
   }
 
+  handleChangePlayState = () => {
+    if (this.fileName !== '') {
+      Logger.info(TAG, `handleChangePlayState this.isPlay= ${this.isPlay}`)
+      if (!this.isPlay) {
+        this.audioModel.play(() => {
+          Logger.info(TAG, `handleChangePlayState play success`)
+          this.isPlay = !this.isPlay
+        })
+      } else {
+        this.audioModel.pause(() => {
+          Logger.info(TAG, `handleChangePlayState pause success`)
+          this.isPlay = !this.isPlay
+        })
+      }
+    }
+  }
+
   build() {
     Column() {
-      AnimateView({ isPlay: this.isPlay, isReset: this.isReset, updateTimeStr: this.updateTimeStr.bind(this) })
+      AnimateView({ isPlay: this.isPlay, updateTimeStr: this.updateTimeStr.bind(this) })
       Image($r('app.media.bg_play'))
         .width('100%')
         .height('30%')
@@ -96,16 +108,7 @@ export struct PlayView {
       .backgroundColor('#FFFFFF')
       .layoutWeight(1)
       .margin({ bottom: 15 })
-      .onClick(() => {
-        if (this.fileName !== '') {
-          this.isPlay = !this.isPlay
-          if (this.isPlay) {
-            this.audioModel.play()
-          } else {
-            this.audioModel.pause()
-          }
-        }
-      })
+      .onClick(this.handleChangePlayState)
     }
   }
 }

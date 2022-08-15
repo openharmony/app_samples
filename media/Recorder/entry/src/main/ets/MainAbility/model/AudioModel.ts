@@ -13,51 +13,44 @@
  * limitations under the License.
  */
 import media from '@ohos.multimedia.media'
-import {getFdNumber} from '../model/Utils'
+import mediaLibrary from '@ohos.multimedia.mediaLibrary'
+import Logger from '../model/Logger'
 
-const TAG: string = '[Record.AudioModel]'
+const TAG: string = '[Recorder.AudioModel]'
 
 export class AudioModel {
   private audioPlayer = undefined;
-  private playPath: string = ''
-  public isPlay: boolean = false
+  private playFile: mediaLibrary.FileAsset = undefined
+  private dataLoad: boolean = false
 
-  initAudioPlayer(playSrc: string, isPlay) {
-    this.playPath = playSrc
-    this.isPlay = isPlay
-    this.release();
+  initAudioPlayer(playSrc: mediaLibrary.FileAsset, isPlay) {
+    this.playFile = playSrc
+    this.dataLoad = false
+    this.release()
     this.audioPlayer = media.createAudioPlayer()
     this.audioPlayer.on('dataLoad', () => {
-      console.info(`${TAG}case dataLoad called`)
-      if (this.isPlay) {
-        this.audioPlayer.play()
-      }
-    })
-    this.audioPlayer.on('pause', () => {
-      console.info(`${TAG}case pause called`)
-    })
-    this.audioPlayer.on('play', () => {
-      console.info(`${TAG}case play called`)
+      Logger.info(TAG, `case dataLoad called`)
+      this.dataLoad = true
     })
     this.audioPlayer.on('stop', () => {
-      console.info(`${TAG}audioPlayer stop called`)
+      Logger.info(TAG, `audioPlayer stop called`)
       this.audioPlayer.release()
       this.audioPlayer = undefined
     })
     this.audioPlayer.on('error', () => {
-      console.info(`${TAG}audioPlayer error called`)
+      Logger.info(TAG, `audioPlayer error called`)
     })
     this.audioPlayer.reset()
-    let fdPath = getFdNumber(playSrc)
-    fdPath.then(fdNumber=>{
-      this.audioPlayer.src = fdNumber
-      console.info(`${TAG}create audioPlayer success`)
+    let fdPath = playSrc.open('r')
+    fdPath.then(fdNumber => {
+      this.audioPlayer.src = `fd://${fdNumber}`
+      Logger.info(TAG, `create audioPlayer success`)
     })
   }
 
   release() {
     if (typeof (this.audioPlayer) != `undefined`) {
-      console.info(`${TAG}audioPlayer  release`)
+      Logger.info(TAG, `audioPlayer  release`)
       this.audioPlayer.release()
       this.audioPlayer = undefined
     }
@@ -66,29 +59,36 @@ export class AudioModel {
   onFinish(callback) {
     console.info(`${TAG}set onFinish`)
     this.audioPlayer.on('finish', () => {
-      console.info(`${TAG}audioPlayer finish called`)
+      Logger.info(TAG, `audioPlayer finish called`)
       this.audioPlayer.seek(0)
       callback()
     });
   }
 
-  onPlay(callback) {
-    this.audioPlayer.on('play', () => {
-      console.info(`${TAG}audioPlayer play called`)
-      callback()
-    })
-  }
-
-  play() {
+  play(callback) {
     if (typeof (this.audioPlayer) != `undefined`) {
-      this.audioPlayer.play()
-    } else {
-      this.initAudioPlayer(this.playPath, true)
+      this.audioPlayer.on('play', () => {
+        Logger.info(TAG, `audioPlayer play called`)
+        callback()
+      })
+      if (this.dataLoad) {
+        this.audioPlayer.play()
+      } else {
+        this.audioPlayer.on('dataLoad', () => {
+          Logger.info(TAG, `case dataLoad called`)
+          this.dataLoad = true
+          this.audioPlayer.play()
+        })
+      }
     }
   }
 
-  pause() {
+  pause(callback) {
     if (typeof (this.audioPlayer) != `undefined`) {
+      this.audioPlayer.on('pause', () => {
+        Logger.info(TAG, `case pause called`)
+        callback()
+      })
       this.audioPlayer.pause()
     }
   }

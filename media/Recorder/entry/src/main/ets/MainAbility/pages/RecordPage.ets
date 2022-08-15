@@ -12,46 +12,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import router from '@ohos.router'
+import mediaLibrary from '@ohos.multimedia.mediaLibrary'
+import MediaManager from '../model/MediaManager'
+import Logger from '../model/Logger'
 import { TitleBar } from '../common/TitleWithBack'
 import { AnimateView } from '../common/AnimateView'
-import { FileManager } from '../model/FileManager'
 import { RecordModel } from '../model/RecordModel'
-import { Record } from '../model/Record'
-import { updateTime, prepareFdNumber} from '../model/Utils'
+import { updateTime } from '../model/Utils'
 
 const TAG = '[Recorder.Record]'
 
 @Entry
 @Component
 struct RecordPage {
-  private fileName: string = <string> router.getParams()['fileName']
-  private file: string = <string> router.getParams()['file']
-  private addDate: string = <string> router.getParams()['addDate']
   private recordModel: RecordModel = new RecordModel()
-  private fileManager: FileManager = new FileManager()
   private millisecond: number = 0
+  @State fileAsset: mediaLibrary.FileAsset = undefined
   @State isRecording: boolean = false
   @State duration: string = '00:00'
 
   finish() {
+    MediaManager.saveFileDuration(this.fileAsset.title, this.duration)
     this.recordModel.finish(function(){
       this.isRecording = false
-      let recorder = new Record(this.fileName, this.file, this.addDate, this.duration, false)
-      this.fileManager.putFile(recorder)
     }.bind(this))
-
   }
 
-  aboutToAppear() {
+  async aboutToAppear() {
     this.recordModel.initAudioRecorder()
-    let fdPath = prepareFdNumber(this.file)
-    fdPath.then(fdNumber => {
-      this.recordModel.startRecorder(fdNumber, () => {
-        console.info(`${TAG}startRecorder callback success`)
-        this.millisecond = 0
-        this.isRecording = true
-      })
+    this.fileAsset = await MediaManager.createAudioFile()
+    let fd = await this.fileAsset.open('Rw')
+    this.recordModel.startRecorder(`fd://${fd}`, () => {
+      Logger.info(TAG, 'startRecorder callback success')
+      this.millisecond = 0
+      this.isRecording = true
     })
   }
 
@@ -62,9 +58,11 @@ struct RecordPage {
 
   build() {
     Column() {
-      TitleBar({ title: this.fileName })
+      if (this.fileAsset) {
+        TitleBar({ title: this.fileAsset.title })
+      }
       Column() {
-        AnimateView({ isPlay: this.isRecording, isReset: false, updateTimeStr: this.updateTimeStr.bind(this) })
+        AnimateView({ isPlay: this.isRecording, updateTimeStr: this.updateTimeStr.bind(this) })
         Image($r('app.media.bg_record'))
           .width('100%')
           .height('40%')
@@ -81,9 +79,10 @@ struct RecordPage {
           .size({ width: 70, height: 70 })
           .backgroundColor('#FFFFFF')
           .onClick(() => {
-            router.back()
             this.finish()
+            router.back()
           })
+
           Blank().layoutWeight(2)
           Button({ type: ButtonType.Circle, stateEffect: true }) {
             Image(this.isRecording ? $r('app.media.ic_pause') : $r('app.media.ic_play'))
@@ -102,6 +101,7 @@ struct RecordPage {
               this.recordModel.resume(callback)
             }
           })
+
           Blank().layoutWeight(2)
         }
         .width('100%')

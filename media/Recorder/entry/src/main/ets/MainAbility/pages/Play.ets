@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 import router from '@ohos.router'
+import MediaManager from '../model/MediaManager'
 import { Record } from '../model/Record'
 import { TitleBar } from '../common/TitleWithBack'
 import { PlayView } from '../common/PlayView'
@@ -21,17 +22,23 @@ import { AudioModel } from '../model/AudioModel'
 @Entry
 @Component
 struct Play {
-  private record: Record = <Record> router.getParams()['recorder']
+  private fileId: number = router.getParams()['fileId']
   private audioModel: AudioModel = new AudioModel()
+  @State record: Record = undefined
 
-  aboutToAppear() {
-    this.audioModel.initAudioPlayer(this.record.filePath, true)
+  async aboutToAppear() {
+    this.record = await MediaManager.queryFile(this.fileId)
+    if (this.record) {
+      this.audioModel.initAudioPlayer(this.record.fileAsset, true)
+    }
   }
 
   build() {
     Column() {
-      TitleBar({ title: this.record.fileName })
-      PlayView({ fileName: this.record.fileName, duration: this.record.duration, audioModel: this.audioModel })
+      if (this.record) {
+        TitleBar({ title: this.record.fileAsset.title })
+        PlayView({ fileName: this.record.title, duration: this.record.duration, audioModel: this.audioModel })
+      }
     }
     .height('100%')
     .backgroundColor('#F0F0F0')

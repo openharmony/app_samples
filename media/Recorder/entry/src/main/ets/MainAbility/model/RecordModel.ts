@@ -12,9 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import media from '@ohos.multimedia.media'
 
-const TAG: string = '[Record.RecordModel]'
+import media from '@ohos.multimedia.media'
+import Logger from '../model/Logger'
+
+const TAG: string = '[Recorder.RecordModel]'
 let audioConfig = {
   audioSourceType: 1,
   audioEncoder: 3,
@@ -31,43 +33,42 @@ export class RecordModel {
   initAudioRecorder() {
     this.release();
     this.audioRecorder = media.createAudioRecorder()
-    console.info(`${TAG}create audioRecorder success`)
+    Logger.info(TAG, 'create audioRecorder success')
   }
 
   release() {
     if (typeof (this.audioRecorder) != `undefined`) {
-      console.info(`${TAG}case audioRecorder  release`)
+      Logger.info(TAG, 'case audioRecorder  release')
       this.audioRecorder.release()
       this.audioRecorder = undefined
     }
   }
 
   startRecorder(pathName, callback) {
-    console.info(`${TAG}enter the startRecorder,audioRecorder=${JSON.stringify(this.audioRecorder)}`)
-    console.info(`${TAG}typeof (this.audioRecorder)=${JSON.stringify(typeof (this.audioRecorder))}`)
+    Logger.info(TAG, `enter the startRecorder,pathName=${pathName}, audioRecorder=${JSON.stringify(this.audioRecorder)}`)
     if (typeof (this.audioRecorder) != 'undefined') {
-      console.info(`${TAG}enter the if`)
+      Logger.info(TAG, 'enter the if')
       this.audioRecorder.on('prepare', () => {
-        console.info(`${TAG}setCallback  prepare case callback is called`)
+        Logger.info(TAG, 'setCallback  prepare case callback is called')
         this.audioRecorder.start()
       })
       this.audioRecorder.on('start', () => {
-        console.info(`${TAG}setCallback start case callback is called`)
+        Logger.info(TAG, 'setCallback start case callback is called')
         callback()
       })
-      console.info(`${TAG}start prepare`)
+      Logger.info(TAG, 'start prepare')
       audioConfig.uri = pathName
       this.audioRecorder.prepare(audioConfig)
     } else {
-      console.info(`${TAG}case failed, audioRecorder is null`)
+      Logger.info(TAG, 'case failed, audioRecorder is null')
     }
   }
 
   pause(callback) {
-    console.info(`${TAG}audioRecorder pause called`)
+    Logger.info(TAG, 'audioRecorder pause called')
     if (typeof (this.audioRecorder) != `undefined`) {
       this.audioRecorder.on('pause', () => {
-        console.info(`${TAG}audioRecorder pause finish`)
+        Logger.info(TAG, 'audioRecorder pause finish')
         callback()
       })
       this.audioRecorder.pause()
@@ -75,10 +76,10 @@ export class RecordModel {
   }
 
   resume(callback) {
-    console.info(`${TAG}audioRecorder resume called`)
+    Logger.info(TAG, 'audioRecorder resume called')
     if (typeof (this.audioRecorder) != `undefined`) {
       this.audioRecorder.on('resume', () => {
-        console.info(`${TAG}audioRecorder resume finish`)
+        Logger.info(TAG, 'audioRecorder resume finish')
         callback()
       })
       this.audioRecorder.resume()
@@ -88,7 +89,7 @@ export class RecordModel {
   finish(callback) {
     if (typeof (this.audioRecorder) != `undefined`) {
       this.audioRecorder.on('stop', () => {
-        console.info(`${TAG}audioRecorder stop called`)
+        Logger.info(TAG, 'audioRecorder stop called')
         this.audioRecorder.release()
         callback()
       })

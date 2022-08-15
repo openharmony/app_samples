@@ -6,7 +6,7 @@
 
 ### Usage
 
-1. Start the sample app, touch the **Record** button at the bottom of the home screen to start recording. During the recording, you can touch the **Pause** button in the lower right corner to pause the recording, and touch the **Back** button at the top or the **Stop** button in the lower right corner to stop recording and return to the home screen. The recorded audio file is displayed on the home screen.
+1. Start the sample app, touch the **Record** button at the bottom of the home screen to start recording. During the recording, you can touch the **Pause** button in the lower right corner to pause the recording, and touch the **Back** button at the top or the red **Stop** button to stop recording and return to the home screen. The recorded audio file is displayed on the home screen.
 
 2. Touch an audio file to play it. On the audio playback page, you can touch the corresponding button to pause or resume the playback.
 

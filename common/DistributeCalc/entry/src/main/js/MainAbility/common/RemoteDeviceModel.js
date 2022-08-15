@@ -25,11 +25,8 @@ export default class RemoteDeviceModel {
     authCallback;
     deviceManager = undefined;
 
-    constructor() {
-    }
-
     registerDeviceListCallback(callback) {
-        if (typeof (this.deviceManager) == 'undefined') {
+        if (typeof (this.deviceManager) === 'undefined') {
             console.log("Calc[RemoteDeviceModel] deviceManager.createDeviceManager begin");
             deviceManager.createDeviceManager("ohos.samples.distributedcalc", (error, value) => {
                 if (error) {
@@ -49,7 +46,7 @@ export default class RemoteDeviceModel {
     registerDeviceListCallback_(callback) {
         console.info('Calc[RemoteDeviceModel] registerDeviceListCallback');
         this.callback = callback;
-        if (this.deviceManager == undefined) {
+        if (this.deviceManager === undefined) {
             console.error('Calc[RemoteDeviceModel] deviceManager has not initialized');
             this.callback();
             return;
@@ -58,7 +55,7 @@ export default class RemoteDeviceModel {
         console.info('Calc[RemoteDeviceModel] getTrustedDeviceListSync begin');
         let list = this.deviceManager.getTrustedDeviceListSync();
         console.info('Calc[RemoteDeviceModel] getTrustedDeviceListSync end, deviceList=' + JSON.stringify(list));
-        if (typeof (list) != 'undefined' && typeof (list.length) != 'undefined') {
+        if (typeof (list) !== 'undefined' && typeof (list.length) !== 'undefined') {
             this.deviceList = list;
         }
         this.callback();
@@ -79,7 +76,7 @@ export default class RemoteDeviceModel {
                 case 2:
                 if (this.deviceList.length > 0) {
                     for (let i = 0; i < this.deviceList.length; i++) {
-                        if (this.deviceList[i].deviceId == data.device.deviceId) {
+                        if (this.deviceList[i].deviceId === data.device.deviceId) {
                             this.deviceList[i] = data.device;
                             break;
                         }
@@ -90,7 +87,7 @@ export default class RemoteDeviceModel {
                 break;
                 case 1:
                 if (this.deviceList.length > 0) {
-                    let list = new Array();
+                    let list = [];
                     for (let j = 0; j < this.deviceList.length; j++) {
                         if (this.deviceList[j].deviceId != data.device.deviceId) {
                             list[j] = data.device;
@@ -109,7 +106,7 @@ export default class RemoteDeviceModel {
             console.info('Calc[RemoteDeviceModel] deviceFound data=' + JSON.stringify(data));
             console.info('Calc[RemoteDeviceModel] deviceFound this.discoverList=' + this.discoverList);
             for (let i = 0;i < this.discoverList.length; i++) {
-                if (this.discoverList[i].deviceId == data.device.deviceId) {
+                if (this.discoverList[i].deviceId === data.device.deviceId) {
                     console.info('Calc[RemoteDeviceModel] device founded ignored');
                     return;
                 }
@@ -149,7 +146,7 @@ export default class RemoteDeviceModel {
 
     unregisterDeviceListCallback() {
         console.info('Calc[RemoteDeviceModel] stopDeviceDiscovery ' + SUBSCRIBE_ID);
-        if(this.deviceManager === undefined){
+        if (this.deviceManager === undefined) {
           return
         }
         this.deviceManager.stopDeviceDiscovery(SUBSCRIBE_ID);
@@ -157,7 +154,6 @@ export default class RemoteDeviceModel {
         this.deviceManager.off('deviceFound');
         this.deviceManager.off('discoverFail');
         this.deviceManager.off('serviceDie');
-        this.deviceManager.release();
         this.deviceList = [];
     }
 
@@ -175,7 +171,7 @@ export default class RemoteDeviceModel {
                     'authType': 1,
                     'extraInfo': extraInfo
                 };
-                if(this.deviceManager === undefined) {
+                if (this.deviceManager === undefined) {
                     return
                 }
                 this.deviceManager.authenticateDevice(device, authParam, (err, data) => {

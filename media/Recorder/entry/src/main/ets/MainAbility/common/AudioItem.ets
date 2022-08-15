@@ -12,10 +12,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+import DateTimeUtil from '../model/DateTimeUtil'
+import Logger from '../model/Logger'
 import { Record } from '../model/Record'
 
-const TAG = '[Record.AudioItem]'
+const TAG = '[Recorder.AudioItem]'
 const TRANSLATE: number = -130
+
 @Component
 export struct AudioItem {
   private record: Record = null
@@ -45,6 +49,13 @@ export struct AudioItem {
     })
   }
 
+  getTimeString() {
+    let date = new Date()
+    date.setMilliseconds(this.record.fileAsset.dateAdded)
+    let dateTimeUtil = new DateTimeUtil()
+    return `${date.getFullYear()}/${dateTimeUtil.fill(date.getMonth() + 1)}/${dateTimeUtil.fill(date.getDate())}`
+  }
+
   aboutToAppear() {
     this.imgRes = this.record.isCheck ? $r('app.media.check') : $r('app.media.uncheck')
   }
@@ -53,10 +64,10 @@ export struct AudioItem {
     Row() {
       Row() {
         Flex({ direction: FlexDirection.Column, alignContent: FlexAlign.Center, justifyContent: FlexAlign.Center }) {
-          Text(this.record.fileName)
+          Text(this.record.fileAsset.title)
             .fontSize(22)
             .fontColor(Color.Black)
-          Text(this.record.addDate)
+          Text(this.getTimeString())
             .fontSize(20)
             .fontColor(Color.Gray)
             .margin({ top: 10 })
@@ -83,7 +94,7 @@ export struct AudioItem {
       }
       .width('79%')
       .padding({ top: 10, bottom: 10, left: 10, right: 10 })
-      .margin({ left: 15, top: 15, right: 5})
+      .margin({ left: 15, top: 15, right: 5 })
       .backgroundColor('#FFFFFF')
       .borderRadius(20)
 

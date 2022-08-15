@@ -20,18 +20,18 @@ export struct RenameDialog {
   private controller: CustomDialogController
   private record: Record = null
   private newName: string = ''
-  private renameCallback: (record: Record, newName: string) => void
+  private renameCallback: (newName: string) => void
 
   aboutToAppear() {
-    this.newName = this.record.fileName
+    this.newName = this.record.fileAsset.title
   }
 
   build() {
     Column() {
-      TextInput({ placeholder: 'input name', text: this.record.fileName })
+      TextInput({ placeholder: 'input name', text: this.record.fileAsset.title })
         .type(InputType.Normal)
         .placeholderColor(Color.Gray)
-        .maxLength(18)
+        .maxLength(20)
         .fontSize(19)
         .onChange((value: string) => {
           this.newName = value
@@ -51,8 +51,8 @@ export struct RenameDialog {
             return
           }
           this.controller.close()
-          if (this.newName != this.record.fileName) {
-            this.renameCallback(this.record, this.newName)
+          if (this.newName != this.record.fileAsset.title) {
+            this.renameCallback(this.newName)
           }
         })
 
