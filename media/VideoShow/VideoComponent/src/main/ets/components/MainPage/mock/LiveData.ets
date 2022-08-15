@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { LiveInfoDataModel } from '../model/liveDataModel'
+import { LiveInfoDataModel } from '../model/LiveDataModel'
 
 export const liveData: Array<LiveInfoDataModel> = [
   { "uri": $rawfile('video_1.mp4'),

@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 import mediaQuery from '@ohos.mediaquery';
-import { LiveInfoDataModel } from './model/liveDataModel'
-import { liveData } from './mock/liveData'
+import { LiveInfoDataModel } from './model/LiveDataModel'
+import { liveData } from './mock/LiveData'
 
 @Component
 export struct commentPage {

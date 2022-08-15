@@ -14,8 +14,8 @@
  */
 import router from '@ohos.router'
 import mediaQuery from '@ohos.mediaquery';
-import { VideoPage } from "./videopage"
-import { smallVideo } from "./smallVideo"
+import { VideoPage } from "./Videopage"
+import { smallVideo } from "./SmallVideo"
 
 @Entry
 @Component

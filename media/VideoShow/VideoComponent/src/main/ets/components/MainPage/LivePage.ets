@@ -14,10 +14,10 @@
  */
 import router from '@ohos.router'
 import mediaQuery from '@ohos.mediaquery';
-import { LiveInfoDataModel } from './model/liveDataModel'
-import { liveData } from './mock/liveData'
-import { live } from './net/utils'
-import { commentPage } from './commentPage'
+import { LiveInfoDataModel } from './model/LiveDataModel'
+import { liveData } from './mock/LiveData'
+import { live } from './net/Utils'
+import { commentPage } from './CommentPage'
 
 class LiveInfoResponse {
   code: number
