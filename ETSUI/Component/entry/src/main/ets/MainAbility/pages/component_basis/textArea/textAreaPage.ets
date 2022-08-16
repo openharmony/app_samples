@@ -126,7 +126,7 @@ struct TextAreaPage {
               .textAlign(TextAlign.Start)
               .fontWeight(FontWeight.Bolder)
             Flex({ direction: FlexDirection.Row, justifyContent: FlexAlign.Start }) {
-              Slider({ value: this.size, step: 1, min: -1, max: 100 })
+              Slider({ value: this.size, step: 1, min: 10, max: 20 })
                 .blockColor(Color.Orange)
                 .onChange((e) => {
                   this.size = Math.round(e)
