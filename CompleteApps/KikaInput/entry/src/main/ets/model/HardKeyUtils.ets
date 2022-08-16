@@ -57,7 +57,7 @@ export function GetHardKeyValue(keyCode) {
     2040: "x",
     2041: "y",
     2042: "z",
-    2043: ","
+    2043: ",",
     2044: ".",
     2050: " ",
     2055: "KEYCODE_FORWARD_DEL",
