@@ -190,7 +190,7 @@ struct BadgeItemExample {
           }.columnStart(0).columnEnd(3)
 
           GridItem() {
-            Slider({ value: this.fontSize, step: 1, min: -1, max: 100 })
+            Slider({ value: this.fontSize, step: 1, min: 10, max: 15 })
               .blockColor(Color.Orange)
               .onChange((e) => {
                 this.fontSize = Math.round(e)
@@ -209,7 +209,7 @@ struct BadgeItemExample {
           }.columnStart(0).columnEnd(3)
 
           GridItem() {
-            Slider({ value: this.fontSize, step: 1, min: -1, max: 200 })
+            Slider({ value: this.fontSize, step: 1, min: 23, max: 25 })
               .blockColor(Color.Orange)
               .onChange((e) => {
                 this.badgeSize = Math.round(e)
