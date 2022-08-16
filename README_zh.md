@@ -104,7 +104,6 @@
   - [`JsWorker`：启动一个worker（JS）（API8）](thread/JsWorker)
 - CompleteApps
   - [`KikaInput`：轻量级输入法（JS）（API9）（Full SDK）](CompleteApps/KikaInput)
-  - [`AstronautsGame`：太空人避障游戏（C++）](CompleteApps/AstronautsGame)
   - [`FlipClock`：翻页时钟（eTS）（API8）（Full SDK）](CompleteApps/FlipClock)
 - EngineeringCapability
   - [`Npm`：npm的使用（eTS）（API9）](EngineeringCapability/Npm)
