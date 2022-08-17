@@ -37,3 +37,5 @@
 2.本示例为FA模型，从API version 8开始支持。
 
 3.本示例需要使用DevEco Studio 3.0 Beta3 (Build Version: 3.0.0.901, built on May 30, 2022)才可编译运行。
+
+4.本示例着重介绍了一多的自适应布局能力，未引入断点能力，建议查看相关能力在IDE提供的MatePadPro预览器中运行和查看效果。 
