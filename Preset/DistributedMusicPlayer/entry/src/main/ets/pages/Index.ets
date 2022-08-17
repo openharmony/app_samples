@@ -227,7 +227,6 @@ struct Index {
     this.totalMs = PlayerModel.getDuration()
     this.totalTimeText = this.getShownTimer(this.totalMs)
     this.currentTimeText = this.getShownTimer(PlayerModel.getCurrentMs())
-    this.currentProgress = Math.floor(PlayerModel.getCurrentMs() / this.totalMs * ONE_HUNDRED)
 
     Logger.info(TAG, `refreshSongInfo this.title= ${this.title}, this.totalMs=
             ${this.totalMs}, this.totalTimeText= ${this.totalTimeText},this.currentTimeText= ${this.currentTimeText}`)

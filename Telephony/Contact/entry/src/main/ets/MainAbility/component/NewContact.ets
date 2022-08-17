@@ -13,6 +13,10 @@
  * limitations under the License.
  */
 
+import Logger from '../data/Logger'
+
+const TAG: string = 'NewContact'
+
 @Component
 export struct NewContact {
   @Link name: string
@@ -34,7 +38,7 @@ export struct NewContact {
         .margin({ top: 22, bottom: 32 })
 
       this.newContact($r('app.string.name'), $r('app.media.name'))
-      this.newContact($r('app.string.address'), $r("app.media.address"))
+      this.newContact($r('app.string.address'), $r('app.media.address'))
       this.newContact($r('app.string.phone'), $r('app.media.phone'))
       this.newContact($r('app.string.email'), $r('app.media.email'))
       this.newContact($r('app.string.note'), $r('app.media.nickname'))
@@ -58,26 +62,27 @@ export struct NewContact {
         .fontWeight(FontWeight.Bold)
         .backgroundColor(Color.White)
         .placeholderFont({ size: 24, weight: 450, family: 'cursive', style: FontStyle.Normal })
-        .onChange(value => {
-          switch (editText) {
-            case $r('app.string.name'):
-              this.name = value;
+        .onChange((value: string) => {
+          switch (JSON.stringify(editText)) {
+            case JSON.stringify($r('app.string.name')):
+              this.name = value
               break
-            case $r('app.string.note'):
+            case JSON.stringify($r('app.string.note')):
               this.nickName = value
               break
-            case $r('app.string.phone'):
+            case JSON.stringify($r('app.string.phone')):
               this.phoneNumber = value
               break
-            case $r('app.string.email'):
-              this.email = value;
+            case JSON.stringify($r('app.string.email')):
+              this.email = value
               break
-            case $r('app.string.address'):
+            case JSON.stringify($r('app.string.address')):
               this.postalAddress = value
               break
             default:
               break
           }
+          Logger.info(TAG, `this name is ${this.name} this number is ${this.phoneNumber}`)
         })
     }
     .margin({ bottom: 16 })

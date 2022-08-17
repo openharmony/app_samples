@@ -60,7 +60,7 @@
                     </text>
                     <text y="100" font-size="40" fill="blue">
                         <tspan>
-                            tspan attribute x|opacity|rotate
+                            tspan attribute x
                             <animate attributeName="x" from="-100" to="350" dur="3s" repeatCount="indefinite"></animate>
                             <animate attributeName="opacity" from="0.01" to="0.99" dur="3s" repeatCount="indefinite">
                             </animate>
@@ -87,7 +87,7 @@
                     </text>
                     <text>
                         <tspan x="20" y="320" fill="red">
-                            tspan attribute font-size
+                            tspan font-size
                             <animate attributeName="font-size" from="10" to="30" dur="3s" repeatCount="indefinite">
                             </animate>
                         </tspan>
@@ -101,7 +101,7 @@
                     </text>
                     <text>
                         <tspan x="20" y="460" font-size="20" fill="white" stroke="red">
-                            tspan attribute stroke-width-opacity
+                            tspan attribute stroke
                             <animate attributeName="stroke-width" from="1" to="5" dur="3s" repeatCount="indefinite">
                             </animate>
                             <animate attributeName="stroke-opacity" from="0.01" to="0.99" dur="3s"

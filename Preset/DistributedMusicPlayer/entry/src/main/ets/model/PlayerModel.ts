@@ -172,13 +172,6 @@ class PlayerModel {
       if (source === this.player.src && this.player.state !== 'idle') {
         Logger.info(TAG, 'preLoad finished. src not changed')
         callback()
-      } else if (this.player.state === 'idle') {
-        this.player.on('dataLoad', () => {
-          Logger.info(TAG, `dataLoad callback, state= ${this.player.state}`)
-          callback()
-        })
-        Logger.info(TAG, `player.src= ${source}`)
-        this.player.src = source
       } else {
         this.notifyPlayingStatus(false)
         this.cancelTimer()
@@ -202,10 +195,6 @@ class PlayerModel {
       return this.playlist.audioFiles[this.index].duration
     }
     Logger.info(TAG, `getDuration state= ${this.player.state}`)
-    if (this.player.state === 'idle') {
-      Logger.warn(TAG, `getDuration ignored player.state= ${this.player.state}`)
-      return 0
-    }
     this.playlist.audioFiles[this.index].duration = Math.min(this.player.duration, 97615)
     Logger.info(TAG, `getDuration player.src= ${this.player.src} player.duration= ${this.playlist.audioFiles[this.index].duration} `)
     return this.playlist.audioFiles[this.index].duration

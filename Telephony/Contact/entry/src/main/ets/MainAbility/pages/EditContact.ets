@@ -15,70 +15,76 @@
  */
 
 import router from '@ohos.router'
+import prompt from '@ohos.prompt'
 import contact from '@ohos.contact'
 import Logger from '../data/Logger'
 import { UpdateContact } from '../component/UpdateContact'
+import ContactModel from '../data/ContactModel'
 
 const TAG: string = '[EditContact]'
 
 @Entry
 @Component
 struct EditContact {
-  private contact = <contact.Contact> router.getParams()['data']
+  @State contact: contact.Contact = <contact.Contact> router.getParams()['data']
 
   build() {
     Column() {
       Row() {
         Row() {
           Image($r('app.media.no'))
-            .width('20%')
-            .height('40%')
-            .margin({ right: '2%' })
+            .width(32)
+            .height(32)
+            .margin({ left: 32, right: 22 })
             .objectFit(ImageFit.Contain)
-
-          Text($r('app.string.editor_contact'))
-            .fontSize(18)
-            .textAlign(TextAlign.End)
-            .fontColor(Color.White)
+            .onClick(() => {
+              router.back()
+            })
         }
-        .layoutWeight(1)
-        .onClick(() => {
-          router.back({
-            url: 'pages/Index'
-          })
-        })
+
+        Text($r('app.string.editor_contact'))
+          .fontSize(26)
+          .fontWeight(400)
+          .textAlign(TextAlign.End)
+          .fontColor(Color.Black)
 
         Blank()
 
         Image($r('app.media.yes'))
-          .width('10%')
-          .height('10%')
+          .width(32)
+          .height(32)
+          .margin({ right: 32 })
           .objectFit(ImageFit.Contain)
           .onClick(async () => {
-            try {
-              let id = await contact.addContact({
+            let test = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}/
+            if (test.test(this.contact.phoneNumbers[0].phoneNumber) === true) {
+              let id = await ContactModel.updateContact({
                 name: { fullName: this.contact.name.fullName },
                 nickName: { nickName: this.contact.nickName.nickName },
                 phoneNumbers: [{ phoneNumber: this.contact.phoneNumbers[0].phoneNumber }],
                 emails: [{ email: this.contact.emails[0].email }],
                 postalAddresses: [{ postalAddress: this.contact.postalAddresses[0].postalAddress }]
               })
-              Logger.info(TAG, `id = ${id}`)
-            } catch (err) {
-              Logger.info(TAG, `edit contact err = ${JSON.stringify(err)}`)
+              router.push({
+                url: 'pages/Index'
+              })
+            } else {
+              prompt.showToast({
+                message: 'Please input phone number.',
+                duration: 2000,
+              })
             }
-            router.back({
-              url: 'pages/Index'
-            })
           })
       }
       .height('6%')
       .width('100%')
-      .padding({ left: 16 })
-      .backgroundColor('#0D9FFB')
+      .margin({ top: 32 })
       .constraintSize({ minHeight: 50 })
 
       UpdateContact({ contact: $contact })
     }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#fff5f5f5')
   }
 }

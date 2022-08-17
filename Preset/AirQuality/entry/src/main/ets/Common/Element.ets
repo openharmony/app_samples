@@ -18,10 +18,10 @@ export struct Element {
   @Builder dateText(text: string, margin: number) {
     Text(text)
       .height(100)
-      .width("14%")
+      .width("16%")
       .margin({ left: margin })
       .textAlign(TextAlign.Center)
-      .fontSize(15)
+      .fontSize(12)
   }
 
   build() {

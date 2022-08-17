@@ -15,9 +15,11 @@
  */
 
 import router from '@ohos.router'
+import prompt from '@ohos.prompt'
 import contact from '@ohos.contact'
 import Logger from '../data/Logger'
 import { NewContact } from '../component/NewContact'
+import ContactModel from '../data/ContactModel'
 
 const TAG: string = '[AddContact]'
 
@@ -38,18 +40,15 @@ struct AddContact {
           .height(32)
           .margin({ left: 32, right: 22 })
           .objectFit(ImageFit.Contain)
+          .onClick(() => {
+            router.back()
+          })
 
         Text($r('app.string.newContact'))
           .fontSize(26)
           .fontWeight(400)
           .textAlign(TextAlign.End)
           .fontColor(Color.Black)
-
-          .onClick(() => {
-            router.back({
-              url: 'pages/Index'
-            })
-          })
 
         Blank()
 
@@ -58,25 +57,27 @@ struct AddContact {
           .height(32)
           .margin({ right: 32 })
           .objectFit(ImageFit.Contain)
-          .onClick(() => {
-            Logger.info(TAG, `onClick start`)
-            let contacts = {
-              name: { fullName: this.name },
-              nickName: { nickName: this.nickName },
-              phoneNumbers: [{ phoneNumber: this.phoneNumber }],
-              emails: [{ email: this.email }],
-              postalAddresses: [{ postalAddress: this.postalAddress }]
-            }
-            Logger.info(TAG, `contacts = ${JSON.stringify(contacts)}`)
-            try {
-              contact.addContact(contacts, (id) => {
-                Logger.info(TAG, `id = ${id}`)
-              })
-              router.back({
+          .onClick(async () => {
+            let test = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}/
+            Logger.info(TAG, `this number is ${this.phoneNumber} this test result ${test.test(this.phoneNumber)}`)
+            if (test.test(this.phoneNumber) === true) {
+              let contacts = {
+                name: { fullName: this.name },
+                nickName: { nickName: this.nickName },
+                phoneNumbers: [{ phoneNumber: this.phoneNumber }],
+                emails: [{ email: this.email }],
+                postalAddresses: [{ postalAddress: this.postalAddress }]
+              }
+              Logger.info(TAG, `contacts = ${JSON.stringify(contacts)} contact type is ${typeof contact.addContact}`)
+              let id = await ContactModel.addContact(contacts)
+              router.replace({
                 url: 'pages/Index'
               })
-            } catch (error) {
-              Logger.info(TAG, `contact err = ${JSON.stringify(error)}`)
+            } else {
+              prompt.showToast({
+                message: 'Please input phone number.',
+                duration: 2000,
+              })
             }
           })
       }

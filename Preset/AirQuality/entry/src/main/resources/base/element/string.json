@@ -51,6 +51,10 @@
     {
       "name": "aqi",
       "value": "AQI"
+    },
+    {
+      "name": "internet_permission",
+      "value": "允许使用网络socket"
     }
   ]
 }

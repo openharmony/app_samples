@@ -31,10 +31,9 @@ export struct Decrypt {
       Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
         Select([{ value: 'RSA' },
                 { value: 'AES' }])
-          .margin(5)
+          .margin(4)
           .selected(0)
           .value(this.algorithmType)
-          .width('30%')
           .font({ size: 20, weight: 300, family: 'serif', style: FontStyle.Normal })
           .selectedOptionFont({ size: 16, weight: 280, family: 'serif', style: FontStyle.Normal })
           .optionFont({ size: 16, weight: 280, family: 'serif', style: FontStyle.Normal })
@@ -43,7 +42,7 @@ export struct Decrypt {
             Logger.info(TAG, `Select: ${index} value: ${value}`)
           })
 
-        TextInput()
+        TextArea()
           .margin(6)
           .width('60%')
           .onChange((value: string) => {

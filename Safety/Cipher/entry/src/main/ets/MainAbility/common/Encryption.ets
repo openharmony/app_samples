@@ -42,9 +42,9 @@ export struct Encryption {
               Logger.info(TAG, `Select: ${index} value: ${value}`)
             })
 
-          TextInput()
+        TextArea()
             .margin(4)
-            .width('90%')
+            .width('60%')
             .onChange((value: string) => {
               this.message = value
             })

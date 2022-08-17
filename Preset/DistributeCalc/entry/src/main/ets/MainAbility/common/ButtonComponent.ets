@@ -26,6 +26,7 @@ export struct ButtonComponent {
         ForEach(obtainImgV(), (item, index) => {
           GridItem() {
             Image(item.image)
+              .objectFit(ImageFit.Fill)
               .margin({ top: 5 })
               .onClick(() => {
                 this.onInputValue(item.value)
@@ -41,6 +42,7 @@ export struct ButtonComponent {
           ForEach(item, (item) => {
             GridItem() {
               Image(item.image)
+                .objectFit(ImageFit.Fill)
                 .margin({ top: 5 })
                 .onClick(() => {
                   this.onInputValue(item.value)

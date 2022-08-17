@@ -23,7 +23,7 @@ import { AirQualityModel } from '../Model/AirQualityModel'
 @Extend(Text) function fancyText (backgroundColor: string, height: number, margin: number) {
   .backgroundColor(backgroundColor)
   .height(height)
-  .width('14%')
+  .width('16%')
   .margin({ left: margin })
 }
 

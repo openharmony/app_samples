@@ -31,12 +31,10 @@ export struct TitleBar {
   private startAbilityCallBack: (key) => void
   private remoteDeviceModel: RemoteDeviceModel = null
   @Link isDistributed: boolean
-  @Link dialogShow: boolean
   private dialogController: CustomDialogController = null
 
   clearSelectState() {
     this.deviceList = []
-    this.dialogShow = false
     this.dialogController.close()
   }
 
@@ -71,7 +69,6 @@ export struct TitleBar {
       this.isDistributed = false
       this.deviceList = []
       this.dialogController.close()
-      this.dialogShow = false
       return
     }
     this.selectDevice()
@@ -95,8 +92,7 @@ export struct TitleBar {
   }
 
   showDiainfo() {
-    this.dialogShow = true
-    this.deviceList = [];
+    this.deviceList = []
     // 注册监听回调，发现设备或查找到已认证设备会弹窗显示
     this.remoteDeviceModel.registerDeviceListCallback(() => {
       Logger.info(TAG, 'registerDeviceListCallback, callback entered')
@@ -132,8 +128,8 @@ export struct TitleBar {
         autoCancel: true,
         alignment: alignments
       })
-      this.dialogController.open()
     }
+    this.dialogController.open()
   }
 
   build() {

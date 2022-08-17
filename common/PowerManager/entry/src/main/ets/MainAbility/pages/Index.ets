@@ -37,13 +37,13 @@ struct Index {
           value: $r('app.string.determine'),
           action: () => {
             console.info(`Callback when the second button is clicked`)
-            if (title === $r('app.string.turnOff')) {
+            if (title.id === $r('app.string.turnOff').id) {
               this.window = 'Is power off'
               power.shutdownDevice('shutdown_test')
               console.info(`power_shutdown_device_test success`)
-            } else {
+            } else if (title.id === $r('app.string.restart').id) {
               this.window = 'Is to restart'
-              power.rebootDevice('');
+              power.rebootDevice('reboot_test');
               console.info(`power_reboot_device_test success`)
             }
           }
@@ -85,7 +85,6 @@ struct Index {
         .padding({ left: 10 })
         .fontSize(20)
         .fontWeight(FontWeight.Bold)
-
 
       ForEach(this.buttonText, (item, index) => {
         Button() {

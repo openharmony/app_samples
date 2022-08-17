@@ -51,30 +51,30 @@
 
 .button-emphasize {
     height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
 }
 
 .button-emphasize-click {
     height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
 }
 
 .button-emphasize-long-click {
     height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .button-emphasize-click :active {
     height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
     background-color: white;
     text-color: #0040FF;
@@ -89,8 +89,8 @@
     border-width: 2px;
     border-style: solid;
     background-color: lightgray;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .button-border-click:active {
@@ -101,10 +101,10 @@
     border-color: #0040FF;
     border-width: 2px;
     border-style: solid;
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: lightgray;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .button-border-click {
@@ -112,18 +112,18 @@
     font-size: 16px;
     text-color: white;
     radius: 16px;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .button-normal {
     height: 40px;
     radius: 16px;
     font-size: 16px;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: lightgray;
     text-color: black;
     font-weight: 500;
@@ -134,7 +134,7 @@
     font-size: 16px;
     font-weight: 600;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
     font-style: normal;
 }
 
@@ -142,25 +142,25 @@
     height: 40px;
     font-size: 16px;
     font-style: normal;
-    padding-left: 20px;
-    margin-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
     font-weight: 600;
 }
 
 .button-loading {
     height: 40px;
-    margin-left: 20px;
-    padding-left: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
     font-size: 16px;
-    padding-right: 20px;
-    width: 200px;
+    padding-right: 10px;
+    width: 160px;
 }
 
 .button-circle {
     width: 40px;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .img {

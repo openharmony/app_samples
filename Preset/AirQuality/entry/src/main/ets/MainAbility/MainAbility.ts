@@ -23,6 +23,7 @@ export default class MainAbility extends Ability {
         logger.info(TAG, `[Demo] MainAbility onCreate`)
         globalThis.abilityWant = want;
         globalThis.abilityContext = this.context
+        this.context.requestPermissionsFromUser(['ohos.permission.INTERNET'])
     }
 
     onDestroy() {
