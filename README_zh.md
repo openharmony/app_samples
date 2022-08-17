@@ -13,7 +13,7 @@
 ## 目录<a name="sectionMenu"></a>
 - Basic
   - [`Container`：线性容器ArrayList（eTS）（API8）](Basic/Container)
-  - [`Screenshot`：屏幕截图（eTS）（API9）](Basic/Screenshot)
+  - [`Screenshot`：屏幕截图（eTS）（API9）（Full SDK）](Basic/Screenshot)
 - AppSample
   - [`Chat`：聊天示例应用（eTS）（API8）](AppSample/Chat)
   - [`Shopping`：购物示例应用（eTS）（API8）](AppSample/Shopping)
@@ -34,7 +34,7 @@
   - [`FormLauncher`：卡片使用方（eTS）（API8）（Full SDK）](ability/FormLauncher)
   - [`ServiceExtAbility`：StageExtAbility的创建与使用（eTS）（API9）（Full SDK）](ability/ServiceExtAbility)
   - [`DistributedGraffiti`：分布式涂鸦（eTS）（API8）（Full SDK）](ability/DistributedGraffiti)
-  - [`MissionManager`：系统任务管理（eTS）（API9）](ability/MissionManager)
+  - [`MissionManager`：系统任务管理（eTS）（API9）（Full SDK）](ability/MissionManager)
   - [`GalleryForm`：图库卡片（eTS）（API9）](ability/GalleryForm)
   - [`Launcher`：仿桌面应用（eTS）（API9）（Full SDK）](ability/Launcher)
 - common
@@ -52,7 +52,6 @@
 - data
   - [`KvStore`：分布式数据库（eTS）（API8）（Full SDK）](data/Kvstore)
   - [`LiteStorage`：轻量级存储（eTS）（API8）](data/LiteStorage)
-  - [`Rdb`：关系型数据库（eTS）（API8）](data/Rdb)
   - [`DDMQuery`：结果集与谓词（eTS）（API8）](data/DDMQuery)
   - [`DistributedRdb`：分布式关系型数据库（eTS）（API8）（Full SDK）](data/DistributedRdb)
   - [`Preferences`：首选项（eTS）（API9）](data/Preferences)
@@ -65,10 +64,10 @@
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
   - [`Vibrator`：振动（eTS）（API8）](device/Vibrator)
   - [`DeviceUsageStatistics`：设备使用信息统计（eTS）（API8）（Full SDK）](device/DeviceUsageStatistics)
-  - [`Browser`：浏览器（eTS）（API9）](device/Browser)
+  - [`Browser`：浏览器（eTS）（API9）（Full SDK）](device/Browser)
   - [`Screen`：屏幕属性（eTS）（API9）（Full SDK）](device/Screen)
   - [`USBManager`：USB管理（eTS）（API8）](device/USBManager)
-  - [`Bluetooth`：蓝牙（eTS）（API9）](device/Bluetooth)
+  - [`Bluetooth`：蓝牙（eTS）（API9）（Full SDK）](device/Bluetooth)
   - [`Location`：位置服务（eTS）（API9）](device/Location)
 - Graphics
   - [`JsWebGL`：WebGL（JS）（API8）](Graphics/JsWebGL)
@@ -78,7 +77,7 @@
   - [`JsVideo`：视频播放（JS）（API8）](media/JsVideo)
   - [`Recorder`：录音机（eTS）（API8）（Full SDK）](media/Recorder)
   - [`MultiMedia`：相机和媒体库（eTS）（API9）（Full SDK）](media/MultiMedia)
-  - [`VideoPlayer`：视频播放（eTS）（API9）](media/VideoPlayer)
+  - [`VideoPlayer`：视频播放（eTS）（API9）（Full SDK）](media/VideoPlayer)
   - [`JsRecorder`：录音机（JS）（API8）](media/JSRecorder)
   - [`Image`：图片处理（eTS）（API8）](media/Image)
   - [`GamePuzzle`：拼图（eTS）（API9）](media/GamePuzzle)
@@ -91,10 +90,10 @@
   - [`Debug`：Debug（eTS）（API9）](DFX/Debug)
 - Safety
   - [`Cipher`：加解密（eTS）（API8）](Safety/Cipher)
-  - [`AbilityAccessCtrl`：访问权限控制（eTS）（API8）](Safety/AbilityAccessCtrl)
+  - [`AbilityAccessCtrl`：访问权限控制（eTS）（API8）（Full SDK）](Safety/AbilityAccessCtrl)
 - Telephony
   - [`Call`：拨打电话（eTS）（API8）](Telephony/Call)
-  - [`Message`：短信服务（eTS）（API8）](Telephony/Message)
+  - [`Message`：短信服务（eTS）（API8）（Full SDK）](Telephony/Message)
   - [`RadioTech`：网络搜索（eTS）（API8）](Telephony/RadioTech)
   - [`SimManager`：SIM卡管理（eTS）（API8）](Telephony/SimManager)
   - [`MobileNetwork`：蜂窝数据（eTS）（API9）](Telephony/MobileNetwork)
@@ -137,7 +136,7 @@
   - [`CommonEvent`：订阅公共事件（eTS）（API8）](Notification/CommonEvent)
   - [`Emitter`：处理进程内事件（eTS）（API8）](Notification/Emitter)
   - [`AlarmClock`：后台代理提醒（eTS）（API8）](Notification/AlarmClock)
-  - [`Notification`：订阅、发送通知（eTS）（API9）](Notification/Notification)
+  - [`Notification`：订阅、发送通知（eTS）（API9）（Full SDK）](Notification/Notification)
 - Network
   - [`Http`：数据请求（eTS）（API9）](Network/Http)
   - [`Socket`：Socket 连接（eTS）（API8）](Network/Socket)
