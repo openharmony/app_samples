@@ -58,7 +58,6 @@
   - [`DistributedNote`：分布式备忘录（eTS）（API9）（Full SDK）](data/DistributedNote)
   - [`DistributedDataGobang`：分布式五子棋（eTS）（API9）（Full SDK）](data/DistributedDataGobang)
   - [`DistributedObjectDms`：分布式跑马灯（eTS）（API9）（Full SDK）](data/DistributedObjectDms)
-  - [`DistributedObjectGobang`：分布式五子棋（eTS）（API9）（Full SDK）](data/DistributedObjectGobang)
 - device
   - [`DeviceManager`：设备管理（eTS）（API8）（Full SDK）](device/DeviceManager)
   - [`Sensor`：传感器（eTS）（API8）](device/Sensor)
